@@ -9,4 +9,5 @@ plotly==6.8.0
 pytest==9.1.1
 
 # Tải các gói cần thiết bằng lệnh sau:
+# Thực hiện lệnh sau trong terminal để cài đặt các gói:
 # python -m pip install -r requirements.txt
