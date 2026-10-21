@@ -1,25 +1,24 @@
 {
   "courses": [
     {
-      "course_name": "SQL for Data Analysis",
-      "link": "https://example.com/sql-data-analysis",
+      "course_name": "Phân tích Dữ liệu với SQL (SQL for Data Analysis - Udacity)",
+      "link": "https://www.udacity.com/course/sql-for-data-analysis--ud198",
       "skills_achieved": ["SQL", "Data Manipulation", "Query Optimization"]
     },
     {
-      "course_name": "Python Programming Essentials",
-      "link": "https://example.com/python-essentials",
+      "course_name": "Lập trình Python cho Mọi người (Python for Everybody - Coursera)",
+      "link": "https://www.coursera.org/specializations/python",
       "skills_achieved": ["Python", "Scripting", "Data Structures"]
     },
     {
-      "course_name": "Power BI Interactive Dashboards",
-      "link": "https://example.com/power-bi-dashboards",
+      "course_name": "Trực quan hóa dữ liệu với Power BI (Getting Started with Power BI - Coursera)",
+      "link": "https://www.coursera.org/projects/getting-started-with-power-bi",
       "skills_achieved": ["Power BI", "Data Visualization", "Report Building"]
     },
     {
-      "course_name": "Machine Learning Foundations",
-      "link": "https://example.com/ml-foundations",
+      "course_name": "Nền tảng Trí tuệ Nhân tạo & Học máy (Machine Learning Specialization - Andrew Ng)",
+      "link": "https://www.coursera.org/specializations/machine-learning-introduction",
       "skills_achieved": ["Machine Learning", "Supervised Learning", "Model Evaluation"]
     }
   ]
 }
-

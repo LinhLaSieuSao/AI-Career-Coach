@@ -1,33 +1,30 @@
 {
-  "interview_questions": [
+  "Data Analyst": [
     {
-      "skill": "SQL",
-      "questions": [
-        "Explain the difference between INNER JOIN and LEFT JOIN, and provide use‑case examples.",
-        "How would you optimize a query that scans a large table without appropriate indexes?"
-      ]
+      "id": "DA01",
+      "type": "kỹ thuật",
+      "question": "Bạn hãy giải thích sự khác biệt cốt lõi giữa INNER JOIN và LEFT JOIN trong SQL? (Explain the core difference between INNER JOIN and LEFT JOIN in SQL?)",
+      "keywords": ["SQL", "JOIN", "Database", "Null values"]
     },
     {
-      "skill": "Python",
-      "questions": [
-        "What are Python decorators and how do they work?",
-        "Describe the difference between list comprehension and generator expression, and when to use each."
-      ]
+      "id": "DA02",
+      "type": "tình huống",
+      "question": "Khi sếp yêu cầu bạn xây dựng một báo cáo doanh thu gấp nhưng dữ liệu đầu vào bị thiếu hụt nghiêm trọng, bạn sẽ xử lý thế nào? (How would you handle building an urgent revenue report when core data is missing?)",
+      "keywords": ["Problem Solving", "Data Cleaning", "Communication", "Assumptions"]
+    }
+  ],
+  "AI Engineer": [
+    {
+      "id": "AI01",
+      "type": "kỹ thuật",
+      "question": "Làm thế nào để bạn nhận biết và khắc phục hiện tượng Overfitting trong mô hình Machine Learning? (How do you detect and handle Overfitting in a Machine Learning model?)",
+      "keywords": ["Overfitting", "Regularization", "Cross-validation", "Test set"]
     },
     {
-      "skill": "Power BI",
-      "questions": [
-        "How can you implement row‑level security in Power BI reports?",
-        "Explain the purpose of DAX measures and give an example of a calculated measure."
-      ]
-    },
-    {
-      "skill": "Machine Learning",
-      "questions": [
-        "What is the bias‑variance trade‑off and how does it affect model performance?",
-        "Describe how you would handle imbalanced classes in a classification problem."
-      ]
+      "id": "AI02",
+      "type": "tình huống",
+      "question": "Nếu mô hình dự đoán của bạn có độ chính xác (Accuracy) rất cao nhưng thực tế khi triển khai lại dự đoán sai liên tục, nguyên nhân do đâu? (If your model has high accuracy in training but fails in production, what went wrong?)",
+      "keywords": ["Data leakage", "Distribution shift", "Evaluation metrics"]
     }
   ]
 }
-
