@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "course_name": "SQL for Data Analysis",
+      "link": "https://example.com/sql-data-analysis",
+      "skills_achieved": ["SQL", "Data Manipulation", "Query Optimization"]
+    },
+    {
+      "course_name": "Python Programming Essentials",
+      "link": "https://example.com/python-essentials",
+      "skills_achieved": ["Python", "Scripting", "Data Structures"]
+    },
+    {
+      "course_name": "Power BI Interactive Dashboards",
+      "link": "https://example.com/power-bi-dashboards",
+      "skills_achieved": ["Power BI", "Data Visualization", "Report Building"]
+    },
+    {
+      "course_name": "Machine Learning Foundations",
+      "link": "https://example.com/ml-foundations",
+      "skills_achieved": ["Machine Learning", "Supervised Learning", "Model Evaluation"]
+    }
+  ]
+}
+

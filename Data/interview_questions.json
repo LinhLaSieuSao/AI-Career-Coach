@@ -1,0 +1,33 @@
+{
+  "interview_questions": [
+    {
+      "skill": "SQL",
+      "questions": [
+        "Explain the difference between INNER JOIN and LEFT JOIN, and provide use‑case examples.",
+        "How would you optimize a query that scans a large table without appropriate indexes?"
+      ]
+    },
+    {
+      "skill": "Python",
+      "questions": [
+        "What are Python decorators and how do they work?",
+        "Describe the difference between list comprehension and generator expression, and when to use each."
+      ]
+    },
+    {
+      "skill": "Power BI",
+      "questions": [
+        "How can you implement row‑level security in Power BI reports?",
+        "Explain the purpose of DAX measures and give an example of a calculated measure."
+      ]
+    },
+    {
+      "skill": "Machine Learning",
+      "questions": [
+        "What is the bias‑variance trade‑off and how does it affect model performance?",
+        "Describe how you would handle imbalanced classes in a classification problem."
+      ]
+    }
+  ]
+}
+
