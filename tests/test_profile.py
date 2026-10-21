@@ -37,3 +37,4 @@ def test_experience_whitespace_cleaned():
 def test_handles_none_values():
     result = build_profile({"interests": None, "experience": None}, None)
     assert result == {"skills": [], "interests": [], "experience": ""}
+print('cc')
