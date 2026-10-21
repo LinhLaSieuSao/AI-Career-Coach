@@ -1,16 +1,16 @@
 
 """Các module xử lý logic của AI Career Coach."""
 
-from .cv_parser import parse_cv
+from .cv_parser import extract_text_from_pdf
 from .profile import build_profile
-from .matcher import match_profile
-from .recommender import build_roadmap
-from .interview import evaluate_answer
+from .matcher import calculate_match_score
+from .recommender import get_course_recommendations
+from .interview import generate_interview_questions
 
 __all__ = [
-    "parse_cv",
+    "extract_text_from_pdf",
     "build_profile",
-    "match_profile",
-    "build_roadmap",
-    "evaluate_answer",
+    "calculate_match_score",
+    "get_course_recommendations",
+    "generate_interview_questions",
 ]
