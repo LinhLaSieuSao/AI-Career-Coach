@@ -1,33 +1,37 @@
-import logging
-from io import BytesIO
-from pathlib import Path
-
+import os
 import pdfplumber
+import docx
 
-logger = logging.getLogger(__name__)
-
-
-def extract_text_from_pdf(pdf_path: str | Path | BytesIO) -> str:
-    """Extract all textual content from a PDF file using *pdfplumber*.
-
-    Parameters
-    ----------
-    pdf_path: str | Path | BytesIO
-        Path to a PDF file or an in-memory PDF byte stream.
-
-    Returns
-    -------
-    str
-        The concatenated text of all pages. Returns an empty string if the
-        file cannot be opened or read.
+def extract_text(file_path: str) -> str:
     """
-    try:
-        with pdfplumber.open(pdf_path) as pdf:
-            # ``extract_text`` may return ``None`` for a page without text.
-            page_texts = [page.extract_text() or "" for page in pdf.pages]
-        return "\n".join(page_texts)
-    except Exception as exc:  # noqa: BLE001 – broad capture for any PDF read error
-        logger.error("Failed to extract text from %s: %s", pdf_path, exc)
-        # Return an empty string so callers can handle the failure gracefully.
-        return ""
-
+    Trích xuất văn bản thô từ tệp PDF hoặc DOCX.
+    Đầu vào: Đường dẫn tệp (file_path)
+    Đầu ra: Chuỗi văn bản thô (str)
+    """
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"Không tìm thấy tệp tại đường dẫn: {file_path}")
+    
+    file_extension = os.path.splitext(file_path)[1].lower()
+    text = ""
+    
+    if file_extension == '.pdf':
+        try:
+            with pdfplumber.open(file_path) as pdf:
+                for page in pdf.pages:
+                    extracted = page.extract_text()
+                    if extracted:
+                        text += extracted + "\n"
+        except Exception as e:
+            raise ValueError(f"Không thể đọc tệp PDF. Lỗi: {str(e)}")
+            
+    elif file_extension == '.docx':
+        try:
+            doc = docx.Document(file_path)
+            for para in doc.paragraphs:
+                text += para.text + "\n"
+        except Exception as e:
+            raise ValueError(f"Không thể đọc tệp DOCX. Lỗi: {str(e)}")
+    else:
+        raise ValueError("Định dạng tệp không được hỗ trợ. Vui lòng tải lên PDF hoặc DOCX.")
+        
+    return text.strip()
