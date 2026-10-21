@@ -1,59 +1,89 @@
-"""Gom và chuẩn hóa dữ liệu hồ sơ sinh viên từ form để các module khác sử dụng."""
+"""Build a normalized student profile from form input."""
 
 from __future__ import annotations
 
+import re
+import unicodedata
+
+from .skill_extractor import normalize_skill
+
+
+_LIST_SEPARATOR = re.compile(r"[,;\n]+")
+_INTEREST_PREFIX = re.compile(r"^(?:interesting|interest|sở thích)\s*:\s*(.+)$", re.IGNORECASE)
+
 
 def _clean_text(value: str | None) -> str:
-    """Bỏ khoảng trắng thừa ở đầu, cuối và giữa các từ. Trả về chuỗi rỗng nếu None."""
+    """Collapse whitespace and return an empty string for missing values."""
     if not value:
         return ""
-    return " ".join(value.split())
+    return " ".join(unicodedata.normalize("NFC", str(value)).split())
 
 
-def _split_list(value: str | None) -> list[str]:
-    """Tách chuỗi theo dấu phẩy, làm sạch từng phần tử, bỏ phần tử rỗng."""
-    if not value:
+def _split_values(value: str | list[str] | tuple[str, ...] | None) -> list[str]:
+    """Split skill and interest fields on commas, semicolons, and line breaks."""
+    if value is None:
         return []
-    items = (_clean_text(part) for part in value.split(","))
-    return [item for item in items if item]
+    sources = value if isinstance(value, (list, tuple)) else (value,)
+    result: list[str] = []
+    for source in sources:
+        result.extend(
+            cleaned
+            for part in _LIST_SEPARATOR.split(str(source))
+            if (cleaned := _clean_text(part))
+        )
+    return result
 
 
-def _normalize_skills(skills: list[str] | None) -> list[str]:
-    """Làm sạch, loại trùng không phân biệt hoa thường, giữ dạng viết đầu tiên gặp."""
-    if not skills:
-        return []
-
+def _unique(values: list[str]) -> list[str]:
     seen: dict[str, str] = {}
-    for raw in skills:
-        cleaned = _clean_text(raw)
-        if not cleaned:
-            continue
-        key = cleaned.lower()
-        if key not in seen:
-            seen[key] = cleaned
-
-    return sorted(seen.values(), key=str.lower)
+    for value in values:
+        seen.setdefault(value.casefold(), value)
+    return sorted(seen.values(), key=str.casefold)
 
 
-def build_profile(form_data: dict, skills: list[str] | None = None) -> dict:
-    """Gom dữ liệu từ form và danh sách kỹ năng thành một hồ sơ thống nhất.
+def build_profile(
+    form_data: dict | None = None,
+    skills: list[str] | str | None = None,
+) -> dict:
+    """Normalize profile input and classify recognized, moved, and unknown skills.
 
-    Tham số:
-        form_data: dict có thể chứa các khóa "interests" (chuỗi, cách nhau bằng dấu phẩy)
-                   và "experience" (chuỗi tự do).
-        skills: danh sách kỹ năng, lấy từ người dùng nhập tay hoặc từ skill_extractor.
+    ``form_data`` accepts ``skills``, ``interests``, and free-form ``experience``.
+    An explicit ``skills`` argument takes precedence over ``form_data['skills']``.
+    Experience is deliberately kept as one text field, including commas.
 
-    Trả về:
-        {
-            "skills": list[str],      # đã làm sạch, không trùng, sắp xếp A-Z
-            "interests": list[str],   # đã làm sạch, không rỗng
-            "experience": str,        # đã làm sạch khoảng trắng, có thể là chuỗi rỗng
-        }
+    The returned ``moved`` entries contain ``item``, ``from``, and ``to`` labels.
+    Unrecognized skills stay in ``skills`` and are also listed separately so the
+    UI can ask whether the user wants to keep each one.
     """
     form_data = form_data or {}
+    raw_skills = skills if skills is not None else form_data.get("skills")
+    skill_items = _split_values(raw_skills)
+    interests = _split_values(form_data.get("interests"))
+
+    kept_skills: list[str] = []
+    unrecognized: list[str] = []
+    moved: list[dict[str, str]] = []
+
+    for item in skill_items:
+        match = _INTEREST_PREFIX.match(item)
+        if match:
+            interest = _clean_text(match.group(1))
+            if interest:
+                interests.append(interest)
+                moved.append({"item": interest, "from": "Kỹ năng", "to": "Sở thích"})
+            continue
+
+        canonical = normalize_skill(item)
+        if canonical is None:
+            kept_skills.append(item)
+            unrecognized.append(item)
+        else:
+            kept_skills.append(canonical)
 
     return {
-        "skills": _normalize_skills(skills),
-        "interests": _split_list(form_data.get("interests")),
+        "skills": _unique(kept_skills),
+        "interests": _unique(interests),
         "experience": _clean_text(form_data.get("experience")),
+        "unrecognized_skills": _unique(unrecognized),
+        "moved": moved,
     }

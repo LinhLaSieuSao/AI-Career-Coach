@@ -2,8 +2,10 @@ import json
 import os
 from typing import List, Dict, Iterable
 
-# Path to the JSON file containing course information.
-COURSES_JSON_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Data", "courses.json")
+# Path to the JSON file containing learning resources.
+RESOURCES_JSON_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "..", "Data", "resources.json"
+)
 
 
 def _load_courses() -> List[Dict]:
@@ -12,16 +14,16 @@ def _load_courses() -> List[Dict]:
     Returns
     -------
     List[Dict]
-        Each dict corresponds to a course entry as defined in ``courses.json``.
+        Each dict corresponds to a course entry in ``resources.json``.
     """
     try:
-        with open(COURSES_JSON_PATH, "r", encoding="utf-8") as f:
+        with open(RESOURCES_JSON_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)
         # The file uses a top‑level key ``courses``.
         return data.get("courses", [])
     except Exception as exc:
         # If the file cannot be read, return an empty list – callers can decide how to handle it.
-        raise FileNotFoundError(f"Unable to load courses from {COURSES_JSON_PATH}: {exc}")
+        raise FileNotFoundError(f"Unable to load learning resources from {RESOURCES_JSON_PATH}: {exc}")
 
 
 def get_course_recommendations(missing_skills: Iterable[str]) -> List[Dict]:
@@ -35,7 +37,7 @@ def get_course_recommendations(missing_skills: Iterable[str]) -> List[Dict]:
     Returns
     -------
     List[Dict]
-        A list of course dictionaries (as stored in ``courses.json``) that match the
+        A list of course dictionaries (as stored in ``resources.json``) that match the
         provided skills. Each returned dict contains the original keys, e.g.
         ``course_name``, ``link`` and ``skills_achieved``.
     """

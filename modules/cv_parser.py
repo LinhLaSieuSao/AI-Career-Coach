@@ -1,17 +1,19 @@
 import logging
+from io import BytesIO
+from pathlib import Path
+
 import pdfplumber
-from typing import Any
 
 logger = logging.getLogger(__name__)
 
 
-def extract_text_from_pdf(pdf_path: str) -> str:
+def extract_text_from_pdf(pdf_path: str | Path | BytesIO) -> str:
     """Extract all textual content from a PDF file using *pdfplumber*.
 
     Parameters
     ----------
-    pdf_path: str
-        Path to the PDF file to be processed.
+    pdf_path: str | Path | BytesIO
+        Path to a PDF file or an in-memory PDF byte stream.
 
     Returns
     -------
