@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 streamlit
 scikit-learn
 pandas
 pdfplumber
 pytest
+=======
+streamlit==1.66.0
+pandas==3.0.6
+numpy==2.5.4
+matplotlib==3.11.2
+seaborn==0.13.2
+pdfplumber==0.11.10
+plotly==6.8.0      
+# python -m pip install -r requirements.txt 
+# Dùng Để Thực Hiện Cài Đặt Các Gói Phụ Thuộc Cho Dự Án
+# Vẫn Chưa Hoàn Thiện !!!!
+>>>>>>> bfda6cace450a0d4cc122d6548e4c0af8e1083c7
