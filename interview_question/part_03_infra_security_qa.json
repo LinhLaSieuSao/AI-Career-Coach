@@ -1,0 +1,875 @@
+{
+  "version": 1,
+  "roles": {
+    "automation_tester": [
+      {
+        "id": "automation_tester_q01",
+        "type": "technical",
+        "skill": "tư duy kiểm thử",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Chuyên viên kiểm thử tự động, khi tư duy kiểm thử được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của tư duy kiểm thử phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "automation_tester_q02",
+        "type": "technical",
+        "skill": "selenium",
+        "level": 2,
+        "weight": 3,
+        "question": "Trong vai trò Chuyên viên kiểm thử tự động, khi selenium được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của selenium phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "automation_tester_q03",
+        "type": "technical",
+        "skill": "api testing",
+        "level": 2,
+        "weight": 3,
+        "question": "Trong vai trò Chuyên viên kiểm thử tự động, khi api testing được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của api testing phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "automation_tester_q04",
+        "type": "technical",
+        "skill": "java",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Chuyên viên kiểm thử tự động, khi java được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của java phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "automation_tester_q05",
+        "type": "technical",
+        "skill": "sql",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Chuyên viên kiểm thử tự động, khi sql được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của sql phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "devops_engineer": [
+      {
+        "id": "devops_engineer_q01",
+        "type": "technical",
+        "skill": "linux",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư DevOps, khi linux được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của linux phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "devops_engineer_q02",
+        "type": "technical",
+        "skill": "docker",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư DevOps, khi docker được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của docker phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "devops_engineer_q03",
+        "type": "technical",
+        "skill": "ci/cd",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư DevOps, khi ci/cd được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của ci/cd phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "devops_engineer_q04",
+        "type": "technical",
+        "skill": "kubernetes",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Kỹ sư DevOps, khi kubernetes được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của kubernetes phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "devops_engineer_q05",
+        "type": "technical",
+        "skill": "aws",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Kỹ sư DevOps, khi aws được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của aws phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "system_administrator": [
+      {
+        "id": "system_administrator_q01",
+        "type": "technical",
+        "skill": "linux",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Quản trị viên hệ thống, khi linux được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của linux phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "system_administrator_q02",
+        "type": "technical",
+        "skill": "windows server",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Quản trị viên hệ thống, khi windows server được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của windows server phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "system_administrator_q03",
+        "type": "technical",
+        "skill": "quản trị mạng",
+        "level": 2,
+        "weight": 3,
+        "question": "Trong vai trò Quản trị viên hệ thống, khi quản trị mạng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của quản trị mạng phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "system_administrator_q04",
+        "type": "technical",
+        "skill": "active directory",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Quản trị viên hệ thống, khi active directory được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của active directory phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "system_administrator_q05",
+        "type": "technical",
+        "skill": "vmware",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Quản trị viên hệ thống, khi vmware được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của vmware phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "network_engineer": [
+      {
+        "id": "network_engineer_q01",
+        "type": "technical",
+        "skill": "ccna",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư mạng, khi ccna được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của ccna phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "network_engineer_q02",
+        "type": "technical",
+        "skill": "quản trị mạng",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư mạng, khi quản trị mạng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của quản trị mạng phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "network_engineer_q03",
+        "type": "technical",
+        "skill": "routing & switching",
+        "level": 2,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư mạng, khi routing & switching được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của routing & switching phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "network_engineer_q04",
+        "type": "technical",
+        "skill": "cisco",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Kỹ sư mạng, khi cisco được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của cisco phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "network_engineer_q05",
+        "type": "technical",
+        "skill": "firewall",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Kỹ sư mạng, khi firewall được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của firewall phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "security_engineer": [
+      {
+        "id": "security_engineer_q01",
+        "type": "technical",
+        "skill": "bảo mật hệ thống",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư an ninh mạng, khi bảo mật hệ thống được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của bảo mật hệ thống phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "security_engineer_q02",
+        "type": "technical",
+        "skill": "đánh giá lỗ hổng",
+        "level": 2,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư an ninh mạng, khi đánh giá lỗ hổng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của đánh giá lỗ hổng phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "security_engineer_q03",
+        "type": "technical",
+        "skill": "quản trị mạng",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Kỹ sư an ninh mạng, khi quản trị mạng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của quản trị mạng phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "security_engineer_q04",
+        "type": "technical",
+        "skill": "linux",
+        "level": 3,
+        "weight": 2,
+        "question": "Trong vai trò Kỹ sư an ninh mạng, khi linux được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của linux phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "security_engineer_q05",
+        "type": "technical",
+        "skill": "python",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Kỹ sư an ninh mạng, khi python được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của python phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "penetration_tester": [
+      {
+        "id": "penetration_tester_q01",
+        "type": "technical",
+        "skill": "pentest",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), khi pentest được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của pentest phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "penetration_tester_q02",
+        "type": "technical",
+        "skill": "đánh giá lỗ hổng",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), khi đánh giá lỗ hổng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của đánh giá lỗ hổng phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "penetration_tester_q03",
+        "type": "technical",
+        "skill": "bảo mật web",
+        "level": 2,
+        "weight": 3,
+        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), khi bảo mật web được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của bảo mật web phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "penetration_tester_q04",
+        "type": "technical",
+        "skill": "linux",
+        "level": 3,
+        "weight": 2,
+        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), khi linux được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của linux phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "penetration_tester_q05",
+        "type": "technical",
+        "skill": "python",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), khi python được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của python phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "cloud_engineer": [
+      {
+        "id": "cloud_engineer_q01",
+        "type": "technical",
+        "skill": "aws",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư điện toán đám mây, khi aws được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của aws phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "cloud_engineer_q02",
+        "type": "technical",
+        "skill": "linux",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư điện toán đám mây, khi linux được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của linux phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "cloud_engineer_q03",
+        "type": "technical",
+        "skill": "docker",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Kỹ sư điện toán đám mây, khi docker được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của docker phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "cloud_engineer_q04",
+        "type": "technical",
+        "skill": "kubernetes",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Kỹ sư điện toán đám mây, khi kubernetes được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của kubernetes phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "cloud_engineer_q05",
+        "type": "technical",
+        "skill": "azure",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Kỹ sư điện toán đám mây, khi azure được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của azure phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "manual_tester": [
+      {
+        "id": "manual_tester_q01",
+        "type": "technical",
+        "skill": "tư duy kiểm thử",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Chuyên viên kiểm thử phần mềm (Manual), khi tư duy kiểm thử được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của tư duy kiểm thử phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "manual_tester_q02",
+        "type": "technical",
+        "skill": "viết test case",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Chuyên viên kiểm thử phần mềm (Manual), khi viết test case được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của viết test case phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "manual_tester_q03",
+        "type": "scenario",
+        "skill": "chú ý chi tiết",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng chú ý chi tiết trong công việc liên quan đến role manual_tester, xử lý một tình huống thực tế và chứng minh kết quả.",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân có thể xác định.",
+          "Mô tả hành động theo trình tự, lựa chọn cụ thể và cách phối hợp với người liên quan.",
+          "Nêu kết quả có bằng chứng cùng bài học hoặc thay đổi được duy trì."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "manual_tester_q04",
+        "type": "technical",
+        "skill": "sql",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Chuyên viên kiểm thử phần mềm (Manual), khi sql được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của sql phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "manual_tester_q05",
+        "type": "technical",
+        "skill": "jira",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Chuyên viên kiểm thử phần mềm (Manual), khi jira được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của jira phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "it_support": [
+      {
+        "id": "it_support_q01",
+        "type": "technical",
+        "skill": "cài đặt phần mềm",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Nhân viên hỗ trợ IT, khi cài đặt phần mềm được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của cài đặt phần mềm phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "it_support_q02",
+        "type": "technical",
+        "skill": "xử lý sự cố phần cứng",
+        "level": 2,
+        "weight": 3,
+        "question": "Trong vai trò Nhân viên hỗ trợ IT, khi xử lý sự cố phần cứng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của xử lý sự cố phần cứng phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "it_support_q03",
+        "type": "technical",
+        "skill": "windows os",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Nhân viên hỗ trợ IT, khi windows os được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của windows os phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "it_support_q04",
+        "type": "technical",
+        "skill": "quản trị mạng",
+        "level": 1,
+        "weight": 2,
+        "question": "Trong vai trò Nhân viên hỗ trợ IT, khi quản trị mạng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của quản trị mạng phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "it_support_q05",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn dùng giao tiếp trong công việc liên quan đến role it_support, xử lý một tình huống thực tế và chứng minh kết quả.",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân có thể xác định.",
+          "Mô tả hành động theo trình tự, lựa chọn cụ thể và cách phối hợp với người liên quan.",
+          "Nêu kết quả có bằng chứng cùng bài học hoặc thay đổi được duy trì."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "sre_engineer": [
+      {
+        "id": "sre_engineer_q01",
+        "type": "technical",
+        "skill": "linux",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư SRE, khi linux được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của linux phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sre_engineer_q02",
+        "type": "technical",
+        "skill": "python",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư SRE, khi python được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của python phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sre_engineer_q03",
+        "type": "technical",
+        "skill": "quản lý rủi ro hệ thống",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư SRE, khi quản lý rủi ro hệ thống được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của quản lý rủi ro hệ thống phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sre_engineer_q04",
+        "type": "technical",
+        "skill": "giám sát hệ thống",
+        "level": 2,
+        "weight": 3,
+        "question": "Trong vai trò Kỹ sư SRE, khi giám sát hệ thống được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của giám sát hệ thống phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sre_engineer_q05",
+        "type": "technical",
+        "skill": "aws",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vai trò Kỹ sư SRE, khi aws được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "good_answer_points": [
+          "Mô tả quy trình hoặc cấu hình cụ thể của aws phù hợp với vai trò và đầu vào.",
+          "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
+          "Chỉ ra kiểm tra lặp lại cùng log/metric/artifact để chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ]
+  }
+}

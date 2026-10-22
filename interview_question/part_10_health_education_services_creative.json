@@ -1,0 +1,1461 @@
+{
+  "version": 1,
+  "roles": {
+    "doctor": [
+      {
+        "id": "doctor_q01",
+        "skill": "chẩn đoán bệnh",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Bệnh nhân sốt cao, khó thở, SpO₂ giảm và có bệnh nền: bạn lập chẩn đoán phân biệt, ưu tiên dữ kiện cần lấy và ngưỡng nâng mức xử trí ra sao?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của chẩn đoán bệnh vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "doctor_q02",
+        "skill": "kê đơn thuốc",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Sau khi đánh giá bệnh nhân ngoại trú, bạn kiểm tra dị ứng, bệnh nền, tương tác và liều thế nào trước khi kê; dặn dò theo dõi gì?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của kê đơn thuốc vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "doctor_q03",
+        "skill": "khám lâm sàng",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Với đau bụng cấp vùng hố chậu phải, hãy nêu trình tự hỏi bệnh và khám có trọng điểm, dấu hiệu cần ghi nhận và giới hạn khám.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của khám lâm sàng vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "doctor_q04",
+        "skill": "sơ cứu cấp cứu",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Người bệnh đột ngột ngã quỵ, không đáp ứng: mô tả đánh giá ABC, gọi hỗ trợ, can thiệp ban đầu và tiêu chí chuyển cấp cứu.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của sơ cứu cấp cứu vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "doctor_q05",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần bạn giải thích kế hoạch điều trị bất đồng với người nhà; nêu cách kiểm tra mức độ hiểu, thống nhất quyết định và kết quả.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với giao tiếp.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "doctor_q06",
+        "skill": "lắng nghe chủ động",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần bệnh nhân trình bày triệu chứng rời rạc; bạn gợi mở và nhắc lại dữ kiện nào để xác nhận bệnh sử?",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với lắng nghe chủ động.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "registered_nurse": [
+      {
+        "id": "registered_nurse_q01",
+        "skill": "chăm sóc bệnh nhân",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Bệnh nhân sau mổ đau tăng và vết mổ thấm dịch: bạn đánh giá, ưu tiên chăm sóc, báo bác sĩ và ghi nhận đáp ứng theo trình tự nào?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của chăm sóc bệnh nhân vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "registered_nurse_q02",
+        "skill": "tiêm truyền tĩnh mạch",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Trước truyền thuốc tĩnh mạch, nêu bước xác nhận đúng người/thuốc/liều/đường dùng, kiểm tra đường truyền và theo dõi phản ứng.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của tiêm truyền tĩnh mạch vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "registered_nurse_q03",
+        "skill": "theo dõi dấu hiệu sinh tồn",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Mạch tăng và huyết áp giảm so với đầu ca: bạn xác minh phép đo, đánh giá xu hướng, ngưỡng báo động và bàn giao thế nào?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của theo dõi dấu hiệu sinh tồn vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "registered_nurse_q04",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần thân nhân lo lắng về chăm sóc; cách bạn lắng nghe, giải thích và xác nhận hiểu biết.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với giao tiếp.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "registered_nurse_q05",
+        "skill": "sơ cứu cấp cứu",
+        "level": 2,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Kể theo STAR lần bạn nhận ra diễn biến cấp tính; mô tả đánh giá ban đầu, gọi hỗ trợ, vai trò cá nhân và kết quả.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với sơ cứu cấp cứu.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "registered_nurse_q06",
+        "skill": "quản lý hồ sơ bệnh án",
+        "level": 2,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Kể theo STAR lần bạn phát hiện ghi chép chưa khớp; cách đối chiếu nguồn, sửa đúng quy định và giữ dấu vết kiểm toán.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với quản lý hồ sơ bệnh án.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "pharmacist": [
+      {
+        "id": "pharmacist_q01",
+        "skill": "tư vấn sử dụng thuốc",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Khách dùng thuốc chống đông hỏi mua thuốc giảm đau không kê đơn: bạn khai thác thông tin, sàng lọc nguy cơ/tương tác và hướng dẫn hoặc chuyển khám thế nào?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của tư vấn sử dụng thuốc vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "pharmacist_q02",
+        "skill": "quản lý nhà thuốc",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Số tồn thuốc kê đơn lệch sổ và có đơn chờ cấp: bạn kiểm tra giao dịch, kiểm soát cấp phát và ghi nhận điều chỉnh ra sao?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của quản lý nhà thuốc vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "pharmacist_q03",
+        "skill": "kiểm soát dược phẩm",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Lô thuốc bảo quản lạnh có log vượt ngưỡng: nêu cách cách ly, đánh giá lô, liên hệ phụ trách và quyết định giải phóng/loại bỏ.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của kiểm soát dược phẩm vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "pharmacist_q04",
+        "skill": "tiếng anh chuyên ngành",
+        "level": 2,
+        "weight": 2,
+        "type": "technical",
+        "question": "Trên nhãn thuốc tiếng Anh có dosage, contraindication, storage; bạn diễn giải chính xác chỉ dẫn và cảnh báo nào cho người bệnh?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của tiếng anh chuyên ngành vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "pharmacist_q05",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần khách từ chối khuyến cáo an toàn; cách bạn hỏi nhu cầu, giải thích nguy cơ và kết quả.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với giao tiếp.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "pharmacist_q06",
+        "skill": "cẩn thận",
+        "level": 3,
+        "weight": 1,
+        "type": "scenario",
+        "question": "Kể theo STAR lần bạn phát hiện sai tên thuốc/hàm lượng trước cấp phát; nêu bước đối chiếu và cách ngăn tái diễn.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với cẩn thận.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "english_teacher": [
+      {
+        "id": "english_teacher_q01",
+        "skill": "tiếng anh giao tiếp",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Thiết kế hoạt động 10 phút cho lớp A2 luyện hỏi đường: mục tiêu ngôn ngữ, mẫu hội thoại, luyện cặp và cách kiểm tra đầu ra.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của tiếng anh giao tiếp vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "english_teacher_q02",
+        "skill": "kỹ năng giảng dạy",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Nửa lớp A2 nhầm past simple với present perfect: tổ chức phần dạy lại 15 phút gồm eliciting, guided practice và kiểm tra hiểu thế nào?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của kỹ năng giảng dạy vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "english_teacher_q03",
+        "skill": "soạn giáo án",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Phác giáo án 45 phút dạy email xin thông tin cho lớp B1: mục tiêu đo được, hoạt động theo thời gian và đánh giá cuối giờ.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của soạn giáo án vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "english_teacher_q04",
+        "skill": "quản lý lớp học",
+        "level": 2,
+        "weight": 2,
+        "type": "technical",
+        "question": "Trong lớp 30 học viên, nhóm cuối lớp mất tập trung khi pair work: bạn can thiệp, nhắc quy tắc và giữ thời lượng hoạt động ra sao?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của quản lý lớp học vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "english_teacher_q05",
+        "skill": "thuyết trình",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần bạn trình bày chủ điểm ngữ pháp khó; cách dùng ví dụ/visual, kiểm tra phản hồi và kết quả học tập.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với thuyết trình.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "english_teacher_q06",
+        "skill": "ielts preparation",
+        "level": 2,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Kể theo STAR lần bạn hỗ trợ học viên IELTS Writing bị kẹt band; nêu lỗi theo rubric, bài tập giao và thay đổi quan sát được.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với ielts preparation.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "primary_school_teacher": [
+      {
+        "id": "primary_school_teacher_q01",
+        "skill": "kỹ năng giảng dạy",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Lập hoạt động 35 phút dạy bảng nhân 6 cho lớp 3 nhiều trình độ: nêu đồ dùng, luyện tập phân tầng và câu hỏi kiểm tra hiểu.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của kỹ năng giảng dạy vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "primary_school_teacher_q02",
+        "skill": "tâm lý học lứa tuổi",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Học sinh lớp 2 thường khóc khi đổi hoạt động và né nhóm: bạn thu thập thông tin, diễn giải nhu cầu phát triển và phối hợp hỗ trợ thế nào?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của tâm lý học lứa tuổi vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "primary_school_teacher_q03",
+        "skill": "soạn giáo án",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Phác giáo án đọc hiểu lớp 4 với mục tiêu quan sát được, câu hỏi trước-trong-sau khi đọc, phân bổ thời gian và tiêu chí đánh giá.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của soạn giáo án vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "primary_school_teacher_q04",
+        "skill": "quản lý lớp học",
+        "level": 3,
+        "weight": 2,
+        "type": "technical",
+        "question": "Nhiều em rời chỗ khi chuyển sang luyện tập: bạn thiết lập tín hiệu, quy trình chuyển tiếp và theo dõi hành vi ra sao?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của quản lý lớp học vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "primary_school_teacher_q05",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần bạn trao đổi với phụ huynh về tiến bộ học tập thấp; nêu bằng chứng, kế hoạch phối hợp và cách theo dõi.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với giao tiếp.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "primary_school_teacher_q06",
+        "skill": "kiên nhẫn",
+        "level": 3,
+        "weight": 1,
+        "type": "scenario",
+        "question": "Kể theo STAR lần bạn hỗ trợ học sinh lặp lại lỗi; mô tả cách chia nhỏ nhiệm vụ, phản hồi và tiến bộ quan sát được.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với kiên nhẫn.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "graphic_designer": [
+      {
+        "id": "graphic_designer_q01",
+        "skill": "adobe photoshop",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Ảnh sản phẩm thiếu sáng cần tách nền làm banner web: nêu cách chỉnh non-destructive, xử lý viền và thông số export để ảnh rõ, nhẹ.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của adobe photoshop vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "graphic_designer_q02",
+        "skill": "adobe illustrator",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Tạo logo vector dùng từ favicon đến biển hiệu: bạn dựng path, kiểm tra co giãn, phiên bản màu và bàn giao file thế nào?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của adobe illustrator vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "graphic_designer_q03",
+        "skill": "tư duy thẩm mỹ",
+        "level": 2,
+        "weight": 3,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần bạn chọn giữa hai hướng visual; tiêu chí phân cấp, tương phản và phù hợp đối tượng nào dẫn đến quyết định?",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với tư duy thẩm mỹ.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "graphic_designer_q04",
+        "skill": "thiết kế nhận diện thương hiệu",
+        "level": 2,
+        "weight": 2,
+        "type": "technical",
+        "question": "Từ brief thương hiệu mới, bạn chuyển thuộc tính thương hiệu thành quy tắc logo, màu, typography và kiểm tra tính nhất quán ra sao?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của thiết kế nhận diện thương hiệu vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "graphic_designer_q05",
+        "skill": "layout design",
+        "level": 2,
+        "weight": 2,
+        "type": "technical",
+        "question": "Bố trí landing page 1440px có headline, lợi ích, testimonial và CTA thế nào để tạo hierarchy, grid và luồng đọc rõ?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của layout design vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "graphic_designer_q06",
+        "skill": "sáng tạo",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Kể theo STAR lần bạn tìm ý tưởng khác biệt khi brief hạn chế; insight, phương án thử và phản hồi đo được là gì?",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với sáng tạo.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "video_editor": [
+      {
+        "id": "video_editor_q01",
+        "skill": "adobe premiere pro",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Trong Premiere Pro, dựng phỏng vấn nhiều camera, đồng bộ audio và tạo rough cut 60 giây thế nào; nêu quản lý media và export review.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của adobe premiere pro vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "video_editor_q02",
+        "skill": "adobe after effects",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Tạo lower-third animation theo nhận diện trong After Effects: nêu keyframe/easing, alpha export và bước kiểm tra lỗi.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của adobe after effects vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "video_editor_q03",
+        "skill": "biên tập video",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Footage phỏng vấn lặp và chậm: bạn chọn take, dựng hook ba giây đầu và duy trì mạch nội dung 60 giây theo tiêu chí nào?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của biên tập video vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "video_editor_q04",
+        "skill": "chỉnh sửa âm thanh",
+        "level": 2,
+        "weight": 2,
+        "type": "technical",
+        "question": "Audio có tiếng quạt nền và âm lượng không đều: mô tả xử lý noise, EQ/level và kiểm tra intelligibility trước mix.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của chỉnh sửa âm thanh vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "video_editor_q05",
+        "skill": "capcut",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần bạn giao phiên bản dọc nhanh trên CapCut; nêu safe area, caption, nhịp cắt và kiểm tra nền tảng.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với capcut.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "video_editor_q06",
+        "skill": "tư duy hình ảnh",
+        "level": 2,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Kể lần bạn chuyển nội dung dài thành chuỗi hình ảnh dễ theo dõi; nêu lựa chọn shot, nhịp hình và phản hồi.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với tư duy hình ảnh.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "video_creator": [
+      {
+        "id": "video_creator_q01",
+        "skill": "quay dựng video",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Lên phương án quay video dọc 30 giây giới thiệu quán trong một buổi: shot list, ánh sáng/âm thanh, hook và cấu trúc dựng.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của quay dựng video vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "video_creator_q02",
+        "skill": "capcut",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Dựng video dọc 30 giây có voice-over, caption và CTA trên CapCut: nêu nhịp cắt, safe zone, âm thanh và export.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của capcut vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "video_creator_q03",
+        "skill": "adobe premiere",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Footage điện thoại nhiều frame rate: tổ chức project, chọn sequence và xuất bản review không lệch tiếng thế nào?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của adobe premiere vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "video_creator_q04",
+        "skill": "sáng tạo",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần bạn tạo concept video từ sản phẩm ít khác biệt; insight, hook thử nghiệm và chỉ số phản hồi.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với sáng tạo.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "video_creator_q05",
+        "skill": "tiktok",
+        "level": 2,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Kể lần bạn chỉnh video TikTok sau khi retention giảm; nêu dữ liệu đoạn rơi, thay đổi hook/nhịp và kết quả.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với tiktok.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "video_creator_q06",
+        "skill": "youtube",
+        "level": 2,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Mô tả lần bạn tối ưu title/thumbnail/opening YouTube khi CTR hoặc retention thấp; nêu số liệu trước-sau.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với youtube.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "content_creator": [
+      {
+        "id": "content_creator_q01",
+        "skill": "sáng tạo kịch bản",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Viết outline 45 giây giải thích mẹo tiết kiệm điện: hook, ba beat nội dung, bằng chứng và CTA cho người xem phổ thông.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của sáng tạo kịch bản vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "content_creator_q02",
+        "skill": "quay video bằng điện thoại",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Quay video dọc trong cửa hàng ánh sáng hỗn hợp: nêu bố cục, exposure/focus, chống rung và thu âm để footage dùng được.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của quay video bằng điện thoại vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "content_creator_q03",
+        "skill": "capcut",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Dựng video dọc 40 giây từ 8 clip thô trong CapCut: mô tả chọn cảnh, caption, nhạc, nhịp và kiểm tra trước xuất.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của capcut vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "content_creator_q04",
+        "skill": "nắm bắt xu hướng",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần bạn đánh giá trend có phù hợp thương hiệu; tín hiệu/đối tượng, cách biến tấu và kết quả đo được.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với nắm bắt xu hướng.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "content_creator_q05",
+        "skill": "canva",
+        "level": 2,
+        "weight": 2,
+        "type": "technical",
+        "question": "Tạo bộ ba thumbnail đồng nhất trong Canva: nêu template, hierarchy chữ, tương phản và cách kiểm tra trên màn hình nhỏ.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của canva vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "content_creator_q06",
+        "skill": "giao tiếp",
+        "level": 2,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Kể lần bạn nhận brief mâu thuẫn từ hai bên; câu hỏi làm rõ, cách thống nhất mục tiêu và kết quả bàn giao.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với giao tiếp.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "copywriter": [
+      {
+        "id": "copywriter_q01",
+        "skill": "viết nội dung",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Viết headline và mở đầu quảng cáo 80 từ cho dịch vụ giao bữa trưa văn phòng; nêu lợi ích, bằng chứng và CTA, tránh claim chưa kiểm chứng.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của viết nội dung vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "copywriter_q02",
+        "skill": "sáng tạo",
+        "level": 3,
+        "weight": 3,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần bạn tạo nhiều concept khác biệt cho cùng sản phẩm; tiêu chí chọn và phản ứng người đọc.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với sáng tạo.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "copywriter_q03",
+        "skill": "nghiên cứu tâm lý khách hàng",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Trước landing page khóa học toán cho phụ huynh, bạn xác định insight, nỗi lo và ngôn ngữ khách từ nguồn dữ liệu nào?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của nghiên cứu tâm lý khách hàng vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "copywriter_q04",
+        "skill": "content marketing",
+        "level": 2,
+        "weight": 2,
+        "type": "technical",
+        "question": "Lập chuỗi ba nội dung cho khách cân nhắc phần mềm kế toán: mục tiêu từng giai đoạn, định dạng, CTA và metric.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của content marketing vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "copywriter_q05",
+        "skill": "tiếng anh giao tiếp",
+        "level": 2,
+        "weight": 1,
+        "type": "technical",
+        "question": "Bạn nhận brief tiếng Anh về sản phẩm SaaS; hãy tóm tắt value proposition và chuyển thành một headline tiếng Việt không dịch máy móc.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của tiếng anh giao tiếp vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "copywriter_q06",
+        "skill": "quản lý thời gian",
+        "level": 2,
+        "weight": 1,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần nhiều nội dung cùng deadline; cách ước lượng, ưu tiên vòng duyệt và bàn giao đúng hạn.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với quản lý thời gian.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "hotel_receptionist": [
+      {
+        "id": "hotel_receptionist_q01",
+        "skill": "tiếng anh giao tiếp",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Khách nước ngoài đến sớm, phòng chưa sẵn sàng và hỏi gửi hành lý/giờ nhận phòng. Trả lời bằng tiếng Anh lịch sự, nêu phương án và xác nhận hiểu.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của tiếng anh giao tiếp vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "hotel_receptionist_q02",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 3,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần khách bực vì chờ check-in; cách cập nhật thời gian, xác nhận giải pháp và kết quả.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với giao tiếp.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "hotel_receptionist_q03",
+        "skill": "xử lý tình huống",
+        "level": 2,
+        "weight": 3,
+        "type": "scenario",
+        "question": "Kể lần đặt phòng trùng/sai hạng lúc khách đến; nêu bước xác minh, phương án được duyệt và cách ghi nhận.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với xử lý tình huống.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "hotel_receptionist_q04",
+        "skill": "phần mềm quản lý khách sạn smile",
+        "level": 2,
+        "weight": 2,
+        "type": "technical",
+        "question": "Trong Smile PMS, xử lý check-in khách đã đặt cọc thế nào; nêu đối chiếu hồ sơ, trạng thái phòng, folio và xác nhận giao dịch.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của phần mềm quản lý khách sạn smile vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "hotel_receptionist_q05",
+        "skill": "chăm sóc khách hàng",
+        "level": 2,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần khách yêu cầu dịch vụ ngoài cam kết; cách làm rõ kỳ vọng, đưa lựa chọn và theo dõi hài lòng.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với chăm sóc khách hàng.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "hotel_receptionist_q06",
+        "skill": "quản lý thời gian",
+        "level": 2,
+        "weight": 1,
+        "type": "scenario",
+        "question": "Kể lần đồng thời có khách check-out, điện thoại đặt phòng và khách chờ check-in; cách ưu tiên và tránh bỏ sót dữ liệu.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với quản lý thời gian.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "tour_guide": [
+      {
+        "id": "tour_guide_q01",
+        "skill": "thuyết trình",
+        "level": 3,
+        "weight": 3,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần thuyết minh tại điểm di tích đông ồn; cách chia nội dung, giữ nhóm tập trung và kiểm tra khách nghe/hiểu.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với thuyết trình.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "tour_guide_q02",
+        "skill": "tiếng anh giao tiếp",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Khách hỏi tiếng Anh về giờ tự do và điểm tập trung; trả lời rõ giờ, địa điểm, phương án nếu trễ và xác nhận họ hiểu.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của tiếng anh giao tiếp vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "tour_guide_q03",
+        "skill": "kiến thức lịch sử văn hóa",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Bạn thuyết minh một di tích thế nào để phân biệt dữ kiện đã kiểm chứng với truyền thuyết mà vẫn tạo mạch kể hấp dẫn?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của kiến thức lịch sử văn hóa vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "tour_guide_q04",
+        "skill": "quản lý đoàn khách",
+        "level": 2,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần đoàn có người đi chậm và nguy cơ tách nhóm; cách điểm danh, điều chỉnh nhịp, giữ lịch và an toàn.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với quản lý đoàn khách.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "tour_guide_q05",
+        "skill": "xử lý sự cố",
+        "level": 2,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Kể theo STAR sự cố lỡ chuyến xe/khách thất lạc; nêu ưu tiên an toàn, liên lạc và phương án khôi phục lịch.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với xử lý sự cố.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "tour_guide_q06",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Mô tả lần bạn hòa giải bất đồng giữa khách về lịch trình; cách lắng nghe, nêu giới hạn và thống nhất quyết định.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với giao tiếp.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "travel_consultant": [
+      {
+        "id": "travel_consultant_q01",
+        "skill": "tư vấn bán hàng",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Gia đình có ngân sách cố định muốn tour 4 ngày nhưng chưa rõ ưu tiên: khai thác nhu cầu, trình bày hai lựa chọn và chốt bước tiếp theo.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của tư vấn bán hàng vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "travel_consultant_q02",
+        "skill": "thành thạo tuyến điểm du lịch",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Khách đi Đà Nẵng-Hội An 3 ngày cùng người lớn tuổi mùa mưa: chọn tuyến/nhịp di chuyển và phương án dự phòng dựa trên yếu tố nào?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của thành thạo tuyến điểm du lịch vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "travel_consultant_q03",
+        "skill": "thiết kế tour du lịch",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Thiết kế khung tour 3 ngày 2 đêm cho gia đình có trẻ nhỏ; nêu thứ tự điểm, thời gian di chuyển, bữa ăn và khoảng nghỉ.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của thiết kế tour du lịch vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "travel_consultant_q04",
+        "skill": "chăm sóc khách hàng",
+        "level": 2,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần khách phàn nàn vì kỳ vọng khác mô tả tour; cách xác minh cam kết, xử lý và theo dõi.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với chăm sóc khách hàng.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "travel_consultant_q05",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Kể lần bạn giải thích khoản phụ thu khiến khách phản đối; trình bày minh bạch, kiểm tra hiểu và kết quả.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với giao tiếp.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "travel_consultant_q06",
+        "skill": "tiếng anh giao tiếp",
+        "level": 2,
+        "weight": 2,
+        "type": "technical",
+        "question": "Khách hỏi tiếng Anh đổi ngày tour và điều kiện hoàn tiền; hỏi thông tin cần thiết, giải thích điều kiện và xác nhận yêu cầu.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của tiếng anh giao tiếp vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "event_planner": [
+      {
+        "id": "event_planner_q01",
+        "skill": "lập kế hoạch sự kiện",
+        "level": 3,
+        "weight": 3,
+        "type": "technical",
+        "question": "Lập timeline ngược cho hội thảo 150 khách còn sáu tuần; nêu mốc địa điểm, agenda, đăng ký, tổng duyệt, owner và tiêu chí sẵn sàng.",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của lập kế hoạch sự kiện vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "event_planner_q02",
+        "skill": "quản lý ngân sách",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Ngân sách bị cắt 15% sau khi nhận báo giá: phân loại chi phí bắt buộc/tùy chọn, cập nhật forecast và trình bày trade-off thế nào?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của quản lý ngân sách vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "event_planner_q03",
+        "skill": "quản lý nhà cung cấp",
+        "level": 2,
+        "weight": 3,
+        "type": "technical",
+        "question": "Nhà cung cấp âm thanh có nguy cơ giao trễ trước tổng duyệt: kiểm tra SLA, phương án dự phòng, mốc quyết định và escalation ra sao?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của quản lý nhà cung cấp vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "event_planner_q04",
+        "skill": "điều phối sự kiện",
+        "level": 3,
+        "weight": 2,
+        "type": "technical",
+        "question": "Ngày hội thảo, diễn giả trễ 20 phút nhưng livestream đã mở: điều chỉnh run-of-show, liên lạc bộ phận và giữ trải nghiệm khách thế nào?",
+        "good_answer_points": [
+          "Áp dụng đúng kiến thức/quy trình của điều phối sự kiện vào dữ kiện trong câu hỏi.",
+          "Chỉ rõ thông tin, thông số hoặc tiêu chí cụ thể cần kiểm tra trước khi quyết định.",
+          "Nêu bước xác nhận kết quả cùng dấu hiệu đạt/không đạt có thể kiểm chứng."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "event_planner_q05",
+        "skill": "giải quyết vấn đề",
+        "level": 2,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Theo STAR, kể lần sự cố phút chót ảnh hưởng chương trình; nêu đánh giá phương án, quyết định, phối hợp và kết quả.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với giải quyết vấn đề.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "event_planner_q06",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "type": "scenario",
+        "question": "Kể lần các bên bất đồng về chương trình; cách làm rõ mục tiêu, chốt quyết định và truyền đạt thay đổi.",
+        "good_answer_points": [
+          "Nêu bối cảnh, vai trò cá nhân và mục tiêu cụ thể gắn với giao tiếp.",
+          "Mô tả hành động bản thân, căn cứ lựa chọn và phối hợp liên quan.",
+          "Nêu kết quả có bằng chứng/tiêu chí và bài học hoặc cách duy trì hiệu quả."
+        ],
+        "red_flags": [
+          "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
+        ],
+        "time_minutes": 4
+      }
+    ]
+  }
+}
