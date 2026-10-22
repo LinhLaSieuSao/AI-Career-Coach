@@ -1,35 +1,2373 @@
+[
 {
-  "positions": [
-    {
-      "title": "Data Analyst",
-      "required_skills": [
-        "SQL",
-        "Python",
-        "Data Visualization",
-        "Statistical Analysis",
-        "Excel"
-      ]
-    },
-    {
-      "title": "Backend Developer",
-      "required_skills": [
-        "Node.js",
-        "Express",
-        "REST API Design",
-        "Database Management",
-        "Docker"
-      ]
-    },
-    {
-      "title": "AI Engineer",
-      "required_skills": [
-        "Machine Learning",
-        "Deep Learning",
-        "Python",
-        "TensorFlow",
-        "PyTorch"
-      ]
-    }
-  ]
+"id": "backend_developer_java",
+"name": "Backend Developer (Java)",
+"name_vi": "Lập trình viên Backend (Java)",
+"difficulty": "khó",
+"learning_time_months": 10,
+"skills": [
+{"name": "java", "level": 3, "weight": 3},
+{"name": "spring boot", "level": 2, "weight": 3},
+{"name": "rest api", "level": 3, "weight": 3},
+{"name": "sql", "level": 2, "weight": 3},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "docker", "level": 1, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "linux", "level": 1, "weight": 1}
+]
+},
+{
+"id": "backend_developer_nodejs",
+"name": "Backend Developer (Node.js)",
+"name_vi": "Lập trình viên Backend (Node.js)",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "javascript", "level": 3, "weight": 3},
+{"name": "nodejs", "level": 2, "weight": 3},
+{"name": "expressjs", "level": 2, "weight": 3},
+{"name": "rest api", "level": 2, "weight": 3},
+{"name": "mongodb", "level": 2, "weight": 2},
+{"name": "sql", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "docker", "level": 1, "weight": 1},
+{"name": "redis", "level": 1, "weight": 1}
+]
+},
+{
+"id": "backend_developer_net",
+"name": ".NET Developer",
+"name_vi": "Lập trình viên .NET",
+"difficulty": "khó",
+"learning_time_months": 9,
+"skills": [
+{"name": "c#", "level": 3, "weight": 3},
+{"name": "asp.net core", "level": 2, "weight": 3},
+{"name": "sql server", "level": 2, "weight": 3},
+{"name": "entity framework", "level": 2, "weight": 2},
+{"name": "rest api", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "html", "level": 1, "weight": 1},
+{"name": "css", "level": 1, "weight": 1},
+{"name": "javascript", "level": 1, "weight": 1}
+]
+},
+{
+"id": "frontend_developer_react",
+"name": "Frontend Developer (React)",
+"name_vi": "Lập trình viên Frontend (ReactJS)",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "html", "level": 3, "weight": 3},
+{"name": "css", "level": 3, "weight": 3},
+{"name": "javascript", "level": 3, "weight": 3},
+{"name": "reactjs", "level": 2, "weight": 3},
+{"name": "redux", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "rest api", "level": 2, "weight": 2},
+{"name": "typescript", "level": 1, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "thiết kế ui ux", "level": 1, "weight": 1}
+]
+},
+{
+"id": "frontend_developer_vue",
+"name": "Frontend Developer (Vue)",
+"name_vi": "Lập trình viên Frontend (VueJS)",
+"difficulty": "trung bình",
+"learning_time_months": 5,
+"skills": [
+{"name": "html", "level": 3, "weight": 3},
+{"name": "css", "level": 3, "weight": 3},
+{"name": "javascript", "level": 3, "weight": 3},
+{"name": "vuejs", "level": 2, "weight": 3},
+{"name": "vuex", "level": 2, "weight": 2},
+{"name": "tailwind css", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "rest api", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "thiết kế ui ux", "level": 1, "weight": 1}
+]
+},
+{
+"id": "frontend_developer_angular",
+"name": "Frontend Developer (Angular)",
+"name_vi": "Lập trình viên Frontend (Angular)",
+"difficulty": "khó",
+"learning_time_months": 8,
+"skills": [
+{"name": "html", "level": 3, "weight": 3},
+{"name": "css", "level": 3, "weight": 3},
+{"name": "typescript", "level": 3, "weight": 3},
+{"name": "angular", "level": 2, "weight": 3},
+{"name": "rxjs", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "rest api", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "sass", "level": 2, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "thiết kế ui ux", "level": 1, "weight": 1}
+]
+},
+{
+"id": "fullstack_developer_mern",
+"name": "Fullstack Developer (MERN)",
+"name_vi": "Lập trình viên Fullstack (MERN)",
+"difficulty": "khó",
+"learning_time_months": 10,
+"skills": [
+{"name": "javascript", "level": 3, "weight": 3},
+{"name": "reactjs", "level": 2, "weight": 3},
+{"name": "nodejs", "level": 2, "weight": 3},
+{"name": "rest api", "level": 2, "weight": 3},
+{"name": "mongodb", "level": 2, "weight": 2},
+{"name": "expressjs", "level": 2, "weight": 2},
+{"name": "html", "level": 2, "weight": 2},
+{"name": "css", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "docker", "level": 1, "weight": 1}
+]
+},
+{
+"id": "fullstack_developer_net_angular",
+"name": "Fullstack Developer (.NET & Angular)",
+"name_vi": "Lập trình viên Fullstack (.NET/Angular)",
+"difficulty": "khó",
+"learning_time_months": 12,
+"skills": [
+{"name": "c#", "level": 3, "weight": 3},
+{"name": "asp.net core", "level": 2, "weight": 3},
+{"name": "angular", "level": 2, "weight": 3},
+{"name": "typescript", "level": 2, "weight": 2},
+{"name": "sql server", "level": 2, "weight": 2},
+{"name": "rest api", "level": 2, "weight": 2},
+{"name": "html", "level": 2, "weight": 2},
+{"name": "css", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "quản lý thời gian", "level": 2, "weight": 1}
+]
+},
+{
+"id": "mobile_developer_ios",
+"name": "iOS Developer",
+"name_vi": "Lập trình viên iOS",
+"difficulty": "khó",
+"learning_time_months": 8,
+"skills": [
+{"name": "swift", "level": 3, "weight": 3},
+{"name": "ios sdk", "level": 2, "weight": 3},
+{"name": "xcode", "level": 2, "weight": 3},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "rest api", "level": 2, "weight": 2},
+{"name": "quản lý bộ nhớ", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "core data", "level": 1, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "thiết kế ui ux", "level": 1, "weight": 1}
+]
+},
+{
+"id": "mobile_developer_android",
+"name": "Android Developer",
+"name_vi": "Lập trình viên Android",
+"difficulty": "khó",
+"learning_time_months": 8,
+"skills": [
+{"name": "kotlin", "level": 3, "weight": 3},
+{"name": "android sdk", "level": 2, "weight": 3},
+{"name": "android studio", "level": 2, "weight": 3},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "rest api", "level": 2, "weight": 2},
+{"name": "sqlite", "level": 2, "weight": 2},
+{"name": "mvvm", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "thiết kế ui ux", "level": 1, "weight": 1}
+]
+},
+{
+"id": "mobile_developer_flutter",
+"name": "Flutter Developer",
+"name_vi": "Lập trình viên Flutter",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "dart", "level": 3, "weight": 3},
+{"name": "flutter framework", "level": 2, "weight": 3},
+{"name": "rest api", "level": 2, "weight": 3},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "state management", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "thiết kế ui ux", "level": 1, "weight": 1},
+{"name": "lập trình android", "level": 1, "weight": 1},
+{"name": "lập trình ios", "level": 1, "weight": 1}
+]
+},
+{
+"id": "mobile_developer_react_native",
+"name": "React Native Developer",
+"name_vi": "Lập trình viên React Native",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "javascript", "level": 3, "weight": 3},
+{"name": "react native", "level": 2, "weight": 3},
+{"name": "rest api", "level": 2, "weight": 3},
+{"name": "reactjs", "level": 2, "weight": 2},
+{"name": "redux", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "thiết kế ui ux", "level": 1, "weight": 1},
+{"name": "lập trình android", "level": 1, "weight": 1},
+{"name": "lập trình ios", "level": 1, "weight": 1}
+]
+},
+{
+"id": "game_developer_unity",
+"name": "Game Developer (Unity)",
+"name_vi": "Lập trình viên Game (Unity)",
+"difficulty": "khó",
+"learning_time_months": 9,
+"skills": [
+{"name": "c#", "level": 3, "weight": 3},
+{"name": "unity engine", "level": 2, "weight": 3},
+{"name": "tư duy logic", "level": 3, "weight": 3},
+{"name": "toán học 3d", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "vật lý trong game", "level": 1, "weight": 2},
+{"name": "tối ưu hóa hiệu suất", "level": 1, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "thiết kế trò chơi", "level": 1, "weight": 1},
+{"name": "lập trình shader", "level": 1, "weight": 1}
+]
+},
+{
+"id": "embedded_software_engineer",
+"name": "Embedded Software Engineer",
+"name_vi": "Kỹ sư lập trình nhúng",
+"difficulty": "rất khó",
+"learning_time_months": 18,
+"skills": [
+{"name": "c++", "level": 3, "weight": 3},
+{"name": "vi điều khiển", "level": 2, "weight": 3},
+{"name": "rtos", "level": 2, "weight": 3},
+{"name": "tư duy logic", "level": 3, "weight": 3},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "giao thức giao tiếp", "level": 2, "weight": 2},
+{"name": "debug phần cứng", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "thiết kế mạch", "level": 1, "weight": 2},
+{"name": "linux nhúng", "level": 1, "weight": 2}
+]
+},
+{
+"id": "automation_tester",
+"name": "Automation Tester",
+"name_vi": "Chuyên viên kiểm thử tự động",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "tư duy kiểm thử", "level": 3, "weight": 3},
+{"name": "selenium", "level": 2, "weight": 3},
+{"name": "api testing", "level": 2, "weight": 3},
+{"name": "java", "level": 2, "weight": 2},
+{"name": "sql", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "postman", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "ci/cd", "level": 1, "weight": 1}
+]
+},
+{
+"id": "data_analyst",
+"name": "Data Analyst",
+"name_vi": "Chuyên viên phân tích dữ liệu",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "sql", "level": 3, "weight": 3},
+{"name": "power bi", "level": 2, "weight": 3},
+{"name": "tư duy phân tích", "level": 3, "weight": 3},
+{"name": "python", "level": 2, "weight": 2},
+{"name": "excel", "level": 3, "weight": 2},
+{"name": "thống kê", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "tableau", "level": 1, "weight": 1}
+]
+},
+{
+"id": "data_engineer",
+"name": "Data Engineer",
+"name_vi": "Kỹ sư dữ liệu",
+"difficulty": "khó",
+"learning_time_months": 10,
+"skills": [
+{"name": "sql", "level": 3, "weight": 3},
+{"name": "python", "level": 3, "weight": 3},
+{"name": "apache spark", "level": 2, "weight": 3},
+{"name": "etl", "level": 2, "weight": 2},
+{"name": "data warehouse", "level": 2, "weight": 2},
+{"name": "aws", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "airflow", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "docker", "level": 1, "weight": 1},
+{"name": "linux", "level": 2, "weight": 1}
+]
+},
+{
+"id": "machine_learning_engineer",
+"name": "Machine Learning Engineer",
+"name_vi": "Kỹ sư học máy",
+"difficulty": "rất khó",
+"learning_time_months": 18,
+"skills": [
+{"name": "python", "level": 3, "weight": 3},
+{"name": "thuật toán học máy", "level": 3, "weight": 3},
+{"name": "pytorch", "level": 2, "weight": 3},
+{"name": "sql", "level": 2, "weight": 2},
+{"name": "docker", "level": 2, "weight": 2},
+{"name": "toán học", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "aws", "level": 1, "weight": 1}
+]
+},
+{
+"id": "business_intelligence_analyst",
+"name": "Business Intelligence Analyst",
+"name_vi": "Chuyên viên BI",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "sql", "level": 3, "weight": 3},
+{"name": "power bi", "level": 3, "weight": 3},
+{"name": "tư duy phân tích", "level": 3, "weight": 3},
+{"name": "excel", "level": 3, "weight": 2},
+{"name": "data warehouse", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "tableau", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "python", "level": 1, "weight": 1}
+]
+},
+{
+"id": "data_scientist",
+"name": "Data Scientist",
+"name_vi": "Chuyên gia dữ liệu",
+"difficulty": "rất khó",
+"learning_time_months": 20,
+"skills": [
+{"name": "python", "level": 3, "weight": 3},
+{"name": "sql", "level": 3, "weight": 3},
+{"name": "thống kê", "level": 3, "weight": 3},
+{"name": "thuật toán học máy", "level": 2, "weight": 3},
+{"name": "phân tích dữ liệu", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành data", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 1},
+{"name": "power bi", "level": 1, "weight": 1}
+]
+},
+{
+"id": "ai_engineer",
+"name": "AI Engineer",
+"name_vi": "Kỹ sư AI",
+"difficulty": "rất khó",
+"learning_time_months": 18,
+"skills": [
+{"name": "python", "level": 3, "weight": 3},
+{"name": "thuật toán học máy", "level": 3, "weight": 3},
+{"name": "pytorch", "level": 2, "weight": 3},
+{"name": "tensorflow", "level": 2, "weight": 2},
+{"name": "nlp", "level": 2, "weight": 2},
+{"name": "computer vision", "level": 2, "weight": 2},
+{"name": "docker", "level": 2, "weight": 2},
+{"name": "toán học", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2}
+]
+},
+{
+"id": "nlp_engineer",
+"name": "NLP Engineer",
+"name_vi": "Kỹ sư xử lý ngôn ngữ tự nhiên",
+"difficulty": "rất khó",
+"learning_time_months": 18,
+"skills": [
+{"name": "python", "level": 3, "weight": 3},
+{"name": "nlp", "level": 3, "weight": 3},
+{"name": "pytorch", "level": 2, "weight": 3},
+{"name": "thuật toán học máy", "level": 2, "weight": 2},
+{"name": "transformer", "level": 2, "weight": 2},
+{"name": "regex", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 1},
+{"name": "docker", "level": 1, "weight": 1}
+]
+},
+{
+"id": "computer_vision_engineer",
+"name": "Computer Vision Engineer",
+"name_vi": "Kỹ sư thị giác máy tính",
+"difficulty": "rất khó",
+"learning_time_months": 18,
+"skills": [
+{"name": "python", "level": 3, "weight": 3},
+{"name": "computer vision", "level": 3, "weight": 3},
+{"name": "pytorch", "level": 2, "weight": 3},
+{"name": "opencv", "level": 2, "weight": 2},
+{"name": "thuật toán học máy", "level": 2, "weight": 2},
+{"name": "c++", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 1},
+{"name": "docker", "level": 1, "weight": 1}
+]
+},
+{
+"id": "mlops_engineer",
+"name": "MLOps Engineer",
+"name_vi": "Kỹ sư MLOps",
+"difficulty": "khó",
+"learning_time_months": 12,
+"skills": [
+{"name": "python", "level": 3, "weight": 3},
+{"name": "docker", "level": 3, "weight": 3},
+{"name": "ci/cd", "level": 3, "weight": 3},
+{"name": "kubernetes", "level": 2, "weight": 2},
+{"name": "aws", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "linux", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "etl", "level": 1, "weight": 1}
+]
+},
+{
+"id": "data_architect",
+"name": "Data Architect",
+"name_vi": "Kiến trúc sư dữ liệu",
+"difficulty": "rất khó",
+"learning_time_months": 36,
+"skills": [
+{"name": "data warehouse", "level": 3, "weight": 3},
+{"name": "sql", "level": 3, "weight": 3},
+{"name": "kiến trúc hệ thống", "level": 3, "weight": 3},
+{"name": "etl", "level": 3, "weight": 2},
+{"name": "apache spark", "level": 2, "weight": 2},
+{"name": "aws", "level": 2, "weight": 2},
+{"name": "python", "level": 2, "weight": 2},
+{"name": "bảo mật dữ liệu", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2}
+]
+},
+{
+"id": "devops_engineer",
+"name": "DevOps Engineer",
+"name_vi": "Kỹ sư DevOps",
+"difficulty": "khó",
+"learning_time_months": 12,
+"skills": [
+{"name": "linux", "level": 3, "weight": 3},
+{"name": "docker", "level": 3, "weight": 3},
+{"name": "ci/cd", "level": 3, "weight": 3},
+{"name": "kubernetes", "level": 2, "weight": 2},
+{"name": "aws", "level": 2, "weight": 2},
+{"name": "git", "level": 2, "weight": 2},
+{"name": "python", "level": 2, "weight": 2},
+{"name": "terraform", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+]
+},
+{
+"id": "system_administrator",
+"name": "System Administrator",
+"name_vi": "Quản trị viên hệ thống",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "linux", "level": 3, "weight": 3},
+{"name": "windows server", "level": 3, "weight": 3},
+{"name": "quản trị mạng", "level": 2, "weight": 3},
+{"name": "active directory", "level": 2, "weight": 2},
+{"name": "vmware", "level": 2, "weight": 2},
+{"name": "bảo mật hệ thống", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+]
+},
+{
+"id": "network_engineer",
+"name": "Network Engineer",
+"name_vi": "Kỹ sư mạng",
+"difficulty": "khó",
+"learning_time_months": 8,
+"skills": [
+{"name": "ccna", "level": 3, "weight": 3},
+{"name": "quản trị mạng", "level": 3, "weight": 3},
+{"name": "routing & switching", "level": 2, "weight": 3},
+{"name": "cisco", "level": 2, "weight": 2},
+{"name": "firewall", "level": 2, "weight": 2},
+{"name": "linux", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+]
+},
+{
+"id": "security_engineer",
+"name": "Security Engineer",
+"name_vi": "Kỹ sư an ninh mạng",
+"difficulty": "rất khó",
+"learning_time_months": 18,
+"skills": [
+{"name": "bảo mật hệ thống", "level": 3, "weight": 3},
+{"name": "đánh giá lỗ hổng", "level": 2, "weight": 3},
+{"name": "quản trị mạng", "level": 2, "weight": 2},
+{"name": "linux", "level": 3, "weight": 2},
+{"name": "python", "level": 2, "weight": 2},
+{"name": "firewall", "level": 2, "weight": 2},
+{"name": "siem", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1},
+{"name": "kiến trúc hệ thống", "level": 2, "weight": 1}
+]
+},
+{
+"id": "penetration_tester",
+"name": "Penetration Tester",
+"name_vi": "Chuyên viên kiểm thử bảo mật (Pentester)",
+"difficulty": "rất khó",
+"learning_time_months": 18,
+"skills": [
+{"name": "pentest", "level": 3, "weight": 3},
+{"name": "đánh giá lỗ hổng", "level": 3, "weight": 3},
+{"name": "bảo mật web", "level": 2, "weight": 3},
+{"name": "linux", "level": 3, "weight": 2},
+{"name": "python", "level": 2, "weight": 2},
+{"name": "mạng máy tính", "level": 2, "weight": 2},
+{"name": "metasploit", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+]
+},
+{
+"id": "cloud_engineer",
+"name": "Cloud Engineer",
+"name_vi": "Kỹ sư điện toán đám mây",
+"difficulty": "khó",
+"learning_time_months": 10,
+"skills": [
+{"name": "aws", "level": 3, "weight": 3},
+{"name": "linux", "level": 3, "weight": 3},
+{"name": "docker", "level": 2, "weight": 2},
+{"name": "kubernetes", "level": 2, "weight": 2},
+{"name": "azure", "level": 2, "weight": 2},
+{"name": "terraform", "level": 2, "weight": 2},
+{"name": "mạng máy tính", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+]
+},
+{
+"id": "manual_tester",
+"name": "Manual Tester",
+"name_vi": "Chuyên viên kiểm thử phần mềm (Manual)",
+"difficulty": "dễ",
+"learning_time_months": 3,
+"skills": [
+{"name": "tư duy kiểm thử", "level": 3, "weight": 3},
+{"name": "viết test case", "level": 3, "weight": 3},
+{"name": "chú ý chi tiết", "level": 3, "weight": 3},
+{"name": "sql", "level": 2, "weight": 2},
+{"name": "jira", "level": 2, "weight": 2},
+{"name": "api testing", "level": 1, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+]
+},
+{
+"id": "it_support",
+"name": "IT Support",
+"name_vi": "Nhân viên hỗ trợ IT",
+"difficulty": "dễ",
+"learning_time_months": 2,
+"skills": [
+{"name": "cài đặt phần mềm", "level": 3, "weight": 3},
+{"name": "xử lý sự cố phần cứng", "level": 2, "weight": 3},
+{"name": "windows os", "level": 3, "weight": 3},
+{"name": "quản trị mạng", "level": 1, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "chăm sóc khách hàng", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "tiếng anh cơ bản", "level": 2, "weight": 1}
+]
+},
+{
+"id": "sre_engineer",
+"name": "Site Reliability Engineer",
+"name_vi": "Kỹ sư SRE",
+"difficulty": "rất khó",
+"learning_time_months": 24,
+"skills": [
+{"name": "linux", "level": 3, "weight": 3},
+{"name": "python", "level": 3, "weight": 3},
+{"name": "quản lý rủi ro hệ thống", "level": 3, "weight": 3},
+{"name": "giám sát hệ thống", "level": 2, "weight": 3},
+{"name": "aws", "level": 2, "weight": 2},
+{"name": "ci/cd", "level": 2, "weight": 2},
+{"name": "docker", "level": 2, "weight": 2},
+{"name": "kubernetes", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+]
+},
+{
+"id": "product_manager",
+"name": "Product Manager",
+"name_vi": "Quản lý sản phẩm",
+"difficulty": "khó",
+"learning_time_months": 12,
+"skills": [
+{"name": "quản lý sản phẩm", "level": 3, "weight": 3},
+{"name": "nghiên cứu thị trường", "level": 2, "weight": 2},
+{"name": "thiết kế ui ux", "level": 2, "weight": 2},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 1},
+{"name": "jira", "level": 2, "weight": 2},
+{"name": "agile/scrum", "level": 2, "weight": 3}
+]
+},
+{
+"id": "product_owner",
+"name": "Product Owner",
+"name_vi": "Chủ sở hữu sản phẩm",
+"difficulty": "khó",
+"learning_time_months": 10,
+"skills": [
+{"name": "agile/scrum", "level": 3, "weight": 3},
+{"name": "quản lý backlog", "level": 3, "weight": 3},
+{"name": "viết user story", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "jira", "level": 2, "weight": 2},
+{"name": "thiết kế ui ux", "level": 1, "weight": 1},
+{"name": "làm việc nhóm", "level": 3, "weight": 1},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2}
+]
+},
+{
+"id": "business_analyst",
+"name": "Business Analyst",
+"name_vi": "Chuyên viên phân tích nghiệp vụ",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "phân tích yêu cầu", "level": 3, "weight": 3},
+{"name": "tư duy phân tích", "level": 3, "weight": 3},
+{"name": "vẽ quy trình", "level": 2, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 2},
+{"name": "sql", "level": 1, "weight": 1},
+{"name": "tiếng anh chuyên ngành  ", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2}
+]
+},
+{
+"id": "it_business_analyst",
+"name": "IT Business Analyst",
+"name_vi": "Chuyên viên phân tích nghiệp vụ IT",
+"difficulty": "khó",
+"learning_time_months": 8,
+"skills": [
+{"name": "phân tích yêu cầu", "level": 3, "weight": 3},
+{"name": "viết tài liệu srs", "level": 3, "weight": 3},
+{"name": "sql", "level": 2, "weight": 2},
+{"name": "thiết kế api", "level": 1, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "uml", "level": 2, "weight": 2},
+{"name": "jira", "level": 2, "weight": 2},
+{"name": "agile/scrum", "level": 2, "weight": 2}
+]
+},
+{
+"id": "project_manager",
+"name": "Project Manager",
+"name_vi": "Quản lý dự án",
+"difficulty": "khó",
+"learning_time_months": 12,
+"skills": [
+{"name": "quản lý dự án", "level": 3, "weight": 3},
+{"name": "quản lý rủi ro", "level": 2, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "lập kế hoạch", "level": 3, "weight": 2},
+{"name": "agile/scrum", "level": 2, "weight": 2},
+{"name": "jira", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2}
+]
+},
+{
+"id": "scrum_master",
+"name": "Scrum Master",
+"name_vi": "Điều phối viên Scrum",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "agile/scrum", "level": 3, "weight": 3},
+{"name": "điều phối cuộc họp", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "jira", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 2},
+{"name": "quản lý xung đột", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+]
+},
+{
+"id": "ui_ux_designer",
+"name": "UI/UX Designer",
+"name_vi": "Chuyên viên thiết kế UI/UX",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "thiết kế ui ux", "level": 3, "weight": 3},
+{"name": "figma", "level": 3, "weight": 3},
+{"name": "nghiên cứu người dùng", "level": 2, "weight": 2},
+{"name": "prototyping", "level": 2, "weight": 3},
+{"name": "tư duy thiết kế", "level": 2, "weight": 2},
+{"name": "html", "level": 1, "weight": 1},
+{"name": "css", "level": 1, "weight": 1},
+{"name": "giao tiếp", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "ux_researcher",
+"name": "UX Researcher",
+"name_vi": "Chuyên viên nghiên cứu trải nghiệm người dùng",
+"difficulty": "khó",
+"learning_time_months": 8,
+"skills": [
+{"name": "nghiên cứu người dùng", "level": 3, "weight": 3},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 2},
+{"name": "phỏng vấn người dùng", "level": 3, "weight": 3},
+{"name": "tư duy phân tích", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "figma", "level": 1, "weight": 1},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2}
+]
+},
+{
+"id": "ui_designer",
+"name": "UI Designer",
+"name_vi": "Chuyên viên thiết kế giao diện",
+"difficulty": "trung bình",
+"learning_time_months": 5,
+"skills": [
+{"name": "thiết kế giao diện", "level": 3, "weight": 3},
+{"name": "figma", "level": 3, "weight": 3},
+{"name": "màu sắc và typography", "level": 3, "weight": 3},
+{"name": "thiết kế ui ux", "level": 2, "weight": 2},
+{"name": "prototyping", "level": 2, "weight": 2},
+{"name": "html", "level": 1, "weight": 1},
+{"name": "css", "level": 1, "weight": 1},
+{"name": "giao tiếp", "level": 2, "weight": 1}
+]
+},
+{
+"id": "data_business_analyst",
+"name": "Data Business Analyst",
+"name_vi": "Chuyên viên phân tích nghiệp vụ dữ liệu",
+"difficulty": "khó",
+"learning_time_months": 8,
+"skills": [
+{"name": "phân tích yêu cầu", "level": 3, "weight": 3},
+{"name": "sql", "level": 3, "weight": 3},
+{"name": "power bi", "level": 2, "weight": 2},
+{"name": "tư duy phân tích", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "ux_writer",
+"name": "UX Writer",
+"name_vi": "Chuyên viên viết nội dung trải nghiệm",
+"difficulty": "trung bình",
+"learning_time_months": 4,
+"skills": [
+{"name": "viết nội dung ux", "level": 3, "weight": 3},
+{"name": "nghiên cứu người dùng", "level": 2, "weight": 2},
+{"name": "thiết kế ui ux", "level": 1, "weight": 2},
+{"name": "figma", "level": 1, "weight": 1},
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "tư duy thiết kế", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "technical_product_manager",
+"name": "Technical Product Manager",
+"name_vi": "Quản lý sản phẩm kỹ thuật",
+"difficulty": "rất khó",
+"learning_time_months": 18,
+"skills": [
+{"name": "quản lý sản phẩm", "level": 3, "weight": 3},
+{"name": "kiến trúc hệ thống", "level": 2, "weight": 3},
+{"name": "thiết kế api", "level": 2, "weight": 2},
+{"name": "agile/scrum", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "sql", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "jira", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2}
+]
+},
+{
+"id": "digital_marketing_executive",
+"name": "Digital Marketing Executive",
+"name_vi": "Chuyên viên Digital Marketing",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "digital marketing", "level": 3, "weight": 3},
+{"name": "facebook ads", "level": 3, "weight": 3},
+{"name": "google ads", "level": 2, "weight": 3},
+{"name": "seo", "level": 2, "weight": 2},
+{"name": "content marketing", "level": 2, "weight": 2},
+{"name": "google analytics", "level": 2, "weight": 2},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+]
+},
+{
+"id": "content_marketing_executive",
+"name": "Content Marketing Executive",
+"name_vi": "Chuyên viên Content Marketing",
+"difficulty": "trung bình",
+"learning_time_months": 5,
+"skills": [
+{"name": "viết nội dung", "level": 3, "weight": 3},
+{"name": "kể chuyện", "level": 3, "weight": 3},
+{"name": "sáng tạo", "level": 3, "weight": 3},
+{"name": "seo", "level": 2, "weight": 2},
+{"name": "nghiên cứu từ khóa", "level": 2, "weight": 2},
+{"name": "canva", "level": 2, "weight": 2},
+{"name": "biên tập nội dung", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+]
+},
+{
+"id": "seo_specialist",
+"name": "SEO Specialist",
+"name_vi": "Chuyên viên SEO",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "seo on-page", "level": 3, "weight": 3},
+{"name": "seo off-page", "level": 3, "weight": 3},
+{"name": "nghiên cứu từ khóa", "level": 3, "weight": 3},
+{"name": "google search console", "level": 3, "weight": 3},
+{"name": "google analytics", "level": 2, "weight": 2},
+{"name": "html", "level": 1, "weight": 1},
+{"name": "viết nội dung", "level": 2, "weight": 2},
+{"name": "tư duy phân tích", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1}
+]
+},
+{
+"id": "social_media_executive",
+"name": "Social Media Executive",
+"name_vi": "Chuyên viên Social Media",
+"difficulty": "dễ",
+"learning_time_months": 3,
+"skills": [
+{"name": "quản lý fanpage", "level": 3, "weight": 3},
+{"name": "sáng tạo", "level": 3, "weight": 3},
+{"name": "facebook", "level": 3, "weight": 2},
+{"name": "tiktok", "level": 2, "weight": 2},
+{"name": "canva", "level": 2, "weight": 2},
+{"name": "bắt trend", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "chăm sóc khách hàng", "level": 2, "weight": 1},
+{"name": "viết nội dung", "level": 2, "weight": 2}
+]
+},
+{
+"id": "performance_marketing_executive",
+"name": "Performance Marketing Executive",
+"name_vi": "Chuyên viên quảng cáo hiệu suất",
+"difficulty": "khó",
+"learning_time_months": 9,
+"skills": [
+{"name": "tối ưu chuyển đổi", "level": 3, "weight": 3},
+{"name": "facebook ads", "level": 3, "weight": 3},
+{"name": "google ads", "level": 3, "weight": 3},
+{"name": "google analytics", "level": 3, "weight": 3},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 2},
+{"name": "tư duy phân tích", "level": 3, "weight": 2},
+{"name": "excel", "level": 2, "weight": 2},
+{"name": "sql", "level": 1, "weight": 1},
+{"name": "a/b testing", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1}
+]
+},
+{
+"id": "pr_executive",
+"name": "PR Executive",
+"name_vi": "Chuyên viên quan hệ công chúng (PR)",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "quan hệ báo chí", "level": 3, "weight": 3},
+{"name": "viết thông cáo báo chí", "level": 3, "weight": 3},
+{"name": "xử lý khủng hoảng", "level": 2, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "tổ chức sự kiện", "level": 2, "weight": 2},
+{"name": "xây dựng mối quan hệ", "level": 3, "weight": 2},
+{"name": "lập kế hoạch", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "brand_executive",
+"name": "Brand Executive",
+"name_vi": "Chuyên viên quản trị thương hiệu",
+"difficulty": "khó",
+"learning_time_months": 8,
+"skills": [
+{"name": "quản trị thương hiệu", "level": 2, "weight": 3},
+{"name": "lập kế hoạch", "level": 2, "weight": 3},
+{"name": "nghiên cứu thị trường", "level": 2, "weight": 3},
+{"name": "truyền thông tích hợp", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "quản lý dự án", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tư duy phân tích", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 1}
+]
+},
+{
+"id": "event_executive",
+"name": "Event Executive",
+"name_vi": "Chuyên viên tổ chức sự kiện",
+"difficulty": "trung bình",
+"learning_time_months": 5,
+"skills": [
+{"name": "tổ chức sự kiện", "level": 3, "weight": 3},
+{"name": "lập kế hoạch", "level": 3, "weight": 3},
+{"name": "quản lý ngân sách", "level": 2, "weight": 3},
+{"name": "thương lượng", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "quản lý thời gian", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 2},
+{"name": "marketing tại điểm bán", "level": 1, "weight": 1}
+]
+},
+{
+"id": "marketing_analyst",
+"name": "Marketing Analyst",
+"name_vi": "Chuyên viên phân tích dữ liệu Marketing",
+"difficulty": "khó",
+"learning_time_months": 9,
+"skills": [
+{"name": "phân tích dữ liệu", "level": 3, "weight": 3},
+{"name": "google analytics", "level": 3, "weight": 3},
+{"name": "tư duy phân tích", "level": 3, "weight": 3},
+{"name": "lập báo cáo", "level": 3, "weight": 3},
+{"name": "excel", "level": 3, "weight": 2},
+{"name": "sql", "level": 2, "weight": 2},
+{"name": "power bi", "level": 2, "weight": 2},
+{"name": "thống kê", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1}
+]
+},
+{
+"id": "trade_marketing_executive",
+"name": "Trade Marketing Executive",
+"name_vi": "Chuyên viên Trade Marketing",
+"difficulty": "trung bình",
+"learning_time_months": 7,
+"skills": [
+{"name": "marketing tại điểm bán", "level": 3, "weight": 3},
+{"name": "nghiên cứu thị trường", "level": 2, "weight": 3},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 2},
+{"name": "lập kế hoạch", "level": 2, "weight": 2},
+{"name": "quản lý ngân sách", "level": 2, "weight": 2},
+{"name": "thương lượng", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1}
+]
+},
+{
+"id": "video_creator",
+"name": "Video Creator",
+"name_vi": "Nhân viên quay dựng video",
+"difficulty": "trung bình",
+"learning_time_months": 5,
+"skills": [
+{"name": "quay dựng video", "level": 3, "weight": 3},
+{"name": "capcut", "level": 3, "weight": 3},
+{"name": "adobe premiere", "level": 2, "weight": 3},
+{"name": "kịch bản video", "level": 2, "weight": 2},
+{"name": "sáng tạo", "level": 3, "weight": 2},
+{"name": "tiktok", "level": 2, "weight": 2},
+{"name": "youtube", "level": 2, "weight": 2},
+{"name": "bắt trend", "level": 2, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "internal_comms_executive",
+"name": "Internal Communications Executive",
+"name_vi": "Chuyên viên truyền thông nội bộ",
+"difficulty": "trung bình",
+"learning_time_months": 4,
+"skills": [
+{"name": "truyền thông nội bộ", "level": 3, "weight": 3},
+{"name": "viết nội dung", "level": 3, "weight": 3},
+{"name": "kết nối nhân sự", "level": 3, "weight": 3},
+{"name": "tổ chức sự kiện", "level": 2, "weight": 2},
+{"name": "thiết kế cơ bản", "level": 2, "weight": 2},
+{"name": "canva", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1}
+]
+},
+{
+"id": "employer_branding_executive",
+"name": "Employer Branding Executive",
+"name_vi": "Chuyên viên thương hiệu nhà tuyển dụng",
+"difficulty": "khó",
+"learning_time_months": 8,
+"skills": [
+{"name": "thương hiệu nhà tuyển dụng", "level": 3, "weight": 3},
+{"name": "viết nội dung", "level": 2, "weight": 3},
+{"name": "truyền thông nội bộ", "level": 2, "weight": 2},
+{"name": "tổ chức sự kiện", "level": 2, "weight": 2},
+{"name": "linkedin", "level": 2, "weight": 2},
+{"name": "nghiên cứu thị trường", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "sáng tạo", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
+]
+},
+{
+"id": "ecommerce_executive",
+"name": "E-commerce Executive",
+"name_vi": "Chuyên viên thương mại điện tử",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "quản lý gian hàng", "level": 3, "weight": 3},
+{"name": "shopee", "level": 3, "weight": 3},
+{"name": "chạy ads sàn", "level": 2, "weight": 3},
+{"name": "tối ưu sản phẩm", "level": 2, "weight": 2},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 2},
+{"name": "chăm sóc khách hàng", "level": 2, "weight": 2},
+{"name": "excel", "level": 2, "weight": 2},
+{"name": "tư duy phân tích", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "sales_executive",
+"name": "Sales Executive",
+"name_vi": "Chuyên viên kinh doanh",
+"difficulty": "dễ",
+"learning_time_months": 3,
+"skills": [
+{"name": "bán hàng", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "tìm kiếm khách hàng", "level": 2, "weight": 3},
+{"name": "thuyết phục", "level": 2, "weight": 2},
+{"name": "chăm sóc khách hàng", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1},
+{"name": "quản lý thời gian", "level": 2, "weight": 1}
+]
+},
+{
+"id": "b2b_sales_executive",
+"name": "B2B Sales Executive",
+"name_vi": "Chuyên viên kinh doanh B2B",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "bán hàng b2b", "level": 3, "weight": 3},
+{"name": "xây dựng mối quan hệ", "level": 3, "weight": 3},
+{"name": "thuyết trình", "level": 2, "weight": 3},
+{"name": "thương lượng", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
+{"name": "excel", "level": 2, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1},
+{"name": "quản lý thời gian", "level": 2, "weight": 1}
+]
+},
+{
+"id": "key_account_manager",
+"name": "Key Account Manager",
+"name_vi": "Quản lý khách hàng trọng điểm",
+"difficulty": "khó",
+"learning_time_months": 12,
+"skills": [
+{"name": "quản lý tài khoản", "level": 3, "weight": 3},
+{"name": "xây dựng mối quan hệ", "level": 3, "weight": 3},
+{"name": "thương lượng", "level": 3, "weight": 3},
+{"name": "bán hàng b2b", "level": 3, "weight": 2},
+{"name": "lập kế hoạch", "level": 3, "weight": 2},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 3, "weight": 2},
+{"name": "excel", "level": 2, "weight": 1}
+]
+},
+{
+"id": "telesales_representative",
+"name": "Telesales Representative",
+"name_vi": "Nhân viên Telesales",
+"difficulty": "dễ",
+"learning_time_months": 2,
+"skills": [
+{"name": "gọi điện thoại", "level": 3, "weight": 3},
+{"name": "kịch bản bán hàng", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "thuyết phục", "level": 2, "weight": 2},
+{"name": "xử lý từ chối", "level": 2, "weight": 2},
+{"name": "lắng nghe", "level": 3, "weight": 2},
+{"name": "crm", "level": 1, "weight": 2},
+{"name": "chịu áp lực", "level": 2, "weight": 1},
+{"name": "quản lý thời gian", "level": 2, "weight": 1}
+]
+},
+{
+"id": "customer_service_executive",
+"name": "Customer Service Executive",
+"name_vi": "Chuyên viên chăm sóc khách hàng",
+"difficulty": "dễ",
+"learning_time_months": 2,
+"skills": [
+{"name": "chăm sóc khách hàng", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "xử lý khiếu nại", "level": 2, "weight": 3},
+{"name": "lắng nghe", "level": 3, "weight": 2},
+{"name": "kiên nhẫn", "level": 3, "weight": 2},
+{"name": "crm", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "tiếng anh cơ bản", "level": 2, "weight": 1}
+]
+},
+{
+"id": "customer_success_manager",
+"name": "Customer Success Manager",
+"name_vi": "Quản lý thành công của khách hàng",
+"difficulty": "trung bình",
+"learning_time_months": 7,
+"skills": [
+{"name": "quản lý thành công khách hàng", "level": 3, "weight": 3},
+{"name": "giữ chân khách hàng", "level": 3, "weight": 3},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "đào tạo khách hàng", "level": 2, "weight": 2},
+{"name": "crm", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 1}
+]
+},
+{
+"id": "business_development_executive",
+"name": "Business Development Executive",
+"name_vi": "Chuyên viên phát triển kinh doanh",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "phát triển kinh doanh", "level": 3, "weight": 3},
+{"name": "xây dựng mối quan hệ", "level": 3, "weight": 3},
+{"name": "nghiên cứu thị trường", "level": 2, "weight": 3},
+{"name": "lập kế hoạch", "level": 2, "weight": 2},
+{"name": "thương lượng", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
+{"name": "excel", "level": 2, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "sales_manager",
+"name": "Sales Manager",
+"name_vi": "Trưởng phòng kinh doanh",
+"difficulty": "khó",
+"learning_time_months": 14,
+"skills": [
+{"name": "quản lý đội ngũ", "level": 3, "weight": 3},
+{"name": "lập kế hoạch kinh doanh", "level": 3, "weight": 3},
+{"name": "dự báo doanh số", "level": 3, "weight": 3},
+{"name": "bán hàng", "level": 3, "weight": 2},
+{"name": "đào tạo nhân sự", "level": 2, "weight": 2},
+{"name": "thương lượng", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 2},
+{"name": "excel", "level": 2, "weight": 1}
+]
+},
+{
+"id": "ecommerce_manager",
+"name": "E-commerce Manager",
+"name_vi": "Quản lý thương mại điện tử",
+"difficulty": "khó",
+"learning_time_months": 10,
+"skills": [
+{"name": "quản lý thương mại điện tử", "level": 3, "weight": 3},
+{"name": "phân tích dữ liệu", "level": 3, "weight": 3},
+{"name": "lập kế hoạch", "level": 3, "weight": 3},
+{"name": "shopee", "level": 3, "weight": 2},
+{"name": "tối ưu chuyển đổi", "level": 2, "weight": 2},
+{"name": "quản lý ngân sách", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 1},
+{"name": "excel", "level": 2, "weight": 1}
+]
+},
+{
+"id": "retail_store_manager",
+"name": "Retail Store Manager",
+"name_vi": "Cửa hàng trưởng",
+"difficulty": "trung bình",
+"learning_time_months": 8,
+"skills": [
+{"name": "quản lý cửa hàng", "level": 3, "weight": 3},
+{"name": "quản lý tồn kho", "level": 3, "weight": 3},
+{"name": "quản lý nhân sự", "level": 2, "weight": 3},
+{"name": "dịch vụ khách hàng", "level": 3, "weight": 2},
+{"name": "báo cáo doanh thu", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "pos", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 1}
+]
+},
+{
+"id": "sales_admin",
+"name": "Sales Admin",
+"name_vi": "Nhân viên hỗ trợ kinh doanh",
+"difficulty": "dễ",
+"learning_time_months": 3,
+"skills": [
+{"name": "hỗ trợ kinh doanh", "level": 3, "weight": 3},
+{"name": "excel", "level": 3, "weight": 3},
+{"name": "soạn thảo hợp đồng", "level": 2, "weight": 3},
+{"name": "crm", "level": 2, "weight": 2},
+{"name": "quản lý hồ sơ", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 2},
+{"name": "cẩn thận", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "quản lý thời gian", "level": 2, "weight": 1}
+]
+},
+{
+"id": "merchandiser",
+"name": "Merchandiser",
+"name_vi": "Nhân viên quản lý đơn hàng",
+"difficulty": "trung bình",
+"learning_time_months": 5,
+"skills": [
+{"name": "quản lý đơn hàng", "level": 3, "weight": 3},
+{"name": "làm việc với nhà cung cấp", "level": 3, "weight": 3},
+{"name": "theo dõi tiến độ", "level": 3, "weight": 3},
+{"name": "excel", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "cẩn thận", "level": 3, "weight": 1},
+{"name": "quản lý thời gian", "level": 2, "weight": 1}
+]
+},
+{
+"id": "real_estate_sales_executive",
+"name": "Real Estate Sales Executive",
+"name_vi": "Chuyên viên kinh doanh bất động sản",
+"difficulty": "trung bình",
+"learning_time_months": 4,
+"skills": [
+{"name": "bán hàng bất động sản", "level": 3, "weight": 3},
+{"name": "tìm kiếm khách hàng", "level": 3, "weight": 3},
+{"name": "tư vấn khách hàng", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "xây dựng mối quan hệ", "level": 3, "weight": 2},
+{"name": "thương lượng", "level": 2, "weight": 2},
+{"name": "marketing cá nhân", "level": 2, "weight": 2},
+{"name": "luật bất động sản", "level": 1, "weight": 2},
+{"name": "chịu áp lực", "level": 2, "weight": 1}
+]
+},
+{
+"id": "technical_sales_engineer",
+"name": "Technical Sales Engineer",
+"name_vi": "Kỹ sư kinh doanh kỹ thuật",
+"difficulty": "khó",
+"learning_time_months": 9,
+"skills": [
+{"name": "bán hàng kỹ thuật", "level": 3, "weight": 3},
+{"name": "kiến thức kỹ thuật", "level": 3, "weight": 3},
+{"name": "tư vấn giải pháp", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "thuyết trình", "level": 2, "weight": 2},
+{"name": "thương lượng", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
+{"name": "xây dựng mối quan hệ", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "channel_sales_manager",
+"name": "Channel Sales Manager",
+"name_vi": "Quản lý kênh phân phối",
+"difficulty": "khó",
+"learning_time_months": 12,
+"skills": [
+{"name": "quản lý kênh phân phối", "level": 3, "weight": 3},
+{"name": "phát triển đại lý", "level": 3, "weight": 3},
+{"name": "lập kế hoạch kinh doanh", "level": 3, "weight": 3},
+{"name": "thương lượng", "level": 3, "weight": 2},
+{"name": "xây dựng mối quan hệ", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 2},
+{"name": "excel", "level": 2, "weight": 1}
+]
+},
+{
+"id": "accountant",
+"name": "Accountant",
+"name_vi": "Kế toán viên",
+"difficulty": "dễ",
+"learning_time_months": 4,
+"skills": [
+{"name": "kế toán doanh nghiệp", "level": 3, "weight": 3},
+{"name": "excel", "level": 3, "weight": 3},
+{"name": "misa", "level": 2, "weight": 2},
+{"name": "luật kế toán", "level": 2, "weight": 2},
+{"name": "cẩn thận", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1},
+{"name": "lập báo cáo", "level": 2, "weight": 2}
+]
+},
+{
+"id": "general_accountant",
+"name": "General Accountant",
+"name_vi": "Kế toán tổng hợp",
+"difficulty": "trung bình",
+"learning_time_months": 8,
+"skills": [
+{"name": "kế toán tổng hợp", "level": 3, "weight": 3},
+{"name": "lập báo cáo tài chính", "level": 3, "weight": 3},
+{"name": "excel", "level": 3, "weight": 2},
+{"name": "misa", "level": 3, "weight": 2},
+{"name": "kế toán thuế", "level": 2, "weight": 2},
+{"name": "luật kế toán", "level": 2, "weight": 2},
+{"name": "tư duy phân tích", "level": 2, "weight": 2},
+{"name": "cẩn thận", "level": 3, "weight": 1},
+{"name": "giao tiếp", "level": 2, "weight": 1}
+]
+},
+{
+"id": "chief_accountant",
+"name": "Chief Accountant",
+"name_vi": "Kế toán trưởng",
+"difficulty": "rất khó",
+"learning_time_months": 36,
+"skills": [
+{"name": "quản lý tài chính", "level": 3, "weight": 3},
+{"name": "lập báo cáo tài chính", "level": 3, "weight": 3},
+{"name": "quản lý đội ngũ", "level": 3, "weight": 3},
+{"name": "luật kế toán", "level": 3, "weight": 3},
+{"name": "kế toán thuế", "level": 3, "weight": 2},
+{"name": "erp", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1},
+{"name": "thuyết trình", "level": 2, "weight": 1}
+]
+},
+{
+"id": "tax_accountant",
+"name": "Tax Accountant",
+"name_vi": "Kế toán thuế",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "kế toán thuế", "level": 3, "weight": 3},
+{"name": "luật thuế", "level": 3, "weight": 3},
+{"name": "kê khai thuế", "level": 3, "weight": 3},
+{"name": "lập báo cáo tài chính", "level": 2, "weight": 2},
+{"name": "htkk", "level": 3, "weight": 2},
+{"name": "excel", "level": 3, "weight": 2},
+{"name": "misa", "level": 2, "weight": 2},
+{"name": "cẩn thận", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1}
+]
+},
+{
+"id": "auditor",
+"name": "Auditor",
+"name_vi": "Kiểm toán viên",
+"difficulty": "khó",
+"learning_time_months": 12,
+"skills": [
+{"name": "kiểm toán", "level": 3, "weight": 3},
+{"name": "chuẩn mực kế toán", "level": 3, "weight": 3},
+{"name": "tư duy phân tích", "level": 3, "weight": 3},
+{"name": "lập báo cáo tài chính", "level": 3, "weight": 2},
+{"name": "excel", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 2},
+{"name": "chịu áp lực", "level": 3, "weight": 1},
+{"name": "quản lý thời gian", "level": 2, "weight": 1}
+]
+},
+{
+"id": "internal_auditor",
+"name": "Internal Auditor",
+"name_vi": "Kiểm toán nội bộ",
+"difficulty": "khó",
+"learning_time_months": 12,
+"skills": [
+{"name": "kiểm toán nội bộ", "level": 3, "weight": 3},
+{"name": "quản trị rủi ro", "level": 2, "weight": 3},
+{"name": "kiểm soát nội bộ", "level": 3, "weight": 3},
+{"name": "chuẩn mực kế toán", "level": 2, "weight": 2},
+{"name": "tư duy phân tích", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "lập báo cáo", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1},
+{"name": "cẩn thận", "level": 3, "weight": 1}
+]
+},
+{
+"id": "financial_analyst",
+"name": "Financial Analyst",
+"name_vi": "Chuyên viên phân tích tài chính",
+"difficulty": "khó",
+"learning_time_months": 10,
+"skills": [
+{"name": "phân tích tài chính", "level": 3, "weight": 3},
+{"name": "mô hình tài chính", "level": 3, "weight": 3},
+{"name": "đọc báo cáo tài chính", "level": 3, "weight": 3},
+{"name": "excel", "level": 3, "weight": 3},
+{"name": "power bi", "level": 2, "weight": 2},
+{"name": "tư duy phân tích", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
+{"name": "thuyết trình", "level": 2, "weight": 2},
+{"name": "sql", "level": 1, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "credit_officer",
+"name": "Credit Officer",
+"name_vi": "Chuyên viên tín dụng",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "thẩm định tín dụng", "level": 3, "weight": 3},
+{"name": "bán hàng", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "phân tích tài chính", "level": 2, "weight": 2},
+{"name": "xây dựng mối quan hệ", "level": 3, "weight": 2},
+{"name": "luật ngân hàng", "level": 2, "weight": 2},
+{"name": "tìm kiếm khách hàng", "level": 3, "weight": 2},
+{"name": "chịu áp lực", "level": 2, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "cẩn thận", "level": 2, "weight": 1}
+]
+},
+{
+"id": "risk_management_officer",
+"name": "Risk Management Officer",
+"name_vi": "Chuyên viên quản trị rủi ro",
+"difficulty": "khó",
+"learning_time_months": 12,
+"skills": [
+{"name": "quản trị rủi ro", "level": 3, "weight": 3},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 3},
+{"name": "luật ngân hàng", "level": 3, "weight": 3},
+{"name": "tư duy phân tích", "level": 3, "weight": 2},
+{"name": "mô hình rủi ro", "level": 2, "weight": 2},
+{"name": "sql", "level": 2, "weight": 2},
+{"name": "excel", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 1}
+]
+},
+{
+"id": "bank_teller",
+"name": "Bank Teller",
+"name_vi": "Giao dịch viên ngân hàng",
+"difficulty": "dễ",
+"learning_time_months": 2,
+"skills": [
+{"name": "nghiệp vụ giao dịch", "level": 3, "weight": 3},
+{"name": "chăm sóc khách hàng", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "cẩn thận", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "chịu áp lực", "level": 2, "weight": 1},
+{"name": "đếm tiền", "level": 3, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "investment_analyst",
+"name": "Investment Analyst",
+"name_vi": "Chuyên viên phân tích đầu tư",
+"difficulty": "rất khó",
+"learning_time_months": 18,
+"skills": [
+{"name": "phân tích đầu tư", "level": 3, "weight": 3},
+{"name": "định giá doanh nghiệp", "level": 3, "weight": 3},
+{"name": "phân tích kinh tế vĩ mô", "level": 3, "weight": 3},
+{"name": "mô hình tài chính", "level": 3, "weight": 2},
+{"name": "excel", "level": 3, "weight": 2},
+{"name": "tư duy phân tích", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 3, "weight": 2},
+{"name": "bloomberg terminal", "level": 2, "weight": 2},
+{"name": "thuyết trình", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1}
+]
+},
+{
+"id": "financial_controller",
+"name": "Financial Controller",
+"name_vi": "Kiểm soát viên tài chính",
+"difficulty": "khó",
+"learning_time_months": 15,
+"skills": [
+{"name": "kiểm soát tài chính", "level": 3, "weight": 3},
+{"name": "lập ngân sách", "level": 3, "weight": 3},
+{"name": "kế toán quản trị", "level": 3, "weight": 3},
+{"name": "lập báo cáo tài chính", "level": 3, "weight": 2},
+{"name": "erp", "level": 2, "weight": 2},
+{"name": "phân tích tài chính", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 1}
+]
+},
+{
+"id": "hr_executive",
+"name": "HR Executive",
+"name_vi": "Chuyên viên nhân sự",
+"difficulty": "trung bình",
+"learning_time_months": 5,
+"skills": [
+{"name": "quản lý nhân sự", "level": 3, "weight": 3},
+{"name": "luật lao động", "level": 2, "weight": 3},
+{"name": "tuyển dụng", "level": 2, "weight": 2},
+{"name": "c&b", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "excel", "level": 2, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "cẩn thận", "level": 3, "weight": 2}
+]
+},
+{
+"id": "recruitment_specialist",
+"name": "Recruitment Specialist",
+"name_vi": "Chuyên viên tuyển dụng",
+"difficulty": "trung bình",
+"learning_time_months": 4,
+"skills": [
+{"name": "tuyển dụng", "level": 3, "weight": 3},
+{"name": "tìm kiếm ứng viên", "level": 3, "weight": 3},
+{"name": "kỹ năng phỏng vấn", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "thương lượng", "level": 2, "weight": 2},
+{"name": "marketing nhân sự", "level": 2, "weight": 2},
+{"name": "linkedin", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1}
+]
+},
+{
+"id": "cb_specialist",
+"name": "C&B Specialist",
+"name_vi": "Chuyên viên C&B",
+"difficulty": "khó",
+"learning_time_months": 8,
+"skills": [
+{"name": "tính lương", "level": 3, "weight": 3},
+{"name": "luật lao động", "level": 3, "weight": 3},
+{"name": "bảo hiểm xã hội", "level": 3, "weight": 3},
+{"name": "excel", "level": 3, "weight": 3},
+{"name": "thuế tncn", "level": 2, "weight": 2},
+{"name": "cẩn thận", "level": 3, "weight": 2},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "erp", "level": 1, "weight": 1}
+]
+},
+{
+"id": "ld_specialist",
+"name": "L&D Specialist",
+"name_vi": "Chuyên viên đào tạo và phát triển",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "đào tạo và phát triển", "level": 3, "weight": 3},
+{"name": "kỹ năng thuyết trình", "level": 3, "weight": 3},
+{"name": "lập kế hoạch đào tạo", "level": 2, "weight": 3},
+{"name": "xây dựng tài liệu", "level": 2, "weight": 2},
+{"name": "đánh giá năng lực", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "quản lý ngân sách", "level": 1, "weight": 1},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
+]
+},
+{
+"id": "hr_manager",
+"name": "HR Manager",
+"name_vi": "Trưởng phòng nhân sự",
+"difficulty": "rất khó",
+"learning_time_months": 24,
+"skills": [
+{"name": "quản lý nhân sự", "level": 3, "weight": 3},
+{"name": "chiến lược nhân sự", "level": 3, "weight": 3},
+{"name": "quản lý đội ngũ", "level": 3, "weight": 3},
+{"name": "luật lao động", "level": 3, "weight": 2},
+{"name": "c&b", "level": 2, "weight": 2},
+{"name": "tuyển dụng", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "quản lý ngân sách", "level": 2, "weight": 2}
+]
+},
+{
+"id": "admin_executive",
+"name": "Admin Executive",
+"name_vi": "Nhân viên hành chính",
+"difficulty": "dễ",
+"learning_time_months": 2,
+"skills": [
+{"name": "công tác hành chính", "level": 3, "weight": 3},
+{"name": "cẩn thận", "level": 3, "weight": 3},
+{"name": "soạn thảo văn bản", "level": 2, "weight": 2},
+{"name": "excel", "level": 2, "weight": 2},
+{"name": "word", "level": 2, "weight": 2},
+{"name": "quản lý hồ sơ", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "quản lý thiết bị", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "legal_executive",
+"name": "Legal Executive",
+"name_vi": "Chuyên viên pháp lý",
+"difficulty": "khó",
+"learning_time_months": 10,
+"skills": [
+{"name": "tư vấn pháp lý", "level": 3, "weight": 3},
+{"name": "luật doanh nghiệp", "level": 3, "weight": 3},
+{"name": "soạn thảo hợp đồng", "level": 3, "weight": 3},
+{"name": "rà soát hợp đồng", "level": 3, "weight": 3},
+{"name": "giải quyết tranh chấp", "level": 2, "weight": 2},
+{"name": "cẩn thận", "level": 3, "weight": 2},
+{"name": "tiếng anh pháp lý", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2}
+]
+},
+{
+"id": "logistics_coordinator",
+"name": "Logistics Coordinator",
+"name_vi": "Nhân viên điều phối logistics",
+"difficulty": "trung bình",
+"learning_time_months": 5,
+"skills": [
+{"name": "điều phối vận tải", "level": 3, "weight": 3},
+{"name": "excel", "level": 3, "weight": 3},
+{"name": "theo dõi đơn hàng", "level": 3, "weight": 3},
+{"name": "làm việc với nhà cung cấp", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "cẩn thận", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "procurement_specialist",
+"name": "Procurement Specialist",
+"name_vi": "Chuyên viên thu mua",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "thu mua", "level": 3, "weight": 3},
+{"name": "thương lượng", "level": 3, "weight": 3},
+{"name": "đánh giá nhà cung cấp", "level": 3, "weight": 3},
+{"name": "quản lý hợp đồng", "level": 2, "weight": 2},
+{"name": "excel", "level": 2, "weight": 2},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "erp", "level": 2, "weight": 1},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
+]
+},
+{
+"id": "import_export_executive",
+"name": "Import-Export Executive",
+"name_vi": "Chuyên viên xuất nhập khẩu",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "nghiệp vụ xuất nhập khẩu", "level": 3, "weight": 3},
+{"name": "chứng từ xuất nhập khẩu", "level": 3, "weight": 3},
+{"name": "incoterms", "level": 2, "weight": 3},
+{"name": "khai báo hải quan", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 3, "weight": 2},
+{"name": "làm việc với fwd", "level": 2, "weight": 2},
+{"name": "cẩn thận", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "excel", "level": 2, "weight": 1}
+]
+},
+{
+"id": "warehouse_supervisor",
+"name": "Warehouse Supervisor",
+"name_vi": "Giám sát kho",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "quản lý kho", "level": 3, "weight": 3},
+{"name": "quản lý tồn kho", "level": 3, "weight": 3},
+{"name": "quản lý đội ngũ", "level": 3, "weight": 3},
+{"name": "an toàn lao động", "level": 2, "weight": 2},
+{"name": "pccc", "level": 2, "weight": 2},
+{"name": "erp", "level": 2, "weight": 2},
+{"name": "excel", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "lập báo cáo", "level": 2, "weight": 1}
+]
+},
+{
+"id": "supply_chain_planner",
+"name": "Supply Chain Planner",
+"name_vi": "Chuyên viên hoạch định chuỗi cung ứng",
+"difficulty": "khó",
+"learning_time_months": 9,
+"skills": [
+{"name": "hoạch định chuỗi cung ứng", "level": 3, "weight": 3},
+{"name": "dự báo nhu cầu", "level": 3, "weight": 3},
+{"name": "quản lý tồn kho", "level": 2, "weight": 3},
+{"name": "phân tích dữ liệu", "level": 3, "weight": 2},
+{"name": "excel", "level": 3, "weight": 2},
+{"name": "erp", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
+]
+},
+{
+"id": "supply_chain_manager",
+"name": "Supply Chain Manager",
+"name_vi": "Quản lý chuỗi cung ứng",
+"difficulty": "rất khó",
+"learning_time_months": 36,
+"skills": [
+{"name": "quản lý chuỗi cung ứng", "level": 3, "weight": 3},
+{"name": "chiến lược chuỗi cung ứng", "level": 3, "weight": 3},
+{"name": "tối ưu hóa chi phí", "level": 3, "weight": 3},
+{"name": "quản trị rủi ro", "level": 3, "weight": 2},
+{"name": "thương lượng", "level": 3, "weight": 2},
+{"name": "quản lý đội ngũ", "level": 3, "weight": 2},
+{"name": "phân tích dữ liệu", "level": 2, "weight": 2},
+{"name": "erp", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
+]
+},
+{
+"id": "compliance_officer",
+"name": "Compliance Officer",
+"name_vi": "Chuyên viên tuân thủ",
+"difficulty": "khó",
+"learning_time_months": 12,
+"skills": [
+{"name": "kiểm soát tuân thủ", "level": 3, "weight": 3},
+{"name": "đánh giá rủi ro", "level": 3, "weight": 3},
+{"name": "luật doanh nghiệp", "level": 2, "weight": 3},
+{"name": "lập báo cáo", "level": 3, "weight": 2},
+{"name": "cẩn thận", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
+]
+},
+{
+"id": "customs_declaration_specialist",
+"name": "Customs Declaration Specialist",
+"name_vi": "Chuyên viên khai báo hải quan",
+"difficulty": "trung bình",
+"learning_time_months": 4,
+"skills": [
+{"name": "khai báo hải quan", "level": 3, "weight": 3},
+{"name": "phần mềm ecus/vnaccs", "level": 3, "weight": 3},
+{"name": "chứng từ hải quan", "level": 3, "weight": 3},
+{"name": "luật hải quan", "level": 2, "weight": 2},
+{"name": "hs code", "level": 2, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "cẩn thận", "level": 3, "weight": 2}
+]
+},
+{
+"id": "mechanical_engineer",
+"name": "Mechanical Engineer",
+"name_vi": "Kỹ sư cơ khí",
+"difficulty": "khó",
+"learning_time_months": 48,
+"skills": [
+{"name": "autocad", "level": 3, "weight": 3},
+{"name": "solidworks", "level": 2, "weight": 3},
+{"name": "đọc bản vẽ kỹ thuật", "level": 3, "weight": 3},
+{"name": "dung sai lắp ghép", "level": 2, "weight": 2},
+{"name": "gia công cơ khí", "level": 2, "weight": 2},
+{"name": "bóc tách khối lượng", "level": 2, "weight": 2},
+{"name": "tiếng anh giao tiếp", "level": 1, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1}
+]
+},
+{
+"id": "electrical_engineer",
+"name": "Electrical Engineer",
+"name_vi": "Kỹ sư điện",
+"difficulty": "khó",
+"learning_time_months": 48,
+"skills": [
+{"name": "autocad electrical", "level": 3, "weight": 3},
+{"name": "thiết kế hệ thống điện", "level": 2, "weight": 3},
+{"name": "đọc bản vẽ kỹ thuật", "level": 3, "weight": 3},
+{"name": "an toàn điện", "level": 3, "weight": 2},
+{"name": "thiết bị điện công nghiệp", "level": 2, "weight": 2},
+{"name": "plc basic", "level": 1, "weight": 2},
+{"name": "quản lý thời gian", "level": 2, "weight": 1},
+{"name": "giao tiếp", "level": 2, "weight": 1}
+]
+},
+{
+"id": "automation_engineer",
+"name": "Automation Engineer",
+"name_vi": "Kỹ sư tự động hóa",
+"difficulty": "khó",
+"learning_time_months": 48,
+"skills": [
+{"name": "plc siemens", "level": 2, "weight": 3},
+{"name": "scada", "level": 2, "weight": 3},
+{"name": "lập trình plc", "level": 2, "weight": 3},
+{"name": "cảm biến công nghiệp", "level": 2, "weight": 2},
+{"name": "biến tần", "level": 2, "weight": 2},
+{"name": "autocad", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1},
+{"name": "tư duy logic", "level": 2, "weight": 1}
+]
+},
+{
+"id": "civil_engineer",
+"name": "Civil Engineer",
+"name_vi": "Kỹ sư xây dựng dân dụng",
+"difficulty": "khó",
+"learning_time_months": 48,
+"skills": [
+{"name": "autocad", "level": 3, "weight": 3},
+{"name": "bóc tách khối lượng", "level": 3, "weight": 3},
+{"name": "đọc bản vẽ kỹ thuật", "level": 3, "weight": 3},
+{"name": "etabs", "level": 2, "weight": 2},
+{"name": "giám sát thi công", "level": 2, "weight": 2},
+{"name": "dự toán công trình", "level": 2, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "quản lý tiến độ", "level": 2, "weight": 1}
+]
+},
+{
+"id": "mep_engineer",
+"name": "MEP Engineer",
+"name_vi": "Kỹ sư M&E",
+"difficulty": "khó",
+"learning_time_months": 48,
+"skills": [
+{"name": "autocad", "level": 3, "weight": 3},
+{"name": "revit mep", "level": 2, "weight": 3},
+{"name": "thiết kế hệ thống điện", "level": 2, "weight": 2},
+{"name": "hệ thống hvac", "level": 2, "weight": 3},
+{"name": "hệ thống cấp thoát nước", "level": 2, "weight": 2},
+{"name": "bóc tách khối lượng", "level": 2, "weight": 2},
+{"name": "tiếng anh giao tiếp", "level": 1, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1}
+]
+},
+{
+"id": "process_engineer",
+"name": "Process Engineer",
+"name_vi": "Kỹ sư quy trình sản xuất",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "lean manufacturing", "level": 2, "weight": 3},
+{"name": "kaizen", "level": 2, "weight": 3},
+{"name": "5s", "level": 3, "weight": 3},
+{"name": "phân tích sop", "level": 2, "weight": 2},
+{"name": "sơ đồ chuỗi giá trị vsm", "level": 1, "weight": 2},
+{"name": "excel", "level": 2, "weight": 2},
+{"name": "tư duy logic", "level": 2, "weight": 1},
+{"name": "quản lý thời gian", "level": 2, "weight": 1}
+]
+},
+{
+"id": "quality_assurance_engineer",
+"name": "QA Engineer Manufacturing",
+"name_vi": "Kỹ sư đảm bảo chất lượng nhà máy",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "iso 9001", "level": 2, "weight": 3},
+{"name": "kiểm soát chất lượng", "level": 2, "weight": 3},
+{"name": "quy trình 8d", "level": 2, "weight": 2},
+{"name": "fmea", "level": 1, "weight": 2},
+{"name": "7 công cụ qc", "level": 2, "weight": 3},
+{"name": "excel", "level": 2, "weight": 2},
+{"name": "tiếng anh giao tiếp", "level": 2, "weight": 1},
+{"name": "giao tiếp", "level": 2, "weight": 1}
+]
+},
+{
+"id": "maintenance_engineer",
+"name": "Maintenance Engineer",
+"name_vi": "Kỹ sư bảo trì thiết bị",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "bảo trì phòng ngừa", "level": 2, "weight": 3},
+{"name": "sửa chữa máy móc", "level": 2, "weight": 3},
+{"name": "đọc bản vẽ kỹ thuật", "level": 2, "weight": 3},
+{"name": "an toàn lao động", "level": 3, "weight": 2},
+{"name": "thiết bị điện công nghiệp", "level": 2, "weight": 2},
+{"name": "plc basic", "level": 1, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "site_engineer",
+"name": "Site Engineer",
+"name_vi": "Kỹ sư hiện trường công trình",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "giám sát thi công", "level": 2, "weight": 3},
+{"name": "đọc bản vẽ kỹ thuật", "level": 3, "weight": 3},
+{"name": "an toàn lao động", "level": 3, "weight": 3},
+{"name": "quản lý công nhân", "level": 2, "weight": 2},
+{"name": "autocad", "level": 2, "weight": 2},
+{"name": "nghiệm thu công trình", "level": 2, "weight": 2},
+{"name": "quản lý thời gian", "level": 2, "weight": 1},
+{"name": "giao tiếp", "level": 2, "weight": 1}
+]
+},
+{
+"id": "estimation_engineer",
+"name": "QS Engineer",
+"name_vi": "Kỹ sư dự toán và khối lượng",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "bóc tách khối lượng", "level": 3, "weight": 3},
+{"name": "dự toán công trình", "level": 3, "weight": 3},
+{"name": "đọc bản vẽ kỹ thuật", "level": 3, "weight": 3},
+{"name": "autocad", "level": 2, "weight": 2},
+{"name": "excel", "level": 3, "weight": 2},
+{"name": "định mức xây dựng", "level": 2, "weight": 2},
+{"name": "đàm phán", "level": 1, "weight": 1},
+{"name": "cẩn thận", "level": 3, "weight": 1}
+]
+},
+{
+"id": "architect",
+"name": "Architect",
+"name_vi": "Kiến trúc sư công trình",
+"difficulty": "khó",
+"learning_time_months": 48,
+"skills": [
+{"name": "autocad", "level": 3, "weight": 3},
+{"name": "revit architecture", "level": 2, "weight": 3},
+{"name": "sketchup", "level": 2, "weight": 3},
+{"name": "3ds max", "level": 2, "weight": 2},
+{"name": "tư duy không gian", "level": 3, "weight": 2},
+{"name": "phong thủy cơ bản", "level": 1, "weight": 1},
+{"name": "thuyết trình", "level": 2, "weight": 1},
+{"name": "sáng tạo", "level": 3, "weight": 1}
+]
+},
+{
+"id": "hvac_engineer",
+"name": "HVAC Engineer",
+"name_vi": "Kỹ sư nhiệt lạnh",
+"difficulty": "khó",
+"learning_time_months": 48,
+"skills": [
+{"name": "hệ thống hvac", "level": 3, "weight": 3},
+{"name": "autocad", "level": 3, "weight": 3},
+{"name": "tính toán tải nhiệt", "level": 2, "weight": 3},
+{"name": "đọc bản vẽ kỹ thuật", "level": 3, "weight": 2},
+{"name": "chọn thiết bị lạnh", "level": 2, "weight": 2},
+{"name": "revit mep", "level": 1, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 1}
+]
+},
+{
+"id": "cnc_operator",
+"name": "CNC Operator",
+"name_vi": "Kỹ thuật viên đứng máy CNC",
+"difficulty": "dễ",
+"learning_time_months": 3,
+"skills": [
+{"name": "vận hành máy cnc", "level": 2, "weight": 3},
+{"name": "đọc bản vẽ kỹ thuật", "level": 2, "weight": 3},
+{"name": "dụng cụ đo cơ khí", "level": 2, "weight": 3},
+{"name": "g-code cơ bản", "level": 1, "weight": 2},
+{"name": "an toàn lao động", "level": 3, "weight": 2},
+{"name": "cẩn thận", "level": 3, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "production_planner",
+"name": "Production Planner",
+"name_vi": "Chuyên viên kế hoạch sản xuất",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "lập kế hoạch sản xuất", "level": 2, "weight": 3},
+{"name": "quản lý tồn kho", "level": 2, "weight": 3},
+{"name": "excel", "level": 3, "weight": 3},
+{"name": "sap erp", "level": 1, "weight": 2},
+{"name": "dự báo nhu cầu", "level": 2, "weight": 2},
+{"name": "quản lý thời gian", "level": 2, "weight": 1},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "tư duy logic", "level": 2, "weight": 1}
+]
+},
+{
+"id": "safety_engineer",
+"name": "HSE Officer",
+"name_vi": "Chuyên viên an toàn môi trường",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "an toàn lao động", "level": 3, "weight": 3},
+{"name": "iso 14001", "level": 2, "weight": 3},
+{"name": "iso 45001", "level": 2, "weight": 3},
+{"name": "đánh giá rủi ro", "level": 2, "weight": 2},
+{"name": "đào tạo an toàn", "level": 2, "weight": 2},
+{"name": "luật an toàn lao động", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "thuyết trình", "level": 2, "weight": 1}
+]
+},
+{
+"id": "doctor",
+"name": "General Practitioner",
+"name_vi": "Bác sĩ đa khoa",
+"difficulty": "rất khó",
+"learning_time_months": 72,
+"skills": [
+{"name": "chẩn đoán bệnh", "level": 3, "weight": 3},
+{"name": "kê đơn thuốc", "level": 3, "weight": 3},
+{"name": "khám lâm sàng", "level": 3, "weight": 3},
+{"name": "sơ cứu cấp cứu", "level": 3, "weight": 3},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "lắng nghe chủ động", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 3, "weight": 1}
+]
+},
+{
+"id": "registered_nurse",
+"name": "Registered Nurse",
+"name_vi": "Điều dưỡng viên",
+"difficulty": "khó",
+"learning_time_months": 36,
+"skills": [
+{"name": "chăm sóc bệnh nhân", "level": 3, "weight": 3},
+{"name": "tiêm truyền tĩnh mạch", "level": 3, "weight": 3},
+{"name": "theo dõi dấu hiệu sinh tồn", "level": 3, "weight": 3},
+{"name": "sơ cứu cấp cứu", "level": 2, "weight": 2},
+{"name": "quản lý hồ sơ bệnh án", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 2, "weight": 1},
+{"name": "cẩn thận", "level": 3, "weight": 1}
+]
+},
+{
+"id": "pharmacist",
+"name": "Pharmacist",
+"name_vi": "Dược sĩ tư vấn",
+"difficulty": "khó",
+"learning_time_months": 60,
+"skills": [
+{"name": "tư vấn sử dụng thuốc", "level": 3, "weight": 3},
+{"name": "quản lý nhà thuốc", "level": 2, "weight": 3},
+{"name": "kiểm soát dược phẩm", "level": 3, "weight": 3},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "excel", "level": 2, "weight": 1},
+{"name": "cẩn thận", "level": 3, "weight": 1},
+{"name": "lắng nghe chủ động", "level": 2, "weight": 1}
+]
+},
+{
+"id": "english_teacher",
+"name": "English Teacher",
+"name_vi": "Giáo viên tiếng Anh",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "tiếng anh giao tiếp", "level": 3, "weight": 3},
+{"name": "kỹ năng giảng dạy", "level": 2, "weight": 3},
+{"name": "soạn giáo án", "level": 2, "weight": 3},
+{"name": "quản lý lớp học", "level": 2, "weight": 2},
+{"name": "thuyết trình", "level": 3, "weight": 2},
+{"name": "ielts preparation", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 1},
+{"name": "sáng tạo", "level": 2, "weight": 1}
+]
+},
+{
+"id": "primary_school_teacher",
+"name": "Primary School Teacher",
+"name_vi": "Giáo viên tiểu học",
+"difficulty": "khó",
+"learning_time_months": 48,
+"skills": [
+{"name": "kỹ năng giảng dạy", "level": 3, "weight": 3},
+{"name": "tâm lý học lứa tuổi", "level": 2, "weight": 3},
+{"name": "soạn giáo án", "level": 3, "weight": 3},
+{"name": "quản lý lớp học", "level": 3, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "sáng tạo", "level": 2, "weight": 1},
+{"name": "kiên nhẫn", "level": 3, "weight": 1},
+{"name": "làm việc nhóm", "level": 2, "weight": 1}
+]
+},
+{
+"id": "graphic_designer",
+"name": "Graphic Designer",
+"name_vi": "Chuyên viên thiết kế đồ họa",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "adobe photoshop", "level": 3, "weight": 3},
+{"name": "adobe illustrator", "level": 3, "weight": 3},
+{"name": "tư duy thẩm mỹ", "level": 2, "weight": 3},
+{"name": "thiết kế nhận diện thương hiệu", "level": 2, "weight": 2},
+{"name": "layout design", "level": 2, "weight": 2},
+{"name": "sáng tạo", "level": 3, "weight": 2},
+{"name": "quản lý thời gian", "level": 2, "weight": 1},
+{"name": "giao tiếp", "level": 2, "weight": 1}
+]
+},
+{
+"id": "video_editor",
+"name": "Video Editor",
+"name_vi": "Chuyên viên dựng video",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "adobe premiere pro", "level": 3, "weight": 3},
+{"name": "adobe after effects", "level": 2, "weight": 3},
+{"name": "biên tập video", "level": 3, "weight": 3},
+{"name": "chỉnh sửa âm thanh", "level": 2, "weight": 2},
+{"name": "capcut", "level": 3, "weight": 2},
+{"name": "tư duy hình ảnh", "level": 2, "weight": 2},
+{"name": "sáng tạo", "level": 2, "weight": 1},
+{"name": "quản lý thời gian", "level": 2, "weight": 1}
+]
+},
+{
+"id": "content_creator",
+"name": "Content Creator",
+"name_vi": "sáng tạo số",
+"difficulty": "dễ",
+"learning_time_months": 3,
+"skills": [
+{"name": "sáng tạo kịch bản", "level": 2, "weight": 3},
+{"name": "quay video bằng điện thoại", "level": 2, "weight": 3},
+{"name": "capcut", "level": 3, "weight": 3},
+{"name": "nắm bắt xu hướng", "level": 3, "weight": 2},
+{"name": "canva", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 2},
+{"name": "sáng tạo", "level": 3, "weight": 1},
+{"name": "quản lý thời gian", "level": 2, "weight": 1}
+]
+},
+{
+"id": "copywriter",
+"name": "Copywriter",
+"name_vi": "Chuyên viên viết quảng cáo",
+"difficulty": "trung bình",
+"learning_time_months": 4,
+"skills": [
+{"name": "viết nội dung", "level": 3, "weight": 3},
+{"name": "sáng tạo", "level": 3, "weight": 3},
+{"name": "nghiên cứu tâm lý khách hàng", "level": 2, "weight": 3},
+{"name": "content marketing", "level": 2, "weight": 2},
+{"name": "seo cơ bản", "level": 1, "weight": 2},
+{"name": "giao tiếp", "level": 2, "weight": 1},
+{"name": "tiếng anh giao tiếp", "level": 2, "weight": 1},
+{"name": "quản lý thời gian", "level": 2, "weight": 1}
+]
+},
+{
+"id": "hotel_receptionist",
+"name": "Hotel Receptionist",
+"name_vi": "Nhân viên lễ tân khách sạn",
+"difficulty": "dễ",
+"learning_time_months": 2,
+"skills": [
+{"name": "tiếng anh giao tiếp", "level": 3, "weight": 3},
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "xử lý tình huống", "level": 2, "weight": 3},
+{"name": "phần mềm quản lý khách sạn smile", "level": 2, "weight": 2},
+{"name": "chăm sóc khách hàng", "level": 2, "weight": 2},
+{"name": "quản lý thời gian", "level": 2, "weight": 1},
+{"name": "lắng nghe chủ động", "level": 2, "weight": 1}
+]
+},
+{
+"id": "tour_guide",
+"name": "Tour Guide",
+"name_vi": "Hướng dẫn viên du lịch",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "thuyết trình", "level": 3, "weight": 3},
+{"name": "tiếng anh giao tiếp", "level": 3, "weight": 3},
+{"name": "kiến thức lịch sử văn hóa", "level": 2, "weight": 3},
+{"name": "quản lý đoàn khách", "level": 2, "weight": 2},
+{"name": "xử lý sự cố", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "sơ cứu cấp cứu", "level": 1, "weight": 1},
+{"name": "sáng tạo", "level": 2, "weight": 1}
+]
+},
+{
+"id": "travel_consultant",
+"name": "Travel Consultant",
+"name_vi": "Chuyên viên tư vấn du lịch",
+"difficulty": "dễ",
+"learning_time_months": 3,
+"skills": [
+{"name": "tư vấn bán hàng", "level": 3, "weight": 3},
+{"name": "thành thạo tuyến điểm du lịch", "level": 2, "weight": 3},
+{"name": "thiết kế tour du lịch", "level": 2, "weight": 3},
+{"name": "chăm sóc khách hàng", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "tiếng anh giao tiếp", "level": 2, "weight": 2},
+{"name": "đàm phán", "level": 2, "weight": 1},
+{"name": "quản lý thời gian", "level": 2, "weight": 1}
+]
+},
+{
+"id": "customer_service_representative",
+"name": "Customer Service Representative",
+"name_vi": "Chuyên viên chăm sóc khách hàng",
+"difficulty": "dễ",
+"learning_time_months": 2,
+"skills": [
+{"name": "giao tiếp", "level": 3, "weight": 3},
+{"name": "lắng nghe chủ động", "level": 3, "weight": 3},
+{"name": "xử lý khiếu nại", "level": 2, "weight": 3},
+{"name": "crm", "level": 2, "weight": 2},
+{"name": "quản lý cảm xúc", "level": 3, "weight": 2},
+{"name": "tiếng anh giao tiếp", "level": 1, "weight": 1},
+{"name": "quản lý thời gian", "level": 2, "weight": 1},
+{"name": "kiên nhẫn", "level": 3, "weight": 1}
+]
+},
+{
+"id": "event_planner",
+"name": "Event Planner",
+"name_vi": "Chuyên viên tổ chức sự kiện",
+"difficulty": "trung bình",
+"learning_time_months": 6,
+"skills": [
+{"name": "lập kế hoạch sự kiện", "level": 3, "weight": 3},
+{"name": "quản lý ngân sách", "level": 2, "weight": 3},
+{"name": "quản lý nhà cung cấp", "level": 2, "weight": 3},
+{"name": "điều phối sự kiện", "level": 3, "weight": 2},
+{"name": "giải quyết vấn đề", "level": 2, "weight": 2},
+{"name": "giao tiếp", "level": 3, "weight": 2},
+{"name": "làm việc nhóm", "level": 3, "weight": 1},
+{"name": "sáng tạo", "level": 2, "weight": 1}
+]
 }
-
+]
