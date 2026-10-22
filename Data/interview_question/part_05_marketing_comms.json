@@ -1,0 +1,1013 @@
+{
+  "version": 1,
+  "roles": {
+    "digital_marketing_executive": [
+      {
+        "id": "digital_marketing_executive_q01",
+        "type": "technical",
+        "skill": "digital marketing",
+        "level": 3,
+        "weight": 3,
+        "question": "Một chiến dịch ra mắt sản phẩm có mục tiêu vừa tăng nhận biết vừa tạo lead trong 6 tuần. Bạn sẽ phân bổ kênh, funnel và KPI như thế nào để đánh giá hiệu quả tổng thể?",
+        "good_answer_points": [
+          "Chia mục tiêu theo awareness, consideration và conversion; chọn KPI riêng cho từng tầng.",
+          "Nêu cách phối hợp paid, owned và earned theo chân dung khách hàng và ngân sách.",
+          "Đặt baseline, attribution window và nhịp tối ưu; phân biệt chỉ số dẫn dắt với kết quả kinh doanh."
+        ],
+        "red_flags": [
+          "Chỉ nêu reach/click mà không liên hệ lead hoặc mục tiêu kinh doanh."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "digital_marketing_executive_q02",
+        "type": "technical",
+        "skill": "facebook ads",
+        "level": 3,
+        "weight": 3,
+        "question": "Bạn cần chạy Facebook Ads cho dịch vụ có chu kỳ cân nhắc dài. Hãy mô tả cấu trúc campaign, audience và creative test để tạo lead chất lượng.",
+        "good_answer_points": [
+          "Chọn objective phù hợp và tách cold, retargeting theo giai đoạn funnel.",
+          "Định nghĩa audience, exclusions, placements và quy mô đủ để học.",
+          "Đề xuất biến thể creative/offer, KPI CPL cùng tỷ lệ lead đủ chuẩn và quy tắc dừng/mở rộng."
+        ],
+        "red_flags": [
+          "Tối ưu chỉ theo lượt tương tác hoặc CPL rẻ, bỏ qua chất lượng lead."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "digital_marketing_executive_q03",
+        "type": "technical",
+        "skill": "google ads",
+        "level": 2,
+        "weight": 3,
+        "question": "Search campaign có nhiều click nhưng ít chuyển đổi; bạn sẽ kiểm tra và tối ưu theo thứ tự nào?",
+        "good_answer_points": [
+          "Đối chiếu search terms, match type, negative keywords và intent.",
+          "Kiểm tra landing page, thông điệp, tốc độ và conversion tracking.",
+          "Phân tích theo thiết bị/địa lý/giờ; đặt thử nghiệm giá thầu, ngân sách và tiêu chí đánh giá."
+        ],
+        "red_flags": [
+          "Tăng ngân sách hoặc đổi bid trước khi xác minh tracking và truy vấn."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "digital_marketing_executive_q04",
+        "type": "technical",
+        "skill": "google analytics",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong GA4, bạn cần đo hành trình từ quảng cáo đến form đăng ký và phân tích nhóm người dùng chuyển đổi. Bạn sẽ cấu hình gì?",
+        "good_answer_points": [
+          "Định nghĩa event và key event cùng tham số cần thiết cho form.",
+          "Kiểm tra UTM, referral exclusions và tính nhất quán nguồn/medium/campaign.",
+          "Dùng exploration/funnel hoặc segment để đọc hành trình; xác nhận dữ liệu bằng test traffic."
+        ],
+        "red_flags": [
+          "Gọi page_view là chuyển đổi mà không kiểm tra event hoặc nguồn dữ liệu."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "digital_marketing_executive_q05",
+        "type": "scenario",
+        "skill": "phân tích dữ liệu",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn xử lý tình huống sau: Sau hai tuần, CTR tăng nhưng số lead đủ chuẩn giảm. Hãy trình bày cách phân tích để tìm nguyên nhân và quyết định điều chỉnh.",
+        "good_answer_points": [
+          "Phân rã theo kênh, audience, creative, thiết bị và thời gian so với baseline.",
+          "Kiểm tra funnel click-to-form-to-qualified, tracking và thay đổi tiêu chí lead.",
+          "Đề xuất giả thuyết, kiểm chứng bằng cohort/đối chứng và hành động có ngưỡng đo."
+        ],
+        "red_flags": [
+          "Kết luận nguyên nhân từ một chỉ số tổng hợp hoặc tương quan đơn lẻ."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "digital_marketing_executive_q06",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 1,
+        "question": "Hãy kể theo STAR về lần bạn phải giải thích kết quả digital campaign kém cho quản lý không chuyên marketing.",
+        "good_answer_points": [
+          "Situation/Task nêu mục tiêu và chênh lệch bằng số liệu cụ thể.",
+          "Action trình bày cách giải thích nguyên nhân, giới hạn dữ liệu và lựa chọn.",
+          "Result có quyết định hoặc thay đổi đo được, kèm bài học."
+        ],
+        "red_flags": [
+          "Đổ lỗi cho nền tảng hoặc né trách nhiệm, không có kết quả kiểm chứng."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "content_marketing_executive": [
+      {
+        "id": "content_marketing_executive_q01",
+        "type": "technical",
+        "skill": "viết nội dung",
+        "level": 3,
+        "weight": 3,
+        "question": "Viết brief cho bài hướng dẫn giúp chủ cửa hàng nhỏ chọn phần mềm quản lý bán hàng. Bạn xác định độc giả, thông điệp và cấu trúc bài ra sao?",
+        "good_answer_points": [
+          "Nêu intent, pain point, mức hiểu biết và hành động mong muốn của độc giả.",
+          "Xây outline có tiêu đề, luận điểm, bằng chứng và CTA phù hợp.",
+          "Đặt yêu cầu giọng điệu, nguồn kiểm chứng, độ dài và tiêu chí biên tập."
+        ],
+        "red_flags": [
+          "Brief chỉ xoay quanh nhồi từ khóa hoặc quảng bá sản phẩm thiếu căn cứ."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "content_marketing_executive_q02",
+        "type": "technical",
+        "skill": "kể chuyện",
+        "level": 3,
+        "weight": 3,
+        "question": "Một khách hàng dùng sản phẩm tiết kiệm 30% thời gian xử lý đơn nhưng ngại xuất hiện công khai. Bạn sẽ chuyển dữ kiện thành câu chuyện case study thế nào?",
+        "good_answer_points": [
+          "Xác định nhân vật, bối cảnh, trở ngại và thay đổi trước/sau.",
+          "Kiểm chứng số liệu, xin phép trích dẫn và bảo vệ thông tin nhạy cảm.",
+          "Chọn cấu trúc/định dạng và CTA gắn với nhu cầu độc giả."
+        ],
+        "red_flags": [
+          "Phóng đại kết quả hoặc dựng lời chứng thực không được xác nhận."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "content_marketing_executive_q03",
+        "type": "scenario",
+        "skill": "sáng tạo",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về một ý tưởng nội dung bạn đề xuất khi nguồn lực sản xuất hạn chế nhưng cần tạo khác biệt.",
+        "good_answer_points": [
+          "Situation/Task cho thấy giới hạn nguồn lực và mục tiêu cụ thể.",
+          "Action mô tả insight, ý tưởng, cách thử nhỏ và phối hợp nguồn lực.",
+          "Result nêu chỉ số hiệu quả hoặc bài học có thể áp dụng lại."
+        ],
+        "red_flags": [
+          "Chỉ nhận công lao ý tưởng, không nêu cách thực thi hay kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "content_marketing_executive_q04",
+        "type": "technical",
+        "skill": "nghiên cứu từ khóa",
+        "level": 2,
+        "weight": 2,
+        "question": "Bạn lập kế hoạch nội dung cho chủ đề “quản lý tồn kho cho cửa hàng thời trang”. Cách bạn nhóm từ khóa và chọn trang ưu tiên là gì?",
+        "good_answer_points": [
+          "Thu thập truy vấn từ nhiều nguồn và xác định intent theo nhóm.",
+          "Đánh giá độ liên quan, độ khó, nhu cầu và khả năng đáp ứng chuyên môn.",
+          "Lập topic cluster, trang trụ cột và tránh cannibalization bằng mapping URL."
+        ],
+        "red_flags": [
+          "Chọn từ khóa chỉ vì volume cao, không xét intent hoặc khả năng cạnh tranh."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "content_marketing_executive_q05",
+        "type": "technical",
+        "skill": "biên tập nội dung",
+        "level": 2,
+        "weight": 2,
+        "question": "Bạn nhận bài do chuyên gia viết: đúng chuyên môn nhưng dài, có thuật ngữ khó và vài tuyên bố không dẫn nguồn. Bạn xử lý thế nào?",
+        "good_answer_points": [
+          "Tách kiểm tra factual/nguồn khỏi cấu trúc, độ rõ và giọng thương hiệu.",
+          "Rút gọn, giải nghĩa thuật ngữ và giữ nguyên ý chuyên môn đã xác minh.",
+          "Ghi nhận chỗ cần tác giả xác nhận, theo dõi phiên bản và checklist trước xuất bản."
+        ],
+        "red_flags": [
+          "Sửa tuyên bố chuyên môn theo suy đoán hoặc bỏ qua bước xác minh."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "content_marketing_executive_q06",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn thuyết phục chuyên gia nội bộ cung cấp thông tin hoặc duyệt nội dung đúng hạn.",
+        "good_answer_points": [
+          "Situation/Task nêu phụ thuộc, deadline và rủi ro xuất bản.",
+          "Action thể hiện brief rõ, lắng nghe phản hồi và tháo gỡ bất đồng.",
+          "Result có nội dung được duyệt/đúng hạn và cách duy trì hợp tác."
+        ],
+        "red_flags": [
+          "Chỉ nói đã nhắc nhiều lần hoặc quy trách nhiệm cho bên kia."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "seo_specialist": [
+      {
+        "id": "seo_specialist_q01",
+        "type": "technical",
+        "skill": "seo on-page",
+        "level": 3,
+        "weight": 3,
+        "question": "Một landing page dịch vụ không tăng hạng dù nội dung đã có từ khóa. Bạn audit on-page những yếu tố nào và ưu tiên sửa ra sao?",
+        "good_answer_points": [
+          "Đánh giá intent, chất lượng/độ đầy đủ nội dung, title/H1 và heading.",
+          "Kiểm tra canonical, indexability, internal links, schema và yếu tố kỹ thuật liên quan.",
+          "Ưu tiên theo tác động/rủi ro, lập giả thuyết và theo dõi impression, click, vị trí."
+        ],
+        "red_flags": [
+          "Chỉ nhồi thêm từ khóa hoặc sửa meta mà không kiểm tra index và intent."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "seo_specialist_q02",
+        "type": "technical",
+        "skill": "seo off-page",
+        "level": 3,
+        "weight": 3,
+        "question": "Website mới có hồ sơ backlink yếu; hãy đề xuất kế hoạch tăng độ tin cậy trong 90 ngày và cách kiểm soát rủi ro.",
+        "good_answer_points": [
+          "Ưu tiên nội dung có giá trị liên kết, digital PR hoặc quan hệ đối tác liên quan.",
+          "Đánh giá domain/page relevance, chất lượng nguồn và anchor tự nhiên.",
+          "Theo dõi referring domains, referral traffic và dấu hiệu link spam; tránh mua link thao túng."
+        ],
+        "red_flags": [
+          "Đề xuất mua số lượng lớn backlink hoặc chỉ tối ưu chỉ số authority bên thứ ba."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "seo_specialist_q03",
+        "type": "technical",
+        "skill": "nghiên cứu từ khóa",
+        "level": 3,
+        "weight": 3,
+        "question": "Bạn cần xây cấu trúc nội dung cho website bán bảo hiểm sức khỏe. Quy trình nghiên cứu, phân nhóm intent và mapping trang sẽ như thế nào?",
+        "good_answer_points": [
+          "Thu thập truy vấn từ Search Console/keyword tools và dữ liệu nội bộ.",
+          "Phân loại intent, funnel và chủ đề; gộp biến thể phục vụ cùng nhu cầu.",
+          "Mapping từ khóa vào URL, phát hiện cannibalization và ưu tiên theo cơ hội/độ tin cậy."
+        ],
+        "red_flags": [
+          "Tạo một trang cho mọi biến thể từ khóa mà không xét intent trùng."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "seo_specialist_q04",
+        "type": "scenario",
+        "skill": "google search console",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn xử lý tình huống sau: Search Console báo impression tăng nhưng click giảm ở nhóm trang danh mục. Bạn dùng báo cáo nào để chẩn đoán và xác nhận thay đổi?",
+        "good_answer_points": [
+          "So sánh query/page, thiết bị, quốc gia và khoảng thời gian tương đương.",
+          "Đọc CTR/vị trí trung bình, kiểm tra thay đổi SERP, title và loại truy vấn.",
+          "Kiểm tra indexing/Coverage hoặc URL inspection khi cần, rồi theo dõi sau chỉnh sửa."
+        ],
+        "red_flags": [
+          "Coi vị trí trung bình là thứ hạng cố định hoặc bỏ qua phân đoạn query."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "seo_specialist_q05",
+        "type": "scenario",
+        "skill": "viết nội dung",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn xử lý tình huống sau: Hãy phác thảo cách viết trang giải thích “phí chuyển đổi ngoại tệ” cho người dùng ngân hàng, vừa hữu ích vừa hỗ trợ SEO.",
+        "good_answer_points": [
+          "Đáp ứng câu hỏi chính sớm bằng định nghĩa và ví dụ tính phí chính xác.",
+          "Tổ chức heading theo câu hỏi tiếp nối, thuật ngữ dễ hiểu và liên kết nguồn uy tín.",
+          "Đưa CTA hữu ích, kiểm duyệt chuyên môn và tránh lời hứa tài chính gây hiểu lầm."
+        ],
+        "red_flags": [
+          "Viết chung chung, lặp từ khóa hoặc tự đưa ra thông tin phí chưa xác minh."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "social_media_executive": [
+      {
+        "id": "social_media_executive_q01",
+        "type": "technical",
+        "skill": "quản lý fanpage",
+        "level": 3,
+        "weight": 3,
+        "question": "Bạn tiếp quản fanpage thương hiệu bán lẻ với bài đăng thất thường và inbox tồn đọng. Hãy mô tả quy trình vận hành tuần đầu và lịch duy trì.",
+        "good_answer_points": [
+          "Audit quyền truy cập, thông tin trang, lịch sử nội dung và SLA inbox.",
+          "Lập content calendar theo mục tiêu, format, người duyệt và giờ đăng.",
+          "Thiết lập phân loại/định tuyến câu hỏi, escalation và theo dõi reach, engagement, response time."
+        ],
+        "red_flags": [
+          "Chỉ tập trung tăng tần suất đăng mà không có quy trình inbox hoặc mục tiêu."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "social_media_executive_q02",
+        "type": "scenario",
+        "skill": "sáng tạo",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về một nội dung social bạn tạo từ insight khách hàng thay vì sao chép trend.",
+        "good_answer_points": [
+          "Situation/Task nêu insight và mục tiêu của bài.",
+          "Action giải thích concept, format, cách thử và quy trình duyệt.",
+          "Result có số liệu so sánh hoặc phản hồi người dùng và bài học."
+        ],
+        "red_flags": [
+          "Mô tả ý tưởng mơ hồ, không xác định đóng góp cá nhân hay kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "social_media_executive_q03",
+        "type": "technical",
+        "skill": "facebook",
+        "level": 3,
+        "weight": 2,
+        "question": "Một bài Facebook cần tạo thảo luận có chất lượng cho cộng đồng khách hàng địa phương. Bạn chọn định dạng, lời dẫn và cách đọc hiệu quả thế nào?",
+        "good_answer_points": [
+          "Chọn format/CTA mở câu trả lời cụ thể, phù hợp quy định nền tảng.",
+          "Nêu cách phân phối, thời điểm và moderation để giữ thảo luận an toàn.",
+          "Đo meaningful comments, saves/click hoặc hành động mục tiêu thay vì chỉ reach."
+        ],
+        "red_flags": [
+          "Dùng engagement bait hoặc chỉ đếm lượt thích."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "social_media_executive_q04",
+        "type": "technical",
+        "skill": "tiktok",
+        "level": 2,
+        "weight": 2,
+        "question": "Bạn được giao làm chuỗi TikTok 3 video giới thiệu quy trình bảo quản thực phẩm an toàn. Hãy lên cấu trúc từng video và tín hiệu tối ưu.",
+        "good_answer_points": [
+          "Mở đầu bằng hook rõ, một thông tin chính mỗi video và visual demo.",
+          "Thiết kế nhịp dựng, caption/subtitle, CTA và tính nhất quán chuỗi.",
+          "Đo retention/completion, rewatch, share và phản hồi; dùng kết quả điều chỉnh tập sau."
+        ],
+        "red_flags": [
+          "Chạy theo trend không liên quan hoặc đưa lời khuyên an toàn chưa xác minh."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "social_media_executive_q05",
+        "type": "scenario",
+        "skill": "bắt trend",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn đánh giá một trend đang nổi và quyết định có nên đưa thương hiệu tham gia hay không.",
+        "good_answer_points": [
+          "Situation nêu trend, thời điểm và rủi ro thương hiệu.",
+          "Action mô tả tiêu chí phù hợp audience, brand voice, quyền sử dụng và tốc độ phản hồi.",
+          "Result trình bày quyết định, phản hồi và điều học được."
+        ],
+        "red_flags": [
+          "Tham gia mọi trend chỉ vì độ phổ biến, không xét ngữ cảnh."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "social_media_executive_q06",
+        "type": "technical",
+        "skill": "viết nội dung",
+        "level": 2,
+        "weight": 2,
+        "question": "Viết một caption ngắn cho bài ra mắt tính năng giao hàng trong ngày, nhắm đến khách hàng bận rộn; giải thích lựa chọn thông điệp.",
+        "good_answer_points": [
+          "Nêu lợi ích cụ thể và điều kiện áp dụng chính xác.",
+          "Có hook/CTA rõ, giọng thương hiệu và độ dài phù hợp feed.",
+          "Tránh tuyên bố tuyệt đối; đề xuất biến thể để thử theo audience."
+        ],
+        "red_flags": [
+          "Caption chỉ liệt kê tính năng, bỏ điều kiện hoặc CTA."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "performance_marketing_executive": [
+      {
+        "id": "performance_marketing_executive_q01",
+        "type": "technical",
+        "skill": "tối ưu chuyển đổi",
+        "level": 3,
+        "weight": 3,
+        "question": "Landing page có nhiều traffic nhưng tỷ lệ hoàn tất đăng ký thấp. Bạn thiết kế quy trình tối ưu conversion từ chẩn đoán đến rollout ra sao?",
+        "good_answer_points": [
+          "Phân tích funnel và phân khúc theo nguồn/thiết bị để xác định điểm rơi.",
+          "Kiểm tra UX/form, thông điệp, tốc độ và lỗi tracking trước khi giả thuyết.",
+          "Ưu tiên thử nghiệm có KPI chính/guardrail, cỡ mẫu và tiêu chí quyết định rõ."
+        ],
+        "red_flags": [
+          "Thay nhiều yếu tố đồng thời rồi quy kết nguyên nhân không có đối chứng."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "performance_marketing_executive_q02",
+        "type": "technical",
+        "skill": "facebook ads",
+        "level": 3,
+        "weight": 3,
+        "question": "Chiến dịch Meta tạo nhiều form lead giá thấp nhưng đội sales báo lead không phù hợp. Bạn sẽ điều chỉnh cấu hình và đo chất lượng thế nào?",
+        "good_answer_points": [
+          "Đối chiếu định nghĩa qualified lead với sales và phân tích đặc điểm lead kém.",
+          "Thử audience/creative/offer hoặc form có câu hỏi lọc phù hợp mà không làm giảm trải nghiệm quá mức.",
+          "Đưa qualified conversion/offline event về nền tảng nếu khả thi; theo dõi CPL và cost per qualified lead."
+        ],
+        "red_flags": [
+          "Tối ưu tiếp theo CPL thô hoặc thu thập thêm dữ liệu cá nhân không cần thiết."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "performance_marketing_executive_q03",
+        "type": "technical",
+        "skill": "google ads",
+        "level": 3,
+        "weight": 3,
+        "question": "Search campaign thương mại có impression share thấp và CPA vượt mục tiêu. Bạn đánh giá nguyên nhân theo thứ tự nào trước khi tăng ngân sách?",
+        "good_answer_points": [
+          "Tách brand/non-brand, query, thiết bị và nhóm chuyển đổi để tìm nguồn CPA cao.",
+          "Kiểm tra bid strategy, budget lost IS, rank lost IS, quality/ad relevance và tracking.",
+          "Nêu điều chỉnh keyword/negative, ad/landing page hoặc bid kèm dự báo và ngưỡng đánh giá."
+        ],
+        "red_flags": [
+          "Tăng ngân sách tự động dù CPA vượt ngưỡng và chưa phân tích impression share."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "performance_marketing_executive_q04",
+        "type": "scenario",
+        "skill": "google analytics",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn xử lý tình huống sau: GA4 ghi nhận purchase ít hơn hệ thống backend 18%. Hãy lập checklist kiểm tra chênh lệch và cách xác định nguồn sự thật.",
+        "good_answer_points": [
+          "So sánh định nghĩa, timezone, currency, hoàn/hủy và thời điểm ghi nhận.",
+          "Kiểm tra event purchase, transaction_id, consent, cross-domain và duplicate/missing events.",
+          "Đối chiếu mẫu transaction cụ thể với backend và ghi rõ giới hạn attribution/độ trễ."
+        ],
+        "red_flags": [
+          "Tuyên bố một hệ thống đúng tuyệt đối mà không reconcile giao dịch."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "performance_marketing_executive_q05",
+        "type": "scenario",
+        "skill": "a/b testing",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn xử lý tình huống sau: Bạn muốn thử hai thông điệp quảng cáo cho cùng một audience với conversion rate nền 4%. Hãy thiết kế test để kết luận có căn cứ.",
+        "good_answer_points": [
+          "Xác định hypothesis, một biến chính, primary metric và guardrail trước test.",
+          "Chọn mức ý nghĩa/power hoặc quy tắc cỡ mẫu, phân bổ ngẫu nhiên và thời lượng đủ chu kỳ.",
+          "Tránh peeking/đổi thiết kế giữa chừng; báo cáo effect size, uncertainty và quyết định."
+        ],
+        "red_flags": [
+          "Dừng test ngay khi có biến động thuận lợi nhỏ hoặc so sánh nhiều biến không kiểm soát."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "pr_executive": [
+      {
+        "id": "pr_executive_q01",
+        "type": "technical",
+        "skill": "quan hệ báo chí",
+        "level": 3,
+        "weight": 3,
+        "question": "Bạn giới thiệu một báo cáo nghiên cứu mới cho phóng viên ngành nhưng chủ đề cạnh tranh tin tức cao. Bạn chuẩn bị danh sách và pitch thế nào?",
+        "good_answer_points": [
+          "Chọn phóng viên theo beat, độc giả và lịch sử chủ đề; cá nhân hóa angle.",
+          "Chuẩn bị dữ kiện, spokesperson, tài liệu nền và embargo/điều kiện rõ ràng.",
+          "Theo dõi phản hồi, trả lời đúng hạn và cập nhật media log/kết quả coverage."
+        ],
+        "red_flags": [
+          "Gửi mass email không phân loại hoặc gây áp lực để nhận bài."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "pr_executive_q02",
+        "type": "technical",
+        "skill": "viết thông cáo báo chí",
+        "level": 3,
+        "weight": 3,
+        "question": "Soạn cấu trúc thông cáo cho việc doanh nghiệp mở nhà máy mới, có số liệu đầu tư và cam kết việc làm. Bạn đảm bảo tính tin tức và độ tin cậy ra sao?",
+        "good_answer_points": [
+          "Headline/lead trả lời ai, việc gì, ở đâu, khi nào và ý nghĩa với công chúng.",
+          "Xác minh số liệu, nguồn phát ngôn, quote được duyệt và bối cảnh cần thiết.",
+          "Cung cấp boilerplate, media contact và loại bỏ tuyên bố quảng cáo không kiểm chứng."
+        ],
+        "red_flags": [
+          "Dùng ngôn ngữ quảng bá rỗng hoặc công bố số liệu chưa được phê duyệt."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "pr_executive_q03",
+        "type": "scenario",
+        "skill": "xử lý khủng hoảng",
+        "level": 2,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về một sự cố truyền thông nhạy cảm bạn từng tham gia xử lý, từ xác minh đến cập nhật công chúng.",
+        "good_answer_points": [
+          "Situation/Task nêu mức độ, bên liên quan và trách nhiệm của bạn.",
+          "Action cho thấy xác minh nhanh, phối hợp đầu mối, thông điệp nhất quán và cập nhật theo mốc.",
+          "Result nêu tác động/diễn biến, điều chỉnh sau phản hồi và bài học phòng ngừa."
+        ],
+        "red_flags": [
+          "Phản hồi khi chưa xác minh hoặc che giấu thông tin trọng yếu."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "pr_executive_q04",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn phải làm rõ thông tin mâu thuẫn giữa lãnh đạo và nhóm chuyên môn trước khi phản hồi báo chí.",
+        "good_answer_points": [
+          "Situation/Task nêu mâu thuẫn và thời hạn phản hồi.",
+          "Action thể hiện câu hỏi xác minh, tóm lược điểm đã biết/chưa biết và thống nhất người phát ngôn.",
+          "Result cho thấy thông tin được phát đi chính xác, nhất quán và đúng thời điểm."
+        ],
+        "red_flags": [
+          "Tự chọn phiên bản thuận tiện hoặc phát ngôn vượt thẩm quyền."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "pr_executive_q05",
+        "type": "scenario",
+        "skill": "xây dựng mối quan hệ",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về cách bạn xây dựng quan hệ tin cậy với một phóng viên sau khi câu chuyện họ cần không thể cung cấp.",
+        "good_answer_points": [
+          "Situation nêu nhu cầu báo chí và giới hạn thực tế.",
+          "Action giải thích minh bạch, đề xuất dữ liệu/nguồn thay thế phù hợp và tôn trọng deadline.",
+          "Result mô tả quan hệ tiếp tục, cơ hội sau đó hoặc bài học về độ tin cậy."
+        ],
+        "red_flags": [
+          "Đổi lợi ích hoặc gây sức ép để đổi lấy thiện cảm."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "brand_executive": [
+      {
+        "id": "brand_executive_q01",
+        "type": "technical",
+        "skill": "quản trị thương hiệu",
+        "level": 2,
+        "weight": 3,
+        "question": "Khảo sát cho thấy khách hàng nhớ logo nhưng nhầm lẫn thương hiệu của bạn với đối thủ về lợi ích cốt lõi. Bạn xây kế hoạch khắc phục nhận diện thế nào?",
+        "good_answer_points": [
+          "Xác định phân khúc, điểm liên tưởng và khác biệt qua nghiên cứu/định tính.",
+          "Chuyển định vị thành thông điệp, bằng chứng và nguyên tắc nhận diện nhất quán.",
+          "Đặt chỉ số brand tracking/consideration và kiểm tra theo nhóm/kênh sau triển khai."
+        ],
+        "red_flags": [
+          "Đổi logo đơn lẻ mà không làm rõ định vị hay đo nhận thức."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "brand_executive_q02",
+        "type": "technical",
+        "skill": "lập kế hoạch",
+        "level": 2,
+        "weight": 3,
+        "question": "Bạn lập kế hoạch marketing quý cho nhãn hàng đang mất thị phần ở nhóm khách hàng trẻ. Hãy trình bày từ mục tiêu đến phân bổ hoạt động.",
+        "good_answer_points": [
+          "Dùng dữ liệu thị trường/khách hàng để chẩn đoán vấn đề và xác định audience.",
+          "Đặt mục tiêu SMART, chiến lược thông điệp và vai trò kênh theo hành trình.",
+          "Phân bổ ngân sách, owner, mốc phụ thuộc, KPI và cơ chế review/điều chỉnh."
+        ],
+        "red_flags": [
+          "Liệt kê hoạt động rời rạc, không liên kết với mục tiêu hay nguồn lực."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "brand_executive_q03",
+        "type": "technical",
+        "skill": "nghiên cứu thị trường",
+        "level": 2,
+        "weight": 3,
+        "question": "Bạn cần xác nhận liệu người tiêu dùng hiểu tuyên bố “sạch hơn” trên bao bì theo đúng ý thương hiệu. Bạn thiết kế nghiên cứu thế nào?",
+        "good_answer_points": [
+          "Xác định câu hỏi nghiên cứu, đối tượng và cách lấy mẫu phù hợp.",
+          "Kết hợp phỏng vấn/khảo sát hoặc test thông điệp có câu hỏi trung tính.",
+          "Nêu cách phân tích khác biệt nhóm, giới hạn mẫu và quyết định nhãn/claim dựa trên bằng chứng."
+        ],
+        "red_flags": [
+          "Dẫn dắt người trả lời hoặc khái quát kết quả mẫu thuận tiện cho toàn thị trường."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "brand_executive_q04",
+        "type": "scenario",
+        "skill": "truyền thông tích hợp",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn xử lý tình huống sau: Một sản phẩm mới cần đồng bộ PR, social, retail và quảng cáo trong cùng tháng. Bạn xây integrated campaign để thông điệp nhất quán mà vẫn phù hợp từng kênh ra sao?",
+        "good_answer_points": [
+          "Xác định một proposition/message house cùng bằng chứng và CTA chung.",
+          "Điều chỉnh format/timing theo vai trò kênh và hành trình, phối hợp lịch/owner.",
+          "Thiết lập tracking chung, KPI theo kênh và cách tổng hợp kết quả tránh đếm trùng."
+        ],
+        "red_flags": [
+          "Sao chép nguyên một nội dung lên mọi kênh và cộng reach để gọi là hiệu quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "brand_executive_q05",
+        "type": "scenario",
+        "skill": "tư duy phân tích",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về một lần dữ liệu thương hiệu khiến bạn thay đổi quan điểm hoặc đề xuất ban đầu.",
+        "good_answer_points": [
+          "Situation/Task nêu giả định ban đầu và quyết định cần đưa ra.",
+          "Action mô tả dữ liệu, kiểm tra độ tin cậy và cách diễn giải các nhóm khác nhau.",
+          "Result cho thấy đề xuất thay đổi và tác động/bài học đo được."
+        ],
+        "red_flags": [
+          "Chọn lọc số liệu củng cố ý kiến sẵn có, không nêu giới hạn."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "event_executive": [
+      {
+        "id": "event_executive_q01",
+        "type": "technical",
+        "skill": "tổ chức sự kiện",
+        "level": 3,
+        "weight": 3,
+        "question": "Bạn tổ chức hội thảo khách hàng 250 người có khách mời cấp cao và livestream. Hãy mô tả run-of-show và các điểm kiểm soát vận hành.",
+        "good_answer_points": [
+          "Chốt mục tiêu, trải nghiệm khách, agenda, phân vai và luồng check-in.",
+          "Lập run-of-show theo phút, cue kỹ thuật, rehearsal và đầu mối quyết định.",
+          "Có phương án dự phòng venue/stream, quản lý an toàn và quy trình xử lý khách mời."
+        ],
+        "red_flags": [
+          "Không có rehearsal, owner hoặc phương án khi livestream/diễn giả gặp sự cố."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "event_executive_q02",
+        "type": "technical",
+        "skill": "lập kế hoạch",
+        "level": 3,
+        "weight": 3,
+        "question": "Từ ngày xác nhận địa điểm đến ngày diễn ra còn 8 tuần cho lễ ra mắt sản phẩm. Bạn lập timeline ngược và quản lý phụ thuộc thế nào?",
+        "good_answer_points": [
+          "Chia workstream, deliverable, owner, deadline và critical path.",
+          "Đánh dấu mốc duyệt nội dung, nhà cung cấp, khách mời và rehearsal.",
+          "Dùng risk/issue log, nhịp cập nhật và trigger escalation để bảo vệ ngày diễn ra."
+        ],
+        "red_flags": [
+          "Chỉ lập danh sách việc mà không xác định phụ thuộc hoặc mốc quyết định."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "event_executive_q03",
+        "type": "technical",
+        "skill": "quản lý ngân sách",
+        "level": 2,
+        "weight": 3,
+        "question": "Ngân sách sự kiện 500 triệu đồng bị cắt 15% sau khi đã đặt cọc địa điểm. Bạn tái dự báo chi phí mà vẫn bảo toàn mục tiêu thế nào?",
+        "good_answer_points": [
+          "Tách fixed/variable, committed/actual/forecast và khoản có thể thương lượng.",
+          "Ưu tiên hạng mục ảnh hưởng trực tiếp đến mục tiêu/trải nghiệm; tính phương án thay thế.",
+          "Cập nhật contingency, phê duyệt thay đổi và theo dõi variance theo đầu mục."
+        ],
+        "red_flags": [
+          "Cắt đồng loạt hoặc bỏ qua tiền cọc, thuế và phí phát sinh."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "event_executive_q04",
+        "type": "scenario",
+        "skill": "thương lượng",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn thương lượng với venue hoặc nhà cung cấp khi yêu cầu sự kiện thay đổi sát ngày.",
+        "good_answer_points": [
+          "Situation/Task nêu thay đổi, ràng buộc thời gian và lợi ích cần giữ.",
+          "Action cho thấy chuẩn bị phương án/giới hạn, trao đổi dữ kiện và tìm trade-off.",
+          "Result nêu điều khoản, chi phí/chất lượng đạt được và bài học quan hệ."
+        ],
+        "red_flags": [
+          "Chấp nhận điều khoản mà không xác nhận phạm vi, chi phí hoặc trách nhiệm."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "event_executive_q05",
+        "type": "scenario",
+        "skill": "giải quyết vấn đề",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về một sự cố vận hành xảy ra ngay trước giờ mở cửa và cách bạn xử lý để giảm ảnh hưởng tới khách.",
+        "good_answer_points": [
+          "Situation nêu sự cố, mức độ và ưu tiên an toàn/trải nghiệm.",
+          "Action phân vai, truyền thông tại chỗ, phương án thay thế và thời điểm escalation.",
+          "Result nêu thời gian khôi phục, phản hồi khách và biện pháp ngăn tái diễn."
+        ],
+        "red_flags": [
+          "Che giấu sự cố hoặc tự xử lý vượt khả năng mà không bảo đảm an toàn."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "marketing_analyst": [
+      {
+        "id": "marketing_analyst_q01",
+        "type": "technical",
+        "skill": "phân tích dữ liệu",
+        "level": 3,
+        "weight": 3,
+        "question": "Doanh thu được gán cho digital tăng 25% nhưng tổng doanh thu không đổi. Hãy thiết kế phân tích để xác định tăng trưởng thật, dịch chuyển attribution hay lỗi dữ liệu.",
+        "good_answer_points": [
+          "Đối chiếu định nghĩa doanh thu, kỳ, timezone, hoàn/hủy và nguồn hệ thống.",
+          "Phân rã theo kênh/campaign, khách mới/cũ, cohort và hành vi chuyển đổi.",
+          "Kiểm tra attribution window/deduplication, dùng holdout hoặc incrementality nếu có thể và nêu giới hạn."
+        ],
+        "red_flags": [
+          "Diễn giải tăng attribution thành tăng trưởng nhân quả mà không đối chiếu tổng."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "marketing_analyst_q02",
+        "type": "technical",
+        "skill": "google analytics",
+        "level": 3,
+        "weight": 3,
+        "question": "Bạn được giao xây báo cáo GA4 cho funnel từ session đến purchase. Hãy chọn event, dimension và kiểm tra chất lượng trước khi bàn giao.",
+        "good_answer_points": [
+          "Định nghĩa event/key event và tham số cần thiết ở từng bước funnel.",
+          "Xác thực UTM, cross-domain, consent, transaction_id và timezone.",
+          "So sánh mẫu giao dịch với nguồn backend, phân đoạn funnel và ghi rõ ngưỡng dữ liệu/giới hạn."
+        ],
+        "red_flags": [
+          "Dùng event mặc định mà không kiểm tra độ bao phủ và trùng lặp."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "marketing_analyst_q03",
+        "type": "scenario",
+        "skill": "tư duy phân tích",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về một lần bạn phát hiện kết luận dashboard phổ biến trong nhóm không được dữ liệu hỗ trợ.",
+        "good_answer_points": [
+          "Situation/Task nêu kết luận, quyết định và dữ liệu liên quan.",
+          "Action kiểm tra định nghĩa, phân đoạn, mẫu và giải thích bằng chứng thay thế.",
+          "Result cho biết quyết định được đổi/giữ thế nào và tác động thực tế."
+        ],
+        "red_flags": [
+          "Bác bỏ quan điểm mà không trình bày phương pháp hoặc độ bất định."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "marketing_analyst_q04",
+        "type": "technical",
+        "skill": "lập báo cáo",
+        "level": 3,
+        "weight": 3,
+        "question": "Giám đốc cần báo cáo tháng trong một trang để quyết định dừng hay mở rộng chiến dịch. Bạn cấu trúc trang và chú thích chỉ số thế nào?",
+        "good_answer_points": [
+          "Mở bằng quyết định cần đưa ra, mục tiêu/actual/variance và kỳ so sánh.",
+          "Chọn ít KPI liên kết funnel, trình bày segment/driver quan trọng và nguồn.",
+          "Nêu khuyến nghị, độ tin cậy/giới hạn, hành động tiếp theo và owner."
+        ],
+        "red_flags": [
+          "Nhồi nhiều chart mà không nêu quyết định hoặc định nghĩa chỉ số."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "marketing_analyst_q05",
+        "type": "scenario",
+        "skill": "excel",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn xử lý tình huống sau: Trong Excel, bạn nhận file chi tiêu quảng cáo theo ngày từ nhiều kênh với tên campaign không đồng nhất. Bạn chuẩn hóa và đối soát dữ liệu trước khi tính CPA thế nào?",
+        "good_answer_points": [
+          "Giữ bản raw, chuẩn hóa ngày, currency và campaign bằng mapping có kiểm soát.",
+          "Dùng Power Query hoặc công thức phù hợp để làm sạch, xử lý missing/duplicate và lưu quy tắc biến đổi.",
+          "Đối soát tổng spend với nguồn gốc, kiểm tra mẫu hàng và tính CPA theo định nghĩa thống nhất."
+        ],
+        "red_flags": [
+          "Sửa trực tiếp dữ liệu gốc hoặc tính CPA trước khi thống nhất mẫu số và đối soát."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "trade_marketing_executive": [
+      {
+        "id": "trade_marketing_executive_q01",
+        "type": "technical",
+        "skill": "marketing tại điểm bán",
+        "level": 3,
+        "weight": 3,
+        "question": "Một chương trình trưng bày tại 40 cửa hàng cần tăng sell-out cho SKU mới. Bạn thiết kế tiêu chuẩn triển khai và đo lường tại điểm bán thế nào?",
+        "good_answer_points": [
+          "Phân nhóm cửa hàng, xác định vị trí/trưng bày, POSM và checklist thực thi.",
+          "Đào tạo/brief nhân viên bán hàng, quy định ảnh xác nhận và kiểm tra tuân thủ.",
+          "Đo sell-out so với baseline/nhóm đối chứng, availability và uplift theo cửa hàng."
+        ],
+        "red_flags": [
+          "Đếm số POSM gửi đi như bằng chứng trưng bày hoặc hiệu quả bán hàng."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "trade_marketing_executive_q02",
+        "type": "technical",
+        "skill": "nghiên cứu thị trường",
+        "level": 2,
+        "weight": 3,
+        "question": "Trước khi mở rộng chương trình khuyến mại sang tỉnh mới, bạn cần hiểu kênh bán và đối thủ tại đó. Bạn thu thập và tổng hợp dữ liệu nào?",
+        "good_answer_points": [
+          "Xác định câu hỏi, khu vực/cửa hàng mẫu và nguồn primary/secondary.",
+          "Thu thập giá, assortment, promo, share of shelf, shopper profile và mùa vụ.",
+          "Kiểm tra tính đại diện, so sánh theo kênh/địa bàn và chuyển phát hiện thành lựa chọn pilot."
+        ],
+        "red_flags": [
+          "Suy rộng từ vài cửa hàng thuận tiện hoặc chỉ dựa vào báo cáo đối thủ cũ."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "trade_marketing_executive_q03",
+        "type": "technical",
+        "skill": "quản lý ngân sách",
+        "level": 2,
+        "weight": 2,
+        "question": "Chương trình giảm giá tại điểm bán có ngân sách cố định; bạn lập dự toán, theo dõi burn rate và đánh giá hiệu quả thế nào?",
+        "good_answer_points": [
+          "Tách chi phí giảm giá, vật liệu, nhân sự và khoản cố định/biến đổi.",
+          "Phân bổ theo cửa hàng/SKU, dự phòng và theo dõi committed so với actual.",
+          "Tính cost per incremental sale hoặc ROI với baseline và ngưỡng dừng/mở rộng."
+        ],
+        "red_flags": [
+          "Báo cáo doanh số tổng mà không trừ chi phí hoặc ước lượng phần tăng thêm."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "trade_marketing_executive_q04",
+        "type": "scenario",
+        "skill": "thương lượng",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn thương lượng với chuỗi bán lẻ để có vị trí trưng bày tốt hơn trong khi ngân sách hỗ trợ có giới hạn.",
+        "good_answer_points": [
+          "Situation/Task nêu mục tiêu trưng bày, quyền lợi đôi bên và giới hạn ngân sách.",
+          "Action cho thấy dùng dữ liệu sell-out/shopper, chuẩn bị phương án trao đổi và xác nhận điều kiện thực thi.",
+          "Result nêu vị trí/độ phủ đạt được, hiệu quả đo lường và bài học cho lần sau."
+        ],
+        "red_flags": [
+          "Cam kết hỗ trợ vượt thẩm quyền hoặc không chốt điều kiện thực thi bằng văn bản."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "trade_marketing_executive_q05",
+        "type": "scenario",
+        "skill": "làm việc nhóm",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn phối hợp Sales, agency và đội cửa hàng để triển khai một chương trình trade marketing có lịch gấp.",
+        "good_answer_points": [
+          "Situation/Task nêu các nhóm liên quan, deadline và tiêu chí thành công.",
+          "Action thể hiện phân vai, tài liệu triển khai thống nhất, nhịp cập nhật và xử lý xung đột ưu tiên.",
+          "Result nêu độ phủ/tuân thủ, kết quả chương trình và điều chỉnh quy trình phối hợp."
+        ],
+        "red_flags": [
+          "Chỉ nói đã gửi email mà không kiểm tra hiểu đúng hoặc tiến độ thực địa."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "internal_comms_executive": [
+      {
+        "id": "internal_comms_executive_q01",
+        "type": "technical",
+        "skill": "truyền thông nội bộ",
+        "level": 3,
+        "weight": 3,
+        "question": "Công ty triển khai chính sách làm việc hybrid mới cho 800 nhân viên ở nhiều địa điểm. Bạn thiết kế kế hoạch truyền thông và đo mức độ hiểu/áp dụng ra sao?",
+        "good_answer_points": [
+          "Phân nhóm nhân viên/quản lý theo nhu cầu và xác định thông điệp, FAQ, owner.",
+          "Phối hợp kênh email/intranet/town hall/manager cascade theo lịch và khả năng tiếp cận.",
+          "Đo reach lẫn comprehension/adoption qua khảo sát, câu hỏi và chỉ số vận hành; cập nhật FAQ."
+        ],
+        "red_flags": [
+          "Đồng nhất lượt mở email với việc nhân viên hiểu và làm theo chính sách."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "internal_comms_executive_q02",
+        "type": "technical",
+        "skill": "viết nội dung",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy phác thảo thông báo nội bộ về thay đổi quy trình duyệt chi phí, vốn dễ gây lo ngại rằng quyền lợi bị cắt. Bạn cấu trúc nội dung thế nào?",
+        "good_answer_points": [
+          "Nêu điều gì thay đổi, từ khi nào, ai bị ảnh hưởng và lý do bằng ngôn ngữ rõ.",
+          "Giải thích điều không thay đổi, bước thực hiện, ví dụ và nơi hỏi đáp.",
+          "Kiểm tra tính chính xác với HR/Finance, giọng điệu tôn trọng và phiên bản accessible."
+        ],
+        "red_flags": [
+          "Dùng ngôn ngữ mơ hồ hoặc né tác động thực tế tới nhân viên."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "internal_comms_executive_q03",
+        "type": "scenario",
+        "skill": "kết nối nhân sự",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về một sáng kiến bạn dùng để kết nối nhân viên ở các văn phòng/ca làm khác nhau, kể cả người ít dùng kênh số.",
+        "good_answer_points": [
+          "Situation/Task mô tả khoảng cách kết nối và nhóm khó tiếp cận.",
+          "Action nêu cách lắng nghe, đồng thiết kế hoạt động/kênh và xử lý rào cản tham gia.",
+          "Result có chỉ số tham gia/feedback chia theo nhóm và điều chỉnh sau triển khai."
+        ],
+        "red_flags": [
+          "Chỉ đo số người tham gia tổng thể hoặc giả định một kênh phù hợp mọi người."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "internal_comms_executive_q04",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn phải truyền đạt một quyết định không phổ biến của ban lãnh đạo tới nhân viên mà vẫn giữ được đối thoại hai chiều.",
+        "good_answer_points": [
+          "Situation/Task nêu quyết định, mối quan tâm và trách nhiệm truyền đạt.",
+          "Action thể hiện chuẩn bị thông tin đã xác nhận, lắng nghe câu hỏi và chuyển vấn đề chưa rõ tới đúng owner.",
+          "Result nêu phản hồi/hiểu biết và cách đóng vòng các câu hỏi sau buổi truyền thông."
+        ],
+        "red_flags": [
+          "Chỉ đọc thông điệp một chiều hoặc hứa điều chưa được xác nhận."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "internal_comms_executive_q05",
+        "type": "technical",
+        "skill": "canva",
+        "level": 2,
+        "weight": 2,
+        "question": "Bạn cần tạo infographic nội bộ giải thích quy trình onboarding mới. Nêu cách tổ chức nội dung và thiết kế trên Canva để nhân viên đọc nhanh, không sai thông tin.",
+        "good_answer_points": [
+          "Chuyển quy trình thành các bước/nhánh rõ, ưu tiên nội dung và CTA.",
+          "Dùng template, phân cấp chữ, màu/biểu tượng dễ đọc và tương phản đủ.",
+          "Kiểm tra nội dung với owner, xuất đúng định dạng và thử hiển thị trên mobile/intranet."
+        ],
+        "red_flags": [
+          "Ưu tiên trang trí hoặc dùng màu/biểu tượng làm sai lệch ý nghĩa quy trình."
+        ],
+        "time_minutes": 4
+      }
+    ]
+  }
+}

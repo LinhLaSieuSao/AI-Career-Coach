@@ -1,0 +1,1045 @@
+{
+  "version": 1,
+  "roles": {
+    "data_analyst": [
+      {
+        "id": "data_analyst_q01",
+        "type": "technical",
+        "skill": "sql",
+        "level": 3,
+        "weight": 3,
+        "question": "Với phân tích hiệu quả chiến dịch và hành vi khách hàng, hãy giải thích cách áp dụng sql: Thiết kế truy vấn có grain rõ ràng, join đúng khóa và xử lý null/duplicate; giải thích cách kiểm tra kết quả bằng đối soát số dòng hoặc tổng kiểm.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_analyst_q02",
+        "type": "technical",
+        "skill": "power bi",
+        "level": 2,
+        "weight": 3,
+        "question": "Với phân tích hiệu quả chiến dịch và hành vi khách hàng, hãy giải thích cách áp dụng power bi: Chọn mô hình star schema và relationship phù hợp; phân biệt measure với calculated column; mô tả filter context và cách kiểm tra số liệu dashboard.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_analyst_q03",
+        "type": "scenario",
+        "skill": "tư duy phân tích",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn phát hiện một chỉ số chiến dịch thay đổi do vấn đề định nghĩa hoặc dữ liệu; bạn đã xác minh nguyên nhân và thống nhất cách báo cáo ra sao?",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
+          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
+          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_analyst_q04",
+        "type": "technical",
+        "skill": "python",
+        "level": 2,
+        "weight": 2,
+        "question": "Với phân tích hiệu quả chiến dịch và hành vi khách hàng, hãy giải thích cách áp dụng python: Trình bày cách chia code thành hàm/module, kiểm tra schema và xử lý lỗi dữ liệu; nêu test tái lập cùng cách đo hiệu năng hoặc bộ nhớ.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_analyst_q05",
+        "type": "technical",
+        "skill": "excel",
+        "level": 3,
+        "weight": 2,
+        "question": "Với phân tích hiệu quả chiến dịch và hành vi khách hàng, hãy giải thích cách áp dụng excel: Nêu cách làm sạch và chuẩn hóa dữ liệu, chọn công thức/pivot phù hợp, xử lý ô thiếu/trùng và đối soát kết quả với nguồn.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_analyst_q06",
+        "type": "scenario",
+        "skill": "giải quyết vấn đề",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn dùng giải quyết vấn đề để làm rõ một kết quả phân tích hoặc xử lý bất đồng trong phân tích hiệu quả chiến dịch và hành vi khách hàng; vai trò và kết quả cụ thể của bạn là gì?",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
+          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
+          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "data_engineer": [
+      {
+        "id": "data_engineer_q01",
+        "type": "scenario",
+        "skill": "sql",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong pipeline sự kiện sản phẩm phục vụ báo cáo hằng ngày, hãy kể theo STAR về một lần sql gây ra lỗi hoặc rủi ro chất lượng; bạn khoanh vùng nguyên nhân, chọn biện pháp và xác nhận kết quả ra sao?",
+        "good_answer_points": [
+          "Nêu bối cảnh, tác động và trách nhiệm cá nhân trong sự cố cụ thể.",
+          "Giải thích các bước chẩn đoán và lựa chọn xử lý liên quan trực tiếp đến kỹ năng.",
+          "Đưa bằng chứng phục hồi/cải thiện và biện pháp phòng ngừa tái diễn."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_engineer_q02",
+        "type": "technical",
+        "skill": "python",
+        "level": 3,
+        "weight": 3,
+        "question": "Với pipeline sự kiện sản phẩm phục vụ báo cáo hằng ngày, hãy giải thích cách áp dụng python: Trình bày cách chia code thành hàm/module, kiểm tra schema và xử lý lỗi dữ liệu; nêu test tái lập cùng cách đo hiệu năng hoặc bộ nhớ.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_engineer_q03",
+        "type": "technical",
+        "skill": "apache spark",
+        "level": 2,
+        "weight": 3,
+        "question": "Với pipeline sự kiện sản phẩm phục vụ báo cáo hằng ngày, hãy giải thích cách áp dụng apache spark: Giải thích partitioning, xử lý skew và chọn transformation/action; đưa cách đánh giá shuffle, thời gian chạy và tính đúng đắn.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_engineer_q04",
+        "type": "technical",
+        "skill": "etl",
+        "level": 2,
+        "weight": 2,
+        "question": "Với pipeline sự kiện sản phẩm phục vụ báo cáo hằng ngày, hãy giải thích cách áp dụng etl: Mô tả extract/transform/load có watermark hoặc checkpoint, tính idempotent, xử lý late/duplicate records và cách đối soát đầu ra.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_engineer_q05",
+        "type": "technical",
+        "skill": "airflow",
+        "level": 2,
+        "weight": 2,
+        "question": "Với pipeline sự kiện sản phẩm phục vụ báo cáo hằng ngày, hãy giải thích cách áp dụng airflow: Thiết kế DAG theo dependency, retry/timeout và backfill an toàn; làm rõ idempotency, alerting và cách theo dõi run bị trễ.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_engineer_q06",
+        "type": "scenario",
+        "skill": "giải quyết vấn đề",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về một pipeline dữ liệu bị trễ hoặc phát sinh bản ghi sai; bạn đã khoanh vùng, khôi phục SLA và ngăn lỗi tái diễn như thế nào?",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
+          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
+          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "machine_learning_engineer": [
+      {
+        "id": "machine_learning_engineer_q01",
+        "type": "scenario",
+        "skill": "python",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong dịch vụ dự đoán churn cần triển khai ổn định, hãy kể theo STAR về một lần python gây ra lỗi hoặc rủi ro chất lượng; bạn khoanh vùng nguyên nhân, chọn biện pháp và xác nhận kết quả ra sao?",
+        "good_answer_points": [
+          "Nêu bối cảnh, tác động và trách nhiệm cá nhân trong sự cố cụ thể.",
+          "Giải thích các bước chẩn đoán và lựa chọn xử lý liên quan trực tiếp đến kỹ năng.",
+          "Đưa bằng chứng phục hồi/cải thiện và biện pháp phòng ngừa tái diễn."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "machine_learning_engineer_q02",
+        "type": "technical",
+        "skill": "thuật toán học máy",
+        "level": 3,
+        "weight": 3,
+        "question": "Với dịch vụ dự đoán churn cần triển khai ổn định, hãy giải thích cách áp dụng thuật toán học máy: Chọn baseline và cách chia dữ liệu tránh leakage; nêu metric phù hợp với chi phí lỗi, phương pháp tuning và tiêu chí dừng.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "machine_learning_engineer_q03",
+        "type": "technical",
+        "skill": "pytorch",
+        "level": 2,
+        "weight": 3,
+        "question": "Với dịch vụ dự đoán churn cần triển khai ổn định, hãy giải thích cách áp dụng pytorch: Nêu pipeline Dataset/DataLoader, vòng train/eval, loss/optimizer và kiểm soát seed; giải thích cách theo dõi metric và lưu checkpoint.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "machine_learning_engineer_q04",
+        "type": "technical",
+        "skill": "sql",
+        "level": 2,
+        "weight": 2,
+        "question": "Với dịch vụ dự đoán churn cần triển khai ổn định, hãy giải thích cách áp dụng sql: Thiết kế truy vấn có grain rõ ràng, join đúng khóa và xử lý null/duplicate; giải thích cách kiểm tra kết quả bằng đối soát số dòng hoặc tổng kiểm.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "machine_learning_engineer_q05",
+        "type": "technical",
+        "skill": "toán học",
+        "level": 2,
+        "weight": 2,
+        "question": "Với dịch vụ dự đoán churn cần triển khai ổn định, hãy giải thích cách áp dụng toán học: Giải thích giả định toán học liên quan đến loss/gradient hoặc xác suất trong bài toán; chỉ ra tác động lên độ ổn định và cách kiểm chứng.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "machine_learning_engineer_q06",
+        "type": "scenario",
+        "skill": "giải quyết vấn đề",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần model phục vụ production suy giảm hoặc quá chậm; bạn đã cân bằng chất lượng, latency và rủi ro phát hành ra sao?",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
+          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
+          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "business_intelligence_analyst": [
+      {
+        "id": "business_intelligence_analyst_q01",
+        "type": "technical",
+        "skill": "sql",
+        "level": 3,
+        "weight": 3,
+        "question": "Với dashboard doanh thu và vận hành cho lãnh đạo, hãy giải thích cách áp dụng sql: Thiết kế truy vấn có grain rõ ràng, join đúng khóa và xử lý null/duplicate; giải thích cách kiểm tra kết quả bằng đối soát số dòng hoặc tổng kiểm.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "business_intelligence_analyst_q02",
+        "type": "technical",
+        "skill": "power bi",
+        "level": 3,
+        "weight": 3,
+        "question": "Với dashboard doanh thu và vận hành cho lãnh đạo, hãy giải thích cách áp dụng power bi: Chọn mô hình star schema và relationship phù hợp; phân biệt measure với calculated column; mô tả filter context và cách kiểm tra số liệu dashboard.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "business_intelligence_analyst_q03",
+        "type": "scenario",
+        "skill": "tư duy phân tích",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng tư duy phân tích để làm rõ một kết quả phân tích hoặc xử lý bất đồng trong dashboard doanh thu và vận hành cho lãnh đạo; vai trò và kết quả cụ thể của bạn là gì?",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
+          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
+          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "business_intelligence_analyst_q04",
+        "type": "technical",
+        "skill": "excel",
+        "level": 3,
+        "weight": 2,
+        "question": "Với dashboard doanh thu và vận hành cho lãnh đạo, hãy giải thích cách áp dụng excel: Nêu cách làm sạch và chuẩn hóa dữ liệu, chọn công thức/pivot phù hợp, xử lý ô thiếu/trùng và đối soát kết quả với nguồn.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "business_intelligence_analyst_q05",
+        "type": "technical",
+        "skill": "data warehouse",
+        "level": 2,
+        "weight": 2,
+        "question": "Với dashboard doanh thu và vận hành cho lãnh đạo, hãy giải thích cách áp dụng data warehouse: Chọn grain, fact/dimension và chiến lược lịch sử phù hợp; giải thích incremental load, kiểm tra chất lượng và hỗ trợ truy vấn tiêu thụ.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "business_intelligence_analyst_q06",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần hai nhóm bất đồng vì cùng một KPI cho ra số khác nhau; bạn đã làm rõ định nghĩa, bằng chứng và chốt cách trình bày thế nào?",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
+          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
+          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "data_scientist": [
+      {
+        "id": "data_scientist_q01",
+        "type": "technical",
+        "skill": "python",
+        "level": 3,
+        "weight": 3,
+        "question": "Với mô hình dự đoán rủi ro giao dịch, hãy giải thích cách áp dụng python: Trình bày cách chia code thành hàm/module, kiểm tra schema và xử lý lỗi dữ liệu; nêu test tái lập cùng cách đo hiệu năng hoặc bộ nhớ.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_scientist_q02",
+        "type": "technical",
+        "skill": "sql",
+        "level": 3,
+        "weight": 3,
+        "question": "Với mô hình dự đoán rủi ro giao dịch, hãy giải thích cách áp dụng sql: Thiết kế truy vấn có grain rõ ràng, join đúng khóa và xử lý null/duplicate; giải thích cách kiểm tra kết quả bằng đối soát số dòng hoặc tổng kiểm.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_scientist_q03",
+        "type": "technical",
+        "skill": "thống kê",
+        "level": 3,
+        "weight": 3,
+        "question": "Với mô hình dự đoán rủi ro giao dịch, hãy giải thích cách áp dụng thống kê: Chọn phép kiểm định/ước lượng phù hợp với giả định, diễn giải khoảng tin cậy và cỡ mẫu; nêu cách kiểm tra phân phối và tránh kết luận quá mức.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_scientist_q04",
+        "type": "technical",
+        "skill": "thuật toán học máy",
+        "level": 2,
+        "weight": 3,
+        "question": "Với mô hình dự đoán rủi ro giao dịch, hãy giải thích cách áp dụng thuật toán học máy: Chọn baseline và cách chia dữ liệu tránh leakage; nêu metric phù hợp với chi phí lỗi, phương pháp tuning và tiêu chí dừng.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_scientist_q05",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn phải giải thích kết quả mô hình không chắc chắn cho người ra quyết định; bạn làm rõ giới hạn và đề xuất hành động ra sao?",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
+          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
+          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_scientist_q06",
+        "type": "scenario",
+        "skill": "giải quyết vấn đề",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn dùng giải quyết vấn đề để làm rõ một kết quả phân tích hoặc xử lý bất đồng trong mô hình dự đoán rủi ro giao dịch; vai trò và kết quả cụ thể của bạn là gì?",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
+          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
+          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "ai_engineer": [
+      {
+        "id": "ai_engineer_q01",
+        "type": "scenario",
+        "skill": "python",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong dịch vụ AI xử lý yêu cầu người dùng, hãy kể theo STAR về một lần python gây ra lỗi hoặc rủi ro chất lượng; bạn khoanh vùng nguyên nhân, chọn biện pháp và xác nhận kết quả ra sao?",
+        "good_answer_points": [
+          "Nêu bối cảnh, tác động và trách nhiệm cá nhân trong sự cố cụ thể.",
+          "Giải thích các bước chẩn đoán và lựa chọn xử lý liên quan trực tiếp đến kỹ năng.",
+          "Đưa bằng chứng phục hồi/cải thiện và biện pháp phòng ngừa tái diễn."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ai_engineer_q02",
+        "type": "scenario",
+        "skill": "thuật toán học máy",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong dịch vụ AI xử lý yêu cầu người dùng, hãy kể theo STAR về một lần thuật toán học máy gây ra lỗi hoặc rủi ro chất lượng; bạn khoanh vùng nguyên nhân, chọn biện pháp và xác nhận kết quả ra sao?",
+        "good_answer_points": [
+          "Nêu bối cảnh, tác động và trách nhiệm cá nhân trong sự cố cụ thể.",
+          "Giải thích các bước chẩn đoán và lựa chọn xử lý liên quan trực tiếp đến kỹ năng.",
+          "Đưa bằng chứng phục hồi/cải thiện và biện pháp phòng ngừa tái diễn."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ai_engineer_q03",
+        "type": "technical",
+        "skill": "pytorch",
+        "level": 2,
+        "weight": 3,
+        "question": "Với dịch vụ AI xử lý yêu cầu người dùng, hãy giải thích cách áp dụng pytorch: Nêu pipeline Dataset/DataLoader, vòng train/eval, loss/optimizer và kiểm soát seed; giải thích cách theo dõi metric và lưu checkpoint.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ai_engineer_q04",
+        "type": "technical",
+        "skill": "tensorflow",
+        "level": 2,
+        "weight": 2,
+        "question": "Với dịch vụ AI xử lý yêu cầu người dùng, hãy giải thích cách áp dụng tensorflow: Mô tả input pipeline, model/loss và train/eval; nêu cách theo dõi metric, lưu checkpoint và kiểm tra tái lập.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ai_engineer_q05",
+        "type": "technical",
+        "skill": "nlp",
+        "level": 2,
+        "weight": 2,
+        "question": "Với dịch vụ AI xử lý yêu cầu người dùng, hãy giải thích cách áp dụng nlp: Nêu cách chuẩn hóa/tokenize tiếng Việt, xử lý nhãn lệch và chọn metric; giải thích cách phân tích lỗi theo loại văn bản.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ai_engineer_q06",
+        "type": "technical",
+        "skill": "computer vision",
+        "level": 2,
+        "weight": 2,
+        "question": "Với dịch vụ AI xử lý yêu cầu người dùng, hãy giải thích cách áp dụng computer vision: Mô tả tiền xử lý/augmentation, lựa chọn metric theo lỗi bỏ sót/phát hiện nhầm và đánh giá theo điều kiện ảnh khác nhau.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "nlp_engineer": [
+      {
+        "id": "nlp_engineer_q01",
+        "type": "scenario",
+        "skill": "python",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong hệ thống phân loại và tìm kiếm văn bản tiếng Việt, hãy kể theo STAR về một lần python gây ra lỗi hoặc rủi ro chất lượng; bạn khoanh vùng nguyên nhân, chọn biện pháp và xác nhận kết quả ra sao?",
+        "good_answer_points": [
+          "Nêu bối cảnh, tác động và trách nhiệm cá nhân trong sự cố cụ thể.",
+          "Giải thích các bước chẩn đoán và lựa chọn xử lý liên quan trực tiếp đến kỹ năng.",
+          "Đưa bằng chứng phục hồi/cải thiện và biện pháp phòng ngừa tái diễn."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "nlp_engineer_q02",
+        "type": "technical",
+        "skill": "nlp",
+        "level": 3,
+        "weight": 3,
+        "question": "Với hệ thống phân loại và tìm kiếm văn bản tiếng Việt, hãy giải thích cách áp dụng nlp: Nêu cách chuẩn hóa/tokenize tiếng Việt, xử lý nhãn lệch và chọn metric; giải thích cách phân tích lỗi theo loại văn bản.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "nlp_engineer_q03",
+        "type": "technical",
+        "skill": "pytorch",
+        "level": 2,
+        "weight": 3,
+        "question": "Với hệ thống phân loại và tìm kiếm văn bản tiếng Việt, hãy giải thích cách áp dụng pytorch: Nêu pipeline Dataset/DataLoader, vòng train/eval, loss/optimizer và kiểm soát seed; giải thích cách theo dõi metric và lưu checkpoint.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "nlp_engineer_q04",
+        "type": "technical",
+        "skill": "thuật toán học máy",
+        "level": 2,
+        "weight": 2,
+        "question": "Với hệ thống phân loại và tìm kiếm văn bản tiếng Việt, hãy giải thích cách áp dụng thuật toán học máy: Chọn baseline và cách chia dữ liệu tránh leakage; nêu metric phù hợp với chi phí lỗi, phương pháp tuning và tiêu chí dừng.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "nlp_engineer_q05",
+        "type": "technical",
+        "skill": "transformer",
+        "level": 2,
+        "weight": 2,
+        "question": "Với hệ thống phân loại và tìm kiếm văn bản tiếng Việt, hãy giải thích cách áp dụng transformer: Giải thích tokenization, attention/context length và fine-tuning; nêu chiến lược batching, kiểm soát overfit và đánh giá theo lát cắt.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "nlp_engineer_q06",
+        "type": "scenario",
+        "skill": "giải quyết vấn đề",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lỗi phân loại văn bản tiếng Việt ở một nhóm câu cụ thể; bạn dùng phân tích lỗi để chọn thay đổi và đo tác động thế nào?",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
+          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
+          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "computer_vision_engineer": [
+      {
+        "id": "computer_vision_engineer_q01",
+        "type": "scenario",
+        "skill": "python",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong hệ thống phát hiện lỗi trên ảnh dây chuyền, hãy kể theo STAR về một lần python gây ra lỗi hoặc rủi ro chất lượng; bạn khoanh vùng nguyên nhân, chọn biện pháp và xác nhận kết quả ra sao?",
+        "good_answer_points": [
+          "Nêu bối cảnh, tác động và trách nhiệm cá nhân trong sự cố cụ thể.",
+          "Giải thích các bước chẩn đoán và lựa chọn xử lý liên quan trực tiếp đến kỹ năng.",
+          "Đưa bằng chứng phục hồi/cải thiện và biện pháp phòng ngừa tái diễn."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "computer_vision_engineer_q02",
+        "type": "technical",
+        "skill": "computer vision",
+        "level": 3,
+        "weight": 3,
+        "question": "Với hệ thống phát hiện lỗi trên ảnh dây chuyền, hãy giải thích cách áp dụng computer vision: Mô tả tiền xử lý/augmentation, lựa chọn metric theo lỗi bỏ sót/phát hiện nhầm và đánh giá theo điều kiện ảnh khác nhau.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "computer_vision_engineer_q03",
+        "type": "technical",
+        "skill": "pytorch",
+        "level": 2,
+        "weight": 3,
+        "question": "Với hệ thống phát hiện lỗi trên ảnh dây chuyền, hãy giải thích cách áp dụng pytorch: Nêu pipeline Dataset/DataLoader, vòng train/eval, loss/optimizer và kiểm soát seed; giải thích cách theo dõi metric và lưu checkpoint.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "computer_vision_engineer_q04",
+        "type": "technical",
+        "skill": "opencv",
+        "level": 2,
+        "weight": 2,
+        "question": "Với hệ thống phát hiện lỗi trên ảnh dây chuyền, hãy giải thích cách áp dụng opencv: Nêu các bước đọc ảnh, chuyển màu/resize và phép biến đổi cần thiết; giải thích xử lý lỗi input và xác nhận tọa độ/kích thước đầu ra.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "computer_vision_engineer_q05",
+        "type": "technical",
+        "skill": "thuật toán học máy",
+        "level": 2,
+        "weight": 2,
+        "question": "Với hệ thống phát hiện lỗi trên ảnh dây chuyền, hãy giải thích cách áp dụng thuật toán học máy: Chọn baseline và cách chia dữ liệu tránh leakage; nêu metric phù hợp với chi phí lỗi, phương pháp tuning và tiêu chí dừng.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "computer_vision_engineer_q06",
+        "type": "scenario",
+        "skill": "giải quyết vấn đề",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về model thị giác bị giảm recall khi điều kiện chiếu sáng hoặc góc chụp thay đổi; bạn xác định nguyên nhân và chứng minh cải thiện ra sao?",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
+          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
+          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "mlops_engineer": [
+      {
+        "id": "mlops_engineer_q01",
+        "type": "scenario",
+        "skill": "python",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong nền tảng triển khai và giám sát model ML, hãy kể theo STAR về một lần python gây ra lỗi hoặc rủi ro chất lượng; bạn khoanh vùng nguyên nhân, chọn biện pháp và xác nhận kết quả ra sao?",
+        "good_answer_points": [
+          "Nêu bối cảnh, tác động và trách nhiệm cá nhân trong sự cố cụ thể.",
+          "Giải thích các bước chẩn đoán và lựa chọn xử lý liên quan trực tiếp đến kỹ năng.",
+          "Đưa bằng chứng phục hồi/cải thiện và biện pháp phòng ngừa tái diễn."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "mlops_engineer_q02",
+        "type": "technical",
+        "skill": "docker",
+        "level": 3,
+        "weight": 3,
+        "question": "Với nền tảng triển khai và giám sát model ML, hãy giải thích cách áp dụng docker: Mô tả image nhỏ, dependency pinning, non-root và cấu hình runtime; nêu cách kiểm tra reproducibility, health và giới hạn tài nguyên.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "mlops_engineer_q03",
+        "type": "technical",
+        "skill": "ci/cd",
+        "level": 3,
+        "weight": 3,
+        "question": "Với nền tảng triển khai và giám sát model ML, hãy giải thích cách áp dụng ci/cd: Thiết kế pipeline build-test-package-deploy có artifact versioned, kiểm tra chất lượng và cơ chế rollback; nêu điều kiện promotion.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "mlops_engineer_q04",
+        "type": "technical",
+        "skill": "kubernetes",
+        "level": 2,
+        "weight": 2,
+        "question": "Với nền tảng triển khai và giám sát model ML, hãy giải thích cách áp dụng kubernetes: Giải thích Deployment/Service, readiness/liveness probe, resource requests/limits và rollout; nêu cách quan sát, rollback khi pod lỗi.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "mlops_engineer_q05",
+        "type": "technical",
+        "skill": "aws",
+        "level": 2,
+        "weight": 2,
+        "question": "Với nền tảng triển khai và giám sát model ML, hãy giải thích cách áp dụng aws: Xác định dịch vụ lưu trữ/tính toán phù hợp, IAM tối thiểu, mã hóa/quan sát chi phí; nêu cách kiểm tra quyền và khả năng khôi phục.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "mlops_engineer_q06",
+        "type": "scenario",
+        "skill": "giải quyết vấn đề",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về một lần triển khai model thất bại hoặc drift không được phát hiện; bạn khôi phục dịch vụ và bổ sung guardrail nào?",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
+          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
+          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "data_architect": [
+      {
+        "id": "data_architect_q01",
+        "type": "scenario",
+        "skill": "data warehouse",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong nền tảng dữ liệu hợp nhất từ nhiều hệ thống nguồn, hãy kể theo STAR về một lần data warehouse gây ra lỗi hoặc rủi ro chất lượng; bạn khoanh vùng nguyên nhân, chọn biện pháp và xác nhận kết quả ra sao?",
+        "good_answer_points": [
+          "Nêu bối cảnh, tác động và trách nhiệm cá nhân trong sự cố cụ thể.",
+          "Giải thích các bước chẩn đoán và lựa chọn xử lý liên quan trực tiếp đến kỹ năng.",
+          "Đưa bằng chứng phục hồi/cải thiện và biện pháp phòng ngừa tái diễn."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_architect_q02",
+        "type": "technical",
+        "skill": "sql",
+        "level": 3,
+        "weight": 3,
+        "question": "Với nền tảng dữ liệu hợp nhất từ nhiều hệ thống nguồn, hãy giải thích cách áp dụng sql: Thiết kế truy vấn có grain rõ ràng, join đúng khóa và xử lý null/duplicate; giải thích cách kiểm tra kết quả bằng đối soát số dòng hoặc tổng kiểm.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_architect_q03",
+        "type": "technical",
+        "skill": "kiến trúc hệ thống",
+        "level": 3,
+        "weight": 3,
+        "question": "Với nền tảng dữ liệu hợp nhất từ nhiều hệ thống nguồn, hãy giải thích cách áp dụng kiến trúc hệ thống: Vẽ ranh giới thành phần và luồng dữ liệu, nêu trade-off về độ trễ/khả dụng/chi phí, failure mode và cách đo SLO.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_architect_q04",
+        "type": "technical",
+        "skill": "etl",
+        "level": 3,
+        "weight": 2,
+        "question": "Với nền tảng dữ liệu hợp nhất từ nhiều hệ thống nguồn, hãy giải thích cách áp dụng etl: Mô tả extract/transform/load có watermark hoặc checkpoint, tính idempotent, xử lý late/duplicate records và cách đối soát đầu ra.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_architect_q05",
+        "type": "technical",
+        "skill": "apache spark",
+        "level": 2,
+        "weight": 2,
+        "question": "Với nền tảng dữ liệu hợp nhất từ nhiều hệ thống nguồn, hãy giải thích cách áp dụng apache spark: Giải thích partitioning, xử lý skew và chọn transformation/action; đưa cách đánh giá shuffle, thời gian chạy và tính đúng đắn.",
+        "good_answer_points": [
+          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
+          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
+          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "data_architect_q06",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần bạn cần thống nhất mô hình dữ liệu giữa các nhóm nguồn và nhóm phân tích; bạn xử lý yêu cầu xung đột và đạt đồng thuận bằng cách nào?",
+        "good_answer_points": [
+          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
+          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
+          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+        ],
+        "red_flags": [
+          "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
+        ],
+        "time_minutes": 4
+      }
+    ]
+  }
+}

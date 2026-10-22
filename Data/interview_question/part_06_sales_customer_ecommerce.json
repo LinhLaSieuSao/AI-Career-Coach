@@ -1,0 +1,1484 @@
+{
+  "version": 1,
+  "roles": {
+    "ecommerce_executive": [
+      {
+        "id": "ecommerce_executive_q01",
+        "type": "technical",
+        "skill": "chạy ads sàn",
+        "level": 2,
+        "weight": 3,
+        "question": "Trong bối cảnh gian hàng Shopee và chiến dịch Mega Campaign, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện chạy ads sàn?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của gian hàng Shopee và chiến dịch Mega Campaign.",
+          "Giải thích bước thực hiện gắn trực tiếp với chạy ads sàn, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ecommerce_executive_q02",
+        "type": "scenario",
+        "skill": "quản lý gian hàng",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng quản lý gian hàng để xử lý một trở ngại cụ thể trong gian hàng Shopee và chiến dịch Mega Campaign.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong gian hàng Shopee và chiến dịch Mega Campaign.",
+          "Action mô tả hành động cụ thể gắn với quản lý gian hàng và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ecommerce_executive_q03",
+        "type": "technical",
+        "skill": "shopee",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả gian hàng Shopee và chiến dịch Mega Campaign thấp hơn mục tiêu, bạn dùng shopee để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của gian hàng Shopee và chiến dịch Mega Campaign.",
+          "Giải thích bước thực hiện gắn trực tiếp với shopee, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ecommerce_executive_q04",
+        "type": "scenario",
+        "skill": "chăm sóc khách hàng",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong gian hàng Shopee và chiến dịch Mega Campaign, hãy mô tả quy trình bạn dùng chăm sóc khách hàng để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong gian hàng Shopee và chiến dịch Mega Campaign.",
+          "Action mô tả hành động cụ thể gắn với chăm sóc khách hàng và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ecommerce_executive_q05",
+        "type": "scenario",
+        "skill": "excel",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong gian hàng Shopee và chiến dịch Mega Campaign và bạn vận dụng excel để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong gian hàng Shopee và chiến dịch Mega Campaign.",
+          "Action mô tả hành động cụ thể gắn với excel và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "sales_executive": [
+      {
+        "id": "sales_executive_q01",
+        "type": "technical",
+        "skill": "bán hàng",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh pipeline bán gói phần mềm cho khách hàng SME, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện bán hàng?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của pipeline bán gói phần mềm cho khách hàng SME.",
+          "Giải thích bước thực hiện gắn trực tiếp với bán hàng, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sales_executive_q02",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng giao tiếp để xử lý một trở ngại cụ thể trong pipeline bán gói phần mềm cho khách hàng SME.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong pipeline bán gói phần mềm cho khách hàng SME.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sales_executive_q03",
+        "type": "technical",
+        "skill": "tìm kiếm khách hàng",
+        "level": 2,
+        "weight": 3,
+        "question": "Khi kết quả pipeline bán gói phần mềm cho khách hàng SME thấp hơn mục tiêu, bạn dùng tìm kiếm khách hàng để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của pipeline bán gói phần mềm cho khách hàng SME.",
+          "Giải thích bước thực hiện gắn trực tiếp với tìm kiếm khách hàng, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sales_executive_q04",
+        "type": "scenario",
+        "skill": "chăm sóc khách hàng",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong pipeline bán gói phần mềm cho khách hàng SME, hãy mô tả quy trình bạn dùng chăm sóc khách hàng để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong pipeline bán gói phần mềm cho khách hàng SME.",
+          "Action mô tả hành động cụ thể gắn với chăm sóc khách hàng và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sales_executive_q05",
+        "type": "scenario",
+        "skill": "thuyết phục",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong pipeline bán gói phần mềm cho khách hàng SME và bạn vận dụng thuyết phục để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong pipeline bán gói phần mềm cho khách hàng SME.",
+          "Action mô tả hành động cụ thể gắn với thuyết phục và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "b2b_sales_executive": [
+      {
+        "id": "b2b_sales_executive_q01",
+        "type": "technical",
+        "skill": "bán hàng b2b",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh deal SaaS với buying committee doanh nghiệp, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện bán hàng b2b?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của deal SaaS với buying committee doanh nghiệp.",
+          "Giải thích bước thực hiện gắn trực tiếp với bán hàng b2b, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "b2b_sales_executive_q02",
+        "type": "scenario",
+        "skill": "thuyết trình",
+        "level": 2,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng thuyết trình để xử lý một trở ngại cụ thể trong deal SaaS với buying committee doanh nghiệp.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong deal SaaS với buying committee doanh nghiệp.",
+          "Action mô tả hành động cụ thể gắn với thuyết trình và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "b2b_sales_executive_q03",
+        "type": "technical",
+        "skill": "xây dựng mối quan hệ",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả deal SaaS với buying committee doanh nghiệp thấp hơn mục tiêu, bạn dùng xây dựng mối quan hệ để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của deal SaaS với buying committee doanh nghiệp.",
+          "Giải thích bước thực hiện gắn trực tiếp với xây dựng mối quan hệ, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "b2b_sales_executive_q04",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Trong deal SaaS với buying committee doanh nghiệp, hãy mô tả quy trình bạn dùng giao tiếp để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong deal SaaS với buying committee doanh nghiệp.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "b2b_sales_executive_q05",
+        "type": "scenario",
+        "skill": "thương lượng",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong deal SaaS với buying committee doanh nghiệp và bạn vận dụng thương lượng để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong deal SaaS với buying committee doanh nghiệp.",
+          "Action mô tả hành động cụ thể gắn với thương lượng và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "key_account_manager": [
+      {
+        "id": "key_account_manager_q01",
+        "type": "technical",
+        "skill": "quản lý tài khoản",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh account trọng điểm sắp gia hạn hợp đồng, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện quản lý tài khoản?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của account trọng điểm sắp gia hạn hợp đồng.",
+          "Giải thích bước thực hiện gắn trực tiếp với quản lý tài khoản, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "key_account_manager_q02",
+        "type": "scenario",
+        "skill": "thương lượng",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng thương lượng để xử lý một trở ngại cụ thể trong account trọng điểm sắp gia hạn hợp đồng.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong account trọng điểm sắp gia hạn hợp đồng.",
+          "Action mô tả hành động cụ thể gắn với thương lượng và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "key_account_manager_q03",
+        "type": "technical",
+        "skill": "xây dựng mối quan hệ",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả account trọng điểm sắp gia hạn hợp đồng thấp hơn mục tiêu, bạn dùng xây dựng mối quan hệ để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của account trọng điểm sắp gia hạn hợp đồng.",
+          "Giải thích bước thực hiện gắn trực tiếp với xây dựng mối quan hệ, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "key_account_manager_q04",
+        "type": "technical",
+        "skill": "bán hàng b2b",
+        "level": 3,
+        "weight": 2,
+        "question": "Trong account trọng điểm sắp gia hạn hợp đồng, hãy mô tả quy trình bạn dùng bán hàng b2b để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của account trọng điểm sắp gia hạn hợp đồng.",
+          "Giải thích bước thực hiện gắn trực tiếp với bán hàng b2b, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "key_account_manager_q05",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong account trọng điểm sắp gia hạn hợp đồng và bạn vận dụng giao tiếp để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong account trọng điểm sắp gia hạn hợp đồng.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "telesales_representative": [
+      {
+        "id": "telesales_representative_q01",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh cuộc gọi lead đã để lại số điện thoại, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện giao tiếp?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong cuộc gọi lead đã để lại số điện thoại.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "telesales_representative_q02",
+        "type": "scenario",
+        "skill": "gọi điện thoại",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng gọi điện thoại để xử lý một trở ngại cụ thể trong cuộc gọi lead đã để lại số điện thoại.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong cuộc gọi lead đã để lại số điện thoại.",
+          "Action mô tả hành động cụ thể gắn với gọi điện thoại và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "telesales_representative_q03",
+        "type": "technical",
+        "skill": "kịch bản bán hàng",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả cuộc gọi lead đã để lại số điện thoại thấp hơn mục tiêu, bạn dùng kịch bản bán hàng để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của cuộc gọi lead đã để lại số điện thoại.",
+          "Giải thích bước thực hiện gắn trực tiếp với kịch bản bán hàng, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "telesales_representative_q04",
+        "type": "technical",
+        "skill": "crm",
+        "level": 1,
+        "weight": 2,
+        "question": "Trong cuộc gọi lead đã để lại số điện thoại, hãy mô tả quy trình bạn dùng crm để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của cuộc gọi lead đã để lại số điện thoại.",
+          "Giải thích bước thực hiện gắn trực tiếp với crm, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "telesales_representative_q05",
+        "type": "scenario",
+        "skill": "lắng nghe",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong cuộc gọi lead đã để lại số điện thoại và bạn vận dụng lắng nghe để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong cuộc gọi lead đã để lại số điện thoại.",
+          "Action mô tả hành động cụ thể gắn với lắng nghe và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "customer_service_executive": [
+      {
+        "id": "customer_service_executive_q01",
+        "type": "scenario",
+        "skill": "chăm sóc khách hàng",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh ticket của khách mua thiết bị gia dụng, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện chăm sóc khách hàng?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong ticket của khách mua thiết bị gia dụng.",
+          "Action mô tả hành động cụ thể gắn với chăm sóc khách hàng và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "customer_service_executive_q02",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng giao tiếp để xử lý một trở ngại cụ thể trong ticket của khách mua thiết bị gia dụng.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong ticket của khách mua thiết bị gia dụng.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "customer_service_executive_q03",
+        "type": "technical",
+        "skill": "xử lý khiếu nại",
+        "level": 2,
+        "weight": 3,
+        "question": "Khi kết quả ticket của khách mua thiết bị gia dụng thấp hơn mục tiêu, bạn dùng xử lý khiếu nại để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của ticket của khách mua thiết bị gia dụng.",
+          "Giải thích bước thực hiện gắn trực tiếp với xử lý khiếu nại, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "customer_service_executive_q04",
+        "type": "technical",
+        "skill": "crm",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong ticket của khách mua thiết bị gia dụng, hãy mô tả quy trình bạn dùng crm để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của ticket của khách mua thiết bị gia dụng.",
+          "Giải thích bước thực hiện gắn trực tiếp với crm, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "customer_service_executive_q05",
+        "type": "scenario",
+        "skill": "giải quyết vấn đề",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong ticket của khách mua thiết bị gia dụng và bạn vận dụng giải quyết vấn đề để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong ticket của khách mua thiết bị gia dụng.",
+          "Action mô tả hành động cụ thể gắn với giải quyết vấn đề và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "customer_success_manager": [
+      {
+        "id": "customer_success_manager_q01",
+        "type": "technical",
+        "skill": "giữ chân khách hàng",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh onboarding và renewal của khách hàng SaaS, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện giữ chân khách hàng?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của onboarding và renewal của khách hàng SaaS.",
+          "Giải thích bước thực hiện gắn trực tiếp với giữ chân khách hàng, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "customer_success_manager_q02",
+        "type": "scenario",
+        "skill": "phân tích dữ liệu",
+        "level": 2,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng phân tích dữ liệu để xử lý một trở ngại cụ thể trong onboarding và renewal của khách hàng SaaS.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong onboarding và renewal của khách hàng SaaS.",
+          "Action mô tả hành động cụ thể gắn với phân tích dữ liệu và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "customer_success_manager_q03",
+        "type": "technical",
+        "skill": "quản lý thành công khách hàng",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả onboarding và renewal của khách hàng SaaS thấp hơn mục tiêu, bạn dùng quản lý thành công khách hàng để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của onboarding và renewal của khách hàng SaaS.",
+          "Giải thích bước thực hiện gắn trực tiếp với quản lý thành công khách hàng, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "customer_success_manager_q04",
+        "type": "technical",
+        "skill": "crm",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong onboarding và renewal của khách hàng SaaS, hãy mô tả quy trình bạn dùng crm để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của onboarding và renewal của khách hàng SaaS.",
+          "Giải thích bước thực hiện gắn trực tiếp với crm, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "customer_success_manager_q05",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong onboarding và renewal của khách hàng SaaS và bạn vận dụng giao tiếp để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong onboarding và renewal của khách hàng SaaS.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "business_development_executive": [
+      {
+        "id": "business_development_executive_q01",
+        "type": "technical",
+        "skill": "nghiên cứu thị trường",
+        "level": 2,
+        "weight": 3,
+        "question": "Trong bối cảnh cơ hội hợp tác phân phối tại thành phố mới, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện nghiên cứu thị trường?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của cơ hội hợp tác phân phối tại thành phố mới.",
+          "Giải thích bước thực hiện gắn trực tiếp với nghiên cứu thị trường, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "business_development_executive_q02",
+        "type": "scenario",
+        "skill": "phát triển kinh doanh",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng phát triển kinh doanh để xử lý một trở ngại cụ thể trong cơ hội hợp tác phân phối tại thành phố mới.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong cơ hội hợp tác phân phối tại thành phố mới.",
+          "Action mô tả hành động cụ thể gắn với phát triển kinh doanh và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "business_development_executive_q03",
+        "type": "technical",
+        "skill": "xây dựng mối quan hệ",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả cơ hội hợp tác phân phối tại thành phố mới thấp hơn mục tiêu, bạn dùng xây dựng mối quan hệ để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của cơ hội hợp tác phân phối tại thành phố mới.",
+          "Giải thích bước thực hiện gắn trực tiếp với xây dựng mối quan hệ, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "business_development_executive_q04",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Trong cơ hội hợp tác phân phối tại thành phố mới, hãy mô tả quy trình bạn dùng giao tiếp để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong cơ hội hợp tác phân phối tại thành phố mới.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "business_development_executive_q05",
+        "type": "scenario",
+        "skill": "lập kế hoạch",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong cơ hội hợp tác phân phối tại thành phố mới và bạn vận dụng lập kế hoạch để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong cơ hội hợp tác phân phối tại thành phố mới.",
+          "Action mô tả hành động cụ thể gắn với lập kế hoạch và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "sales_manager": [
+      {
+        "id": "sales_manager_q01",
+        "type": "technical",
+        "skill": "dự báo doanh số",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh forecast và năng suất của đội sales quý này, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện dự báo doanh số?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của forecast và năng suất của đội sales quý này.",
+          "Giải thích bước thực hiện gắn trực tiếp với dự báo doanh số, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sales_manager_q02",
+        "type": "scenario",
+        "skill": "lập kế hoạch kinh doanh",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng lập kế hoạch kinh doanh để xử lý một trở ngại cụ thể trong forecast và năng suất của đội sales quý này.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong forecast và năng suất của đội sales quý này.",
+          "Action mô tả hành động cụ thể gắn với lập kế hoạch kinh doanh và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sales_manager_q03",
+        "type": "technical",
+        "skill": "quản lý đội ngũ",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả forecast và năng suất của đội sales quý này thấp hơn mục tiêu, bạn dùng quản lý đội ngũ để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của forecast và năng suất của đội sales quý này.",
+          "Giải thích bước thực hiện gắn trực tiếp với quản lý đội ngũ, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sales_manager_q04",
+        "type": "technical",
+        "skill": "bán hàng",
+        "level": 3,
+        "weight": 2,
+        "question": "Trong forecast và năng suất của đội sales quý này, hãy mô tả quy trình bạn dùng bán hàng để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của forecast và năng suất của đội sales quý này.",
+          "Giải thích bước thực hiện gắn trực tiếp với bán hàng, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sales_manager_q05",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong forecast và năng suất của đội sales quý này và bạn vận dụng giao tiếp để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong forecast và năng suất của đội sales quý này.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "ecommerce_manager": [
+      {
+        "id": "ecommerce_manager_q01",
+        "type": "technical",
+        "skill": "lập kế hoạch",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh kế hoạch bán hàng đa kênh mùa cao điểm, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện lập kế hoạch?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của kế hoạch bán hàng đa kênh mùa cao điểm.",
+          "Giải thích bước thực hiện gắn trực tiếp với lập kế hoạch, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ecommerce_manager_q02",
+        "type": "scenario",
+        "skill": "phân tích dữ liệu",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng phân tích dữ liệu để xử lý một trở ngại cụ thể trong kế hoạch bán hàng đa kênh mùa cao điểm.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong kế hoạch bán hàng đa kênh mùa cao điểm.",
+          "Action mô tả hành động cụ thể gắn với phân tích dữ liệu và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ecommerce_manager_q03",
+        "type": "technical",
+        "skill": "quản lý thương mại điện tử",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả kế hoạch bán hàng đa kênh mùa cao điểm thấp hơn mục tiêu, bạn dùng quản lý thương mại điện tử để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của kế hoạch bán hàng đa kênh mùa cao điểm.",
+          "Giải thích bước thực hiện gắn trực tiếp với quản lý thương mại điện tử, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ecommerce_manager_q04",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Trong kế hoạch bán hàng đa kênh mùa cao điểm, hãy mô tả quy trình bạn dùng giao tiếp để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong kế hoạch bán hàng đa kênh mùa cao điểm.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "ecommerce_manager_q05",
+        "type": "scenario",
+        "skill": "giải quyết vấn đề",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong kế hoạch bán hàng đa kênh mùa cao điểm và bạn vận dụng giải quyết vấn đề để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong kế hoạch bán hàng đa kênh mùa cao điểm.",
+          "Action mô tả hành động cụ thể gắn với giải quyết vấn đề và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "retail_store_manager": [
+      {
+        "id": "retail_store_manager_q01",
+        "type": "technical",
+        "skill": "quản lý cửa hàng",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh vận hành cửa hàng bán lẻ cuối tuần cao điểm, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện quản lý cửa hàng?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của vận hành cửa hàng bán lẻ cuối tuần cao điểm.",
+          "Giải thích bước thực hiện gắn trực tiếp với quản lý cửa hàng, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "retail_store_manager_q02",
+        "type": "scenario",
+        "skill": "quản lý nhân sự",
+        "level": 2,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng quản lý nhân sự để xử lý một trở ngại cụ thể trong vận hành cửa hàng bán lẻ cuối tuần cao điểm.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong vận hành cửa hàng bán lẻ cuối tuần cao điểm.",
+          "Action mô tả hành động cụ thể gắn với quản lý nhân sự và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "retail_store_manager_q03",
+        "type": "technical",
+        "skill": "quản lý tồn kho",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả vận hành cửa hàng bán lẻ cuối tuần cao điểm thấp hơn mục tiêu, bạn dùng quản lý tồn kho để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của vận hành cửa hàng bán lẻ cuối tuần cao điểm.",
+          "Giải thích bước thực hiện gắn trực tiếp với quản lý tồn kho, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "retail_store_manager_q04",
+        "type": "technical",
+        "skill": "báo cáo doanh thu",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong vận hành cửa hàng bán lẻ cuối tuần cao điểm, hãy mô tả quy trình bạn dùng báo cáo doanh thu để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của vận hành cửa hàng bán lẻ cuối tuần cao điểm.",
+          "Giải thích bước thực hiện gắn trực tiếp với báo cáo doanh thu, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "retail_store_manager_q05",
+        "type": "scenario",
+        "skill": "dịch vụ khách hàng",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong vận hành cửa hàng bán lẻ cuối tuần cao điểm và bạn vận dụng dịch vụ khách hàng để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong vận hành cửa hàng bán lẻ cuối tuần cao điểm.",
+          "Action mô tả hành động cụ thể gắn với dịch vụ khách hàng và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "sales_admin": [
+      {
+        "id": "sales_admin_q01",
+        "type": "technical",
+        "skill": "excel",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh báo giá, đơn hàng và hợp đồng cần hỗ trợ gấp, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện excel?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của báo giá, đơn hàng và hợp đồng cần hỗ trợ gấp.",
+          "Giải thích bước thực hiện gắn trực tiếp với excel, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sales_admin_q02",
+        "type": "scenario",
+        "skill": "hỗ trợ kinh doanh",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng hỗ trợ kinh doanh để xử lý một trở ngại cụ thể trong báo giá, đơn hàng và hợp đồng cần hỗ trợ gấp.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong báo giá, đơn hàng và hợp đồng cần hỗ trợ gấp.",
+          "Action mô tả hành động cụ thể gắn với hỗ trợ kinh doanh và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sales_admin_q03",
+        "type": "technical",
+        "skill": "soạn thảo hợp đồng",
+        "level": 2,
+        "weight": 3,
+        "question": "Khi kết quả báo giá, đơn hàng và hợp đồng cần hỗ trợ gấp thấp hơn mục tiêu, bạn dùng soạn thảo hợp đồng để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của báo giá, đơn hàng và hợp đồng cần hỗ trợ gấp.",
+          "Giải thích bước thực hiện gắn trực tiếp với soạn thảo hợp đồng, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sales_admin_q04",
+        "type": "technical",
+        "skill": "crm",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong báo giá, đơn hàng và hợp đồng cần hỗ trợ gấp, hãy mô tả quy trình bạn dùng crm để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của báo giá, đơn hàng và hợp đồng cần hỗ trợ gấp.",
+          "Giải thích bước thực hiện gắn trực tiếp với crm, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "sales_admin_q05",
+        "type": "scenario",
+        "skill": "cẩn thận",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong báo giá, đơn hàng và hợp đồng cần hỗ trợ gấp và bạn vận dụng cẩn thận để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong báo giá, đơn hàng và hợp đồng cần hỗ trợ gấp.",
+          "Action mô tả hành động cụ thể gắn với cẩn thận và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "merchandiser": [
+      {
+        "id": "merchandiser_q01",
+        "type": "technical",
+        "skill": "làm việc với nhà cung cấp",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh PO sản xuất hàng may mặc nhiều màu/size, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện làm việc với nhà cung cấp?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của PO sản xuất hàng may mặc nhiều màu/size.",
+          "Giải thích bước thực hiện gắn trực tiếp với làm việc với nhà cung cấp, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "merchandiser_q02",
+        "type": "scenario",
+        "skill": "quản lý đơn hàng",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng quản lý đơn hàng để xử lý một trở ngại cụ thể trong PO sản xuất hàng may mặc nhiều màu/size.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong PO sản xuất hàng may mặc nhiều màu/size.",
+          "Action mô tả hành động cụ thể gắn với quản lý đơn hàng và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "merchandiser_q03",
+        "type": "technical",
+        "skill": "theo dõi tiến độ",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả PO sản xuất hàng may mặc nhiều màu/size thấp hơn mục tiêu, bạn dùng theo dõi tiến độ để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của PO sản xuất hàng may mặc nhiều màu/size.",
+          "Giải thích bước thực hiện gắn trực tiếp với theo dõi tiến độ, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "merchandiser_q04",
+        "type": "technical",
+        "skill": "excel",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong PO sản xuất hàng may mặc nhiều màu/size, hãy mô tả quy trình bạn dùng excel để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của PO sản xuất hàng may mặc nhiều màu/size.",
+          "Giải thích bước thực hiện gắn trực tiếp với excel, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "merchandiser_q05",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong PO sản xuất hàng may mặc nhiều màu/size và bạn vận dụng giao tiếp để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong PO sản xuất hàng may mặc nhiều màu/size.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "real_estate_sales_executive": [
+      {
+        "id": "real_estate_sales_executive_q01",
+        "type": "technical",
+        "skill": "bán hàng bất động sản",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh khách mua căn hộ lần đầu đang so sánh hai dự án, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện bán hàng bất động sản?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của khách mua căn hộ lần đầu đang so sánh hai dự án.",
+          "Giải thích bước thực hiện gắn trực tiếp với bán hàng bất động sản, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "real_estate_sales_executive_q02",
+        "type": "scenario",
+        "skill": "tìm kiếm khách hàng",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng tìm kiếm khách hàng để xử lý một trở ngại cụ thể trong khách mua căn hộ lần đầu đang so sánh hai dự án.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong khách mua căn hộ lần đầu đang so sánh hai dự án.",
+          "Action mô tả hành động cụ thể gắn với tìm kiếm khách hàng và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "real_estate_sales_executive_q03",
+        "type": "technical",
+        "skill": "tư vấn khách hàng",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả khách mua căn hộ lần đầu đang so sánh hai dự án thấp hơn mục tiêu, bạn dùng tư vấn khách hàng để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của khách mua căn hộ lần đầu đang so sánh hai dự án.",
+          "Giải thích bước thực hiện gắn trực tiếp với tư vấn khách hàng, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "real_estate_sales_executive_q04",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Trong khách mua căn hộ lần đầu đang so sánh hai dự án, hãy mô tả quy trình bạn dùng giao tiếp để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong khách mua căn hộ lần đầu đang so sánh hai dự án.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "real_estate_sales_executive_q05",
+        "type": "scenario",
+        "skill": "luật bất động sản",
+        "level": 1,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong khách mua căn hộ lần đầu đang so sánh hai dự án và bạn vận dụng luật bất động sản để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong khách mua căn hộ lần đầu đang so sánh hai dự án.",
+          "Action mô tả hành động cụ thể gắn với luật bất động sản và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "technical_sales_engineer": [
+      {
+        "id": "technical_sales_engineer_q01",
+        "type": "technical",
+        "skill": "bán hàng kỹ thuật",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh nhà máy đang đánh giá giải pháp thiết bị tự động hóa, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện bán hàng kỹ thuật?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của nhà máy đang đánh giá giải pháp thiết bị tự động hóa.",
+          "Giải thích bước thực hiện gắn trực tiếp với bán hàng kỹ thuật, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "technical_sales_engineer_q02",
+        "type": "scenario",
+        "skill": "kiến thức kỹ thuật",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng kiến thức kỹ thuật để xử lý một trở ngại cụ thể trong nhà máy đang đánh giá giải pháp thiết bị tự động hóa.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong nhà máy đang đánh giá giải pháp thiết bị tự động hóa.",
+          "Action mô tả hành động cụ thể gắn với kiến thức kỹ thuật và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "technical_sales_engineer_q03",
+        "type": "technical",
+        "skill": "tư vấn giải pháp",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả nhà máy đang đánh giá giải pháp thiết bị tự động hóa thấp hơn mục tiêu, bạn dùng tư vấn giải pháp để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của nhà máy đang đánh giá giải pháp thiết bị tự động hóa.",
+          "Giải thích bước thực hiện gắn trực tiếp với tư vấn giải pháp, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "technical_sales_engineer_q04",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Trong nhà máy đang đánh giá giải pháp thiết bị tự động hóa, hãy mô tả quy trình bạn dùng giao tiếp để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong nhà máy đang đánh giá giải pháp thiết bị tự động hóa.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "technical_sales_engineer_q05",
+        "type": "scenario",
+        "skill": "thuyết trình",
+        "level": 2,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong nhà máy đang đánh giá giải pháp thiết bị tự động hóa và bạn vận dụng thuyết trình để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong nhà máy đang đánh giá giải pháp thiết bị tự động hóa.",
+          "Action mô tả hành động cụ thể gắn với thuyết trình và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "channel_sales_manager": [
+      {
+        "id": "channel_sales_manager_q01",
+        "type": "technical",
+        "skill": "lập kế hoạch kinh doanh",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh mạng lưới đại lý có sell-in tăng nhưng sell-out chậm, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện lập kế hoạch kinh doanh?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của mạng lưới đại lý có sell-in tăng nhưng sell-out chậm.",
+          "Giải thích bước thực hiện gắn trực tiếp với lập kế hoạch kinh doanh, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "channel_sales_manager_q02",
+        "type": "scenario",
+        "skill": "phát triển đại lý",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng phát triển đại lý để xử lý một trở ngại cụ thể trong mạng lưới đại lý có sell-in tăng nhưng sell-out chậm.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong mạng lưới đại lý có sell-in tăng nhưng sell-out chậm.",
+          "Action mô tả hành động cụ thể gắn với phát triển đại lý và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "channel_sales_manager_q03",
+        "type": "technical",
+        "skill": "quản lý kênh phân phối",
+        "level": 3,
+        "weight": 3,
+        "question": "Khi kết quả mạng lưới đại lý có sell-in tăng nhưng sell-out chậm thấp hơn mục tiêu, bạn dùng quản lý kênh phân phối để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của mạng lưới đại lý có sell-in tăng nhưng sell-out chậm.",
+          "Giải thích bước thực hiện gắn trực tiếp với quản lý kênh phân phối, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "channel_sales_manager_q04",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 2,
+        "question": "Trong mạng lưới đại lý có sell-in tăng nhưng sell-out chậm, hãy mô tả quy trình bạn dùng giao tiếp để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong mạng lưới đại lý có sell-in tăng nhưng sell-out chậm.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "channel_sales_manager_q05",
+        "type": "scenario",
+        "skill": "giải quyết vấn đề",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong mạng lưới đại lý có sell-in tăng nhưng sell-out chậm và bạn vận dụng giải quyết vấn đề để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong mạng lưới đại lý có sell-in tăng nhưng sell-out chậm.",
+          "Action mô tả hành động cụ thể gắn với giải quyết vấn đề và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ],
+    "customer_service_representative": [
+      {
+        "id": "customer_service_representative_q01",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 3,
+        "weight": 3,
+        "question": "Trong bối cảnh khách gọi về giao dịch thanh toán bị lỗi, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện giao tiếp?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong khách gọi về giao dịch thanh toán bị lỗi.",
+          "Action mô tả hành động cụ thể gắn với giao tiếp và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "customer_service_representative_q02",
+        "type": "scenario",
+        "skill": "lắng nghe chủ động",
+        "level": 3,
+        "weight": 3,
+        "question": "Hãy kể theo STAR về lần bạn dùng lắng nghe chủ động để xử lý một trở ngại cụ thể trong khách gọi về giao dịch thanh toán bị lỗi.",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong khách gọi về giao dịch thanh toán bị lỗi.",
+          "Action mô tả hành động cụ thể gắn với lắng nghe chủ động và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "customer_service_representative_q03",
+        "type": "technical",
+        "skill": "xử lý khiếu nại",
+        "level": 2,
+        "weight": 3,
+        "question": "Khi kết quả khách gọi về giao dịch thanh toán bị lỗi thấp hơn mục tiêu, bạn dùng xử lý khiếu nại để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của khách gọi về giao dịch thanh toán bị lỗi.",
+          "Giải thích bước thực hiện gắn trực tiếp với xử lý khiếu nại, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "customer_service_representative_q04",
+        "type": "technical",
+        "skill": "crm",
+        "level": 2,
+        "weight": 2,
+        "question": "Trong khách gọi về giao dịch thanh toán bị lỗi, hãy mô tả quy trình bạn dùng crm để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả.",
+        "good_answer_points": [
+          "Làm rõ mục tiêu, dữ kiện và ràng buộc của khách gọi về giao dịch thanh toán bị lỗi.",
+          "Giải thích bước thực hiện gắn trực tiếp với crm, nêu lựa chọn và lý do.",
+          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      },
+      {
+        "id": "customer_service_representative_q05",
+        "type": "scenario",
+        "skill": "quản lý cảm xúc",
+        "level": 3,
+        "weight": 2,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong khách gọi về giao dịch thanh toán bị lỗi và bạn vận dụng quản lý cảm xúc để giữ chất lượng/kết quả như thế nào?",
+        "good_answer_points": [
+          "Situation/Task nêu bối cảnh, mục tiêu và trách nhiệm cá nhân trong khách gọi về giao dịch thanh toán bị lỗi.",
+          "Action mô tả hành động cụ thể gắn với quản lý cảm xúc và cách phối hợp/ra quyết định.",
+          "Result nêu kết quả có thể kiểm chứng, bài học và cách áp dụng lại."
+        ],
+        "red_flags": [
+          "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
+        ],
+        "time_minutes": 4
+      }
+    ]
+  }
+}
