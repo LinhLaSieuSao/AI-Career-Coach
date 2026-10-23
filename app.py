@@ -504,8 +504,19 @@ def render_interview_practice(position: dict) -> None:
                 except ValueError as exc:
                     st.warning(str(exc))
                     continue
-                st.markdown("**Các ý tham khảo**")
-                st.markdown(feedback["reference_answer"])
+                has_reference_answer = feedback.get(
+                    "has_reference_answer", bool(feedback.get("reference_answer"))
+                )
+                if has_reference_answer:
+                    st.markdown("**Đáp án mẫu tham khảo**")
+                    st.markdown(feedback["reference_answer"])
+                    if feedback.get("good_answer_points"):
+                        st.markdown("**Các ý nên có trong câu trả lời**")
+                        for point in feedback["good_answer_points"]:
+                            st.markdown(f"- {point}")
+                else:
+                    st.markdown("**Các ý tham khảo**")
+                    st.markdown(feedback["reference_answer"])
                 if feedback["red_flags"]:
                     st.caption("Điểm cần tránh")
                     for red_flag in feedback["red_flags"]:

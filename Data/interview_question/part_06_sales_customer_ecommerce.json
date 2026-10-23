@@ -17,7 +17,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chốt mục tiêu campaign, SKU, tồn, ưu đãi và biên lợi nhuận trước chọn loại ads; theo dõi spend/ROAS/CVR, hủy và tồn, giảm khi thiếu hàng hoặc vượt ngưỡng. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "ecommerce_executive_q02",
@@ -34,7 +35,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "ecommerce_executive_q03",
@@ -51,7 +53,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Rà SKU theo view, CTR, CVR, giá/ưu đãi, review, tồn và giao để tìm điểm nghẽn; sửa đúng nguyên nhân, đối chiếu đơn hợp lệ/chi phí, không dùng GMV chưa trừ hoàn/hủy. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "ecommerce_executive_q04",
@@ -68,7 +71,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng chăm sóc khách hàng để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt."
       },
       {
         "id": "ecommerce_executive_q05",
@@ -85,7 +89,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "sales_executive": [
@@ -104,7 +109,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Khám phá nhu cầu, người quyết định và tiêu chí mua trước đề xuất; xác nhận pain point, trình bày giá trị/giới hạn, chốt next step có owner/hạn và cập nhật pipeline. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "sales_executive_q02",
@@ -121,7 +127,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "sales_executive_q03",
@@ -138,7 +145,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác định ICP theo nhu cầu/ngành/quy mô, xây danh sách từ nguồn phù hợp rồi lọc trùng; cá nhân hóa tiếp cận, ghi phản hồi CRM và đo qualified opportunity chứ không chỉ số liên hệ. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "sales_executive_q04",
@@ -155,7 +163,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng chăm sóc khách hàng để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt."
       },
       {
         "id": "sales_executive_q05",
@@ -172,7 +181,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ lợi ích/giới hạn mỗi bên, đưa phương án có căn cứ và chốt điều kiện được thống nhất. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "b2b_sales_executive": [
@@ -191,7 +201,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Lập bản đồ buying committee, nhu cầu/quy trình duyệt/tiêu chí; gắn giải pháp vào vấn đề đã xác nhận, duy trì account plan và theo dõi stakeholder, stage, cam kết. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "b2b_sales_executive_q02",
@@ -208,7 +219,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách sắp thông điệp theo vấn đề, phương án và bằng chứng, điều chỉnh theo người nghe rồi kiểm tra mức hiểu. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "b2b_sales_executive_q03",
@@ -225,7 +237,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Hiểu mục tiêu stakeholder, trao đổi có giá trị và giữ cam kết; khi niềm tin/nhu cầu có vấn đề, xác minh nguyên nhân, thống nhất owner/hành động và theo đến khi xong. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "b2b_sales_executive_q04",
@@ -242,7 +255,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng giao tiếp để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt."
       },
       {
         "id": "b2b_sales_executive_q05",
@@ -259,7 +273,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ lợi ích/giới hạn mỗi bên, đưa phương án có căn cứ và chốt điều kiện được thống nhất. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "key_account_manager": [
@@ -278,7 +293,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Rà hợp đồng, adoption, outcome, stakeholder và renewal risk; lập account plan theo mốc, phối hợp xử lý giá trị chưa đạt trước gia hạn và theo dõi vấn đề mở. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "key_account_manager_q02",
@@ -295,7 +311,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ lợi ích/giới hạn mỗi bên, đưa phương án có căn cứ và chốt điều kiện được thống nhất. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "key_account_manager_q03",
@@ -312,7 +329,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Hiểu mục tiêu stakeholder, trao đổi có giá trị và giữ cam kết; khi niềm tin/nhu cầu có vấn đề, xác minh nguyên nhân, thống nhất owner/hành động và theo đến khi xong. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "key_account_manager_q04",
@@ -329,7 +347,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Lập bản đồ buying committee, nhu cầu/quy trình duyệt/tiêu chí; gắn giải pháp vào vấn đề đã xác nhận, duy trì account plan và theo dõi stakeholder, stage, cam kết. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "key_account_manager_q05",
@@ -346,7 +365,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "telesales_representative": [
@@ -365,7 +385,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng giao tiếp để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt."
       },
       {
         "id": "telesales_representative_q02",
@@ -382,7 +403,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "telesales_representative_q03",
@@ -399,7 +421,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Mở bằng xác nhận nhu cầu/xin phép, hỏi khám phá rồi nêu lợi ích liên quan; có nhánh từ chối/chưa phù hợp, không hứa chưa xác minh và ghi next step CRM. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "telesales_representative_q04",
@@ -416,7 +439,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ghi tương tác, nhu cầu/trạng thái, owner, hạn, next step để nhóm thấy lịch sử; chuẩn hóa stage/trường, rà quá hạn/thông tin thiếu và tránh dữ liệu nhạy cảm thừa. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "telesales_representative_q05",
@@ -433,7 +457,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "customer_service_executive": [
@@ -452,7 +477,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng chăm sóc khách hàng để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt."
       },
       {
         "id": "customer_service_executive_q02",
@@ -469,7 +495,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "customer_service_executive_q03",
@@ -486,7 +513,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Để khách trình bày, xác nhận vấn đề, kiểm tra ticket/giao dịch và phân biệt điều biết/chưa biết; nêu xử lý/thời điểm cập nhật, chuyển cấp khi cần và ghi nguyên nhân gốc. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "customer_service_executive_q04",
@@ -503,7 +531,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ghi tương tác, nhu cầu/trạng thái, owner, hạn, next step để nhóm thấy lịch sử; chuẩn hóa stage/trường, rà quá hạn/thông tin thiếu và tránh dữ liệu nhạy cảm thừa. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "customer_service_executive_q05",
@@ -520,7 +549,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "customer_success_manager": [
@@ -539,7 +569,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tìm churn signal từ mức dùng, mục tiêu, ticket/phản hồi rồi xác nhận nguyên nhân với account; chọn hành động xử lý căn nguyên có owner/mốc, đo adoption/renewal thay vì chỉ ưu đãi. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "customer_success_manager_q02",
@@ -556,7 +587,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "customer_success_manager_q03",
@@ -573,7 +605,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Thống nhất mục tiêu/onboarding, owner và mốc đạt giá trị, theo mức dùng/trở ngại; trước renewal rà outcome, lập kế hoạch phục hồi adoption và đo theo mục tiêu khách. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "customer_success_manager_q04",
@@ -590,7 +623,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ghi tương tác, nhu cầu/trạng thái, owner, hạn, next step để nhóm thấy lịch sử; chuẩn hóa stage/trường, rà quá hạn/thông tin thiếu và tránh dữ liệu nhạy cảm thừa. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "customer_success_manager_q05",
@@ -607,7 +641,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "business_development_executive": [
@@ -626,7 +661,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác định câu hỏi quyết định, phân khúc và nguồn; kết hợp dữ liệu thứ cấp với phỏng vấn/khảo sát khi cần, ghi rõ cách lấy mẫu và giới hạn trước khi kết luận. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "business_development_executive_q02",
@@ -643,7 +679,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "business_development_executive_q03",
@@ -660,7 +697,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Hiểu mục tiêu stakeholder, trao đổi có giá trị và giữ cam kết; khi niềm tin/nhu cầu có vấn đề, xác minh nguyên nhân, thống nhất owner/hành động và theo đến khi xong. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "business_development_executive_q04",
@@ -677,7 +715,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng giao tiếp để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt."
       },
       {
         "id": "business_development_executive_q05",
@@ -694,7 +733,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "sales_manager": [
@@ -713,7 +753,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Dự báo theo deal/stage/value/probability/close date và độ chính xác lịch sử; rà deal lớn, tuổi/trùng/giả định, so forecast với actual và ghi nguyên nhân lệch. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "sales_manager_q02",
@@ -730,7 +771,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "sales_manager_q03",
@@ -747,7 +789,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Phân rã kết quả theo rep/segment/stage để tách vấn đề năng lực, pipeline và cơ hội; coaching bằng deal/call cụ thể, đặt action/owner/chỉ báo rồi theo dõi. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "sales_manager_q04",
@@ -764,7 +807,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Khám phá nhu cầu, người quyết định và tiêu chí mua trước đề xuất; xác nhận pain point, trình bày giá trị/giới hạn, chốt next step có owner/hạn và cập nhật pipeline. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "sales_manager_q05",
@@ -781,7 +825,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "ecommerce_manager": [
@@ -800,7 +845,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Dự báo mục tiêu, kênh/SKU, tồn, budget và fulfillment, lập timeline/owner/phụ thuộc; đặt trigger khi tồn/traffic/giao hàng lệch và phương án điều chuyển. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "ecommerce_manager_q02",
@@ -817,7 +863,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "ecommerce_manager_q03",
@@ -834,7 +881,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Rà funnel theo kênh cùng giá, nội dung SKU, stock, promo, hủy/hoàn, SLA giao; ưu tiên nút thắt có bằng chứng, theo đơn hợp lệ, margin và trải nghiệm. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "ecommerce_manager_q04",
@@ -851,7 +899,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng giao tiếp để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt."
       },
       {
         "id": "ecommerce_manager_q05",
@@ -868,7 +917,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "retail_store_manager": [
@@ -887,7 +937,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Dự báo nhu cầu cao điểm, bố trí nhân sự theo giờ/khu vực và kiểm tra hàng/quầy trước ca; theo hàng chờ/thiếu hàng/phản hồi trong ca, tổng kết doanh thu/tồn/sự cố. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "retail_store_manager_q02",
@@ -904,7 +955,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "retail_store_manager_q03",
@@ -921,7 +973,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đối chiếu tồn hệ thống/kiểm kê, tốc độ bán và hàng đang về để tìm SKU thiếu/dư; xác minh lệch, bổ sung/chuyển theo quy trình rồi theo availability và sai lệch. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "retail_store_manager_q04",
@@ -938,7 +991,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chốt định nghĩa/kỳ/hoàn hủy/nguồn POS, phân rã SKU/giờ/kênh để tìm driver; đối soát tổng, nêu ngoại lệ/action owner và không suy nguyên nhân từ tương quan. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "retail_store_manager_q05",
@@ -955,7 +1009,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách để khách trình bày, xác nhận vấn đề/kỳ vọng, nêu cách xử lý và thời điểm cập nhật rồi theo tới kết quả. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "sales_admin": [
@@ -974,7 +1029,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chuẩn hóa mã/ngày/trạng thái, dùng table, validation và công thức/Pivot phù hợp; rà trùng/missing, khóa công thức, đối soát với CRM/nguồn và ghi giả định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "sales_admin_q02",
@@ -991,7 +1047,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "sales_admin_q03",
@@ -1008,7 +1065,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đưa điều khoản đã thống nhất vào mẫu, so pháp nhân/phạm vi/giá/thanh toán/giao nhận với báo giá/PO; nội dung chưa rõ/ngoài mẫu chuyển pháp lý/người có thẩm quyền, dùng checklist/version. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "sales_admin_q04",
@@ -1025,7 +1083,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ghi tương tác, nhu cầu/trạng thái, owner, hạn, next step để nhóm thấy lịch sử; chuẩn hóa stage/trường, rà quá hạn/thông tin thiếu và tránh dữ liệu nhạy cảm thừa. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "sales_admin_q05",
@@ -1042,7 +1101,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách đối chiếu dữ liệu/chứng từ với nguồn và rà các trường trọng yếu trước khi chốt. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "merchandiser": [
@@ -1061,7 +1121,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Gửi PO/spec có mã, màu/size, số lượng, vật liệu, tiêu chuẩn và mốc; yêu cầu xác nhận khả năng/lead time. Làm rõ tác động khi trễ/nguyên liệu thiếu, chốt phương án bằng văn bản và đối chiếu mẫu/chứng từ."
       },
       {
         "id": "merchandiser_q02",
@@ -1078,7 +1139,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "merchandiser_q03",
@@ -1095,7 +1157,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chia PO thành mốc nguyên liệu, mẫu, sản xuất, kiểm hàng, giao có owner/ngày/bằng chứng; khi trễ xác minh tác động, thống nhất recovery plan/ETA và escalate đường găng. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "merchandiser_q04",
@@ -1112,7 +1175,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chuẩn hóa mã/ngày/trạng thái, dùng table, validation và công thức/Pivot phù hợp; rà trùng/missing, khóa công thức, đối soát với CRM/nguồn và ghi giả định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "merchandiser_q05",
@@ -1129,7 +1193,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "real_estate_sales_executive": [
@@ -1148,7 +1213,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Hỏi ngân sách, mục đích, thời gian, vị trí và tiêu chí pháp lý/vận hành trước so dự án; dùng tài liệu chính thức, tách điều đã xác minh/đang kiểm tra, không hứa lợi nhuận. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "real_estate_sales_executive_q02",
@@ -1165,7 +1231,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách để khách trình bày, xác nhận vấn đề/kỳ vọng, nêu cách xử lý và thời điểm cập nhật rồi theo tới kết quả. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "real_estate_sales_executive_q03",
@@ -1182,7 +1249,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Hỏi ưu tiên/ngân sách/vị trí/diện tích/tiến độ, nhắc lại để xác nhận; so lựa chọn theo tiêu chí khách, dẫn nguồn chính thức, nêu điểm cần kiểm chứng và không gây áp lực. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "real_estate_sales_executive_q04",
@@ -1199,7 +1267,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng giao tiếp để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt."
       },
       {
         "id": "real_estate_sales_executive_q05",
@@ -1216,7 +1285,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "technical_sales_engineer": [
@@ -1235,7 +1305,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Khám phá quy trình, yêu cầu/môi trường/tích hợp/tiêu chí nghiệm thu trước đề xuất; xác nhận thông số với kỹ thuật, nêu giả định và lập demo/POC có phép đo. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "technical_sales_engineer_q02",
@@ -1252,7 +1323,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "technical_sales_engineer_q03",
@@ -1269,7 +1341,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Làm rõ quy trình, yêu cầu kỹ thuật, môi trường, tích hợp và tiêu chí nghiệm thu; nêu giả định/giới hạn, đề xuất pilot và phép đo thay vì hứa hiệu năng chưa thử. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "technical_sales_engineer_q04",
@@ -1286,7 +1359,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng giao tiếp để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt."
       },
       {
         "id": "technical_sales_engineer_q05",
@@ -1303,7 +1377,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách sắp thông điệp theo vấn đề, phương án và bằng chứng, điều chỉnh theo người nghe rồi kiểm tra mức hiểu. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "channel_sales_manager": [
@@ -1322,7 +1397,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Phân tích mục tiêu/actual/kênh/nguồn lực rồi lập giả định, hoạt động, owner, budget và mốc; với sell-in tăng nhưng sell-out chậm, kiểm tra tồn/nhu cầu cuối trước đẩy hàng. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "channel_sales_manager_q02",
@@ -1339,7 +1415,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "channel_sales_manager_q03",
@@ -1356,7 +1433,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tách sell-in, sell-out, tồn và độ phủ theo đại lý; xác minh assortment/giá/activation/availability, phối hợp hành động và theo sell-out/tồn, không coi sell-in là nhu cầu. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "channel_sales_manager_q04",
@@ -1373,7 +1451,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng giao tiếp để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt."
       },
       {
         "id": "channel_sales_manager_q05",
@@ -1390,7 +1469,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "customer_service_representative": [
@@ -1409,7 +1489,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng giao tiếp để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt."
       },
       {
         "id": "customer_service_representative_q02",
@@ -1426,7 +1507,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "customer_service_representative_q03",
@@ -1443,7 +1525,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Để khách trình bày, xác nhận vấn đề, kiểm tra ticket/giao dịch và phân biệt điều biết/chưa biết; nêu xử lý/thời điểm cập nhật, chuyển cấp khi cần và ghi nguyên nhân gốc. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "customer_service_representative_q04",
@@ -1460,7 +1543,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ghi tương tác, nhu cầu/trạng thái, owner, hạn, next step để nhóm thấy lịch sử; chuẩn hóa stage/trường, rà quá hạn/thông tin thiếu và tránh dữ liệu nhạy cảm thừa. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "customer_service_representative_q05",
@@ -1477,7 +1561,8 @@
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách giữ bình tĩnh, xác nhận vấn đề và tập trung vào giải pháp trong thẩm quyền. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ]
   }

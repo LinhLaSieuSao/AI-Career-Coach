@@ -8,7 +8,7 @@
         "skill": "tư duy kiểm thử",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Chuyên viên kiểm thử tự động, khi tư duy kiểm thử được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử tự động, bạn đang vận hành/bàn giao bộ kiểm thử tự động cho ứng dụng đặt lịch, chạy trong pipeline trước mỗi lần phát hành. Hãy trình bày cách dùng tư duy kiểm thử để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi một lỗi chỉ xuất hiện ở dữ liệu biên hoặc khi nhiều bước trong luồng kết hợp, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của tư duy kiểm thử phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -17,7 +17,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ bắt đầu từ yêu cầu và rủi ro: xác định luồng quan trọng, điều kiện đầu vào, trạng thái hệ thống và hậu quả nếu sai. Tôi kiểm tra happy path, giá trị biên, dữ liệu không hợp lệ và lỗi phụ thuộc, ưu tiên các trường hợp ảnh hưởng người dùng hoặc dữ liệu. Tôi lưu bước chạy, kết quả mong đợi/thực tế và log/artifact để lỗi tái hiện được, rồi chạy lại sau khi sửa."
       },
       {
         "id": "automation_tester_q02",
@@ -25,7 +26,7 @@
         "skill": "selenium",
         "level": 2,
         "weight": 3,
-        "question": "Trong vai trò Chuyên viên kiểm thử tự động, khi selenium được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử tự động, bạn đang vận hành/bàn giao bộ kiểm thử tự động cho ứng dụng đặt lịch, chạy trong pipeline trước mỗi lần phát hành. Hãy trình bày cách dùng selenium để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi test thỉnh thoảng thất bại vì trang tải chậm hoặc phần tử giao diện thay đổi, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của selenium phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -34,7 +35,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn locator ổn định theo thuộc tính/role của giao diện, chờ trạng thái phần tử thay vì dùng sleep cố định và tách dữ liệu test khỏi môi trường dùng chung. Khi test flaky hoặc phần tử không xuất hiện, tôi thu screenshot, DOM/log và kiểm tra đồng bộ, trạng thái ứng dụng cùng dữ liệu trước khi tăng timeout. Tôi chạy lại cùng kịch bản trên cấu hình xác định và lưu báo cáo để phân biệt lỗi sản phẩm với lỗi test."
       },
       {
         "id": "automation_tester_q03",
@@ -42,7 +44,7 @@
         "skill": "api testing",
         "level": 2,
         "weight": 3,
-        "question": "Trong vai trò Chuyên viên kiểm thử tự động, khi api testing được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử tự động, bạn đang vận hành/bàn giao bộ kiểm thử tự động cho ứng dụng đặt lịch, chạy trong pipeline trước mỗi lần phát hành. Hãy trình bày cách dùng api testing để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi API trả mã thành công nhưng dữ liệu lưu hoặc quyền truy cập không đúng mong đợi, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của api testing phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -51,7 +53,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ gọi endpoint với dữ liệu hợp lệ, thiếu/sai và quyền khác nhau, rồi kiểm tra status code, schema, header và side effect trong dữ liệu. Với request có thể tạo/cập nhật tài nguyên, tôi chuẩn bị dữ liệu cô lập và kiểm tra tính lặp lại/cleanup để không làm bẩn môi trường. Khi có lỗi, tôi lưu request/response đã loại thông tin nhạy cảm, log và bước tái hiện; sau sửa chạy lại cả trường hợp lỗi lẫn hồi quy."
       },
       {
         "id": "automation_tester_q04",
@@ -59,7 +62,7 @@
         "skill": "java",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Chuyên viên kiểm thử tự động, khi java được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử tự động, bạn đang vận hành/bàn giao bộ kiểm thử tự động cho ứng dụng đặt lịch, chạy trong pipeline trước mỗi lần phát hành. Hãy trình bày cách dùng java để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi một test tích hợp thất bại do xử lý lỗi hoặc phụ thuộc không sẵn sàng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của java phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -68,7 +71,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tổ chức test theo lớp: unit test cho logic nghiệp vụ, test tích hợp cho phần kết nối cần xác nhận và dữ liệu test cô lập để kết quả lặp lại. Với lỗi bất đồng bộ hoặc phụ thuộc ngoài, tôi dùng stub/mock ở unit test và kiểm tra contract ở tích hợp thay vì dựa vào dịch vụ thật không ổn định. Khi test thất bại, tôi xem stack trace/log, tái hiện bằng đầu vào nhỏ rồi chạy lại bộ test liên quan sau khi sửa."
       },
       {
         "id": "automation_tester_q05",
@@ -76,7 +80,7 @@
         "skill": "sql",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Chuyên viên kiểm thử tự động, khi sql được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử tự động, bạn đang vận hành/bàn giao bộ kiểm thử tự động cho ứng dụng đặt lịch, chạy trong pipeline trước mỗi lần phát hành. Hãy trình bày cách dùng sql để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi truy vấn đối soát trả thiếu hoặc nhân đôi đơn hàng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của sql phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -85,7 +89,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng truy vấn chỉ đọc để kiểm tra dữ liệu trước, xác định khóa liên kết và điều kiện lọc để tránh nhân đôi hoặc bỏ sót bản ghi. Với thao tác ghi, tôi chạy trong transaction khi phù hợp, kiểm tra số dòng bị ảnh hưởng và chỉ commit sau khi kết quả đúng; tránh chạy lệnh phá hủy trên dữ liệu chưa xác nhận. Tôi lưu truy vấn và đối chiếu kết quả với trạng thái mong đợi hoặc nguồn chuẩn."
       }
     ],
     "devops_engineer": [
@@ -95,7 +100,7 @@
         "skill": "linux",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư DevOps, khi linux được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư DevOps, bạn đang vận hành/bàn giao dịch vụ web nội bộ được đóng gói và triển khai qua pipeline lên môi trường production. Hãy trình bày cách dùng linux để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi dịch vụ không khởi động sau khi thay đổi cấu hình hoặc cập nhật gói, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của linux phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -104,7 +109,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ bắt đầu từ yêu cầu vận hành, kiểm tra trạng thái dịch vụ bằng systemctl, tài nguyên và dung lượng bằng các công cụ hệ thống, rồi đọc journal/log để xác định điểm lỗi trước khi đổi cấu hình. Tôi áp dụng thay đổi nhỏ, có bản sao cấu hình và quyền tối thiểu; nếu dịch vụ không khởi động hoặc lỗi tăng, hoàn tác cấu hình và khởi động lại theo quy trình. Tôi xác nhận bằng trạng thái service, health check và log sau thay đổi, đồng thời ghi lại lệnh/kết quả để người nhận bàn giao lặp lại được."
       },
       {
         "id": "devops_engineer_q02",
@@ -112,7 +118,7 @@
         "skill": "docker",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư DevOps, khi docker được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư DevOps, bạn đang vận hành/bàn giao dịch vụ web nội bộ được đóng gói và triển khai qua pipeline lên môi trường production. Hãy trình bày cách dùng docker để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi container thoát ngay sau khi triển khai hoặc health check liên tục thất bại, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của docker phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -121,7 +127,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ đóng gói ứng dụng trong image có base image và phiên bản dependency được cố định, chỉ đưa thành phần cần thiết vào image và chạy container bằng user không đặc quyền khi khả thi. Tôi cấu hình secret và môi trường lúc chạy, giới hạn tài nguyên, đồng thời khai báo health check; khi container thoát hoặc health check lỗi, tôi kiểm tra log/exit code và quay lại image đã biết là ổn định. Tôi xác nhận bằng cách chạy đúng image trong môi trường đích, kiểm tra health, quyền chạy và khả năng khởi động lại."
       },
       {
         "id": "devops_engineer_q03",
@@ -129,7 +136,7 @@
         "skill": "ci/cd",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư DevOps, khi ci/cd được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư DevOps, bạn đang vận hành/bàn giao dịch vụ web nội bộ được đóng gói và triển khai qua pipeline lên môi trường production. Hãy trình bày cách dùng ci/cd để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi pipeline dừng giữa chừng hoặc bản phát hành mới không qua smoke test, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của ci/cd phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -138,7 +145,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết kế pipeline theo các bước build, test, đóng gói artifact có phiên bản rồi triển khai qua môi trường; mỗi bước chỉ chạy khi bước trước đạt và cấu hình nhạy cảm lấy từ secret store. Tôi đặt điều kiện dừng khi test/deploy health check thất bại, triển khai theo phạm vi kiểm soát và giữ artifact/revision trước đó để rollback. Tôi kiểm chứng bằng log pipeline, phiên bản artifact đang chạy và smoke test sau triển khai."
       },
       {
         "id": "devops_engineer_q04",
@@ -146,7 +154,7 @@
         "skill": "kubernetes",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Kỹ sư DevOps, khi kubernetes được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư DevOps, bạn đang vận hành/bàn giao dịch vụ web nội bộ được đóng gói và triển khai qua pipeline lên môi trường production. Hãy trình bày cách dùng kubernetes để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi pod restart liên tục hoặc rollout không đạt trạng thái sẵn sàng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của kubernetes phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -155,7 +163,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ khai báo workload bằng Deployment, mở truy cập qua Service và cấu hình readiness/liveness probe phù hợp để pod chưa sẵn sàng không nhận traffic, còn tiến trình lỗi được phát hiện. Tôi đặt requests/limits theo tải dự kiến rồi điều chỉnh từ metric; khi pod restart liên tục hoặc rollout không khỏe, tôi xem events/log/describe, dừng rollout và rollback revision ổn định. Tôi xác nhận rollout hoàn tất, replica sẵn sàng và health check của dịch vụ thành công."
       },
       {
         "id": "devops_engineer_q05",
@@ -163,7 +172,7 @@
         "skill": "aws",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Kỹ sư DevOps, khi aws được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư DevOps, bạn đang vận hành/bàn giao dịch vụ web nội bộ được đóng gói và triển khai qua pipeline lên môi trường production. Hãy trình bày cách dùng aws để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi ứng dụng không truy cập được tài nguyên cloud do cấu hình quyền hoặc mạng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của aws phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -172,7 +181,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn dịch vụ AWS theo loại workload và yêu cầu lưu trữ/tính toán, tách quyền bằng IAM role với quyền tối thiểu, bật mã hóa và gắn log/metric cần cho vận hành. Nếu quyền thiếu hoặc tài nguyên không khả dụng, tôi kiểm tra policy, trạng thái dịch vụ và log sự kiện trước khi mở rộng quyền hay thay đổi cấu hình; thay đổi có thể hoàn tác. Tôi xác nhận bằng thử luồng truy cập dự kiến, xem log/metric và thực hiện thử khôi phục từ bản sao lưu hoặc cấu hình đã lưu."
       }
     ],
     "system_administrator": [
@@ -182,7 +192,7 @@
         "skill": "linux",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Quản trị viên hệ thống, khi linux được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Quản trị viên hệ thống, bạn đang vận hành/bàn giao hạ tầng CNTT nội bộ gồm máy chủ, máy trạm và tài khoản nhân viên cần được vận hành, bàn giao. Hãy trình bày cách dùng linux để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi dịch vụ không khởi động sau khi thay đổi cấu hình hoặc cập nhật gói, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của linux phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -191,7 +201,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ bắt đầu từ yêu cầu vận hành, kiểm tra trạng thái dịch vụ bằng systemctl, tài nguyên và dung lượng bằng các công cụ hệ thống, rồi đọc journal/log để xác định điểm lỗi trước khi đổi cấu hình. Tôi áp dụng thay đổi nhỏ, có bản sao cấu hình và quyền tối thiểu; nếu dịch vụ không khởi động hoặc lỗi tăng, hoàn tác cấu hình và khởi động lại theo quy trình. Tôi xác nhận bằng trạng thái service, health check và log sau thay đổi, đồng thời ghi lại lệnh/kết quả để người nhận bàn giao lặp lại được."
       },
       {
         "id": "system_administrator_q02",
@@ -199,7 +210,7 @@
         "skill": "windows server",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Quản trị viên hệ thống, khi windows server được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Quản trị viên hệ thống, bạn đang vận hành/bàn giao hạ tầng CNTT nội bộ gồm máy chủ, máy trạm và tài khoản nhân viên cần được vận hành, bàn giao. Hãy trình bày cách dùng windows server để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi dịch vụ trên máy chủ dừng sau cập nhật hoặc người dùng không truy cập được, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của windows server phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -208,7 +219,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định máy chủ và dịch vụ bị ảnh hưởng, kiểm tra trạng thái service, Event Viewer, CPU/bộ nhớ/ổ đĩa, DNS và quyền truy cập trước khi thay đổi. Với lỗi sau cập nhật hay cấu hình, tôi đối chiếu thời điểm phát sinh, thử khôi phục cấu hình/phiên bản trước theo quy trình và tránh thay đổi diện rộng. Tôi xác nhận service chạy, người dùng/ứng dụng truy cập được và event log không còn lỗi tương ứng; ghi lại cấu hình cùng bước xử lý để bàn giao."
       },
       {
         "id": "system_administrator_q03",
@@ -216,7 +228,7 @@
         "skill": "quản trị mạng",
         "level": 2,
         "weight": 3,
-        "question": "Trong vai trò Quản trị viên hệ thống, khi quản trị mạng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Quản trị viên hệ thống, bạn đang vận hành/bàn giao hạ tầng CNTT nội bộ gồm máy chủ, máy trạm và tài khoản nhân viên cần được vận hành, bàn giao. Hãy trình bày cách dùng quản trị mạng để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi người dùng mất kết nối tới một dịch vụ sau thay đổi cấu hình mạng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của quản trị mạng phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -225,7 +237,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ lần theo đường truyền từ lớp vật lý, địa chỉ IP/subnet, gateway và DNS đến route, VLAN/ACL để khoanh vùng điểm đứt; dùng ping, traceroute và log thiết bị phù hợp với phạm vi. Nếu thay đổi cấu hình gây mất kết nối, tôi khôi phục cấu hình đã lưu hoặc hoàn tác rule gần nhất, tránh tác động các mạng khác. Tôi xác nhận lại kết nối từ nguồn tới đích, phân giải tên và lưu cấu hình/log trước–sau để bàn giao."
       },
       {
         "id": "system_administrator_q04",
@@ -233,7 +246,7 @@
         "skill": "active directory",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Quản trị viên hệ thống, khi active directory được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Quản trị viên hệ thống, bạn đang vận hành/bàn giao hạ tầng CNTT nội bộ gồm máy chủ, máy trạm và tài khoản nhân viên cần được vận hành, bàn giao. Hãy trình bày cách dùng active directory để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi nhân viên không đăng nhập được hoặc được cấp thiếu/thừa quyền sau thay đổi nhóm, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của active directory phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -242,7 +255,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định tài khoản/máy tính và phạm vi quyền cần cấp, đặt đối tượng vào OU/group phù hợp theo nguyên tắc tối thiểu, rồi kiểm tra chính sách và khả năng xác thực. Nếu đăng nhập hoặc áp dụng policy lỗi, tôi kiểm tra trạng thái tài khoản, group membership, DNS/replication và event log trước khi sửa; thay đổi quyền có thể hoàn tác. Tôi xác nhận bằng đăng nhập hoặc truy cập đúng tài nguyên được phép, đồng thời kiểm tra rằng quyền ngoài phạm vi không được cấp."
       },
       {
         "id": "system_administrator_q05",
@@ -250,7 +264,7 @@
         "skill": "vmware",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Quản trị viên hệ thống, khi vmware được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Quản trị viên hệ thống, bạn đang vận hành/bàn giao hạ tầng CNTT nội bộ gồm máy chủ, máy trạm và tài khoản nhân viên cần được vận hành, bàn giao. Hãy trình bày cách dùng vmware để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi máy ảo không khởi động hoặc mất kết nối mạng sau thao tác trên host, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của vmware phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -259,7 +273,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ kiểm tra trạng thái host/VM, datastore, mạng ảo và tài nguyên trước khi triển khai hoặc thay đổi máy ảo; xác nhận bản sao lưu và cửa sổ thao tác nếu có ảnh hưởng. Nếu VM không bật hoặc mất kết nối, tôi xem task/event, dung lượng datastore và mapping mạng, rồi khôi phục cấu hình hoặc chuyển về snapshot/backup phù hợp thay vì xóa dữ liệu tùy tiện. Tôi xác nhận VM hoạt động, dịch vụ bên trong truy cập được và ghi nhận cấu hình tài nguyên, mạng cùng kết quả kiểm tra."
       }
     ],
     "network_engineer": [
@@ -269,7 +284,7 @@
         "skill": "ccna",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư mạng, khi ccna được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư mạng, bạn đang vận hành/bàn giao mạng văn phòng kết nối người dùng với các máy chủ và dịch vụ nội bộ. Hãy trình bày cách dùng ccna để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi một VLAN hoặc tuyến mạng không tới được gateway/dịch vụ đích, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của ccna phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -278,7 +293,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ đối chiếu sơ đồ mạng, VLAN, địa chỉ IP và default gateway, sau đó kiểm tra trạng thái interface, bảng route và kết nối theo từng hop để xác định lỗi nằm ở switching hay routing. Khi thay đổi route/VLAN, tôi lưu cấu hình hiện tại và chỉ sửa phạm vi cần thiết; nếu mất reachability thì hoàn tác cấu hình vừa áp dụng. Tôi xác nhận bằng bảng route/interface và phép thử kết nối từ hai đầu, đồng thời lưu cấu hình và kết quả kiểm tra."
       },
       {
         "id": "network_engineer_q02",
@@ -286,7 +302,7 @@
         "skill": "quản trị mạng",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư mạng, khi quản trị mạng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư mạng, bạn đang vận hành/bàn giao mạng văn phòng kết nối người dùng với các máy chủ và dịch vụ nội bộ. Hãy trình bày cách dùng quản trị mạng để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi người dùng mất kết nối tới một dịch vụ sau thay đổi cấu hình mạng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của quản trị mạng phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -295,7 +311,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ lần theo đường truyền từ lớp vật lý, địa chỉ IP/subnet, gateway và DNS đến route, VLAN/ACL để khoanh vùng điểm đứt; dùng ping, traceroute và log thiết bị phù hợp với phạm vi. Nếu thay đổi cấu hình gây mất kết nối, tôi khôi phục cấu hình đã lưu hoặc hoàn tác rule gần nhất, tránh tác động các mạng khác. Tôi xác nhận lại kết nối từ nguồn tới đích, phân giải tên và lưu cấu hình/log trước–sau để bàn giao."
       },
       {
         "id": "network_engineer_q03",
@@ -303,7 +320,7 @@
         "skill": "routing & switching",
         "level": 2,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư mạng, khi routing & switching được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư mạng, bạn đang vận hành/bàn giao mạng văn phòng kết nối người dùng với các máy chủ và dịch vụ nội bộ. Hãy trình bày cách dùng routing & switching để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi thay đổi VLAN/trunk làm gián đoạn kết nối giữa các phân đoạn, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của routing & switching phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -312,7 +329,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ kiểm tra trạng thái cổng, VLAN access/trunk, bảng MAC, gateway và bảng định tuyến theo sơ đồ để lần theo đường đi gói tin. Nếu cấu hình trunk/route sai làm gián đoạn, tôi khôi phục cấu hình gần nhất và giới hạn thay đổi ở thiết bị/segment liên quan. Tôi xác minh lại VLAN membership, route và kết nối end-to-end, rồi lưu cấu hình đang chạy cùng kết quả ping/traceroute để bàn giao."
       },
       {
         "id": "network_engineer_q04",
@@ -320,7 +338,7 @@
         "skill": "cisco",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Kỹ sư mạng, khi cisco được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư mạng, bạn đang vận hành/bàn giao mạng văn phòng kết nối người dùng với các máy chủ và dịch vụ nội bộ. Hãy trình bày cách dùng cisco để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi cấu hình thiết bị mới khiến một interface hoặc tuyến kết nối không hoạt động, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của cisco phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -329,7 +347,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ kiểm tra cấu hình hiện tại, trạng thái interface, VLAN/route và log trên thiết bị Cisco trước khi thao tác; lưu bản cấu hình để có thể phục hồi. Tôi thay đổi từng phần nhỏ, xác minh lệnh và trạng thái sau mỗi bước; nếu interface hoặc đường đi lỗi, hoàn tác phần vừa thay đổi thay vì tiếp tục chồng cấu hình. Tôi kiểm tra lại connectivity, bảng route/MAC và lưu cấu hình đã xác nhận cùng ghi chú bàn giao."
       },
       {
         "id": "network_engineer_q05",
@@ -337,7 +356,7 @@
         "skill": "firewall",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Kỹ sư mạng, khi firewall được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư mạng, bạn đang vận hành/bàn giao mạng văn phòng kết nối người dùng với các máy chủ và dịch vụ nội bộ. Hãy trình bày cách dùng firewall để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi luồng hợp lệ tới API bị chặn hoặc một rule mở rộng quyền truy cập ngoài dự kiến, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của firewall phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -346,7 +365,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định luồng cần cho phép theo nguồn, đích, cổng/giao thức và mục đích, rồi tạo rule hẹp nhất có thể, đặt đúng thứ tự và bật log phù hợp. Nếu ứng dụng vẫn không kết nối, tôi kiểm tra log rule, route và chính sách hai chiều trước khi điều chỉnh; không mở rộng thành any-any để chữa cháy. Tôi thử cả luồng được phép lẫn luồng ngoài phạm vi phải bị chặn, sau đó lưu rule, lý do và kết quả kiểm tra."
       }
     ],
     "security_engineer": [
@@ -356,7 +376,7 @@
         "skill": "bảo mật hệ thống",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư an ninh mạng, khi bảo mật hệ thống được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư an ninh mạng, bạn đang vận hành/bàn giao môi trường máy chủ và mạng của doanh nghiệp cần được rà soát, gia cố và vận hành an toàn. Hãy trình bày cách dùng bảo mật hệ thống để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi tài khoản có quyền dư thừa hoặc bản vá làm phát sinh lỗi dịch vụ, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của bảo mật hệ thống phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -365,7 +385,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ kiểm kê tài sản và tài khoản có quyền, rà cấu hình dịch vụ/phần mềm cần thiết, vá theo mức ưu tiên và loại bỏ quyền hoặc cổng không cần dùng. Nếu cập nhật làm dịch vụ lỗi, tôi cô lập ảnh hưởng và khôi phục phiên bản/cấu hình đã lưu trong khi giữ lại log phục vụ điều tra. Tôi xác nhận bằng kiểm tra cấu hình/quyền, quét hoặc log phù hợp và ghi rõ trạng thái rủi ro còn lại cùng biện pháp xử lý."
       },
       {
         "id": "security_engineer_q02",
@@ -373,7 +394,7 @@
         "skill": "đánh giá lỗ hổng",
         "level": 2,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư an ninh mạng, khi đánh giá lỗ hổng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư an ninh mạng, bạn đang vận hành/bàn giao môi trường máy chủ và mạng của doanh nghiệp cần được rà soát, gia cố và vận hành an toàn. Hãy trình bày cách dùng đánh giá lỗ hổng để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi công cụ báo lỗ hổng nhưng cần xác minh khả năng tái hiện và mức ảnh hưởng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của đánh giá lỗ hổng phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -382,7 +403,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chốt phạm vi và quyền kiểm tra, thu thập phiên bản/cấu hình rồi chạy công cụ đánh giá phù hợp; sau đó xác minh thủ công phát hiện quan trọng để loại false positive và mô tả điều kiện tái hiện. Nếu kiểm tra có nguy cơ ảnh hưởng dịch vụ, tôi giới hạn tốc độ/phạm vi hoặc dừng theo quy tắc đã thống nhất. Tôi ưu tiên khuyến nghị theo mức độ và khả năng khai thác trong bối cảnh, rồi quét/kiểm tra lại để xác nhận bản vá."
       },
       {
         "id": "security_engineer_q03",
@@ -390,7 +412,7 @@
         "skill": "quản trị mạng",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Kỹ sư an ninh mạng, khi quản trị mạng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư an ninh mạng, bạn đang vận hành/bàn giao môi trường máy chủ và mạng của doanh nghiệp cần được rà soát, gia cố và vận hành an toàn. Hãy trình bày cách dùng quản trị mạng để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi người dùng mất kết nối tới một dịch vụ sau thay đổi cấu hình mạng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của quản trị mạng phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -399,7 +421,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ lần theo đường truyền từ lớp vật lý, địa chỉ IP/subnet, gateway và DNS đến route, VLAN/ACL để khoanh vùng điểm đứt; dùng ping, traceroute và log thiết bị phù hợp với phạm vi. Nếu thay đổi cấu hình gây mất kết nối, tôi khôi phục cấu hình đã lưu hoặc hoàn tác rule gần nhất, tránh tác động các mạng khác. Tôi xác nhận lại kết nối từ nguồn tới đích, phân giải tên và lưu cấu hình/log trước–sau để bàn giao."
       },
       {
         "id": "security_engineer_q04",
@@ -407,7 +430,7 @@
         "skill": "linux",
         "level": 3,
         "weight": 2,
-        "question": "Trong vai trò Kỹ sư an ninh mạng, khi linux được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư an ninh mạng, bạn đang vận hành/bàn giao môi trường máy chủ và mạng của doanh nghiệp cần được rà soát, gia cố và vận hành an toàn. Hãy trình bày cách dùng linux để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi dịch vụ không khởi động sau khi thay đổi cấu hình hoặc cập nhật gói, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của linux phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -416,7 +439,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ bắt đầu từ yêu cầu vận hành, kiểm tra trạng thái dịch vụ bằng systemctl, tài nguyên và dung lượng bằng các công cụ hệ thống, rồi đọc journal/log để xác định điểm lỗi trước khi đổi cấu hình. Tôi áp dụng thay đổi nhỏ, có bản sao cấu hình và quyền tối thiểu; nếu dịch vụ không khởi động hoặc lỗi tăng, hoàn tác cấu hình và khởi động lại theo quy trình. Tôi xác nhận bằng trạng thái service, health check và log sau thay đổi, đồng thời ghi lại lệnh/kết quả để người nhận bàn giao lặp lại được."
       },
       {
         "id": "security_engineer_q05",
@@ -424,7 +448,7 @@
         "skill": "python",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Kỹ sư an ninh mạng, khi python được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư an ninh mạng, bạn đang vận hành/bàn giao môi trường máy chủ và mạng của doanh nghiệp cần được rà soát, gia cố và vận hành an toàn. Hãy trình bày cách dùng python để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi script vận hành gặp dữ liệu sai định dạng hoặc API phụ thuộc timeout, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của python phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -433,7 +457,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ viết script thành các bước nhỏ có đầu vào/đầu ra rõ, kiểm tra tham số và xử lý exception cụ thể; thao tác có thể gây thay đổi sẽ hỗ trợ chế độ dry-run hoặc giới hạn phạm vi. Tôi ghi log đủ để chẩn đoán nhưng không ghi secret, và đặt timeout/giới hạn retry cho thao tác bên ngoài. Tôi thử dữ liệu hợp lệ, thiếu/sai định dạng và lỗi phụ thuộc, rồi xác nhận kết quả đầu ra cùng trạng thái hệ thống trước khi đưa vào vận hành."
       }
     ],
     "penetration_tester": [
@@ -443,7 +468,7 @@
         "skill": "pentest",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), khi pentest được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), bạn đang vận hành/bàn giao ứng dụng web staging được chủ hệ thống cho phép kiểm thử trước khi phát hành. Hãy trình bày cách dùng pentest để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi phát hiện có thể ảnh hưởng dữ liệu hoặc tính sẵn sàng nếu khai thác quá mức, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của pentest phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -452,7 +477,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thống nhất phạm vi, mục tiêu, thời gian và quy tắc dừng trước khi kiểm thử, sau đó thu thập bề mặt tấn công và kiểm tra có kiểm soát các luồng trong phạm vi. Tôi xác minh phát hiện bằng bước tái hiện tối thiểu, tránh truy cập dữ liệu thật không cần thiết và dừng nếu có dấu hiệu ảnh hưởng dịch vụ. Báo cáo gồm điều kiện, bằng chứng, tác động và cách khắc phục; sau sửa, tôi retest đúng đường khai thác và kiểm tra hồi quy liên quan."
       },
       {
         "id": "penetration_tester_q02",
@@ -460,7 +486,7 @@
         "skill": "đánh giá lỗ hổng",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), khi đánh giá lỗ hổng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), bạn đang vận hành/bàn giao ứng dụng web staging được chủ hệ thống cho phép kiểm thử trước khi phát hành. Hãy trình bày cách dùng đánh giá lỗ hổng để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi công cụ báo lỗ hổng nhưng cần xác minh khả năng tái hiện và mức ảnh hưởng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của đánh giá lỗ hổng phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -469,7 +495,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chốt phạm vi và quyền kiểm tra, thu thập phiên bản/cấu hình rồi chạy công cụ đánh giá phù hợp; sau đó xác minh thủ công phát hiện quan trọng để loại false positive và mô tả điều kiện tái hiện. Nếu kiểm tra có nguy cơ ảnh hưởng dịch vụ, tôi giới hạn tốc độ/phạm vi hoặc dừng theo quy tắc đã thống nhất. Tôi ưu tiên khuyến nghị theo mức độ và khả năng khai thác trong bối cảnh, rồi quét/kiểm tra lại để xác nhận bản vá."
       },
       {
         "id": "penetration_tester_q03",
@@ -477,7 +504,7 @@
         "skill": "bảo mật web",
         "level": 2,
         "weight": 3,
-        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), khi bảo mật web được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), bạn đang vận hành/bàn giao ứng dụng web staging được chủ hệ thống cho phép kiểm thử trước khi phát hành. Hãy trình bày cách dùng bảo mật web để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi endpoint có dấu hiệu kiểm soát phân quyền chưa đúng giữa hai tài khoản, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của bảo mật web phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -486,7 +513,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ rà luồng xác thực và phân quyền ở từng endpoint, kiểm tra validation/encoding đầu vào, quản lý session và cấu hình bảo mật trong phạm vi được phép. Với phát hiện, tôi tái hiện bằng request tối thiểu, ghi điều kiện và tác động mà không truy cập hay làm lộ dữ liệu ngoài phạm vi, rồi đề xuất kiểm tra phía server hoặc cấu hình khắc phục. Tôi chạy lại test bảo mật trên trường hợp đã tái hiện và các luồng hợp lệ để chắc rằng sửa lỗi không phá chức năng."
       },
       {
         "id": "penetration_tester_q04",
@@ -494,7 +522,7 @@
         "skill": "linux",
         "level": 3,
         "weight": 2,
-        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), khi linux được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), bạn đang vận hành/bàn giao ứng dụng web staging được chủ hệ thống cho phép kiểm thử trước khi phát hành. Hãy trình bày cách dùng linux để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi dịch vụ không khởi động sau khi thay đổi cấu hình hoặc cập nhật gói, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của linux phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -503,7 +531,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ bắt đầu từ yêu cầu vận hành, kiểm tra trạng thái dịch vụ bằng systemctl, tài nguyên và dung lượng bằng các công cụ hệ thống, rồi đọc journal/log để xác định điểm lỗi trước khi đổi cấu hình. Tôi áp dụng thay đổi nhỏ, có bản sao cấu hình và quyền tối thiểu; nếu dịch vụ không khởi động hoặc lỗi tăng, hoàn tác cấu hình và khởi động lại theo quy trình. Tôi xác nhận bằng trạng thái service, health check và log sau thay đổi, đồng thời ghi lại lệnh/kết quả để người nhận bàn giao lặp lại được."
       },
       {
         "id": "penetration_tester_q05",
@@ -511,7 +540,7 @@
         "skill": "python",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), khi python được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử bảo mật (Pentester), bạn đang vận hành/bàn giao ứng dụng web staging được chủ hệ thống cho phép kiểm thử trước khi phát hành. Hãy trình bày cách dùng python để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi script vận hành gặp dữ liệu sai định dạng hoặc API phụ thuộc timeout, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của python phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -520,7 +549,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ viết script thành các bước nhỏ có đầu vào/đầu ra rõ, kiểm tra tham số và xử lý exception cụ thể; thao tác có thể gây thay đổi sẽ hỗ trợ chế độ dry-run hoặc giới hạn phạm vi. Tôi ghi log đủ để chẩn đoán nhưng không ghi secret, và đặt timeout/giới hạn retry cho thao tác bên ngoài. Tôi thử dữ liệu hợp lệ, thiếu/sai định dạng và lỗi phụ thuộc, rồi xác nhận kết quả đầu ra cùng trạng thái hệ thống trước khi đưa vào vận hành."
       }
     ],
     "cloud_engineer": [
@@ -530,7 +560,7 @@
         "skill": "aws",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư điện toán đám mây, khi aws được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư điện toán đám mây, bạn đang vận hành/bàn giao API nội bộ chạy trên nền tảng cloud, cần triển khai và bàn giao cho nhóm vận hành. Hãy trình bày cách dùng aws để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi ứng dụng không truy cập được tài nguyên cloud do cấu hình quyền hoặc mạng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của aws phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -539,7 +569,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn dịch vụ AWS theo loại workload và yêu cầu lưu trữ/tính toán, tách quyền bằng IAM role với quyền tối thiểu, bật mã hóa và gắn log/metric cần cho vận hành. Nếu quyền thiếu hoặc tài nguyên không khả dụng, tôi kiểm tra policy, trạng thái dịch vụ và log sự kiện trước khi mở rộng quyền hay thay đổi cấu hình; thay đổi có thể hoàn tác. Tôi xác nhận bằng thử luồng truy cập dự kiến, xem log/metric và thực hiện thử khôi phục từ bản sao lưu hoặc cấu hình đã lưu."
       },
       {
         "id": "cloud_engineer_q02",
@@ -547,7 +578,7 @@
         "skill": "linux",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư điện toán đám mây, khi linux được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư điện toán đám mây, bạn đang vận hành/bàn giao API nội bộ chạy trên nền tảng cloud, cần triển khai và bàn giao cho nhóm vận hành. Hãy trình bày cách dùng linux để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi dịch vụ không khởi động sau khi thay đổi cấu hình hoặc cập nhật gói, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của linux phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -556,7 +587,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ bắt đầu từ yêu cầu vận hành, kiểm tra trạng thái dịch vụ bằng systemctl, tài nguyên và dung lượng bằng các công cụ hệ thống, rồi đọc journal/log để xác định điểm lỗi trước khi đổi cấu hình. Tôi áp dụng thay đổi nhỏ, có bản sao cấu hình và quyền tối thiểu; nếu dịch vụ không khởi động hoặc lỗi tăng, hoàn tác cấu hình và khởi động lại theo quy trình. Tôi xác nhận bằng trạng thái service, health check và log sau thay đổi, đồng thời ghi lại lệnh/kết quả để người nhận bàn giao lặp lại được."
       },
       {
         "id": "cloud_engineer_q03",
@@ -564,7 +596,7 @@
         "skill": "docker",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Kỹ sư điện toán đám mây, khi docker được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư điện toán đám mây, bạn đang vận hành/bàn giao API nội bộ chạy trên nền tảng cloud, cần triển khai và bàn giao cho nhóm vận hành. Hãy trình bày cách dùng docker để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi container thoát ngay sau khi triển khai hoặc health check liên tục thất bại, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của docker phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -573,7 +605,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ đóng gói ứng dụng trong image có base image và phiên bản dependency được cố định, chỉ đưa thành phần cần thiết vào image và chạy container bằng user không đặc quyền khi khả thi. Tôi cấu hình secret và môi trường lúc chạy, giới hạn tài nguyên, đồng thời khai báo health check; khi container thoát hoặc health check lỗi, tôi kiểm tra log/exit code và quay lại image đã biết là ổn định. Tôi xác nhận bằng cách chạy đúng image trong môi trường đích, kiểm tra health, quyền chạy và khả năng khởi động lại."
       },
       {
         "id": "cloud_engineer_q04",
@@ -581,7 +614,7 @@
         "skill": "kubernetes",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Kỹ sư điện toán đám mây, khi kubernetes được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư điện toán đám mây, bạn đang vận hành/bàn giao API nội bộ chạy trên nền tảng cloud, cần triển khai và bàn giao cho nhóm vận hành. Hãy trình bày cách dùng kubernetes để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi pod restart liên tục hoặc rollout không đạt trạng thái sẵn sàng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của kubernetes phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -590,7 +623,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ khai báo workload bằng Deployment, mở truy cập qua Service và cấu hình readiness/liveness probe phù hợp để pod chưa sẵn sàng không nhận traffic, còn tiến trình lỗi được phát hiện. Tôi đặt requests/limits theo tải dự kiến rồi điều chỉnh từ metric; khi pod restart liên tục hoặc rollout không khỏe, tôi xem events/log/describe, dừng rollout và rollback revision ổn định. Tôi xác nhận rollout hoàn tất, replica sẵn sàng và health check của dịch vụ thành công."
       },
       {
         "id": "cloud_engineer_q05",
@@ -598,7 +632,7 @@
         "skill": "azure",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Kỹ sư điện toán đám mây, khi azure được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư điện toán đám mây, bạn đang vận hành/bàn giao API nội bộ chạy trên nền tảng cloud, cần triển khai và bàn giao cho nhóm vận hành. Hãy trình bày cách dùng azure để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi dịch vụ không đọc được secret hoặc không truy cập được tài nguyên sau khi gán quyền, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của azure phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -607,7 +641,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn dịch vụ Azure theo workload, gán Managed Identity/RBAC với quyền tối thiểu, lưu secret trong dịch vụ quản lý phù hợp và bật log/metric cần thiết. Khi ứng dụng không truy cập được tài nguyên, tôi kiểm tra identity, role assignment, network rule và diagnostic log trước khi đổi quyền. Tôi xác minh luồng truy cập đúng danh tính, kiểm tra mã hóa/backup và thử quy trình khôi phục để bàn giao."
       }
     ],
     "manual_tester": [
@@ -617,7 +652,7 @@
         "skill": "tư duy kiểm thử",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Chuyên viên kiểm thử phần mềm (Manual), khi tư duy kiểm thử được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử phần mềm (Manual), bạn đang vận hành/bàn giao luồng đặt hàng của ứng dụng thương mại điện tử trước đợt phát hành. Hãy trình bày cách dùng tư duy kiểm thử để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi một lỗi chỉ xuất hiện ở dữ liệu biên hoặc khi nhiều bước trong luồng kết hợp, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của tư duy kiểm thử phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -626,7 +661,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ bắt đầu từ yêu cầu và rủi ro: xác định luồng quan trọng, điều kiện đầu vào, trạng thái hệ thống và hậu quả nếu sai. Tôi kiểm tra happy path, giá trị biên, dữ liệu không hợp lệ và lỗi phụ thuộc, ưu tiên các trường hợp ảnh hưởng người dùng hoặc dữ liệu. Tôi lưu bước chạy, kết quả mong đợi/thực tế và log/artifact để lỗi tái hiện được, rồi chạy lại sau khi sửa."
       },
       {
         "id": "manual_tester_q02",
@@ -634,7 +670,7 @@
         "skill": "viết test case",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Chuyên viên kiểm thử phần mềm (Manual), khi viết test case được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử phần mềm (Manual), bạn đang vận hành/bàn giao luồng đặt hàng của ứng dụng thương mại điện tử trước đợt phát hành. Hãy trình bày cách dùng viết test case để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi yêu cầu thay đổi nhưng test hiện có không phát hiện được hồi quy ở trường hợp biên, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của viết test case phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -643,7 +679,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ đọc yêu cầu và xác định luồng chính, tiền điều kiện, dữ liệu đầu vào cùng kết quả mong đợi; sau đó viết test cho trường hợp hợp lệ, biên và lỗi theo rủi ro. Mỗi test cần độc lập, có dữ liệu tái sử dụng được và bước làm rõ để người khác chạy lại. Khi phát hiện lỗi, tôi ghi môi trường, bước tái hiện, kết quả thực tế và bằng chứng, rồi chạy lại test sau khi sửa."
       },
       {
         "id": "manual_tester_q03",
@@ -660,7 +697,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi kiểm tra một thay đổi có rủi ro bỏ sót, tôi đối chiếu yêu cầu với từng trường hợp và dữ liệu biên, ghi lại sai khác rồi phối hợp xử lý trước khi bàn giao. Tôi sẽ chứng minh kết quả bằng test, log hoặc artifact của tình huống và nêu bước kiểm tra được bổ sung; số liệu chỉ nên dùng nếu có ghi nhận."
       },
       {
         "id": "manual_tester_q04",
@@ -668,7 +706,7 @@
         "skill": "sql",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Chuyên viên kiểm thử phần mềm (Manual), khi sql được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử phần mềm (Manual), bạn đang vận hành/bàn giao luồng đặt hàng của ứng dụng thương mại điện tử trước đợt phát hành. Hãy trình bày cách dùng sql để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi truy vấn đối soát trả thiếu hoặc nhân đôi đơn hàng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của sql phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -677,7 +715,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng truy vấn chỉ đọc để kiểm tra dữ liệu trước, xác định khóa liên kết và điều kiện lọc để tránh nhân đôi hoặc bỏ sót bản ghi. Với thao tác ghi, tôi chạy trong transaction khi phù hợp, kiểm tra số dòng bị ảnh hưởng và chỉ commit sau khi kết quả đúng; tránh chạy lệnh phá hủy trên dữ liệu chưa xác nhận. Tôi lưu truy vấn và đối chiếu kết quả với trạng thái mong đợi hoặc nguồn chuẩn."
       },
       {
         "id": "manual_tester_q05",
@@ -685,7 +724,7 @@
         "skill": "jira",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Chuyên viên kiểm thử phần mềm (Manual), khi jira được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Chuyên viên kiểm thử phần mềm (Manual), bạn đang vận hành/bàn giao luồng đặt hàng của ứng dụng thương mại điện tử trước đợt phát hành. Hãy trình bày cách dùng jira để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi một bước vận hành không đạt trạng thái mong đợi, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của jira phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -694,7 +733,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tạo issue với môi trường, phiên bản, tiền điều kiện, bước tái hiện, kết quả mong đợi và thực tế; đính kèm log/screenshot đã loại dữ liệu nhạy cảm. Tôi đặt mức độ ưu tiên theo ảnh hưởng và liên kết issue với test/build liên quan để theo dõi sửa lỗi. Sau khi có bản sửa, tôi xác nhận lại trên đúng phiên bản, cập nhật kết quả retest và đóng issue khi tiêu chí đạt."
       }
     ],
     "it_support": [
@@ -704,7 +744,7 @@
         "skill": "cài đặt phần mềm",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Nhân viên hỗ trợ IT, khi cài đặt phần mềm được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Nhân viên hỗ trợ IT, bạn đang vận hành/bàn giao máy trạm Windows của nhân viên mới cần cài đặt, kết nối và bàn giao sử dụng. Hãy trình bày cách dùng cài đặt phần mềm để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi bộ cài không tương thích hoặc cài xong ứng dụng không khởi chạy, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của cài đặt phần mềm phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -713,7 +753,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác nhận hệ điều hành, phiên bản và quyền cần thiết, lấy bộ cài từ nguồn được tổ chức tin cậy, rồi ghi lại cấu hình và điều kiện tiên quyết trước khi cài. Nếu cài đặt lỗi hoặc ảnh hưởng ứng dụng khác, tôi lưu log, dừng thay đổi và gỡ/khôi phục theo hướng dẫn tương ứng. Tôi kiểm tra phiên bản, tiến trình/dịch vụ và thao tác thực tế sau cài đặt, rồi ghi lại các bước để bàn giao."
       },
       {
         "id": "it_support_q02",
@@ -721,7 +762,7 @@
         "skill": "xử lý sự cố phần cứng",
         "level": 2,
         "weight": 3,
-        "question": "Trong vai trò Nhân viên hỗ trợ IT, khi xử lý sự cố phần cứng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Nhân viên hỗ trợ IT, bạn đang vận hành/bàn giao máy trạm Windows của nhân viên mới cần cài đặt, kết nối và bàn giao sử dụng. Hãy trình bày cách dùng xử lý sự cố phần cứng để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi máy trạm không lên nguồn hoặc mất kết nối thiết bị ngoại vi, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của xử lý sự cố phần cứng phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -730,7 +771,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ hỏi triệu chứng và thời điểm phát sinh, xác định thiết bị/người dùng bị ảnh hưởng rồi kiểm tra nguồn điện, cáp, kết nối và dấu hiệu lỗi theo thứ tự an toàn. Tôi cô lập thiết bị khi có nguy cơ làm hỏng thêm dữ liệu/phần cứng, thử thành phần thay thế đã biết tốt nếu phù hợp và chuyển cấp khi cần sửa chuyên sâu. Tôi xác nhận thiết bị hoạt động ổn định qua phép thử liên quan, ghi lại linh kiện/thao tác và kết quả để theo dõi tái phát."
       },
       {
         "id": "it_support_q03",
@@ -738,7 +780,7 @@
         "skill": "windows os",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Nhân viên hỗ trợ IT, khi windows os được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Nhân viên hỗ trợ IT, bạn đang vận hành/bàn giao máy trạm Windows của nhân viên mới cần cài đặt, kết nối và bàn giao sử dụng. Hãy trình bày cách dùng windows os để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi người dùng không đăng nhập được hoặc ứng dụng không chạy sau cập nhật, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của windows os phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -747,7 +789,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định tài khoản và máy bị ảnh hưởng, kiểm tra Event Viewer, service, dung lượng, kết nối mạng và quyền trước khi thay đổi. Nếu lỗi xuất hiện sau cập nhật/cấu hình, tôi đối chiếu thời điểm và thử khôi phục thay đổi gần nhất theo quy trình, tránh xóa dữ liệu người dùng. Tôi xác nhận bằng đúng thao tác gây lỗi, kiểm tra log sau xử lý và ghi lại bước khắc phục để bàn giao."
       },
       {
         "id": "it_support_q04",
@@ -755,7 +798,7 @@
         "skill": "quản trị mạng",
         "level": 1,
         "weight": 2,
-        "question": "Trong vai trò Nhân viên hỗ trợ IT, khi quản trị mạng được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Nhân viên hỗ trợ IT, bạn đang vận hành/bàn giao máy trạm Windows của nhân viên mới cần cài đặt, kết nối và bàn giao sử dụng. Hãy trình bày cách dùng quản trị mạng để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi người dùng mất kết nối tới một dịch vụ sau thay đổi cấu hình mạng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của quản trị mạng phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -764,7 +807,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ lần theo đường truyền từ lớp vật lý, địa chỉ IP/subnet, gateway và DNS đến route, VLAN/ACL để khoanh vùng điểm đứt; dùng ping, traceroute và log thiết bị phù hợp với phạm vi. Nếu thay đổi cấu hình gây mất kết nối, tôi khôi phục cấu hình đã lưu hoặc hoàn tác rule gần nhất, tránh tác động các mạng khác. Tôi xác nhận lại kết nối từ nguồn tới đích, phân giải tên và lưu cấu hình/log trước–sau để bàn giao."
       },
       {
         "id": "it_support_q05",
@@ -781,7 +825,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong công việc, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ],
     "sre_engineer": [
@@ -791,7 +836,7 @@
         "skill": "linux",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư SRE, khi linux được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư SRE, bạn đang vận hành/bàn giao API production có yêu cầu duy trì khả năng phục vụ và khôi phục khi sự cố. Hãy trình bày cách dùng linux để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi dịch vụ không khởi động sau khi thay đổi cấu hình hoặc cập nhật gói, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của linux phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -800,7 +845,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ bắt đầu từ yêu cầu vận hành, kiểm tra trạng thái dịch vụ bằng systemctl, tài nguyên và dung lượng bằng các công cụ hệ thống, rồi đọc journal/log để xác định điểm lỗi trước khi đổi cấu hình. Tôi áp dụng thay đổi nhỏ, có bản sao cấu hình và quyền tối thiểu; nếu dịch vụ không khởi động hoặc lỗi tăng, hoàn tác cấu hình và khởi động lại theo quy trình. Tôi xác nhận bằng trạng thái service, health check và log sau thay đổi, đồng thời ghi lại lệnh/kết quả để người nhận bàn giao lặp lại được."
       },
       {
         "id": "sre_engineer_q02",
@@ -808,7 +854,7 @@
         "skill": "python",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư SRE, khi python được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư SRE, bạn đang vận hành/bàn giao API production có yêu cầu duy trì khả năng phục vụ và khôi phục khi sự cố. Hãy trình bày cách dùng python để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi script vận hành gặp dữ liệu sai định dạng hoặc API phụ thuộc timeout, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của python phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -817,7 +863,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ viết script thành các bước nhỏ có đầu vào/đầu ra rõ, kiểm tra tham số và xử lý exception cụ thể; thao tác có thể gây thay đổi sẽ hỗ trợ chế độ dry-run hoặc giới hạn phạm vi. Tôi ghi log đủ để chẩn đoán nhưng không ghi secret, và đặt timeout/giới hạn retry cho thao tác bên ngoài. Tôi thử dữ liệu hợp lệ, thiếu/sai định dạng và lỗi phụ thuộc, rồi xác nhận kết quả đầu ra cùng trạng thái hệ thống trước khi đưa vào vận hành."
       },
       {
         "id": "sre_engineer_q03",
@@ -825,7 +872,7 @@
         "skill": "quản lý rủi ro hệ thống",
         "level": 3,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư SRE, khi quản lý rủi ro hệ thống được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư SRE, bạn đang vận hành/bàn giao API production có yêu cầu duy trì khả năng phục vụ và khôi phục khi sự cố. Hãy trình bày cách dùng quản lý rủi ro hệ thống để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi một dependency quan trọng ngừng đáp ứng và ảnh hưởng API production, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của quản lý rủi ro hệ thống phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -834,7 +881,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ liệt kê các failure mode theo thành phần và luồng quan trọng, đánh giá tác động cùng khả năng xảy ra trong bối cảnh rồi gắn biện pháp giảm thiểu, người phụ trách và tín hiệu phát hiện. Với rủi ro xảy ra, kế hoạch cần nêu cách cô lập ảnh hưởng, khôi phục và điều kiện escalte; không coi việc có backup là đủ nếu chưa thử khôi phục. Tôi theo dõi rủi ro còn lại bằng log/metric hoặc diễn tập và cập nhật sau thay đổi hệ thống."
       },
       {
         "id": "sre_engineer_q04",
@@ -842,7 +890,7 @@
         "skill": "giám sát hệ thống",
         "level": 2,
         "weight": 3,
-        "question": "Trong vai trò Kỹ sư SRE, khi giám sát hệ thống được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư SRE, bạn đang vận hành/bàn giao API production có yêu cầu duy trì khả năng phục vụ và khôi phục khi sự cố. Hãy trình bày cách dùng giám sát hệ thống để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi cảnh báo không phát khi dịch vụ lỗi hoặc phát quá nhiều cảnh báo nhiễu, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của giám sát hệ thống phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -851,7 +899,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn tín hiệu gắn với sức khỏe dịch vụ như tỷ lệ lỗi, độ trễ, mức dùng tài nguyên và trạng thái dependency, rồi đặt ngưỡng/cửa sổ cảnh báo có hành động rõ. Nếu cảnh báo nhiễu hoặc không phát hiện sự cố, tôi đối chiếu với sự kiện thực tế, điều chỉnh ngưỡng và kiểm tra đường gửi thông báo. Tôi xác nhận bằng dashboard/log và một sự kiện thử có kiểm soát, đồng thời ghi rõ người nhận và bước phản ứng."
       },
       {
         "id": "sre_engineer_q05",
@@ -859,7 +908,7 @@
         "skill": "aws",
         "level": 2,
         "weight": 2,
-        "question": "Trong vai trò Kỹ sư SRE, khi aws được dùng để vận hành hoặc bàn giao hệ thống, bạn sẽ thiết kế cách làm nào? Nêu các bước cấu hình/thực hiện, cách xử lý lỗi biên và bằng chứng xác nhận kết quả.",
+        "question": "Trong vai trò Kỹ sư SRE, bạn đang vận hành/bàn giao API production có yêu cầu duy trì khả năng phục vụ và khôi phục khi sự cố. Hãy trình bày cách dùng aws để thực hiện công việc này, gồm các bước chính và lựa chọn cần lưu ý; nêu cách xử lý khi ứng dụng không truy cập được tài nguyên cloud do cấu hình quyền hoặc mạng, cách giới hạn ảnh hưởng/khôi phục và bằng chứng xác nhận kết quả sau xử lý.",
         "good_answer_points": [
           "Mô tả quy trình hoặc cấu hình cụ thể của aws phù hợp với vai trò và đầu vào.",
           "Nêu failure mode cụ thể, cách giới hạn tác động và phương án khôi phục.",
@@ -868,7 +917,8 @@
         "red_flags": [
           "Không làm rõ trách nhiệm cá nhân hoặc không đưa ra bằng chứng kiểm chứng kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn dịch vụ AWS theo loại workload và yêu cầu lưu trữ/tính toán, tách quyền bằng IAM role với quyền tối thiểu, bật mã hóa và gắn log/metric cần cho vận hành. Nếu quyền thiếu hoặc tài nguyên không khả dụng, tôi kiểm tra policy, trạng thái dịch vụ và log sự kiện trước khi mở rộng quyền hay thay đổi cấu hình; thay đổi có thể hoàn tác. Tôi xác nhận bằng thử luồng truy cập dự kiến, xem log/metric và thực hiện thử khôi phục từ bản sao lưu hoặc cấu hình đã lưu."
       }
     ]
   }

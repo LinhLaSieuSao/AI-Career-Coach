@@ -17,7 +17,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đây là tình huống cần đánh giá khẩn: ưu tiên ABC, dấu hiệu sinh tồn/SpO₂, mức ý thức, diễn tiến và bệnh nền, đồng thời gọi hỗ trợ theo quy trình cơ sở. Lập chẩn đoán phân biệt từ dữ kiện khám/xét nghiệm phù hợp, nhận diện dấu hiệu xấu đi và chuyển mức chăm sóc; không trì hoãn xử trí cấp cứu để hoàn tất chẩn đoán."
       },
       {
         "id": "doctor_q02",
@@ -34,7 +35,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Trước kê đơn, xác minh danh tính, chỉ định, dị ứng, thuốc đang dùng, bệnh nền, chức năng liên quan, liều/dạng dùng và tương tác; đối chiếu nguồn chuyên môn/ hệ thống của cơ sở. Giải thích cách dùng, cảnh báo và dấu hiệu cần liên hệ/tái khám theo đánh giá lâm sàng; nếu thông tin thiếu hoặc nguy cơ chưa rõ thì hỏi người kê đơn/dược sĩ phụ trách, không tự đoán liều."
       },
       {
         "id": "doctor_q03",
@@ -51,7 +53,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Khai thác thời điểm/diễn tiến, vị trí, tính chất đau, triệu chứng kèm, tiền sử và dấu hiệu cảnh báo; khám có mục tiêu, tôn trọng đồng thuận và giới hạn chuyên môn. Ghi nhận phát hiện dương/âm tính, đánh giá cần xét nghiệm/hội chẩn/chuyển cấp theo quy trình thay vì kết luận từ một dấu hiệu đơn lẻ."
       },
       {
         "id": "doctor_q04",
@@ -68,7 +71,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Bảo đảm an toàn hiện trường, đánh giá đáp ứng và ABC, gọi đội cấp cứu/AED theo quy trình và phân công người hỗ trợ. Can thiệp ban đầu trong phạm vi được đào tạo, theo dõi liên tục và bàn giao diễn tiến/thời điểm can thiệp; tuân thủ thuật toán cấp cứu tại cơ sở."
       },
       {
         "id": "doctor_q05",
@@ -85,7 +89,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách lắng nghe, xác nhận thông tin và truyền đạt kế hoạch/điểm cần hỗ trợ rõ ràng. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "doctor_q06",
@@ -102,7 +107,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách lắng nghe, xác nhận thông tin và truyền đạt kế hoạch/điểm cần hỗ trợ rõ ràng. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "registered_nurse": [
@@ -121,7 +127,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đánh giá đau, dấu hiệu sinh tồn, vết mổ/dịch và thay đổi so với nền; ưu tiên an toàn, báo bác sĩ/đội phụ trách khi có dấu hiệu xấu đi và thực hiện chăm sóc trong phạm vi được giao. Ghi thời điểm, phát hiện, báo cáo, can thiệp và đáp ứng để bàn giao liên tục."
       },
       {
         "id": "registered_nurse_q02",
@@ -138,7 +145,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đối chiếu đúng người/thuốc/liều/đường/thời điểm với y lệnh, dị ứng, hạn dùng, tương thích và quy trình nhận diện của cơ sở; kiểm tra đường truyền trước dùng. Theo dõi phản ứng trong/sau truyền, dừng và báo hỗ trợ khi có dấu hiệu bất lợi, ghi nhận thuốc/lô/đáp ứng theo quy trình."
       },
       {
         "id": "registered_nurse_q03",
@@ -155,7 +163,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác minh phép đo, tư thế/dụng cụ và so xu hướng với nền cùng triệu chứng; đo lại khi kết quả bất thường nếu điều kiện cho phép. Báo theo ngưỡng cảnh báo/quy trình escalation của cơ sở, ghi thời điểm–giá trị–triệu chứng–người nhận và xác nhận bàn giao."
       },
       {
         "id": "registered_nurse_q04",
@@ -172,7 +181,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách lắng nghe, xác nhận thông tin và truyền đạt kế hoạch/điểm cần hỗ trợ rõ ràng. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "registered_nurse_q05",
@@ -189,7 +199,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách ưu tiên an toàn, gọi đúng hỗ trợ, hành động trong phạm vi được đào tạo và ghi nhận diễn tiến. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "registered_nurse_q06",
@@ -206,7 +217,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách đối chiếu hồ sơ/nguồn, khoanh vùng sai lệch và ghi nhận việc sửa theo quy trình. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "pharmacist": [
@@ -225,7 +237,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Hỏi thuốc đang dùng, bệnh nền, dị ứng và triệu chứng; với thuốc chống đông, sàng lọc nguy cơ chảy máu/tương tác và kiểm tra nguồn dược tin cậy. Không tự chọn thuốc giảm đau khi nguy cơ chưa được xác định; hướng khách liên hệ bác sĩ/dược sĩ phù hợp và chuyển khám nếu có dấu hiệu cần đánh giá."
       },
       {
         "id": "pharmacist_q02",
@@ -242,7 +255,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đối chiếu tồn thực tế, sổ/hệ thống, hóa đơn và lịch sử cấp phát theo lô/hạn; tạm giữ giao dịch liên quan nếu cần để ngăn sai lệch thêm. Điều chỉnh phải có căn cứ/phê duyệt và dấu vết, đơn chờ chỉ cấp sau xác minh đúng đơn/người/thuốc theo quy trình."
       },
       {
         "id": "pharmacist_q03",
@@ -259,7 +273,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Cách ly lô và ngừng cấp phát khi log bảo quản vượt ngưỡng, lưu dữ liệu thời gian/nhiệt độ rồi báo người phụ trách chất lượng. Đánh giá ảnh hưởng theo hướng dẫn nhà sản xuất/quy trình dược và thẩm quyền; chỉ giải phóng/loại bỏ sau quyết định được ghi nhận."
       },
       {
         "id": "pharmacist_q04",
@@ -276,7 +291,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Diễn giải đúng liều dùng, chống chỉ định và điều kiện bảo quản theo nhãn/tờ hướng dẫn đã xác nhận, không tự rút gọn làm mất cảnh báo. Dùng câu ngắn, yêu cầu người bệnh nhắc lại nội dung chính và chuyển dược sĩ/bác sĩ khi nhãn mơ hồ hoặc cần tư vấn cá nhân hóa."
       },
       {
         "id": "pharmacist_q05",
@@ -293,7 +309,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách lắng nghe, xác nhận thông tin và truyền đạt kế hoạch/điểm cần hỗ trợ rõ ràng. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "pharmacist_q06",
@@ -310,7 +327,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách đối chiếu hồ sơ/nguồn, khoanh vùng sai lệch và ghi nhận việc sửa theo quy trình. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "english_teacher": [
@@ -329,7 +347,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi đặt mục tiêu để học viên hỏi và chỉ đường bằng một mẫu hội thoại ngắn, dạy cụm từ mẫu rồi cho luyện cặp với bản đồ đơn giản. Cuối hoạt động mỗi cặp thực hiện một lượt mới; tôi dùng checklist về câu hỏi, chỉ dẫn và mức dễ hiểu để xác nhận đầu ra."
       },
       {
         "id": "english_teacher_q02",
@@ -346,7 +365,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Nêu mục tiêu học tập quan sát được, làm mẫu ngắn rồi cho học viên guided practice và hoạt động tự làm; phân hóa hỗ trợ theo mức độ. Kiểm tra hiểu bằng câu hỏi/nhiệm vụ đầu ra, sửa ngộ nhận và điều chỉnh thời lượng dựa trên phản hồi."
       },
       {
         "id": "english_teacher_q03",
@@ -363,7 +383,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Viết mục tiêu đo được, chia thời gian cho khởi động–input–practice–assessment, chuẩn bị học liệu và phương án hỗ trợ mức độ khác nhau. Đánh giá cuối giờ bám mục tiêu, ghi bằng chứng học tập và điều chỉnh bài tiếp theo."
       },
       {
         "id": "english_teacher_q04",
@@ -380,7 +401,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đặt tín hiệu/quy tắc chuyển hoạt động ngắn, luyện trước và giao nhiệm vụ/role rõ cho nhóm. Dùng quan sát/nhắc nhở bình tĩnh, hỗ trợ cá nhân khi cần; theo dõi thời gian chuyển tiếp và mức tham gia để điều chỉnh."
       },
       {
         "id": "english_teacher_q05",
@@ -397,7 +419,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách chia nội dung thành bước dễ theo dõi, kiểm tra phản hồi/hiểu biết và điều chỉnh cách trình bày. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "english_teacher_q06",
@@ -414,7 +437,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "primary_school_teacher": [
@@ -433,7 +457,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Nêu mục tiêu học tập quan sát được, làm mẫu ngắn rồi cho học viên guided practice và hoạt động tự làm; phân hóa hỗ trợ theo mức độ. Kiểm tra hiểu bằng câu hỏi/nhiệm vụ đầu ra, sửa ngộ nhận và điều chỉnh thời lượng dựa trên phản hồi."
       },
       {
         "id": "primary_school_teacher_q02",
@@ -450,7 +475,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Quan sát tần suất, bối cảnh, tác nhân và khả năng giao tiếp/học tập, hỏi phụ huynh/giáo viên liên quan theo quy trình bảo mật; không gắn nhãn/chẩn đoán. Thử hỗ trợ chuyển tiếp nhất quán, theo dõi phản ứng và phối hợp chuyên viên/nhà trường khi khó khăn kéo dài hoặc ảnh hưởng an toàn."
       },
       {
         "id": "primary_school_teacher_q03",
@@ -467,7 +493,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Viết mục tiêu đo được, chia thời gian cho khởi động–input–practice–assessment, chuẩn bị học liệu và phương án hỗ trợ mức độ khác nhau. Đánh giá cuối giờ bám mục tiêu, ghi bằng chứng học tập và điều chỉnh bài tiếp theo."
       },
       {
         "id": "primary_school_teacher_q04",
@@ -484,7 +511,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đặt tín hiệu/quy tắc chuyển hoạt động ngắn, luyện trước và giao nhiệm vụ/role rõ cho nhóm. Dùng quan sát/nhắc nhở bình tĩnh, hỗ trợ cá nhân khi cần; theo dõi thời gian chuyển tiếp và mức tham gia để điều chỉnh."
       },
       {
         "id": "primary_school_teacher_q05",
@@ -501,7 +529,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách lắng nghe, xác nhận thông tin và truyền đạt kế hoạch/điểm cần hỗ trợ rõ ràng. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "primary_school_teacher_q06",
@@ -518,7 +547,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "graphic_designer": [
@@ -537,7 +567,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Dùng adjustment layer/mask để chỉnh non-destructive, chọn nền bằng mask rồi tinh chỉnh viền ở mức phóng đại và kích thước hiển thị thực. Export đúng profile/kích thước/định dạng, kiểm tra halo, độ nét và dung lượng trên web."
       },
       {
         "id": "graphic_designer_q02",
@@ -554,7 +585,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Dựng path vector sạch, dùng grid/anchor hợp lý và thử logo ở kích thước nhỏ/lớn; tạo phiên bản màu/đen trắng phù hợp. Kiểm tra font outline theo yêu cầu, vùng an toàn và export SVG/PDF/AI cùng guideline."
       },
       {
         "id": "graphic_designer_q03",
@@ -571,7 +603,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "graphic_designer_q04",
@@ -588,7 +621,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định yêu cầu, bản vẽ/quy trình và tiêu chí chấp nhận áp dụng cho thiết kế nhận diện thương hiệu, rồi kiểm tra đầu vào trước khi thao tác. Tôi ghi nhận kết quả, thử điều kiện biên liên quan và dừng/escalate khi an toàn, chất lượng hoặc căn cứ chưa rõ."
       },
       {
         "id": "graphic_designer_q05",
@@ -605,7 +639,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định yêu cầu, bản vẽ/quy trình và tiêu chí chấp nhận áp dụng cho layout design, rồi kiểm tra đầu vào trước khi thao tác. Tôi ghi nhận kết quả, thử điều kiện biên liên quan và dừng/escalate khi an toàn, chất lượng hoặc căn cứ chưa rõ."
       },
       {
         "id": "graphic_designer_q06",
@@ -622,7 +657,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "video_editor": [
@@ -641,7 +677,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đồng bộ multicam theo waveform/timecode, tổ chức media/bin và tạo rough cut theo câu chuyện trước khi tinh chỉnh nhịp. Xuất review có timecode/âm thanh phù hợp, kiểm tra sync, frame, caption và codec theo yêu cầu bàn giao."
       },
       {
         "id": "video_editor_q02",
@@ -658,7 +695,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tạo lower-third bằng shape/text layer và keyframe có easing nhất quán, giữ safe margin theo nhận diện. Preview ở frame rate đích, kiểm tra alpha/font/viền và xuất codec/alpha đúng yêu cầu rồi thử import vào timeline."
       },
       {
         "id": "video_editor_q03",
@@ -675,7 +713,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chọn take theo nội dung rõ và âm thanh tốt, mở bằng hook liên quan rồi cắt phần lặp để duy trì mạch. Rà continuity, nhịp, caption và thời lượng trên bản xem toàn màn hình; xin review theo mục tiêu nội dung."
       },
       {
         "id": "video_editor_q04",
@@ -692,7 +731,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Lọc noise vừa đủ để không làm giọng méo, cân level/EQ và kiểm tra peak/loudness theo nền tảng bàn giao. Nghe bằng tai nghe/loa thường ở mức âm lượng khác nhau, xác nhận lời rõ và không clipping trước mix."
       },
       {
         "id": "video_editor_q05",
@@ -709,7 +749,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "video_editor_q06",
@@ -726,7 +767,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "video_creator": [
@@ -745,7 +787,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Lập shot list theo hook–nội dung–CTA, chọn nơi đủ sáng và yên, khóa exposure/focus khi phù hợp và thu âm thử. Xem lại footage, dựng nhịp theo mục tiêu và kiểm tra tiếng, khung dọc, caption trước xuất."
       },
       {
         "id": "video_creator_q02",
@@ -762,7 +805,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chọn clip phục vụ mạch, đặt nhịp cắt theo nội dung, thêm caption dễ đọc và nhạc không lấn voice; giữ chủ thể/CTA trong safe zone dọc. Xem lại toàn video có âm thanh, kiểm tra caption/độ dài/codec rồi xuất đúng nền tảng."
       },
       {
         "id": "video_creator_q03",
@@ -779,7 +823,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tạo project/sequence theo frame rate và độ phân giải nguồn/đích, tổ chức media và kiểm tra audio sync khi footage khác frame rate. Xuất bản review, xem lại lệch tiếng/khung hình/caption và lưu preset/phiên bản."
       },
       {
         "id": "video_creator_q04",
@@ -796,7 +841,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "video_creator_q05",
@@ -813,7 +859,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "video_creator_q06",
@@ -830,7 +877,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "content_creator": [
@@ -849,7 +897,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Hook nêu vấn đề tiết kiệm điện, ba beat lần lượt là hành động cụ thể, lý do/bằng chứng và lưu ý áp dụng; kết bằng CTA dễ làm. Claim về mức tiết kiệm cần nguồn đáng tin cậy, nếu chưa có thì nói nguyên tắc chung thay vì hứa con số."
       },
       {
         "id": "content_creator_q02",
@@ -866,7 +915,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Dùng khung dọc và bố cục có khoảng trống cho caption, khóa focus/exposure khi ánh sáng thay đổi và chống rung bằng giá đỡ/cách cầm ổn định. Thu voice test, tránh vùng ồn, rồi xem lại nét/âm lượng/flicker trước khi tiếp tục quay."
       },
       {
         "id": "content_creator_q03",
@@ -883,7 +933,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chọn clip phục vụ mạch, đặt nhịp cắt theo nội dung, thêm caption dễ đọc và nhạc không lấn voice; giữ chủ thể/CTA trong safe zone dọc. Xem lại toàn video có âm thanh, kiểm tra caption/độ dài/codec rồi xuất đúng nền tảng."
       },
       {
         "id": "content_creator_q04",
@@ -900,7 +951,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "content_creator_q05",
@@ -917,7 +969,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Dùng một template/grid, giữ vị trí logo, font và palette đồng nhất; hierarchy headline–hình–CTA rõ với tương phản tốt. Xem thumbnail ở kích thước mobile, kiểm tra crop/chữ và xuất định dạng đúng kênh."
       },
       {
         "id": "content_creator_q06",
@@ -934,7 +987,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách lắng nghe, xác nhận thông tin và truyền đạt kế hoạch/điểm cần hỗ trợ rõ ràng. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "copywriter": [
@@ -953,7 +1007,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Headline nêu lợi ích đã xác minh, mở đầu nói tình huống văn phòng và cách dịch vụ đáp ứng; CTA chỉ dẫn bước đăng ký/đặt thử. Không khẳng định tốc độ, giá hay phạm vi chưa có trong brief; kiểm tra giới hạn 80 từ và nguồn trước đăng."
       },
       {
         "id": "copywriter_q02",
@@ -970,7 +1025,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "copywriter_q03",
@@ -987,7 +1043,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tổng hợp phỏng vấn phụ huynh, câu hỏi/tìm kiếm, phản hồi học viên và dữ liệu trang nếu được phép; tìm nỗi lo, tiêu chí chọn và từ ngữ họ dùng. Phân biệt insight có lặp lại với ý kiến cá biệt, xác minh bằng test thông điệp và bảo vệ dữ liệu cá nhân."
       },
       {
         "id": "copywriter_q04",
@@ -1004,7 +1061,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xếp chuỗi theo nhận biết vấn đề–cân nhắc giải pháp–đánh giá sản phẩm, dùng định dạng/CTA phù hợp từng giai đoạn. Gắn metric như tương tác nội dung, lượt xem trang sản phẩm và hành động chuyển tiếp; kiểm tra tracking, không quy kết mua hàng từ một nội dung đơn lẻ."
       },
       {
         "id": "copywriter_q05",
@@ -1021,7 +1079,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tóm tắt value proposition theo vấn đề SaaS giải quyết, lợi ích chính và bằng chứng trong brief, rồi viết headline theo ngôn ngữ tự nhiên thay vì dịch từng chữ; ví dụ cấu trúc là “Quản lý công việc rõ ràng hơn, để đội ngũ tập trung vào điều quan trọng”. Trước khi dùng, tôi xác nhận claim với brief/nguồn sản phẩm và chỉnh giọng theo nhóm khách hàng mục tiêu."
       },
       {
         "id": "copywriter_q06",
@@ -1038,7 +1097,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "hotel_receptionist": [
@@ -1057,7 +1117,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "“Welcome. We can store your luggage while you wait. Check-in starts at [confirmed time]; I’ll check whether your room is ready earlier and let you know. Could I confirm your name and booking, please?” Tôi sẽ chỉ nêu giờ/khả năng nhận phòng sau khi kiểm tra PMS và hỏi lại khách đã rõ phương án gửi hành lý chưa."
       },
       {
         "id": "hotel_receptionist_q02",
@@ -1074,7 +1135,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách lắng nghe, xác nhận thông tin và truyền đạt kế hoạch/điểm cần hỗ trợ rõ ràng. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "hotel_receptionist_q03",
@@ -1091,7 +1153,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "hotel_receptionist_q04",
@@ -1108,7 +1171,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đối chiếu mã đặt phòng/khách, cọc và chính sách đã ghi trong hồ sơ; xác nhận trạng thái phòng sạch/sẵn sàng trước check-in theo quy trình khách sạn. Cập nhật hồ sơ/folio đúng giao dịch, kiểm tra số dư và biên nhận rồi xác nhận với khách; không tự xử lý chênh tiền ngoài thẩm quyền."
       },
       {
         "id": "hotel_receptionist_q05",
@@ -1125,7 +1189,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "hotel_receptionist_q06",
@@ -1142,7 +1207,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "tour_guide": [
@@ -1161,7 +1227,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách chia nội dung thành bước dễ theo dõi, kiểm tra phản hồi/hiểu biết và điều chỉnh cách trình bày. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "tour_guide_q02",
@@ -1178,7 +1245,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "“Your free time is until [confirmed time]. Please meet at [confirmed location]. If you think you may be late, call or message me at [confirmed contact] as soon as possible. Could you repeat the meeting time and place so I can make sure I explained them clearly?” Tôi sẽ thay phần ngoặc bằng thông tin đã xác nhận của đoàn."
       },
       {
         "id": "tour_guide_q03",
@@ -1195,7 +1263,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Kiểm tra dữ kiện với nguồn bảo tàng/di tích/tài liệu đáng tin; phân biệt rõ sự kiện được xác nhận với truyền thuyết bằng cách dẫn nhập minh bạch. Kể theo mạch bối cảnh–chi tiết–ý nghĩa, tránh khẳng định truyền miệng như sự thật lịch sử."
       },
       {
         "id": "tour_guide_q04",
@@ -1212,7 +1281,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "tour_guide_q05",
@@ -1229,7 +1299,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách ưu tiên an toàn, gọi đúng hỗ trợ, hành động trong phạm vi được đào tạo và ghi nhận diễn tiến. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "tour_guide_q06",
@@ -1246,7 +1317,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách lắng nghe, xác nhận thông tin và truyền đạt kế hoạch/điểm cần hỗ trợ rõ ràng. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "travel_consultant": [
@@ -1265,7 +1337,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Hỏi ưu tiên, ngân sách, nhịp đi và nhu cầu của từng thành viên rồi tóm tắt để xác nhận. Đưa hai lựa chọn có trade-off về lịch/chi phí/dịch vụ, nêu điều chưa xác nhận và chốt bước như kiểm tra chỗ/giữ báo giá."
       },
       {
         "id": "travel_consultant_q02",
@@ -1282,7 +1355,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Kiểm tra thời tiết, giờ mở cửa, thời gian di chuyển và khả năng tiếp cận; chọn nhịp ít gấp, điểm nghỉ và phương án thay thế cho người lớn tuổi. Xác nhận thông tin với nhà cung cấp trước chốt, tránh cam kết lịch khi điều kiện thay đổi."
       },
       {
         "id": "travel_consultant_q03",
@@ -1299,7 +1373,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xếp điểm theo địa lý/giờ mở cửa và thời gian di chuyển thực tế, xen bữa ăn/nghỉ phù hợp trẻ nhỏ, có phương án mưa hoặc mệt. Kiểm tra dịch vụ/di chuyển với nhà cung cấp và trình bày giả định, điểm loại trừ trước xác nhận."
       },
       {
         "id": "travel_consultant_q04",
@@ -1316,7 +1391,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "travel_consultant_q05",
@@ -1333,7 +1409,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách lắng nghe, xác nhận thông tin và truyền đạt kế hoạch/điểm cần hỗ trợ rõ ràng. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "travel_consultant_q06",
@@ -1350,7 +1427,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "“Could I confirm your booking reference and the new date you prefer? I’ll check availability and the fare conditions in your booking before confirming any change or refund. I’ll explain any applicable fee and ask you to confirm how you’d like to proceed.” Tôi sẽ chỉ nêu điều kiện sau khi kiểm tra đúng booking và chính sách áp dụng."
       }
     ],
     "event_planner": [
@@ -1369,7 +1447,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Lập timeline ngược sáu tuần với owner, deadline và phụ thuộc cho venue, agenda, đăng ký, nhà cung cấp và tổng duyệt; đặt tiêu chí sẵn sàng cho từng hạng mục. Rà critical path/risk log định kỳ và có phương án thay thế cho các mốc ảnh hưởng ngày diễn ra."
       },
       {
         "id": "event_planner_q02",
@@ -1386,7 +1465,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tách chi phí committed/đã chi/dự báo và bắt buộc/tùy chọn, kiểm tra điều khoản hủy/đổi sau khi có báo giá. Giữ khoản trực tiếp phục vụ mục tiêu, nêu trade-off/forecast mới và xin phê duyệt; theo variance sau điều chỉnh."
       },
       {
         "id": "event_planner_q03",
@@ -1403,7 +1483,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đối chiếu SLA, thời hạn, điều kiện giao và nghĩa vụ dự phòng; yêu cầu nhà cung cấp xác nhận ETA bằng văn bản. Đặt mốc quyết định để kích hoạt nhà cung cấp thay thế, báo owner/escalation và kiểm tra thiết bị tại tổng duyệt."
       },
       {
         "id": "event_planner_q04",
@@ -1420,7 +1501,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Bảo vệ phần livestream đang chạy, cập nhật run-of-show và báo stage manager/AV/diễn giả về cue mới; dùng nội dung đệm đã chuẩn bị nếu phù hợp. Thông báo rõ cho khách, kiểm tra timeline mới và xác nhận không ảnh hưởng các phần bắt buộc/giờ kết thúc."
       },
       {
         "id": "event_planner_q05",
@@ -1437,7 +1519,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách đối chiếu hồ sơ/nguồn, khoanh vùng sai lệch và ghi nhận việc sửa theo quy trình. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "event_planner_q06",
@@ -1454,7 +1537,8 @@
         "red_flags": [
           "Bỏ qua dữ kiện trọng yếu hoặc không nêu căn cứ kiểm chứng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách lắng nghe, xác nhận thông tin và truyền đạt kế hoạch/điểm cần hỗ trợ rõ ràng. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ]
   }
