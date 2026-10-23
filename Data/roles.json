@@ -1,4 +1,37 @@
-[
+{
+  "positions": [
+  {
+    "title": "Data Analyst",
+    "required_skills": [
+      "SQL",
+      "Python",
+      "Data Visualization",
+      "Statistical Analysis",
+      "Excel"
+    ]
+  },
+  {
+    "title": "Backend Developer",
+    "required_skills": [
+      "Node.js",
+      "Express",
+      "REST API Design",
+      "Database Management",
+      "Docker"
+    ]
+  },
+  {
+    "title": "AI Engineer",
+    "required_skills": [
+      "Machine Learning",
+      "Deep Learning",
+      "Python",
+      "TensorFlow",
+      "PyTorch"
+    ]
+  }
+],
+  "roles": [
 {
 "id": "backend_developer_java",
 "name": "Backend Developer (Java)",
@@ -2371,3 +2404,4 @@
 ]
 }
 ]
+}

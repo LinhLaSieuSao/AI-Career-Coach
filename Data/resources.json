@@ -8198,5 +8198,43 @@
         "last_checked": "2026-10-22"
       }
     ]
-  }
+  },
+  "courses": [
+    {
+      "course_name": "Phân tích dữ liệu với SQL — Udacity",
+      "link": "https://www.udacity.com/course/sql-for-data-analysis--ud198",
+      "skills_achieved": [
+        "SQL",
+        "Data Manipulation",
+        "Query Optimization"
+      ]
+    },
+    {
+      "course_name": "Lập trình Python cho mọi người — Coursera",
+      "link": "https://www.coursera.org/specializations/python",
+      "skills_achieved": [
+        "Python",
+        "Scripting",
+        "Data Structures"
+      ]
+    },
+    {
+      "course_name": "Nhập môn trực quan hóa dữ liệu với Power BI — Coursera",
+      "link": "https://www.coursera.org/projects/getting-started-with-power-bi",
+      "skills_achieved": [
+        "Power BI",
+        "Data Visualization",
+        "Report Building"
+      ]
+    },
+    {
+      "course_name": "Nền tảng trí tuệ nhân tạo và học máy — Andrew Ng",
+      "link": "https://www.coursera.org/specializations/machine-learning-introduction",
+      "skills_achieved": [
+        "Machine Learning",
+        "Supervised Learning",
+        "Model Evaluation"
+      ]
+    }
+  ]
 }
