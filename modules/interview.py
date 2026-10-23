@@ -181,17 +181,25 @@ def get_question_feedback(question_id: str) -> dict[str, Any]:
 
     question = _question_for_id(question_id)
     answer = question.get("reference_answer")
-    if isinstance(answer, str) and answer.strip():
+    has_reference_answer = isinstance(answer, str) and bool(answer.strip())
+    points = question.get("good_answer_points")
+    good_answer_points = (
+        [point.strip() for point in points if isinstance(point, str) and point.strip()]
+        if isinstance(points, list)
+        else []
+    )
+    if has_reference_answer:
         reference_answer = answer.strip()
     else:
-        points = question.get("good_answer_points")
-        if not isinstance(points, list) or not points:
+        if not good_answer_points:
             raise ValueError(f"Câu hỏi '{question_id}' chưa có đáp án tham khảo.")
-        reference_answer = "\n".join(f"- {point}" for point in points if isinstance(point, str) and point.strip())
+        reference_answer = "\n".join(f"- {point}" for point in good_answer_points)
 
     red_flags = question.get("red_flags", [])
     return {
         "reference_answer": reference_answer,
+        "has_reference_answer": has_reference_answer,
+        "good_answer_points": good_answer_points,
         "red_flags": [item for item in red_flags if isinstance(item, str)] if isinstance(red_flags, list) else [],
         "time_minutes": question.get("time_minutes"),
     }

@@ -17,7 +17,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác nhận đơn vị, scale, hệ tọa độ và revision; chỉnh bản vẽ theo layer/block và dimension convention nhất quán. So kích thước/BOM và xem bản plot để bắt lỗi hiển thị hoặc tham chiếu trước phát hành."
       },
       {
         "id": "mechanical_engineer_q02",
@@ -34,7 +35,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Dựng sketch có ràng buộc/kích thước, tạo feature theo thứ tự dễ sửa và quản lý cấu hình/assembly theo design intent. Chạy kiểm tra interference/mass/property và đối chiếu drawing/revision trước bàn giao."
       },
       {
         "id": "mechanical_engineer_q03",
@@ -51,7 +53,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đọc title block, revision, đơn vị, vật liệu, datum, kích thước và dung sai trước khi chế tạo/lắp. Đối chiếu view/section/BOM và ghi câu hỏi cho điểm thiếu hoặc mâu thuẫn thay vì tự giả định."
       },
       {
         "id": "mechanical_engineer_q04",
@@ -68,7 +71,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "mechanical_engineer_q05",
@@ -85,7 +89,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "mechanical_engineer_q06",
@@ -102,7 +107,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "electrical_engineer": [
@@ -121,7 +127,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác nhận tiêu chuẩn/ký hiệu và danh mục thiết bị, dựng sơ đồ mạch với wire number, cross-reference và terminal rõ. Rà liên kết nguồn–tải, tag và BOM, rồi xuất bản vẽ theo revision để review."
       },
       {
         "id": "electrical_engineer_q02",
@@ -138,7 +145,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Thu thập tải, nguồn, chế độ vận hành và điều kiện lắp đặt; lập sơ đồ/thiết bị bảo vệ, nối đất và cáp theo tiêu chuẩn áp dụng được xác nhận. Kiểm tra tính toán, phối hợp bảo vệ và review an toàn bởi người đủ thẩm quyền trước thi công."
       },
       {
         "id": "electrical_engineer_q03",
@@ -155,7 +163,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đọc title block, revision, đơn vị, vật liệu, datum, kích thước và dung sai trước khi chế tạo/lắp. Đối chiếu view/section/BOM và ghi câu hỏi cho điểm thiếu hoặc mâu thuẫn thay vì tự giả định."
       },
       {
         "id": "electrical_engineer_q04",
@@ -172,7 +181,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách ưu tiên an toàn, gọi đúng hỗ trợ, làm trong phạm vi được đào tạo và ghi nhận diễn tiến. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "electrical_engineer_q05",
@@ -189,7 +199,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "electrical_engineer_q06",
@@ -206,7 +217,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "automation_engineer": [
@@ -225,7 +237,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đối chiếu I/O list, sơ đồ điện và sequence, cấu hình phần cứng/tag rồi viết logic theo trạng thái/interlock có chú thích. Mô phỏng hoặc test từng I/O ở điều kiện an toàn, kiểm tra alarm/safe state và lưu backup/version trước download."
       },
       {
         "id": "automation_engineer_q02",
@@ -242,7 +255,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Lập tag/alarm theo danh mục tín hiệu và mức ưu tiên, cấu hình trend/historian cùng quyền người dùng. Kiểm tra chất lượng/đơn vị/thời gian dữ liệu, alarm giả lập và quyền thao tác trước đưa vào vận hành."
       },
       {
         "id": "automation_engineer_q03",
@@ -259,7 +273,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chuyển yêu cầu thành state/sequence, interlock và điều kiện lỗi; tách logic theo chức năng, đặt tên tag và comment để bảo trì. Test mô phỏng normal/edge/fault, xác minh safe state và backup chương trình trước thay đổi trên máy thật."
       },
       {
         "id": "automation_engineer_q04",
@@ -276,7 +291,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "automation_engineer_q05",
@@ -293,7 +309,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "automation_engineer_q06",
@@ -310,7 +327,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "civil_engineer": [
@@ -329,7 +347,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác nhận đơn vị, scale, hệ tọa độ và revision; chỉnh bản vẽ theo layer/block và dimension convention nhất quán. So kích thước/BOM và xem bản plot để bắt lỗi hiển thị hoặc tham chiếu trước phát hành."
       },
       {
         "id": "civil_engineer_q02",
@@ -346,7 +365,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chốt phạm vi, revision bản vẽ, quy tắc đo và đơn vị; bóc theo hạng mục, vị trí và cấu kiện để tránh thiếu/trùng. Đối chiếu mẫu với bản vẽ/BOQ độc lập, ghi giả định và làm rõ phần chưa thể đo."
       },
       {
         "id": "civil_engineer_q03",
@@ -363,7 +383,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đọc title block, revision, đơn vị, vật liệu, datum, kích thước và dung sai trước khi chế tạo/lắp. Đối chiếu view/section/BOM và ghi câu hỏi cho điểm thiếu hoặc mâu thuẫn thay vì tự giả định."
       },
       {
         "id": "civil_engineer_q04",
@@ -380,7 +401,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "civil_engineer_q05",
@@ -397,7 +419,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "civil_engineer_q06",
@@ -414,7 +437,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "mep_engineer": [
@@ -433,7 +457,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác nhận đơn vị, scale, hệ tọa độ và revision; chỉnh bản vẽ theo layer/block và dimension convention nhất quán. So kích thước/BOM và xem bản plot để bắt lỗi hiển thị hoặc tham chiếu trước phát hành."
       },
       {
         "id": "mep_engineer_q02",
@@ -450,7 +475,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Thiết lập level/grid, template, family và quy ước coordinate theo mô hình liên ngành; dựng hệ MEP với kích thước/cao độ và thông tin thiết bị nhất quán. Kiểm tra clash, connector, schedule và revision trong coordination trước phát hành."
       },
       {
         "id": "mep_engineer_q03",
@@ -467,7 +493,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác định công năng, tải nhiệt, người/thiết bị, khí tươi, điều kiện ngoài trời và ràng buộc kiến trúc; tính tải theo tiêu chuẩn/giả định được xác nhận rồi chọn sơ bộ hệ thống. Kiểm tra lưu lượng, tiếng ồn, không gian bảo trì và phối hợp MEP; kỹ sư phụ trách duyệt thông số cuối."
       },
       {
         "id": "mep_engineer_q04",
@@ -484,7 +511,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "mep_engineer_q05",
@@ -501,7 +529,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "mep_engineer_q06",
@@ -518,7 +547,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "process_engineer": [
@@ -537,7 +567,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Vẽ dòng giá trị và đo cycle time, WIP, lead time cùng điểm nghẽn trên phạm vi xác định trước khi đề xuất giảm lãng phí. Thử thay đổi nhỏ, theo dõi chất lượng/an toàn và throughput trước–sau, chuẩn hóa khi kết quả ổn định."
       },
       {
         "id": "process_engineer_q02",
@@ -554,7 +585,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chọn vấn đề cụ thể dựa trên quan sát/dữ liệu, phân tích nguyên nhân gốc và đề xuất cải tiến có thể thử trong phạm vi nhỏ. Đo chỉ số liên quan cùng guardrail chất lượng/an toàn, ghi chuẩn mới và duy trì kiểm tra sau cải tiến."
       },
       {
         "id": "process_engineer_q03",
@@ -571,7 +603,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Sàng lọc vật dụng, bố trí thứ cần dùng, làm sạch và chuẩn hóa vị trí/nhãn cùng checklist duy trì. Chụp/ghi trạng thái trước–sau và audit định kỳ; xử lý nguyên nhân khiến khu vực tái lộn xộn thay vì chỉ dọn một lần."
       },
       {
         "id": "process_engineer_q04",
@@ -588,7 +621,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách đối chiếu dữ liệu/bằng chứng, khoanh vùng nguyên nhân và kiểm tra lại sau xử lý. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "process_engineer_q05",
@@ -605,7 +639,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "process_engineer_q06",
@@ -622,7 +657,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "quality_assurance_engineer": [
@@ -641,7 +677,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác định quy trình, rủi ro, tiêu chí đầu ra và hồ sơ cần kiểm soát trong phạm vi QMS. Lưu bằng chứng thực thi, kiểm soát phiên bản/tài liệu và xử lý nonconformity bằng nguyên nhân–hành động–xác minh hiệu lực theo quy trình tổ chức."
       },
       {
         "id": "quality_assurance_engineer_q02",
@@ -658,7 +695,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chốt spec, sampling/measurement method và tiêu chí chấp nhận, kiểm tra nguyên liệu/quá trình/thành phẩm theo kế hoạch. Cách ly sản phẩm nghi ngờ, ghi lot/dữ liệu đo và xử lý nguyên nhân; chỉ release sau khi kết quả đạt tiêu chí được duyệt."
       },
       {
         "id": "quality_assurance_engineer_q03",
@@ -675,7 +713,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chọn công cụ theo câu hỏi: check sheet để thu thập, Pareto để ưu tiên, cause-effect/5 why để tìm nguyên nhân, control chart để theo dõi biến động. Xác minh giả thuyết bằng dữ liệu và theo dõi sau hành động thay vì kết luận từ biểu đồ đơn lẻ."
       },
       {
         "id": "quality_assurance_engineer_q04",
@@ -692,7 +731,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "quality_assurance_engineer_q05",
@@ -709,7 +749,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "quality_assurance_engineer_q06",
@@ -726,7 +767,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "maintenance_engineer": [
@@ -745,7 +787,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Lập kế hoạch theo khuyến cáo thiết bị, criticality và lịch sử hỏng; chuẩn bị phụ tùng, cô lập năng lượng và checklist trước bảo trì. Ghi kết quả kiểm tra/thay thế, chạy thử theo quy trình và theo dõi lỗi tái diễn để cập nhật chu kỳ."
       },
       {
         "id": "maintenance_engineer_q02",
@@ -762,7 +805,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Bảo đảm an toàn/cô lập năng lượng, xác minh triệu chứng và alarm, đối chiếu sơ đồ/manual rồi khoanh vùng nguyên nhân trước thay linh kiện. Ghi vật tư/thao tác, test không tải và tải theo quy trình, bàn giao trạng thái cùng lỗi còn lại."
       },
       {
         "id": "maintenance_engineer_q03",
@@ -779,7 +823,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đọc title block, revision, đơn vị, vật liệu, datum, kích thước và dung sai trước khi chế tạo/lắp. Đối chiếu view/section/BOM và ghi câu hỏi cho điểm thiếu hoặc mâu thuẫn thay vì tự giả định."
       },
       {
         "id": "maintenance_engineer_q04",
@@ -796,7 +841,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách ưu tiên an toàn, gọi đúng hỗ trợ, làm trong phạm vi được đào tạo và ghi nhận diễn tiến. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "maintenance_engineer_q05",
@@ -813,7 +859,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "maintenance_engineer_q06",
@@ -830,7 +877,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "site_engineer": [
@@ -849,7 +897,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đối chiếu bản vẽ/revision, biện pháp và vật liệu được duyệt với hiện trường trước nghiệm thu từng công tác. Ghi NCR/issue, ảnh và owner/hạn khắc phục; kiểm tra lại sau sửa và cập nhật nhật ký."
       },
       {
         "id": "site_engineer_q02",
@@ -866,7 +915,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đọc title block, revision, đơn vị, vật liệu, datum, kích thước và dung sai trước khi chế tạo/lắp. Đối chiếu view/section/BOM và ghi câu hỏi cho điểm thiếu hoặc mâu thuẫn thay vì tự giả định."
       },
       {
         "id": "site_engineer_q03",
@@ -883,7 +933,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đánh giá nguy cơ tại công việc, permit, cô lập nguồn nguy hiểm, PPE, năng lực người làm và phương án cứu hộ trước khi cho phép. Dừng nếu điều kiện không an toàn, ghi khắc phục và xác minh biện pháp tại hiện trường trước tiếp tục."
       },
       {
         "id": "site_engineer_q04",
@@ -900,7 +951,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "site_engineer_q05",
@@ -917,7 +969,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "site_engineer_q06",
@@ -934,7 +987,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "estimation_engineer": [
@@ -953,7 +1007,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chốt phạm vi, revision bản vẽ, quy tắc đo và đơn vị; bóc theo hạng mục, vị trí và cấu kiện để tránh thiếu/trùng. Đối chiếu mẫu với bản vẽ/BOQ độc lập, ghi giả định và làm rõ phần chưa thể đo."
       },
       {
         "id": "estimation_engineer_q02",
@@ -970,7 +1025,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác định phạm vi/revision, phương pháp đo, định mức/đơn giá và giả định; lập BOQ theo hạng mục, tách khối lượng, đơn giá và dự phòng. Đối chiếu mẫu với bản vẽ/nguồn giá, review các khoản biến động lớn và ghi rõ loại trừ."
       },
       {
         "id": "estimation_engineer_q03",
@@ -987,7 +1043,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đọc title block, revision, đơn vị, vật liệu, datum, kích thước và dung sai trước khi chế tạo/lắp. Đối chiếu view/section/BOM và ghi câu hỏi cho điểm thiếu hoặc mâu thuẫn thay vì tự giả định."
       },
       {
         "id": "estimation_engineer_q04",
@@ -1004,7 +1061,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "estimation_engineer_q05",
@@ -1021,7 +1079,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "estimation_engineer_q06",
@@ -1038,7 +1097,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "architect": [
@@ -1057,7 +1117,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác nhận đơn vị, scale, hệ tọa độ và revision; chỉnh bản vẽ theo layer/block và dimension convention nhất quán. So kích thước/BOM và xem bản plot để bắt lỗi hiển thị hoặc tham chiếu trước phát hành."
       },
       {
         "id": "architect_q02",
@@ -1074,7 +1135,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Thiết lập levels/grids, template/family và tọa độ theo quy ước dự án, dựng mô hình có thông tin và view phù hợp. Kiểm tra room/area, schedule, clash/phối hợp và revision trước khi phát hành; xác nhận bản vẽ xuất khớp mô hình."
       },
       {
         "id": "architect_q03",
@@ -1091,7 +1153,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Dựng massing theo đúng scale, tổ chức group/component/tag và scene để mô hình dễ cập nhật. Kiểm tra kích thước, camera/material và xuất view theo brief; rà các mặt/đối tượng lỗi trước bàn giao."
       },
       {
         "id": "architect_q04",
@@ -1108,7 +1171,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "architect_q05",
@@ -1125,7 +1189,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "architect_q06",
@@ -1142,7 +1207,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách chia nội dung thành bước dễ theo dõi, kiểm tra phản hồi/hiểu biết và điều chỉnh cách trình bày. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "hvac_engineer": [
@@ -1161,7 +1227,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác định công năng, tải nhiệt, người/thiết bị, khí tươi, điều kiện ngoài trời và ràng buộc kiến trúc; tính tải theo tiêu chuẩn/giả định được xác nhận rồi chọn sơ bộ hệ thống. Kiểm tra lưu lượng, tiếng ồn, không gian bảo trì và phối hợp MEP; kỹ sư phụ trách duyệt thông số cuối."
       },
       {
         "id": "hvac_engineer_q02",
@@ -1178,7 +1245,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác nhận đơn vị, scale, hệ tọa độ và revision; chỉnh bản vẽ theo layer/block và dimension convention nhất quán. So kích thước/BOM và xem bản plot để bắt lỗi hiển thị hoặc tham chiếu trước phát hành."
       },
       {
         "id": "hvac_engineer_q03",
@@ -1195,7 +1263,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định yêu cầu, bản vẽ/quy trình và tiêu chí chấp nhận áp dụng cho tính toán tải nhiệt, rồi kiểm tra đầu vào trước khi thao tác. Tôi ghi nhận kết quả, thử điều kiện biên liên quan và dừng/escalate khi an toàn, chất lượng hoặc căn cứ chưa rõ."
       },
       {
         "id": "hvac_engineer_q04",
@@ -1212,7 +1281,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "hvac_engineer_q05",
@@ -1229,7 +1299,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "hvac_engineer_q06",
@@ -1246,7 +1317,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "cnc_operator": [
@@ -1265,7 +1337,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Kiểm tra lệnh sản xuất, phôi, gá, tool/offset, chương trình đã duyệt và che chắn trước chạy; thực hiện dry run/first-piece inspection theo quy trình. Theo dõi alarm, kích thước và tình trạng dao; dừng khi lệch, ghi lot/chương trình và không tự sửa thông số ngoài thẩm quyền."
       },
       {
         "id": "cnc_operator_q02",
@@ -1282,7 +1355,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đọc title block, revision, đơn vị, vật liệu, datum, kích thước và dung sai trước khi chế tạo/lắp. Đối chiếu view/section/BOM và ghi câu hỏi cho điểm thiếu hoặc mâu thuẫn thay vì tự giả định."
       },
       {
         "id": "cnc_operator_q03",
@@ -1299,7 +1373,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chọn dụng cụ theo kích thước/dung sai, kiểm tra tình trạng/hiệu chuẩn và làm sạch bề mặt đo; dùng đúng điểm chuẩn và lực đo. Đo lặp theo kế hoạch, ghi kết quả/serial dụng cụ và cách ly khi dụng cụ quá hạn hoặc không ổn định."
       },
       {
         "id": "cnc_operator_q04",
@@ -1316,7 +1391,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "cnc_operator_q05",
@@ -1333,7 +1409,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách ưu tiên an toàn, gọi đúng hỗ trợ, làm trong phạm vi được đào tạo và ghi nhận diễn tiến. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "cnc_operator_q06",
@@ -1350,7 +1427,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách đối chiếu dữ liệu/bằng chứng, khoanh vùng nguyên nhân và kiểm tra lại sau xử lý. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "production_planner": [
@@ -1369,7 +1447,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chuyển nhu cầu thành lịch theo năng lực máy/nhân lực, routing, vật tư và due date; xác định constraint/critical jobs. Kiểm tra khả năng vật tư/công suất, cập nhật khi downtime hoặc ưu tiên đổi và theo dõi plan-versus-actual."
       },
       {
         "id": "production_planner_q02",
@@ -1386,7 +1465,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đối chiếu tồn hệ thống/thực tế, nhu cầu, lead time và hàng đang về; phân loại thiếu/dư theo SKU/lot. Đề xuất bổ sung/điều chuyển theo mức phục vụ và theo dõi availability, sai lệch sau xử lý."
       },
       {
         "id": "production_planner_q03",
@@ -1403,7 +1483,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Dùng bảng có cấu trúc, validation và Pivot/công thức phù hợp; rà missing/trùng, đơn vị, tham chiếu và version. Đối chiếu tổng với nguồn và kiểm tra mẫu trước khi phát hành."
       },
       {
         "id": "production_planner_q04",
@@ -1420,7 +1501,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "production_planner_q05",
@@ -1437,7 +1519,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "production_planner_q06",
@@ -1454,7 +1537,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ],
     "safety_engineer": [
@@ -1473,7 +1557,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đánh giá nguy cơ tại công việc, permit, cô lập nguồn nguy hiểm, PPE, năng lực người làm và phương án cứu hộ trước khi cho phép. Dừng nếu điều kiện không an toàn, ghi khắc phục và xác minh biện pháp tại hiện trường trước tiếp tục."
       },
       {
         "id": "safety_engineer_q02",
@@ -1490,7 +1575,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác định khía cạnh/tác động môi trường của hoạt động, nghĩa vụ áp dụng và kiểm soát vận hành trong hệ thống đã thiết lập. Lưu hồ sơ giám sát/sự cố, đánh giá tuân thủ theo quy trình và theo dõi hành động khắc phục; không tự gán điều khoản nếu chưa xác nhận phiên bản/phạm vi."
       },
       {
         "id": "safety_engineer_q03",
@@ -1507,7 +1593,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Nhận diện mối nguy và tham vấn người lao động/nhà thầu, xác định kiểm soát vận hành, năng lực, permit và ứng phó khẩn cấp cho công việc. Lưu đánh giá/đào tạo/kiểm tra hiện trường và xác minh hành động khắc phục theo hệ thống được áp dụng."
       },
       {
         "id": "safety_engineer_q04",
@@ -1524,7 +1611,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách làm rõ mục tiêu và phần việc cá nhân, phối hợp đúng đầu mối, ghi lại hành động và xác nhận kết quả. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "safety_engineer_q05",
@@ -1541,7 +1629,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách ưu tiên an toàn, gọi đúng hỗ trợ, làm trong phạm vi được đào tạo và ghi nhận diễn tiến. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       },
       {
         "id": "safety_engineer_q06",
@@ -1558,7 +1647,8 @@
         "red_flags": [
           "Không nêu được căn cứ kỹ thuật/bằng chứng kiểm tra hoặc bỏ qua bước xác nhận an toàn/chất lượng phù hợp tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR nên nêu bối cảnh, mục tiêu và phần trách nhiệm cá nhân, rồi mô tả cách ưu tiên an toàn, gọi đúng hỗ trợ, làm trong phạm vi được đào tạo và ghi nhận diễn tiến. Kết quả cần có bằng chứng thực tế và bài học; không tự thêm số liệu hay kinh nghiệm không có trong tình huống."
       }
     ]
   }

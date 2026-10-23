@@ -17,7 +17,8 @@
         "red_flags": [
           "Chỉ nêu reach/click mà không liên hệ lead hoặc mục tiêu kinh doanh."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chia mục tiêu awareness/consideration/conversion, chọn KPI từng tầng và phối hợp paid/owned/earned theo audience/ngân sách; chốt baseline, attribution window và lịch tối ưu. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "digital_marketing_executive_q02",
@@ -34,7 +35,8 @@
         "red_flags": [
           "Tối ưu chỉ theo lượt tương tác hoặc CPL rẻ, bỏ qua chất lượng lead."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tách prospecting/retargeting theo funnel, chọn objective và audience/exclusion; thử creative/offer có kiểm soát, theo dõi CPL cùng tỷ lệ lead đủ chuẩn trước khi mở rộng. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "digital_marketing_executive_q03",
@@ -51,7 +53,8 @@
         "red_flags": [
           "Tăng ngân sách hoặc đổi bid trước khi xác minh tracking và truy vấn."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Rà search terms, intent, match type, negative keywords rồi kiểm tra ad–landing, tốc độ và tracking; phân tích theo thiết bị/địa lý/thời gian trước khi đổi bid/ngân sách. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "digital_marketing_executive_q04",
@@ -68,7 +71,8 @@
         "red_flags": [
           "Gọi page_view là chuyển đổi mà không kiểm tra event hoặc nguồn dữ liệu."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Định nghĩa event/key event và tham số cho funnel, xác minh UTM/referral/cross-domain; test hành trình, dùng funnel/segment rồi đối chiếu chuyển đổi với nguồn nhận form. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "digital_marketing_executive_q05",
@@ -85,7 +89,8 @@
         "red_flags": [
           "Kết luận nguyên nhân từ một chỉ số tổng hợp hoặc tương quan đơn lẻ."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "digital_marketing_executive_q06",
@@ -102,7 +107,8 @@
         "red_flags": [
           "Đổ lỗi cho nền tảng hoặc né trách nhiệm, không có kết quả kiểm chứng."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "content_marketing_executive": [
@@ -121,7 +127,8 @@
         "red_flags": [
           "Brief chỉ xoay quanh nhồi từ khóa hoặc quảng bá sản phẩm thiếu căn cứ."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác định độc giả, intent/pain point và hành động mong muốn; lập outline có luận điểm, nguồn và CTA, ghi giọng điệu/tiêu chí biên tập và kiểm chứng claim. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "content_marketing_executive_q02",
@@ -138,7 +145,8 @@
         "red_flags": [
           "Phóng đại kết quả hoặc dựng lời chứng thực không được xác nhận."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Kể case theo bối cảnh–trở ngại–cách áp dụng–thay đổi, chỉ dùng số liệu đã xác minh; xin phép trích dẫn/nhận diện và loại thông tin nhạy cảm. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "content_marketing_executive_q03",
@@ -155,7 +163,8 @@
         "red_flags": [
           "Chỉ nhận công lao ý tưởng, không nêu cách thực thi hay kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "content_marketing_executive_q04",
@@ -172,7 +181,8 @@
         "red_flags": [
           "Chọn từ khóa chỉ vì volume cao, không xét intent hoặc khả năng cạnh tranh."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Thu thập truy vấn, nhóm theo intent/funnel, đánh giá độ liên quan và khả năng đáp ứng; map topic vào URL, tránh cannibalization và ưu tiên có căn cứ. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "content_marketing_executive_q05",
@@ -189,7 +199,8 @@
         "red_flags": [
           "Sửa tuyên bố chuyên môn theo suy đoán hoặc bỏ qua bước xác minh."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tách fact-check khỏi chỉnh cấu trúc/độ rõ, rút lặp nhưng giữ ý chuyên môn đã xác minh; đánh dấu claim thiếu nguồn để tác giả xác nhận, lưu phiên bản/checklist. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "content_marketing_executive_q06",
@@ -206,7 +217,8 @@
         "red_flags": [
           "Chỉ nói đã nhắc nhiều lần hoặc quy trách nhiệm cho bên kia."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "seo_specialist": [
@@ -225,7 +237,8 @@
         "red_flags": [
           "Chỉ nhồi thêm từ khóa hoặc sửa meta mà không kiểm tra index và intent."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Audit intent/nội dung, title/H1, heading, canonical/indexability, internal links/schema; ưu tiên sửa theo tác động, theo dõi impression/click/vị trí theo truy vấn. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "seo_specialist_q02",
@@ -242,7 +255,8 @@
         "red_flags": [
           "Đề xuất mua số lượng lớn backlink hoặc chỉ tối ưu chỉ số authority bên thứ ba."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ưu tiên nội dung đáng liên kết, digital PR và đối tác liên quan; đánh giá chất lượng/relevance/anchor, theo dõi referring domains/referral traffic và dấu hiệu spam, tránh mua link. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "seo_specialist_q03",
@@ -259,7 +273,8 @@
         "red_flags": [
           "Tạo một trang cho mọi biến thể từ khóa mà không xét intent trùng."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Thu thập truy vấn, nhóm theo intent/funnel, đánh giá độ liên quan và khả năng đáp ứng; map topic vào URL, tránh cannibalization và ưu tiên có căn cứ. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "seo_specialist_q04",
@@ -276,7 +291,8 @@
         "red_flags": [
           "Coi vị trí trung bình là thứ hạng cố định hoặc bỏ qua phân đoạn query."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "seo_specialist_q05",
@@ -293,7 +309,8 @@
         "red_flags": [
           "Viết chung chung, lặp từ khóa hoặc tự đưa ra thông tin phí chưa xác minh."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "social_media_executive": [
@@ -312,7 +329,8 @@
         "red_flags": [
           "Chỉ tập trung tăng tần suất đăng mà không có quy trình inbox hoặc mục tiêu."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Audit quyền, nội dung và inbox tồn, lập calendar có mục tiêu/format/owner; phân loại inbox, đặt escalation và theo reach, engagement, response time. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "social_media_executive_q02",
@@ -329,7 +347,8 @@
         "red_flags": [
           "Mô tả ý tưởng mơ hồ, không xác định đóng góp cá nhân hay kết quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "social_media_executive_q03",
@@ -346,7 +365,8 @@
         "red_flags": [
           "Dùng engagement bait hoặc chỉ đếm lượt thích."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chọn format/CTA khơi gợi trao đổi cụ thể, phù hợp cộng đồng; chuẩn bị moderation và đo bình luận có ý nghĩa/saves/click thay vì chỉ reach. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "social_media_executive_q04",
@@ -363,7 +383,8 @@
         "red_flags": [
           "Chạy theo trend không liên quan hoặc đưa lời khuyên an toàn chưa xác minh."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Mỗi video có hook, một thông tin chính, demo và CTA, kèm caption/phụ đề; kiểm chứng nội dung rồi theo retention/completion/share để chỉnh tập sau. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "social_media_executive_q05",
@@ -380,7 +401,8 @@
         "red_flags": [
           "Tham gia mọi trend chỉ vì độ phổ biến, không xét ngữ cảnh."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "social_media_executive_q06",
@@ -397,7 +419,8 @@
         "red_flags": [
           "Caption chỉ liệt kê tính năng, bỏ điều kiện hoặc CTA."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Caption có thể viết: “Bận rộn vẫn nhận hàng trong ngày—đặt trước [giờ áp dụng] để kiểm tra khu vực và điều kiện giao.” Tôi sẽ thay phần ngoặc bằng điều kiện đã xác nhận, nêu lợi ích và CTA rõ, không hứa nơi/thời điểm chưa hỗ trợ. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       }
     ],
     "performance_marketing_executive": [
@@ -416,7 +439,8 @@
         "red_flags": [
           "Thay nhiều yếu tố đồng thời rồi quy kết nguyên nhân không có đối chứng."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Phân rã funnel theo nguồn/thiết bị, kiểm tra form, message, tốc độ/tracking trước giả thuyết; đặt KPI và guardrail, chỉ rollout khi đủ bằng chứng. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "performance_marketing_executive_q02",
@@ -433,7 +457,8 @@
         "red_flags": [
           "Tối ưu tiếp theo CPL thô hoặc thu thập thêm dữ liệu cá nhân không cần thiết."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tách prospecting/retargeting theo funnel, chọn objective và audience/exclusion; thử creative/offer có kiểm soát, theo dõi CPL cùng tỷ lệ lead đủ chuẩn trước khi mở rộng. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "performance_marketing_executive_q03",
@@ -450,7 +475,8 @@
         "red_flags": [
           "Tăng ngân sách tự động dù CPA vượt ngưỡng và chưa phân tích impression share."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Rà search terms, intent, match type, negative keywords rồi kiểm tra ad–landing, tốc độ và tracking; phân tích theo thiết bị/địa lý/thời gian trước khi đổi bid/ngân sách. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "performance_marketing_executive_q04",
@@ -467,7 +493,8 @@
         "red_flags": [
           "Tuyên bố một hệ thống đúng tuyệt đối mà không reconcile giao dịch."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "performance_marketing_executive_q05",
@@ -484,7 +511,8 @@
         "red_flags": [
           "Dừng test ngay khi có biến động thuận lợi nhỏ hoặc so sánh nhiều biến không kiểm soát."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "pr_executive": [
@@ -503,7 +531,8 @@
         "red_flags": [
           "Gửi mass email không phân loại hoặc gây áp lực để nhận bài."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chọn phóng viên theo beat/độc giả và cá nhân hóa angle; chuẩn bị dữ kiện/spokesperson/tài liệu và embargo rõ, ghi media log, trả lời đúng hạn. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "pr_executive_q02",
@@ -520,7 +549,8 @@
         "red_flags": [
           "Dùng ngôn ngữ quảng bá rỗng hoặc công bố số liệu chưa được phê duyệt."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Lead nêu ai/việc gì/ở đâu/khi nào/ý nghĩa; xác minh số liệu và quote, bổ sung bối cảnh/boilerplate/contact, bỏ claim quảng cáo không căn cứ. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "pr_executive_q03",
@@ -537,7 +567,8 @@
         "red_flags": [
           "Phản hồi khi chưa xác minh hoặc che giấu thông tin trọng yếu."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "pr_executive_q04",
@@ -554,7 +585,8 @@
         "red_flags": [
           "Tự chọn phiên bản thuận tiện hoặc phát ngôn vượt thẩm quyền."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "pr_executive_q05",
@@ -571,7 +603,8 @@
         "red_flags": [
           "Đổi lợi ích hoặc gây sức ép để đổi lấy thiện cảm."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "brand_executive": [
@@ -590,7 +623,8 @@
         "red_flags": [
           "Đổi logo đơn lẻ mà không làm rõ định vị hay đo nhận thức."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Đo liên tưởng/nhầm lẫn theo phân khúc, chuyển định vị thành thông điệp có bằng chứng/nguyên tắc nhất quán, theo dõi brand association/consideration sau triển khai. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "brand_executive_q02",
@@ -607,7 +641,8 @@
         "red_flags": [
           "Liệt kê hoạt động rời rạc, không liên kết với mục tiêu hay nguồn lực."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Dự báo mục tiêu, kênh/SKU, tồn, budget và fulfillment, lập timeline/owner/phụ thuộc; đặt trigger khi tồn/traffic/giao hàng lệch và phương án điều chuyển. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "brand_executive_q03",
@@ -624,7 +659,8 @@
         "red_flags": [
           "Dẫn dắt người trả lời hoặc khái quát kết quả mẫu thuận tiện cho toàn thị trường."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác định câu hỏi quyết định, phân khúc và nguồn; kết hợp dữ liệu thứ cấp với phỏng vấn/khảo sát khi cần, ghi rõ cách lấy mẫu và giới hạn trước khi kết luận. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "brand_executive_q04",
@@ -641,7 +677,8 @@
         "red_flags": [
           "Sao chép nguyên một nội dung lên mọi kênh và cộng reach để gọi là hiệu quả."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "brand_executive_q05",
@@ -658,7 +695,8 @@
         "red_flags": [
           "Chọn lọc số liệu củng cố ý kiến sẵn có, không nêu giới hạn."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "event_executive": [
@@ -677,7 +715,8 @@
         "red_flags": [
           "Không có rehearsal, owner hoặc phương án khi livestream/diễn giả gặp sự cố."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Lập run-of-show theo phút với cue/owner/đầu mối quyết định, rehearsal luồng khách và kỹ thuật; chuẩn bị venue/stream dự phòng, an toàn và xử lý khách mời. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "event_executive_q02",
@@ -694,7 +733,8 @@
         "red_flags": [
           "Chỉ lập danh sách việc mà không xác định phụ thuộc hoặc mốc quyết định."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Dự báo mục tiêu, kênh/SKU, tồn, budget và fulfillment, lập timeline/owner/phụ thuộc; đặt trigger khi tồn/traffic/giao hàng lệch và phương án điều chuyển. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "event_executive_q03",
@@ -711,7 +751,8 @@
         "red_flags": [
           "Cắt đồng loạt hoặc bỏ qua tiền cọc, thuế và phí phát sinh."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tách committed/actual/forecast và fixed/variable, kiểm tra điều kiện đổi/hủy; giữ hạng mục gắn mục tiêu, cập nhật contingency/variance và xin duyệt. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "event_executive_q04",
@@ -728,7 +769,8 @@
         "red_flags": [
           "Chấp nhận điều khoản mà không xác nhận phạm vi, chi phí hoặc trách nhiệm."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ lợi ích/giới hạn mỗi bên, đưa phương án có căn cứ và chốt điều kiện được thống nhất. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "event_executive_q05",
@@ -745,7 +787,8 @@
         "red_flags": [
           "Che giấu sự cố hoặc tự xử lý vượt khả năng mà không bảo đảm an toàn."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "marketing_analyst": [
@@ -764,7 +807,8 @@
         "red_flags": [
           "Diễn giải tăng attribution thành tăng trưởng nhân quả mà không đối chiếu tổng."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chốt metric, kỳ và nguồn; rà missing, trùng, tracking và phân khúc gây lệch; đối chiếu mẫu với nguồn và chỉ kết luận nguyên nhân khi bằng chứng ủng hộ. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "marketing_analyst_q02",
@@ -781,7 +825,8 @@
         "red_flags": [
           "Dùng event mặc định mà không kiểm tra độ bao phủ và trùng lặp."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Định nghĩa event/key event và tham số cho funnel, xác minh UTM/referral/cross-domain; test hành trình, dùng funnel/segment rồi đối chiếu chuyển đổi với nguồn nhận form. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "marketing_analyst_q03",
@@ -798,7 +843,8 @@
         "red_flags": [
           "Bác bỏ quan điểm mà không trình bày phương pháp hoặc độ bất định."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "marketing_analyst_q04",
@@ -815,7 +861,8 @@
         "red_flags": [
           "Nhồi nhiều chart mà không nêu quyết định hoặc định nghĩa chỉ số."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Mở bằng quyết định cần hỗ trợ, mục tiêu/actual/variance và kỳ so sánh; chọn KPI/driver, ghi nguồn/giới hạn/khuyến nghị/owner. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "marketing_analyst_q05",
@@ -832,7 +879,8 @@
         "red_flags": [
           "Sửa trực tiếp dữ liệu gốc hoặc tính CPA trước khi thống nhất mẫu số và đối soát."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "trade_marketing_executive": [
@@ -851,7 +899,8 @@
         "red_flags": [
           "Đếm số POSM gửi đi như bằng chứng trưng bày hoặc hiệu quả bán hàng."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chốt nhóm cửa hàng, vị trí/POSM/checklist và brief nhân viên, xác minh thực thi; đo sell-out so baseline/đối chứng cùng availability, không chỉ số điểm trưng bày. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "trade_marketing_executive_q02",
@@ -868,7 +917,8 @@
         "red_flags": [
           "Suy rộng từ vài cửa hàng thuận tiện hoặc chỉ dựa vào báo cáo đối thủ cũ."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác định câu hỏi quyết định, phân khúc và nguồn; kết hợp dữ liệu thứ cấp với phỏng vấn/khảo sát khi cần, ghi rõ cách lấy mẫu và giới hạn trước khi kết luận. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "trade_marketing_executive_q03",
@@ -885,7 +935,8 @@
         "red_flags": [
           "Báo cáo doanh số tổng mà không trừ chi phí hoặc ước lượng phần tăng thêm."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tách committed/actual/forecast và fixed/variable, kiểm tra điều kiện đổi/hủy; giữ hạng mục gắn mục tiêu, cập nhật contingency/variance và xin duyệt. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "trade_marketing_executive_q04",
@@ -902,7 +953,8 @@
         "red_flags": [
           "Cam kết hỗ trợ vượt thẩm quyền hoặc không chốt điều kiện thực thi bằng văn bản."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ lợi ích/giới hạn mỗi bên, đưa phương án có căn cứ và chốt điều kiện được thống nhất. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "trade_marketing_executive_q05",
@@ -919,7 +971,8 @@
         "red_flags": [
           "Chỉ nói đã gửi email mà không kiểm tra hiểu đúng hoặc tiến độ thực địa."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu chung, vai trò và phụ thuộc, phối hợp các bên rồi theo dõi cam kết. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       }
     ],
     "internal_comms_executive": [
@@ -938,7 +991,8 @@
         "red_flags": [
           "Đồng nhất lượt mở email với việc nhân viên hiểu và làm theo chính sách."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Phân nhóm nhân viên, thống nhất message/FAQ/owner với chủ chính sách, phối hợp kênh/lịch; đo reach và comprehension/adoption, cập nhật nơi hiểu sai. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "internal_comms_executive_q02",
@@ -955,7 +1009,8 @@
         "red_flags": [
           "Dùng ngôn ngữ mơ hồ hoặc né tác động thực tế tới nhân viên."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Xác định độc giả, intent/pain point và hành động mong muốn; lập outline có luận điểm, nguồn và CTA, ghi giọng điệu/tiêu chí biên tập và kiểm chứng claim. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       },
       {
         "id": "internal_comms_executive_q03",
@@ -972,7 +1027,8 @@
         "red_flags": [
           "Chỉ đo số người tham gia tổng thể hoặc giả định một kênh phù hợp mọi người."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu chung, vai trò và phụ thuộc, phối hợp các bên rồi theo dõi cam kết. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "internal_comms_executive_q04",
@@ -989,7 +1045,8 @@
         "red_flags": [
           "Chỉ đọc thông điệp một chiều hoặc hứa điều chưa được xác nhận."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
       },
       {
         "id": "internal_comms_executive_q05",
@@ -1006,7 +1063,8 @@
         "red_flags": [
           "Ưu tiên trang trí hoặc dùng màu/biểu tượng làm sai lệch ý nghĩa quy trình."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Chuyển nội dung thành bước/nhánh và CTA, dùng phân cấp chữ, tương phản/template nhất quán; owner xác nhận dữ kiện, xuất đúng định dạng và thử trên mobile. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
       }
     ]
   }

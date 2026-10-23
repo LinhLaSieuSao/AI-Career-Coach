@@ -17,7 +17,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tách xử lý nghiệp vụ khỏi lớp giao tiếp, dùng kiểu dữ liệu rõ ràng và xử lý ngoại lệ tại ranh giới phù hợp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_java_q02",
@@ -34,7 +35,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tổ chức endpoint, service và repository theo trách nhiệm, cấu hình dependency qua cơ chế DI, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_java_q03",
@@ -51,7 +53,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_java_q04",
@@ -68,7 +71,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định grain và khóa join trước, dùng truy vấn tham số hóa và kiểm tra null/trùng lặp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_java_q05",
@@ -85,7 +89,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_java_q06",
@@ -102,7 +107,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "backend_developer_java_q07",
@@ -119,7 +125,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong dịch vụ Java/Spring Boot xử lý đơn hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ],
     "backend_developer_nodejs": [
@@ -138,7 +145,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến javascript, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
       },
       {
         "id": "backend_developer_nodejs_q02",
@@ -155,7 +163,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ giữ xử lý I/O bất đồng bộ, xác thực đầu vào và chuyển lỗi về middleware tập trung, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_nodejs_q03",
@@ -172,7 +181,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tách router, middleware và handler; xác thực request và chuẩn hóa phản hồi lỗi, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_nodejs_q04",
@@ -189,7 +199,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_nodejs_q05",
@@ -206,7 +217,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn cấu trúc document theo truy vấn chính, tạo index phù hợp và xử lý cập nhật đồng thời có cân nhắc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_nodejs_q06",
@@ -223,7 +235,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định grain và khóa join trước, dùng truy vấn tham số hóa và kiểm tra null/trùng lặp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_nodejs_q07",
@@ -240,7 +253,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       }
     ],
     "backend_developer_net": [
@@ -259,7 +273,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng kiểu dữ liệu rõ ràng, tách nghiệp vụ khỏi hạ tầng và xử lý ngoại lệ tại ranh giới, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_net_q02",
@@ -276,7 +291,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tách controller, service và truy cập dữ liệu; dùng DI, validation và middleware lỗi tập trung, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_net_q03",
@@ -293,7 +309,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng truy vấn tham số hóa, transaction cho cập nhật liên quan và kiểm tra khóa/index theo truy vấn, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_net_q04",
@@ -310,7 +327,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ ánh xạ entity rõ ràng, kiểm soát tracking và transaction; tránh truy vấn dư thừa bằng cách xem SQL sinh ra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_net_q05",
@@ -327,7 +345,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "backend_developer_net_q06",
@@ -344,7 +363,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "backend_developer_net_q07",
@@ -361,7 +381,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong dịch vụ ASP.NET Core quản lý giao dịch, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ],
     "frontend_developer_react": [
@@ -380,7 +401,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng phần tử semantic, liên kết nhãn với điều khiển và biểu diễn trạng thái tải/rỗng/lỗi rõ ràng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_react_q02",
@@ -397,7 +419,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xây bố cục đáp ứng theo nội dung, giữ trạng thái tương tác dễ nhận biết và kiểm tra nhiều kích thước màn hình, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_react_q03",
@@ -414,7 +437,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ kiểm tra dữ liệu ở biên, xử lý bất đồng bộ có kiểm soát và tránh để lỗi bị nuốt, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_react_q04",
@@ -431,7 +455,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia giao diện thành component, giữ state ở nơi có chủ sở hữu rõ ràng và xử lý loading/error/empty, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_react_q05",
@@ -448,7 +473,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ đưa state dùng chung vào store, cập nhật qua action/reducer và giữ logic bất biến, dễ kiểm thử, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_react_q06",
@@ -465,7 +491,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong trang React hiển thị danh sách sản phẩm, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       },
       {
         "id": "frontend_developer_react_q07",
@@ -482,7 +509,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong trang React hiển thị danh sách sản phẩm, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ],
     "frontend_developer_vue": [
@@ -501,7 +529,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng phần tử semantic, liên kết nhãn với điều khiển và biểu diễn trạng thái tải/rỗng/lỗi rõ ràng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_vue_q02",
@@ -518,7 +547,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xây bố cục đáp ứng theo nội dung, giữ trạng thái tương tác dễ nhận biết và kiểm tra nhiều kích thước màn hình, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_vue_q03",
@@ -535,7 +565,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ kiểm tra dữ liệu ở biên, xử lý bất đồng bộ có kiểm soát và tránh để lỗi bị nuốt, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_vue_q04",
@@ -552,7 +583,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tách component theo trách nhiệm, dùng reactive state và xử lý rõ trạng thái tải/lỗi, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_vue_q05",
@@ -569,7 +601,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ đặt state dùng chung trong store, thay đổi có kiểm soát qua mutation/action và tránh nhân bản trạng thái, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_vue_q06",
@@ -586,7 +619,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng Vue quản lý giỏ hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       },
       {
         "id": "frontend_developer_vue_q07",
@@ -603,7 +637,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng Vue quản lý giỏ hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ],
     "frontend_developer_angular": [
@@ -622,7 +657,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng phần tử semantic, liên kết nhãn với điều khiển và biểu diễn trạng thái tải/rỗng/lỗi rõ ràng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_angular_q02",
@@ -639,7 +675,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xây bố cục đáp ứng theo nội dung, giữ trạng thái tương tác dễ nhận biết và kiểm tra nhiều kích thước màn hình, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_angular_q03",
@@ -656,7 +693,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ định nghĩa kiểu cho dữ liệu vào/ra, thu hẹp kiểu ở biên và tránh ép kiểu khi chưa kiểm chứng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_angular_q04",
@@ -673,7 +711,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tách component và service, dùng dependency injection, kiểm tra form và quản lý vòng đời đăng ký, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_angular_q05",
@@ -690,7 +729,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn operator phù hợp cho luồng bất đồng bộ, hủy subscription đúng vòng đời và xử lý lỗi trong stream, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "frontend_developer_angular_q06",
@@ -707,7 +747,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "frontend_developer_angular_q07",
@@ -724,7 +765,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong màn hình Angular theo dõi trạng thái xử lý, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ],
     "fullstack_developer_mern": [
@@ -743,7 +785,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến javascript, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
       },
       {
         "id": "fullstack_developer_mern_q02",
@@ -760,7 +803,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia giao diện thành component, giữ state ở nơi có chủ sở hữu rõ ràng và xử lý loading/error/empty, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "fullstack_developer_mern_q03",
@@ -777,7 +821,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ giữ xử lý I/O bất đồng bộ, xác thực đầu vào và chuyển lỗi về middleware tập trung, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "fullstack_developer_mern_q04",
@@ -794,7 +839,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "fullstack_developer_mern_q05",
@@ -811,7 +857,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn cấu trúc document theo truy vấn chính, tạo index phù hợp và xử lý cập nhật đồng thời có cân nhắc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "fullstack_developer_mern_q06",
@@ -828,7 +875,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tách router, middleware và handler; xác thực request và chuẩn hóa phản hồi lỗi, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "fullstack_developer_mern_q07",
@@ -845,7 +893,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       }
     ],
     "fullstack_developer_net_angular": [
@@ -864,7 +913,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng kiểu dữ liệu rõ ràng, tách nghiệp vụ khỏi hạ tầng và xử lý ngoại lệ tại ranh giới, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "fullstack_developer_net_angular_q02",
@@ -881,7 +931,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tách controller, service và truy cập dữ liệu; dùng DI, validation và middleware lỗi tập trung, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "fullstack_developer_net_angular_q03",
@@ -898,7 +949,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tách component và service, dùng dependency injection, kiểm tra form và quản lý vòng đời đăng ký, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "fullstack_developer_net_angular_q04",
@@ -915,7 +967,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ định nghĩa kiểu cho dữ liệu vào/ra, thu hẹp kiểu ở biên và tránh ép kiểu khi chưa kiểm chứng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "fullstack_developer_net_angular_q05",
@@ -932,7 +985,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng truy vấn tham số hóa, transaction cho cập nhật liên quan và kiểm tra khóa/index theo truy vấn, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "fullstack_developer_net_angular_q06",
@@ -949,7 +1003,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "fullstack_developer_net_angular_q07",
@@ -966,7 +1021,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhiều đầu việc cùng hạn, tôi sẽ xác định mức ưu tiên và phụ thuộc, chia nhỏ việc, thống nhất mốc bàn giao với các bên rồi cập nhật sớm khi có rủi ro. Kết quả cần gắn với tiến độ hoặc chất lượng thực tế có thể kiểm chứng, sau đó nêu cách lập kế hoạch được cải thiện."
       }
     ],
     "mobile_developer_ios": [
@@ -985,7 +1041,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ mô hình hóa trạng thái đồng bộ rõ ràng, xử lý lỗi mạng và cập nhật giao diện trên đúng execution context, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_ios_q02",
@@ -1002,7 +1059,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng API nền tảng phù hợp, xử lý quyền/trạng thái mạng và kiểm tra hành vi trên simulator hoặc thiết bị, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_ios_q03",
@@ -1019,7 +1077,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ cấu hình scheme và build nhất quán, xem diagnostics/log, chạy test và lưu artifact có thể truy vết, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_ios_q04",
@@ -1036,7 +1095,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_ios_q05",
@@ -1053,7 +1113,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_ios_q06",
@@ -1070,7 +1131,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "mobile_developer_ios_q07",
@@ -1087,7 +1149,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng iOS đồng bộ dữ liệu hồ sơ, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ],
     "mobile_developer_android": [
@@ -1106,7 +1169,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng kiểu null-safe, tách nghiệp vụ khỏi UI và quản lý coroutine/lỗi theo vòng đời phù hợp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_android_q02",
@@ -1123,7 +1187,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng component và lifecycle API đúng cách, xử lý quyền/trạng thái vòng đời và kiểm tra trên emulator/thiết bị, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_android_q03",
@@ -1140,7 +1205,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng cấu hình build rõ ràng, đọc logcat và chạy test trên emulator với cấu hình có thể tái lập, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_android_q04",
@@ -1157,7 +1223,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_android_q05",
@@ -1174,7 +1241,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_android_q06",
@@ -1191,7 +1259,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "mobile_developer_android_q07",
@@ -1208,7 +1277,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng Android đặt dịch vụ, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ],
     "mobile_developer_flutter": [
@@ -1227,7 +1297,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng kiểu dữ liệu rõ ràng, xử lý Future/Stream có lỗi và tách logic khỏi giao diện, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_flutter_q02",
@@ -1244,7 +1315,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tách widget theo trách nhiệm, quản lý state nhất quán và xử lý loading/error trong luồng dữ liệu, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_flutter_q03",
@@ -1261,7 +1333,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_flutter_q04",
@@ -1278,7 +1351,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_flutter_q05",
@@ -1295,7 +1369,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định state nào là nguồn sự thật, nơi sở hữu và các chuyển trạng thái hợp lệ; kiểm tra trạng thái biên, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_flutter_q06",
@@ -1312,7 +1387,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "mobile_developer_flutter_q07",
@@ -1329,7 +1405,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng Flutter đa nền tảng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ],
     "mobile_developer_react_native": [
@@ -1348,7 +1425,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến javascript, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
       },
       {
         "id": "mobile_developer_react_native_q02",
@@ -1365,7 +1443,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tách component, quản lý state và kiểm tra khác biệt hành vi giữa nền tảng iOS/Android, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_react_native_q03",
@@ -1382,7 +1461,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_react_native_q04",
@@ -1399,7 +1479,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia giao diện thành component, giữ state ở nơi có chủ sở hữu rõ ràng và xử lý loading/error/empty, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_react_native_q05",
@@ -1416,7 +1497,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ đưa state dùng chung vào store, cập nhật qua action/reducer và giữ logic bất biến, dễ kiểm thử, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_react_native_q06",
@@ -1433,7 +1515,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mobile_developer_react_native_q07",
@@ -1450,7 +1533,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng React Native theo dõi đơn hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ],
     "game_developer_unity": [
@@ -1469,7 +1553,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng kiểu dữ liệu rõ ràng, tách nghiệp vụ khỏi hạ tầng và xử lý ngoại lệ tại ranh giới, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "game_developer_unity_q02",
@@ -1486,7 +1571,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ tách logic gameplay khỏi hiển thị, quản lý vòng đời object và đo hiệu năng trên cảnh đại diện, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "game_developer_unity_q03",
@@ -1503,7 +1589,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy logic, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "game_developer_unity_q04",
@@ -1520,7 +1607,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định hệ tọa độ và quy ước vector trước, kiểm tra phép biến đổi bằng trường hợp đơn giản có kết quả dự đoán được, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "game_developer_unity_q05",
@@ -1537,7 +1625,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "game_developer_unity_q06",
@@ -1554,7 +1643,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định đơn vị, timestep và lực/tương tác cần mô phỏng; kiểm tra tính ổn định qua nhiều timestep, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "game_developer_unity_q07",
@@ -1571,7 +1661,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong game Unity có màn chơi nhiều vật thể tương tác, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ],
     "embedded_software_engineer": [
@@ -1590,7 +1681,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến c++, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "embedded_software_engineer_q02",
@@ -1607,7 +1699,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định chân giao tiếp, timing và trạng thái lỗi; kiểm thử tín hiệu/ngoại vi bằng log hoặc thiết bị đo phù hợp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "embedded_software_engineer_q03",
@@ -1624,7 +1717,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ phân chia task theo thời hạn và ưu tiên, đồng bộ tài nguyên dùng chung, kiểm tra timeout và hành vi khi quá tải, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "embedded_software_engineer_q04",
@@ -1641,7 +1735,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy logic, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "embedded_software_engineer_q05",
@@ -1658,7 +1753,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "embedded_software_engineer_q06",
@@ -1675,7 +1771,8 @@
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định framing, encoding, timeout và phản hồi lỗi; kiểm thử dữ liệu sai định dạng và mất kết nối, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       }
     ]
   }

@@ -17,7 +17,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả."
       },
       {
         "id": "data_analyst_q02",
@@ -34,7 +35,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ mô hình hóa dữ liệu theo fact/dimension với relationship có hướng lọc rõ, đặt phép tính tổng hợp vào measure và chỉ dùng calculated column khi cần giá trị theo từng dòng. Tôi kiểm tra filter context bằng cách đối chiếu các lát cắt trên dashboard với truy vấn hoặc số liệu nguồn."
       },
       {
         "id": "data_analyst_q03",
@@ -51,7 +53,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy phân tích, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "data_analyst_q04",
@@ -68,7 +71,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia xử lý thành hàm/module nhỏ, kiểm tra schema và kiểu dữ liệu ngay khi đọc vào, rồi xử lý bản ghi lỗi theo chính sách có thể truy vết thay vì âm thầm bỏ qua. Tôi dùng test với dữ liệu mẫu cố định để tái lập, đồng thời đo thời gian/bộ nhớ trên đầu vào đại diện."
       },
       {
         "id": "data_analyst_q05",
@@ -85,7 +89,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chuẩn hóa kiểu dữ liệu và khóa trước, kiểm tra ô thiếu/trùng rồi chọn công thức hoặc PivotTable theo phép tổng hợp cần trả lời. Tôi đối chiếu tổng và một số bản ghi với nguồn, đồng thời ghi rõ bộ lọc/giả định để người khác tái kiểm tra."
       },
       {
         "id": "data_analyst_q06",
@@ -102,7 +107,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       }
     ],
     "data_engineer": [
@@ -121,7 +127,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến sql, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "data_engineer_q02",
@@ -138,7 +145,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia xử lý thành hàm/module nhỏ, kiểm tra schema và kiểu dữ liệu ngay khi đọc vào, rồi xử lý bản ghi lỗi theo chính sách có thể truy vết thay vì âm thầm bỏ qua. Tôi dùng test với dữ liệu mẫu cố định để tái lập, đồng thời đo thời gian/bộ nhớ trên đầu vào đại diện."
       },
       {
         "id": "data_engineer_q03",
@@ -155,7 +163,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn partition theo kích thước và cách truy vấn dữ liệu, kiểm tra skew trước khi thêm bước xử lý riêng, đồng thời ưu tiên transformation cần thiết để tránh shuffle không cần thiết. Tôi xem kế hoạch thực thi/thời gian chạy và đối chiếu kết quả với mẫu hoặc tổng kiểm để bảo đảm cả hiệu năng lẫn tính đúng."
       },
       {
         "id": "data_engineer_q04",
@@ -172,7 +181,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ trích xuất theo watermark hoặc checkpoint, biến đổi theo quy tắc có phiên bản rồi nạp theo cách chạy lại không tạo bản ghi trùng. Tôi xử lý late/duplicate record theo khóa và chính sách nghiệp vụ đã thống nhất, sau đó đối soát đầu vào/đầu ra và lưu trạng thái lần chạy."
       },
       {
         "id": "data_engineer_q05",
@@ -189,7 +199,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia DAG theo dependency rõ ràng, đặt retry/timeout có giới hạn và thiết kế task idempotent để backfill không nhân đôi dữ liệu. Tôi cấu hình cảnh báo khi run trễ/thất bại, rồi thử retry/backfill trên phạm vi kiểm soát và kiểm tra log cùng trạng thái đầu ra."
       },
       {
         "id": "data_engineer_q06",
@@ -206,7 +217,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       }
     ],
     "machine_learning_engineer": [
@@ -225,7 +237,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
       },
       {
         "id": "machine_learning_engineer_q02",
@@ -242,7 +255,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết lập baseline và chia train/validation/test theo cấu trúc dữ liệu để tránh leakage, sau đó chọn metric phản ánh chi phí false positive/false negative của bài toán. Tôi tuning trong phạm vi có kiểm soát và dừng khi tiêu chí đã định đạt hoặc kết quả validation không còn cải thiện; quyết định cuối cần được xác nhận trên tập đánh giá chưa dùng để tuning."
       },
       {
         "id": "machine_learning_engineer_q03",
@@ -259,7 +273,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ triển khai Dataset/DataLoader tách biệt, giữ vòng train và eval rõ ràng, chọn loss/optimizer theo bài toán và cố định seed cùng cấu hình cần thiết. Tôi theo dõi metric trên validation, lưu checkpoint kèm cấu hình và kiểm tra khả năng tải lại để tái lập kết quả."
       },
       {
         "id": "machine_learning_engineer_q04",
@@ -276,7 +291,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả."
       },
       {
         "id": "machine_learning_engineer_q05",
@@ -293,7 +309,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ nêu giả định của loss/gradient hoặc xác suất đang dùng và liên hệ chúng với cách mô hình cập nhật hay diễn giải dự đoán. Tôi kiểm tra bằng ví dụ nhỏ hoặc phân tích độ ổn định khi thay đổi đầu vào/tham số, rồi so sánh với hành vi quan sát được của mô hình."
       },
       {
         "id": "machine_learning_engineer_q06",
@@ -310,7 +327,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       }
     ],
     "business_intelligence_analyst": [
@@ -329,7 +347,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả."
       },
       {
         "id": "business_intelligence_analyst_q02",
@@ -346,7 +365,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ mô hình hóa dữ liệu theo fact/dimension với relationship có hướng lọc rõ, đặt phép tính tổng hợp vào measure và chỉ dùng calculated column khi cần giá trị theo từng dòng. Tôi kiểm tra filter context bằng cách đối chiếu các lát cắt trên dashboard với truy vấn hoặc số liệu nguồn."
       },
       {
         "id": "business_intelligence_analyst_q03",
@@ -363,7 +383,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy phân tích, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "business_intelligence_analyst_q04",
@@ -380,7 +401,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chuẩn hóa kiểu dữ liệu và khóa trước, kiểm tra ô thiếu/trùng rồi chọn công thức hoặc PivotTable theo phép tổng hợp cần trả lời. Tôi đối chiếu tổng và một số bản ghi với nguồn, đồng thời ghi rõ bộ lọc/giả định để người khác tái kiểm tra."
       },
       {
         "id": "business_intelligence_analyst_q05",
@@ -397,7 +419,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xác định grain trước, thiết kế fact/dimension và cách lưu lịch sử phù hợp với nhu cầu truy vấn. Incremental load cần có khóa/watermark và xử lý chạy lại an toàn; tôi kiểm tra chất lượng, đối soát nguồn và thử truy vấn tiêu thụ đại diện."
       },
       {
         "id": "business_intelligence_analyst_q06",
@@ -414,7 +437,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong công việc, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ],
     "data_scientist": [
@@ -433,7 +457,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chia xử lý thành hàm/module nhỏ, kiểm tra schema và kiểu dữ liệu ngay khi đọc vào, rồi xử lý bản ghi lỗi theo chính sách có thể truy vết thay vì âm thầm bỏ qua. Tôi dùng test với dữ liệu mẫu cố định để tái lập, đồng thời đo thời gian/bộ nhớ trên đầu vào đại diện."
       },
       {
         "id": "data_scientist_q02",
@@ -450,7 +475,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả."
       },
       {
         "id": "data_scientist_q03",
@@ -467,7 +493,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn phép ước lượng/kiểm định sau khi xác định loại biến, cách lấy mẫu và giả định phân phối; kết quả nên kèm khoảng tin cậy và cân nhắc cỡ mẫu. Tôi kiểm tra phân phối/outlier và trình bày độ bất định, tránh diễn giải quan hệ quan sát được thành quan hệ nhân quả nếu thiết kế không hỗ trợ."
       },
       {
         "id": "data_scientist_q04",
@@ -484,7 +511,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết lập baseline và chia train/validation/test theo cấu trúc dữ liệu để tránh leakage, sau đó chọn metric phản ánh chi phí false positive/false negative của bài toán. Tôi tuning trong phạm vi có kiểm soát và dừng khi tiêu chí đã định đạt hoặc kết quả validation không còn cải thiện; quyết định cuối cần được xác nhận trên tập đánh giá chưa dùng để tuning."
       },
       {
         "id": "data_scientist_q05",
@@ -501,7 +529,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong công việc, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       },
       {
         "id": "data_scientist_q06",
@@ -518,7 +547,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       }
     ],
     "ai_engineer": [
@@ -537,7 +567,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
       },
       {
         "id": "ai_engineer_q02",
@@ -554,7 +585,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến thuật toán học máy, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "ai_engineer_q03",
@@ -571,7 +603,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ triển khai Dataset/DataLoader tách biệt, giữ vòng train và eval rõ ràng, chọn loss/optimizer theo bài toán và cố định seed cùng cấu hình cần thiết. Tôi theo dõi metric trên validation, lưu checkpoint kèm cấu hình và kiểm tra khả năng tải lại để tái lập kết quả."
       },
       {
         "id": "ai_engineer_q04",
@@ -588,7 +621,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ xây input pipeline nhất quán, định nghĩa model/loss phù hợp với mục tiêu và tách train/eval để không đánh giá trên dữ liệu đã tối ưu trực tiếp. Tôi theo dõi metric, lưu checkpoint cùng cấu hình và kiểm tra chạy lại trên cùng dữ liệu để đánh giá mức tái lập."
       },
       {
         "id": "ai_engineer_q05",
@@ -605,7 +639,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chuẩn hóa văn bản tiếng Việt theo một quy tắc nhất quán, xử lý mất cân bằng nhãn trong huấn luyện và chọn metric phù hợp với mục tiêu phân loại. Tôi phân tích lỗi theo loại văn bản/nhãn để phân biệt lỗi tiền xử lý với giới hạn mô hình, rồi xác nhận thay đổi trên tập đánh giá giữ riêng."
       },
       {
         "id": "ai_engineer_q06",
@@ -622,7 +657,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chuẩn hóa kích thước/định dạng ảnh và chỉ augmentation phù hợp với điều kiện vận hành, tránh biến đổi làm sai nhãn. Tôi chọn metric theo chi phí bỏ sót so với phát hiện nhầm, rồi đánh giá riêng theo điều kiện ánh sáng/góc chụp để thấy nơi mô hình còn yếu."
       }
     ],
     "nlp_engineer": [
@@ -641,7 +677,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
       },
       {
         "id": "nlp_engineer_q02",
@@ -658,7 +695,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chuẩn hóa văn bản tiếng Việt theo một quy tắc nhất quán, xử lý mất cân bằng nhãn trong huấn luyện và chọn metric phù hợp với mục tiêu phân loại. Tôi phân tích lỗi theo loại văn bản/nhãn để phân biệt lỗi tiền xử lý với giới hạn mô hình, rồi xác nhận thay đổi trên tập đánh giá giữ riêng."
       },
       {
         "id": "nlp_engineer_q03",
@@ -675,7 +713,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ triển khai Dataset/DataLoader tách biệt, giữ vòng train và eval rõ ràng, chọn loss/optimizer theo bài toán và cố định seed cùng cấu hình cần thiết. Tôi theo dõi metric trên validation, lưu checkpoint kèm cấu hình và kiểm tra khả năng tải lại để tái lập kết quả."
       },
       {
         "id": "nlp_engineer_q04",
@@ -692,7 +731,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết lập baseline và chia train/validation/test theo cấu trúc dữ liệu để tránh leakage, sau đó chọn metric phản ánh chi phí false positive/false negative của bài toán. Tôi tuning trong phạm vi có kiểm soát và dừng khi tiêu chí đã định đạt hoặc kết quả validation không còn cải thiện; quyết định cuối cần được xác nhận trên tập đánh giá chưa dùng để tuning."
       },
       {
         "id": "nlp_engineer_q05",
@@ -709,7 +749,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn tokenizer và giới hạn context phù hợp với văn bản, fine-tune trên split tránh leakage và theo dõi overfit giữa train/validation. Tôi batching theo độ dài khi phù hợp, rồi đánh giá metric và lỗi theo lát cắt dữ liệu để xem cải thiện có đồng đều không."
       },
       {
         "id": "nlp_engineer_q06",
@@ -726,7 +767,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       }
     ],
     "computer_vision_engineer": [
@@ -745,7 +787,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
       },
       {
         "id": "computer_vision_engineer_q02",
@@ -762,7 +805,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chuẩn hóa kích thước/định dạng ảnh và chỉ augmentation phù hợp với điều kiện vận hành, tránh biến đổi làm sai nhãn. Tôi chọn metric theo chi phí bỏ sót so với phát hiện nhầm, rồi đánh giá riêng theo điều kiện ánh sáng/góc chụp để thấy nơi mô hình còn yếu."
       },
       {
         "id": "computer_vision_engineer_q03",
@@ -779,7 +823,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ triển khai Dataset/DataLoader tách biệt, giữ vòng train và eval rõ ràng, chọn loss/optimizer theo bài toán và cố định seed cùng cấu hình cần thiết. Tôi theo dõi metric trên validation, lưu checkpoint kèm cấu hình và kiểm tra khả năng tải lại để tái lập kết quả."
       },
       {
         "id": "computer_vision_engineer_q04",
@@ -796,7 +841,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ kiểm tra ảnh đọc vào có hợp lệ không, chuẩn hóa màu/kích thước theo hợp đồng đầu vào rồi áp dụng phép biến đổi nhất quán với tọa độ cần trả về. Tôi xử lý rõ file hỏng/định dạng lạ và kiểm tra kích thước, màu cùng tọa độ đầu ra trên ảnh mẫu đã biết."
       },
       {
         "id": "computer_vision_engineer_q05",
@@ -813,7 +859,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết lập baseline và chia train/validation/test theo cấu trúc dữ liệu để tránh leakage, sau đó chọn metric phản ánh chi phí false positive/false negative của bài toán. Tôi tuning trong phạm vi có kiểm soát và dừng khi tiêu chí đã định đạt hoặc kết quả validation không còn cải thiện; quyết định cuối cần được xác nhận trên tập đánh giá chưa dùng để tuning."
       },
       {
         "id": "computer_vision_engineer_q06",
@@ -830,7 +877,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       }
     ],
     "mlops_engineer": [
@@ -849,7 +897,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
       },
       {
         "id": "mlops_engineer_q02",
@@ -866,7 +915,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng image nhỏ có version, cấu hình runtime tường minh và kiểm tra health/resource, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
       },
       {
         "id": "mlops_engineer_q03",
@@ -883,7 +933,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ thiết kế pipeline build-test-package-deploy tạo artifact có phiên bản, chỉ promotion khi kiểm tra chất lượng và điều kiện môi trường đạt. Triển khai theo rollout có quan sát, giữ artifact/revision ổn định để rollback, và kiểm tra đường rollback trước khi cần dùng."
       },
       {
         "id": "mlops_engineer_q04",
@@ -900,7 +951,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ dùng Deployment để quản lý replica và rollout, Service để định tuyến tới pod khỏe; readiness/liveness probe cần phản ánh khả năng nhận tải và tình trạng tiến trình. Tôi đặt requests/limits theo quan sát tải, theo dõi event/metric trong rollout và rollback revision nếu pod lỗi hoặc tín hiệu sức khỏe xấu."
       },
       {
         "id": "mlops_engineer_q05",
@@ -917,7 +969,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn dịch vụ lưu trữ/tính toán theo yêu cầu tải và khả năng vận hành, giới hạn IAM theo quyền tối thiểu, bật mã hóa và theo dõi chi phí theo tài nguyên. Tôi xác minh quyền bằng danh tính/luồng truy cập dự kiến và thử quy trình khôi phục dữ liệu hoặc cấu hình trong phạm vi an toàn."
       },
       {
         "id": "mlops_engineer_q06",
@@ -934,7 +987,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       }
     ],
     "data_architect": [
@@ -953,7 +1007,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến data warehouse, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
       },
       {
         "id": "data_architect_q02",
@@ -970,7 +1025,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả."
       },
       {
         "id": "data_architect_q03",
@@ -987,7 +1043,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ vẽ ranh giới thành phần và đường đi dữ liệu, rồi chọn phương án dựa trên yêu cầu độ trễ, khả dụng và chi phí thay vì giả định một thiết kế luôn tối ưu. Tôi nêu failure mode, cách giới hạn ảnh hưởng và tín hiệu đo SLO để xác nhận kiến trúc đáp ứng mục tiêu đã thống nhất."
       },
       {
         "id": "data_architect_q04",
@@ -1004,7 +1061,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ trích xuất theo watermark hoặc checkpoint, biến đổi theo quy tắc có phiên bản rồi nạp theo cách chạy lại không tạo bản ghi trùng. Tôi xử lý late/duplicate record theo khóa và chính sách nghiệp vụ đã thống nhất, sau đó đối soát đầu vào/đầu ra và lưu trạng thái lần chạy."
       },
       {
         "id": "data_architect_q05",
@@ -1021,7 +1079,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Tôi sẽ chọn partition theo kích thước và cách truy vấn dữ liệu, kiểm tra skew trước khi thêm bước xử lý riêng, đồng thời ưu tiên transformation cần thiết để tránh shuffle không cần thiết. Tôi xem kế hoạch thực thi/thời gian chạy và đối chiếu kết quả với mẫu hoặc tổng kiểm để bảo đảm cả hiệu năng lẫn tính đúng."
       },
       {
         "id": "data_architect_q06",
@@ -1038,7 +1097,8 @@
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
-        "time_minutes": 4
+        "time_minutes": 4,
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong công việc, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
       }
     ]
   }

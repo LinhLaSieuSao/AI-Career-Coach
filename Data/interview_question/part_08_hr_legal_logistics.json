@@ -17,7 +17,8 @@
         "red_flags": [
           "Chốt xử lý thương hiệu nhà tuyển dụng theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Tôi sẽ xác định giao dịch/kỳ và hồ sơ nguồn, đối chiếu với sổ hoặc hệ thống liên quan rồi truy nguyên chênh lệch theo đối tượng. Tôi ghi căn cứ, đánh giá ảnh hưởng và xin phê duyệt/ý kiến chuyên môn nếu cách xử lý chưa rõ; sau đó đối chiếu lại kết quả và lưu dấu vết. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "employer_branding_executive_q02",
@@ -34,7 +35,8 @@
         "red_flags": [
           "Chốt xử lý viết nội dung theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Tôi sẽ xác định giao dịch/kỳ và hồ sơ nguồn, đối chiếu với sổ hoặc hệ thống liên quan rồi truy nguyên chênh lệch theo đối tượng. Tôi ghi căn cứ, đánh giá ảnh hưởng và xin phê duyệt/ý kiến chuyên môn nếu cách xử lý chưa rõ; sau đó đối chiếu lại kết quả và lưu dấu vết. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "employer_branding_executive_q03",
@@ -51,7 +53,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống chiến dịch tuyển dụng cho vị trí khó tuyển bị ít hồ sơ phù hợp"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "employer_branding_executive_q04",
@@ -68,7 +71,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống chiến dịch tuyển dụng cho vị trí khó tuyển bị ít hồ sơ phù hợp"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách làm rõ mục tiêu và vai trò cá nhân, kiểm tra thông tin, phối hợp đúng đầu mối và ghi nhận quyết định. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "employer_branding_executive_q05",
@@ -85,7 +89,8 @@
         "red_flags": [
           "Chốt xử lý truyền thông nội bộ theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Tôi sẽ xác định giao dịch/kỳ và hồ sơ nguồn, đối chiếu với sổ hoặc hệ thống liên quan rồi truy nguyên chênh lệch theo đối tượng. Tôi ghi căn cứ, đánh giá ảnh hưởng và xin phê duyệt/ý kiến chuyên môn nếu cách xử lý chưa rõ; sau đó đối chiếu lại kết quả và lưu dấu vết. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       }
     ],
     "hr_executive": [
@@ -104,7 +109,8 @@
         "red_flags": [
           "Chốt xử lý quản lý nhân sự theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đối chiếu hồ sơ nhân viên, hợp đồng, trạng thái và phê duyệt; kiểm soát quyền truy cập, cập nhật nhất quán giữa hệ thống và lưu dấu vết thay đổi. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "hr_executive_q02",
@@ -121,7 +127,8 @@
         "red_flags": [
           "Chốt xử lý luật lao động theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Xác định quan hệ lao động, loại hồ sơ và thời điểm phát sinh; đối chiếu văn bản hiện hành, hợp đồng/nội quy và quy trình nội bộ, xin rà soát pháp lý khi chưa rõ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "hr_executive_q03",
@@ -138,7 +145,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống nhân viên nghỉ việc và hồ sơ biến động cần xử lý đồng thời"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "hr_executive_q04",
@@ -155,7 +163,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống nhân viên nghỉ việc và hồ sơ biến động cần xử lý đồng thời"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "hr_executive_q05",
@@ -172,7 +181,8 @@
         "red_flags": [
           "Chốt xử lý tuyển dụng theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Làm rõ yêu cầu vị trí, tiêu chí đánh giá và timeline với hiring manager; chọn kênh phù hợp, sàng lọc theo tiêu chí nhất quán và theo dõi funnel/chất lượng tuyển. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       }
     ],
     "recruitment_specialist": [
@@ -191,7 +201,8 @@
         "red_flags": [
           "Chốt xử lý tuyển dụng theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Làm rõ yêu cầu vị trí, tiêu chí đánh giá và timeline với hiring manager; chọn kênh phù hợp, sàng lọc theo tiêu chí nhất quán và theo dõi funnel/chất lượng tuyển. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "recruitment_specialist_q02",
@@ -208,7 +219,8 @@
         "red_flags": [
           "Chốt xử lý tìm kiếm ứng viên theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Chuyển yêu cầu thành tiêu chí must-have/nice-to-have, tìm qua kênh phù hợp và xác minh thông tin nghề nghiệp liên quan; theo dõi phản hồi và điều chỉnh từ nguồn ứng viên đạt chuẩn. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "recruitment_specialist_q03",
@@ -225,7 +237,8 @@
         "red_flags": [
           "Chốt xử lý kỹ năng phỏng vấn theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Dùng câu hỏi gắn tiêu chí và hành vi quan sát được, hỏi tiếp để làm rõ ví dụ thay vì dẫn dắt; ghi bằng chứng và chấm độc lập theo rubric trước khi trao đổi hội đồng. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "recruitment_specialist_q04",
@@ -242,7 +255,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống vị trí chuyên môn khan hiếm cần tuyển trong thời hạn ngắn"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "recruitment_specialist_q05",
@@ -259,7 +273,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống vị trí chuyên môn khan hiếm cần tuyển trong thời hạn ngắn"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách làm rõ lợi ích/giới hạn của các bên, đưa phương án có căn cứ và ghi nhận điều kiện đã thống nhất. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       }
     ],
     "cb_specialist": [
@@ -278,7 +293,8 @@
         "red_flags": [
           "Chốt xử lý tính lương theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đối chiếu hợp đồng/mức lương, công, phép, phụ cấp, khấu trừ và dữ liệu thay đổi đã duyệt; chạy bảng lương thử, kiểm tra tổng/ngoại lệ và đối chiếu kỳ trước trước khi chốt. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "cb_specialist_q02",
@@ -295,7 +311,8 @@
         "red_flags": [
           "Chốt xử lý luật lao động theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Xác định quan hệ lao động, loại hồ sơ và thời điểm phát sinh; đối chiếu văn bản hiện hành, hợp đồng/nội quy và quy trình nội bộ, xin rà soát pháp lý khi chưa rõ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "cb_specialist_q03",
@@ -312,7 +329,8 @@
         "red_flags": [
           "Chốt xử lý bảo hiểm xã hội theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đối chiếu hồ sơ lao động, mức đóng, kỳ và biến động tăng/giảm với dữ liệu kê khai; xác minh chênh lệch và căn cứ đang áp dụng trước khi gửi điều chỉnh. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "cb_specialist_q04",
@@ -329,7 +347,8 @@
         "red_flags": [
           "Chốt xử lý excel theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "cb_specialist_q05",
@@ -346,7 +365,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống kỳ chốt lương có thay đổi công, phụ cấp và dữ liệu bảo hiểm"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "cb_specialist_q06",
@@ -363,7 +383,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống kỳ chốt lương có thay đổi công, phụ cấp và dữ liệu bảo hiểm"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       }
     ],
     "ld_specialist": [
@@ -382,7 +403,8 @@
         "red_flags": [
           "Chốt xử lý đào tạo và phát triển theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Xác định khoảng trống năng lực từ yêu cầu công việc/phản hồi, chọn hình thức đào tạo phù hợp và tiêu chí đầu ra; đánh giá học tập rồi kiểm tra áp dụng vào công việc. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "ld_specialist_q02",
@@ -399,7 +421,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống chương trình đào tạo mới cần đáp ứng khoảng trống năng lực và ngân sách"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách làm rõ mục tiêu và vai trò cá nhân, kiểm tra thông tin, phối hợp đúng đầu mối và ghi nhận quyết định. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "ld_specialist_q03",
@@ -416,7 +439,8 @@
         "red_flags": [
           "Chốt xử lý lập kế hoạch đào tạo theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Xác định đối tượng, năng lực cần đạt, nội dung, giảng viên, lịch và ngân sách; có phương án thay thế khi thiếu người/thời gian, đo hoàn thành và mức áp dụng sau khóa. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "ld_specialist_q04",
@@ -433,7 +457,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống chương trình đào tạo mới cần đáp ứng khoảng trống năng lực và ngân sách"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "ld_specialist_q05",
@@ -450,7 +475,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống chương trình đào tạo mới cần đáp ứng khoảng trống năng lực và ngân sách"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách làm rõ mục tiêu và vai trò cá nhân, kiểm tra thông tin, phối hợp đúng đầu mối và ghi nhận quyết định. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       }
     ],
     "hr_manager": [
@@ -469,7 +495,8 @@
         "red_flags": [
           "Chốt xử lý quản lý nhân sự theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đối chiếu hồ sơ nhân viên, hợp đồng, trạng thái và phê duyệt; kiểm soát quyền truy cập, cập nhật nhất quán giữa hệ thống và lưu dấu vết thay đổi. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "hr_manager_q02",
@@ -486,7 +513,8 @@
         "red_flags": [
           "Chốt xử lý chiến lược nhân sự theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Liên kết kế hoạch nhân sự với mục tiêu và năng lực cần có; phân tích tuyển dụng, nghỉ việc, cơ cấu và chi phí theo nhóm, xây phương án cùng chỉ số/owner để theo dõi. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "hr_manager_q03",
@@ -503,7 +531,8 @@
         "red_flags": [
           "Chốt xử lý quản lý đội ngũ theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Phân công người rà từng phần hành, thống nhất checklist và hạn chốt; phân tách người lập/người soát xét khi phù hợp, theo dõi ngoại lệ đến khi được xử lý. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "hr_manager_q04",
@@ -520,7 +549,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống đơn vị mở rộng nhanh nhưng tỷ lệ nghỉ việc và thời gian tuyển đều tăng"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "hr_manager_q05",
@@ -537,7 +567,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống đơn vị mở rộng nhanh nhưng tỷ lệ nghỉ việc và thời gian tuyển đều tăng"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       }
     ],
     "admin_executive": [
@@ -556,7 +587,8 @@
         "red_flags": [
           "Chốt xử lý công tác hành chính theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Lập danh mục tài sản/yêu cầu, owner và trạng thái; đối chiếu biên bản bàn giao với kiểm kê thực tế, ưu tiên việc theo hạn/ảnh hưởng và lưu xác nhận xử lý. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "admin_executive_q02",
@@ -573,7 +605,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống đợt kiểm kê tài sản và xử lý yêu cầu hành chính nhiều phòng ban"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "admin_executive_q03",
@@ -590,7 +623,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống đợt kiểm kê tài sản và xử lý yêu cầu hành chính nhiều phòng ban"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "admin_executive_q04",
@@ -607,7 +641,8 @@
         "red_flags": [
           "Chốt xử lý soạn thảo văn bản theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Xác định mục đích, người nhận, căn cứ và thẩm quyền ký; dùng mẫu/phiên bản được duyệt, rà tên/số liệu/ngày/phụ lục và lưu bản phát hành có dấu vết. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "admin_executive_q05",
@@ -624,7 +659,8 @@
         "red_flags": [
           "Chốt xử lý excel theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       }
     ],
     "legal_executive": [
@@ -643,7 +679,8 @@
         "red_flags": [
           "Chốt xử lý tư vấn pháp lý theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Xác định sự kiện, mục tiêu, hợp đồng/tài liệu và luật áp dụng; nêu vấn đề, rủi ro và lựa chọn kèm giả định, xin xác nhận chuyên gia/đầu mối có thẩm quyền trước khi chốt. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "legal_executive_q02",
@@ -660,7 +697,8 @@
         "red_flags": [
           "Chốt xử lý luật doanh nghiệp theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Kiểm tra loại hình doanh nghiệp, thẩm quyền người ký, điều lệ/nghị quyết và văn bản hiện hành áp dụng; ghi căn cứ và xin pháp chế rà soát khi tình tiết hoặc jurisdiction chưa rõ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "legal_executive_q03",
@@ -677,7 +715,8 @@
         "red_flags": [
           "Chốt xử lý soạn thảo hợp đồng theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đưa điều khoản đã thống nhất vào mẫu, rà chủ thể, phạm vi, giá, thanh toán, trách nhiệm, chấm dứt và phụ lục; nội dung ngoài mẫu/chưa rõ chuyển pháp chế, giữ version history. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "legal_executive_q04",
@@ -694,7 +733,8 @@
         "red_flags": [
           "Chốt xử lý rà soát hợp đồng theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "So điều khoản trách nhiệm/chấm dứt với phạm vi, nghĩa vụ, giới hạn và quyền khắc phục; ghi rủi ro, mức độ, phương án sửa và người phê duyệt, đối chiếu các phụ lục/phiên bản. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "legal_executive_q05",
@@ -711,7 +751,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống hợp đồng thương mại có điều khoản trách nhiệm và chấm dứt bất lợi"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "legal_executive_q06",
@@ -728,7 +769,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống hợp đồng thương mại có điều khoản trách nhiệm và chấm dứt bất lợi"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       }
     ],
     "logistics_coordinator": [
@@ -747,7 +789,8 @@
         "red_flags": [
           "Chốt xử lý điều phối vận tải theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đối chiếu booking, tracking, lịch xe, điểm giao và cam kết với khách; xác nhận ETA mới với nhà vận tải, nêu phương án chuyển tải/escalation và cập nhật khách khi thông tin được xác minh. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "logistics_coordinator_q02",
@@ -764,7 +807,8 @@
         "red_flags": [
           "Chốt xử lý excel theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "logistics_coordinator_q03",
@@ -781,7 +825,8 @@
         "red_flags": [
           "Chốt xử lý theo dõi đơn hàng theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đối chiếu mã đơn, trạng thái, scan vận chuyển và ETA giữa hệ thống/nhà vận tải; tìm điểm dừng, cập nhật khách theo dữ liệu xác nhận và lưu owner/next action. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "logistics_coordinator_q04",
@@ -798,7 +843,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống lô hàng giao trễ do nhà vận tải đổi lịch và khách cần cập nhật"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "logistics_coordinator_q05",
@@ -815,7 +861,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống lô hàng giao trễ do nhà vận tải đổi lịch và khách cần cập nhật"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       }
     ],
     "procurement_specialist": [
@@ -834,7 +881,8 @@
         "red_flags": [
           "Chốt xử lý thu mua theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Xác nhận nhu cầu/spec, tồn, ngân sách và thời điểm cần hàng; so báo giá, lead time, chất lượng và điều khoản, ghi lý do chọn nhà cung cấp cùng phê duyệt. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "procurement_specialist_q02",
@@ -851,7 +899,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống nhà cung cấp báo tăng giá và kéo dài lead time trước kỳ sản xuất"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách làm rõ lợi ích/giới hạn của các bên, đưa phương án có căn cứ và ghi nhận điều kiện đã thống nhất. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "procurement_specialist_q03",
@@ -868,7 +917,8 @@
         "red_flags": [
           "Chốt xử lý đánh giá nhà cung cấp theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đánh giá chất lượng, giao hàng, giá, năng lực và rủi ro theo tiêu chí đã thống nhất; xác minh bằng dữ liệu giao dịch/audit, ghi corrective action và theo dõi đóng vấn đề. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "procurement_specialist_q04",
@@ -885,7 +935,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống nhà cung cấp báo tăng giá và kéo dài lead time trước kỳ sản xuất"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "procurement_specialist_q05",
@@ -902,7 +953,8 @@
         "red_flags": [
           "Chốt xử lý quản lý hợp đồng theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Theo dõi phạm vi, giá, mốc, SLA, thay đổi và nghĩa vụ hai bên; khi nhà cung cấp đổi giá/lead time, đối chiếu điều khoản và phê duyệt trước khi cập nhật PO. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       }
     ],
     "import_export_executive": [
@@ -921,7 +973,8 @@
         "red_flags": [
           "Chốt xử lý nghiệp vụ xuất nhập khẩu theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đối chiếu invoice, packing list, booking, PO và dữ liệu lô hàng về mô tả, số lượng, trọng lượng, bên liên quan và lịch; yêu cầu sửa chứng từ nguồn trước khi khai/gửi. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "import_export_executive_q02",
@@ -938,7 +991,8 @@
         "red_flags": [
           "Chốt xử lý chứng từ xuất nhập khẩu theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Rà tính nhất quán giữa invoice, packing list, vận đơn/booking và chứng từ liên quan, kiểm tra trường bắt buộc theo tuyến/giao dịch; lưu bản sửa và xác nhận với bên phát hành. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "import_export_executive_q03",
@@ -955,7 +1009,8 @@
         "red_flags": [
           "Chốt xử lý incoterms theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Xác nhận phiên bản/điều kiện được ghi trong hợp đồng và địa điểm chỉ định; làm rõ điểm chuyển giao rủi ro, phân chia chi phí/nghĩa vụ chứng từ với các bên, không suy ra điều kiện chỉ từ tên hàng. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "import_export_executive_q04",
@@ -972,7 +1027,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống lô hàng có sai khác giữa invoice, packing list và booking"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "import_export_executive_q05",
@@ -989,7 +1045,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống lô hàng có sai khác giữa invoice, packing list và booking"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       }
     ],
     "warehouse_supervisor": [
@@ -1008,7 +1065,8 @@
         "red_flags": [
           "Chốt xử lý quản lý kho theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đối chiếu WMS/ERP với kiểm kê, vị trí, lô/serial và phiếu nhập-xuất; kiểm soát quyền điều chỉnh, truy nguyên sai lệch và theo dõi cycle count. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "warehouse_supervisor_q02",
@@ -1025,7 +1083,8 @@
         "red_flags": [
           "Chốt xử lý quản lý tồn kho theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Phân tích demand, lead time, tồn khả dụng/an toàn và hàng đang về theo SKU; phân loại thiếu/dư, xác minh forecast và đề xuất bổ sung/chuyển hàng theo mức dịch vụ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "warehouse_supervisor_q03",
@@ -1042,7 +1101,8 @@
         "red_flags": [
           "Chốt xử lý quản lý đội ngũ theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Phân công người rà từng phần hành, thống nhất checklist và hạn chốt; phân tách người lập/người soát xét khi phù hợp, theo dõi ngoại lệ đến khi được xử lý. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "warehouse_supervisor_q04",
@@ -1059,7 +1119,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống kiểm kê phát hiện chênh lệch tồn và đơn xuất đang chờ xử lý"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "warehouse_supervisor_q05",
@@ -1076,7 +1137,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống kiểm kê phát hiện chênh lệch tồn và đơn xuất đang chờ xử lý"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách làm rõ mục tiêu và vai trò cá nhân, kiểm tra thông tin, phối hợp đúng đầu mối và ghi nhận quyết định. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "warehouse_supervisor_q06",
@@ -1093,7 +1155,8 @@
         "red_flags": [
           "Chốt xử lý pccc theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Kiểm tra lối thoát, phương tiện chữa cháy, báo động và hồ sơ kiểm tra theo quy trình cơ sở; phát hiện thiếu/hỏng thì cô lập nguy cơ, báo đầu mối phụ trách và xác nhận khắc phục. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "warehouse_supervisor_q07",
@@ -1110,7 +1173,8 @@
         "red_flags": [
           "Chốt xử lý erp theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đối chiếu giao dịch và master data giữa module, kiểm tra kỳ/trạng thái phê duyệt và log thay đổi; thử lại báo cáo sau khi sửa dữ liệu có phê duyệt. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       }
     ],
     "supply_chain_planner": [
@@ -1129,7 +1193,8 @@
         "red_flags": [
           "Chốt xử lý hoạch định chuỗi cung ứng theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Liên kết forecast, năng lực cung ứng/sản xuất, tồn và nhu cầu theo kỳ; xác định nút thắt, kịch bản thiếu/thừa và owner cho hành động, cập nhật khi giả định đổi. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "supply_chain_planner_q02",
@@ -1146,7 +1211,8 @@
         "red_flags": [
           "Chốt xử lý dự báo nhu cầu theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Chọn lịch sử và biến giải thích phù hợp, xử lý mùa vụ/khuyến mại và ngoại lệ có căn cứ; backtest forecast, theo dõi sai số theo SKU/kỳ và trao đổi giả định với sales/ops. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "supply_chain_planner_q03",
@@ -1163,7 +1229,8 @@
         "red_flags": [
           "Chốt xử lý quản lý tồn kho theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Phân tích demand, lead time, tồn khả dụng/an toàn và hàng đang về theo SKU; phân loại thiếu/dư, xác minh forecast và đề xuất bổ sung/chuyển hàng theo mức dịch vụ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "supply_chain_planner_q04",
@@ -1180,7 +1247,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống nhu cầu thực tế lệch forecast trong khi tồn kho và thời gian cung ứng biến động"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "supply_chain_planner_q05",
@@ -1197,7 +1265,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống nhu cầu thực tế lệch forecast trong khi tồn kho và thời gian cung ứng biến động"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       }
     ],
     "supply_chain_manager": [
@@ -1216,7 +1285,8 @@
         "red_flags": [
           "Chốt xử lý quản lý chuỗi cung ứng theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Theo dõi luồng demand–sourcing–production–delivery, xác định dependency và rủi ro; phối hợp owner cho phương án thay thế, đo service/lead time/cost và cập nhật trade-off. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "supply_chain_manager_q02",
@@ -1233,7 +1303,8 @@
         "red_flags": [
           "Chốt xử lý chiến lược chuỗi cung ứng theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "So phương án mạng lưới/nguồn cung theo mức dịch vụ, chi phí, lead time và khả năng chống gián đoạn; dùng kịch bản/rủi ro, đề xuất pilot hoặc quyết định có tiêu chí theo dõi. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "supply_chain_manager_q03",
@@ -1250,7 +1321,8 @@
         "red_flags": [
           "Chốt xử lý tối ưu hóa chi phí theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Tách cost driver, service impact và khoản cố định/biến đổi; so phương án theo tổng chi phí và trade-off, theo dõi tiết kiệm thực đạt mà không làm giảm tiêu chuẩn dịch vụ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "supply_chain_manager_q04",
@@ -1267,7 +1339,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống gián đoạn nguồn cung ảnh hưởng nhiều nhà máy và khách hàng trọng yếu"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách làm rõ lợi ích/giới hạn của các bên, đưa phương án có căn cứ và ghi nhận điều kiện đã thống nhất. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "supply_chain_manager_q05",
@@ -1284,7 +1357,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống gián đoạn nguồn cung ảnh hưởng nhiều nhà máy và khách hàng trọng yếu"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       }
     ],
     "compliance_officer": [
@@ -1303,7 +1377,8 @@
         "red_flags": [
           "Chốt xử lý kiểm soát tuân thủ theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Xác định yêu cầu áp dụng, chủ quy trình và bằng chứng cần lưu; kiểm tra mẫu giao dịch/kiểm soát, ghi gap và owner/期限 khắc phục, xác minh lại trước đóng phát hiện. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "compliance_officer_q02",
@@ -1320,7 +1395,8 @@
         "red_flags": [
           "Chốt xử lý đánh giá rủi ro theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Mô tả hazard/event, likelihood/consequence và kiểm soát hiện tại; ưu tiên biện pháp theo thứ bậc kiểm soát, gán owner và đánh giá rủi ro còn lại sau xác minh. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "compliance_officer_q03",
@@ -1337,7 +1413,8 @@
         "red_flags": [
           "Chốt xử lý luật doanh nghiệp theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Kiểm tra loại hình doanh nghiệp, thẩm quyền người ký, điều lệ/nghị quyết và văn bản hiện hành áp dụng; ghi căn cứ và xin pháp chế rà soát khi tình tiết hoặc jurisdiction chưa rõ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "compliance_officer_q04",
@@ -1354,7 +1431,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống quy trình mới có dấu hiệu không tuân thủ và hồ sơ kiểm soát chưa đầy đủ"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "compliance_officer_q05",
@@ -1371,7 +1449,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống quy trình mới có dấu hiệu không tuân thủ và hồ sơ kiểm soát chưa đầy đủ"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       }
     ],
     "customs_declaration_specialist": [
@@ -1390,7 +1469,8 @@
         "red_flags": [
           "Chốt xử lý khai báo hải quan theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đối chiếu hồ sơ lô hàng, mã/mô tả/số lượng/trị giá và dữ liệu nguồn; xác nhận phân loại/chính sách với căn cứ hiện hành hoặc chuyên viên phù hợp trước truyền tờ khai, lưu phản hồi và sửa sai có dấu vết. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "customs_declaration_specialist_q02",
@@ -1407,7 +1487,8 @@
         "red_flags": [
           "Chốt xử lý phần mềm ecus/vnaccs theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Đối chiếu dữ liệu chứng từ đã duyệt với trường khai trên phần mềm, kiểm tra cảnh báo/trạng thái phản hồi và mã tham chiếu; không tự sửa thông tin phân loại/thuế khi chưa có căn cứ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "customs_declaration_specialist_q03",
@@ -1424,7 +1505,8 @@
         "red_flags": [
           "Chốt xử lý chứng từ hải quan theo kinh nghiệm cảm tính mà không đối chiếu hồ sơ và quy định liên quan"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Rà invoice, packing list, vận đơn, hợp đồng và tờ khai về chủ thể, mô tả, lượng, trị giá, xuất xứ và ngày; xử lý sai khác từ bên phát hành, lưu phiên bản và đối chiếu kết quả tiếp nhận. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
       },
       {
         "id": "customs_declaration_specialist_q04",
@@ -1441,7 +1523,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống tờ khai bị phân luồng kiểm tra do thông tin hàng hóa chưa nhất quán"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       },
       {
         "id": "customs_declaration_specialist_q05",
@@ -1458,7 +1541,8 @@
         "red_flags": [
           "Chỉ nêu ý định chung, không chỉ rõ hành động cá nhân hoặc kết quả trong tình huống tờ khai bị phân luồng kiểm tra do thông tin hàng hóa chưa nhất quán"
         ],
-        "time_minutes": 3
+        "time_minutes": 3,
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
       }
     ]
   }
