@@ -92,9 +92,20 @@ def format_role(position: dict) -> str:
 
 
 def logo_data_uri() -> str:
-    """Return the supplied logo as an embeddable image."""
-    encoded = base64.b64encode(LOGO_PATH.read_bytes()).decode("ascii")
-    return f"data:image/jpeg;base64,{encoded}"
+    """Return the supplied logo, or a small built-in mark, as an image URI."""
+    if LOGO_PATH.is_file():
+        encoded = base64.b64encode(LOGO_PATH.read_bytes()).decode("ascii")
+        return f"data:image/jpeg;base64,{encoded}"
+
+    fallback_svg = (
+        '<svg xmlns="http://www.w3.org/2000/svg" width="96" height="72" '
+        'viewBox="0 0 96 72"><rect width="96" height="72" rx="18" '
+        'fill="#1556A8"/><text x="48" y="48" text-anchor="middle" '
+        'font-family="Arial,sans-serif" font-size="34" font-weight="700" '
+        'fill="#fff">AI</text></svg>'
+    )
+    encoded = base64.b64encode(fallback_svg.encode("utf-8")).decode("ascii")
+    return f"data:image/svg+xml;base64,{encoded}"
 
 
 def display_skill(skill: str) -> str:
