@@ -1,21 +1,17 @@
-# Sử dụng image Python 3.13 chính thức, bản siêu nhẹ
-FROM python:3.13-slim
-
-# Đặt thư mục làm việc bên trong container
+FROM python:3.12-slim
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    STREAMLIT_SERVER_HEADLESS=true \
+    STREAMLIT_SERVER_ADDRESS=0.0.0.0 \
+    STREAMLIT_SERVER_PORT=8501
 WORKDIR /app
-
-# Copy tệp yêu cầu môi trường vào trước
 COPY requirements.txt .
-
-# Cài đặt các thư viện (bổ sung python-docx nếu requirements chưa có)
-RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install --no-cache-dir python-docx
-
-# Copy toàn bộ mã nguồn vào container
-COPY . .
-
-# Mở cổng 8501 cho giao diện Streamlit
+RUN python -m pip install --no-cache-dir --upgrade pip \
+    && python -m pip install --no-cache-dir -r requirements.txt \
+    && useradd --create-home --uid 10001 --shell /usr/sbin/nologin appuser
+COPY --chown=appuser:appuser . .
+USER appuser
 EXPOSE 8501
-
-# Lệnh khởi động ứng dụng
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+    CMD python -c "from urllib.request import urlopen; urlopen('http://127.0.0.1:8501/_stcore/health', timeout=3)" || exit 1
+CMD ["python", "-m", "streamlit", "run", "app.py"]
