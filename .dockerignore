@@ -1,0 +1,13 @@
+.git/
+.github/
+venv/
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+.env.*
+env.txt
+Screen_shot/
+tests/
+Data/cv_data_engineering/
+.streamlit/secrets.toml
