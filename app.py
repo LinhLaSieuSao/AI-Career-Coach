@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import base64
 import json
-from io import BytesIO
 from pathlib import Path
 from uuid import uuid4
 
@@ -13,7 +12,7 @@ import streamlit as st
 from modules import (
     build_profile,
     calculate_match_score,
-    extract_text_from_pdf,
+    extract_text,
     get_question_feedback,
     get_questions,
     get_course_recommendations,
@@ -309,7 +308,11 @@ def render_toolkit() -> None:
             role_ids,
             format_func=lambda role_id: format_role(role_by_id[role_id]),
         )
-        uploaded_cv = st.file_uploader("Tải CV định dạng PDF (không bắt buộc)", type=["pdf"])
+        uploaded_cv = st.file_uploader(
+            "Tải CV định dạng PDF hoặc DOCX (không bắt buộc)",
+            type=["pdf", "docx"],
+            help="PDF cần có lớp văn bản; PDF scan dạng ảnh chưa được OCR.",
+        )
         job_description = st.text_area("Mô tả công việc cần đối chiếu (không bắt buộc)")
         submitted = st.form_submit_button("Tạo hồ sơ nghề nghiệp")
     if submitted:
@@ -319,12 +322,29 @@ def render_toolkit() -> None:
         )
         st.session_state["match_score"] = None
         st.session_state["match_error"] = None
-        if uploaded_cv or job_description.strip():
-            cv_text = extract_text_from_pdf(BytesIO(uploaded_cv.getvalue())) if uploaded_cv else ""
+        st.session_state["cv_extraction"] = None
+        if uploaded_cv:
             try:
-                st.session_state["match_score"] = calculate_match_score(cv_text, job_description)
+                cv_text = extract_text(uploaded_cv)
+                if not cv_text.strip():
+                    raise ValueError(
+                        "Không trích xuất được văn bản từ CV. Có thể PDF là bản scan "
+                        "hoặc tệp bị lỗi."
+                    )
+                st.session_state["cv_extraction"] = {
+                    "filename": uploaded_cv.name,
+                    "text": cv_text,
+                }
+                if job_description.strip():
+                    st.session_state["match_score"] = calculate_match_score(
+                        cv_text, job_description
+                    )
             except ValueError as exc:
                 st.session_state["match_error"] = str(exc)
+        elif job_description.strip():
+            st.session_state["match_error"] = (
+                "Hãy tải lên CV để tính mức độ phù hợp với mô tả công việc."
+            )
 
     profile = st.session_state.get("profile_result")
     if not profile:
@@ -339,6 +359,22 @@ def render_toolkit() -> None:
         st.error(f"Không thể tính mức độ phù hợp giữa CV và mô tả công việc: {st.session_state['match_error']}")
     elif st.session_state.get("match_score") is not None:
         st.metric("Mức độ phù hợp giữa CV và mô tả công việc", f"{st.session_state['match_score']}%")
+        st.caption("Điểm phản ánh độ tương đồng từ ngữ giữa CV và mô tả công việc.")
+
+    cv_extraction = st.session_state.get("cv_extraction")
+    if cv_extraction:
+        extracted_text = cv_extraction["text"]
+        if not job_description.strip() and st.session_state.get("match_error") is None:
+            st.info("Đã trích xuất CV. Thêm mô tả công việc để tính độ tương đồng.")
+        with st.expander(f"Văn bản đã trích xuất · {cv_extraction['filename']}"):
+            st.caption(f"{len(extracted_text):,} ký tự")
+            st.text_area(
+                "Nội dung CV",
+                value=extracted_text,
+                height=260,
+                disabled=True,
+                label_visibility="collapsed",
+            )
 
     for index, item in enumerate(profile["moved"]):
         left, right = st.columns([4, 1])

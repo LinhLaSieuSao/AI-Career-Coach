@@ -32,7 +32,9 @@ def calculate_match_score(cv_text: str, job_description: str) -> float:
     job_description = (job_description or "").strip()
 
     if not cv_text:
-        raise ValueError("CV không có nội dung văn bản. Có thể file là PDF scan.")
+        raise ValueError(
+            "CV không có nội dung văn bản. Có thể đây là PDF scan hoặc file không đọc được."
+        )
     if not job_description:
         raise ValueError("Mô tả công việc đang trống.")
 
