@@ -4,11 +4,15 @@ from __future__ import annotations
 
 import json
 import logging
+import unicodedata
+from collections import Counter
 from pathlib import Path
 
 import pytest
 
 from modules import interview
+from modules.catalog import load_roles
+from modules.skill_extractor import normalize_skill
 
 
 def _question(
@@ -229,3 +233,39 @@ def test_questions_can_be_matched_by_missing_skill_keywords() -> None:
     questions = interview.generate_interview_questions(["SQL"])
     assert questions
     assert any("sql" in question.casefold() or "join" in question.casefold() for question in questions)
+
+
+def test_real_role_id_english_and_vietnamese_names_resolve_same_questions():
+    interview._clear_cache()
+    roles = load_roles()
+    name_counts = Counter(normalize_skill(role["name_vi"]) for role in roles)
+    for role in roles:
+        expected = interview.get_questions(role["id"], n=2, seed=42)
+        assert expected, role["id"]
+        names = [role["name"], f"{role['name_vi']} · {role['name']}"]
+        if name_counts[normalize_skill(role["name_vi"])] == 1:
+            names.append(role["name_vi"])
+        else:
+            with pytest.raises(ValueError, match="bị trùng"):
+                interview.get_questions(role["name_vi"])
+            with pytest.raises(ValueError, match="bị trùng"):
+                interview.generate_interview_questions([], role=role["name_vi"])
+        for name in names:
+            variant = unicodedata.normalize("NFD", f"  {name.upper()}  ")
+            assert interview.get_questions(variant, n=2, seed=42) == expected
+            assert len(interview.generate_interview_questions([], role=variant)) == 2
+    interview._clear_cache()
+
+
+@pytest.mark.parametrize("wrapper", [None, "roles", "positions"])
+def test_role_name_resolution_uses_shared_catalog_formats(
+    question_data, tmp_path, monkeypatch, wrapper
+):
+    roles = [{"id": "first_role", "name": "First Role", "name_vi": "Vai trò đầu"}]
+    path = tmp_path / "roles.json"
+    path.write_text(json.dumps(roles if wrapper is None else {wrapper: roles}), encoding="utf-8")
+    monkeypatch.setattr(interview, "ROLES_FILE", path)
+    interview._clear_cache()
+    expected = interview.get_questions("first_role", seed=17)
+    assert interview.get_questions("FIRST ROLE", seed=17) == expected
+    assert interview.get_questions("Vai trò đầu", seed=17) == expected

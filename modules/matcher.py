@@ -2,15 +2,17 @@
 
 from __future__ import annotations
 
-import json
 from collections.abc import Iterable, Mapping
 from functools import lru_cache
 import math
+import re
 from numbers import Real
 from pathlib import Path
 from typing import Any
 
-from .skill_extractor import build_vocabulary, extract_skills, load_aliases, normalize_skill
+from .catalog import load_roles, load_skill_vocabulary
+from .skill_extractor import extract_skills, load_aliases, normalize_skill
+from .levels import normalize_levels
 
 
 _DATA_DIR = Path(__file__).resolve().parent.parent / "Data"
@@ -19,12 +21,7 @@ _DATA_DIR = Path(__file__).resolve().parent.parent / "Data"
 @lru_cache(maxsize=1)
 def _load_role_catalog() -> list[dict[str, Any]]:
     """Load role data relative to the repository, independent of cwd."""
-    path = _DATA_DIR / "roles.json"
-    with path.open("r", encoding="utf-8") as source:
-        roles = json.load(source)
-    if not isinstance(roles, list) or any(not isinstance(role, dict) for role in roles):
-        raise ValueError(f"Dữ liệu role không hợp lệ trong {path}.")
-    return roles
+    return load_roles(_DATA_DIR / "roles.json")
 
 
 @lru_cache(maxsize=1)
@@ -190,7 +187,7 @@ def match_cv_to_jd(cv_text: str, jd_text: str) -> dict[str, Any]:
         raise ValueError("Mô tả công việc đang trống.")
 
     roles = _load_role_catalog()
-    vocabulary = build_vocabulary(roles)
+    vocabulary = load_skill_vocabulary(roles, data_dir=_DATA_DIR)
     aliases = _load_alias_map()
     cv_skills = extract_skills(cv_text, vocabulary, aliases=aliases)
     jd_skills = extract_skills(jd_text, vocabulary, aliases=aliases)
@@ -211,3 +208,73 @@ def match_cv_to_jd(cv_text: str, jd_text: str) -> dict[str, Any]:
         "matched": matched,
         "missing": missing,
     }
+
+
+def compute_gap(levels: dict[str, int], role: dict) -> dict:
+    """Explicit assessment: every undeclared role skill has current=0 here only."""
+    levels = normalize_levels(levels)
+    if not isinstance(role, Mapping):
+        raise TypeError("role phải là một object/dictionary.")
+    records = _role_skill_records(role, _load_alias_map())
+    items = []
+    total = earned = 0.0
+    scale = max((float(r[2]) for r in records if type(r[3]) is int and r[3] > 0), default=1)
+    for _, skill, weight, required in records:
+        if type(required) is not int or not 0 <= required <= 3:
+            raise ValueError(f"Required level của {skill} phải là int 0–3.")
+        current = levels.get(skill, 0)
+        gap = max(0, required - current)
+        priority = weight * gap
+        if not math.isfinite(priority):
+            raise ValueError("priority vượt phạm vi số hữu hạn.")
+        items.append({"skill": skill, "required": required, "current": current,
+                      "gap": gap, "priority": priority,
+                      "status": "met" if gap == 0 else "missing" if current == 0 else "below_required"})
+        if required > 0:
+            total += float(weight) / scale
+            earned += float(weight) / scale * min(current / required, 1)
+    return {"role_id": role.get("id"), "items": items,
+            "match_percent": min(100.0, max(0.0, round(100 * earned / total, 1))) if total else 0.0,
+            "missing": [item["skill"] for item in items if item["gap"] > 0]}
+
+
+def suggest_roles(profile, top_k=5) -> list[dict]:
+    """Explainable presence/interest heuristic over the local catalog, no network."""
+    if type(top_k) is not int or top_k < 0:
+        raise ValueError("top_k phải là int không âm.")
+    if not isinstance(profile, Mapping):
+        raise TypeError("profile phải là object.")
+    if top_k == 0:
+        return []
+    aliases = _load_alias_map()
+    skills = _candidate_skill_set(profile.get("skills", []), aliases)
+    interests = profile.get("interests") or []
+    if isinstance(interests, str):
+        interests = re.split(r"[,;\n]+", interests)
+    interests = sorted(_candidate_skill_set(interests, aliases))
+    if not skills and not interests:
+        return []
+    results = []
+    for role in _load_role_catalog():
+        match = _build_role_result(skills, role, aliases)
+        texts = [normalize_skill(str(role.get("name", ""))), normalize_skill(str(role.get("name_vi", ""))),
+                 *(s[1] for s in _role_skill_records(role, aliases))]
+        matched_interests = [term for term in interests if any(
+            re.search(r"(?<!\w)" + re.escape(term) + r"(?!\w)", text) for text in texts)]
+        skill_part = match["percent"] / 100
+        interest_part = len(matched_interests) / len(interests) if interests else 0
+        value = .8 * skill_part + .2 * interest_part if skills and interests else skill_part if skills else interest_part
+        score = round(100 * value, 1)
+        if score <= 0:
+            continue
+        reasons = []
+        if match["matched"]:
+            reasons.append("Kỹ năng trùng yêu cầu: " + ", ".join(match["matched"]))
+        if matched_interests:
+            reasons.append("Sở thích có trong tên/yêu cầu role: " + ", ".join(matched_interests))
+        results.append({"role_id": role["id"], "role_name": role.get("name_vi") or role.get("name"),
+                        "score": score, "skill_percent": match["percent"],
+                        "interest_percent": round(100 * interest_part, 1), "matched": match["matched"],
+                        "missing": match["missing"], "matched_interests": matched_interests,
+                        "reasons": reasons, "method": "heuristic"})
+    return sorted(results, key=lambda r: (-r["score"], r["role_id"]))[:top_k]

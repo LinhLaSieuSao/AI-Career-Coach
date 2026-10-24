@@ -8,17 +8,20 @@
         "skill": "sql",
         "level": 3,
         "weight": 3,
-        "question": "Với phân tích hiệu quả chiến dịch và hành vi khách hàng, hãy giải thích cách áp dụng sql: Thiết kế truy vấn có grain rõ ràng, join đúng khóa và xử lý null/duplicate; giải thích cách kiểm tra kết quả bằng đối soát số dòng hoặc tổng kiểm.",
+        "question": "Báo cáo doanh thu theo chiến dịch bị tăng gấp đôi sau khi join orders với campaign_events. Bạn xác định grain/khóa join, xử lý quan hệ nhiều dòng và đối soát kết quả như thế nào?",
         "good_answer_points": [
-          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
-          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
-          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+          "Xác định grain và khóa join trước khi tổng hợp",
+          "Xử lý nhân dòng bằng tổng hợp hoặc khử trùng theo quan hệ",
+          "Đối soát tổng doanh thu và số dòng với nguồn"
         ],
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả."
+        "reference_answer": "Tôi xác định grain một dòng mỗi đơn và khóa order_id ở từng bảng trước khi join. Tôi kiểm tra cardinality, tổng hợp hoặc deduplicate sự kiện về đúng grain để tránh nhân bản doanh thu. Tôi đối soát tổng doanh thu và số dòng với nguồn, thử cả đơn không có sự kiện và khóa null.",
+        "quality": "reviewed",
+        "quality_note": "Đã sửa thành tình huống cụ thể và đối chiếu từng tiêu chí rubric với câu hỏi/nguồn.",
+        "quality_reviewed_at": "2026-10-24"
       },
       {
         "id": "data_analyst_q02",
@@ -26,17 +29,20 @@
         "skill": "power bi",
         "level": 2,
         "weight": 3,
-        "question": "Với phân tích hiệu quả chiến dịch và hành vi khách hàng, hãy giải thích cách áp dụng power bi: Chọn mô hình star schema và relationship phù hợp; phân biệt measure với calculated column; mô tả filter context và cách kiểm tra số liệu dashboard.",
+        "question": "Dashboard Power BI về chiến dịch thay đổi tổng doanh thu khi lọc ngày. Bạn mô hình hóa fact/dimension, lựa chọn measure/calculated column và xác minh filter context ra sao?",
         "good_answer_points": [
-          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
-          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
-          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+          "Mô hình fact/dimension với relationship theo khóa",
+          "Phân biệt measure theo filter context và column theo dòng",
+          "Đối chiếu dashboard khi thay bộ lọc với nguồn/SQL"
         ],
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ mô hình hóa dữ liệu theo fact/dimension với relationship có hướng lọc rõ, đặt phép tính tổng hợp vào measure và chỉ dùng calculated column khi cần giá trị theo từng dòng. Tôi kiểm tra filter context bằng cách đối chiếu các lát cắt trên dashboard với truy vấn hoặc số liệu nguồn."
+        "reference_answer": "Tôi phân tách fact doanh thu và dimension ngày/chiến dịch với relationship theo khóa có hướng lọc rõ. Measure tính khi truy vấn và chịu filter context; calculated column tính cho từng dòng và lưu trong model. Tôi đối soát tổng dashboard theo từng bộ lọc với dữ liệu nguồn hoặc SQL.",
+        "quality": "reviewed",
+        "quality_note": "Đã sửa thành tình huống cụ thể và đối chiếu từng tiêu chí rubric với câu hỏi/nguồn.",
+        "quality_reviewed_at": "2026-10-24"
       },
       {
         "id": "data_analyst_q03",
@@ -54,7 +60,9 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy phân tích, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy phân tích, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "quality": "template",
+        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
       },
       {
         "id": "data_analyst_q04",
@@ -72,7 +80,9 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia xử lý thành hàm/module nhỏ, kiểm tra schema và kiểu dữ liệu ngay khi đọc vào, rồi xử lý bản ghi lỗi theo chính sách có thể truy vết thay vì âm thầm bỏ qua. Tôi dùng test với dữ liệu mẫu cố định để tái lập, đồng thời đo thời gian/bộ nhớ trên đầu vào đại diện."
+        "reference_answer": "Tôi sẽ chia xử lý thành hàm/module nhỏ, kiểm tra schema và kiểu dữ liệu ngay khi đọc vào, rồi xử lý bản ghi lỗi theo chính sách có thể truy vết thay vì âm thầm bỏ qua. Tôi dùng test với dữ liệu mẫu cố định để tái lập, đồng thời đo thời gian/bộ nhớ trên đầu vào đại diện.",
+        "quality": "template",
+        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
       },
       {
         "id": "data_analyst_q05",
@@ -90,7 +100,9 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chuẩn hóa kiểu dữ liệu và khóa trước, kiểm tra ô thiếu/trùng rồi chọn công thức hoặc PivotTable theo phép tổng hợp cần trả lời. Tôi đối chiếu tổng và một số bản ghi với nguồn, đồng thời ghi rõ bộ lọc/giả định để người khác tái kiểm tra."
+        "reference_answer": "Tôi sẽ chuẩn hóa kiểu dữ liệu và khóa trước, kiểm tra ô thiếu/trùng rồi chọn công thức hoặc PivotTable theo phép tổng hợp cần trả lời. Tôi đối chiếu tổng và một số bản ghi với nguồn, đồng thời ghi rõ bộ lọc/giả định để người khác tái kiểm tra.",
+        "quality": "template",
+        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
       },
       {
         "id": "data_analyst_q06",
@@ -108,7 +120,9 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "quality": "template",
+        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
       }
     ],
     "data_engineer": [

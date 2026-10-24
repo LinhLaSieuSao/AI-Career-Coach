@@ -18,7 +18,9 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tách xử lý nghiệp vụ khỏi lớp giao tiếp, dùng kiểu dữ liệu rõ ràng và xử lý ngoại lệ tại ranh giới phù hợp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ tách xử lý nghiệp vụ khỏi lớp giao tiếp, dùng kiểu dữ liệu rõ ràng và xử lý ngoại lệ tại ranh giới phù hợp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "quality": "template",
+        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
       },
       {
         "id": "backend_developer_java_q02",
@@ -26,17 +28,20 @@
         "skill": "spring boot",
         "level": 2,
         "weight": 3,
-        "question": "Trong dịch vụ Java/Spring Boot xử lý đơn hàng, hãy mô tả cách bạn dùng spring boot để triển khai luồng chính; nêu lựa chọn thiết kế, trường hợp lỗi cần xử lý và cách xác nhận kết quả.",
+        "question": "Trong dịch vụ đơn hàng Spring Boot, bạn tách controller/service/repository và inject dependency thế nào? Khi request sai dữ liệu, bạn trả lỗi và kiểm thử luồng này ra sao?",
         "good_answer_points": [
-          "Nêu đúng cơ chế hoặc thành phần cốt lõi của kỹ năng và cách áp dụng vào luồng đã nêu.",
-          "Đưa ra thiết kế cụ thể, gồm dữ liệu/đầu vào, đầu ra và xử lý lỗi hoặc biên.",
-          "Mô tả bước kiểm chứng bằng test, log, truy vấn hoặc chỉ số phù hợp với kỹ năng."
+          "Phân tách controller/service/repository theo trách nhiệm",
+          "Khai báo dependency qua constructor injection",
+          "Xử lý request không hợp lệ và kiểm thử phản hồi lỗi"
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tổ chức endpoint, service và repository theo trách nhiệm, cấu hình dependency qua cơ chế DI, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Controller xử lý HTTP, service giữ nghiệp vụ và repository truy cập dữ liệu. Tôi dùng constructor injection để khai báo dependency và dễ thay bằng test double. Tôi validate request, trả lỗi 400 với nội dung có cấu trúc qua handler phù hợp; test kiểm tra cả luồng hợp lệ và request sai dữ liệu.",
+        "quality": "reviewed",
+        "quality_note": "Đã sửa thành tình huống cụ thể và đối chiếu từng tiêu chí rubric với câu hỏi/nguồn.",
+        "quality_reviewed_at": "2026-10-24"
       },
       {
         "id": "backend_developer_java_q03",
@@ -44,17 +49,20 @@
         "skill": "rest api",
         "level": 3,
         "weight": 3,
-        "question": "Trong dịch vụ Java/Spring Boot xử lý đơn hàng, hãy mô tả cách bạn dùng rest api để triển khai luồng chính; nêu lựa chọn thiết kế, trường hợp lỗi cần xử lý và cách xác nhận kết quả.",
+        "question": "Thiết kế endpoint tạo đơn hàng REST: chọn HTTP method, phản hồi thành công và cách xử lý request không hợp lệ. Bạn kiểm tra client nhận được phản hồi đúng như thế nào?",
         "good_answer_points": [
-          "Nêu đúng cơ chế hoặc thành phần cốt lõi của kỹ năng và cách áp dụng vào luồng đã nêu.",
-          "Đưa ra thiết kế cụ thể, gồm dữ liệu/đầu vào, đầu ra và xử lý lỗi hoặc biên.",
-          "Mô tả bước kiểm chứng bằng test, log, truy vấn hoặc chỉ số phù hợp với kỹ năng."
+          "Dùng POST và phản hồi 201 cho thao tác tạo đơn",
+          "Validate request và phản hồi 400 khi dữ liệu sai",
+          "Kiểm thử status và nội dung response"
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi dùng POST /orders để tạo đơn, trả 201 Created và tham chiếu tài nguyên được tạo. Tôi validate đầu vào, trả 400 kèm thông tin lỗi có cấu trúc khi request sai. Integration test kiểm tra HTTP status, response body và cả trường hợp thành công/lỗi.",
+        "quality": "reviewed",
+        "quality_note": "Đã sửa thành tình huống cụ thể và đối chiếu từng tiêu chí rubric với câu hỏi/nguồn.",
+        "quality_reviewed_at": "2026-10-24"
       },
       {
         "id": "backend_developer_java_q04",
@@ -72,7 +80,9 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xác định grain và khóa join trước, dùng truy vấn tham số hóa và kiểm tra null/trùng lặp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ xác định grain và khóa join trước, dùng truy vấn tham số hóa và kiểm tra null/trùng lặp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "quality": "template",
+        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
       },
       {
         "id": "backend_developer_java_q05",
@@ -90,7 +100,9 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "quality": "template",
+        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
       },
       {
         "id": "backend_developer_java_q06",
@@ -108,7 +120,9 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "quality": "template",
+        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
       },
       {
         "id": "backend_developer_java_q07",
@@ -126,7 +140,9 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong dịch vụ Java/Spring Boot xử lý đơn hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong dịch vụ Java/Spring Boot xử lý đơn hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "quality": "template",
+        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
       }
     ],
     "backend_developer_nodejs": [

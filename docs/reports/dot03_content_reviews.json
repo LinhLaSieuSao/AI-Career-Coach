@@ -1,0 +1,2910 @@
+{
+  "created_at": "2026-10-24T06:26:21.579589+00:00",
+  "method": "Manual content inspection; no inference of content quality from HTTP status.",
+  "unreviewed_records": [
+    {
+      "skill": "giao tiếp",
+      "id": "giao_tiep_001",
+      "url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing"
+    },
+    {
+      "skill": "giải quyết vấn đề",
+      "id": "giai_quyet_van_de_001",
+      "url": "https://openstax.org/books/principles-management/pages/15-1-teamwork-in-the-workplace"
+    },
+    {
+      "skill": "làm việc nhóm",
+      "id": "lam_viec_nhom_001",
+      "url": "https://openstax.org/books/principles-management/pages/15-1-teamwork-in-the-workplace"
+    },
+    {
+      "skill": "tiếng anh chuyên ngành",
+      "id": "tieng_anh_chuyen_nganh_001",
+      "url": "https://learnenglish.britishcouncil.org/"
+    },
+    {
+      "skill": "excel",
+      "id": "excel_001",
+      "url": "https://learn.microsoft.com/training/"
+    },
+    {
+      "skill": "git",
+      "id": "git_001",
+      "url": "https://git-scm.com/doc"
+    },
+    {
+      "skill": "cẩn thận",
+      "id": "can_than_001",
+      "url": "https://openstax.org/books/principles-management/pages/14-1-motivation-direction-and-intensity"
+    },
+    {
+      "skill": "quản lý thời gian",
+      "id": "quan_ly_thoi_gian_001",
+      "url": "https://openstax.org/books/principles-management/pages/1-management-skills-application-exercises"
+    },
+    {
+      "skill": "sql",
+      "id": "sql_001",
+      "url": "https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad"
+    },
+    {
+      "skill": "phân tích dữ liệu",
+      "id": "phan_tich_du_lieu_001",
+      "url": "https://www.kaggle.com/learn"
+    },
+    {
+      "skill": "tư duy phân tích",
+      "id": "tu_duy_phan_tich_001",
+      "url": "https://www.khanacademy.org/math/statistics-probability"
+    },
+    {
+      "skill": "python",
+      "id": "python_001",
+      "url": "https://docs.python.org/3/tutorial/"
+    },
+    {
+      "skill": "sáng tạo",
+      "id": "sang_tao_001",
+      "url": "https://openstax.org/books/principles-management/pages/14-1-motivation-direction-and-intensity"
+    },
+    {
+      "skill": "rest api",
+      "id": "rest_api_001",
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction"
+    },
+    {
+      "skill": "docker",
+      "id": "docker_001",
+      "url": "https://docs.docker.com/get-started/"
+    },
+    {
+      "skill": "thiết kế ui ux",
+      "id": "thiet_ke_ui_ux_001",
+      "url": "https://help.figma.com/hc/en-us/categories/360002042553-Learn-design"
+    },
+    {
+      "skill": "thương lượng",
+      "id": "thuong_luong_001",
+      "url": "https://openstax.org/books/organizational-behavior/pages/14-4-negotiation-behavior"
+    },
+    {
+      "skill": "linux",
+      "id": "linux_001",
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US"
+    },
+    {
+      "skill": "thuyết trình",
+      "id": "thuyet_trinh_001",
+      "url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing"
+    },
+    {
+      "skill": "html",
+      "id": "html_001",
+      "url": "https://developer.mozilla.org/en-US/docs/MDN/Tutorials"
+    },
+    {
+      "skill": "tiếng anh giao tiếp",
+      "id": "tieng_anh_giao_tiep_001",
+      "url": "https://learnenglish.britishcouncil.org/"
+    },
+    {
+      "skill": "css",
+      "id": "css_001",
+      "url": "https://developer.mozilla.org/en-US/docs/MDN/Tutorials"
+    },
+    {
+      "skill": "lập kế hoạch",
+      "id": "lap_ke_hoach_001",
+      "url": "https://openstax.org/books/principles-management/pages/1-management-skills-application-exercises"
+    },
+    {
+      "skill": "xây dựng mối quan hệ",
+      "id": "xay_dung_moi_quan_he_001",
+      "url": "https://openstax.org/books/principles-management/pages/15-1-teamwork-in-the-workplace"
+    },
+    {
+      "skill": "autocad",
+      "id": "autocad_001",
+      "url": "https://www.autodesk.com/learning.autodesk"
+    },
+    {
+      "skill": "aws",
+      "id": "aws_001",
+      "url": "https://skillbuilder.aws/"
+    },
+    {
+      "skill": "jira",
+      "id": "jira_001",
+      "url": "https://www.atlassian.com/agile/tutorials/how-to-do-scrum-with-jira"
+    },
+    {
+      "skill": "erp",
+      "id": "erp_001",
+      "url": "https://learning.sap.com/learning-journeys?trk=public_post_comment-text"
+    },
+    {
+      "skill": "javascript",
+      "id": "javascript_001",
+      "url": "https://developer.mozilla.org/en-US/docs/MDN/Tutorials"
+    },
+    {
+      "skill": "power bi",
+      "id": "power_bi_001",
+      "url": "https://learn.microsoft.com/training/powerplatform/power-bi/"
+    },
+    {
+      "skill": "agile/scrum",
+      "id": "agile_scrum_001",
+      "url": "https://scrumguides.org/scrum-guide.html"
+    },
+    {
+      "skill": "quản lý ngân sách",
+      "id": "quan_ly_ngan_sach_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-1-production-and-operations-management-an-overview"
+    },
+    {
+      "skill": "tư duy logic",
+      "id": "tu_duy_logic_001",
+      "url": "https://www.khanacademy.org/math/statistics-probability"
+    },
+    {
+      "skill": "thuật toán học máy",
+      "id": "thuat_toan_hoc_may_001",
+      "url": "https://www.kaggle.com/learn"
+    },
+    {
+      "skill": "lập báo cáo",
+      "id": "lap_bao_cao_001",
+      "url": "https://learn.microsoft.com/training/powerplatform/power-bi/"
+    },
+    {
+      "skill": "crm",
+      "id": "crm_001",
+      "url": "https://academy.hubspot.com/"
+    },
+    {
+      "skill": "chịu áp lực",
+      "id": "chiu_ap_luc_001",
+      "url": "https://openstax.org/books/principles-management/pages/14-1-motivation-direction-and-intensity"
+    },
+    {
+      "skill": "quản lý đội ngũ",
+      "id": "quan_ly_doi_ngu_001",
+      "url": "https://openstax.org/books/principles-management/pages/15-1-teamwork-in-the-workplace"
+    },
+    {
+      "skill": "lập báo cáo tài chính",
+      "id": "lap_bao_cao_tai_chinh_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "an toàn lao động",
+      "id": "an_toan_lao_dong_001",
+      "url": "https://www.ilo.org/topics-and-sectors/safety-and-health-work"
+    },
+    {
+      "skill": "ci/cd",
+      "id": "ci_cd_001",
+      "url": "https://docs.docker.com/get-started/"
+    },
+    {
+      "skill": "pytorch",
+      "id": "pytorch_001",
+      "url": "https://www.kaggle.com/learn"
+    },
+    {
+      "skill": "kubernetes",
+      "id": "kubernetes_001",
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US"
+    },
+    {
+      "skill": "quản trị mạng",
+      "id": "quan_tri_mang_001",
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US"
+    },
+    {
+      "skill": "figma",
+      "id": "figma_001",
+      "url": "https://help.figma.com/hc/en-us/categories/360002042553-Learn-design"
+    },
+    {
+      "skill": "google analytics",
+      "id": "google_analytics_001",
+      "url": "https://skillshop.withgoogle.com/"
+    },
+    {
+      "skill": "canva",
+      "id": "canva_001",
+      "url": "https://www.canva.com/designschool/"
+    },
+    {
+      "skill": "tổ chức sự kiện",
+      "id": "to_chuc_su_kien_001",
+      "url": "https://openstax.org/books/principles-management/pages/1-management-skills-application-exercises"
+    },
+    {
+      "skill": "quản lý tồn kho",
+      "id": "quan_ly_ton_kho_001",
+      "url": "https://openstax.org/books/principles-management/pages/1-management-skills-application-exercises"
+    },
+    {
+      "skill": "lắng nghe chủ động",
+      "id": "lang_nghe_chu_dong_001",
+      "url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing"
+    },
+    {
+      "skill": "c#",
+      "id": "c_sharp_001",
+      "url": "https://learn.microsoft.com/training/"
+    },
+    {
+      "skill": "reactjs",
+      "id": "reactjs_001",
+      "url": "https://f8.edu.vn/"
+    },
+    {
+      "skill": "typescript",
+      "id": "typescript_001",
+      "url": "https://developer.mozilla.org/en-US/docs/MDN/Tutorials"
+    },
+    {
+      "skill": "thống kê",
+      "id": "thong_ke_001",
+      "url": "https://www.khanacademy.org/math/statistics-probability"
+    },
+    {
+      "skill": "etl",
+      "id": "etl_001",
+      "url": "https://learn.microsoft.com/training/"
+    },
+    {
+      "skill": "data warehouse",
+      "id": "data_warehouse_001",
+      "url": "https://www.kaggle.com/learn"
+    },
+    {
+      "skill": "kiến trúc hệ thống",
+      "id": "kien_truc_he_thong_001",
+      "url": "https://learn.microsoft.com/en-us/training/azure/"
+    },
+    {
+      "skill": "phân tích yêu cầu",
+      "id": "phan_tich_yeu_cau_001",
+      "url": "https://www.atlassian.com/agile/project-management/user-stories"
+    },
+    {
+      "skill": "nghiên cứu người dùng",
+      "id": "nghien_cuu_nguoi_dung_001",
+      "url": "https://help.figma.com/hc/en-us/categories/360002042553-Learn-design"
+    },
+    {
+      "skill": "seo",
+      "id": "seo_001",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+    },
+    {
+      "skill": "capcut",
+      "id": "capcut_001",
+      "url": "https://www.capcut.com/resource/capcut-tutorial-for-beginners"
+    },
+    {
+      "skill": "kiên nhẫn",
+      "id": "kien_nhan_001",
+      "url": "https://openstax.org/books/principles-management/pages/14-1-motivation-direction-and-intensity"
+    },
+    {
+      "skill": "quản lý nhân sự",
+      "id": "quan_ly_nhan_su_001",
+      "url": "https://openstax.org/books/principles-management/pages/1-management-skills-application-exercises"
+    },
+    {
+      "skill": "misa",
+      "id": "misa_001",
+      "url": "https://www.gdt.gov.vn/"
+    },
+    {
+      "skill": "luật kế toán",
+      "id": "luat_ke_toan_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "kế toán thuế",
+      "id": "ke_toan_thue_001",
+      "url": "https://www.gdt.gov.vn/"
+    },
+    {
+      "skill": "quản trị rủi ro",
+      "id": "quan_tri_rui_ro_001",
+      "url": "https://www.ilo.org/topics-and-sectors/safety-and-health-work"
+    },
+    {
+      "skill": "phân tích tài chính",
+      "id": "phan_tich_tai_chinh_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "luật lao động",
+      "id": "luat_lao_dong_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "tuyển dụng",
+      "id": "tuyen_dung_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "sơ cứu cấp cứu",
+      "id": "so_cuu_cap_cuu_001",
+      "url": "https://www.who.int/teams/integrated-health-services/clinical-services-and-systems/emergency-and-critical-care/bec"
+    },
+    {
+      "skill": "java",
+      "id": "java_001",
+      "url": "https://www.freecodecamp.org/news/learn-programming-free-software-development-courses-for-beginners"
+    },
+    {
+      "skill": "nodejs",
+      "id": "nodejs_001",
+      "url": "https://f8.edu.vn/"
+    },
+    {
+      "skill": "expressjs",
+      "id": "expressjs_001",
+      "url": "https://f8.edu.vn/"
+    },
+    {
+      "skill": "mongodb",
+      "id": "mongodb_001",
+      "url": "https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad"
+    },
+    {
+      "skill": "asp.net core",
+      "id": "asp_net_core_001",
+      "url": "https://learn.microsoft.com/training/"
+    },
+    {
+      "skill": "sql server",
+      "id": "sql_server_001",
+      "url": "https://learn.microsoft.com/training/"
+    },
+    {
+      "skill": "redux",
+      "id": "redux_001",
+      "url": "https://f8.edu.vn/"
+    },
+    {
+      "skill": "angular",
+      "id": "angular_001",
+      "url": "https://developer.mozilla.org/en-US/docs/MDN/Tutorials"
+    },
+    {
+      "skill": "lập trình android",
+      "id": "lap_trinh_android_001",
+      "url": "https://developer.android.com/courses"
+    },
+    {
+      "skill": "lập trình ios",
+      "id": "lap_trinh_ios_001",
+      "url": "https://developer.apple.com/documentation/xcode"
+    },
+    {
+      "skill": "c++",
+      "id": "c_plus_plus_001",
+      "url": "https://www.freecodecamp.org/news/learn-programming-free-software-development-courses-for-beginners"
+    },
+    {
+      "skill": "tư duy kiểm thử",
+      "id": "tu_duy_kiem_thu_001",
+      "url": "https://www.selenium.dev/documentation/"
+    },
+    {
+      "skill": "api testing",
+      "id": "api_testing_001",
+      "url": "https://learning.postman.com/docs/"
+    },
+    {
+      "skill": "tableau",
+      "id": "tableau_001",
+      "url": "https://www.tableau.com/learn/training"
+    },
+    {
+      "skill": "apache spark",
+      "id": "apache_spark_001",
+      "url": "https://www.kaggle.com/learn"
+    },
+    {
+      "skill": "toán học",
+      "id": "toan_hoc_001",
+      "url": "https://www.khanacademy.org/math/statistics-probability"
+    },
+    {
+      "skill": "nlp",
+      "id": "nlp_001",
+      "url": "https://huggingface.co/learn/nlp-course/chapter1/1"
+    },
+    {
+      "skill": "computer vision",
+      "id": "computer_vision_001",
+      "url": "https://github.com/opencv/opencv/wiki/"
+    },
+    {
+      "skill": "terraform",
+      "id": "terraform_001",
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US"
+    },
+    {
+      "skill": "bảo mật hệ thống",
+      "id": "bao_mat_he_thong_001",
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US"
+    },
+    {
+      "skill": "firewall",
+      "id": "firewall_001",
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US"
+    },
+    {
+      "skill": "đánh giá lỗ hổng",
+      "id": "danh_gia_lo_hong_001",
+      "url": "https://owasp.org/www-project-web-security-testing-guide/"
+    },
+    {
+      "skill": "mạng máy tính",
+      "id": "mang_may_tinh_001",
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US"
+    },
+    {
+      "skill": "tiếng anh cơ bản",
+      "id": "tieng_anh_co_ban_001",
+      "url": "https://learnenglish.britishcouncil.org/"
+    },
+    {
+      "skill": "quản lý sản phẩm",
+      "id": "quan_ly_san_pham_001",
+      "url": "https://openstax.org/books/principles-management/pages/1-management-skills-application-exercises"
+    },
+    {
+      "skill": "thiết kế api",
+      "id": "thiet_ke_api_001",
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction"
+    },
+    {
+      "skill": "quản lý dự án",
+      "id": "quan_ly_du_an_001",
+      "url": "https://openstax.org/books/principles-management/pages/1-management-skills-application-exercises"
+    },
+    {
+      "skill": "prototyping",
+      "id": "prototyping_001",
+      "url": "https://help.figma.com/hc/en-us/categories/360002042553-Learn-design"
+    },
+    {
+      "skill": "tư duy thiết kế",
+      "id": "tu_duy_thiet_ke_001",
+      "url": "https://help.figma.com/hc/en-us/categories/360002042553-Learn-design"
+    },
+    {
+      "skill": "facebook ads",
+      "id": "facebook_ads_001",
+      "url": "https://www.facebook.com/business/learn"
+    },
+    {
+      "skill": "google ads",
+      "id": "google_ads_001",
+      "url": "https://skillshop.withgoogle.com/"
+    },
+    {
+      "skill": "nghiên cứu từ khóa",
+      "id": "nghien_cuu_tu_khoa_001",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+    },
+    {
+      "skill": "tiktok",
+      "id": "tiktok_001",
+      "url": "https://www.tiktokacademy.com/"
+    },
+    {
+      "skill": "bắt trend",
+      "id": "bat_trend_001",
+      "url": "https://openstax.org/books/principles-marketing/pages/13-1-the-promotion-mix-and-its-elements"
+    },
+    {
+      "skill": "tối ưu chuyển đổi",
+      "id": "toi_uu_chuyen_doi_001",
+      "url": "https://openstax.org/books/principles-marketing/pages/13-1-the-promotion-mix-and-its-elements"
+    },
+    {
+      "skill": "linkedin",
+      "id": "linkedin_001",
+      "url": "https://academy.hubspot.com/"
+    },
+    {
+      "skill": "thuyết phục",
+      "id": "thuyet_phuc_001",
+      "url": "https://openstax.org/books/organizational-behavior/pages/14-4-negotiation-behavior"
+    },
+    {
+      "skill": "lắng nghe",
+      "id": "lang_nghe_001",
+      "url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing"
+    },
+    {
+      "skill": "xử lý khiếu nại",
+      "id": "xu_ly_khieu_nai_001",
+      "url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing"
+    },
+    {
+      "skill": "lập kế hoạch kinh doanh",
+      "id": "lap_ke_hoach_kinh_doanh_001",
+      "url": "https://openstax.org/books/principles-management/pages/1-management-skills-application-exercises"
+    },
+    {
+      "skill": "soạn thảo hợp đồng",
+      "id": "soan_thao_hop_dong_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "quản lý hồ sơ",
+      "id": "quan_ly_ho_so_001",
+      "url": "https://learn.microsoft.com/training/"
+    },
+    {
+      "skill": "làm việc với nhà cung cấp",
+      "id": "lam_viec_voi_nha_cung_cap_001",
+      "url": "https://openstax.org/books/introduction-business/pages/12-1-the-nature-and-functions-of-distribution-place"
+    },
+    {
+      "skill": "chuẩn mực kế toán",
+      "id": "chuan_muc_ke_toan_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "mô hình tài chính",
+      "id": "mo_hinh_tai_chinh_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "luật ngân hàng",
+      "id": "luat_ngan_hang_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "c&b",
+      "id": "c_b_001",
+      "url": "https://openstax.org/books/principles-management/pages/15-1-teamwork-in-the-workplace"
+    },
+    {
+      "skill": "luật doanh nghiệp",
+      "id": "luat_doanh_nghiep_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "khai báo hải quan",
+      "id": "khai_bao_hai_quan_001",
+      "url": "https://www.gdt.gov.vn/"
+    },
+    {
+      "skill": "dự báo nhu cầu",
+      "id": "du_bao_nhu_cau_001",
+      "url": "https://www.kaggle.com/learn"
+    },
+    {
+      "skill": "đánh giá rủi ro",
+      "id": "danh_gia_rui_ro_001",
+      "url": "https://www.ilo.org/topics-and-sectors/safety-and-health-work"
+    },
+    {
+      "skill": "revit mep",
+      "id": "revit_mep_001",
+      "url": "https://www.autodesk.com/learning.autodesk"
+    },
+    {
+      "skill": "đàm phán",
+      "id": "dam_phan_001",
+      "url": "https://openstax.org/books/organizational-behavior/pages/14-4-negotiation-behavior"
+    },
+    {
+      "skill": "kỹ năng giảng dạy",
+      "id": "ky_nang_giang_day_001",
+      "url": "https://www.teachingenglish.org.uk/teaching-resources"
+    },
+    {
+      "skill": "soạn giáo án",
+      "id": "soan_giao_an_001",
+      "url": "https://www.teachingenglish.org.uk/teaching-resources"
+    },
+    {
+      "skill": "quản lý lớp học",
+      "id": "quan_ly_lop_hoc_001",
+      "url": "https://www.teachingenglish.org.uk/teaching-resources"
+    },
+    {
+      "skill": "spring boot",
+      "id": "spring_boot_001",
+      "url": "https://spring.io/guides"
+    },
+    {
+      "skill": "redis",
+      "id": "redis_001",
+      "url": "https://redis.io/docs/latest/"
+    },
+    {
+      "skill": "entity framework",
+      "id": "entity_framework_001",
+      "url": "https://learn.microsoft.com/en-us/ef/core/"
+    },
+    {
+      "skill": "vuejs",
+      "id": "vuejs_001",
+      "url": "https://vuejs.org/guide/introduction.html"
+    },
+    {
+      "skill": "vuex",
+      "id": "vuex_001",
+      "url": "https://vuex.vuejs.org/"
+    },
+    {
+      "skill": "tailwind css",
+      "id": "tailwind_css_001",
+      "url": "https://tailwindcss.com/docs/installation"
+    },
+    {
+      "skill": "rxjs",
+      "id": "rxjs_001",
+      "url": "https://rxjs.dev/guide/overview"
+    },
+    {
+      "skill": "sass",
+      "id": "sass_001",
+      "url": "https://sass-lang.com/guide/"
+    },
+    {
+      "skill": "swift",
+      "id": "swift_001",
+      "url": "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/"
+    },
+    {
+      "skill": "ios sdk",
+      "id": "ios_sdk_001",
+      "url": "https://developer.apple.com/documentation/xcode"
+    },
+    {
+      "skill": "xcode",
+      "id": "xcode_001",
+      "url": "https://developer.apple.com/documentation/xcode"
+    },
+    {
+      "skill": "quản lý bộ nhớ",
+      "id": "quan_ly_bo_nho_001",
+      "url": "https://docs.python.org/3/tutorial/"
+    },
+    {
+      "skill": "core data",
+      "id": "core_data_001",
+      "url": "https://developer.apple.com/documentation/coredata"
+    },
+    {
+      "skill": "kotlin",
+      "id": "kotlin_001",
+      "url": "https://kotlinlang.org/docs/getting-started.html"
+    },
+    {
+      "skill": "android sdk",
+      "id": "android_sdk_001",
+      "url": "https://developer.android.com/courses"
+    },
+    {
+      "skill": "android studio",
+      "id": "android_studio_001",
+      "url": "https://developer.android.com/courses"
+    },
+    {
+      "skill": "sqlite",
+      "id": "sqlite_001",
+      "url": "https://www.sqlite.org/quickstart.html"
+    },
+    {
+      "skill": "mvvm",
+      "id": "mvvm_001",
+      "url": "https://developer.android.com/topic/architecture"
+    },
+    {
+      "skill": "dart",
+      "id": "dart_001",
+      "url": "https://dart.dev/learn"
+    },
+    {
+      "skill": "flutter framework",
+      "id": "flutter_framework_001",
+      "url": "https://docs.flutter.dev/get-started/codelab"
+    },
+    {
+      "skill": "state management",
+      "id": "state_management_001",
+      "url": "https://docs.flutter.dev/get-started/codelab"
+    },
+    {
+      "skill": "react native",
+      "id": "react_native_001",
+      "url": "https://reactnative.dev/docs/getting-started"
+    },
+    {
+      "skill": "unity engine",
+      "id": "unity_engine_001",
+      "url": "https://learn.unity.com/"
+    },
+    {
+      "skill": "toán học 3d",
+      "id": "toan_hoc_3d_001",
+      "url": "https://www.khanacademy.org/math/statistics-probability"
+    },
+    {
+      "skill": "vật lý trong game",
+      "id": "vat_ly_trong_game_001",
+      "url": "https://www.khanacademy.org/math/statistics-probability"
+    },
+    {
+      "skill": "tối ưu hóa hiệu suất",
+      "id": "toi_uu_hoa_hieu_suat_001",
+      "url": "https://learn.unity.com/"
+    },
+    {
+      "skill": "thiết kế trò chơi",
+      "id": "thiet_ke_tro_choi_001",
+      "url": "https://learn.unity.com/"
+    },
+    {
+      "skill": "lập trình shader",
+      "id": "lap_trinh_shader_001",
+      "url": "https://learn.unity.com/"
+    },
+    {
+      "skill": "vi điều khiển",
+      "id": "vi_dieu_khien_001",
+      "url": "https://docs.arduino.cc/"
+    },
+    {
+      "skill": "rtos",
+      "id": "rtos_001",
+      "url": "https://www.freertos.org/Documentation/RTOS_book.html"
+    },
+    {
+      "skill": "giao thức giao tiếp",
+      "id": "giao_thuc_giao_tiep_001",
+      "url": "https://docs.arduino.cc/"
+    },
+    {
+      "skill": "debug phần cứng",
+      "id": "debug_phan_cung_001",
+      "url": "https://docs.arduino.cc/"
+    },
+    {
+      "skill": "thiết kế mạch",
+      "id": "thiet_ke_mach_001",
+      "url": "https://docs.kicad.org/"
+    },
+    {
+      "skill": "linux nhúng",
+      "id": "linux_nhung_001",
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US"
+    },
+    {
+      "skill": "selenium",
+      "id": "selenium_001",
+      "url": "https://www.selenium.dev/documentation/"
+    },
+    {
+      "skill": "postman",
+      "id": "postman_001",
+      "url": "https://learning.postman.com/docs/"
+    },
+    {
+      "skill": "airflow",
+      "id": "airflow_001",
+      "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/"
+    },
+    {
+      "skill": "tensorflow",
+      "id": "tensorflow_001",
+      "url": "https://www.tensorflow.org/tutorials"
+    },
+    {
+      "skill": "transformer",
+      "id": "transformer_001",
+      "url": "https://huggingface.co/learn/nlp-course/chapter1/1"
+    },
+    {
+      "skill": "regex",
+      "id": "regex_001",
+      "url": "https://docs.python.org/3/tutorial/"
+    },
+    {
+      "skill": "opencv",
+      "id": "opencv_001",
+      "url": "https://github.com/opencv/opencv/wiki/"
+    },
+    {
+      "skill": "bảo mật dữ liệu",
+      "id": "bao_mat_du_lieu_001",
+      "url": "https://owasp.org/www-project-web-security-testing-guide/"
+    },
+    {
+      "skill": "windows server",
+      "id": "windows_server_001",
+      "url": "https://learn.microsoft.com/en-us/windows-server/"
+    },
+    {
+      "skill": "active directory",
+      "id": "active_directory_001",
+      "url": "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-domain-services"
+    },
+    {
+      "skill": "vmware",
+      "id": "vmware_001",
+      "url": "https://www.broadcom.com/support/education/vmware"
+    },
+    {
+      "skill": "ccna",
+      "id": "ccna_001",
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US"
+    },
+    {
+      "skill": "routing & switching",
+      "id": "routing_switching_001",
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US"
+    },
+    {
+      "skill": "cisco",
+      "id": "cisco_001",
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US"
+    },
+    {
+      "skill": "siem",
+      "id": "siem_001",
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US"
+    },
+    {
+      "skill": "pentest",
+      "id": "pentest_001",
+      "url": "https://owasp.org/www-project-web-security-testing-guide/"
+    },
+    {
+      "skill": "bảo mật web",
+      "id": "bao_mat_web_001",
+      "url": "https://owasp.org/www-project-web-security-testing-guide/"
+    },
+    {
+      "skill": "metasploit",
+      "id": "metasploit_001",
+      "url": "https://docs.metasploit.com/"
+    },
+    {
+      "skill": "azure",
+      "id": "azure_001",
+      "url": "https://learn.microsoft.com/en-us/training/azure/"
+    },
+    {
+      "skill": "viết test case",
+      "id": "viet_test_case_001",
+      "url": "https://www.selenium.dev/documentation/"
+    },
+    {
+      "skill": "chú ý chi tiết",
+      "id": "chu_y_chi_tiet_001",
+      "url": "https://openstax.org/books/principles-management/pages/14-1-motivation-direction-and-intensity"
+    },
+    {
+      "skill": "cài đặt phần mềm",
+      "id": "cai_dat_phan_mem_001",
+      "url": "https://support.microsoft.com/en-us/windows/deployment/install-upgrade/fix-problems-that-block-programs-from-being-installed-or-removed"
+    },
+    {
+      "skill": "xử lý sự cố phần cứng",
+      "id": "xu_ly_su_co_phan_cung_001",
+      "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/welcome-windows-client"
+    },
+    {
+      "skill": "windows os",
+      "id": "windows_os_001",
+      "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/welcome-windows-client"
+    },
+    {
+      "skill": "quản lý rủi ro hệ thống",
+      "id": "quan_ly_rui_ro_he_thong_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-1-production-and-operations-management-an-overview"
+    },
+    {
+      "skill": "giám sát hệ thống",
+      "id": "giam_sat_he_thong_001",
+      "url": "https://learn.microsoft.com/training/paths/deploy-configure-azure-monitor/"
+    },
+    {
+      "skill": "quản lý backlog",
+      "id": "quan_ly_backlog_001",
+      "url": "https://www.atlassian.com/agile/tutorials/jira-confluence-sprint-refinement"
+    },
+    {
+      "skill": "viết user story",
+      "id": "viet_user_story_001",
+      "url": "https://www.atlassian.com/agile/project-management/user-stories"
+    },
+    {
+      "skill": "viết tài liệu srs",
+      "id": "viet_tai_lieu_srs_001",
+      "url": "https://www.atlassian.com/agile/project-management/user-stories"
+    },
+    {
+      "skill": "uml",
+      "id": "uml_001",
+      "url": "https://www.atlassian.com/agile/project-management/user-stories"
+    },
+    {
+      "skill": "quản lý rủi ro",
+      "id": "quan_ly_rui_ro_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-1-production-and-operations-management-an-overview"
+    },
+    {
+      "skill": "điều phối cuộc họp",
+      "id": "dieu_phoi_cuoc_hop_001",
+      "url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing"
+    },
+    {
+      "skill": "quản lý xung đột",
+      "id": "quan_ly_xung_dot_001",
+      "url": "https://openstax.org/books/organizational-behavior/pages/14-4-negotiation-behavior"
+    },
+    {
+      "skill": "phỏng vấn người dùng",
+      "id": "phong_van_nguoi_dung_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "thiết kế giao diện",
+      "id": "thiet_ke_giao_dien_001",
+      "url": "https://help.figma.com/hc/en-us/categories/360002042553-Learn-design"
+    },
+    {
+      "skill": "màu sắc và typography",
+      "id": "mau_sac_va_typography_001",
+      "url": "https://help.figma.com/hc/en-us/categories/360002042553-Learn-design"
+    },
+    {
+      "skill": "kể chuyện",
+      "id": "ke_chuyen_001",
+      "url": "https://openstax.org/books/principles-marketing/pages/13-1-the-promotion-mix-and-its-elements"
+    },
+    {
+      "skill": "seo on-page",
+      "id": "seo_on_page_001",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+    },
+    {
+      "skill": "seo off-page",
+      "id": "seo_off_page_001",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+    },
+    {
+      "skill": "google search console",
+      "id": "google_search_console_001",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+    },
+    {
+      "skill": "quản lý fanpage",
+      "id": "quan_ly_fanpage_001",
+      "url": "https://www.facebook.com/business/learn"
+    },
+    {
+      "skill": "facebook",
+      "id": "facebook_001",
+      "url": "https://www.facebook.com/business/learn"
+    },
+    {
+      "skill": "a/b testing",
+      "id": "a_b_testing_001",
+      "url": "https://skillshop.withgoogle.com/"
+    },
+    {
+      "skill": "quan hệ báo chí",
+      "id": "quan_he_bao_chi_001",
+      "url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing"
+    },
+    {
+      "skill": "viết thông cáo báo chí",
+      "id": "viet_thong_cao_bao_chi_001",
+      "url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing"
+    },
+    {
+      "skill": "xử lý khủng hoảng",
+      "id": "xu_ly_khung_hoang_001",
+      "url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing"
+    },
+    {
+      "skill": "quay dựng video",
+      "id": "quay_dung_video_001",
+      "url": "https://www.capcut.com/resource/capcut-tutorial-for-beginners"
+    },
+    {
+      "skill": "adobe premiere",
+      "id": "adobe_premiere_001",
+      "url": "https://creativecloud.adobe.com/learn"
+    },
+    {
+      "skill": "kịch bản video",
+      "id": "kich_ban_video_001",
+      "url": "https://creatoracademy.youtube.com/"
+    },
+    {
+      "skill": "youtube",
+      "id": "youtube_001",
+      "url": "https://creatoracademy.youtube.com/"
+    },
+    {
+      "skill": "kết nối nhân sự",
+      "id": "ket_noi_nhan_su_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "thiết kế cơ bản",
+      "id": "thiet_ke_co_ban_001",
+      "url": "https://www.canva.com/designschool/"
+    },
+    {
+      "skill": "thương hiệu nhà tuyển dụng",
+      "id": "thuong_hieu_nha_tuyen_dung_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "quản lý tài khoản",
+      "id": "quan_ly_tai_khoan_001",
+      "url": "https://trailhead.salesforce.com/"
+    },
+    {
+      "skill": "xử lý từ chối",
+      "id": "xu_ly_tu_choi_001",
+      "url": "https://openstax.org/books/organizational-behavior/pages/14-4-negotiation-behavior"
+    },
+    {
+      "skill": "đào tạo khách hàng",
+      "id": "dao_tao_khach_hang_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "dự báo doanh số",
+      "id": "du_bao_doanh_so_001",
+      "url": "https://www.kaggle.com/learn"
+    },
+    {
+      "skill": "đào tạo nhân sự",
+      "id": "dao_tao_nhan_su_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "báo cáo doanh thu",
+      "id": "bao_cao_doanh_thu_001",
+      "url": "https://learn.microsoft.com/training/powerplatform/power-bi/"
+    },
+    {
+      "skill": "pos",
+      "id": "pos_001",
+      "url": "https://learn.microsoft.com/training/"
+    },
+    {
+      "skill": "quản lý đơn hàng",
+      "id": "quan_ly_don_hang_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-4-pulling-it-together-resource-planning"
+    },
+    {
+      "skill": "theo dõi tiến độ",
+      "id": "theo_doi_tien_do_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-5-production-and-operations-control"
+    },
+    {
+      "skill": "luật bất động sản",
+      "id": "luat_bat_dong_san_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "kiến thức kỹ thuật",
+      "id": "kien_thuc_ky_thuat_001",
+      "url": "https://learn.microsoft.com/training/"
+    },
+    {
+      "skill": "tư vấn giải pháp",
+      "id": "tu_van_giai_phap_001",
+      "url": "https://trailhead.salesforce.com/"
+    },
+    {
+      "skill": "quản lý kênh phân phối",
+      "id": "quan_ly_kenh_phan_phoi_001",
+      "url": "https://openstax.org/books/introduction-business/pages/12-1-the-nature-and-functions-of-distribution-place"
+    },
+    {
+      "skill": "phát triển đại lý",
+      "id": "phat_trien_dai_ly_001",
+      "url": "https://openstax.org/books/introduction-business/pages/12-1-the-nature-and-functions-of-distribution-place"
+    },
+    {
+      "skill": "kế toán doanh nghiệp",
+      "id": "ke_toan_doanh_nghiep_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "kế toán tổng hợp",
+      "id": "ke_toan_tong_hop_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "quản lý tài chính",
+      "id": "quan_ly_tai_chinh_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "luật thuế",
+      "id": "luat_thue_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "kê khai thuế",
+      "id": "ke_khai_thue_001",
+      "url": "https://www.gdt.gov.vn/"
+    },
+    {
+      "skill": "htkk",
+      "id": "htkk_001",
+      "url": "https://www.gdt.gov.vn/"
+    },
+    {
+      "skill": "kiểm toán",
+      "id": "kiem_toan_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "kiểm toán nội bộ",
+      "id": "kiem_toan_noi_bo_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "kiểm soát nội bộ",
+      "id": "kiem_soat_noi_bo_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "đọc báo cáo tài chính",
+      "id": "doc_bao_cao_tai_chinh_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "thẩm định tín dụng",
+      "id": "tham_dinh_tin_dung_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "mô hình rủi ro",
+      "id": "mo_hinh_rui_ro_001",
+      "url": "https://www.ilo.org/topics-and-sectors/safety-and-health-work"
+    },
+    {
+      "skill": "nghiệp vụ giao dịch",
+      "id": "nghiep_vu_giao_dich_001",
+      "url": "https://openstax.org/books/principles-finance/pages/5-why-it-matters"
+    },
+    {
+      "skill": "đếm tiền",
+      "id": "dem_tien_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "phân tích đầu tư",
+      "id": "phan_tich_dau_tu_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "định giá doanh nghiệp",
+      "id": "dinh_gia_doanh_nghiep_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "phân tích kinh tế vĩ mô",
+      "id": "phan_tich_kinh_te_vi_mo_001",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/1-introduction"
+    },
+    {
+      "skill": "bloomberg terminal",
+      "id": "bloomberg_terminal_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "kiểm soát tài chính",
+      "id": "kiem_soat_tai_chinh_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "lập ngân sách",
+      "id": "lap_ngan_sach_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-1-production-and-operations-management-an-overview"
+    },
+    {
+      "skill": "kế toán quản trị",
+      "id": "ke_toan_quan_tri_001",
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements"
+    },
+    {
+      "skill": "tìm kiếm ứng viên",
+      "id": "tim_kiem_ung_vien_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "kỹ năng phỏng vấn",
+      "id": "ky_nang_phong_van_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "marketing nhân sự",
+      "id": "marketing_nhan_su_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "tính lương",
+      "id": "tinh_luong_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "bảo hiểm xã hội",
+      "id": "bao_hiem_xa_hoi_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "thuế tncn",
+      "id": "thue_tncn_001",
+      "url": "https://www.gdt.gov.vn/"
+    },
+    {
+      "skill": "đào tạo và phát triển",
+      "id": "dao_tao_va_phat_trien_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "lập kế hoạch đào tạo",
+      "id": "lap_ke_hoach_dao_tao_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "xây dựng tài liệu",
+      "id": "xay_dung_tai_lieu_001",
+      "url": "https://learn.microsoft.com/training/"
+    },
+    {
+      "skill": "đánh giá năng lực",
+      "id": "danh_gia_nang_luc_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "chiến lược nhân sự",
+      "id": "chien_luoc_nhan_su_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "công tác hành chính",
+      "id": "cong_tac_hanh_chinh_001",
+      "url": "https://learn.microsoft.com/training/"
+    },
+    {
+      "skill": "soạn thảo văn bản",
+      "id": "soan_thao_van_ban_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "word",
+      "id": "word_001",
+      "url": "https://support.microsoft.com/en-us/word"
+    },
+    {
+      "skill": "quản lý thiết bị",
+      "id": "quan_ly_thiet_bi_001",
+      "url": "https://learn.microsoft.com/en-us/windows-server/"
+    },
+    {
+      "skill": "tư vấn pháp lý",
+      "id": "tu_van_phap_ly_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "rà soát hợp đồng",
+      "id": "ra_soat_hop_dong_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "giải quyết tranh chấp",
+      "id": "giai_quyet_tranh_chap_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "tiếng anh pháp lý",
+      "id": "tieng_anh_phap_ly_001",
+      "url": "https://learnenglish.britishcouncil.org/"
+    },
+    {
+      "skill": "điều phối vận tải",
+      "id": "dieu_phoi_van_tai_001",
+      "url": "https://openstax.org/books/introduction-business/pages/12-1-the-nature-and-functions-of-distribution-place"
+    },
+    {
+      "skill": "theo dõi đơn hàng",
+      "id": "theo_doi_don_hang_001",
+      "url": "https://openstax.org/books/introduction-business/pages/12-1-the-nature-and-functions-of-distribution-place"
+    },
+    {
+      "skill": "thu mua",
+      "id": "thu_mua_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-4-pulling-it-together-resource-planning"
+    },
+    {
+      "skill": "đánh giá nhà cung cấp",
+      "id": "danh_gia_nha_cung_cap_001",
+      "url": "https://openstax.org/books/introduction-business/pages/12-1-the-nature-and-functions-of-distribution-place"
+    },
+    {
+      "skill": "quản lý hợp đồng",
+      "id": "quan_ly_hop_dong_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "nghiệp vụ xuất nhập khẩu",
+      "id": "nghiep_vu_xuat_nhap_khau_001",
+      "url": "https://academy.iccwbo.org/wp-content/uploads/2020/08/803E_Incoterms-2020-Wallchart-A4.pdf"
+    },
+    {
+      "skill": "chứng từ xuất nhập khẩu",
+      "id": "chung_tu_xuat_nhap_khau_001",
+      "url": "https://academy.iccwbo.org/wp-content/uploads/2020/08/803E_Incoterms-2020-Wallchart-A4.pdf"
+    },
+    {
+      "skill": "incoterms",
+      "id": "incoterms_001",
+      "url": "https://academy.iccwbo.org/wp-content/uploads/2020/08/803E_Incoterms-2020-Wallchart-A4.pdf"
+    },
+    {
+      "skill": "làm việc với fwd",
+      "id": "lam_viec_voi_fwd_001",
+      "url": "https://openstax.org/books/introduction-business/pages/12-1-the-nature-and-functions-of-distribution-place"
+    },
+    {
+      "skill": "quản lý kho",
+      "id": "quan_ly_kho_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-4-pulling-it-together-resource-planning"
+    },
+    {
+      "skill": "pccc",
+      "id": "pccc_001",
+      "url": "https://www.ilo.org/topics-and-sectors/safety-and-health-work"
+    },
+    {
+      "skill": "hoạch định chuỗi cung ứng",
+      "id": "hoach_dinh_chuoi_cung_ung_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-4-pulling-it-together-resource-planning"
+    },
+    {
+      "skill": "quản lý chuỗi cung ứng",
+      "id": "quan_ly_chuoi_cung_ung_001",
+      "url": "https://openstax.org/books/introduction-business/pages/12-1-the-nature-and-functions-of-distribution-place"
+    },
+    {
+      "skill": "chiến lược chuỗi cung ứng",
+      "id": "chien_luoc_chuoi_cung_ung_001",
+      "url": "https://openstax.org/books/introduction-business/pages/12-1-the-nature-and-functions-of-distribution-place"
+    },
+    {
+      "skill": "tối ưu hóa chi phí",
+      "id": "toi_uu_hoa_chi_phi_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-5-production-and-operations-control"
+    },
+    {
+      "skill": "kiểm soát tuân thủ",
+      "id": "kiem_soat_tuan_thu_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "phần mềm ecus/vnaccs",
+      "id": "phan_mem_ecus_vnaccs_001",
+      "url": "https://help.ecus.net.vn/"
+    },
+    {
+      "skill": "chứng từ hải quan",
+      "id": "chung_tu_hai_quan_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "luật hải quan",
+      "id": "luat_hai_quan_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "hs code",
+      "id": "hs_code_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "an toàn điện",
+      "id": "an_toan_dien_001",
+      "url": "https://www.ilo.org/topics-and-sectors/safety-and-health-work"
+    },
+    {
+      "skill": "cảm biến công nghiệp",
+      "id": "cam_bien_cong_nghiep_001",
+      "url": "https://sitrain.siemens.com/gb/web/en/app/toc/simatic-programming-1-in-tia-portal-0144478865067704321706/overview"
+    },
+    {
+      "skill": "biến tần",
+      "id": "bien_tan_001",
+      "url": "https://sitrain.siemens.com/gb/web/en/app/toc/simatic-programming-1-in-tia-portal-0144478865067704321706/overview"
+    },
+    {
+      "skill": "quản lý tiến độ",
+      "id": "quan_ly_tien_do_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-5-production-and-operations-control"
+    },
+    {
+      "skill": "sơ đồ chuỗi giá trị vsm",
+      "id": "so_do_chuoi_gia_tri_vsm_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-5-production-and-operations-control"
+    },
+    {
+      "skill": "bảo trì phòng ngừa",
+      "id": "bao_tri_phong_ngua_001",
+      "url": "https://sitrain.siemens.com/gb/web/en/app/toc/simatic-programming-1-in-tia-portal-0144478865067704321706/overview"
+    },
+    {
+      "skill": "sửa chữa máy móc",
+      "id": "sua_chua_may_moc_001",
+      "url": "https://sitrain.siemens.com/gb/web/en/app/toc/simatic-programming-1-in-tia-portal-0144478865067704321706/overview"
+    },
+    {
+      "skill": "quản lý công nhân",
+      "id": "quan_ly_cong_nhan_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "revit architecture",
+      "id": "revit_architecture_001",
+      "url": "https://www.autodesk.com/learning.autodesk"
+    },
+    {
+      "skill": "vận hành máy cnc",
+      "id": "van_hanh_may_cnc_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-1-production-and-operations-management-an-overview"
+    },
+    {
+      "skill": "lập kế hoạch sản xuất",
+      "id": "lap_ke_hoach_san_xuat_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-5-production-and-operations-control"
+    },
+    {
+      "skill": "sap erp",
+      "id": "sap_erp_001",
+      "url": "https://learning.sap.com/learning-journeys?trk=public_post_comment-text"
+    },
+    {
+      "skill": "đào tạo an toàn",
+      "id": "dao_tao_an_toan_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management"
+    },
+    {
+      "skill": "luật an toàn lao động",
+      "id": "luat_an_toan_lao_dong_001",
+      "url": "https://vbpl.vn/"
+    },
+    {
+      "skill": "chẩn đoán bệnh",
+      "id": "chan_doan_benh_001",
+      "url": "https://www.who.int/about/who-academy"
+    },
+    {
+      "skill": "kê đơn thuốc",
+      "id": "ke_don_thuoc_001",
+      "url": "https://www.who.int/about/who-academy"
+    },
+    {
+      "skill": "khám lâm sàng",
+      "id": "kham_lam_sang_001",
+      "url": "https://www.who.int/about/who-academy"
+    },
+    {
+      "skill": "chăm sóc bệnh nhân",
+      "id": "cham_soc_benh_nhan_001",
+      "url": "https://www.who.int/about/who-academy"
+    },
+    {
+      "skill": "tiêm truyền tĩnh mạch",
+      "id": "tiem_truyen_tinh_mach_001",
+      "url": "https://www.who.int/about/who-academy"
+    },
+    {
+      "skill": "theo dõi dấu hiệu sinh tồn",
+      "id": "theo_doi_dau_hieu_sinh_ton_001",
+      "url": "https://www.who.int/about/who-academy"
+    },
+    {
+      "skill": "quản lý hồ sơ bệnh án",
+      "id": "quan_ly_ho_so_benh_an_001",
+      "url": "https://www.who.int/about/who-academy"
+    },
+    {
+      "skill": "tư vấn sử dụng thuốc",
+      "id": "tu_van_su_dung_thuoc_001",
+      "url": "https://www.who.int/about/who-academy"
+    },
+    {
+      "skill": "quản lý nhà thuốc",
+      "id": "quan_ly_nha_thuoc_001",
+      "url": "https://www.who.int/about/who-academy"
+    },
+    {
+      "skill": "kiểm soát dược phẩm",
+      "id": "kiem_soat_duoc_pham_001",
+      "url": "https://www.who.int/about/who-academy"
+    },
+    {
+      "skill": "ielts preparation",
+      "id": "ielts_preparation_001",
+      "url": "https://learnenglish.britishcouncil.org/"
+    },
+    {
+      "skill": "tâm lý học lứa tuổi",
+      "id": "tam_ly_hoc_lua_tuoi_001",
+      "url": "https://www.who.int/about/who-academy"
+    },
+    {
+      "skill": "adobe photoshop",
+      "id": "adobe_photoshop_001",
+      "url": "https://creativecloud.adobe.com/learn"
+    },
+    {
+      "skill": "adobe illustrator",
+      "id": "adobe_illustrator_001",
+      "url": "https://creativecloud.adobe.com/learn"
+    },
+    {
+      "skill": "tư duy thẩm mỹ",
+      "id": "tu_duy_tham_my_001",
+      "url": "https://help.figma.com/hc/en-us/categories/360002042553-Learn-design"
+    },
+    {
+      "skill": "layout design",
+      "id": "layout_design_001",
+      "url": "https://www.canva.com/designschool/"
+    },
+    {
+      "skill": "adobe premiere pro",
+      "id": "adobe_premiere_pro_001",
+      "url": "https://creativecloud.adobe.com/learn"
+    },
+    {
+      "skill": "adobe after effects",
+      "id": "adobe_after_effects_001",
+      "url": "https://creativecloud.adobe.com/learn"
+    },
+    {
+      "skill": "biên tập video",
+      "id": "bien_tap_video_001",
+      "url": "https://creativecloud.adobe.com/learn"
+    },
+    {
+      "skill": "chỉnh sửa âm thanh",
+      "id": "chinh_sua_am_thanh_001",
+      "url": "https://creativecloud.adobe.com/learn"
+    },
+    {
+      "skill": "tư duy hình ảnh",
+      "id": "tu_duy_hinh_anh_001",
+      "url": "https://help.figma.com/hc/en-us/categories/360002042553-Learn-design"
+    },
+    {
+      "skill": "sáng tạo kịch bản",
+      "id": "sang_tao_kich_ban_001",
+      "url": "https://creatoracademy.youtube.com/"
+    },
+    {
+      "skill": "nắm bắt xu hướng",
+      "id": "nam_bat_xu_huong_001",
+      "url": "https://openstax.org/books/principles-marketing/pages/13-1-the-promotion-mix-and-its-elements"
+    },
+    {
+      "skill": "xử lý tình huống",
+      "id": "xu_ly_tinh_huong_001",
+      "url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing"
+    },
+    {
+      "skill": "phần mềm quản lý khách sạn smile",
+      "id": "phan_mem_quan_ly_khach_san_smile_001",
+      "url": "https://learn.microsoft.com/training/"
+    },
+    {
+      "skill": "kiến thức lịch sử văn hóa",
+      "id": "kien_thuc_lich_su_van_hoa_001",
+      "url": "https://learnenglish.britishcouncil.org/"
+    },
+    {
+      "skill": "quản lý đoàn khách",
+      "id": "quan_ly_doan_khach_001",
+      "url": "https://openstax.org/books/principles-management/pages/15-1-teamwork-in-the-workplace"
+    },
+    {
+      "skill": "xử lý sự cố",
+      "id": "xu_ly_su_co_001",
+      "url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing"
+    },
+    {
+      "skill": "quản lý cảm xúc",
+      "id": "quan_ly_cam_xuc_001",
+      "url": "https://openstax.org/books/principles-management/pages/14-1-motivation-direction-and-intensity"
+    },
+    {
+      "skill": "lập kế hoạch sự kiện",
+      "id": "lap_ke_hoach_su_kien_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-1-production-and-operations-management-an-overview"
+    },
+    {
+      "skill": "quản lý nhà cung cấp",
+      "id": "quan_ly_nha_cung_cap_001",
+      "url": "https://openstax.org/books/introduction-business/pages/12-1-the-nature-and-functions-of-distribution-place"
+    },
+    {
+      "skill": "điều phối sự kiện",
+      "id": "dieu_phoi_su_kien_001",
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-1-production-and-operations-management-an-overview"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "url": "https://lic.haui.edu.vn/media/CNKT%20C%C6%A1%20%C4%91i%C3%AA%CC%A3n%20t%C6%B0%CC%89/Gi%C3%A1o%20tr%C3%ACnh%20v%E1%BA%BD%20k%C4%A9%20thu%E1%BA%ADt.pdf",
+      "reason": "Only 8 preview pages, title/TOC, no instructional chapter available."
+    },
+    {
+      "url": "https://thuvienso.tcdktcnsl.edu.vn/files/products/ve_ky_thuat_gvh.pdf",
+      "reason": "TLS hostname mismatch; did not bypass certificate check."
+    },
+    {
+      "url": "https://dlib.phenikaa-uni.edu.vn/bitstream/PNK/9807/1/Research%20and%20Use%20Figma%20for%20Website%20UI%20Design%201.pdf",
+      "attempt_recorded_at": "2026-10-24T06:37:05.588301+00:00",
+      "reason": "Local ConnectTimeout (connect timeout=25); contents not verified, not added to resource catalog."
+    }
+  ],
+  "supporting_attachments": [
+    {
+      "parent_url": "https://thcsbinhan-donghoa.hcm.edu.vn/bai-giang-dien-tu/bai-3-ban-ve-chi-tiet/ct/110350/766693",
+      "url": "https://filethcs.hcm.shieldix.app/data/doc/2026/thcsbinhan-donghoa/040091010075/2026_10/18/bai-3-kntt_1810202620.pptx",
+      "read": "13 slides; inspected slides 7–12",
+      "retrieval": {
+        "url": "https://filethcs.hcm.shieldix.app/data/doc/2026/thcsbinhan-donghoa/040091010075/2026_10/18/bai-3-kntt_1810202620.pptx",
+        "final_url": "https://filethcs.hcm.shieldix.app/data/doc/2026/thcsbinhan-donghoa/040091010075/2026_10/18/bai-3-kntt_1810202620.pptx",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:23:53.930973+00:00",
+        "sha256": "2a5d0549d3e25db4f29db301e40aebcb64498ae206d3e650556229153f92d98d"
+      }
+    }
+  ],
+  "original_unverified": [
+    {
+      "skill": "vẽ quy trình",
+      "resource_id": "ve_quy_trinh_001",
+      "previous_url": "https://asq.org/quality-resources/quality-tools",
+      "replacement_url": "https://asq.org/quality-resources/flowchart"
+    },
+    {
+      "skill": "lean manufacturing",
+      "resource_id": "lean_manufacturing_001",
+      "previous_url": "https://asq.org/quality-resources/learn-about-quality",
+      "replacement_url": "https://asq.org/quality-resources/lean"
+    },
+    {
+      "skill": "kaizen",
+      "resource_id": "kaizen_001",
+      "previous_url": "https://asq.org/quality-resources/quality-tools",
+      "replacement_url": "https://asq.org/quality-resources/continuous-improvement"
+    },
+    {
+      "skill": "5s",
+      "resource_id": "5s_001",
+      "previous_url": "https://asq.org/quality-resources/quality-tools",
+      "replacement_url": "https://asq.org/quality-resources/five-s-tutorial"
+    },
+    {
+      "skill": "phân tích sop",
+      "resource_id": "phan_tich_sop_001",
+      "previous_url": "https://asq.org/quality-resources/quality-tools",
+      "replacement_url": "https://www.epa.gov/sites/default/files/2015-06/documents/g6-final.pdf"
+    },
+    {
+      "skill": "iso 9001",
+      "resource_id": "iso_9001_001",
+      "previous_url": "https://asq.org/quality-resources/learn-about-quality",
+      "replacement_url": "https://asq.org/quality-resources/iso-9001"
+    },
+    {
+      "skill": "kiểm soát chất lượng",
+      "resource_id": "kiem_soat_chat_luong_001",
+      "previous_url": "https://asq.org/quality-resources/quality-tools",
+      "replacement_url": "https://asq.org/quality-resources/quality-assurance-vs-control"
+    },
+    {
+      "skill": "quy trình 8d",
+      "resource_id": "quy_trinh_8d_001",
+      "previous_url": "https://asq.org/quality-resources/quality-tools",
+      "replacement_url": "https://asq.org/quality-resources/eight-disciplines-8d"
+    },
+    {
+      "skill": "fmea",
+      "resource_id": "fmea_001",
+      "previous_url": "https://asq.org/quality-resources/quality-tools",
+      "replacement_url": "https://asq.org/quality-resources/fmea"
+    },
+    {
+      "skill": "7 công cụ qc",
+      "resource_id": "7_cong_cu_qc_001",
+      "previous_url": "https://asq.org/quality-resources/quality-tools",
+      "replacement_url": "https://asq.org/quality-resources/seven-basic-quality-tools"
+    },
+    {
+      "skill": "iso 14001",
+      "resource_id": "iso_14001_001",
+      "previous_url": "https://asq.org/quality-resources/learn-about-quality",
+      "replacement_url": "https://www.iso.org/standards/popular/iso-14000-family"
+    },
+    {
+      "skill": "iso 45001",
+      "resource_id": "iso_45001_001",
+      "previous_url": "https://asq.org/quality-resources/quality-tools",
+      "replacement_url": "https://www.iso.org/standard/45001"
+    }
+  ],
+  "preserved_original_records": 410,
+  "url_reviews": [
+    {
+      "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "giao tiếp",
+          "resource_id": "giao_tiep_dot03_vi",
+          "status": "reviewed",
+          "scope": "Lắng nghe, phản hồi; phần thực hành giao tiếp.",
+          "locator": "PDF p43; trang in 82–83"
+        },
+        {
+          "skill": "làm việc nhóm",
+          "resource_id": "lam_viec_nhom_dot03_vi",
+          "status": "reviewed",
+          "scope": "Phân công và phối hợp theo mục tiêu.",
+          "locator": "PDF p67,71; trang in 130–131,138–139"
+        },
+        {
+          "skill": "quản lý thời gian",
+          "resource_id": "quan_ly_thoi_gian_dot03_vi",
+          "status": "reviewed",
+          "scope": "Ưu tiên công việc, Eisenhower và Pomodoro.",
+          "locator": "PDF p118–120; trang in 234–239"
+        },
+        {
+          "skill": "thương lượng",
+          "resource_id": "thuong_luong_dot03_vi",
+          "status": "reviewed",
+          "scope": "Đề nghị, nhượng bộ và chuẩn bị đàm phán.",
+          "locator": "PDF p107,110; trang in 212–213,218–219"
+        },
+        {
+          "skill": "thuyết trình",
+          "resource_id": "thuyet_trinh_dot03_vi",
+          "status": "reviewed",
+          "scope": "Chuẩn bị nội dung theo người nghe.",
+          "locator": "PDF p90; trang in 176–177"
+        },
+        {
+          "skill": "lập kế hoạch",
+          "resource_id": "lap_ke_hoach_dot03_vi",
+          "status": "reviewed",
+          "scope": "Mục tiêu SMART, phân bổ nguồn lực.",
+          "locator": "PDF p67,71; trang in 130–131,138–139"
+        }
+      ],
+      "retrieval": {
+        "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:16:56.698968+00:00",
+        "sha256": "29447a896cf3c4678e9716d28feba9830472cf02ce3350be73d8321faeb5a5de"
+      }
+    },
+    {
+      "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "giải quyết vấn đề",
+          "resource_id": "giai_quyet_van_de_dot03_vi",
+          "status": "reviewed",
+          "scope": "Quy trình từ xác định nguyên nhân tới theo dõi giải pháp; nhập môn.",
+          "locator": "Các mục quy trình 7 bước và kỹ thuật IDEAL"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://www.britishcouncil.vn/hoc-tieng-anh/tieng-anh-nguoi-lon/kinh-nghiem/5-quy-tac-viet-thu-tin",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "tiếng anh chuyên ngành",
+          "resource_id": "tieng_anh_chuyen_nganh_dot03_vi",
+          "status": "partial",
+          "scope": "Tiếng Anh thư tín công việc; chưa bao phủ thuật ngữ chuyên ngành riêng của từng nghề.",
+          "locator": "Các quy tắc kiểm tra và sửa lỗi email; ví dụ diễn đạt"
+        },
+        {
+          "skill": "cẩn thận",
+          "resource_id": "can_than_dot03_vi",
+          "status": "partial",
+          "scope": "Checklist kiểm tra người nhận, đính kèm, lỗi trước khi gửi email; chỉ một tình huống luyện cẩn thận.",
+          "locator": "Các quy tắc kiểm tra và sửa lỗi email; ví dụ diễn đạt"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://learn.microsoft.com/vi-vn/training/modules/get-started-data-concepts/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "excel",
+          "resource_id": "excel_dot03_vi",
+          "status": "reviewed",
+          "scope": "Lọc, sắp xếp, công thức, định dạng có điều kiện; bài tập Excel cho web.",
+          "locator": "Unit 6-exercise-use-excel-to-explore-data"
+        }
+      ],
+      "retrieval": {
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/get-started-data-concepts/",
+        "final_url": "https://learn.microsoft.com/vi-vn/training/modules/get-started-data-concepts/",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:20:40.374229+00:00",
+        "sha256": "745fd1daefa4f94b5f484781fe5695495f09624d15a4c757881da7a905d5778f"
+      }
+    },
+    {
+      "url": "https://learn.microsoft.com/vi-vn/training/modules/intro-to-git/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "git",
+          "resource_id": "git_dot03_vi",
+          "status": "reviewed",
+          "scope": "Lệnh Git cơ bản và lịch sử thay đổi; không thay thế Git workflow nâng cao.",
+          "locator": "Unit 3-basic-git-commands"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://learn.microsoft.com/vi-vn/training/modules/introduction-to-transact-sql/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "sql",
+          "resource_id": "sql_dot03_vi",
+          "status": "reviewed",
+          "scope": "SELECT và truy vấn nhập môn trên T-SQL; lưu ý khác biệt dialect.",
+          "locator": "Unit 4-examine-select-statement"
+        }
+      ],
+      "retrieval": {
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/introduction-to-transact-sql/",
+        "final_url": "https://learn.microsoft.com/vi-vn/training/modules/introduction-to-transact-sql/",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:13:25.929934+00:00",
+        "sha256": "385cbca67e521f834836b22f63b6848ffc402f6eee78ed681e7012fb2b6298d8"
+      }
+    },
+    {
+      "url": "https://learn.microsoft.com/vi-vn/training/modules/explore-analyze-data-with-python/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "phân tích dữ liệu",
+          "resource_id": "phan_tich_du_lieu_dot03_vi",
+          "status": "reviewed",
+          "scope": "Notebook khám phá, thống kê mô tả và trực quan dữ liệu; cần Python cơ bản.",
+          "locator": "Unit 2-explore-data-numpy-pandas"
+        },
+        {
+          "skill": "python",
+          "resource_id": "python_dot03_vi",
+          "status": "reviewed",
+          "scope": "Thực hành NumPy/pandas để khám phá dữ liệu; cần biết Python cơ bản.",
+          "locator": "Unit 2-explore-data-numpy-pandas"
+        }
+      ],
+      "retrieval": {
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/explore-analyze-data-with-python/",
+        "final_url": "https://learn.microsoft.com/vi-vn/training/modules/explore-analyze-data-with-python/",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:13:26.569511+00:00",
+        "sha256": "70ae547fd54b6c59d4f19ee2107f2c24c48422cb5b325ae2b354781b242f4c9e"
+      }
+    },
+    {
+      "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-phan-tich",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "tư duy phân tích",
+          "resource_id": "tu_duy_phan_tich_dot03_vi",
+          "status": "reviewed",
+          "scope": "Phân chia thông tin, đánh giá và suy luận; tổng quan phương pháp.",
+          "locator": "Các mục yếu tố phân tích, phương pháp và rèn luyện"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://vinabook.edu.vn/chuong-7-ky-nang-mem-ky-nang-tu-duy-sang-tao/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "sáng tạo",
+          "resource_id": "sang_tao_dot03_vi",
+          "status": "reviewed",
+          "scope": "Chương giảng về tư duy, rào cản và phương pháp sáng tạo.",
+          "locator": "Mục 7.2, 7.3; chỉ dùng phần phương pháp, không coi nhận định lịch sử là dữ liệu hiện hành"
+        }
+      ],
+      "retrieval": {
+        "url": "https://vinabook.edu.vn/chuong-7-ky-nang-mem-ky-nang-tu-duy-sang-tao/",
+        "final_url": "https://vinabook.edu.vn/chuong-7-ky-nang-mem-ky-nang-tu-duy-sang-tao/",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:22:23.649157+00:00",
+        "sha256": "6542113a40e775bbfc235e62dedcdc7fe51de3e5fed0fbdad941acdce7ae9b7e"
+      }
+    },
+    {
+      "url": "https://learn.microsoft.com/vi-vn/training/modules/build-web-api-aspnet-core/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "rest api",
+          "resource_id": "rest_api_dot03_vi",
+          "status": "reviewed",
+          "scope": "REST/CRUD bằng ASP.NET Core C#; là ví dụ khác stack, không phải bài Java.",
+          "locator": "Mục tiêu và các unit REST, CRUD"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://spring.io/guides/gs/rest-service/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "rest api",
+          "resource_id": "rest_api_dot03_spring",
+          "status": "reviewed",
+          "scope": "REST controller Java với Spring Boot, GET JSON; bài khởi đầu, không đại diện level 3.",
+          "locator": "What you will build/need; About 15 minutes; Greeting và RestController"
+        },
+        {
+          "skill": "spring boot",
+          "resource_id": "spring_boot_dot03_spring",
+          "status": "reviewed",
+          "scope": "REST controller Java với Spring Boot, GET JSON; bài khởi đầu, không đại diện level 3.",
+          "locator": "What you will build/need; About 15 minutes; Greeting và RestController"
+        }
+      ],
+      "retrieval": {
+        "url": "https://spring.io/guides/gs/rest-service/",
+        "final_url": "https://spring.io/guides/gs/rest-service/",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:13:27.010033+00:00",
+        "sha256": "a71fb60011f36445007ec8ad01ac6dfacd4275cdcec4b82ac948f52fd2778740"
+      }
+    },
+    {
+      "url": "https://aws.amazon.com/vi/docker/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "docker",
+          "resource_id": "docker_dot03_vi",
+          "status": "reviewed",
+          "scope": "Container, image và vòng đời triển khai; tổng quan, chưa có lab Docker.",
+          "locator": "Phần Docker hoạt động và các trường hợp sử dụng"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://arena.fpt.edu.vn/nguyen-tac-thiet-ke-ui-ux-ban-nen-biet/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "thiết kế ui ux",
+          "resource_id": "thiet_ke_ui_ux_dot03_vi",
+          "status": "partial",
+          "scope": "Nhập môn bố cục, tương phản, nhất quán; lời khuyên UI cần kiểm thử theo bối cảnh.",
+          "locator": "Phần nên làm/không nên làm; chưa phải giáo trình nghiên cứu UX đầy đủ"
+        }
+      ],
+      "retrieval": {
+        "url": "https://arena.fpt.edu.vn/nguyen-tac-thiet-ke-ui-ux-ban-nen-biet/",
+        "final_url": "https://arena.fpt.edu.vn/nguyen-tac-thiet-ke-ui-ux-ban-nen-biet/",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:20:32.773874+00:00",
+        "sha256": "b1e4c8a426f36933414eecb65e787e42d27db16c42fb04602171a01e2cdc069a"
+      }
+    },
+    {
+      "url": "https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "linux",
+          "resource_id": "linux_dot03_vi",
+          "status": "reviewed",
+          "scope": "Lệnh quản lý gói Debian/Ubuntu; phạm vi Linux package management.",
+          "locator": "Bảng install/remove/purge/upgrade/update và sudo"
+        }
+      ],
+      "retrieval": {
+        "url": "https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get/",
+        "final_url": "https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get/",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:20:34.712421+00:00",
+        "sha256": "ae30b0dc0198e1e6b872dd66e157f993268e1fe3ec40215877b517bb5ceeedfa"
+      }
+    },
+    {
+      "url": "https://learn.microsoft.com/vi-vn/training/modules/build-first-html-webpage/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "html",
+          "resource_id": "html_dot03_vi",
+          "status": "reviewed",
+          "scope": "Cấu trúc HTML và nội dung trang đầu tiên.",
+          "locator": "Unit 3-explore-core-html"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://www.britishcouncil.vn/hoc-tieng-anh/tieng-anh-nguoi-lon/kinh-nghiem/muoi-cach-chao-hoi-bang-tieng-anh-how-are-you",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "tiếng anh giao tiếp",
+          "resource_id": "tieng_anh_giao_tiep_dot03_vi",
+          "status": "reviewed",
+          "scope": "Câu chào và phản hồi trong hội thoại; giải thích tiếng Việt.",
+          "locator": "Các ví dụ chào hỏi và đáp lời"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://learn.microsoft.com/vi-vn/training/modules/use-css-styles/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "css",
+          "resource_id": "css_dot03_vi",
+          "status": "reviewed",
+          "scope": "Selector, khai báo và liên kết stylesheet; ví dụ mã thực tế.",
+          "locator": "Unit 2-explore-css-concepts"
+        }
+      ],
+      "retrieval": {
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/use-css-styles/",
+        "final_url": "https://learn.microsoft.com/vi-vn/training/modules/use-css-styles/",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:20:38.636703+00:00",
+        "sha256": "dd3b1db018223cd85bcf13b4f8f3a998e418f5572bc7811b0da3b2b80aacc65d"
+      }
+    },
+    {
+      "url": "https://openstax.org/books/principles-marketing/pages/1-1-marketing-and-the-marketing-process",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "chăm sóc khách hàng",
+          "resource_id": "cham_soc_khach_hang_001",
+          "status": "partial",
+          "scope": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "viết nội dung",
+          "resource_id": "viet_noi_dung_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "nghiên cứu thị trường",
+          "resource_id": "nghien_cuu_thi_truong_001",
+          "status": "partial",
+          "scope": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "bán hàng",
+          "resource_id": "ban_hang_001",
+          "status": "partial",
+          "scope": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "tìm kiếm khách hàng",
+          "resource_id": "tim_kiem_khach_hang_001",
+          "status": "partial",
+          "scope": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "content marketing",
+          "resource_id": "content_marketing_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "marketing tại điểm bán",
+          "resource_id": "marketing_tai_diem_ban_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "truyền thông nội bộ",
+          "resource_id": "truyen_thong_noi_bo_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "shopee",
+          "resource_id": "shopee_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "bán hàng b2b",
+          "resource_id": "ban_hang_b2b_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "viết nội dung ux",
+          "resource_id": "viet_noi_dung_ux_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "digital marketing",
+          "resource_id": "digital_marketing_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "biên tập nội dung",
+          "resource_id": "bien_tap_noi_dung_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "quản trị thương hiệu",
+          "resource_id": "quan_tri_thuong_hieu_001",
+          "status": "partial",
+          "scope": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "truyền thông tích hợp",
+          "resource_id": "truyen_thong_tich_hop_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "quản lý gian hàng",
+          "resource_id": "quan_ly_gian_hang_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "chạy ads sàn",
+          "resource_id": "chay_ads_san_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "tối ưu sản phẩm",
+          "resource_id": "toi_uu_san_pham_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "kịch bản bán hàng",
+          "resource_id": "kich_ban_ban_hang_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "quản lý thành công khách hàng",
+          "resource_id": "quan_ly_thanh_cong_khach_hang_001",
+          "status": "partial",
+          "scope": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "giữ chân khách hàng",
+          "resource_id": "giu_chan_khach_hang_001",
+          "status": "partial",
+          "scope": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "phát triển kinh doanh",
+          "resource_id": "phat_trien_kinh_doanh_001",
+          "status": "partial",
+          "scope": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "quản lý thương mại điện tử",
+          "resource_id": "quan_ly_thuong_mai_dien_tu_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "quản lý cửa hàng",
+          "resource_id": "quan_ly_cua_hang_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "dịch vụ khách hàng",
+          "resource_id": "dich_vu_khach_hang_001",
+          "status": "partial",
+          "scope": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "hỗ trợ kinh doanh",
+          "resource_id": "ho_tro_kinh_doanh_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "bán hàng bất động sản",
+          "resource_id": "ban_hang_bat_dong_san_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "tư vấn khách hàng",
+          "resource_id": "tu_van_khach_hang_001",
+          "status": "partial",
+          "scope": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "marketing cá nhân",
+          "resource_id": "marketing_ca_nhan_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "bán hàng kỹ thuật",
+          "resource_id": "ban_hang_ky_thuat_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "thiết kế nhận diện thương hiệu",
+          "resource_id": "thiet_ke_nhan_dien_thuong_hieu_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "nghiên cứu tâm lý khách hàng",
+          "resource_id": "nghien_cuu_tam_ly_khach_hang_001",
+          "status": "partial",
+          "scope": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "tư vấn bán hàng",
+          "resource_id": "tu_van_ban_hang_001",
+          "status": "partial",
+          "scope": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "thành thạo tuyến điểm du lịch",
+          "resource_id": "thanh_thao_tuyen_diem_du_lich_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        },
+        {
+          "skill": "thiết kế tour du lịch",
+          "resource_id": "thiet_ke_tour_du_lich_001",
+          "status": "unsuitable",
+          "scope": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+          "locator": "Learning outcomes; marketing process section 1.1"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://amis.misa.vn/57433/ky-nang-cham-soc-khach-hang/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "chăm sóc khách hàng",
+          "resource_id": "cham_soc_khach_hang_dot03_vi",
+          "status": "reviewed",
+          "scope": "Lắng nghe, xác nhận vấn đề và theo dõi xử lý; ví dụ dịch vụ khách hàng.",
+          "locator": "Phần xử lý tình huống và các bước phản hồi"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://daivietsaigon.edu.vn/bai-viet-trung-tam-dao-tao/12-ky-nang-xay-dung-moi-quan-he-sinh-vien-dve-can-biet-6e910.html",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "xây dựng mối quan hệ",
+          "resource_id": "xay_dung_moi_quan_he_dot03_vi",
+          "status": "reviewed",
+          "scope": "Giới thiệu bản thân, mở hội thoại và lắng nghe; áp dụng phù hợp văn hóa, hoàn cảnh.",
+          "locator": "Các mục tự giới thiệu, thực hành bắt chuyện và lắng nghe"
+        }
+      ],
+      "retrieval": {
+        "url": "https://daivietsaigon.edu.vn/bai-viet-trung-tam-dao-tao/12-ky-nang-xay-dung-moi-quan-he-sinh-vien-dve-can-biet-6e910.html",
+        "final_url": "https://daivietsaigon.edu.vn/bai-viet-trung-tam-dao-tao/12-ky-nang-xay-dung-moi-quan-he-sinh-vien-dve-can-biet-6e910.html",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:21:31.345462+00:00",
+        "sha256": "f98915b1e3d963a4a0df92782d3e78964db18a1fe5b3ee0eb441dc336c577420"
+      }
+    },
+    {
+      "url": "https://www2.hcmuaf.edu.vn/data/dangnh/file/BG_ACAD2D1_2007_NEW.pdf",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "autocad",
+          "resource_id": "autocad_dot03_vi",
+          "status": "reviewed",
+          "scope": "Lệnh vẽ, hiệu chỉnh và layer 2D; bản 2007, giao diện có thể khác hiện tại.",
+          "locator": "PDF mục lục, phần lệnh cơ bản, bài tập p47"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://www.autodesk.com/learn/catalog/start",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "đọc bản vẽ kỹ thuật",
+          "resource_id": "doc_ban_ve_ky_thuat_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "bóc tách khối lượng",
+          "resource_id": "boc_tach_khoi_luong_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "thiết kế hệ thống điện",
+          "resource_id": "thiet_ke_he_thong_dien_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "thiết bị điện công nghiệp",
+          "resource_id": "thiet_bi_dien_cong_nghiep_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "plc basic",
+          "resource_id": "plc_basic_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "giám sát thi công",
+          "resource_id": "giam_sat_thi_cong_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "dự toán công trình",
+          "resource_id": "du_toan_cong_trinh_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "hệ thống hvac",
+          "resource_id": "he_thong_hvac_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "gọi điện thoại",
+          "resource_id": "goi_dien_thoai_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "solidworks",
+          "resource_id": "solidworks_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "dung sai lắp ghép",
+          "resource_id": "dung_sai_lap_ghep_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "gia công cơ khí",
+          "resource_id": "gia_cong_co_khi_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "autocad electrical",
+          "resource_id": "autocad_electrical_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "plc siemens",
+          "resource_id": "plc_siemens_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "scada",
+          "resource_id": "scada_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "lập trình plc",
+          "resource_id": "lap_trinh_plc_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "etabs",
+          "resource_id": "etabs_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "hệ thống cấp thoát nước",
+          "resource_id": "he_thong_cap_thoat_nuoc_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "nghiệm thu công trình",
+          "resource_id": "nghiem_thu_cong_trinh_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "định mức xây dựng",
+          "resource_id": "dinh_muc_xay_dung_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "sketchup",
+          "resource_id": "sketchup_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "3ds max",
+          "resource_id": "3ds_max_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "tư duy không gian",
+          "resource_id": "tu_duy_khong_gian_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "phong thủy cơ bản",
+          "resource_id": "phong_thuy_co_ban_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "tính toán tải nhiệt",
+          "resource_id": "tinh_toan_tai_nhiet_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "chọn thiết bị lạnh",
+          "resource_id": "chon_thiet_bi_lanh_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "dụng cụ đo cơ khí",
+          "resource_id": "dung_cu_do_co_khi_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "g-code cơ bản",
+          "resource_id": "g_code_co_ban_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        },
+        {
+          "skill": "quay video bằng điện thoại",
+          "resource_id": "quay_video_bang_dien_thoai_001",
+          "status": "blocked",
+          "scope": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+        }
+      ],
+      "retrieval": {
+        "url": "https://www.autodesk.com/learn/catalog/start",
+        "final_url": "https://www.autodesk.com/learn/catalog/start",
+        "status_code": 403,
+        "fetched_at": "2026-10-24T06:22:23.450354+00:00",
+        "sha256": "8501a328b7766a14cc5a6e1139674b61e16c774b6e84d4fbd6142502acd21a1b"
+      }
+    },
+    {
+      "url": "https://thcsbinhan-donghoa.hcm.edu.vn/bai-giang-dien-tu/bai-3-ban-ve-chi-tiet/ct/110350/766693",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "đọc bản vẽ kỹ thuật",
+          "resource_id": "doc_ban_ve_ky_thuat_dot03_vi",
+          "status": "reviewed",
+          "scope": "Đọc bản vẽ chi tiết đơn giản; bài tập có lời giải, chưa đủ cho bản vẽ chuyên nghiệp.",
+          "locator": "PPTX đính kèm: slides 7–12; khung tên, hình biểu diễn, kích thước, yêu cầu kỹ thuật"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://aws.amazon.com/vi/what-is-cloud-computing/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "aws",
+          "resource_id": "aws_dot03_vi",
+          "status": "reviewed",
+          "scope": "Dịch vụ và mô hình cloud, ví dụ AWS; mới ở mức nhập môn.",
+          "locator": "Phần mô hình dịch vụ và triển khai cloud"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://viblo.asia/p/jira-workflow-tong-quan-va-huong-dan-Qbq5Q734ZD8",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "jira",
+          "resource_id": "jira_dot03_vi",
+          "status": "reviewed",
+          "scope": "Status, transition và cấu hình workflow; bài gốc 2022, UI có thể thay đổi.",
+          "locator": "Phần workflow và thao tác cấu hình; không dùng thời gian đọc tự động làm giờ học"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://amis.misa.vn/46175/huong-dan-su-dung-erp/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "erp",
+          "resource_id": "erp_dot03_vi",
+          "status": "reviewed",
+          "scope": "Quy trình, phân quyền, workflow và ví dụ nghiệp vụ; nền tảng của nhà cung cấp.",
+          "locator": "Các mục chuẩn hóa quy trình, phân quyền, workflow, ví dụ đơn hàng"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://learn.microsoft.com/vi-vn/training/modules/get-started-with-power-bi/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "power bi",
+          "resource_id": "power_bi_dot03_en",
+          "status": "reviewed",
+          "scope": "Khối thành phần và luồng báo cáo Power BI; nội dung thực tế tiếng Anh dù URL vi-vn.",
+          "locator": "Mục tiêu, unit Use Power BI"
+        }
+      ],
+      "retrieval": {
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/get-started-with-power-bi/",
+        "final_url": "https://learn.microsoft.com/vi-vn/training/modules/get-started-with-power-bi/",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:13:27.580650+00:00",
+        "sha256": "d527e5883c5404b7077d8e2c3c557bd55c78f53b06470e7606da0fabc2115a8c"
+      }
+    },
+    {
+      "url": "https://learn.microsoft.com/vi-vn/training/modules/manage-opportunities-dynamics-365-sales/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "bán hàng",
+          "resource_id": "ban_hang_dot03_en",
+          "status": "reviewed",
+          "scope": "Quản lý cơ hội, báo giá và đơn hàng trong Dynamics 365; không bao phủ mọi kỹ năng bán hàng.",
+          "locator": "Unit 2-create-opportunities"
+        }
+      ],
+      "retrieval": {
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/manage-opportunities-dynamics-365-sales/",
+        "final_url": "https://learn.microsoft.com/vi-vn/training/modules/manage-opportunities-dynamics-365-sales/",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:22:07.167051+00:00",
+        "sha256": "04007f9d674d858a64b83a386fc4b5faa28a4604aa832b9fbcaf45d778fd306e"
+      }
+    },
+    {
+      "url": "https://learn.microsoft.com/vi-vn/training/modules/manage-leads-dynamics-365-sales/",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "tìm kiếm khách hàng",
+          "resource_id": "tim_kiem_khach_hang_dot03_en",
+          "status": "reviewed",
+          "scope": "Tạo, phân loại và nuôi dưỡng lead trong Dynamics 365; cần hiểu CRM.",
+          "locator": "Unit 2-create-leads"
+        }
+      ],
+      "retrieval": {
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/manage-leads-dynamics-365-sales/",
+        "final_url": "https://learn.microsoft.com/vi-vn/training/modules/manage-leads-dynamics-365-sales/",
+        "status_code": 200,
+        "fetched_at": "2026-10-24T06:22:06.245367+00:00",
+        "sha256": "ffa9363a988a92372f302a65f1e0cb75bb6bc2162467141f10e4a08cdf6f0ea7"
+      }
+    },
+    {
+      "url": "https://asq.org/quality-resources/flowchart",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "vẽ quy trình",
+          "resource_id": "ve_quy_trinh_001",
+          "status": "reviewed",
+          "scope": "Ký hiệu và các bước vẽ lưu đồ.",
+          "locator": "Nội dung bài, định nghĩa và quy trình"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://asq.org/quality-resources/lean",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "lean manufacturing",
+          "resource_id": "lean_manufacturing_001",
+          "status": "reviewed",
+          "scope": "Lãng phí và nguyên tắc Lean; tổng quan.",
+          "locator": "Nội dung bài, định nghĩa và quy trình"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://asq.org/quality-resources/continuous-improvement",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "kaizen",
+          "resource_id": "kaizen_001",
+          "status": "reviewed",
+          "scope": "Cải tiến liên tục và PDCA; chưa bao phủ triển khai Kaizen.",
+          "locator": "Nội dung bài, định nghĩa và quy trình"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://asq.org/quality-resources/five-s-tutorial",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "5s",
+          "resource_id": "5s_001",
+          "status": "reviewed",
+          "scope": "Các bước 5S và tổ chức nơi làm việc.",
+          "locator": "Nội dung bài, định nghĩa và quy trình"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://www.epa.gov/sites/default/files/2015-06/documents/g6-final.pdf",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "phân tích sop",
+          "resource_id": "phan_tich_sop_001",
+          "status": "reviewed",
+          "scope": "Hướng dẫn viết, review và kiểm soát SOP; bản 2007, không coi là quy định hiện hành.",
+          "locator": "PDF p6–14, mục 1.4–4"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://asq.org/quality-resources/iso-9001",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "iso 9001",
+          "resource_id": "iso_9001_001",
+          "status": "reviewed",
+          "scope": "Tổng quan QMS; không cung cấp toàn bộ tiêu chuẩn.",
+          "locator": "Nội dung bài, định nghĩa và quy trình"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://asq.org/quality-resources/quality-assurance-vs-control",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "kiểm soát chất lượng",
+          "resource_id": "kiem_soat_chat_luong_001",
+          "status": "reviewed",
+          "scope": "Phân biệt QA/QC và hoạt động kiểm soát.",
+          "locator": "Nội dung bài, định nghĩa và quy trình"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://asq.org/quality-resources/eight-disciplines-8d",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "quy trình 8d",
+          "resource_id": "quy_trinh_8d_001",
+          "status": "reviewed",
+          "scope": "Quy trình D0–D8 giải quyết vấn đề.",
+          "locator": "Nội dung bài, định nghĩa và quy trình"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://asq.org/quality-resources/fmea",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "fmea",
+          "resource_id": "fmea_001",
+          "status": "reviewed",
+          "scope": "Phân tích dạng lỗi, tác động và ưu tiên.",
+          "locator": "Nội dung bài, định nghĩa và quy trình"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://asq.org/quality-resources/seven-basic-quality-tools",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "7 công cụ qc",
+          "resource_id": "7_cong_cu_qc_001",
+          "status": "reviewed",
+          "scope": "Bảy công cụ chất lượng và mục đích sử dụng.",
+          "locator": "Nội dung bài, định nghĩa và quy trình"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://www.iso.org/standards/popular/iso-14000-family",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "iso 14001",
+          "resource_id": "iso_14001_001",
+          "status": "reviewed",
+          "scope": "Tổng quan quản lý môi trường; văn bản tiêu chuẩn đầy đủ có phí.",
+          "locator": "Mục ISO 14001 và hệ thống quản lý môi trường"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    },
+    {
+      "url": "https://www.iso.org/standard/45001",
+      "review_date": "2026-10-24",
+      "mappings": [
+        {
+          "skill": "iso 45001",
+          "resource_id": "iso_45001_001",
+          "status": "reviewed",
+          "scope": "Tổng quan an toàn sức khỏe nghề nghiệp; văn bản tiêu chuẩn đầy đủ có phí.",
+          "locator": "Overview và nội dung OH&S"
+        }
+      ],
+      "retrieval_method": "web.open: content inspected; no locally recorded HTTP status/hash"
+    }
+  ],
+  "supporting_pages": [
+    {
+      "url": "https://www.autodesk.com/learn",
+      "result": "Read navigation only; does not validate lessons at the blocked catalog/start URL."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/",
+      "result": "Read landing page; general navigation is not a skill-specific lesson."
+    }
+  ]
+}

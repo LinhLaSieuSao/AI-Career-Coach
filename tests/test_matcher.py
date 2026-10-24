@@ -295,3 +295,13 @@ def test_missing_details_matches_repository_roles_and_resource_keys() -> None:
         assert result["missing_details"] == expected, role["id"]
         assert [detail["name"] for detail in result["missing_details"]] == result["missing"]
         assert all(name in resources for name in result["missing"]), role["id"]
+
+
+def test_cv_jd_independent_catalog_skills_do_not_match_parent_technologies():
+    result = matcher.match_cv_to_jd("pandas MySQL English Google Tag Manager .NET Core", "Python SQL tiếng Anh chuyên ngành Google Analytics ASP.NET Core")
+    assert result["cv_skills"] == ["pandas", "mysql", "english", "google tag manager", ".net core"]
+    assert result["percent"] == 0.0
+    assert result["matched"] == []
+    assert result["missing"] == result["jd_skills"]
+    exact = matcher.match_cv_to_jd("pandas MySQL English GTM .NET Core", "pandas MySQL English Google Tag Manager .NET Core")
+    assert exact["percent"] == 100.0

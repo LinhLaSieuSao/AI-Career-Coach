@@ -211,3 +211,9 @@ def get_course_recommendations(missing_skills: Iterable[str]) -> list[dict[str, 
         }
         for resource in roadmap[0]["resources"]
     ]
+
+
+def build_timed_roadmap(gap, resources, hours_per_week=8) -> dict:
+    """Schedule reviewed level ranges with sourced hours; keep incomplete work explicit."""
+    from .timed_planner import plan
+    return plan(gap, resources, hours_per_week)

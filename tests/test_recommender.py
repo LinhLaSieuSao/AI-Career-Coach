@@ -16,6 +16,16 @@ from modules.matcher import match_cv_to_jd, match_role
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def test_independent_recognition_skills_without_resources_are_kept_and_reported():
+    resources = json.loads((ROOT / "Data/resources.json").read_text(encoding="utf-8"))
+    missing = ["pandas", "mysql", "english", "google tag manager", ".net core"]
+    roadmap = build_roadmap(missing, resources)
+    assert [skill for week in roadmap for skill in week["skills"]] == missing
+    assert [skill for week in roadmap for skill in week["skills_without_resources"]] == missing
+    assert all(week["resources"] == [] for week in roadmap)
+    assert all(keys == [] for week in roadmap for keys in week["resource_keys"].values())
+
+
 def _resource(name: str, **overrides) -> dict:
     return {
         "id": name,

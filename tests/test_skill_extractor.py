@@ -10,6 +10,7 @@ from modules.skill_extractor import (
     merge_skills,
     normalize_skill,
 )
+from modules.catalog import load_skill_vocabulary
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def _roles() -> list[dict]:
     """Đọc dữ liệu vai trò thực của dự án."""
-    return json.loads((ROOT / "data/roles.json").read_text(encoding="utf-8"))
+    return json.loads((ROOT / "Data/roles.json").read_text(encoding="utf-8"))
 
 
 def test_tc01_exact_match_case_insensitive() -> None:
@@ -88,15 +89,41 @@ def test_fuzzy_is_disabled_by_default_and_does_not_confuse_csharp_css() -> None:
 
 def test_roles_skills_have_resource_keys_after_normalization() -> None:
     """Mọi kỹ năng vai trò đều có tài nguyên tương ứng sau chuẩn hóa."""
-    resources = json.loads((ROOT / "data/resources.json").read_text(encoding="utf-8"))
+    resources = json.loads((ROOT / "Data/resources.json").read_text(encoding="utf-8"))
     resource_keys = {normalize_skill(key) for key in resources}
     assert build_vocabulary(_roles()) <= resource_keys
 
 
-def test_alias_targets_are_in_roles_vocabulary() -> None:
-    """Mọi tên chuẩn của alias có trong từ điển vai trò."""
-    aliases = load_aliases(ROOT / "data/skill_aliases.json")
-    assert set(aliases.values()) <= build_vocabulary(_roles())
+def test_alias_targets_are_in_recognition_vocabulary() -> None:
+    """Mọi tên chuẩn của alias có trong catalog nhận diện dùng chung."""
+    aliases = load_aliases(ROOT / "Data/skill_aliases.json")
+    assert set(aliases.values()) <= load_skill_vocabulary()
+
+
+def test_p02_exact_aliases_and_distinct_technologies():
+    vocabulary = load_skill_vocabulary()
+    aliases = load_aliases(ROOT / "Data/skill_aliases.json")
+    assert extract_skills("ML, Communication, Git/GitHub, JS, Node.js", vocabulary, aliases) == [
+        "thuật toán học máy", "giao tiếp", "git", "javascript", "nodejs"
+    ]
+    assert extract_skills("pandas MySQL English", vocabulary, aliases) == ["pandas", "mysql", "english"]
+    assert extract_skills("Google Tag Manager and Google Analytics", vocabulary, aliases) == [
+        "google tag manager", "google analytics"
+    ]
+    assert extract_skills("GTM .NET Core ASP.NET Core", vocabulary, aliases) == [
+        "google tag manager", ".net core", "asp.net core"
+    ]
+    assert extract_skills("mysql pandas english", vocabulary, aliases) != ["sql", "python", "tiếng anh chuyên ngành"]
+    assert extract_skills("js", vocabulary, aliases) == ["javascript"]
+    assert extract_skills("jss mlp sq", vocabulary, aliases) == []
+
+
+def test_alias_catalog_has_no_chains_cycles_or_canonical_collisions():
+    aliases = load_aliases(ROOT / "Data/skill_aliases.json")
+    vocabulary = load_skill_vocabulary()
+    assert not (set(aliases) & set(aliases.values()))
+    assert not (set(aliases) & vocabulary)
+    assert set(aliases.values()) <= vocabulary
 
 
 def test_roles_have_no_excess_skill_whitespace() -> None:

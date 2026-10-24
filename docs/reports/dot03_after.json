@@ -1,0 +1,604 @@
+{
+  "errors": [],
+  "warnings": [
+    "recognition_only..net core: no learning resource",
+    "recognition_only.english: no learning resource",
+    "recognition_only.google tag manager: no learning resource",
+    "recognition_only.mysql: no learning resource",
+    "recognition_only.pandas: no learning resource"
+  ],
+  "stats": {
+    "roles": 131,
+    "role_skills": 410,
+    "recognition_skills": 415,
+    "resource_records": 445,
+    "unique_urls": 135,
+    "unverified": 52,
+    "languages": {
+      "en": 387,
+      "vi": 58
+    },
+    "published_durations": 13,
+    "published_duration_urls": 11,
+    "estimated_durations": 0,
+    "content_reviews": {
+      "unreviewed": 334,
+      "reviewed": 44,
+      "partial": 15,
+      "blocked": 29,
+      "unsuitable": 23
+    },
+    "questions": 752,
+    "recognition_without_resources": [
+      ".net core",
+      "english",
+      "google tag manager",
+      "mysql",
+      "pandas"
+    ]
+  },
+  "top30": [
+    {
+      "name": "giao tiếp",
+      "role_count": 91
+    },
+    {
+      "name": "giải quyết vấn đề",
+      "role_count": 73
+    },
+    {
+      "name": "làm việc nhóm",
+      "role_count": 57
+    },
+    {
+      "name": "tiếng anh chuyên ngành",
+      "role_count": 55
+    },
+    {
+      "name": "excel",
+      "role_count": 33
+    },
+    {
+      "name": "git",
+      "role_count": 23
+    },
+    {
+      "name": "cẩn thận",
+      "role_count": 20
+    },
+    {
+      "name": "quản lý thời gian",
+      "role_count": 19
+    },
+    {
+      "name": "phân tích dữ liệu",
+      "role_count": 18
+    },
+    {
+      "name": "sql",
+      "role_count": 18
+    },
+    {
+      "name": "tư duy phân tích",
+      "role_count": 16
+    },
+    {
+      "name": "python",
+      "role_count": 14
+    },
+    {
+      "name": "sáng tạo",
+      "role_count": 13
+    },
+    {
+      "name": "docker",
+      "role_count": 12
+    },
+    {
+      "name": "rest api",
+      "role_count": 12
+    },
+    {
+      "name": "thiết kế ui ux",
+      "role_count": 12
+    },
+    {
+      "name": "thương lượng",
+      "role_count": 12
+    },
+    {
+      "name": "linux",
+      "role_count": 10
+    },
+    {
+      "name": "thuyết trình",
+      "role_count": 10
+    },
+    {
+      "name": "html",
+      "role_count": 9
+    },
+    {
+      "name": "tiếng anh giao tiếp",
+      "role_count": 9
+    },
+    {
+      "name": "autocad",
+      "role_count": 8
+    },
+    {
+      "name": "chăm sóc khách hàng",
+      "role_count": 8
+    },
+    {
+      "name": "css",
+      "role_count": 8
+    },
+    {
+      "name": "lập kế hoạch",
+      "role_count": 8
+    },
+    {
+      "name": "xây dựng mối quan hệ",
+      "role_count": 8
+    },
+    {
+      "name": "đọc bản vẽ kỹ thuật",
+      "role_count": 8
+    },
+    {
+      "name": "aws",
+      "role_count": 7
+    },
+    {
+      "name": "erp",
+      "role_count": 7
+    },
+    {
+      "name": "jira",
+      "role_count": 7
+    }
+  ],
+  "demo_roles": [
+    {
+      "id": "backend_developer_java",
+      "skills": 10,
+      "reviewed_or_partial_skills": [
+        "spring boot",
+        "rest api",
+        "sql",
+        "git",
+        "giải quyết vấn đề",
+        "docker",
+        "giao tiếp",
+        "làm việc nhóm",
+        "linux"
+      ],
+      "vietnamese_reviewed_or_partial_skills": [
+        "rest api",
+        "sql",
+        "git",
+        "giải quyết vấn đề",
+        "docker",
+        "giao tiếp",
+        "làm việc nhóm",
+        "linux"
+      ],
+      "skills_with_published_duration": [
+        "spring boot",
+        "rest api",
+        "sql",
+        "git"
+      ],
+      "skills_without_published_duration": [
+        "java",
+        "giải quyết vấn đề",
+        "docker",
+        "giao tiếp",
+        "làm việc nhóm",
+        "linux"
+      ]
+    },
+    {
+      "id": "data_analyst",
+      "skills": 10,
+      "reviewed_or_partial_skills": [
+        "sql",
+        "power bi",
+        "tư duy phân tích",
+        "python",
+        "excel",
+        "giải quyết vấn đề",
+        "giao tiếp",
+        "làm việc nhóm"
+      ],
+      "vietnamese_reviewed_or_partial_skills": [
+        "sql",
+        "tư duy phân tích",
+        "python",
+        "excel",
+        "giải quyết vấn đề",
+        "giao tiếp",
+        "làm việc nhóm"
+      ],
+      "skills_with_published_duration": [
+        "sql",
+        "power bi",
+        "python",
+        "excel"
+      ],
+      "skills_without_published_duration": [
+        "tư duy phân tích",
+        "thống kê",
+        "giải quyết vấn đề",
+        "giao tiếp",
+        "làm việc nhóm",
+        "tableau"
+      ]
+    },
+    {
+      "id": "sales_executive",
+      "skills": 8,
+      "reviewed_or_partial_skills": [
+        "bán hàng",
+        "giao tiếp",
+        "tìm kiếm khách hàng",
+        "chăm sóc khách hàng",
+        "làm việc nhóm",
+        "giải quyết vấn đề",
+        "quản lý thời gian"
+      ],
+      "vietnamese_reviewed_or_partial_skills": [
+        "giao tiếp",
+        "chăm sóc khách hàng",
+        "làm việc nhóm",
+        "giải quyết vấn đề",
+        "quản lý thời gian"
+      ],
+      "skills_with_published_duration": [
+        "bán hàng",
+        "tìm kiếm khách hàng"
+      ],
+      "skills_without_published_duration": [
+        "giao tiếp",
+        "thuyết phục",
+        "chăm sóc khách hàng",
+        "làm việc nhóm",
+        "giải quyết vấn đề",
+        "quản lý thời gian"
+      ]
+    }
+  ],
+  "top30_vietnamese": [
+    {
+      "name": "giao tiếp",
+      "role_count": 91,
+      "resources": [
+        {
+          "id": "giao_tiep_dot03_vi",
+          "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "giải quyết vấn đề",
+      "role_count": 73,
+      "resources": [
+        {
+          "id": "giai_quyet_van_de_dot03_vi",
+          "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "làm việc nhóm",
+      "role_count": 57,
+      "resources": [
+        {
+          "id": "lam_viec_nhom_dot03_vi",
+          "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "tiếng anh chuyên ngành",
+      "role_count": 55,
+      "resources": [
+        {
+          "id": "tieng_anh_chuyen_nganh_dot03_vi",
+          "url": "https://www.britishcouncil.vn/hoc-tieng-anh/tieng-anh-nguoi-lon/kinh-nghiem/5-quy-tac-viet-thu-tin",
+          "status": "partial"
+        }
+      ]
+    },
+    {
+      "name": "excel",
+      "role_count": 33,
+      "resources": [
+        {
+          "id": "excel_dot03_vi",
+          "url": "https://learn.microsoft.com/vi-vn/training/modules/get-started-data-concepts/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "git",
+      "role_count": 23,
+      "resources": [
+        {
+          "id": "git_dot03_vi",
+          "url": "https://learn.microsoft.com/vi-vn/training/modules/intro-to-git/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "cẩn thận",
+      "role_count": 20,
+      "resources": [
+        {
+          "id": "can_than_dot03_vi",
+          "url": "https://www.britishcouncil.vn/hoc-tieng-anh/tieng-anh-nguoi-lon/kinh-nghiem/5-quy-tac-viet-thu-tin",
+          "status": "partial"
+        }
+      ]
+    },
+    {
+      "name": "quản lý thời gian",
+      "role_count": 19,
+      "resources": [
+        {
+          "id": "quan_ly_thoi_gian_dot03_vi",
+          "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "phân tích dữ liệu",
+      "role_count": 18,
+      "resources": [
+        {
+          "id": "phan_tich_du_lieu_dot03_vi",
+          "url": "https://learn.microsoft.com/vi-vn/training/modules/explore-analyze-data-with-python/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "sql",
+      "role_count": 18,
+      "resources": [
+        {
+          "id": "sql_dot03_vi",
+          "url": "https://learn.microsoft.com/vi-vn/training/modules/introduction-to-transact-sql/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "tư duy phân tích",
+      "role_count": 16,
+      "resources": [
+        {
+          "id": "tu_duy_phan_tich_dot03_vi",
+          "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-phan-tich",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "python",
+      "role_count": 14,
+      "resources": [
+        {
+          "id": "python_dot03_vi",
+          "url": "https://learn.microsoft.com/vi-vn/training/modules/explore-analyze-data-with-python/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "sáng tạo",
+      "role_count": 13,
+      "resources": [
+        {
+          "id": "sang_tao_dot03_vi",
+          "url": "https://vinabook.edu.vn/chuong-7-ky-nang-mem-ky-nang-tu-duy-sang-tao/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "docker",
+      "role_count": 12,
+      "resources": [
+        {
+          "id": "docker_dot03_vi",
+          "url": "https://aws.amazon.com/vi/docker/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "rest api",
+      "role_count": 12,
+      "resources": [
+        {
+          "id": "rest_api_dot03_vi",
+          "url": "https://learn.microsoft.com/vi-vn/training/modules/build-web-api-aspnet-core/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "thiết kế ui ux",
+      "role_count": 12,
+      "resources": [
+        {
+          "id": "thiet_ke_ui_ux_dot03_vi",
+          "url": "https://arena.fpt.edu.vn/nguyen-tac-thiet-ke-ui-ux-ban-nen-biet/",
+          "status": "partial"
+        }
+      ]
+    },
+    {
+      "name": "thương lượng",
+      "role_count": 12,
+      "resources": [
+        {
+          "id": "thuong_luong_dot03_vi",
+          "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "linux",
+      "role_count": 10,
+      "resources": [
+        {
+          "id": "linux_dot03_vi",
+          "url": "https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "thuyết trình",
+      "role_count": 10,
+      "resources": [
+        {
+          "id": "thuyet_trinh_dot03_vi",
+          "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "html",
+      "role_count": 9,
+      "resources": [
+        {
+          "id": "html_dot03_vi",
+          "url": "https://learn.microsoft.com/vi-vn/training/modules/build-first-html-webpage/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "tiếng anh giao tiếp",
+      "role_count": 9,
+      "resources": [
+        {
+          "id": "tieng_anh_giao_tiep_dot03_vi",
+          "url": "https://www.britishcouncil.vn/hoc-tieng-anh/tieng-anh-nguoi-lon/kinh-nghiem/muoi-cach-chao-hoi-bang-tieng-anh-how-are-you",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "autocad",
+      "role_count": 8,
+      "resources": [
+        {
+          "id": "autocad_dot03_vi",
+          "url": "https://www2.hcmuaf.edu.vn/data/dangnh/file/BG_ACAD2D1_2007_NEW.pdf",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "chăm sóc khách hàng",
+      "role_count": 8,
+      "resources": [
+        {
+          "id": "cham_soc_khach_hang_dot03_vi",
+          "url": "https://amis.misa.vn/57433/ky-nang-cham-soc-khach-hang/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "role_count": 8,
+      "resources": [
+        {
+          "id": "css_dot03_vi",
+          "url": "https://learn.microsoft.com/vi-vn/training/modules/use-css-styles/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "lập kế hoạch",
+      "role_count": 8,
+      "resources": [
+        {
+          "id": "lap_ke_hoach_dot03_vi",
+          "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "xây dựng mối quan hệ",
+      "role_count": 8,
+      "resources": [
+        {
+          "id": "xay_dung_moi_quan_he_dot03_vi",
+          "url": "https://daivietsaigon.edu.vn/bai-viet-trung-tam-dao-tao/12-ky-nang-xay-dung-moi-quan-he-sinh-vien-dve-can-biet-6e910.html",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "đọc bản vẽ kỹ thuật",
+      "role_count": 8,
+      "resources": [
+        {
+          "id": "doc_ban_ve_ky_thuat_dot03_vi",
+          "url": "https://thcsbinhan-donghoa.hcm.edu.vn/bai-giang-dien-tu/bai-3-ban-ve-chi-tiet/ct/110350/766693",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "aws",
+      "role_count": 7,
+      "resources": [
+        {
+          "id": "aws_dot03_vi",
+          "url": "https://aws.amazon.com/vi/what-is-cloud-computing/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "erp",
+      "role_count": 7,
+      "resources": [
+        {
+          "id": "erp_dot03_vi",
+          "url": "https://amis.misa.vn/46175/huong-dan-su-dung-erp/",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "name": "jira",
+      "role_count": 7,
+      "resources": [
+        {
+          "id": "jira_dot03_vi",
+          "url": "https://viblo.asia/p/jira-workflow-tong-quan-va-huong-dan-Qbq5Q734ZD8",
+          "status": "reviewed"
+        }
+      ]
+    }
+  ]
+}

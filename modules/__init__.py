@@ -11,11 +11,18 @@ from typing import Any
 
 
 _EXPORTS = {
+    "export_report": ("export", "export_report"),
     "extract_text_from_pdf": ("cv_parser", "extract_text_from_pdf"),
     "extract_text": ("cv_parser", "extract_text"),
+    "parse_document": ("cv_parser", "parse_document"),
     "build_profile": ("profile", "build_profile"),
+    "build_profile_from_cv": ("profile", "build_profile_from_cv"),
     "match_role": ("matcher", "match_role"),
     "match_cv_to_jd": ("matcher", "match_cv_to_jd"),
+    "compute_gap": ("matcher", "compute_gap"),
+    "suggest_roles": ("matcher", "suggest_roles"),
+    "build_timed_roadmap": ("recommender", "build_timed_roadmap"),
+    "score_answer": ("interview", "score_answer"),
     "build_roadmap": ("recommender", "build_roadmap"),
     "get_course_recommendations": ("recommender", "get_course_recommendations"),
     "generate_interview_questions": ("interview", "generate_interview_questions"),
