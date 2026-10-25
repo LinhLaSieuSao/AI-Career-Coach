@@ -15,7 +15,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "giao_tiep_dot03_vi",
+        "title": "Kỹ năng mềm",
+        "type": "book",
+        "provider": "Đại học Huế",
+        "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Lắng nghe, phản hồi; phần thực hành giao tiếp.",
+        "evidence_locator": "PDF p43; trang in 82–83",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -35,7 +57,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "giai_quyet_van_de_dot03_vi",
+        "title": "Quy trình giải quyết vấn đề",
+        "type": "article",
+        "provider": "PACE",
+        "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Quy trình từ xác định nguyên nhân tới theo dõi giải pháp; nhập môn.",
+        "evidence_locator": "Các mục quy trình 7 bước và kỹ thuật IDEAL",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -55,7 +99,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "lam_viec_nhom_dot03_vi",
+        "title": "Kỹ năng mềm",
+        "type": "book",
+        "provider": "Đại học Huế",
+        "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Phân công và phối hợp theo mục tiêu.",
+        "evidence_locator": "PDF p67,71; trang in 130–131,138–139",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -75,7 +141,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "tieng_anh_chuyen_nganh_dot03_vi",
+        "title": "5 quy tắc viết thư tín",
+        "type": "article",
+        "provider": "British Council",
+        "url": "https://www.britishcouncil.vn/hoc-tieng-anh/tieng-anh-nguoi-lon/kinh-nghiem/5-quy-tac-viet-thu-tin",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "partial",
+        "review_note": "Tiếng Anh thư tín công việc; chưa bao phủ thuật ngữ chuyên ngành riêng của từng nghề.",
+        "evidence_locator": "Các quy tắc kiểm tra và sửa lỗi email; ví dụ diễn đạt",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -95,7 +183,33 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "excel_dot03_vi",
+        "title": "Bắt đầu với các khái niệm dữ liệu",
+        "type": "module",
+        "provider": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/get-started-data-concepts/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": 0.6166666666666667,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Lọc, sắp xếp, công thức, định dạng có điều kiện; bài tập Excel cho web.",
+        "evidence_locator": "Unit 6-exercise-use-excel-to-explore-data",
+        "access_note": "Học liệu miễn phí; đăng nhập để lưu tiến độ. Bài tập cần công cụ/tài khoản nêu trong bài.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+        "duration_catalog_uid": "learn.wwl.get-started-data-concepts",
+        "duration_basis": "publisher_catalog_minutes",
+        "duration_checked_at": "2026-10-24"
       }
     ]
   },
@@ -115,7 +229,33 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "git_dot03_vi",
+        "title": "Giới thiệu về Git",
+        "type": "module",
+        "provider": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/intro-to-git/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": 1.4333333333333333,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Lệnh Git cơ bản và lịch sử thay đổi; không thay thế Git workflow nâng cao.",
+        "evidence_locator": "Unit 3-basic-git-commands",
+        "access_note": "Học liệu miễn phí; đăng nhập để lưu tiến độ. Bài tập cần công cụ/tài khoản nêu trong bài.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+        "duration_catalog_uid": "learn.student-evangelism.introduction-to-git",
+        "duration_basis": "publisher_catalog_minutes",
+        "duration_checked_at": "2026-10-24"
       }
     ]
   },
@@ -135,7 +275,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "can_than_dot03_vi",
+        "title": "5 quy tắc viết thư tín",
+        "type": "article",
+        "provider": "British Council",
+        "url": "https://www.britishcouncil.vn/hoc-tieng-anh/tieng-anh-nguoi-lon/kinh-nghiem/5-quy-tac-viet-thu-tin",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "partial",
+        "review_note": "Checklist kiểm tra người nhận, đính kèm, lỗi trước khi gửi email; chỉ một tình huống luyện cẩn thận.",
+        "evidence_locator": "Các quy tắc kiểm tra và sửa lỗi email; ví dụ diễn đạt",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -155,7 +317,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "quan_ly_thoi_gian_dot03_vi",
+        "title": "Kỹ năng mềm",
+        "type": "book",
+        "provider": "Đại học Huế",
+        "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Ưu tiên công việc, Eisenhower và Pomodoro.",
+        "evidence_locator": "PDF p118–120; trang in 234–239",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -175,7 +359,33 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "sql_dot03_vi",
+        "title": "Giới thiệu về Transact-SQL",
+        "type": "module",
+        "provider": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/introduction-to-transact-sql/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": 1.0166666666666666,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "SELECT và truy vấn nhập môn trên T-SQL; lưu ý khác biệt dialect.",
+        "evidence_locator": "Unit 4-examine-select-statement",
+        "access_note": "Học liệu miễn phí; đăng nhập để lưu tiến độ. Bài tập cần công cụ/tài khoản nêu trong bài.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+        "duration_catalog_uid": "learn.wwl.intro-to-transact-sql",
+        "duration_basis": "publisher_catalog_minutes",
+        "duration_checked_at": "2026-10-24"
       }
     ]
   },
@@ -195,7 +405,33 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "phan_tich_du_lieu_dot03_vi",
+        "title": "Khám phá và phân tích dữ liệu với Python",
+        "type": "module",
+        "provider": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/explore-analyze-data-with-python/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": 1.0,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Notebook khám phá, thống kê mô tả và trực quan dữ liệu; cần Python cơ bản.",
+        "evidence_locator": "Unit 2-explore-data-numpy-pandas",
+        "access_note": "Học liệu miễn phí; đăng nhập để lưu tiến độ. Bài tập cần công cụ/tài khoản nêu trong bài.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+        "duration_catalog_uid": "learn.wwl.explore-analyze-data-with-python",
+        "duration_basis": "publisher_catalog_minutes",
+        "duration_checked_at": "2026-10-24"
       }
     ]
   },
@@ -215,7 +451,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "tu_duy_phan_tich_dot03_vi",
+        "title": "Rèn luyện tư duy phân tích",
+        "type": "article",
+        "provider": "PACE",
+        "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-phan-tich",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Phân chia thông tin, đánh giá và suy luận; tổng quan phương pháp.",
+        "evidence_locator": "Các mục yếu tố phân tích, phương pháp và rèn luyện",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -235,7 +493,33 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "python_dot03_vi",
+        "title": "Khám phá và phân tích dữ liệu với Python",
+        "type": "module",
+        "provider": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/explore-analyze-data-with-python/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": 1.0,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Thực hành NumPy/pandas để khám phá dữ liệu; cần biết Python cơ bản.",
+        "evidence_locator": "Unit 2-explore-data-numpy-pandas",
+        "access_note": "Học liệu miễn phí; đăng nhập để lưu tiến độ. Bài tập cần công cụ/tài khoản nêu trong bài.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+        "duration_catalog_uid": "learn.wwl.explore-analyze-data-with-python",
+        "duration_basis": "publisher_catalog_minutes",
+        "duration_checked_at": "2026-10-24"
       }
     ]
   },
@@ -255,7 +539,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "sang_tao_dot03_vi",
+        "title": "Kỹ năng tư duy sáng tạo",
+        "type": "article",
+        "provider": "Trung tâm IKIGAI",
+        "url": "https://vinabook.edu.vn/chuong-7-ky-nang-mem-ky-nang-tu-duy-sang-tao/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Chương giảng về tư duy, rào cản và phương pháp sáng tạo.",
+        "evidence_locator": "Mục 7.2, 7.3; chỉ dùng phần phương pháp, không coi nhận định lịch sử là dữ liệu hiện hành",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -275,7 +581,56 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "rest_api_dot03_vi",
+        "title": "Tạo API web với bộ điều ASP.NET Core",
+        "type": "module",
+        "provider": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/build-web-api-aspnet-core/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": 0.6833333333333333,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "REST/CRUD bằng ASP.NET Core C#; là ví dụ khác stack, không phải bài Java.",
+        "evidence_locator": "Mục tiêu và các unit REST, CRUD",
+        "access_note": "Học liệu miễn phí; đăng nhập để lưu tiến độ. Bài tập cần công cụ/tài khoản nêu trong bài.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+        "duration_catalog_uid": "learn.build-web-api-net-core",
+        "duration_basis": "publisher_catalog_minutes",
+        "duration_checked_at": "2026-10-24"
+      },
+      {
+        "id": "rest_api_dot03_spring",
+        "title": "Building a RESTful Web Service",
+        "type": "doc",
+        "provider": "Spring",
+        "url": "https://spring.io/guides/gs/rest-service/",
+        "language": "en",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": 0.25,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "REST controller Java với Spring Boot, GET JSON; bài khởi đầu, không đại diện level 3.",
+        "evidence_locator": "What you will build/need; About 15 minutes; Greeting và RestController",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://spring.io/guides/gs/rest-service/",
+        "duration_basis": "publisher_approximate_guide_minutes",
+        "duration_checked_at": "2026-10-24"
       }
     ]
   },
@@ -295,7 +650,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "docker_dot03_vi",
+        "title": "Docker là gì?",
+        "type": "article",
+        "provider": "AWS",
+        "url": "https://aws.amazon.com/vi/docker/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Container, image và vòng đời triển khai; tổng quan, chưa có lab Docker.",
+        "evidence_locator": "Phần Docker hoạt động và các trường hợp sử dụng",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -315,7 +692,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "thiet_ke_ui_ux_dot03_vi",
+        "title": "Nguyên tắc thiết kế UI/UX",
+        "type": "article",
+        "provider": "FPT Arena",
+        "url": "https://arena.fpt.edu.vn/nguyen-tac-thiet-ke-ui-ux-ban-nen-biet/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "partial",
+        "review_note": "Nhập môn bố cục, tương phản, nhất quán; lời khuyên UI cần kiểm thử theo bối cảnh.",
+        "evidence_locator": "Phần nên làm/không nên làm; chưa phải giáo trình nghiên cứu UX đầy đủ",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -335,7 +734,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "thuong_luong_dot03_vi",
+        "title": "Kỹ năng mềm",
+        "type": "book",
+        "provider": "Đại học Huế",
+        "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Đề nghị, nhượng bộ và chuẩn bị đàm phán.",
+        "evidence_locator": "PDF p107,110; trang in 212–213,218–219",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -355,7 +776,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "linux_dot03_vi",
+        "title": "apt và apt-get trên Linux",
+        "type": "article",
+        "provider": "AWS",
+        "url": "https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Lệnh quản lý gói Debian/Ubuntu; phạm vi Linux package management.",
+        "evidence_locator": "Bảng install/remove/purge/upgrade/update và sudo",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -375,7 +818,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "thuyet_trinh_dot03_vi",
+        "title": "Kỹ năng mềm",
+        "type": "book",
+        "provider": "Đại học Huế",
+        "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Chuẩn bị nội dung theo người nghe.",
+        "evidence_locator": "PDF p90; trang in 176–177",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -395,7 +860,33 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "html_dot03_vi",
+        "title": "Xây dựng trang web HTML đầu tiên của bạn",
+        "type": "module",
+        "provider": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/build-first-html-webpage/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": 0.5166666666666667,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Cấu trúc HTML và nội dung trang đầu tiên.",
+        "evidence_locator": "Unit 3-explore-core-html",
+        "access_note": "Học liệu miễn phí; đăng nhập để lưu tiến độ. Bài tập cần công cụ/tài khoản nêu trong bài.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+        "duration_catalog_uid": "learn.wwl.build-first-html-webpage",
+        "duration_basis": "publisher_catalog_minutes",
+        "duration_checked_at": "2026-10-24"
       }
     ]
   },
@@ -415,7 +906,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "tieng_anh_giao_tiep_dot03_vi",
+        "title": "Cách chào hỏi bằng tiếng Anh",
+        "type": "article",
+        "provider": "British Council",
+        "url": "https://www.britishcouncil.vn/hoc-tieng-anh/tieng-anh-nguoi-lon/kinh-nghiem/muoi-cach-chao-hoi-bang-tieng-anh-how-are-you",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Câu chào và phản hồi trong hội thoại; giải thích tiếng Việt.",
+        "evidence_locator": "Các ví dụ chào hỏi và đáp lời",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -435,7 +948,33 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "css_dot03_vi",
+        "title": "Sử dụng kiểu CSS trong trang web",
+        "type": "module",
+        "provider": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/use-css-styles/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": 0.5833333333333334,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Selector, khai báo và liên kết stylesheet; ví dụ mã thực tế.",
+        "evidence_locator": "Unit 2-explore-css-concepts",
+        "access_note": "Học liệu miễn phí; đăng nhập để lưu tiến độ. Bài tập cần công cụ/tài khoản nêu trong bài.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+        "duration_catalog_uid": "learn.wwl.use-css-styles",
+        "duration_basis": "publisher_catalog_minutes",
+        "duration_checked_at": "2026-10-24"
       }
     ]
   },
@@ -452,10 +991,35 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_review_status": "partial",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
+      },
+      {
+        "id": "cham_soc_khach_hang_dot03_vi",
+        "title": "Kỹ năng chăm sóc khách hàng",
+        "type": "article",
+        "provider": "MISA AMIS",
+        "url": "https://amis.misa.vn/57433/ky-nang-cham-soc-khach-hang/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Lắng nghe, xác nhận vấn đề và theo dõi xử lý; ví dụ dịch vụ khách hàng.",
+        "evidence_locator": "Phần xử lý tình huống và các bước phản hồi",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -475,7 +1039,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "lap_ke_hoach_dot03_vi",
+        "title": "Kỹ năng mềm",
+        "type": "book",
+        "provider": "Đại học Huế",
+        "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Mục tiêu SMART, phân bổ nguồn lực.",
+        "evidence_locator": "PDF p67,71; trang in 130–131,138–139",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -495,7 +1081,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "xay_dung_moi_quan_he_dot03_vi",
+        "title": "Thực hành xây dựng mối quan hệ",
+        "type": "article",
+        "provider": "Cao đẳng Đại Việt Sài Gòn",
+        "url": "https://daivietsaigon.edu.vn/bai-viet-trung-tam-dao-tao/12-ky-nang-xay-dung-moi-quan-he-sinh-vien-dve-can-biet-6e910.html",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Giới thiệu bản thân, mở hội thoại và lắng nghe; áp dụng phù hợp văn hóa, hoàn cảnh.",
+        "evidence_locator": "Các mục tự giới thiệu, thực hành bắt chuyện và lắng nghe",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -515,7 +1123,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "autocad_dot03_vi",
+        "title": "Bài giảng AutoCAD 2D",
+        "type": "book",
+        "provider": "Đại học Nông Lâm TP.HCM",
+        "url": "https://www2.hcmuaf.edu.vn/data/dangnh/file/BG_ACAD2D1_2007_NEW.pdf",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Lệnh vẽ, hiệu chỉnh và layer 2D; bản 2007, giao diện có thể khác hiện tại.",
+        "evidence_locator": "PDF mục lục, phần lệnh cơ bản, bài tập p47",
+        "access_note": "PDF công khai miễn phí; phần mềm AutoCAD có giấy phép riêng.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -534,8 +1164,31 @@
         "level_from": 1,
         "level_to": 3,
         "duration_hours": null,
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
+      },
+      {
+        "id": "doc_ban_ve_ky_thuat_dot03_vi",
+        "title": "Bài 3: Bản vẽ chi tiết",
+        "type": "doc",
+        "provider": "THCS Bình An, Đông Hòa",
+        "url": "https://thcsbinhan-donghoa.hcm.edu.vn/bai-giang-dien-tu/bai-3-ban-ve-chi-tiet/ct/110350/766693",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Đọc bản vẽ chi tiết đơn giản; bài tập có lời giải, chưa đủ cho bản vẽ chuyên nghiệp.",
+        "evidence_locator": "PPTX đính kèm: slides 7–12; khung tên, hình biểu diễn, kích thước, yêu cầu kỹ thuật",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -555,7 +1208,29 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "aws_dot03_vi",
+        "title": "Điện toán đám mây là gì?",
+        "type": "article",
+        "provider": "AWS",
+        "url": "https://aws.amazon.com/vi/what-is-cloud-computing/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Dịch vụ và mô hình cloud, ví dụ AWS; mới ở mức nhập môn.",
+        "evidence_locator": "Phần mô hình dịch vụ và triển khai cloud",
+        "access_note": "Đọc miễn phí; chạy dịch vụ AWS có thể tính phí, cần tài khoản.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -575,7 +1250,29 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "jira_dot03_vi",
+        "title": "Jira workflow: tổng quan và hướng dẫn",
+        "type": "article",
+        "provider": "Thuận Jira / Viblo",
+        "url": "https://viblo.asia/p/jira-workflow-tong-quan-va-huong-dan-Qbq5Q734ZD8",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Status, transition và cấu hình workflow; bài gốc 2022, UI có thể thay đổi.",
+        "evidence_locator": "Phần workflow và thao tác cấu hình; không dùng thời gian đọc tự động làm giờ học",
+        "access_note": "Bài gốc công khai miễn phí; thực hành Jira cần tài khoản/quyền cấu hình phù hợp.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -595,7 +1292,29 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "erp_dot03_vi",
+        "title": "Hướng dẫn sử dụng ERP",
+        "type": "article",
+        "provider": "MISA AMIS",
+        "url": "https://amis.misa.vn/46175/huong-dan-su-dung-erp/",
+        "language": "vi",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": null,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Quy trình, phân quyền, workflow và ví dụ nghiệp vụ; nền tảng của nhà cung cấp.",
+        "evidence_locator": "Các mục chuẩn hóa quy trình, phân quyền, workflow, ví dụ đơn hàng",
+        "access_note": "Bài viết miễn phí; hệ thống ERP và quyền thực hành phụ thuộc gói doanh nghiệp.",
+        "verification_origin": "content_read_dot03"
       }
     ]
   },
@@ -615,7 +1334,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -635,7 +1356,33 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "power_bi_dot03_en",
+        "title": "Get started building with Power BI",
+        "type": "module",
+        "provider": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/get-started-with-power-bi/",
+        "language": "en",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": 0.35,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Khối thành phần và luồng báo cáo Power BI; nội dung thực tế tiếng Anh dù URL vi-vn.",
+        "evidence_locator": "Mục tiêu, unit Use Power BI",
+        "access_note": "Bài học miễn phí; lab/tenant và quyền phần mềm Power BI hoặc Dynamics có điều kiện giấy phép riêng.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+        "duration_catalog_uid": "learn-bizapps.get-started-with-power-bi",
+        "duration_basis": "publisher_catalog_minutes",
+        "duration_checked_at": "2026-10-24"
       }
     ]
   },
@@ -655,7 +1402,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -672,10 +1421,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -695,7 +1449,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -715,7 +1471,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -735,7 +1493,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -752,10 +1512,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_review_status": "partial",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -775,7 +1540,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -795,7 +1562,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -815,7 +1584,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -835,7 +1606,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -855,7 +1628,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -875,7 +1650,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -895,7 +1672,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -915,7 +1694,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -935,7 +1716,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -955,7 +1738,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -975,7 +1760,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -995,7 +1782,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1015,7 +1804,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1035,7 +1826,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1055,7 +1848,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1074,8 +1869,11 @@
         "level_from": 1,
         "level_to": 3,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -1095,7 +1893,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1115,7 +1915,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1135,7 +1937,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1155,7 +1959,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1175,7 +1981,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1195,7 +2003,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1215,7 +2025,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1235,7 +2047,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1255,7 +2069,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1275,7 +2091,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1295,7 +2113,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1315,7 +2135,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1332,10 +2154,39 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_review_status": "partial",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
+      },
+      {
+        "id": "ban_hang_dot03_en",
+        "title": "Manage opportunities and process sales orders in Dynamics 365 Sales",
+        "type": "module",
+        "provider": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/manage-opportunities-dynamics-365-sales/",
+        "language": "en",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": 1.05,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Quản lý cơ hội, báo giá và đơn hàng trong Dynamics 365; không bao phủ mọi kỹ năng bán hàng.",
+        "evidence_locator": "Unit 2-create-opportunities",
+        "access_note": "Bài học miễn phí; lab/tenant và quyền phần mềm Power BI hoặc Dynamics có điều kiện giấy phép riêng.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+        "duration_catalog_uid": "learn-dynamics.opportunity-management",
+        "duration_basis": "publisher_catalog_minutes",
+        "duration_checked_at": "2026-10-24"
       }
     ]
   },
@@ -1352,10 +2203,39 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_review_status": "partial",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
+      },
+      {
+        "id": "tim_kiem_khach_hang_dot03_en",
+        "title": "Nurture and generate leads in Dynamics 365 Sales",
+        "type": "module",
+        "provider": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/vi-vn/training/modules/manage-leads-dynamics-365-sales/",
+        "language": "en",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 2,
+        "duration_hours": 0.8833333333333333,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "Tạo, phân loại và nuôi dưỡng lead trong Dynamics 365; cần hiểu CRM.",
+        "evidence_locator": "Unit 2-create-leads",
+        "access_note": "Bài học miễn phí; lab/tenant và quyền phần mềm Power BI hoặc Dynamics có điều kiện giấy phép riêng.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+        "duration_catalog_uid": "learn-dynamics.lead-management",
+        "duration_basis": "publisher_catalog_minutes",
+        "duration_checked_at": "2026-10-24"
       }
     ]
   },
@@ -1375,7 +2255,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1395,7 +2277,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1415,7 +2299,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1435,7 +2321,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1455,7 +2343,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1475,7 +2365,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1495,7 +2387,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1515,7 +2409,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1535,7 +2431,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1555,7 +2453,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1575,7 +2475,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1595,7 +2497,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1615,7 +2519,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1635,7 +2541,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1655,7 +2563,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1675,7 +2585,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1695,7 +2607,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1715,7 +2629,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1735,7 +2651,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1755,7 +2673,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1775,7 +2695,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1795,7 +2717,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1815,7 +2739,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1835,7 +2761,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1855,7 +2783,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1875,7 +2805,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1895,7 +2827,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1915,7 +2849,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1935,7 +2871,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1955,7 +2893,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1975,7 +2915,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -1995,7 +2937,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2015,7 +2959,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2035,7 +2981,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2055,7 +3003,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2075,7 +3025,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2095,7 +3047,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2115,7 +3069,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2135,7 +3091,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2155,7 +3113,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2175,7 +3135,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2192,10 +3154,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -2215,7 +3182,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2235,7 +3204,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2255,7 +3226,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2275,7 +3248,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2292,10 +3267,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -2312,10 +3292,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -2335,7 +3320,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2352,10 +3339,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -2375,7 +3367,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2392,10 +3386,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -2415,7 +3414,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2435,7 +3436,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2455,7 +3458,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2475,7 +3480,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2495,7 +3502,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2515,7 +3524,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2535,7 +3546,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2555,7 +3568,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2575,7 +3590,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2595,7 +3612,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2615,7 +3634,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2635,7 +3656,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2655,7 +3678,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2675,7 +3700,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2694,8 +3721,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -2714,8 +3744,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -2734,8 +3767,11 @@
         "level_from": 1,
         "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -2754,8 +3790,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -2774,8 +3813,11 @@
         "level_from": 1,
         "level_to": 3,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -2795,7 +3837,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2814,8 +3858,11 @@
         "level_from": 1,
         "level_to": 3,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -2835,7 +3882,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2855,7 +3904,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2875,7 +3926,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2895,7 +3948,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2915,7 +3970,32 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
+      },
+      {
+        "id": "spring_boot_dot03_spring",
+        "title": "Building a RESTful Web Service",
+        "type": "doc",
+        "provider": "Spring",
+        "url": "https://spring.io/guides/gs/rest-service/",
+        "language": "en",
+        "cost": "free",
+        "level_from": 1,
+        "level_to": 1,
+        "duration_hours": 0.25,
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_reviewed_at": "2026-10-24",
+        "content_review_status": "reviewed",
+        "review_note": "REST controller Java với Spring Boot, GET JSON; bài khởi đầu, không đại diện level 3.",
+        "evidence_locator": "What you will build/need; About 15 minutes; Greeting và RestController",
+        "access_note": "Nội dung công khai; không cần trả phí để đọc.",
+        "verification_origin": "content_read_dot03",
+        "duration_source": "https://spring.io/guides/gs/rest-service/",
+        "duration_basis": "publisher_approximate_guide_minutes",
+        "duration_checked_at": "2026-10-24"
       }
     ]
   },
@@ -2935,7 +4015,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2955,7 +4037,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2975,7 +4059,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -2995,7 +4081,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3015,7 +4103,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3035,7 +4125,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3055,7 +4147,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3075,7 +4169,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3095,7 +4191,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3115,7 +4213,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3135,7 +4235,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3155,7 +4257,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3175,7 +4279,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3195,7 +4301,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3215,7 +4323,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3235,7 +4345,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3255,7 +4367,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3275,7 +4389,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3295,7 +4411,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3315,7 +4433,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3335,7 +4455,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3355,7 +4477,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3375,7 +4499,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3395,7 +4521,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3415,7 +4543,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3435,7 +4565,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3455,7 +4587,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3475,7 +4609,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3495,7 +4631,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3515,7 +4653,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3535,7 +4675,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3555,7 +4697,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3575,7 +4719,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3595,7 +4741,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3615,7 +4763,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3635,7 +4785,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3655,7 +4807,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3675,7 +4829,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3695,7 +4851,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3715,7 +4873,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3735,7 +4895,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3755,7 +4917,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3775,7 +4939,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3795,7 +4961,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3815,7 +4983,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3835,7 +5005,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3855,7 +5027,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3875,7 +5049,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3895,7 +5071,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3915,7 +5093,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3935,7 +5115,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3955,7 +5137,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3975,7 +5159,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -3995,7 +5181,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4015,7 +5203,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4035,7 +5225,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4055,7 +5247,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4075,7 +5269,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4095,7 +5291,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4115,7 +5313,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4135,7 +5335,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4145,17 +5347,23 @@
     "resources": [
       {
         "id": "ve_quy_trinh_001",
-        "title": "Quality tools and methods",
+        "title": "Flowchart",
         "type": "doc",
         "provider": "ASQ",
-        "url": "https://asq.org/quality-resources/quality-tools",
+        "url": "https://asq.org/quality-resources/flowchart",
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": false,
-        "last_checked": "2026-10-22"
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_review_status": "reviewed",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Ký hiệu và các bước vẽ lưu đồ.",
+        "evidence_locator": "Nội dung bài, định nghĩa và quy trình",
+        "access_note": "Bài tổng quan miễn phí; sách, khóa học và tiêu chuẩn được bán riêng."
       }
     ]
   },
@@ -4175,7 +5383,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4195,7 +5405,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4215,7 +5427,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4235,7 +5449,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4255,7 +5471,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4275,7 +5493,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4295,7 +5515,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4315,7 +5537,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4332,10 +5556,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -4352,10 +5581,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -4375,7 +5609,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4392,10 +5628,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -4415,7 +5656,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4435,7 +5678,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4455,7 +5700,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4475,7 +5722,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4495,7 +5744,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4515,7 +5766,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4535,7 +5788,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4555,7 +5810,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4575,7 +5832,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4592,10 +5851,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_review_status": "partial",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -4612,10 +5876,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -4635,7 +5904,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4655,7 +5926,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4675,7 +5948,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4695,7 +5970,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4715,7 +5992,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4735,7 +6014,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4755,7 +6036,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4772,10 +6055,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -4792,10 +6080,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -4812,10 +6105,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -4835,7 +6133,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4854,8 +6154,11 @@
         "level_from": 1,
         "level_to": 3,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -4872,10 +6175,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -4895,7 +6203,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4912,10 +6222,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_review_status": "partial",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -4932,10 +6247,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_review_status": "partial",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -4955,7 +6275,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -4972,10 +6294,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_review_status": "partial",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -4995,7 +6322,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5015,7 +6344,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5032,10 +6363,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -5052,10 +6388,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -5072,10 +6413,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_review_status": "partial",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -5095,7 +6441,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5115,7 +6463,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5132,10 +6482,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -5155,7 +6510,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5175,7 +6532,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5192,10 +6551,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -5212,10 +6576,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_review_status": "partial",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -5232,10 +6601,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -5255,7 +6629,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5272,10 +6648,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -5295,7 +6676,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5315,7 +6698,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5335,7 +6720,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5355,7 +6742,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5375,7 +6764,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5395,7 +6786,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5415,7 +6808,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5435,7 +6830,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5455,7 +6852,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5475,7 +6874,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5495,7 +6896,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5515,7 +6918,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5535,7 +6940,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5555,7 +6962,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5575,7 +6984,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5595,7 +7006,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5615,7 +7028,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5635,7 +7050,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5655,7 +7072,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5675,7 +7094,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5695,7 +7116,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5715,7 +7138,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5735,7 +7160,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5755,7 +7182,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5775,7 +7204,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5795,7 +7226,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5815,7 +7248,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5835,7 +7270,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5855,7 +7292,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5875,7 +7314,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5895,7 +7336,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5915,7 +7358,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5935,7 +7380,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5955,7 +7402,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5975,7 +7424,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -5995,7 +7446,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6015,7 +7468,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6035,7 +7490,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6055,7 +7512,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6075,7 +7534,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6095,7 +7556,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6115,7 +7578,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6135,7 +7600,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6155,7 +7622,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6175,7 +7644,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6195,7 +7666,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6215,7 +7688,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6235,7 +7710,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6255,7 +7732,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6275,7 +7754,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6295,7 +7776,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6315,7 +7798,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6335,7 +7820,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6355,7 +7842,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6375,7 +7864,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6395,7 +7886,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6415,7 +7908,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6435,7 +7930,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6455,7 +7952,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6475,7 +7974,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6495,7 +7996,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6515,7 +8018,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6535,7 +8040,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6555,7 +8062,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6574,8 +8083,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -6594,8 +8106,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -6614,8 +8129,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -6634,8 +8152,11 @@
         "level_from": 1,
         "level_to": 3,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -6655,7 +8176,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6674,8 +8197,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -6694,8 +8220,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -6714,8 +8243,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -6735,7 +8267,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6755,7 +8289,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6774,8 +8310,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -6795,7 +8334,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6814,8 +8355,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -6825,17 +8369,23 @@
     "resources": [
       {
         "id": "lean_manufacturing_001",
-        "title": "Learn about quality",
+        "title": "Lean",
         "type": "doc",
         "provider": "ASQ",
-        "url": "https://asq.org/quality-resources/learn-about-quality",
+        "url": "https://asq.org/quality-resources/lean",
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": false,
-        "last_checked": "2026-10-22"
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_review_status": "reviewed",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Lãng phí và nguyên tắc Lean; tổng quan.",
+        "evidence_locator": "Nội dung bài, định nghĩa và quy trình",
+        "access_note": "Bài tổng quan miễn phí; sách, khóa học và tiêu chuẩn được bán riêng."
       }
     ]
   },
@@ -6845,17 +8395,23 @@
     "resources": [
       {
         "id": "kaizen_001",
-        "title": "Quality tools and methods",
+        "title": "Continuous Improvement",
         "type": "doc",
         "provider": "ASQ",
-        "url": "https://asq.org/quality-resources/quality-tools",
+        "url": "https://asq.org/quality-resources/continuous-improvement",
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": false,
-        "last_checked": "2026-10-22"
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_review_status": "reviewed",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Cải tiến liên tục và PDCA; chưa bao phủ triển khai Kaizen.",
+        "evidence_locator": "Nội dung bài, định nghĩa và quy trình",
+        "access_note": "Bài tổng quan miễn phí; sách, khóa học và tiêu chuẩn được bán riêng."
       }
     ]
   },
@@ -6865,17 +8421,23 @@
     "resources": [
       {
         "id": "5s_001",
-        "title": "Quality tools and methods",
+        "title": "Five S Tutorial",
         "type": "doc",
         "provider": "ASQ",
-        "url": "https://asq.org/quality-resources/quality-tools",
+        "url": "https://asq.org/quality-resources/five-s-tutorial",
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": false,
-        "last_checked": "2026-10-22"
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_review_status": "reviewed",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Các bước 5S và tổ chức nơi làm việc.",
+        "evidence_locator": "Nội dung bài, định nghĩa và quy trình",
+        "access_note": "Bài tổng quan miễn phí; sách, khóa học và tiêu chuẩn được bán riêng."
       }
     ]
   },
@@ -6885,17 +8447,23 @@
     "resources": [
       {
         "id": "phan_tich_sop_001",
-        "title": "Quality tools and methods",
+        "title": "Guidance for Preparing SOPs",
         "type": "doc",
-        "provider": "ASQ",
-        "url": "https://asq.org/quality-resources/quality-tools",
+        "provider": "US EPA",
+        "url": "https://www.epa.gov/sites/default/files/2015-06/documents/g6-final.pdf",
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": false,
-        "last_checked": "2026-10-22"
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_review_status": "reviewed",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Hướng dẫn viết, review và kiểm soát SOP; bản 2007, không coi là quy định hiện hành.",
+        "evidence_locator": "PDF p6–14, mục 1.4–4",
+        "access_note": "PDF công khai miễn phí."
       }
     ]
   },
@@ -6915,7 +8483,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -6925,17 +8495,23 @@
     "resources": [
       {
         "id": "iso_9001_001",
-        "title": "Learn about quality",
+        "title": "ISO 9001 Overview",
         "type": "doc",
         "provider": "ASQ",
-        "url": "https://asq.org/quality-resources/learn-about-quality",
+        "url": "https://asq.org/quality-resources/iso-9001",
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": false,
-        "last_checked": "2026-10-22"
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_review_status": "reviewed",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Tổng quan QMS; không cung cấp toàn bộ tiêu chuẩn.",
+        "evidence_locator": "Nội dung bài, định nghĩa và quy trình",
+        "access_note": "Bài tổng quan miễn phí; sách, khóa học và tiêu chuẩn được bán riêng."
       }
     ]
   },
@@ -6945,17 +8521,23 @@
     "resources": [
       {
         "id": "kiem_soat_chat_luong_001",
-        "title": "Quality tools and methods",
+        "title": "Quality Assurance vs Quality Control",
         "type": "doc",
         "provider": "ASQ",
-        "url": "https://asq.org/quality-resources/quality-tools",
+        "url": "https://asq.org/quality-resources/quality-assurance-vs-control",
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": false,
-        "last_checked": "2026-10-22"
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_review_status": "reviewed",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Phân biệt QA/QC và hoạt động kiểm soát.",
+        "evidence_locator": "Nội dung bài, định nghĩa và quy trình",
+        "access_note": "Bài tổng quan miễn phí; sách, khóa học và tiêu chuẩn được bán riêng."
       }
     ]
   },
@@ -6965,17 +8547,23 @@
     "resources": [
       {
         "id": "quy_trinh_8d_001",
-        "title": "Quality tools and methods",
+        "title": "Eight Disciplines (8D)",
         "type": "doc",
         "provider": "ASQ",
-        "url": "https://asq.org/quality-resources/quality-tools",
+        "url": "https://asq.org/quality-resources/eight-disciplines-8d",
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": false,
-        "last_checked": "2026-10-22"
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_review_status": "reviewed",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Quy trình D0–D8 giải quyết vấn đề.",
+        "evidence_locator": "Nội dung bài, định nghĩa và quy trình",
+        "access_note": "Bài tổng quan miễn phí; sách, khóa học và tiêu chuẩn được bán riêng."
       }
     ]
   },
@@ -6985,17 +8573,23 @@
     "resources": [
       {
         "id": "fmea_001",
-        "title": "Quality tools and methods",
+        "title": "Failure Mode and Effects Analysis",
         "type": "doc",
         "provider": "ASQ",
-        "url": "https://asq.org/quality-resources/quality-tools",
+        "url": "https://asq.org/quality-resources/fmea",
         "language": "en",
         "cost": "free",
         "level_from": 1,
         "level_to": 1,
         "duration_hours": null,
-        "verified": false,
-        "last_checked": "2026-10-22"
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_review_status": "reviewed",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Phân tích dạng lỗi, tác động và ưu tiên.",
+        "evidence_locator": "Nội dung bài, định nghĩa và quy trình",
+        "access_note": "Bài tổng quan miễn phí; sách, khóa học và tiêu chuẩn được bán riêng."
       }
     ]
   },
@@ -7005,17 +8599,23 @@
     "resources": [
       {
         "id": "7_cong_cu_qc_001",
-        "title": "Quality tools and methods",
+        "title": "Seven Basic Quality Tools",
         "type": "doc",
         "provider": "ASQ",
-        "url": "https://asq.org/quality-resources/quality-tools",
+        "url": "https://asq.org/quality-resources/seven-basic-quality-tools",
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": false,
-        "last_checked": "2026-10-22"
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_review_status": "reviewed",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Bảy công cụ chất lượng và mục đích sử dụng.",
+        "evidence_locator": "Nội dung bài, định nghĩa và quy trình",
+        "access_note": "Bài tổng quan miễn phí; sách, khóa học và tiêu chuẩn được bán riêng."
       }
     ]
   },
@@ -7035,7 +8635,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7055,7 +8657,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7075,7 +8679,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7094,8 +8700,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -7114,8 +8723,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -7135,7 +8747,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7154,8 +8768,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -7174,8 +8791,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -7194,8 +8814,11 @@
         "level_from": 1,
         "level_to": 3,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -7214,8 +8837,11 @@
         "level_from": 1,
         "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -7234,8 +8860,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -7254,8 +8883,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -7275,7 +8907,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7294,8 +8928,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -7314,8 +8951,11 @@
         "level_from": 1,
         "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -7335,7 +8975,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7355,7 +8997,9 @@
         "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7365,17 +9009,23 @@
     "resources": [
       {
         "id": "iso_14001_001",
-        "title": "Learn about quality",
+        "title": "ISO 14000 Family Overview",
         "type": "doc",
-        "provider": "ASQ",
-        "url": "https://asq.org/quality-resources/learn-about-quality",
+        "provider": "ISO",
+        "url": "https://www.iso.org/standards/popular/iso-14000-family",
         "language": "en",
-        "cost": "free",
+        "cost": "freemium",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": false,
-        "last_checked": "2026-10-22"
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_review_status": "reviewed",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Tổng quan quản lý môi trường; văn bản tiêu chuẩn đầy đủ có phí.",
+        "evidence_locator": "Mục ISO 14001 và hệ thống quản lý môi trường",
+        "access_note": "Đọc phần tổng quan miễn phí; bản đầy đủ ISO có phí."
       }
     ]
   },
@@ -7385,17 +9035,23 @@
     "resources": [
       {
         "id": "iso_45001_001",
-        "title": "Quality tools and methods",
+        "title": "ISO 45001 Overview",
         "type": "doc",
-        "provider": "ASQ",
-        "url": "https://asq.org/quality-resources/quality-tools",
+        "provider": "ISO",
+        "url": "https://www.iso.org/standard/45001",
         "language": "en",
-        "cost": "free",
+        "cost": "freemium",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": false,
-        "last_checked": "2026-10-22"
+        "verified": true,
+        "last_checked": "2026-10-24",
+        "content_review_status": "reviewed",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Tổng quan an toàn sức khỏe nghề nghiệp; văn bản tiêu chuẩn đầy đủ có phí.",
+        "evidence_locator": "Overview và nội dung OH&S",
+        "access_note": "Đọc phần tổng quan miễn phí; bản đầy đủ ISO có phí."
       }
     ]
   },
@@ -7415,7 +9071,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7435,7 +9093,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7455,7 +9115,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7475,7 +9137,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7495,7 +9159,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7515,7 +9181,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7535,7 +9203,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7555,7 +9225,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7575,7 +9247,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7595,7 +9269,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7615,7 +9291,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7635,7 +9313,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7655,7 +9335,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7675,7 +9357,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7695,7 +9379,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7715,7 +9401,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7735,7 +9423,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7752,10 +9442,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -7775,7 +9470,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7795,7 +9492,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7815,7 +9514,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7835,7 +9536,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7855,7 +9558,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7875,7 +9580,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7895,7 +9602,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7914,8 +9623,11 @@
         "level_from": 1,
         "level_to": 2,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "blocked",
+        "verification_origin": "blocked_dot03",
+        "review_note": "403 khi đọc URL này; trang /learn là điều hướng, chưa xác minh bài cho kỹ năng."
       }
     ]
   },
@@ -7935,7 +9647,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7952,10 +9666,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_review_status": "partial",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -7975,7 +9694,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -7995,7 +9716,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -8015,7 +9738,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -8035,7 +9760,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -8055,7 +9782,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -8072,10 +9801,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 3,
+        "level_to": 1,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-24",
+        "content_review_status": "partial",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Chỉ nền tảng marketing; cần bài thực hành riêng.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -8092,10 +9826,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -8112,10 +9851,15 @@
         "language": "en",
         "cost": "free",
         "level_from": 1,
-        "level_to": 2,
+        "level_to": 1,
         "duration_hours": null,
-        "verified": true,
-        "last_checked": "2026-10-22"
+        "verified": false,
+        "last_checked": "2026-10-24",
+        "content_review_status": "unsuitable",
+        "verification_origin": "content_read_dot03",
+        "content_reviewed_at": "2026-10-24",
+        "review_note": "Mục 1.1 không dạy kỹ năng cụ thể được gắn.",
+        "evidence_locator": "Learning outcomes; marketing process section 1.1"
       }
     ]
   },
@@ -8135,7 +9879,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -8155,7 +9901,9 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -8175,7 +9923,9 @@
         "level_to": 2,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
   },
@@ -8195,46 +9945,10 @@
         "level_to": 3,
         "duration_hours": null,
         "verified": true,
-        "last_checked": "2026-10-22"
+        "last_checked": "2026-10-22",
+        "content_review_status": "unreviewed",
+        "verification_origin": "legacy_not_revalidated"
       }
     ]
-  },
-  "courses": [
-    {
-      "course_name": "Phân tích dữ liệu với SQL — Udacity",
-      "link": "https://www.udacity.com/course/sql-for-data-analysis--ud198",
-      "skills_achieved": [
-        "SQL",
-        "Data Manipulation",
-        "Query Optimization"
-      ]
-    },
-    {
-      "course_name": "Lập trình Python cho mọi người — Coursera",
-      "link": "https://www.coursera.org/specializations/python",
-      "skills_achieved": [
-        "Python",
-        "Scripting",
-        "Data Structures"
-      ]
-    },
-    {
-      "course_name": "Nhập môn trực quan hóa dữ liệu với Power BI — Coursera",
-      "link": "https://www.coursera.org/projects/getting-started-with-power-bi",
-      "skills_achieved": [
-        "Power BI",
-        "Data Visualization",
-        "Report Building"
-      ]
-    },
-    {
-      "course_name": "Nền tảng trí tuệ nhân tạo và học máy — Andrew Ng",
-      "link": "https://www.coursera.org/specializations/machine-learning-introduction",
-      "skills_achieved": [
-        "Machine Learning",
-        "Supervised Learning",
-        "Model Evaluation"
-      ]
-    }
-  ]
+  }
 }

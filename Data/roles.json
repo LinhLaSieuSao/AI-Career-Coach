@@ -1,37 +1,4 @@
-{
-  "positions": [
-  {
-    "title": "Data Analyst",
-    "required_skills": [
-      "SQL",
-      "Python",
-      "Data Visualization",
-      "Statistical Analysis",
-      "Excel"
-    ]
-  },
-  {
-    "title": "Backend Developer",
-    "required_skills": [
-      "Node.js",
-      "Express",
-      "REST API Design",
-      "Database Management",
-      "Docker"
-    ]
-  },
-  {
-    "title": "AI Engineer",
-    "required_skills": [
-      "Machine Learning",
-      "Deep Learning",
-      "Python",
-      "TensorFlow",
-      "PyTorch"
-    ]
-  }
-],
-  "roles": [
+[
 {
 "id": "backend_developer_java",
 "name": "Backend Developer (Java)",
@@ -299,7 +266,7 @@
 {"name": "git", "level": 2, "weight": 2},
 {"name": "giao thức giao tiếp", "level": 2, "weight": 2},
 {"name": "debug phần cứng", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "thiết kế mạch", "level": 1, "weight": 2},
 {"name": "linux nhúng", "level": 1, "weight": 2}
 ]
@@ -318,7 +285,7 @@
 {"name": "sql", "level": 2, "weight": 2},
 {"name": "git", "level": 2, "weight": 2},
 {"name": "postman", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "ci/cd", "level": 1, "weight": 1}
 ]
@@ -377,7 +344,7 @@
 {"name": "toán học", "level": 2, "weight": 2},
 {"name": "git", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "aws", "level": 1, "weight": 1}
 ]
 },
@@ -414,7 +381,7 @@
 {"name": "phân tích dữ liệu", "level": 3, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành data", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "git", "level": 2, "weight": 1},
 {"name": "power bi", "level": 1, "weight": 1}
 ]
@@ -435,7 +402,7 @@
 {"name": "docker", "level": 2, "weight": 2},
 {"name": "toán học", "level": 2, "weight": 2},
 {"name": "git", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2}
 ]
 },
 {
@@ -452,7 +419,7 @@
 {"name": "transformer", "level": 2, "weight": 2},
 {"name": "regex", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "git", "level": 2, "weight": 1},
 {"name": "docker", "level": 1, "weight": 1}
 ]
@@ -471,7 +438,7 @@
 {"name": "thuật toán học máy", "level": 2, "weight": 2},
 {"name": "c++", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "git", "level": 2, "weight": 1},
 {"name": "docker", "level": 1, "weight": 1}
 ]
@@ -491,7 +458,7 @@
 {"name": "git", "level": 2, "weight": 2},
 {"name": "linux", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "etl", "level": 1, "weight": 1}
 ]
 },
@@ -530,7 +497,7 @@
 {"name": "python", "level": 2, "weight": 2},
 {"name": "terraform", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
 ]
 },
 {
@@ -548,7 +515,7 @@
 {"name": "bảo mật hệ thống", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
 ]
 },
 {
@@ -566,7 +533,7 @@
 {"name": "linux", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
 ]
 },
 {
@@ -584,7 +551,7 @@
 {"name": "firewall", "level": 2, "weight": 2},
 {"name": "siem", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1},
 {"name": "kiến trúc hệ thống", "level": 2, "weight": 1}
 ]
 },
@@ -603,7 +570,7 @@
 {"name": "mạng máy tính", "level": 2, "weight": 2},
 {"name": "metasploit", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
 ]
 },
 {
@@ -621,7 +588,7 @@
 {"name": "terraform", "level": 2, "weight": 2},
 {"name": "mạng máy tính", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
 ]
 },
 {
@@ -639,7 +606,7 @@
 {"name": "api testing", "level": 1, "weight": 2},
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
 ]
 },
 {
@@ -676,7 +643,7 @@
 {"name": "kubernetes", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
 ]
 },
 {
@@ -692,7 +659,7 @@
 {"name": "phân tích dữ liệu", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 3, "weight": 3},
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 1},
 {"name": "jira", "level": 2, "weight": 2},
 {"name": "agile/scrum", "level": 2, "weight": 3}
@@ -713,7 +680,7 @@
 {"name": "jira", "level": 2, "weight": 2},
 {"name": "thiết kế ui ux", "level": 1, "weight": 1},
 {"name": "làm việc nhóm", "level": 3, "weight": 1},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2}
 ]
 },
 {
@@ -729,7 +696,7 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 2},
 {"name": "sql", "level": 1, "weight": 1},
-{"name": "tiếng anh chuyên ngành  ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2}
 ]
 },
@@ -745,7 +712,7 @@
 {"name": "sql", "level": 2, "weight": 2},
 {"name": "thiết kế api", "level": 1, "weight": 2},
 {"name": "giao tiếp", "level": 3, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "uml", "level": 2, "weight": 2},
 {"name": "jira", "level": 2, "weight": 2},
 {"name": "agile/scrum", "level": 2, "weight": 2}
@@ -766,7 +733,7 @@
 {"name": "jira", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2}
 ]
 },
 {
@@ -783,7 +750,7 @@
 {"name": "jira", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 2},
 {"name": "quản lý xung đột", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
 ]
 },
 {
@@ -818,7 +785,7 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "figma", "level": 1, "weight": 1},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2}
 ]
 },
 {
@@ -851,7 +818,7 @@
 {"name": "tư duy phân tích", "level": 3, "weight": 3},
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
 ]
 },
@@ -868,7 +835,7 @@
 {"name": "figma", "level": 1, "weight": 1},
 {"name": "giao tiếp", "level": 3, "weight": 3},
 {"name": "tư duy thiết kế", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
 ]
 },
@@ -887,7 +854,7 @@
 {"name": "sql", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "jira", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2}
 ]
 },
 {
@@ -906,7 +873,7 @@
 {"name": "phân tích dữ liệu", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 3, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
 ]
 },
 {
@@ -925,7 +892,7 @@
 {"name": "biên tập nội dung", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 1}
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
 ]
 },
 {
@@ -998,7 +965,7 @@
 {"name": "tổ chức sự kiện", "level": 2, "weight": 2},
 {"name": "xây dựng mối quan hệ", "level": 3, "weight": 2},
 {"name": "lập kế hoạch", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
 ]
 },
@@ -1015,7 +982,7 @@
 {"name": "truyền thông tích hợp", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "quản lý dự án", "level": 2, "weight": 2},
-{"name": "tiếng anh chuyên ngành ", "level": 2, "weight": 2},
+{"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "tư duy phân tích", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 1}
 ]
@@ -1705,7 +1672,7 @@
 "learning_time_months": 6,
 "skills": [
 {"name": "đào tạo và phát triển", "level": 3, "weight": 3},
-{"name": "kỹ năng thuyết trình", "level": 3, "weight": 3},
+{"name": "thuyết trình", "level": 3, "weight": 3},
 {"name": "lập kế hoạch đào tạo", "level": 2, "weight": 3},
 {"name": "xây dựng tài liệu", "level": 2, "weight": 2},
 {"name": "đánh giá năng lực", "level": 2, "weight": 2},
@@ -2313,7 +2280,7 @@
 {"name": "sáng tạo", "level": 3, "weight": 3},
 {"name": "nghiên cứu tâm lý khách hàng", "level": 2, "weight": 3},
 {"name": "content marketing", "level": 2, "weight": 2},
-{"name": "seo cơ bản", "level": 1, "weight": 2},
+{"name": "seo", "level": 1, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "tiếng anh giao tiếp", "level": 2, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
@@ -2404,4 +2371,3 @@
 ]
 }
 ]
-}

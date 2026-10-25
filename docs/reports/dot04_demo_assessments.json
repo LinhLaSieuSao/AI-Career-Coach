@@ -1,0 +1,2150 @@
+{
+  "created_at": "2026-10-24T07:06:24.495322+00:00",
+  "python": "3.12.14",
+  "branch": "AI-Specialist",
+  "head": "a430250",
+  "note": "Synthetic API probes, not real candidate profiles. Empty declarations explicitly use current=0 in compute_gap. Hours are selected catalog hours, not completion guarantees. No resource data altered.",
+  "integrity": {
+    "errors": [],
+    "warnings": [
+      "recognition_only..net core: no learning resource",
+      "recognition_only.english: no learning resource",
+      "recognition_only.google tag manager: no learning resource",
+      "recognition_only.mysql: no learning resource",
+      "recognition_only.pandas: no learning resource"
+    ],
+    "stats": {
+      "roles": 131,
+      "role_skills": 410,
+      "recognition_skills": 415,
+      "resource_records": 445,
+      "unique_urls": 135,
+      "unverified": 52,
+      "languages": {
+        "en": 387,
+        "vi": 58
+      },
+      "published_durations": 13,
+      "published_duration_urls": 11,
+      "estimated_durations": 0,
+      "content_reviews": {
+        "unreviewed": 334,
+        "reviewed": 44,
+        "partial": 15,
+        "blocked": 29,
+        "unsuitable": 23
+      },
+      "questions": 752,
+      "recognition_without_resources": [
+        ".net core",
+        "english",
+        "google tag manager",
+        "mysql",
+        "pandas"
+      ]
+    },
+    "top30": [
+      {
+        "name": "giao tiếp",
+        "role_count": 91
+      },
+      {
+        "name": "giải quyết vấn đề",
+        "role_count": 73
+      },
+      {
+        "name": "làm việc nhóm",
+        "role_count": 57
+      },
+      {
+        "name": "tiếng anh chuyên ngành",
+        "role_count": 55
+      },
+      {
+        "name": "excel",
+        "role_count": 33
+      },
+      {
+        "name": "git",
+        "role_count": 23
+      },
+      {
+        "name": "cẩn thận",
+        "role_count": 20
+      },
+      {
+        "name": "quản lý thời gian",
+        "role_count": 19
+      },
+      {
+        "name": "phân tích dữ liệu",
+        "role_count": 18
+      },
+      {
+        "name": "sql",
+        "role_count": 18
+      },
+      {
+        "name": "tư duy phân tích",
+        "role_count": 16
+      },
+      {
+        "name": "python",
+        "role_count": 14
+      },
+      {
+        "name": "sáng tạo",
+        "role_count": 13
+      },
+      {
+        "name": "docker",
+        "role_count": 12
+      },
+      {
+        "name": "rest api",
+        "role_count": 12
+      },
+      {
+        "name": "thiết kế ui ux",
+        "role_count": 12
+      },
+      {
+        "name": "thương lượng",
+        "role_count": 12
+      },
+      {
+        "name": "linux",
+        "role_count": 10
+      },
+      {
+        "name": "thuyết trình",
+        "role_count": 10
+      },
+      {
+        "name": "html",
+        "role_count": 9
+      },
+      {
+        "name": "tiếng anh giao tiếp",
+        "role_count": 9
+      },
+      {
+        "name": "autocad",
+        "role_count": 8
+      },
+      {
+        "name": "chăm sóc khách hàng",
+        "role_count": 8
+      },
+      {
+        "name": "css",
+        "role_count": 8
+      },
+      {
+        "name": "lập kế hoạch",
+        "role_count": 8
+      },
+      {
+        "name": "xây dựng mối quan hệ",
+        "role_count": 8
+      },
+      {
+        "name": "đọc bản vẽ kỹ thuật",
+        "role_count": 8
+      },
+      {
+        "name": "aws",
+        "role_count": 7
+      },
+      {
+        "name": "erp",
+        "role_count": 7
+      },
+      {
+        "name": "jira",
+        "role_count": 7
+      }
+    ]
+  },
+  "demo_roles": [
+    {
+      "role_id": "backend_developer_java",
+      "cases": [
+        {
+          "case": "empty_declarations",
+          "levels": {},
+          "gap": {
+            "role_id": "backend_developer_java",
+            "items": [
+              {
+                "skill": "java",
+                "required": 3,
+                "current": 0,
+                "gap": 3,
+                "priority": 9,
+                "status": "missing"
+              },
+              {
+                "skill": "spring boot",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 6,
+                "status": "missing"
+              },
+              {
+                "skill": "rest api",
+                "required": 3,
+                "current": 0,
+                "gap": 3,
+                "priority": 9,
+                "status": "missing"
+              },
+              {
+                "skill": "sql",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 6,
+                "status": "missing"
+              },
+              {
+                "skill": "git",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 4,
+                "status": "missing"
+              },
+              {
+                "skill": "giải quyết vấn đề",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 4,
+                "status": "missing"
+              },
+              {
+                "skill": "docker",
+                "required": 1,
+                "current": 0,
+                "gap": 1,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "giao tiếp",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "làm việc nhóm",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "linux",
+                "required": 1,
+                "current": 0,
+                "gap": 1,
+                "priority": 1,
+                "status": "missing"
+              }
+            ],
+            "match_percent": 0.0,
+            "missing": [
+              "java",
+              "spring boot",
+              "rest api",
+              "sql",
+              "git",
+              "giải quyết vấn đề",
+              "docker",
+              "giao tiếp",
+              "làm việc nhóm",
+              "linux"
+            ]
+          },
+          "timed_summary": {
+            "total_weeks": null,
+            "known_weeks": 1,
+            "total_known_hours": 3.3833333333333333,
+            "total_estimated_hours": 0.0,
+            "total_planned_hours": 3.3833333333333333,
+            "is_estimated": false,
+            "unknown_duration": [
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+                "skills": [
+                  "giải quyết vấn đề"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://aws.amazon.com/vi/docker",
+                "skills": [
+                  "docker"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+                "skills": [
+                  "giao tiếp",
+                  "làm việc nhóm"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get",
+                "skills": [
+                  "linux"
+                ],
+                "reason": "unknown_duration"
+              }
+            ],
+            "unresolved": [
+              {
+                "skill": "java",
+                "reason": "unreviewed_content",
+                "levels": [
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "skill": "rest api",
+                "reason": "level_mismatch",
+                "levels": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "skill": "spring boot",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "skill": "sql",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "skill": "git",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "skill": "giải quyết vấn đề",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+                "skills": [
+                  "giải quyết vấn đề"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://aws.amazon.com/vi/docker",
+                "skills": [
+                  "docker"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+                "skills": [
+                  "giao tiếp",
+                  "làm việc nhóm"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get",
+                "skills": [
+                  "linux"
+                ],
+                "reason": "unknown_duration"
+              }
+            ]
+          },
+          "phases": [
+            {
+              "week": 1,
+              "hours": 3.3833333333333333,
+              "segments": [
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/build-web-api-aspnet-core",
+                  "hours": 0.6833333333333333,
+                  "part": 1,
+                  "duration_kind": "published"
+                },
+                {
+                  "resource_key": "url:https://spring.io/guides/gs/rest-service",
+                  "hours": 0.25,
+                  "part": 1,
+                  "duration_kind": "published"
+                },
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/introduction-to-transact-sql",
+                  "hours": 1.0166666666666666,
+                  "part": 1,
+                  "duration_kind": "published"
+                },
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/intro-to-git",
+                  "hours": 1.4333333333333333,
+                  "part": 1,
+                  "duration_kind": "published"
+                }
+              ]
+            }
+          ],
+          "selected_resources": [
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/build-web-api-aspnet-core",
+              "id": "rest_api_dot03_vi",
+              "title": "Tạo API web với bộ điều ASP.NET Core",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/build-web-api-aspnet-core/",
+              "skills": [
+                "rest api"
+              ],
+              "planned_hours": 0.6833333333333333,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 0.6833333333333333,
+                "kind": "published"
+              },
+              "review_note": "REST/CRUD bằng ASP.NET Core C#; là ví dụ khác stack, không phải bài Java."
+            },
+            {
+              "key": "url:https://spring.io/guides/gs/rest-service",
+              "id": "spring_boot_dot03_spring",
+              "title": "Building a RESTful Web Service",
+              "url": "https://spring.io/guides/gs/rest-service/",
+              "skills": [
+                "spring boot"
+              ],
+              "planned_hours": 0.25,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://spring.io/guides/gs/rest-service/",
+                "basis": "publisher_approximate_guide_minutes",
+                "hours": 0.25,
+                "kind": "published"
+              },
+              "review_note": "REST controller Java với Spring Boot, GET JSON; bài khởi đầu, không đại diện level 3."
+            },
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/introduction-to-transact-sql",
+              "id": "sql_dot03_vi",
+              "title": "Giới thiệu về Transact-SQL",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/introduction-to-transact-sql/",
+              "skills": [
+                "sql"
+              ],
+              "planned_hours": 1.0166666666666666,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 1.0166666666666666,
+                "kind": "published"
+              },
+              "review_note": "SELECT và truy vấn nhập môn trên T-SQL; lưu ý khác biệt dialect."
+            },
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/intro-to-git",
+              "id": "git_dot03_vi",
+              "title": "Giới thiệu về Git",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/intro-to-git/",
+              "skills": [
+                "git"
+              ],
+              "planned_hours": 1.4333333333333333,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 1.4333333333333333,
+                "kind": "published"
+              },
+              "review_note": "Lệnh Git cơ bản và lịch sử thay đổi; không thay thế Git workflow nâng cao."
+            },
+            {
+              "key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+              "id": "giai_quyet_van_de_dot03_vi",
+              "title": "Quy trình giải quyết vấn đề",
+              "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+              "skills": [
+                "giải quyết vấn đề"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Quy trình từ xác định nguyên nhân tới theo dõi giải pháp; nhập môn."
+            },
+            {
+              "key": "url:https://aws.amazon.com/vi/docker",
+              "id": "docker_dot03_vi",
+              "title": "Docker là gì?",
+              "url": "https://aws.amazon.com/vi/docker/",
+              "skills": [
+                "docker"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Container, image và vòng đời triển khai; tổng quan, chưa có lab Docker."
+            },
+            {
+              "key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+              "id": "giao_tiep_dot03_vi",
+              "title": "Kỹ năng mềm",
+              "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+              "skills": [
+                "giao tiếp",
+                "làm việc nhóm"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Lắng nghe, phản hồi; phần thực hành giao tiếp."
+            },
+            {
+              "key": "url:https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get",
+              "id": "linux_dot03_vi",
+              "title": "apt và apt-get trên Linux",
+              "url": "https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get/",
+              "skills": [
+                "linux"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Lệnh quản lý gói Debian/Ubuntu; phạm vi Linux package management."
+            }
+          ],
+          "focus_question_ids": [
+            "backend_developer_java_q01",
+            "backend_developer_java_q06",
+            "backend_developer_java_q05"
+          ]
+        },
+        {
+          "case": "partial_declarations_fixture",
+          "levels": {
+            "java": 1,
+            "sql": 1,
+            "git": 2
+          },
+          "gap": {
+            "role_id": "backend_developer_java",
+            "items": [
+              {
+                "skill": "java",
+                "required": 3,
+                "current": 1,
+                "gap": 2,
+                "priority": 6,
+                "status": "below_required"
+              },
+              {
+                "skill": "spring boot",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 6,
+                "status": "missing"
+              },
+              {
+                "skill": "rest api",
+                "required": 3,
+                "current": 0,
+                "gap": 3,
+                "priority": 9,
+                "status": "missing"
+              },
+              {
+                "skill": "sql",
+                "required": 2,
+                "current": 1,
+                "gap": 1,
+                "priority": 3,
+                "status": "below_required"
+              },
+              {
+                "skill": "git",
+                "required": 2,
+                "current": 2,
+                "gap": 0,
+                "priority": 0,
+                "status": "met"
+              },
+              {
+                "skill": "giải quyết vấn đề",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 4,
+                "status": "missing"
+              },
+              {
+                "skill": "docker",
+                "required": 1,
+                "current": 0,
+                "gap": 1,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "giao tiếp",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "làm việc nhóm",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "linux",
+                "required": 1,
+                "current": 0,
+                "gap": 1,
+                "priority": 1,
+                "status": "missing"
+              }
+            ],
+            "match_percent": 21.4,
+            "missing": [
+              "java",
+              "spring boot",
+              "rest api",
+              "sql",
+              "giải quyết vấn đề",
+              "docker",
+              "giao tiếp",
+              "làm việc nhóm",
+              "linux"
+            ]
+          },
+          "timed_summary": {
+            "total_weeks": null,
+            "known_weeks": 1,
+            "total_known_hours": 0.9333333333333333,
+            "total_estimated_hours": 0.0,
+            "total_planned_hours": 0.9333333333333333,
+            "is_estimated": false,
+            "unknown_duration": [
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+                "skills": [
+                  "giải quyết vấn đề"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://aws.amazon.com/vi/docker",
+                "skills": [
+                  "docker"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+                "skills": [
+                  "giao tiếp",
+                  "làm việc nhóm"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get",
+                "skills": [
+                  "linux"
+                ],
+                "reason": "unknown_duration"
+              }
+            ],
+            "unresolved": [
+              {
+                "skill": "rest api",
+                "reason": "level_mismatch",
+                "levels": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "skill": "java",
+                "reason": "unreviewed_content",
+                "levels": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "skill": "spring boot",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "skill": "giải quyết vấn đề",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "skill": "sql",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+                "skills": [
+                  "giải quyết vấn đề"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://aws.amazon.com/vi/docker",
+                "skills": [
+                  "docker"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+                "skills": [
+                  "giao tiếp",
+                  "làm việc nhóm"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get",
+                "skills": [
+                  "linux"
+                ],
+                "reason": "unknown_duration"
+              }
+            ]
+          },
+          "phases": [
+            {
+              "week": 1,
+              "hours": 0.9333333333333333,
+              "segments": [
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/build-web-api-aspnet-core",
+                  "hours": 0.6833333333333333,
+                  "part": 1,
+                  "duration_kind": "published"
+                },
+                {
+                  "resource_key": "url:https://spring.io/guides/gs/rest-service",
+                  "hours": 0.25,
+                  "part": 1,
+                  "duration_kind": "published"
+                }
+              ]
+            }
+          ],
+          "selected_resources": [
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/build-web-api-aspnet-core",
+              "id": "rest_api_dot03_vi",
+              "title": "Tạo API web với bộ điều ASP.NET Core",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/build-web-api-aspnet-core/",
+              "skills": [
+                "rest api"
+              ],
+              "planned_hours": 0.6833333333333333,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 0.6833333333333333,
+                "kind": "published"
+              },
+              "review_note": "REST/CRUD bằng ASP.NET Core C#; là ví dụ khác stack, không phải bài Java."
+            },
+            {
+              "key": "url:https://spring.io/guides/gs/rest-service",
+              "id": "spring_boot_dot03_spring",
+              "title": "Building a RESTful Web Service",
+              "url": "https://spring.io/guides/gs/rest-service/",
+              "skills": [
+                "spring boot"
+              ],
+              "planned_hours": 0.25,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://spring.io/guides/gs/rest-service/",
+                "basis": "publisher_approximate_guide_minutes",
+                "hours": 0.25,
+                "kind": "published"
+              },
+              "review_note": "REST controller Java với Spring Boot, GET JSON; bài khởi đầu, không đại diện level 3."
+            },
+            {
+              "key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+              "id": "giai_quyet_van_de_dot03_vi",
+              "title": "Quy trình giải quyết vấn đề",
+              "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+              "skills": [
+                "giải quyết vấn đề"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Quy trình từ xác định nguyên nhân tới theo dõi giải pháp; nhập môn."
+            },
+            {
+              "key": "url:https://aws.amazon.com/vi/docker",
+              "id": "docker_dot03_vi",
+              "title": "Docker là gì?",
+              "url": "https://aws.amazon.com/vi/docker/",
+              "skills": [
+                "docker"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Container, image và vòng đời triển khai; tổng quan, chưa có lab Docker."
+            },
+            {
+              "key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+              "id": "giao_tiep_dot03_vi",
+              "title": "Kỹ năng mềm",
+              "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+              "skills": [
+                "giao tiếp",
+                "làm việc nhóm"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Lắng nghe, phản hồi; phần thực hành giao tiếp."
+            },
+            {
+              "key": "url:https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get",
+              "id": "linux_dot03_vi",
+              "title": "apt và apt-get trên Linux",
+              "url": "https://aws.amazon.com/vi/compare/the-difference-between-apt-and-apt-get/",
+              "skills": [
+                "linux"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Lệnh quản lý gói Debian/Ubuntu; phạm vi Linux package management."
+            }
+          ],
+          "focus_question_ids": [
+            "backend_developer_java_q01",
+            "backend_developer_java_q06",
+            "backend_developer_java_q07"
+          ]
+        }
+      ],
+      "question_quality": {
+        "template": 5,
+        "reviewed": 2
+      },
+      "rubric_reference_check": {
+        "backend_developer_java_q01": null,
+        "backend_developer_java_q02": 10,
+        "backend_developer_java_q03": 10,
+        "backend_developer_java_q04": null,
+        "backend_developer_java_q05": null,
+        "backend_developer_java_q06": null,
+        "backend_developer_java_q07": null
+      }
+    },
+    {
+      "role_id": "data_analyst",
+      "cases": [
+        {
+          "case": "empty_declarations",
+          "levels": {},
+          "gap": {
+            "role_id": "data_analyst",
+            "items": [
+              {
+                "skill": "sql",
+                "required": 3,
+                "current": 0,
+                "gap": 3,
+                "priority": 9,
+                "status": "missing"
+              },
+              {
+                "skill": "power bi",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 6,
+                "status": "missing"
+              },
+              {
+                "skill": "tư duy phân tích",
+                "required": 3,
+                "current": 0,
+                "gap": 3,
+                "priority": 9,
+                "status": "missing"
+              },
+              {
+                "skill": "python",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 4,
+                "status": "missing"
+              },
+              {
+                "skill": "excel",
+                "required": 3,
+                "current": 0,
+                "gap": 3,
+                "priority": 6,
+                "status": "missing"
+              },
+              {
+                "skill": "thống kê",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 4,
+                "status": "missing"
+              },
+              {
+                "skill": "giải quyết vấn đề",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 4,
+                "status": "missing"
+              },
+              {
+                "skill": "giao tiếp",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "làm việc nhóm",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "tableau",
+                "required": 1,
+                "current": 0,
+                "gap": 1,
+                "priority": 1,
+                "status": "missing"
+              }
+            ],
+            "match_percent": 0.0,
+            "missing": [
+              "sql",
+              "power bi",
+              "tư duy phân tích",
+              "python",
+              "excel",
+              "thống kê",
+              "giải quyết vấn đề",
+              "giao tiếp",
+              "làm việc nhóm",
+              "tableau"
+            ]
+          },
+          "timed_summary": {
+            "total_weeks": null,
+            "known_weeks": 1,
+            "total_known_hours": 2.9833333333333334,
+            "total_estimated_hours": 0.0,
+            "total_planned_hours": 2.9833333333333334,
+            "is_estimated": false,
+            "unknown_duration": [
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-phan-tich",
+                "skills": [
+                  "tư duy phân tích"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+                "skills": [
+                  "giải quyết vấn đề"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+                "skills": [
+                  "giao tiếp",
+                  "làm việc nhóm"
+                ],
+                "reason": "unknown_duration"
+              }
+            ],
+            "unresolved": [
+              {
+                "skill": "sql",
+                "reason": "level_mismatch",
+                "levels": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "skill": "tư duy phân tích",
+                "reason": "level_mismatch",
+                "levels": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "skill": "power bi",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "skill": "excel",
+                "reason": "level_mismatch",
+                "levels": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "skill": "thống kê",
+                "reason": "unreviewed_content",
+                "levels": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "skill": "giải quyết vấn đề",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "skill": "tableau",
+                "reason": "unreviewed_content",
+                "levels": [
+                  1
+                ]
+              },
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-phan-tich",
+                "skills": [
+                  "tư duy phân tích"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+                "skills": [
+                  "giải quyết vấn đề"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+                "skills": [
+                  "giao tiếp",
+                  "làm việc nhóm"
+                ],
+                "reason": "unknown_duration"
+              }
+            ]
+          },
+          "phases": [
+            {
+              "week": 1,
+              "hours": 2.9833333333333334,
+              "segments": [
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/introduction-to-transact-sql",
+                  "hours": 1.0166666666666666,
+                  "part": 1,
+                  "duration_kind": "published"
+                },
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/get-started-with-power-bi",
+                  "hours": 0.35,
+                  "part": 1,
+                  "duration_kind": "published"
+                },
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/get-started-data-concepts",
+                  "hours": 0.6166666666666667,
+                  "part": 1,
+                  "duration_kind": "published"
+                },
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/explore-analyze-data-with-python",
+                  "hours": 1.0,
+                  "part": 1,
+                  "duration_kind": "published"
+                }
+              ]
+            }
+          ],
+          "selected_resources": [
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/introduction-to-transact-sql",
+              "id": "sql_dot03_vi",
+              "title": "Giới thiệu về Transact-SQL",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/introduction-to-transact-sql/",
+              "skills": [
+                "sql"
+              ],
+              "planned_hours": 1.0166666666666666,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 1.0166666666666666,
+                "kind": "published"
+              },
+              "review_note": "SELECT và truy vấn nhập môn trên T-SQL; lưu ý khác biệt dialect."
+            },
+            {
+              "key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-phan-tich",
+              "id": "tu_duy_phan_tich_dot03_vi",
+              "title": "Rèn luyện tư duy phân tích",
+              "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-phan-tich",
+              "skills": [
+                "tư duy phân tích"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Phân chia thông tin, đánh giá và suy luận; tổng quan phương pháp."
+            },
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/get-started-with-power-bi",
+              "id": "power_bi_dot03_en",
+              "title": "Get started building with Power BI",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/get-started-with-power-bi/",
+              "skills": [
+                "power bi"
+              ],
+              "planned_hours": 0.35,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 0.35,
+                "kind": "published"
+              },
+              "review_note": "Khối thành phần và luồng báo cáo Power BI; nội dung thực tế tiếng Anh dù URL vi-vn."
+            },
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/get-started-data-concepts",
+              "id": "excel_dot03_vi",
+              "title": "Bắt đầu với các khái niệm dữ liệu",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/get-started-data-concepts/",
+              "skills": [
+                "excel"
+              ],
+              "planned_hours": 0.6166666666666667,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 0.6166666666666667,
+                "kind": "published"
+              },
+              "review_note": "Lọc, sắp xếp, công thức, định dạng có điều kiện; bài tập Excel cho web."
+            },
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/explore-analyze-data-with-python",
+              "id": "python_dot03_vi",
+              "title": "Khám phá và phân tích dữ liệu với Python",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/explore-analyze-data-with-python/",
+              "skills": [
+                "python"
+              ],
+              "planned_hours": 1.0,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 1.0,
+                "kind": "published"
+              },
+              "review_note": "Thực hành NumPy/pandas để khám phá dữ liệu; cần biết Python cơ bản."
+            },
+            {
+              "key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+              "id": "giai_quyet_van_de_dot03_vi",
+              "title": "Quy trình giải quyết vấn đề",
+              "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+              "skills": [
+                "giải quyết vấn đề"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Quy trình từ xác định nguyên nhân tới theo dõi giải pháp; nhập môn."
+            },
+            {
+              "key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+              "id": "giao_tiep_dot03_vi",
+              "title": "Kỹ năng mềm",
+              "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+              "skills": [
+                "giao tiếp",
+                "làm việc nhóm"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Lắng nghe, phản hồi; phần thực hành giao tiếp."
+            }
+          ],
+          "focus_question_ids": [
+            "data_analyst_q01",
+            "data_analyst_q03",
+            "data_analyst_q05"
+          ]
+        },
+        {
+          "case": "partial_declarations_fixture",
+          "levels": {
+            "sql": 1,
+            "python": 2,
+            "excel": 1
+          },
+          "gap": {
+            "role_id": "data_analyst",
+            "items": [
+              {
+                "skill": "sql",
+                "required": 3,
+                "current": 1,
+                "gap": 2,
+                "priority": 6,
+                "status": "below_required"
+              },
+              {
+                "skill": "power bi",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 6,
+                "status": "missing"
+              },
+              {
+                "skill": "tư duy phân tích",
+                "required": 3,
+                "current": 0,
+                "gap": 3,
+                "priority": 9,
+                "status": "missing"
+              },
+              {
+                "skill": "python",
+                "required": 2,
+                "current": 2,
+                "gap": 0,
+                "priority": 0,
+                "status": "met"
+              },
+              {
+                "skill": "excel",
+                "required": 3,
+                "current": 1,
+                "gap": 2,
+                "priority": 4,
+                "status": "below_required"
+              },
+              {
+                "skill": "thống kê",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 4,
+                "status": "missing"
+              },
+              {
+                "skill": "giải quyết vấn đề",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 4,
+                "status": "missing"
+              },
+              {
+                "skill": "giao tiếp",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "làm việc nhóm",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "tableau",
+                "required": 1,
+                "current": 0,
+                "gap": 1,
+                "priority": 1,
+                "status": "missing"
+              }
+            ],
+            "match_percent": 18.3,
+            "missing": [
+              "sql",
+              "power bi",
+              "tư duy phân tích",
+              "excel",
+              "thống kê",
+              "giải quyết vấn đề",
+              "giao tiếp",
+              "làm việc nhóm",
+              "tableau"
+            ]
+          },
+          "timed_summary": {
+            "total_weeks": null,
+            "known_weeks": 1,
+            "total_known_hours": 0.35,
+            "total_estimated_hours": 0.0,
+            "total_planned_hours": 0.35,
+            "is_estimated": false,
+            "unknown_duration": [
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-phan-tich",
+                "skills": [
+                  "tư duy phân tích"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+                "skills": [
+                  "giải quyết vấn đề"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+                "skills": [
+                  "giao tiếp",
+                  "làm việc nhóm"
+                ],
+                "reason": "unknown_duration"
+              }
+            ],
+            "unresolved": [
+              {
+                "skill": "tư duy phân tích",
+                "reason": "level_mismatch",
+                "levels": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "skill": "sql",
+                "reason": "level_mismatch",
+                "levels": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "skill": "power bi",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "skill": "excel",
+                "reason": "level_mismatch",
+                "levels": [
+                  2,
+                  3
+                ]
+              },
+              {
+                "skill": "thống kê",
+                "reason": "unreviewed_content",
+                "levels": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "skill": "giải quyết vấn đề",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "skill": "tableau",
+                "reason": "unreviewed_content",
+                "levels": [
+                  1
+                ]
+              },
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-phan-tich",
+                "skills": [
+                  "tư duy phân tích"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+                "skills": [
+                  "giải quyết vấn đề"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+                "skills": [
+                  "giao tiếp",
+                  "làm việc nhóm"
+                ],
+                "reason": "unknown_duration"
+              }
+            ]
+          },
+          "phases": [
+            {
+              "week": 1,
+              "hours": 0.35,
+              "segments": [
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/get-started-with-power-bi",
+                  "hours": 0.35,
+                  "part": 1,
+                  "duration_kind": "published"
+                }
+              ]
+            }
+          ],
+          "selected_resources": [
+            {
+              "key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-phan-tich",
+              "id": "tu_duy_phan_tich_dot03_vi",
+              "title": "Rèn luyện tư duy phân tích",
+              "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-phan-tich",
+              "skills": [
+                "tư duy phân tích"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Phân chia thông tin, đánh giá và suy luận; tổng quan phương pháp."
+            },
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/get-started-with-power-bi",
+              "id": "power_bi_dot03_en",
+              "title": "Get started building with Power BI",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/get-started-with-power-bi/",
+              "skills": [
+                "power bi"
+              ],
+              "planned_hours": 0.35,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 0.35,
+                "kind": "published"
+              },
+              "review_note": "Khối thành phần và luồng báo cáo Power BI; nội dung thực tế tiếng Anh dù URL vi-vn."
+            },
+            {
+              "key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+              "id": "giai_quyet_van_de_dot03_vi",
+              "title": "Quy trình giải quyết vấn đề",
+              "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+              "skills": [
+                "giải quyết vấn đề"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Quy trình từ xác định nguyên nhân tới theo dõi giải pháp; nhập môn."
+            },
+            {
+              "key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+              "id": "giao_tiep_dot03_vi",
+              "title": "Kỹ năng mềm",
+              "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+              "skills": [
+                "giao tiếp",
+                "làm việc nhóm"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Lắng nghe, phản hồi; phần thực hành giao tiếp."
+            }
+          ],
+          "focus_question_ids": [
+            "data_analyst_q01",
+            "data_analyst_q03",
+            "data_analyst_q05"
+          ]
+        }
+      ],
+      "question_quality": {
+        "reviewed": 2,
+        "template": 4
+      },
+      "rubric_reference_check": {
+        "data_analyst_q01": 10,
+        "data_analyst_q02": 10,
+        "data_analyst_q03": null,
+        "data_analyst_q04": null,
+        "data_analyst_q05": null,
+        "data_analyst_q06": null
+      }
+    },
+    {
+      "role_id": "sales_executive",
+      "cases": [
+        {
+          "case": "empty_declarations",
+          "levels": {},
+          "gap": {
+            "role_id": "sales_executive",
+            "items": [
+              {
+                "skill": "bán hàng",
+                "required": 3,
+                "current": 0,
+                "gap": 3,
+                "priority": 9,
+                "status": "missing"
+              },
+              {
+                "skill": "giao tiếp",
+                "required": 3,
+                "current": 0,
+                "gap": 3,
+                "priority": 9,
+                "status": "missing"
+              },
+              {
+                "skill": "tìm kiếm khách hàng",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 6,
+                "status": "missing"
+              },
+              {
+                "skill": "thuyết phục",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 4,
+                "status": "missing"
+              },
+              {
+                "skill": "chăm sóc khách hàng",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 4,
+                "status": "missing"
+              },
+              {
+                "skill": "làm việc nhóm",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "giải quyết vấn đề",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "quản lý thời gian",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              }
+            ],
+            "match_percent": 0.0,
+            "missing": [
+              "bán hàng",
+              "giao tiếp",
+              "tìm kiếm khách hàng",
+              "thuyết phục",
+              "chăm sóc khách hàng",
+              "làm việc nhóm",
+              "giải quyết vấn đề",
+              "quản lý thời gian"
+            ]
+          },
+          "timed_summary": {
+            "total_weeks": null,
+            "known_weeks": 1,
+            "total_known_hours": 1.9333333333333333,
+            "total_estimated_hours": 0.0,
+            "total_planned_hours": 1.9333333333333333,
+            "is_estimated": false,
+            "unknown_duration": [
+              {
+                "resource_key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+                "skills": [
+                  "giao tiếp",
+                  "làm việc nhóm",
+                  "quản lý thời gian"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://amis.misa.vn/57433/ky-nang-cham-soc-khach-hang",
+                "skills": [
+                  "chăm sóc khách hàng"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+                "skills": [
+                  "giải quyết vấn đề"
+                ],
+                "reason": "unknown_duration"
+              }
+            ],
+            "unresolved": [
+              {
+                "skill": "bán hàng",
+                "reason": "level_mismatch",
+                "levels": [
+                  3
+                ]
+              },
+              {
+                "skill": "giao tiếp",
+                "reason": "level_mismatch",
+                "levels": [
+                  3
+                ]
+              },
+              {
+                "skill": "thuyết phục",
+                "reason": "unreviewed_content",
+                "levels": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "skill": "chăm sóc khách hàng",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "skill": "giải quyết vấn đề",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "resource_key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+                "skills": [
+                  "giao tiếp",
+                  "làm việc nhóm",
+                  "quản lý thời gian"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://amis.misa.vn/57433/ky-nang-cham-soc-khach-hang",
+                "skills": [
+                  "chăm sóc khách hàng"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+                "skills": [
+                  "giải quyết vấn đề"
+                ],
+                "reason": "unknown_duration"
+              }
+            ]
+          },
+          "phases": [
+            {
+              "week": 1,
+              "hours": 1.9333333333333333,
+              "segments": [
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/manage-opportunities-dynamics-365-sales",
+                  "hours": 1.05,
+                  "part": 1,
+                  "duration_kind": "published"
+                },
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/manage-leads-dynamics-365-sales",
+                  "hours": 0.8833333333333333,
+                  "part": 1,
+                  "duration_kind": "published"
+                }
+              ]
+            }
+          ],
+          "selected_resources": [
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/manage-opportunities-dynamics-365-sales",
+              "id": "ban_hang_dot03_en",
+              "title": "Manage opportunities and process sales orders in Dynamics 365 Sales",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/manage-opportunities-dynamics-365-sales/",
+              "skills": [
+                "bán hàng"
+              ],
+              "planned_hours": 1.05,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 1.05,
+                "kind": "published"
+              },
+              "review_note": "Quản lý cơ hội, báo giá và đơn hàng trong Dynamics 365; không bao phủ mọi kỹ năng bán hàng."
+            },
+            {
+              "key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+              "id": "giao_tiep_dot03_vi",
+              "title": "Kỹ năng mềm",
+              "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+              "skills": [
+                "giao tiếp",
+                "làm việc nhóm",
+                "quản lý thời gian"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Lắng nghe, phản hồi; phần thực hành giao tiếp."
+            },
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/manage-leads-dynamics-365-sales",
+              "id": "tim_kiem_khach_hang_dot03_en",
+              "title": "Nurture and generate leads in Dynamics 365 Sales",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/manage-leads-dynamics-365-sales/",
+              "skills": [
+                "tìm kiếm khách hàng"
+              ],
+              "planned_hours": 0.8833333333333333,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 0.8833333333333333,
+                "kind": "published"
+              },
+              "review_note": "Tạo, phân loại và nuôi dưỡng lead trong Dynamics 365; cần hiểu CRM."
+            },
+            {
+              "key": "url:https://amis.misa.vn/57433/ky-nang-cham-soc-khach-hang",
+              "id": "cham_soc_khach_hang_dot03_vi",
+              "title": "Kỹ năng chăm sóc khách hàng",
+              "url": "https://amis.misa.vn/57433/ky-nang-cham-soc-khach-hang/",
+              "skills": [
+                "chăm sóc khách hàng"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Lắng nghe, xác nhận vấn đề và theo dõi xử lý; ví dụ dịch vụ khách hàng."
+            },
+            {
+              "key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+              "id": "giai_quyet_van_de_dot03_vi",
+              "title": "Quy trình giải quyết vấn đề",
+              "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+              "skills": [
+                "giải quyết vấn đề"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Quy trình từ xác định nguyên nhân tới theo dõi giải pháp; nhập môn."
+            }
+          ],
+          "focus_question_ids": [
+            "sales_executive_q01",
+            "sales_executive_q02",
+            "sales_executive_q03"
+          ]
+        },
+        {
+          "case": "partial_declarations_fixture",
+          "levels": {
+            "bán hàng": 1,
+            "giao tiếp": 2
+          },
+          "gap": {
+            "role_id": "sales_executive",
+            "items": [
+              {
+                "skill": "bán hàng",
+                "required": 3,
+                "current": 1,
+                "gap": 2,
+                "priority": 6,
+                "status": "below_required"
+              },
+              {
+                "skill": "giao tiếp",
+                "required": 3,
+                "current": 2,
+                "gap": 1,
+                "priority": 3,
+                "status": "below_required"
+              },
+              {
+                "skill": "tìm kiếm khách hàng",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 6,
+                "status": "missing"
+              },
+              {
+                "skill": "thuyết phục",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 4,
+                "status": "missing"
+              },
+              {
+                "skill": "chăm sóc khách hàng",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 4,
+                "status": "missing"
+              },
+              {
+                "skill": "làm việc nhóm",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "giải quyết vấn đề",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              },
+              {
+                "skill": "quản lý thời gian",
+                "required": 2,
+                "current": 0,
+                "gap": 2,
+                "priority": 2,
+                "status": "missing"
+              }
+            ],
+            "match_percent": 18.8,
+            "missing": [
+              "bán hàng",
+              "giao tiếp",
+              "tìm kiếm khách hàng",
+              "thuyết phục",
+              "chăm sóc khách hàng",
+              "làm việc nhóm",
+              "giải quyết vấn đề",
+              "quản lý thời gian"
+            ]
+          },
+          "timed_summary": {
+            "total_weeks": null,
+            "known_weeks": 1,
+            "total_known_hours": 1.9333333333333333,
+            "total_estimated_hours": 0.0,
+            "total_planned_hours": 1.9333333333333333,
+            "is_estimated": false,
+            "unknown_duration": [
+              {
+                "resource_key": "url:https://amis.misa.vn/57433/ky-nang-cham-soc-khach-hang",
+                "skills": [
+                  "chăm sóc khách hàng"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+                "skills": [
+                  "làm việc nhóm",
+                  "quản lý thời gian"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+                "skills": [
+                  "giải quyết vấn đề"
+                ],
+                "reason": "unknown_duration"
+              }
+            ],
+            "unresolved": [
+              {
+                "skill": "bán hàng",
+                "reason": "level_mismatch",
+                "levels": [
+                  3
+                ]
+              },
+              {
+                "skill": "thuyết phục",
+                "reason": "unreviewed_content",
+                "levels": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "skill": "chăm sóc khách hàng",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "skill": "giao tiếp",
+                "reason": "level_mismatch",
+                "levels": [
+                  3
+                ]
+              },
+              {
+                "skill": "giải quyết vấn đề",
+                "reason": "level_mismatch",
+                "levels": [
+                  2
+                ]
+              },
+              {
+                "resource_key": "url:https://amis.misa.vn/57433/ky-nang-cham-soc-khach-hang",
+                "skills": [
+                  "chăm sóc khách hàng"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+                "skills": [
+                  "làm việc nhóm",
+                  "quản lý thời gian"
+                ],
+                "reason": "unknown_duration"
+              },
+              {
+                "resource_key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+                "skills": [
+                  "giải quyết vấn đề"
+                ],
+                "reason": "unknown_duration"
+              }
+            ]
+          },
+          "phases": [
+            {
+              "week": 1,
+              "hours": 1.9333333333333333,
+              "segments": [
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/manage-opportunities-dynamics-365-sales",
+                  "hours": 1.05,
+                  "part": 1,
+                  "duration_kind": "published"
+                },
+                {
+                  "resource_key": "url:https://learn.microsoft.com/vi-vn/training/modules/manage-leads-dynamics-365-sales",
+                  "hours": 0.8833333333333333,
+                  "part": 1,
+                  "duration_kind": "published"
+                }
+              ]
+            }
+          ],
+          "selected_resources": [
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/manage-opportunities-dynamics-365-sales",
+              "id": "ban_hang_dot03_en",
+              "title": "Manage opportunities and process sales orders in Dynamics 365 Sales",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/manage-opportunities-dynamics-365-sales/",
+              "skills": [
+                "bán hàng"
+              ],
+              "planned_hours": 1.05,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 1.05,
+                "kind": "published"
+              },
+              "review_note": "Quản lý cơ hội, báo giá và đơn hàng trong Dynamics 365; không bao phủ mọi kỹ năng bán hàng."
+            },
+            {
+              "key": "url:https://learn.microsoft.com/vi-vn/training/modules/manage-leads-dynamics-365-sales",
+              "id": "tim_kiem_khach_hang_dot03_en",
+              "title": "Nurture and generate leads in Dynamics 365 Sales",
+              "url": "https://learn.microsoft.com/vi-vn/training/modules/manage-leads-dynamics-365-sales/",
+              "skills": [
+                "tìm kiếm khách hàng"
+              ],
+              "planned_hours": 0.8833333333333333,
+              "duration_kind": "published",
+              "duration_evidence": {
+                "source": "https://learn.microsoft.com/api/catalog/?locale=vi-vn",
+                "basis": "publisher_catalog_minutes",
+                "hours": 0.8833333333333333,
+                "kind": "published"
+              },
+              "review_note": "Tạo, phân loại và nuôi dưỡng lead trong Dynamics 365; cần hiểu CRM."
+            },
+            {
+              "key": "url:https://amis.misa.vn/57433/ky-nang-cham-soc-khach-hang",
+              "id": "cham_soc_khach_hang_dot03_vi",
+              "title": "Kỹ năng chăm sóc khách hàng",
+              "url": "https://amis.misa.vn/57433/ky-nang-cham-soc-khach-hang/",
+              "skills": [
+                "chăm sóc khách hàng"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Lắng nghe, xác nhận vấn đề và theo dõi xử lý; ví dụ dịch vụ khách hàng."
+            },
+            {
+              "key": "url:https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+              "id": "lam_viec_nhom_dot03_vi",
+              "title": "Kỹ năng mềm",
+              "url": "https://csdlkhoahoc.hueuni.edu.vn/data/2025/8/sach_ky_nang_mem-_file_in.pdf",
+              "skills": [
+                "làm việc nhóm",
+                "quản lý thời gian"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Phân công và phối hợp theo mục tiêu."
+            },
+            {
+              "key": "url:https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+              "id": "giai_quyet_van_de_dot03_vi",
+              "title": "Quy trình giải quyết vấn đề",
+              "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/ky-nang-giai-quyet-van-de",
+              "skills": [
+                "giải quyết vấn đề"
+              ],
+              "planned_hours": null,
+              "duration_kind": "unknown",
+              "duration_evidence": {},
+              "review_note": "Quy trình từ xác định nguyên nhân tới theo dõi giải pháp; nhập môn."
+            }
+          ],
+          "focus_question_ids": [
+            "sales_executive_q01",
+            "sales_executive_q02",
+            "sales_executive_q03"
+          ]
+        }
+      ],
+      "question_quality": {
+        "reviewed": 2,
+        "template": 3
+      },
+      "rubric_reference_check": {
+        "sales_executive_q01": 10,
+        "sales_executive_q02": null,
+        "sales_executive_q03": 10,
+        "sales_executive_q04": null,
+        "sales_executive_q05": null
+      }
+    }
+  ]
+}

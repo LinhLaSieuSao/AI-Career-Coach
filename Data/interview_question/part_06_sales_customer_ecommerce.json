@@ -100,17 +100,20 @@
         "skill": "bán hàng",
         "level": 3,
         "weight": 3,
-        "question": "Trong bối cảnh pipeline bán gói phần mềm cho khách hàng SME, bạn sẽ xác định yêu cầu, dữ liệu đầu vào và tiêu chí thành công nào trước khi thực hiện bán hàng?",
+        "question": "Trước khi đề xuất gói phần mềm cho một SME, bạn hỏi và xác nhận điều gì về nhu cầu, người quyết định, ngân sách và tiêu chí mua? Bạn chốt bước tiếp theo và theo dõi pipeline thế nào?",
         "good_answer_points": [
-          "Làm rõ mục tiêu, dữ kiện và ràng buộc của pipeline bán gói phần mềm cho khách hàng SME.",
-          "Giải thích bước thực hiện gắn trực tiếp với bán hàng, nêu lựa chọn và lý do.",
-          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+          "Khám phá nhu cầu và tiêu chí mua thay vì đề xuất ngay",
+          "Làm rõ người quyết định và ngân sách",
+          "Thống nhất bước tiếp theo có trách nhiệm/thời hạn và ghi CRM"
         ],
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
         "time_minutes": 4,
-        "reference_answer": "Khám phá nhu cầu, người quyết định và tiêu chí mua trước đề xuất; xác nhận pain point, trình bày giá trị/giới hạn, chốt next step có owner/hạn và cập nhật pipeline. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Tôi xác nhận nhu cầu và pain point thực tế, hỏi người quyết định cùng ngân sách và tiêu chí mua. Tôi đề xuất phạm vi đáp ứng và giới hạn phù hợp. Hai bên thống nhất next step, người phụ trách và thời hạn; tôi cập nhật CRM/pipeline và theo dõi kết quả theo tiêu chí đã thống nhất.",
+        "quality": "reviewed",
+        "quality_note": "Đã sửa thành tình huống cụ thể và đối chiếu từng tiêu chí rubric với câu hỏi/nguồn.",
+        "quality_reviewed_at": "2026-10-24"
       },
       {
         "id": "sales_executive_q02",
@@ -128,7 +131,9 @@
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "quality": "template",
+        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
       },
       {
         "id": "sales_executive_q03",
@@ -136,17 +141,20 @@
         "skill": "tìm kiếm khách hàng",
         "level": 2,
         "weight": 3,
-        "question": "Khi kết quả pipeline bán gói phần mềm cho khách hàng SME thấp hơn mục tiêu, bạn dùng tìm kiếm khách hàng để chẩn đoán nguyên nhân và chọn hành động ưu tiên ra sao?",
+        "question": "Pipeline phần mềm SME ít cơ hội đủ điều kiện dù số liên hệ tăng. Bạn xác định ICP, chọn nguồn lead, khử trùng và đo hiệu quả từng kênh để chọn hành động tiếp theo thế nào?",
         "good_answer_points": [
-          "Làm rõ mục tiêu, dữ kiện và ràng buộc của pipeline bán gói phần mềm cho khách hàng SME.",
-          "Giải thích bước thực hiện gắn trực tiếp với tìm kiếm khách hàng, nêu lựa chọn và lý do.",
-          "Đưa tiêu chí/kết quả đo được, cách xác minh và bước tiếp theo phù hợp."
+          "Định nghĩa ICP theo ngành/quy mô và nhu cầu",
+          "Chọn nguồn/kênh lead và kiểm tra trùng trước tiếp cận",
+          "Đo lead/cơ hội đủ điều kiện theo kênh và ghi CRM"
         ],
         "red_flags": [
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
         "time_minutes": 4,
-        "reference_answer": "Xác định ICP theo nhu cầu/ngành/quy mô, xây danh sách từ nguồn phù hợp rồi lọc trùng; cá nhân hóa tiếp cận, ghi phản hồi CRM và đo qualified opportunity chứ không chỉ số liên hệ. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Tôi xác định ICP theo ngành, quy mô và nhu cầu; chọn nguồn/kênh lead phù hợp rồi lọc trùng trước tiếp cận. Tôi cập nhật CRM và so sánh tỷ lệ qualified lead hoặc cơ hội đủ điều kiện theo kênh, thay vì chỉ đếm liên hệ; ưu tiên kênh đem lại cơ hội phù hợp và kiểm tra lại sau thay đổi.",
+        "quality": "reviewed",
+        "quality_note": "Đã sửa thành tình huống cụ thể và đối chiếu từng tiêu chí rubric với câu hỏi/nguồn.",
+        "quality_reviewed_at": "2026-10-24"
       },
       {
         "id": "sales_executive_q04",
@@ -164,7 +172,9 @@
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng chăm sóc khách hàng để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt."
+        "reference_answer": "Tôi sẽ làm rõ mục tiêu và dữ kiện của tình huống, áp dụng chăm sóc khách hàng để chọn bước xử lý phù hợp rồi thống nhất trách nhiệm với bên liên quan. Tôi xác nhận kết quả bằng đầu ra hoặc chỉ số có thể đối chiếu, thử trường hợp biên và nêu bước tiếp theo nếu chưa đạt.",
+        "quality": "template",
+        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
       },
       {
         "id": "sales_executive_q05",
@@ -182,7 +192,9 @@
           "Trả lời chung chung, không nêu dữ kiện, hành động cá nhân hoặc cách kiểm chứng kết quả."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ lợi ích/giới hạn mỗi bên, đưa phương án có căn cứ và chốt điều kiện được thống nhất. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ lợi ích/giới hạn mỗi bên, đưa phương án có căn cứ và chốt điều kiện được thống nhất. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "quality": "template",
+        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
       }
     ],
     "b2b_sales_executive": [

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "backend-java",
+    "label": "Backend Java",
+    "synthetic": true,
+    "notice": "Hồ sơ tổng hợp để minh họa; không mô tả người thật hoặc lịch sử tuyển dụng.",
+    "role_id": "backend_developer_java",
+    "profile": {
+      "skills": ["Java", "Spring Boot", "REST API", "Git"],
+      "interests": ["Backend", "phát triển phần mềm"],
+      "experience": "Ví dụ tổng hợp; không có kinh nghiệm cá nhân được khẳng định.",
+      "levels": {"java": 1, "spring boot": 1, "rest api": 1, "git": 2}
+    }
+  },
+  {
+    "id": "data-analyst",
+    "label": "Phân tích dữ liệu",
+    "synthetic": true,
+    "notice": "Hồ sơ tổng hợp để minh họa; không mô tả người thật hoặc lịch sử tuyển dụng.",
+    "role_id": "data_analyst",
+    "profile": {
+      "skills": ["SQL", "Python", "Excel", "Power BI"],
+      "interests": ["phân tích dữ liệu", "trực quan hóa dữ liệu"],
+      "experience": "Ví dụ tổng hợp; không có kinh nghiệm cá nhân được khẳng định.",
+      "levels": {"sql": 1, "python": 1, "excel": 2, "power bi": 1}
+    }
+  },
+  {
+    "id": "sales-executive",
+    "label": "Kinh doanh",
+    "synthetic": true,
+    "notice": "Hồ sơ tổng hợp để minh họa; không mô tả người thật hoặc lịch sử tuyển dụng.",
+    "role_id": "sales_executive",
+    "profile": {
+      "skills": ["bán hàng", "giao tiếp", "chăm sóc khách hàng", "thuyết phục"],
+      "interests": ["kinh doanh", "quan hệ khách hàng"],
+      "experience": "Ví dụ tổng hợp; không có kinh nghiệm cá nhân được khẳng định.",
+      "levels": {"bán hàng": 1, "giao tiếp": 2, "chăm sóc khách hàng": 1}
+    }
+  }
+]

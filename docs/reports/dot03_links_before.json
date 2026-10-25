@@ -1,0 +1,1000 @@
+{
+  "started_at": "2026-10-24T06:09:41.438064+00:00",
+  "finished_at": "2026-10-24T06:10:07.835715+00:00",
+  "timeout_seconds": 10.0,
+  "workers": 4,
+  "note": "HTTP reachability is not content suitability. Blocked URLs remain unverified; this command does not edit resources.json.",
+  "summary": {
+    "reachable": 60,
+    "redirect": 24,
+    "blocked": 11,
+    "timeout": 2,
+    "error": 1
+  },
+  "unique_urls": 98,
+  "results": [
+    {
+      "url": "https://academy.hubspot.com/",
+      "checked_at": "2026-10-24T06:09:41.438064+00:00",
+      "status_code": 200,
+      "final_url": "https://academy.hubspot.com/",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.609
+    },
+    {
+      "url": "https://academy.iccwbo.org/wp-content/uploads/2020/08/803E_Incoterms-2020-Wallchart-A4.pdf",
+      "checked_at": "2026-10-24T06:09:41.439364+00:00",
+      "status_code": 200,
+      "final_url": "https://academy.iccwbo.org/wp-content/uploads/2020/08/803E_Incoterms-2020-Wallchart-A4.pdf",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.297
+    },
+    {
+      "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/",
+      "checked_at": "2026-10-24T06:09:41.439730+00:00",
+      "status_code": 200,
+      "final_url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 1.14
+    },
+    {
+      "url": "https://asq.org/quality-resources/learn-about-quality",
+      "checked_at": "2026-10-24T06:09:41.439730+00:00",
+      "status_code": 403,
+      "final_url": "https://asq.org/quality-resources/learn-about-quality",
+      "redirects": 0,
+      "status": "blocked",
+      "verification": "unverified",
+      "elapsed_seconds": 0.343
+    },
+    {
+      "url": "https://asq.org/quality-resources/quality-tools",
+      "checked_at": "2026-10-24T06:09:41.740479+00:00",
+      "status_code": 403,
+      "final_url": "https://asq.org/quality-resources/quality-tools",
+      "redirects": 0,
+      "status": "blocked",
+      "verification": "unverified",
+      "elapsed_seconds": 0.281
+    },
+    {
+      "url": "https://creativecloud.adobe.com/learn",
+      "checked_at": "2026-10-24T06:09:41.781573+00:00",
+      "status_code": 403,
+      "final_url": "https://www.adobe.com/learn",
+      "redirects": 1,
+      "status": "blocked",
+      "verification": "unverified",
+      "elapsed_seconds": 0.282
+    },
+    {
+      "url": "https://creatoracademy.youtube.com/",
+      "checked_at": "2026-10-24T06:09:42.030359+00:00",
+      "status_code": 200,
+      "final_url": "https://www.youtube.com/channel/UCkRfArvrzheW2E7b6SVT7vQ",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.594
+    },
+    {
+      "url": "https://dart.dev/learn",
+      "checked_at": "2026-10-24T06:09:42.051181+00:00",
+      "status_code": 200,
+      "final_url": "https://dart.dev/learn",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.188
+    },
+    {
+      "url": "https://developer.android.com/courses",
+      "checked_at": "2026-10-24T06:09:42.066681+00:00",
+      "status_code": 200,
+      "final_url": "https://developer.android.com/courses",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.875
+    },
+    {
+      "url": "https://developer.android.com/topic/architecture",
+      "checked_at": "2026-10-24T06:09:42.242248+00:00",
+      "status_code": 200,
+      "final_url": "https://developer.android.com/topic/architecture",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.703
+    },
+    {
+      "url": "https://developer.apple.com/documentation/coredata",
+      "checked_at": "2026-10-24T06:09:42.588871+00:00",
+      "status_code": 200,
+      "final_url": "https://developer.apple.com/documentation/coredata",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.813
+    },
+    {
+      "url": "https://developer.apple.com/documentation/xcode",
+      "checked_at": "2026-10-24T06:09:42.622263+00:00",
+      "status_code": 200,
+      "final_url": "https://developer.apple.com/documentation/xcode",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.156
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction",
+      "checked_at": "2026-10-24T06:09:42.774723+00:00",
+      "status_code": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 1.703
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/MDN/Tutorials",
+      "checked_at": "2026-10-24T06:09:42.941102+00:00",
+      "status_code": 200,
+      "final_url": "https://developer.mozilla.org/en-US/docs/MDN/Tutorials",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.297
+    },
+    {
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "checked_at": "2026-10-24T06:09:42.947067+00:00",
+      "status_code": 200,
+      "final_url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.718
+    },
+    {
+      "url": "https://docs.arduino.cc/",
+      "checked_at": "2026-10-24T06:09:43.244324+00:00",
+      "status_code": 200,
+      "final_url": "https://docs.arduino.cc/",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 1.093
+    },
+    {
+      "url": "https://docs.docker.com/get-started/",
+      "checked_at": "2026-10-24T06:09:43.395137+00:00",
+      "status_code": 200,
+      "final_url": "https://docs.docker.com/get-started",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.203
+    },
+    {
+      "url": "https://docs.flutter.dev/get-started/codelab",
+      "checked_at": "2026-10-24T06:09:43.601505+00:00",
+      "status_code": 200,
+      "final_url": "https://docs.flutter.dev/learn/pathway",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.578
+    },
+    {
+      "url": "https://docs.kicad.org/",
+      "checked_at": "2026-10-24T06:09:43.669409+00:00",
+      "status_code": 200,
+      "final_url": "https://docs.kicad.org/",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.329
+    },
+    {
+      "url": "https://docs.metasploit.com/",
+      "checked_at": "2026-10-24T06:09:43.997948+00:00",
+      "status_code": 200,
+      "final_url": "https://docs.metasploit.com/",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.453
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/",
+      "checked_at": "2026-10-24T06:09:44.178287+00:00",
+      "status_code": 200,
+      "final_url": "https://docs.python.org/3/tutorial/",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.5
+    },
+    {
+      "url": "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/",
+      "checked_at": "2026-10-24T06:09:44.331602+00:00",
+      "status_code": 200,
+      "final_url": "https://docs.swift.org/latest/documentation/the-swift-programming-language/",
+      "redirects": 2,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 2.125
+    },
+    {
+      "url": "https://f8.edu.vn/",
+      "checked_at": "2026-10-24T06:09:44.449360+00:00",
+      "status_code": 200,
+      "final_url": "https://f8.edu.vn/",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.468
+    },
+    {
+      "url": "https://git-scm.com/doc",
+      "checked_at": "2026-10-24T06:09:44.482257+00:00",
+      "status_code": 200,
+      "final_url": "https://git-scm.com/doc",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.297
+    },
+    {
+      "url": "https://github.com/opencv/opencv/wiki/",
+      "checked_at": "2026-10-24T06:09:44.678197+00:00",
+      "status_code": 200,
+      "final_url": "https://github.com/opencv/opencv/wiki",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.703
+    },
+    {
+      "url": "https://help.ecus.net.vn/",
+      "checked_at": "2026-10-24T06:09:44.778229+00:00",
+      "status_code": 200,
+      "final_url": "https://help.ecus.net.vn/",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.187
+    },
+    {
+      "url": "https://help.figma.com/hc/en-us/categories/360002042553-Learn-design",
+      "checked_at": "2026-10-24T06:09:44.910778+00:00",
+      "status_code": 200,
+      "final_url": "https://help.figma.com/hc/en-us/categories/360002042553-Learn-design",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.844
+    },
+    {
+      "url": "https://huggingface.co/learn/nlp-course/chapter1/1",
+      "checked_at": "2026-10-24T06:09:44.966160+00:00",
+      "status_code": 200,
+      "final_url": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "redirects": 1,
+      "status": "blocked",
+      "verification": "unverified",
+      "elapsed_seconds": 0.703
+    },
+    {
+      "url": "https://kotlinlang.org/docs/getting-started.html",
+      "checked_at": "2026-10-24T06:09:45.378790+00:00",
+      "status_code": 200,
+      "final_url": "https://kotlinlang.org/docs/getting-started.html",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.688
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/ef/core/",
+      "checked_at": "2026-10-24T06:09:45.658808+00:00",
+      "status_code": 200,
+      "final_url": "https://learn.microsoft.com/en-us/ef/core/",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.704
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/training/azure/",
+      "checked_at": "2026-10-24T06:09:45.758817+00:00",
+      "status_code": 200,
+      "final_url": "https://learn.microsoft.com/en-us/training/azure/",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.625
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/welcome-windows-client",
+      "checked_at": "2026-10-24T06:09:46.077590+00:00",
+      "status_code": 200,
+      "final_url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/welcome-windows-client",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.343
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows-server/",
+      "checked_at": "2026-10-24T06:09:46.360057+00:00",
+      "status_code": 200,
+      "final_url": "https://learn.microsoft.com/en-us/windows-server/",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.578
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-domain-services",
+      "checked_at": "2026-10-24T06:09:46.377766+00:00",
+      "status_code": 200,
+      "final_url": "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.672
+    },
+    {
+      "url": "https://learn.microsoft.com/training/",
+      "checked_at": "2026-10-24T06:09:46.409477+00:00",
+      "status_code": 200,
+      "final_url": "https://learn.microsoft.com/en-us/training/",
+      "redirects": 2,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.829
+    },
+    {
+      "url": "https://learn.microsoft.com/training/paths/deploy-configure-azure-monitor/",
+      "checked_at": "2026-10-24T06:09:46.455821+00:00",
+      "status_code": 200,
+      "final_url": "https://learn.microsoft.com/en-us/training/paths/deploy-configure-azure-monitor/",
+      "redirects": 2,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.844
+    },
+    {
+      "url": "https://learn.microsoft.com/training/powerplatform/power-bi/",
+      "checked_at": "2026-10-24T06:09:46.942818+00:00",
+      "status_code": 200,
+      "final_url": "https://learn.microsoft.com/en-us/training/powerplatform/power-bi",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.562
+    },
+    {
+      "url": "https://learn.unity.com/",
+      "checked_at": "2026-10-24T06:09:47.057871+00:00",
+      "status_code": 200,
+      "final_url": "https://learn.unity.com/",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 1.219
+    },
+    {
+      "url": "https://learnenglish.britishcouncil.org/",
+      "checked_at": "2026-10-24T06:09:47.239841+00:00",
+      "status_code": null,
+      "final_url": null,
+      "redirects": 0,
+      "status": "timeout",
+      "detail": "HTTPSConnectionPool(host='learnenglish.britishcouncil.org', port=443): Read timed out. (read timeout=10.0)",
+      "verification": "unverified",
+      "elapsed_seconds": 10.109
+    },
+    {
+      "url": "https://learning.postman.com/docs/",
+      "checked_at": "2026-10-24T06:09:47.305137+00:00",
+      "status_code": 200,
+      "final_url": "https://learning.postman.com/docs/getting-started/overview/",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 1.359
+    },
+    {
+      "url": "https://learning.sap.com/learning-journeys?trk=public_post_comment-text",
+      "checked_at": "2026-10-24T06:09:47.509729+00:00",
+      "status_code": 200,
+      "final_url": "https://learning.sap.com/learning-journeys?trk=public_post_comment-text",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.453
+    },
+    {
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-1-production-and-operations-management-an-overview",
+      "checked_at": "2026-10-24T06:09:47.961695+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/introduction-business-2e/pages/10-1-production-and-operations-management-an-overview",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.078
+    },
+    {
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-4-pulling-it-together-resource-planning",
+      "checked_at": "2026-10-24T06:09:48.045276+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/introduction-business-2e/pages/10-4-pulling-it-together-resource-planning",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.063
+    },
+    {
+      "url": "https://openstax.org/books/introduction-business-2e/pages/10-5-production-and-operations-control",
+      "checked_at": "2026-10-24T06:09:48.104077+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/introduction-business-2e/pages/10-5-production-and-operations-control",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.062
+    },
+    {
+      "url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management",
+      "checked_at": "2026-10-24T06:09:48.157273+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/introduction-business-2e/pages/8-1-achieving-high-performance-through-human-resources-management",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.047
+    },
+    {
+      "url": "https://openstax.org/books/introduction-business/pages/12-1-the-nature-and-functions-of-distribution-place",
+      "checked_at": "2026-10-24T06:09:48.211388+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/introduction-business/pages/12-1-the-nature-and-functions-of-distribution-place",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.063
+    },
+    {
+      "url": "https://openstax.org/books/organizational-behavior/pages/14-4-negotiation-behavior",
+      "checked_at": "2026-10-24T06:09:48.269657+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/organizational-behavior/pages/14-4-negotiation-behavior",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.062
+    },
+    {
+      "url": "https://openstax.org/books/principles-economics-3e/pages/1-introduction",
+      "checked_at": "2026-10-24T06:09:48.274631+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/principles-economics-3e/pages/1-introduction",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.047
+    },
+    {
+      "url": "https://openstax.org/books/principles-finance/pages/5-why-it-matters",
+      "checked_at": "2026-10-24T06:09:48.317590+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/principles-finance/pages/5-why-it-matters",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.109
+    },
+    {
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements",
+      "checked_at": "2026-10-24T06:09:48.334750+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.094
+    },
+    {
+      "url": "https://openstax.org/books/principles-management/pages/1-management-skills-application-exercises",
+      "checked_at": "2026-10-24T06:09:48.429308+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/principles-management/pages/1-management-skills-application-exercises",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 1.094
+    },
+    {
+      "url": "https://openstax.org/books/principles-management/pages/14-1-motivation-direction-and-intensity",
+      "checked_at": "2026-10-24T06:09:48.434350+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/principles-management/pages/14-1-motivation-direction-and-intensity",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.063
+    },
+    {
+      "url": "https://openstax.org/books/principles-management/pages/15-1-teamwork-in-the-workplace",
+      "checked_at": "2026-10-24T06:09:48.487820+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/principles-management/pages/15-1-teamwork-in-the-workplace",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.046
+    },
+    {
+      "url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing",
+      "checked_at": "2026-10-24T06:09:48.543478+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/principles-management/pages/16-5-the-major-channels-of-management-communication-are-talking-listening-reading-and-writing",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.047
+    },
+    {
+      "url": "https://openstax.org/books/principles-marketing/pages/1-1-marketing-and-the-marketing-process",
+      "checked_at": "2026-10-24T06:09:48.592337+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/principles-marketing/pages/1-1-marketing-and-the-marketing-process",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.078
+    },
+    {
+      "url": "https://openstax.org/books/principles-marketing/pages/13-1-the-promotion-mix-and-its-elements",
+      "checked_at": "2026-10-24T06:09:48.666327+00:00",
+      "status_code": 200,
+      "final_url": "https://openstax.org/books/principles-marketing/pages/13-1-the-promotion-mix-and-its-elements",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.047
+    },
+    {
+      "url": "https://owasp.org/www-project-web-security-testing-guide/",
+      "checked_at": "2026-10-24T06:09:48.672572+00:00",
+      "status_code": 200,
+      "final_url": "https://owasp.org/projects/web-security-testing-guide",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.532
+    },
+    {
+      "url": "https://reactnative.dev/docs/getting-started",
+      "checked_at": "2026-10-24T06:09:48.707384+00:00",
+      "status_code": 200,
+      "final_url": "https://reactnative.dev/docs/getting-started",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.438
+    },
+    {
+      "url": "https://redis.io/docs/latest/",
+      "checked_at": "2026-10-24T06:09:49.153564+00:00",
+      "status_code": 200,
+      "final_url": "https://redis.io/docs/latest/",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.422
+    },
+    {
+      "url": "https://rxjs.dev/guide/overview",
+      "checked_at": "2026-10-24T06:09:49.190443+00:00",
+      "status_code": 200,
+      "final_url": "https://rxjs.dev/guide/overview",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.25
+    },
+    {
+      "url": "https://sass-lang.com/guide/",
+      "checked_at": "2026-10-24T06:09:49.448919+00:00",
+      "status_code": 200,
+      "final_url": "https://sass-lang.com/guide/",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.672
+    },
+    {
+      "url": "https://scrumguides.org/scrum-guide.html",
+      "checked_at": "2026-10-24T06:09:49.522456+00:00",
+      "status_code": 200,
+      "final_url": "https://scrumguides.org/scrum-guide.html",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.172
+    },
+    {
+      "url": "https://sitrain.siemens.com/gb/web/en/app/toc/simatic-programming-1-in-tia-portal-0144478865067704321706/overview",
+      "checked_at": "2026-10-24T06:09:49.577371+00:00",
+      "status_code": 200,
+      "final_url": "https://sitrain.siemens.com/gb/web/en/app/toc/simatic-programming-1-in-tia-portal-0144478865067704321706/overview",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.172
+    },
+    {
+      "url": "https://skillbuilder.aws/",
+      "checked_at": "2026-10-24T06:09:49.696062+00:00",
+      "status_code": 200,
+      "final_url": "https://skillbuilder.aws/",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.828
+    },
+    {
+      "url": "https://skillshop.withgoogle.com/",
+      "checked_at": "2026-10-24T06:09:49.746335+00:00",
+      "status_code": 200,
+      "final_url": "https://skillshop.withgoogle.com/",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.484
+    },
+    {
+      "url": "https://spring.io/guides",
+      "checked_at": "2026-10-24T06:09:50.122372+00:00",
+      "status_code": 200,
+      "final_url": "https://spring.io/guides/",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.437
+    },
+    {
+      "url": "https://support.microsoft.com/en-us/windows/deployment/install-upgrade/fix-problems-that-block-programs-from-being-installed-or-removed",
+      "checked_at": "2026-10-24T06:09:50.225347+00:00",
+      "status_code": 200,
+      "final_url": "https://support.microsoft.com/en-us/windows/deployment/install-upgrade/fix-problems-that-block-programs-from-being-installed-or-removed",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.359
+    },
+    {
+      "url": "https://support.microsoft.com/en-us/word",
+      "checked_at": "2026-10-24T06:09:50.526702+00:00",
+      "status_code": 200,
+      "final_url": "https://support.microsoft.com/en-us/word/",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.187
+    },
+    {
+      "url": "https://tailwindcss.com/docs/installation",
+      "checked_at": "2026-10-24T06:09:50.550045+00:00",
+      "status_code": 200,
+      "final_url": "https://tailwindcss.com/docs/installation/using-vite",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.281
+    },
+    {
+      "url": "https://trailhead.salesforce.com/",
+      "checked_at": "2026-10-24T06:09:50.584947+00:00",
+      "status_code": 200,
+      "final_url": "https://trailhead.salesforce.com/",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.61
+    },
+    {
+      "url": "https://vbpl.vn/",
+      "checked_at": "2026-10-24T06:09:50.718172+00:00",
+      "status_code": 200,
+      "final_url": "https://vbpl.vn/",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.157
+    },
+    {
+      "url": "https://vuejs.org/guide/introduction.html",
+      "checked_at": "2026-10-24T06:09:50.843826+00:00",
+      "status_code": 200,
+      "final_url": "https://vuejs.org/guide/introduction.html",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.188
+    },
+    {
+      "url": "https://vuex.vuejs.org/",
+      "checked_at": "2026-10-24T06:09:50.870925+00:00",
+      "status_code": 200,
+      "final_url": "https://vuex.vuejs.org/",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.156
+    },
+    {
+      "url": "https://www.atlassian.com/agile/project-management/user-stories",
+      "checked_at": "2026-10-24T06:09:51.016327+00:00",
+      "status_code": 200,
+      "final_url": "https://www.atlassian.com/agile/project-management/user-stories",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.797
+    },
+    {
+      "url": "https://www.atlassian.com/agile/tutorials/how-to-do-scrum-with-jira",
+      "checked_at": "2026-10-24T06:09:51.017952+00:00",
+      "status_code": 200,
+      "final_url": "https://www.atlassian.com/agile/tutorials/how-to-do-scrum-with-jira",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 1.703
+    },
+    {
+      "url": "https://www.atlassian.com/agile/tutorials/jira-confluence-sprint-refinement",
+      "checked_at": "2026-10-24T06:09:51.192414+00:00",
+      "status_code": 503,
+      "final_url": "https://www.atlassian.com/agile/tutorials/jira-confluence-sprint-refinement",
+      "redirects": 0,
+      "status": "error",
+      "verification": "unverified",
+      "elapsed_seconds": 5.484
+    },
+    {
+      "url": "https://www.autodesk.com/learn/catalog/start",
+      "checked_at": "2026-10-24T06:09:51.813433+00:00",
+      "status_code": 403,
+      "final_url": "https://www.autodesk.com/learn/catalog/start",
+      "redirects": 0,
+      "status": "blocked",
+      "verification": "unverified",
+      "elapsed_seconds": 0.125
+    },
+    {
+      "url": "https://www.autodesk.com/learning.autodesk",
+      "checked_at": "2026-10-24T06:09:51.942071+00:00",
+      "status_code": 403,
+      "final_url": "https://www.autodesk.com/learning.autodesk",
+      "redirects": 0,
+      "status": "blocked",
+      "verification": "unverified",
+      "elapsed_seconds": 0.093
+    },
+    {
+      "url": "https://www.broadcom.com/support/education/vmware",
+      "checked_at": "2026-10-24T06:09:52.036648+00:00",
+      "status_code": 200,
+      "final_url": "https://www.broadcom.com/support/education/vmware",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.375
+    },
+    {
+      "url": "https://www.canva.com/designschool/",
+      "checked_at": "2026-10-24T06:09:52.409475+00:00",
+      "status_code": 200,
+      "final_url": "https://www.canva.com/design-school/",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.672
+    },
+    {
+      "url": "https://www.capcut.com/resource/capcut-tutorial-for-beginners",
+      "checked_at": "2026-10-24T06:09:52.724910+00:00",
+      "status_code": 200,
+      "final_url": "https://www.capcut.com/resource/capcut-tutorial-for-beginners",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 3.484
+    },
+    {
+      "url": "https://www.facebook.com/business/learn",
+      "checked_at": "2026-10-24T06:09:53.093724+00:00",
+      "status_code": 200,
+      "final_url": "https://www.facebook.com/business/learn",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 1.547
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad",
+      "checked_at": "2026-10-24T06:09:54.630726+00:00",
+      "status_code": 200,
+      "final_url": "https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.828
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/learn-programming-free-software-development-courses-for-beginners",
+      "checked_at": "2026-10-24T06:09:55.468363+00:00",
+      "status_code": 200,
+      "final_url": "https://www.freecodecamp.org/news/learn-programming-free-software-development-courses-for-beginners",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 1.203
+    },
+    {
+      "url": "https://www.freertos.org/Documentation/RTOS_book.html",
+      "checked_at": "2026-10-24T06:09:56.210192+00:00",
+      "status_code": 200,
+      "final_url": "https://www.freertos.org/Documentation/02-Kernel/07-Books-and-manual/01-RTOS_book",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.125
+    },
+    {
+      "url": "https://www.gdt.gov.vn/",
+      "checked_at": "2026-10-24T06:09:56.340953+00:00",
+      "status_code": 200,
+      "final_url": "https://www.gdt.gov.vn/wps/portal",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 5.36
+    },
+    {
+      "url": "https://www.ilo.org/topics-and-sectors/safety-and-health-work",
+      "checked_at": "2026-10-24T06:09:56.671242+00:00",
+      "status_code": 403,
+      "final_url": "https://www.ilo.org/topics-and-sectors/safety-and-health-work",
+      "redirects": 0,
+      "status": "blocked",
+      "verification": "unverified",
+      "elapsed_seconds": 0.344
+    },
+    {
+      "url": "https://www.kaggle.com/learn",
+      "checked_at": "2026-10-24T06:09:56.677335+00:00",
+      "status_code": 200,
+      "final_url": "https://www.kaggle.com/learn",
+      "redirects": 0,
+      "status": "blocked",
+      "verification": "unverified",
+      "elapsed_seconds": 0.422
+    },
+    {
+      "url": "https://www.khanacademy.org/math/statistics-probability",
+      "checked_at": "2026-10-24T06:09:57.012195+00:00",
+      "status_code": 200,
+      "final_url": "https://www.khanacademy.org/math/statistics-probability",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.188
+    },
+    {
+      "url": "https://www.netacad.com/catalogs/learn?courseLang=en-US",
+      "checked_at": "2026-10-24T06:09:57.100810+00:00",
+      "status_code": 200,
+      "final_url": "https://www.netacad.com/catalogs/learn?courseLang=en-US",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.391
+    },
+    {
+      "url": "https://www.selenium.dev/documentation/",
+      "checked_at": "2026-10-24T06:09:57.199121+00:00",
+      "status_code": 200,
+      "final_url": "https://www.selenium.dev/documentation/",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 0.718
+    },
+    {
+      "url": "https://www.sqlite.org/quickstart.html",
+      "checked_at": "2026-10-24T06:09:57.347040+00:00",
+      "status_code": 200,
+      "final_url": "https://www.sqlite.org/quickstart.html",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 1.406
+    },
+    {
+      "url": "https://www.tableau.com/learn/training",
+      "checked_at": "2026-10-24T06:09:57.499137+00:00",
+      "status_code": 403,
+      "final_url": "https://www.tableau.com/learn/training",
+      "redirects": 0,
+      "status": "blocked",
+      "verification": "unverified",
+      "elapsed_seconds": 0.25
+    },
+    {
+      "url": "https://www.teachingenglish.org.uk/teaching-resources",
+      "checked_at": "2026-10-24T06:09:57.748572+00:00",
+      "status_code": null,
+      "final_url": null,
+      "redirects": 0,
+      "status": "timeout",
+      "detail": "HTTPSConnectionPool(host='www.teachingenglish.org.uk', port=443): Read timed out. (read timeout=10.0)",
+      "verification": "unverified",
+      "elapsed_seconds": 10.093
+    },
+    {
+      "url": "https://www.tensorflow.org/tutorials",
+      "checked_at": "2026-10-24T06:09:57.918028+00:00",
+      "status_code": 200,
+      "final_url": "https://www.tensorflow.org/tutorials",
+      "redirects": 0,
+      "status": "reachable",
+      "verification": "transport_only",
+      "elapsed_seconds": 1.047
+    },
+    {
+      "url": "https://www.tiktokacademy.com/",
+      "checked_at": "2026-10-24T06:09:58.750134+00:00",
+      "status_code": 200,
+      "final_url": "https://www.tiktokacademy.com/student/catalog",
+      "redirects": 1,
+      "status": "redirect",
+      "verification": "transport_only",
+      "elapsed_seconds": 1.485
+    },
+    {
+      "url": "https://www.who.int/about/who-academy",
+      "checked_at": "2026-10-24T06:09:58.964790+00:00",
+      "status_code": 403,
+      "final_url": "https://www.who.int/about/who-academy",
+      "redirects": 0,
+      "status": "blocked",
+      "verification": "unverified",
+      "elapsed_seconds": 0.344
+    },
+    {
+      "url": "https://www.who.int/teams/integrated-health-services/clinical-services-and-systems/emergency-and-critical-care/bec",
+      "checked_at": "2026-10-24T06:09:59.306449+00:00",
+      "status_code": 403,
+      "final_url": "https://www.who.int/teams/integrated-health-services/clinical-services-and-systems/emergency-and-critical-care/bec",
+      "redirects": 0,
+      "status": "blocked",
+      "verification": "unverified",
+      "elapsed_seconds": 0.266
+    }
+  ],
+  "source": "C:\\Users\\letrungtanh\\OneDrive\\Tài liệu\\ChatGPT\\dự án mã nguồn mở\\khắc phục ma trận vấn đề\\AI-Career-Coach\\Data\\resources.json"
+}
