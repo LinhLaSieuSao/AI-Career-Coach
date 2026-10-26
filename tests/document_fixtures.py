@@ -5,22 +5,35 @@ from io import BytesIO
 import docx
 
 
-def pdf_bytes(text="", *, image=False, vector=False):
+def pdf_bytes(text="", *, image=False, vector=False, pages=1):
+    if type(pages) is not int or pages < 1:
+        raise ValueError("pages must be a positive integer")
+    if pages != 1 and (image or vector):
+        raise ValueError("image/vector fixtures support one page")
     escaped = text.replace("\\", "\\\\").replace("(", "\\(").replace(")", "\\)")
     content = f"BT /F1 12 Tf 72 720 Td ({escaped}) Tj ET".encode("ascii")
     if image:
         content = b"q 600 0 0 780 0 0 cm /Im0 Do Q"
     if vector:
         content = b"0 0 m 100 100 l S"
-    objects = [
-        b"<< /Type /Catalog /Pages 2 0 R >>",
-        b"<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
-        b"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> "
-        + (b"/XObject << /Im0 6 0 R >> " if image else b"")
-        + b">> /Contents 5 0 R >>",
-        b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>",
-        b"<< /Length " + str(len(content)).encode() + b" >>\nstream\n" + content + b"\nendstream",
-    ]
+    font_id = 3 + pages * 2
+    image_id = font_id + 1
+    kids = " ".join(f"{3 + page * 2} 0 R" for page in range(pages))
+    objects = [b"<< /Type /Catalog /Pages 2 0 R >>"]
+    objects.append(f"<< /Type /Pages /Kids [{kids}] /Count {pages} >>".encode())
+    for page in range(pages):
+        page_id = 3 + page * 2
+        resources = f"/Font << /F1 {font_id} 0 R >>"
+        if image:
+            resources += f" /XObject << /Im0 {image_id} 0 R >>"
+        objects.append(
+            f"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] "
+            f"/Resources << {resources} >> /Contents {page_id + 1} 0 R >>".encode()
+        )
+        objects.append(
+            b"<< /Length " + str(len(content)).encode() + b" >>\nstream\n" + content + b"\nendstream"
+        )
+    objects.append(b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>")
     if image:
         objects.append(b"<< /Type /XObject /Subtype /Image /Width 1 /Height 1 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Length 3 >>\nstream\n\xff\xff\xff\nendstream")
     result = bytearray(b"%PDF-1.4\n")

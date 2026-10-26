@@ -2,14 +2,24 @@
 
 Đợt 5 tổ chức kết quả trong tab Tóm tắt, Khoảng cách, Lộ trình, Tài liệu và Phỏng vấn. `Data/demo_profiles.json` chứa hồ sơ tổng hợp có nhãn; nút dùng mẫu cập nhật đồng bộ widget và snapshot, tăng revision, xóa CV/phiên phỏng vấn cũ. Export dùng hợp đồng ở cuối tài liệu.
 
-Luồng hiện hành: CV PDF/DOCX → văn bản → Extractor → gộp kỹ năng nhập tay →
-Profile → Matcher theo role → Recommender → giao diện Streamlit.
-CV/JD được đối chiếu riêng bằng `match_cv_to_jd`; kỹ năng nhập tay không được
-coi như bằng chứng xuất hiện trong CV khi so với JD.
+Luồng giao diện hiện hành có hai bước: (1) nhập kỹ năng, CV PDF/DOCX, role và
+JD tùy chọn; (2) rà soát danh sách kỹ năng, đặt Level tường minh cho từng kỹ
+năng rồi xác nhận trước khi tính kết quả. Level không còn nhập bằng JSON. JD
+được trích kỹ năng theo vocabulary; người dùng có thể bỏ mục nhận diện sai và
+phân loại mục chưa rõ thành bắt buộc, ưu tiên hoặc chưa phân loại trước khi so
+với các kỹ năng hồ sơ đã xác nhận. Chỉ phần có tiêu đề JD rõ ràng được tự phân
+loại; mục chưa phân loại không ảnh hưởng chỉ số tổng hợp.
 
-Các API level, lịch giờ, gợi ý và chấm phỏng vấn Đợt 4 có schema/công thức ở
+`match_cv_to_jd` vẫn là API so văn bản CV thô với JD. Giao diện dùng
+`extract_jd_skill_requirements` và `compare_confirmed_jd_requirements`; kết quả
+trích tự động phải được người dùng rà soát. Phần bắt buộc và ưu tiên có tỷ lệ
+riêng, tổng hợp heuristic 85/15 chỉ được tạo khi đã xác nhận nhóm bắt buộc.
+Nhóm chưa phân loại có tỷ lệ riêng. Các cách này chỉ đo phần giao nhau của
+vocabulary hữu hạn; thuật ngữ ngoài catalog có thể không được tính.
+
+Các API level, lịch giờ, gợi ý và hướng dẫn phỏng vấn Đợt 4 có schema/công thức ở
 [assessment_contract.md](assessment_contract.md), là phần hợp đồng của tài liệu
-này. `compute_gap`, `build_timed_roadmap`, `suggest_roles`, `score_answer` được
+này. `compute_gap`, `build_timed_roadmap`, `suggest_roles`, `get_question_feedback` được
 export qua `modules`; các API presence/roadmap cũ bên dưới tiếp tục được giữ.
 
 ## Canonical và nhãn hiển thị
@@ -107,6 +117,7 @@ khử trùng. Cần xem từng mapping gốc nếu đánh giá độ phù hợp 
 | `duration_hours` | Số dương do nhà xuất bản công bố cho **tài nguyên cụ thể**, hoặc `null` nếu chưa biết. Thời gian học dự kiến của nhà xuất bản vẫn là dự kiến, không phải đo năng lực người học. |
 | `duration_source`, `duration_basis`, `duration_checked_at` | URL bằng chứng, loại căn cứ, ngày kiểm chứng. `publisher_catalog_minutes`: số phút trong API Microsoft / 60, đối chiếu `duration_catalog_uid`; `publisher_approximate_guide_minutes`: thời gian gần đúng ghi trong hướng dẫn Spring. |
 | `estimated_duration_hours` | Ước lượng biên tập riêng, số dương và có `duration_basis`; không thay thế `duration_hours`. Chưa có ước lượng biên tập nào trong dữ liệu Đợt 3. |
+| `specialized_evidence` | Với thuế, luật lao động hoặc chứng nhận/đào tạo an toàn, chỉ chấp nhận mapping nếu có jurisdiction `VN`, nguồn authority `official`, ngày kiểm tra nguồn trong 365 ngày, và review chuyên môn đã duyệt với specialty đúng, qualification được xác minh, phạm vi và ngày review. Thiếu trường nào thì mapping không được gợi ý dù nhãn review chung là `reviewed`. |
 
 `verified=true` mới chỉ khẳng định đã kiểm tra nội dung trong phạm vi ghi chú,
 kể cả `partial`; không cam kết đạt level của role hay kết nối HTTP hiện tại.
@@ -119,6 +130,12 @@ chưa kiểm tra lại; không dùng nó thay ngày review nội dung. Báo cáo
 locale trong URL. `cost` nhận `free`, `freemium`, `paid`, `unknown`; bài miễn phí
 có thể cần phần mềm trả phí để thực hành. Không suy giờ từ số trang, reading
 time tự động, `learning_time_months` của role hoặc mức level.
+
+Đợt review mapping là kiểm tra nội bộ về nội dung/phạm vi, không phải thẩm định
+độc lập của chuyên gia nghề nghiệp hay pháp lý. Giao diện đếm mapping kỹ năng–
+học liệu riêng; số này không bao gồm ngân hàng câu hỏi phỏng vấn. Phỏng vấn có
+đếm riêng các câu review nội bộ, template và chưa review; nhãn review nội bộ
+không được trình bày như chứng nhận chất lượng độc lập.
 
 Integrity offline: `modules.data_quality.audit_project()` trả `errors`,
 `warnings`, `stats`, `top30`; không gọi mạng. Role skill thiếu tài liệu là lỗi;
@@ -194,11 +211,17 @@ nhập tường minh trong `original_interests` hoặc còn được tham chiế
 `parse_document(source, filename=None) -> dict` được export qua `modules`:
 
 ```python
-{"text": "Python developer", "error_code": None, "message": ""}
+{"text": "Python developer", "error_code": None, "message": "",
+ "page_truncated": False, "pages_read": 1, "total_pages": 1}
 ```
 
 `source` là path str/Path, binary file-like hoặc None. `filename` ghi đè tên
 file-like/path để chọn parser; đuôi `.pdf`/`.docx` không phân biệt hoa/thường.
+Parser và submission từ chối file lớn hơn 10 MiB; cấu hình Streamlit cũng giới
+hạn upload ở 10 MB. PDF chỉ trích tối đa 10 trang đầu; `page_truncated` báo có
+trang chưa được phân tích và `pages_read`/`total_pages` ghi rõ phạm vi. Không
+coi text cắt trang là toàn bộ CV. DOCX không có số trang parser đáng tin cậy nên
+`pages_read=0`, `total_pages=null`. OCR không được gọi.
 File-like có seek được rewind trước khi đọc; parser không đóng stream của
 caller. Nội dung text chuẩn hóa NFC, giữ thứ tự paragraph/table và bảng lồng
 nhau trong DOCX; ô bảng gộp chỉ được đọc một lần.
@@ -210,7 +233,8 @@ nhau trong DOCX; ô bảng gộp chỉ được đọc một lần.
 | `UNSUPPORTED_FORMAT` | Thiếu đuôi hoặc đuôi ngoài PDF/DOCX. Không đoán định dạng bằng nội dung. |
 | `EMPTY` | Tệp 0 byte, DOCX chỉ có khoảng trắng, hoặc PDF đọc được nhưng không trích được text và không đủ bằng chứng trang ảnh. |
 | `UNREADABLE` | Lỗi mở/đọc/giải mã, file hỏng, bảo vệ, stream đóng/không dùng được hoặc nội dung không đúng đuôi. |
-| `SCANNED_PDF` | Đọc PDF thành công, không có text và **mọi trang** có raster image, không có text character. Đây là bằng chứng PDF dạng ảnh; chưa làm OCR. |
+| `SCANNED_PDF` | Trong các trang được đọc (tối đa 10), không có text và mọi trang đó có raster image, không có text character. Nếu tài liệu bị cắt, trạng thái chỉ mô tả phần đã đọc; chưa làm OCR. |
+| `FILE_TOO_LARGE` | Tệp vượt quá 10 MiB; bị từ chối trước bước trích xuất. |
 
 Mọi failure có `text=""`, kèm `message` thân thiện. PDF trắng hoặc chỉ có nét
 vẽ là EMPTY, không được kết luận scan. PDF không giải mã được là UNREADABLE.
@@ -230,26 +254,33 @@ jd_text="") -> dict` chuẩn bị ứng viên kết quả trước khi ghi sessi
 `accepted`, `profile`, `document`, `cv_extraction`, `cv_jd_result`,
 `original_interests`, `errors`. Không chỉnh sửa state của UI.
 
-- Ít nhất một kỹ năng sau khi tách/loại rỗng/chuyển interest, **hoặc** CV có text
-  hợp lệ mới tạo Profile. Kỹ năng chưa biết vẫn là khai báo hợp lệ. Chỉ có JD,
-  sở thích, kinh nghiệm, dấu phân cách hay khoảng trắng không tạo Profile.
-- Không file + form kỹ năng hợp lệ tạo Profile bình thường. JD-only yêu cầu CV
-  hợp lệ, không báo scan. CV lỗi/rỗng/sai định dạng được báo theo parser; nếu
-  vẫn có kỹ năng form hợp lệ thì có thể lưu Profile form cùng thông báo lỗi CV.
+- Wizard tạo bản nháp từ kỹ năng, CV hoặc hồ sơ mẫu; bước 2 cho người dùng
+  xác nhận/bỏ kỹ năng và đặt Level từng kỹ năng bằng control native. Không còn
+  ô JSON Level. Chỉ có sở thích, kinh nghiệm, JD hoặc khoảng trắng không tạo
+  Profile; JD có thể dùng với hồ sơ kỹ năng nhập tay, không cần CV.
+- CV lỗi/rỗng/sai định dạng hoặc quá 10 MiB được báo theo parser; nếu vẫn có
+  kỹ năng nhập tay hợp lệ thì bản nháp có thể tiếp tục mà không dùng CV lỗi.
+  PDF đọc tối đa 10 trang và luôn báo số trang chưa được phân tích nếu bị cắt.
 - CV-only hợp lệ được lưu dù chưa chọn role. CV có text nhưng không nhận diện
   kỹ năng vẫn được lưu để xem, không tự dựng skill hoặc kết quả role khi danh
   sách kỹ năng hiệu lực rỗng. JD lỗi nhận diện không làm mất Profile hợp lệ.
-- Selectbox role có `index=None` và placeholder. Chưa chọn role vẫn tạo Profile
-  và đối chiếu CV/JD, nhưng không có điểm role, roadmap hay phỏng vấn. Chọn role
-  và gửi lại form hoặc bấm nút chọn trong gợi ý mới có kết quả theo role.
+- Selectbox role có `index=None` và placeholder. Chưa chọn role vẫn xác nhận
+  Profile và đối chiếu các kỹ năng đã xác nhận với JD, nhưng không có điểm role,
+  roadmap hay phỏng vấn. Chọn role ở bước 1 hoặc từ gợi ý mới có kết quả theo role.
   `suggest_roles` hiển thị lý do/điểm heuristic; không tự chọn role đầu tiên.
-- Khi `accepted=True`, app ghi đồng bộ Profile/role/CV/comparison, tăng
-  `profile_revision`, lưu sở thích nhập tường minh, reset widget unknown và
-  phiên/câu trả lời phỏng vấn trước. Kết quả CV/JD cũ không đi theo hồ sơ mới.
-- Khi `accepted=False`, chỉ cập nhật `submission_errors` và
-  `submission_rejected`; giữ nguyên snapshot đã lưu. Có nhãn rõ kết quả đang
-  hiển thị là hồ sơ trước, không gán lỗi/bản nháp mới cho kết quả cũ. Lần gửi
-  hợp lệ tiếp theo thay toàn snapshot và xóa thông báo lỗi cũ.
+- `accepted=True` chỉ tạo bản nháp; app ghi đồng bộ Profile/role/CV/comparison,
+  tăng `profile_revision`, lưu sở thích nhập tường minh và reset câu trả lời cũ
+  sau khi người dùng xác nhận ở bước 2. Kết quả JD cũ không đi theo hồ sơ mới.
+- Khi `accepted=False`, cập nhật `wizard_errors` và đặt
+  `submission_rejected` nếu đã có hồ sơ; giữ nguyên snapshot. UI nói rõ kết quả
+  đang hiển thị vẫn là hồ sơ đã lưu trước đó. Nếu CV lỗi nhưng người dùng vẫn
+  xác nhận kỹ năng nhập tay, cảnh báo lỗi parser được lưu trong
+  `submission_warnings` và tiếp tục hiển thị sau bước xác nhận. JD không nhận
+  diện được cũng được giữ như cảnh báo; lần xác nhận hồ sơ mới thay kết quả và
+  cảnh báo cũ bằng snapshot mới.
+- Nếu JD nhận diện được kỹ năng nhưng người dùng bỏ hết lựa chọn, không tạo tỷ
+  lệ đối chiếu; UI báo chưa có kết quả. PDF bị cắt trang giữ cảnh báo ở cả bước
+  rà soát và trang kết quả.
 - Undo ghi Profile mới rồi `st.rerun()` để không giữ thông báo item đã hoàn tác.
   Checkbox unknown dùng khóa theo revision + canonical skill, giữ lựa chọn khi
   undo làm thay thứ tự danh sách, và reset ở hồ sơ mới. Nhiều item/undo liên tiếp
@@ -293,32 +324,47 @@ bên không nhận diện được kỹ năng gây `ValueError`; UI hiển thị
 chưa biết không nằm trong mẫu số; điểm không đại diện mọi yêu cầu ngoài
 vocabulary. Kỹ năng nhập tay không bổ sung vào CV cho phép so này.
 
+Luồng xác nhận của UI dùng thêm `extract_jd_skills(jd_text) -> list[str]` để
+đưa kỹ năng nhận diện lên màn hình cho người dùng chọn/bỏ trước khi tính và
+`compare_confirmed_skills_to_jd(candidate_skills, jd_skills) -> dict` để so hai
+tập kỹ năng đã xác nhận. Kết quả bổ sung `recognized_count`, `low_confidence`
+(true khi JD còn dưới 3 kỹ năng được chọn) và `method`. Cờ này chỉ là cảnh báo
+heuristic về phạm vi đầu vào, không phải xác suất/calibration. UI ghi rõ số kỹ
+năng được tính và không tuyên bố bao phủ toàn bộ yêu cầu JD.
+
 ## Recommender và tham chiếu qua tuần
 
 `build_roadmap(missing, resources, weeks=4, *, missing_details=None) -> list[dict]`
 
 Truyền nguyên `missing` và `missing_details` từ Matcher. Recommender chuẩn hóa,
 loại trùng skill; metadata giúp ưu tiên weight giảm dần, ổn định khi bằng nhau.
-Chia cân bằng thành `min(weeks, số skill)` tuần; không có gap trả `[]`.
-`weeks` phải là số nguyên dương. Chưa lập lịch theo giờ/level.
+Chia cân bằng thành `min(weeks, số skill)` nhóm ưu tiên; không có gap trả `[]`.
+`weeks` phải là số nguyên dương. Đây là tham số/API lịch sử: trường `week` trong
+presence roadmap được giao diện và báo cáo gọi là **giai đoạn**, không khẳng định
+mỗi nhóm hoàn tất trong một tuần. Chưa lập lịch theo giờ/level; chỉ timed roadmap
+mới dùng `week` theo nghĩa lịch dựa trên thời lượng có căn cứ.
 
 Mỗi tuần có `week`, `skills`, `resources`, `resource_keys`,
-`skills_without_resources`. Khử trùng tài liệu theo ID hoặc URL chuẩn hóa, kể cả
-liên kết bắc cầu; giữ metadata từ bản đầu tiên, bổ sung `key` và `skills`.
-Resource không có ID hay URL HTTP(S) sử dụng được bị bỏ qua. Inputs không bị sửa.
+`skills_without_resources`, `unresolved` và `partial_resources`. Chỉ mapping có
+`content_review_status` là `reviewed` hoặc `partial` mới được đề xuất; `blocked`,
+`unsuitable`, thiếu trạng thái hoặc mapping không qua review bị loại. `partial`
+phải kèm ghi chú phạm vi và giao diện hiển thị ghi chú đó. Cờ `verified=true`
+cũ là điều kiện reachability bổ sung, không thay cho review nội dung. Record
+phải có URL HTTP(S) để đưa vào khuyến nghị. Khử trùng tài liệu theo ID hoặc URL chuẩn hóa, kể cả liên kết bắc cầu;
+giữ metadata từ bản đầu tiên, bổ sung `key` và `skills`. Inputs không bị sửa.
 
 Tài liệu chỉ xuất hiện trong `resources` của tuần đầu liên quan. Mỗi skill ở
 `resource_keys` có danh sách khóa tài liệu, có thể trỏ tới tài liệu tuần trước.
-Ví dụ một tài liệu chỉ có ID, dùng chung cho python và sql:
+Ví dụ một tài liệu có URL, dùng chung cho python và sql:
 
 ```python
 [
     {"week": 1, "skills": ["python"],
-     "resources": [{"key": "id:shared", "id": "shared", "title": "Tutorial",
+     "resources": [{"key": "url:https://example.org/shared", "id": "shared", "url": "https://example.org/shared", "title": "Tutorial",
                     "skills": ["python", "sql"]}],
-     "resource_keys": {"python": ["id:shared"]}, "skills_without_resources": []},
+     "resource_keys": {"python": ["url:https://example.org/shared"]}, "skills_without_resources": [], "unresolved": [], "partial_resources": []},
     {"week": 2, "skills": ["sql"], "resources": [],
-     "resource_keys": {"sql": ["id:shared"]}, "skills_without_resources": []},
+     "resource_keys": {"sql": ["url:https://example.org/shared"]}, "skills_without_resources": [], "unresolved": [], "partial_resources": []},
 ]
 ```
 
@@ -332,8 +378,24 @@ for week in roadmap:
 ```
 
 `resources == []` của một tuần không có nghĩa thiếu tài liệu. Chỉ dùng
-`skills_without_resources` để báo thiếu. UI hiển thị tài liệu mới và liên kết
-đã giới thiệu ở tuần trước; không tạo bản ghi resource trùng để chữa hiển thị.
+`skills_without_resources` để báo thiếu; `unresolved` ghi `no_resources`,
+`unreviewed_content`, `blocked_resource`, `unsuitable_content`, `missing_url`,
+`missing_resource_identity` hoặc `unverified_link` khi không có mapping đủ điều kiện.
+`partial_resources` ghi mapping chỉ được review một phần. UI hiển thị tài liệu
+mới và liên kết đã giới thiệu ở tuần trước; không tạo bản ghi resource trùng.
+
+Với skill thuế/law hoặc chứng nhận/đào tạo an toàn, Recommender áp dụng thêm
+`specialized_evidence`; đổi nhãn chung sang `reviewed` không bỏ qua được cửa
+chuyên môn, jurisdiction và ngày hiệu lực. Các nguồn nhập môn về an toàn lao
+động, kiến trúc phần mềm/cloud hoặc tài liệu chỉ có phạm vi partial tiếp tục
+được giới hạn đúng phạm vi ghi chú. Cảnh báo kiến trúc hệ thống rộng hơn phần
+mềm và thực hành nghề theo domain Việt Nam được hiển thị riêng.
+
+Mỗi mapping `partial` có bài tập/portfolio áp dụng phần nguồn thực sự bao phủ.
+Bài tập kỹ thuật dùng đầu ra nhỏ có thể kiểm tra và dữ liệu tổng hợp; kỹ năng
+mềm dùng mô phỏng/nhiệm vụ có người quan sát, phản hồi mentor/đồng nghiệp và
+bằng chứng trước/sau. Không có khóa học không chặn route thực hành cho giao
+tiếp, bán hàng, xử lý vấn đề, làm việc nhóm và kỹ năng hành vi.
 
 `get_course_recommendations(missing_skills) -> list[dict]` tiếp tục phục vụ
 caller cũ bằng adapter roadmap một tuần. Giữ metadata, bổ sung `course_name`,
@@ -345,14 +407,14 @@ Giữ cách gọi cũ, mở rộng `get_questions(role_id, n=5, seed=None, focus
 `generate_interview_questions(missing_skills, max_per_skill=2, *, role=None)`.
 Tra được ID, tên Anh, tên Việt duy nhất và nhãn `tên Việt · tên Anh`, không phân
 biệt hoa/thường, khoảng trắng hay Unicode tổ hợp. `get_questions` vẫn trả bản
-sao câu hỏi công khai, xen kẽ loại câu hỏi, không lộ rubric.
+sao câu hỏi công khai, xen kẽ loại câu hỏi và không lộ nội dung đáp án trước submit.
 
 Dữ liệu thật có tên Việt trùng cho hai cặp ID: `event_executive`/`event_planner`
 và `customer_service_executive`/`customer_service_representative`. Dùng tên
 trùng gây `ValueError` hướng dẫn chọn ID hoặc nhãn ghép; không tự chọn nhầm ngân
-hàng. UI dùng ID. Đợt 4 ưu tiên gap và chấm rubric sau submit theo
-[assessment_contract.md](assessment_contract.md); câu chưa có rubric trả unavailable,
-không điểm 0 giả. Quyền mở đáp án ở luồng UI được kiểm tra bằng AppTest.
+hàng. UI dùng ID. Đợt 4 ưu tiên gap, giới hạn câu hỏi theo số câu thực có của role,
+và chỉ mở hướng dẫn sau submit theo [assessment_contract.md](assessment_contract.md).
+App không tự chấm câu trả lời; nội dung chưa review đầy đủ được cảnh báo.
 
 ## Export và giao diện Đợt 5
 

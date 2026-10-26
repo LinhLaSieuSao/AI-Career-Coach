@@ -81,6 +81,12 @@ def test_duplicate_ids_and_invalid_alias_foreign_keys_are_not_hidden():
 
 def test_shared_urls_are_legal_and_roadmap_preserves_all_references():
     data = fixture_data()
+    data[1]["python"]["resources"][0].update(
+        verified=True,
+        content_review_status="reviewed",
+        content_reviewed_at="2026-10-25",
+        review_note="Covers the introductory learning outcome used by this fixture.",
+    )
     data[0][0]["skills"].append({"name": "sql", "level": 1, "weight": 1})
     data[1]["sql"] = deepcopy(data[1]["python"])
     data[1]["sql"]["skill_name"] = "sql"
@@ -100,8 +106,13 @@ def test_real_role_resources_remain_linked_after_whole_roadmap_deduplication():
     assert len(catalog) == sum(len(week["resources"]) for week in roadmap)
     for week in roadmap:
         for skill, keys in week["resource_keys"].items():
-            assert keys, skill
             assert all(key in catalog and skill in catalog[key]["skills"] for key in keys)
+            if keys:
+                assert all(catalog[key]["verified"] is True for key in keys)
+                assert all(catalog[key]["content_review_status"] in {"reviewed", "partial"} for key in keys)
+                assert all(catalog[key].get("review_note", "").strip() for key in keys)
+            else:
+                assert any(issue["skill"] == skill for issue in week["unresolved"]), skill
 
 
 def test_frequency_counts_roles_once_and_breaks_ties_stably():
@@ -110,16 +121,25 @@ def test_frequency_counts_roles_once_and_breaks_ties_stably():
     assert top_skills([roles[0]]) == [{"name": "python", "role_count": 1}, {"name": "sql", "role_count": 1}]
 
 
-def test_top30_have_read_vietnamese_sources_with_explicit_scope():
+def test_top30_have_read_sources_with_explicit_language_and_scope():
     resources = json.loads((DATA_DIR / "resources.json").read_text(encoding="utf-8"))
+    english_fallbacks = []
     for skill in audit_project()["top30"]:
         candidates = [r for r in resources[skill["name"]]["resources"]
                       if r["language"] == "vi" and r.get("content_review_status") in {"reviewed", "partial"}]
+        if not candidates:
+            english_fallbacks.append(skill["name"])
+            candidates = [r for r in resources[skill["name"]]["resources"]
+                          if r["language"] == "en" and r.get("content_review_status") in {"reviewed", "partial"}
+                          and r.get("evidence_locator") and r.get("access_note")]
         assert candidates, skill["name"]
         for record in candidates:
             assert record["content_reviewed_at"] and record["review_note"]
             assert record["evidence_locator"] and record["access_note"]
-    # English fallback pages cannot count as Vietnamese coverage just because of their URL.
+    # CSS keeps a stable _vi ID, but the independently opened module is en-us.
+    assert english_fallbacks == ["css"]
+    assert all(r["language"] == "en" for r in resources["css"]["resources"] if "dot03" in r["id"])
+    # English fallback pages cannot count as Vietnamese coverage just because of their ID.
     assert all(r["language"] == "en" for r in resources["power bi"]["resources"] if "dot03" in r["id"])
 
 
@@ -137,7 +157,15 @@ def test_catalog_durations_match_saved_publisher_evidence_and_shared_urls_agree(
             if record.get("duration_catalog_uid"):
                 published = catalog[record["duration_catalog_uid"]]
                 assert hours == published["duration_in_minutes"] / 60
-                assert record["url"].rstrip("/") == published["url"].split("?")[0].rstrip("/")
+                published_url = published["url"].split("?")[0].rstrip("/")
+                resource_url = record["url"].rstrip("/")
+                if resource_url != published_url:
+                    # The publisher catalog is localized to vi-vn, while the
+                    # opened page may be the same official module in en-us.
+                    assert resource_url.startswith("https://learn.microsoft.com/en-us/training/modules/")
+                    assert published_url.startswith("https://learn.microsoft.com/vi-vn/training/modules/")
+                    assert resource_url.replace("/en-us/", "/vi-vn/", 1) == published_url
+                    assert record["language"] == "en"
             if record["url"] in durations:
                 assert durations[record["url"]] == hours
             durations[record["url"]] = hours
@@ -153,7 +181,15 @@ def test_demo_roles_have_published_resources_but_keep_unknown_hours():
         records = [r for week in roadmap for r in week["resources"]]
         assert any(r["duration_hours"] is not None for r in records), rid
         assert any(r["duration_hours"] is None for r in records), rid
-        assert all(not w["skills_without_resources"] for w in roadmap)
+        assert all(r["verified"] is True and r["content_review_status"] in {"reviewed", "partial"} for r in records)
+        assert all(r.get("review_note", "").strip() for r in records)
+        # Gaps can remain intentionally unresolved when the catalog has no
+        # reviewed, verified material; never imply full resource coverage.
+        assert all(
+            not week["skills_without_resources"]
+            or {issue["skill"] for issue in week["unresolved"]} >= set(week["skills_without_resources"])
+            for week in roadmap
+        )
 
 
 def test_question_alias_can_resolve_into_role_but_foreign_role_cannot():

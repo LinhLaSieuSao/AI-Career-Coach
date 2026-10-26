@@ -1,0 +1,447 @@
+{
+  "as_of": "2026-10-26",
+  "scope": "offline_recorded_evidence_not_independent_domain_review",
+  "summary": {
+    "roles": 4,
+    "role_skill_requirements": 39,
+    "questions": 39,
+    "resource_mapping_occurrences": 76,
+    "resource_id_occurrences_across_roles": 76,
+    "unique_resource_ids_across_demo": 53,
+    "issue_occurrences_by_role": {
+      "question_missing_skill": 0,
+      "question_template_or_unreviewed": 39,
+      "question_generic_prompt": 0,
+      "question_missing_context": 0,
+      "question_missing_target_rubric": 0,
+      "question_missing_all_level_rubric": 0,
+      "question_missing_red_flags": 0,
+      "question_wrong_level": 0,
+      "resource_missing_required_level": 8,
+      "resource_scope_or_locator_pending": 75,
+      "resource_homepage_url": 2,
+      "resource_independent_access_pending": 76,
+      "resource_content_review_date_pending": 0,
+      "resource_rejected_records": 6,
+      "resource_policy_leak": 0
+    }
+  },
+  "roles": {
+    "sales_executive": {
+      "role_name": "Chuyên viên kinh doanh",
+      "counts": {
+        "role_skill_requirements": 8,
+        "questions": 8,
+        "resource_mapping_occurrences": 15,
+        "unique_resource_ids": 15,
+        "excluded_by_status": {
+          "unsuitable": 2
+        }
+      },
+      "issue_counts": {
+        "question_missing_skill": 0,
+        "question_template_or_unreviewed": 8,
+        "question_generic_prompt": 0,
+        "question_missing_context": 0,
+        "question_missing_target_rubric": 0,
+        "question_missing_all_level_rubric": 0,
+        "question_missing_red_flags": 0,
+        "question_wrong_level": 0,
+        "resource_missing_required_level": 4,
+        "resource_scope_or_locator_pending": 15,
+        "resource_homepage_url": 0,
+        "resource_independent_access_pending": 15,
+        "resource_content_review_date_pending": 0,
+        "resource_rejected_records": 2,
+        "resource_policy_leak": 0
+      },
+      "issues": {
+        "question_missing_skill": [],
+        "question_template_or_unreviewed": [
+          "sales_executive_q01",
+          "sales_executive_q02",
+          "sales_executive_q03",
+          "sales_executive_q04",
+          "sales_executive_q05",
+          "sales_executive_q06",
+          "sales_executive_q07",
+          "sales_executive_q08"
+        ],
+        "question_generic_prompt": [],
+        "question_missing_context": [],
+        "question_missing_target_rubric": [],
+        "question_missing_all_level_rubric": [],
+        "question_missing_red_flags": [],
+        "question_wrong_level": [],
+        "resource_missing_required_level": [
+          "bán hàng",
+          "thuyết phục",
+          "chăm sóc khách hàng",
+          "giải quyết vấn đề"
+        ],
+        "resource_scope_or_locator_pending": [
+          "ban_hang_001",
+          "ban_hang_dot03_en",
+          "giao_tiep_001",
+          "giao_tiep_dot03_vi",
+          "tim_kiem_khach_hang_001",
+          "tim_kiem_khach_hang_dot03_en",
+          "thuyet_phuc_001",
+          "cham_soc_khach_hang_001",
+          "cham_soc_khach_hang_dot03_vi",
+          "lam_viec_nhom_001",
+          "lam_viec_nhom_dot03_vi",
+          "giai_quyet_van_de_001",
+          "giai_quyet_van_de_dot03_vi",
+          "quan_ly_thoi_gian_001",
+          "quan_ly_thoi_gian_dot03_vi"
+        ],
+        "resource_homepage_url": [],
+        "resource_independent_access_pending": [
+          "ban_hang_001",
+          "ban_hang_dot03_en",
+          "giao_tiep_001",
+          "giao_tiep_dot03_vi",
+          "tim_kiem_khach_hang_001",
+          "tim_kiem_khach_hang_dot03_en",
+          "thuyet_phuc_001",
+          "cham_soc_khach_hang_001",
+          "cham_soc_khach_hang_dot03_vi",
+          "lam_viec_nhom_001",
+          "lam_viec_nhom_dot03_vi",
+          "giai_quyet_van_de_001",
+          "giai_quyet_van_de_dot03_vi",
+          "quan_ly_thoi_gian_001",
+          "quan_ly_thoi_gian_dot03_vi"
+        ],
+        "resource_content_review_date_pending": [],
+        "resource_rejected_records": [
+          "thuyet_phuc_001",
+          "giai_quyet_van_de_001"
+        ],
+        "resource_policy_leak": []
+      },
+      "gate_passed": false
+    },
+    "frontend_developer_react": {
+      "role_name": "Lập trình viên Frontend (ReactJS)",
+      "counts": {
+        "role_skill_requirements": 11,
+        "questions": 11,
+        "resource_mapping_occurrences": 22,
+        "unique_resource_ids": 22,
+        "excluded_by_status": {
+          "unsuitable": 1
+        }
+      },
+      "issue_counts": {
+        "question_missing_skill": 0,
+        "question_template_or_unreviewed": 11,
+        "question_generic_prompt": 0,
+        "question_missing_context": 0,
+        "question_missing_target_rubric": 0,
+        "question_missing_all_level_rubric": 0,
+        "question_missing_red_flags": 0,
+        "question_wrong_level": 0,
+        "resource_missing_required_level": 0,
+        "resource_scope_or_locator_pending": 21,
+        "resource_homepage_url": 2,
+        "resource_independent_access_pending": 22,
+        "resource_content_review_date_pending": 0,
+        "resource_rejected_records": 1,
+        "resource_policy_leak": 0
+      },
+      "issues": {
+        "question_missing_skill": [],
+        "question_template_or_unreviewed": [
+          "frontend_developer_react_q01",
+          "frontend_developer_react_q02",
+          "frontend_developer_react_q03",
+          "frontend_developer_react_q04",
+          "frontend_developer_react_q05",
+          "frontend_developer_react_q06",
+          "frontend_developer_react_q07",
+          "frontend_developer_react_q08",
+          "frontend_developer_react_q09",
+          "frontend_developer_react_q10",
+          "frontend_developer_react_q11"
+        ],
+        "question_generic_prompt": [],
+        "question_missing_context": [],
+        "question_missing_target_rubric": [],
+        "question_missing_all_level_rubric": [],
+        "question_missing_red_flags": [],
+        "question_wrong_level": [],
+        "resource_missing_required_level": [],
+        "resource_scope_or_locator_pending": [
+          "html_001",
+          "html_dot03_vi",
+          "css_001",
+          "css_dot03_vi",
+          "javascript_001",
+          "javascript_mdn_guide",
+          "reactjs_001",
+          "redux_001",
+          "git_001",
+          "git_dot03_vi",
+          "rest_api_001",
+          "rest_api_dot03_vi",
+          "rest_api_dot03_spring",
+          "typescript_001",
+          "typescript_handbook",
+          "lam_viec_nhom_001",
+          "lam_viec_nhom_dot03_vi",
+          "giao_tiep_001",
+          "giao_tiep_dot03_vi",
+          "thiet_ke_ui_ux_001",
+          "thiet_ke_ui_ux_dot03_vi"
+        ],
+        "resource_homepage_url": [
+          "reactjs_001",
+          "redux_001"
+        ],
+        "resource_independent_access_pending": [
+          "html_001",
+          "html_dot03_vi",
+          "css_001",
+          "css_dot03_vi",
+          "javascript_001",
+          "javascript_mdn_guide",
+          "reactjs_001",
+          "reactjs_react_quick_start",
+          "redux_001",
+          "git_001",
+          "git_dot03_vi",
+          "rest_api_001",
+          "rest_api_dot03_vi",
+          "rest_api_dot03_spring",
+          "typescript_001",
+          "typescript_handbook",
+          "lam_viec_nhom_001",
+          "lam_viec_nhom_dot03_vi",
+          "giao_tiep_001",
+          "giao_tiep_dot03_vi",
+          "thiet_ke_ui_ux_001",
+          "thiet_ke_ui_ux_dot03_vi"
+        ],
+        "resource_content_review_date_pending": [],
+        "resource_rejected_records": [
+          "typescript_001"
+        ],
+        "resource_policy_leak": []
+      },
+      "gate_passed": false
+    },
+    "data_analyst": {
+      "role_name": "Chuyên viên phân tích dữ liệu",
+      "counts": {
+        "role_skill_requirements": 10,
+        "questions": 10,
+        "resource_mapping_occurrences": 19,
+        "unique_resource_ids": 19,
+        "excluded_by_status": {
+          "unsuitable": 2
+        }
+      },
+      "issue_counts": {
+        "question_missing_skill": 0,
+        "question_template_or_unreviewed": 10,
+        "question_generic_prompt": 0,
+        "question_missing_context": 0,
+        "question_missing_target_rubric": 0,
+        "question_missing_all_level_rubric": 0,
+        "question_missing_red_flags": 0,
+        "question_wrong_level": 0,
+        "resource_missing_required_level": 2,
+        "resource_scope_or_locator_pending": 19,
+        "resource_homepage_url": 0,
+        "resource_independent_access_pending": 19,
+        "resource_content_review_date_pending": 0,
+        "resource_rejected_records": 2,
+        "resource_policy_leak": 0
+      },
+      "issues": {
+        "question_missing_skill": [],
+        "question_template_or_unreviewed": [
+          "data_analyst_q01",
+          "data_analyst_q02",
+          "data_analyst_q03",
+          "data_analyst_q04",
+          "data_analyst_q05",
+          "data_analyst_q06",
+          "data_analyst_q07",
+          "data_analyst_q08",
+          "data_analyst_q09",
+          "data_analyst_q10"
+        ],
+        "question_generic_prompt": [],
+        "question_missing_context": [],
+        "question_missing_target_rubric": [],
+        "question_missing_all_level_rubric": [],
+        "question_missing_red_flags": [],
+        "question_wrong_level": [],
+        "resource_missing_required_level": [
+          "excel",
+          "giải quyết vấn đề"
+        ],
+        "resource_scope_or_locator_pending": [
+          "sql_001",
+          "sql_dot03_vi",
+          "power_bi_001",
+          "power_bi_dot03_en",
+          "tu_duy_phan_tich_001",
+          "tu_duy_phan_tich_dot03_vi",
+          "python_001",
+          "python_dot03_vi",
+          "excel_001",
+          "excel_dot03_vi",
+          "thong_ke_001",
+          "openstax_introductory_statistics_2e",
+          "giai_quyet_van_de_001",
+          "giai_quyet_van_de_dot03_vi",
+          "giao_tiep_001",
+          "giao_tiep_dot03_vi",
+          "lam_viec_nhom_001",
+          "lam_viec_nhom_dot03_vi",
+          "tableau_001"
+        ],
+        "resource_homepage_url": [],
+        "resource_independent_access_pending": [
+          "sql_001",
+          "sql_dot03_vi",
+          "power_bi_001",
+          "power_bi_dot03_en",
+          "tu_duy_phan_tich_001",
+          "tu_duy_phan_tich_dot03_vi",
+          "python_001",
+          "python_dot03_vi",
+          "excel_001",
+          "excel_dot03_vi",
+          "thong_ke_001",
+          "openstax_introductory_statistics_2e",
+          "giai_quyet_van_de_001",
+          "giai_quyet_van_de_dot03_vi",
+          "giao_tiep_001",
+          "giao_tiep_dot03_vi",
+          "lam_viec_nhom_001",
+          "lam_viec_nhom_dot03_vi",
+          "tableau_001"
+        ],
+        "resource_content_review_date_pending": [],
+        "resource_rejected_records": [
+          "excel_001",
+          "giai_quyet_van_de_001"
+        ],
+        "resource_policy_leak": []
+      },
+      "gate_passed": false
+    },
+    "backend_developer_java": {
+      "role_name": "Lập trình viên Backend (Java)",
+      "counts": {
+        "role_skill_requirements": 10,
+        "questions": 10,
+        "resource_mapping_occurrences": 20,
+        "unique_resource_ids": 20,
+        "excluded_by_status": {
+          "unsuitable": 1
+        }
+      },
+      "issue_counts": {
+        "question_missing_skill": 0,
+        "question_template_or_unreviewed": 10,
+        "question_generic_prompt": 0,
+        "question_missing_context": 0,
+        "question_missing_target_rubric": 0,
+        "question_missing_all_level_rubric": 0,
+        "question_missing_red_flags": 0,
+        "question_wrong_level": 0,
+        "resource_missing_required_level": 2,
+        "resource_scope_or_locator_pending": 20,
+        "resource_homepage_url": 0,
+        "resource_independent_access_pending": 20,
+        "resource_content_review_date_pending": 0,
+        "resource_rejected_records": 1,
+        "resource_policy_leak": 0
+      },
+      "issues": {
+        "question_missing_skill": [],
+        "question_template_or_unreviewed": [
+          "backend_developer_java_q01",
+          "backend_developer_java_q02",
+          "backend_developer_java_q03",
+          "backend_developer_java_q04",
+          "backend_developer_java_q05",
+          "backend_developer_java_q06",
+          "backend_developer_java_q07",
+          "backend_developer_java_q08",
+          "backend_developer_java_q09",
+          "backend_developer_java_q10"
+        ],
+        "question_generic_prompt": [],
+        "question_missing_context": [],
+        "question_missing_target_rubric": [],
+        "question_missing_all_level_rubric": [],
+        "question_missing_red_flags": [],
+        "question_wrong_level": [],
+        "resource_missing_required_level": [
+          "java",
+          "giải quyết vấn đề"
+        ],
+        "resource_scope_or_locator_pending": [
+          "java_001",
+          "spring_boot_001",
+          "spring_boot_dot03_spring",
+          "rest_api_001",
+          "rest_api_dot03_vi",
+          "rest_api_dot03_spring",
+          "sql_001",
+          "sql_dot03_vi",
+          "git_001",
+          "git_dot03_vi",
+          "giai_quyet_van_de_001",
+          "giai_quyet_van_de_dot03_vi",
+          "docker_001",
+          "docker_dot03_vi",
+          "giao_tiep_001",
+          "giao_tiep_dot03_vi",
+          "lam_viec_nhom_001",
+          "lam_viec_nhom_dot03_vi",
+          "linux_001",
+          "linux_dot03_vi"
+        ],
+        "resource_homepage_url": [],
+        "resource_independent_access_pending": [
+          "java_001",
+          "spring_boot_001",
+          "spring_boot_dot03_spring",
+          "rest_api_001",
+          "rest_api_dot03_vi",
+          "rest_api_dot03_spring",
+          "sql_001",
+          "sql_dot03_vi",
+          "git_001",
+          "git_dot03_vi",
+          "giai_quyet_van_de_001",
+          "giai_quyet_van_de_dot03_vi",
+          "docker_001",
+          "docker_dot03_vi",
+          "giao_tiep_001",
+          "giao_tiep_dot03_vi",
+          "lam_viec_nhom_001",
+          "lam_viec_nhom_dot03_vi",
+          "linux_001",
+          "linux_dot03_vi"
+        ],
+        "resource_content_review_date_pending": [],
+        "resource_rejected_records": [
+          "giai_quyet_van_de_001"
+        ],
+        "resource_policy_leak": []
+      },
+      "gate_passed": false
+    }
+  },
+  "gate_passed": false,
+  "note": "Rejected mappings remain in source data for audit; policy leaks and rejected source records are separate checks. No archival schema is assumed."
+}

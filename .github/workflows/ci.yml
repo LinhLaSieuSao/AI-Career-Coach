@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.11", "3.12"]
+        python-version: ["3.12", "3.13"]
     steps:
       - name: Lấy mã nguồn
         uses: actions/checkout@v7
@@ -22,20 +22,40 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
           cache-dependency-path: |
-            requirements.txt
-            requirements-dev.txt
+            requirements.lock
+            requirements-dev.lock
       - name: Cài dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r requirements-dev.txt
+          python -m pip install --require-hashes -r requirements-dev.lock
       - name: Chạy test và đo coverage
         run: python -m pytest --cov=app --cov=modules --cov-report=term-missing --cov-report=xml:coverage.xml
+      - name: Kiểm tra toàn bộ ngân hàng câu hỏi
+        run: python scripts/validate_question_bank.py
+      - name: Kiểm tra cấu trúc và lập inventory dữ liệu
+        # Attestation của chủ dự án thuộc cổng phát hành; báo cáo vẫn ghi
+        # stale_or_invalid khi URL thay đổi, không biến nó thành PASS giả.
+        run: python scripts/audit_data_readiness.py --json-output data-readiness.json
+      - name: Kiểm tra hợp đồng bằng chứng 2.0 và Role–Skill–Level
+        run: python scripts/validate_evidence_schema.py --json-output evidence-schema-v2.json
+      - name: Kiểm tra đường đi dữ liệu của 131 nghề qua các module
+        if: matrix.python-version == '3.12'
+        run: python scripts/audit_module_paths.py --json-output module-paths.json --markdown-output module-paths.md
+      - name: Smoke test các luồng lõi offline
+        run: python scripts/smoke.py
+      - name: Golden benchmark gợi ý role
+        run: python tests/test_recommendation_quality.py
       - name: Lưu báo cáo coverage
         if: always()
         uses: actions/upload-artifact@v6
         with:
           name: coverage-python-${{ matrix.python-version }}
-          path: coverage.xml
+          path: |
+            coverage.xml
+            data-readiness.json
+            evidence-schema-v2.json
+            module-paths.json
+            module-paths.md
           if-no-files-found: ignore
   docker:
     name: Docker build and healthcheck
@@ -61,3 +81,28 @@ jobs:
       - name: Cleanup container
         if: always()
         run: docker rm --force ai-career-coach-ci || true
+  browser:
+    name: Chromium user flows and accessibility
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Lấy mã nguồn
+        uses: actions/checkout@v7
+      - name: Cài Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-dev.lock
+      - name: Cài dependencies có hash
+        run: python -m pip install --require-hashes -r requirements-dev.lock
+      - name: Cài Chromium và thư viện hệ thống
+        run: python -m playwright install --with-deps chromium
+      - name: Chạy kiểm thử người dùng trên trình duyệt
+        run: python -m pytest -q browser_tests --junitxml=browser-test-results.xml
+      - name: Lưu kết quả trình duyệt
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: browser-test-results
+          path: browser-test-results.xml
+          if-no-files-found: ignore

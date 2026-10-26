@@ -4,6 +4,17 @@ venv/
 .venv/
 __pycache__/
 .pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.uv-cache/
+.playwright-browsers/
+.coverage
+.coverage.*
+coverage.xml
+*.log
+dist/
+build/
+browser_tests/
 .env
 .env.*
 env.txt

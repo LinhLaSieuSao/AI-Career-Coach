@@ -19,9 +19,25 @@
         ],
         "time_minutes": 4,
         "reference_answer": "Tôi xác định grain một dòng mỗi đơn và khóa order_id ở từng bảng trước khi join. Tôi kiểm tra cardinality, tổng hợp hoặc deduplicate sự kiện về đúng grain để tránh nhân bản doanh thu. Tôi đối soát tổng doanh thu và số dòng với nguồn, thử cả đơn không có sự kiện và khóa null.",
-        "quality": "reviewed",
-        "quality_note": "Đã sửa thành tình huống cụ thể và đối chiếu từng tiêu chí rubric với câu hỏi/nguồn.",
-        "quality_reviewed_at": "2026-10-24"
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "context_scenario": "Bảng orders có một dòng mỗi đơn, campaign_events có nhiều dòng mỗi đơn; sau join, doanh thu chiến dịch tăng gấp đôi so với nguồn.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Bảng orders có một dòng mỗi đơn, campaign_events có nhiều dòng mỗi đơn; sau join, doanh thu chiến dịch tăng gấp đôi so với nguồn. Xác định grain và khóa join trước khi tổng hợp", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Xác định grain và khóa join trước khi tổng hợp Xử lý nhân dòng bằng tổng hợp hoặc khử trùng theo quan hệ", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Đối soát tổng doanh thu và số dòng với nguồn Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "reviewed",
+          "quality_reviewer": null,
+          "quality_reviewed_at": "2026-10-24",
+          "quality_review_note": "Review nội bộ nội dung câu hỏi và nhóm khái niệm theo nguồn; không phải thẩm định của chuyên gia độc lập.",
+          "quality_sources": [
+            "https://learn.microsoft.com/en-us/sql/relational-databases/performance/joins?view=sql-server-ver17"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "reviewed_internal", "reviewed_at": "2026-10-24", "rights_basis": null, "license_notes": null}
+        },
+        "quality_reviewer": null
       },
       {
         "id": "data_analyst_q02",
@@ -40,9 +56,25 @@
         ],
         "time_minutes": 4,
         "reference_answer": "Tôi phân tách fact doanh thu và dimension ngày/chiến dịch với relationship theo khóa có hướng lọc rõ. Measure tính khi truy vấn và chịu filter context; calculated column tính cho từng dòng và lưu trong model. Tôi đối soát tổng dashboard theo từng bộ lọc với dữ liệu nguồn hoặc SQL.",
-        "quality": "reviewed",
-        "quality_note": "Đã sửa thành tình huống cụ thể và đối chiếu từng tiêu chí rubric với câu hỏi/nguồn.",
-        "quality_reviewed_at": "2026-10-24"
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "context_scenario": "Dashboard chiến dịch đổi tổng doanh thu khi lọc ngày dù bảng nguồn chưa đổi; nhóm cần phân biệt ngày đặt hàng và ngày sự kiện.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Dashboard chiến dịch đổi tổng doanh thu khi lọc ngày dù bảng nguồn chưa đổi; nhóm cần phân biệt ngày đặt hàng và ngày sự kiện. Mô hình fact/dimension với relationship theo khóa", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Mô hình fact/dimension với relationship theo khóa Phân biệt measure theo filter context và column theo dòng", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Đối chiếu dashboard khi thay bộ lọc với nguồn/SQL Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "reviewed",
+          "quality_reviewer": null,
+          "quality_reviewed_at": "2026-10-24",
+          "quality_review_note": "Review nội bộ nội dung câu hỏi và nhóm khái niệm theo nguồn; không phải thẩm định của chuyên gia độc lập.",
+          "quality_sources": [
+            "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "reviewed_internal", "reviewed_at": "2026-10-24", "rights_basis": null, "license_notes": null}
+        },
+        "quality_reviewer": null
       },
       {
         "id": "data_analyst_q03",
@@ -50,19 +82,36 @@
         "skill": "tư duy phân tích",
         "level": 3,
         "weight": 3,
-        "question": "Hãy kể theo STAR về lần bạn phát hiện một chỉ số chiến dịch thay đổi do vấn đề định nghĩa hoặc dữ liệu; bạn đã xác minh nguyên nhân và thống nhất cách báo cáo ra sao?",
+        "question": "Báo cáo tuần và dashboard có hai định nghĩa conversion, cuộc họp marketing diễn ra ngày mai. Bạn xác minh khác biệt, trao đổi với owner và quyết định trình bày chỉ số nào thế nào?",
         "good_answer_points": [
-          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
-          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
-          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+          "Nêu rõ định nghĩa KPI, grain, nguồn dữ liệu và trách nhiệm cá nhân.",
+          "Đưa bằng chứng để khoanh vùng nguyên nhân như truy vấn đối soát, lịch sử thay đổi hoặc bản ghi mẫu.",
+          "Thống nhất định nghĩa và cách truyền đạt kết quả với bên liên quan; có kiểm tra hồi quy/biện pháp phòng lặp lại."
         ],
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy phân tích, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
-        "quality": "template",
-        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
+        "reference_answer": "Tôi làm rõ định nghĩa chỉ số, grain và khoảng thời gian trước khi đối chiếu. Tôi truy ngược pipeline từ nguồn đến báo cáo, kiểm tra thay đổi schema, bộ lọc và dữ liệu trễ/trùng. Sau khi cô lập nguyên nhân, tôi thống nhất lại định nghĩa với người yêu cầu, cập nhật phép tính và ghi lại kiểm tra hồi quy. Tôi nêu kết quả bằng số liệu đã đối soát, không tự tạo mức tăng/giảm.",
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_sources": [],
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Báo cáo tuần và dashboard dùng hai định nghĩa conversion khác nhau; marketing cần công bố một chỉ số trước cuộc họp ngày mai.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Báo cáo tuần và dashboard dùng hai định nghĩa conversion khác nhau; marketing cần công bố một chỉ số trước cuộc họp ngày mai. Nêu rõ định nghĩa KPI, grain, nguồn dữ liệu và trách nhiệm cá nhân.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Nêu rõ định nghĩa KPI, grain, nguồn dữ liệu và trách nhiệm cá nhân. Đưa bằng chứng để khoanh vùng nguyên nhân như truy vấn đối soát, lịch sử thay đổi hoặc bản ghi mẫu.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Thống nhất định nghĩa và cách truyền đạt kết quả với bên liên quan; có kiểm tra hồi quy/biện pháp phòng lặp lại. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://www.opm.gov/policy-data-oversight/assessment-and-selection/structured-interviews/guide/"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        }
       },
       {
         "id": "data_analyst_q04",
@@ -72,17 +121,34 @@
         "weight": 2,
         "question": "Với phân tích hiệu quả chiến dịch và hành vi khách hàng, hãy giải thích cách áp dụng python: Trình bày cách chia code thành hàm/module, kiểm tra schema và xử lý lỗi dữ liệu; nêu test tái lập cùng cách đo hiệu năng hoặc bộ nhớ.",
         "good_answer_points": [
-          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
-          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
-          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+          "Kiểm tra schema, kiểu, null, trùng và quy tắc xử lý lỗi có thể truy vết.",
+          "Tổ chức các bước biến đổi thành hàm có thể tái sử dụng và kiểm thử.",
+          "Nêu test có kết quả mong đợi, đối soát dữ liệu và phép đo hiệu năng thực tế."
         ],
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia xử lý thành hàm/module nhỏ, kiểm tra schema và kiểu dữ liệu ngay khi đọc vào, rồi xử lý bản ghi lỗi theo chính sách có thể truy vết thay vì âm thầm bỏ qua. Tôi dùng test với dữ liệu mẫu cố định để tái lập, đồng thời đo thời gian/bộ nhớ trên đầu vào đại diện.",
-        "quality": "template",
-        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
+        "reference_answer": "Tôi tách bước đọc, kiểm tra và biến đổi dữ liệu thành các hàm có đầu vào/đầu ra rõ. Trước khi tính, tôi xác thực tên cột, kiểu dữ liệu, khóa, giá trị thiếu và bản ghi trùng; các dòng lỗi được ghi lại để xử lý thay vì âm thầm bỏ qua. Tôi dùng bộ dữ liệu mẫu nhỏ có kết quả kỳ vọng để kiểm tra phép biến đổi, sau đó đối soát tổng số dòng và chỉ số với nguồn. Tôi đo thời gian/bộ nhớ trên cỡ dữ liệu đại diện trước khi tối ưu.",
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_sources": [],
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Hai tệp CSV chiến dịch có kiểu ngày khác nhau, cột khách hàng có null và dữ liệu trùng; script Python phải chạy lại với kết quả đối soát được.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Hai tệp CSV chiến dịch có kiểu ngày khác nhau, cột khách hàng có null và dữ liệu trùng; script Python phải chạy lại với kết quả đối soát được. Kiểm tra schema, kiểu, null, trùng và quy tắc xử lý lỗi có thể truy vết.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Kiểm tra schema, kiểu, null, trùng và quy tắc xử lý lỗi có thể truy vết. Tổ chức các bước biến đổi thành hàm có thể tái sử dụng và kiểm thử.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Nêu test có kết quả mong đợi, đối soát dữ liệu và phép đo hiệu năng thực tế. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://pandas.pydata.org/docs/user_guide/10min.html"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        }
       },
       {
         "id": "data_analyst_q05",
@@ -92,17 +158,34 @@
         "weight": 2,
         "question": "Với phân tích hiệu quả chiến dịch và hành vi khách hàng, hãy giải thích cách áp dụng excel: Nêu cách làm sạch và chuẩn hóa dữ liệu, chọn công thức/pivot phù hợp, xử lý ô thiếu/trùng và đối soát kết quả với nguồn.",
         "good_answer_points": [
-          "Nêu nguyên tắc và lựa chọn kỹ thuật cụ thể phù hợp với bài toán, dữ liệu và yêu cầu vận hành.",
-          "Chỉ ra trường hợp biên/rủi ro và cách xử lý để bảo toàn tính đúng đắn hoặc độ tin cậy.",
-          "Mô tả phép kiểm tra định lượng/tái lập (test, metric, đối soát hoặc log) chứng minh kết quả."
+          "Bảo toàn dữ liệu gốc và xác định quy tắc làm sạch trước khi tính.",
+          "Chọn PivotTable/công thức phù hợp với grain và câu hỏi cần trả lời.",
+          "Đối soát tổng và mẫu dòng với nguồn; ghi rõ filter và giả định."
         ],
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chuẩn hóa kiểu dữ liệu và khóa trước, kiểm tra ô thiếu/trùng rồi chọn công thức hoặc PivotTable theo phép tổng hợp cần trả lời. Tôi đối chiếu tổng và một số bản ghi với nguồn, đồng thời ghi rõ bộ lọc/giả định để người khác tái kiểm tra.",
-        "quality": "template",
-        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
+        "reference_answer": "Tôi giữ bản dữ liệu nguồn, chuẩn hóa kiểu ngày/số và khóa trước khi tổng hợp. Tôi chọn công thức hoặc PivotTable theo câu hỏi phân tích, xác định rõ bộ lọc và cách tính; kiểm tra ô trống, giá trị trùng và tổng bất thường bằng các phép đối soát độc lập. Tôi lưu lại giả định, bộ lọc và bước làm sạch để người khác có thể tái tạo kết quả.",
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_sources": [],
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Bảng Excel xuất từ CRM có dòng trùng, ngày dạng text và doanh thu âm do hoàn tiền; cần lập pivot theo chiến dịch có thể tái kiểm tra.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Bảng Excel xuất từ CRM có dòng trùng, ngày dạng text và doanh thu âm do hoàn tiền; cần lập pivot theo chiến dịch có thể tái kiểm tra. Bảo toàn dữ liệu gốc và xác định quy tắc làm sạch trước khi tính.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Bảo toàn dữ liệu gốc và xác định quy tắc làm sạch trước khi tính. Chọn PivotTable/công thức phù hợp với grain và câu hỏi cần trả lời.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Đối soát tổng và mẫu dòng với nguồn; ghi rõ filter và giả định. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        }
       },
       {
         "id": "data_analyst_q06",
@@ -110,19 +193,148 @@
         "skill": "giải quyết vấn đề",
         "level": 2,
         "weight": 2,
-        "question": "Hãy kể theo STAR về lần bạn dùng giải quyết vấn đề để làm rõ một kết quả phân tích hoặc xử lý bất đồng trong phân tích hiệu quả chiến dịch và hành vi khách hàng; vai trò và kết quả cụ thể của bạn là gì?",
+        "question": "Marketing và tài chính bất đồng về doanh thu vì một bên loại đơn hoàn tiền, bên kia không. Bạn thu thập bằng chứng, kiểm tra giả thuyết và thống nhất cách sửa báo cáo ra sao?",
         "good_answer_points": [
-          "Nêu bối cảnh, mục tiêu và trách nhiệm cá nhân gắn với tình huống thực tế.",
-          "Trình bày hành động theo trình tự, gồm cách dùng kỹ năng và lý do chọn cách đó.",
-          "Đưa ra kết quả kiểm chứng được cùng bài học hoặc thay đổi được duy trì sau sự việc."
+          "Chọn tình huống liên quan trực tiếp đến phân tích hoặc bất đồng về chỉ số.",
+          "Phân biệt hành động cá nhân với việc chung của nhóm và giải thích căn cứ ra quyết định.",
+          "Đưa bằng chứng/kết quả thật, giới hạn kết luận và bài học có thể áp dụng lại."
         ],
         "red_flags": [
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
-        "quality": "template",
-        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
+        "reference_answer": "Tôi dùng một tình huống thật và tách rõ bối cảnh, mục tiêu, trách nhiệm cá nhân, hành động và kết quả. Tôi mô tả cách xác định câu hỏi cần giải quyết, kiểm tra dữ liệu/chứng cứ, so sánh giả thuyết và trao đổi khi có bất đồng. Kết quả nên gắn với đầu ra đã kiểm chứng hoặc phản hồi thực tế; nếu không có số đo thì nói rõ bằng chứng định tính và điều tôi sẽ làm khác đi.",
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_sources": [],
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Marketing và tài chính bất đồng về doanh thu chiến dịch vì một nhóm tính đơn đã hoàn; bạn phải khoanh vùng nguyên nhân trước khi sửa dashboard.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Marketing và tài chính bất đồng về doanh thu chiến dịch vì một nhóm tính đơn đã hoàn; bạn phải khoanh vùng nguyên nhân trước khi sửa dashboard. Chọn tình huống liên quan trực tiếp đến phân tích hoặc bất đồng về chỉ số.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Chọn tình huống liên quan trực tiếp đến phân tích hoặc bất đồng về chỉ số. Phân biệt hành động cá nhân với việc chung của nhóm và giải thích căn cứ ra quyết định.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Đưa bằng chứng/kết quả thật, giới hạn kết luận và bài học có thể áp dụng lại. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://www.opm.gov/policy-data-oversight/assessment-and-selection/structured-interviews/guide/"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        }
+      },
+      {
+        "id": "data_analyst_q07",
+        "type": "technical",
+        "skill": "thống kê",
+        "level": 2,
+        "weight": 2,
+        "question": "Tình huống giả lập: Hai biến thể landing page có tỷ lệ chuyển đổi quan sát 4,8% và 5,2%; số phiên và thời gian chạy chưa được cung cấp, chiến dịch có thể trùng mùa vụ. Bạn hỏi thêm dữ liệu gì và phân tích thế nào trước khi kết luận B tốt hơn A?",
+        "good_answer_points": [
+          "Nhận ra chênh lệch quan sát không đủ để tuyên bố tác động; hỏi cỡ mẫu và cách phân nhóm.",
+          "Kiểm tra randomization, thời gian, mẫu và khoảng tin cậy/phép thử phù hợp với metric đã định nghĩa.",
+          "Trình bày bất định, phân đoạn/thử nghiệm tiếp theo và giới hạn nhân quả, không tự khẳng định ý nghĩa thống kê."
+        ],
+        "red_flags": [
+          "Tự khẳng định dữ liệu, kết quả hoặc quyền phê duyệt chưa được cung cấp trong tình huống.",
+          "Không có bước xác minh, người phụ trách hoặc bằng chứng để kiểm tra kết quả."
+        ],
+        "time_minutes": 5,
+        "reference_answer": "Tôi xin số phiên và chuyển đổi từng nhóm, cách phân bổ, khoảng thời gian và định nghĩa conversion. Tôi kiểm tra mất cân bằng mẫu và biến động theo ngày trước khi tính khoảng tin cậy hoặc phép thử đã chọn trước. Nếu chưa đủ dữ liệu, tôi báo chênh lệch 0,4 điểm phần trăm chỉ là quan sát và đề xuất tiếp tục thu thập thay vì tuyên bố B thắng.",
+        "context_scenario": "Hai biến thể landing page có tỷ lệ chuyển đổi quan sát 4,8% và 5,2%; số phiên và thời gian chạy chưa được cung cấp, chiến dịch có thể trùng mùa vụ.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Hai biến thể landing page có tỷ lệ chuyển đổi quan sát 4,8% và 5,2%; số phiên và thời gian chạy chưa được cung cấp, chiến dịch có thể trùng mùa vụ. Nhận ra chênh lệch quan sát không đủ để tuyên bố tác động; hỏi cỡ mẫu và cách phân nhóm.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Nhận ra chênh lệch quan sát không đủ để tuyên bố tác động; hỏi cỡ mẫu và cách phân nhóm. Kiểm tra randomization, thời gian, mẫu và khoảng tin cậy/phép thử phù hợp với metric đã định nghĩa.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Trình bày bất định, phân đoạn/thử nghiệm tiếp theo và giới hạn nhân quả, không tự khẳng định ý nghĩa thống kê. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp AI, tình huống giả lập; rubric chưa được người có chuyên môn duyệt và không dùng để chấm tự động.",
+        "quality_reviewer": null,
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null}
+      },
+      {
+        "id": "data_analyst_q08",
+        "type": "scenario",
+        "skill": "giao tiếp",
+        "level": 2,
+        "weight": 1,
+        "question": "Tình huống giả lập: Marketing muốn báo tăng doanh thu chiến dịch, tài chính dùng số đã trừ hoàn tiền nên thấp hơn; cuộc họp điều hành trong ngày. Bạn giải thích khác biệt cho hai bên và chốt cách trình bày số liệu thế nào để người nghe không hiểu sai?",
+        "good_answer_points": [
+          "Nêu rõ hai định nghĩa, nguồn và kỳ dữ liệu khác nhau.",
+          "Dùng ví dụ đối soát hoặc bảng cầu nối, xác nhận với hai owner trước khi công bố.",
+          "Ghi quyết định, mức độ chắc chắn và việc còn thiếu; điều chỉnh cách giải thích theo người nghe."
+        ],
+        "red_flags": [
+          "Tự khẳng định dữ liệu, kết quả hoặc quyền phê duyệt chưa được cung cấp trong tình huống.",
+          "Không có bước xác minh, người phụ trách hoặc bằng chứng để kiểm tra kết quả."
+        ],
+        "time_minutes": 5,
+        "reference_answer": "Tôi đặt hai công thức cạnh nhau và lấy một mẫu đơn hoàn tiền để minh họa vì sao số khác. Tôi hỏi owner của mỗi chỉ số về mục đích báo cáo, đối soát tổng và xác nhận cách gắn nhãn. Trong họp tôi trình bày cả số gross/net nếu cần, ghi rõ nguồn/kỳ và không gọi hai số là cùng một KPI.",
+        "context_scenario": "Marketing muốn báo tăng doanh thu chiến dịch, tài chính dùng số đã trừ hoàn tiền nên thấp hơn; cuộc họp điều hành trong ngày.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Marketing muốn báo tăng doanh thu chiến dịch, tài chính dùng số đã trừ hoàn tiền nên thấp hơn; cuộc họp điều hành trong ngày. Nêu rõ hai định nghĩa, nguồn và kỳ dữ liệu khác nhau.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Nêu rõ hai định nghĩa, nguồn và kỳ dữ liệu khác nhau. Dùng ví dụ đối soát hoặc bảng cầu nối, xác nhận với hai owner trước khi công bố.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Ghi quyết định, mức độ chắc chắn và việc còn thiếu; điều chỉnh cách giải thích theo người nghe. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp AI, tình huống giả lập; rubric chưa được người có chuyên môn duyệt và không dùng để chấm tự động.",
+        "quality_reviewer": null,
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null}
+      },
+      {
+        "id": "data_analyst_q09",
+        "type": "scenario",
+        "skill": "làm việc nhóm",
+        "level": 2,
+        "weight": 1,
+        "question": "Tình huống giả lập: Nhà phân tích, kỹ sư dữ liệu và marketing cùng xây dashboard; cột campaign_id đổi kiểu khi pipeline cập nhật trước buổi nghiệm thu. Bạn phối hợp ba bên để sửa lỗi và bảo đảm mọi người kiểm tra cùng một định nghĩa dữ liệu thế nào?",
+        "good_answer_points": [
+          "Xác định tác động đổi kiểu và người sở hữu nguồn, báo sớm cho các bên.",
+          "Chốt contract/schema và tiêu chí kiểm tra, phân việc có hạn và đối soát mẫu dữ liệu cùng nhau.",
+          "Ghi quyết định, test hồi quy và phản hồi sau nghiệm thu; không nhận công việc nhóm là kết quả cá nhân."
+        ],
+        "red_flags": [
+          "Tự khẳng định dữ liệu, kết quả hoặc quyền phê duyệt chưa được cung cấp trong tình huống.",
+          "Không có bước xác minh, người phụ trách hoặc bằng chứng để kiểm tra kết quả."
+        ],
+        "time_minutes": 5,
+        "reference_answer": "Tôi đưa ví dụ campaign_id lỗi cho kỹ sư dữ liệu, hỏi marketing trường nào dùng trong báo cáo và thống nhất contract mới. Tôi chịu trách nhiệm kiểm tra dashboard trên mẫu trước/sau, ghi số bản ghi không join được và hạn sửa. Trước nghiệm thu cả nhóm đối soát một báo cáo chuẩn, lưu quyết định và test tránh lỗi tái diễn.",
+        "context_scenario": "Nhà phân tích, kỹ sư dữ liệu và marketing cùng xây dashboard; cột campaign_id đổi kiểu khi pipeline cập nhật trước buổi nghiệm thu.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Nhà phân tích, kỹ sư dữ liệu và marketing cùng xây dashboard; cột campaign_id đổi kiểu khi pipeline cập nhật trước buổi nghiệm thu. Xác định tác động đổi kiểu và người sở hữu nguồn, báo sớm cho các bên.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Xác định tác động đổi kiểu và người sở hữu nguồn, báo sớm cho các bên. Chốt contract/schema và tiêu chí kiểm tra, phân việc có hạn và đối soát mẫu dữ liệu cùng nhau.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Ghi quyết định, test hồi quy và phản hồi sau nghiệm thu; không nhận công việc nhóm là kết quả cá nhân. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp AI, tình huống giả lập; rubric chưa được người có chuyên môn duyệt và không dùng để chấm tự động.",
+        "quality_reviewer": null,
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null}
+      },
+      {
+        "id": "data_analyst_q10",
+        "type": "technical",
+        "skill": "tableau",
+        "level": 1,
+        "weight": 1,
+        "question": "Tình huống giả lập: Tệp chiến dịch có ngày, kênh, spend và conversion; người xem cần lọc theo kênh, nhưng một dòng thiếu ngày. Bạn tạo một biểu đồ Tableau nhập môn thế nào và kiểm tra bộ lọc, dữ liệu thiếu trước khi chia sẻ?",
+        "good_answer_points": [
+          "Chọn đúng trường/ngữ nghĩa và nhận ra dòng thiếu ngày cần xử lý rõ.",
+          "Tạo view cơ bản với bộ lọc kênh, nhãn/đơn vị rõ và đối chiếu tổng với tệp gốc.",
+          "Thử lọc nhiều kênh, kiểm tra quyền chia sẻ và giải thích giới hạn dữ liệu thiếu; không tuyên bố đã đạt năng lực nâng cao."
+        ],
+        "red_flags": [
+          "Tự khẳng định dữ liệu, kết quả hoặc quyền phê duyệt chưa được cung cấp trong tình huống.",
+          "Không có bước xác minh, người phụ trách hoặc bằng chứng để kiểm tra kết quả."
+        ],
+        "time_minutes": 5,
+        "reference_answer": "Tôi kiểm tra kiểu ngày và đánh dấu dòng thiếu trước khi dựng view spend/conversion theo ngày. Tôi thêm bộ lọc kênh và nhãn đơn vị, đối chiếu tổng trên từng lựa chọn với tệp nguồn. Tôi ghi quy tắc xử lý dòng thiếu, thử bộ lọc và chia sẻ bản xem theo quyền được cấp.",
+        "context_scenario": "Tệp chiến dịch có ngày, kênh, spend và conversion; người xem cần lọc theo kênh, nhưng một dòng thiếu ngày.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Tệp chiến dịch có ngày, kênh, spend và conversion; người xem cần lọc theo kênh, nhưng một dòng thiếu ngày. Chọn đúng trường/ngữ nghĩa và nhận ra dòng thiếu ngày cần xử lý rõ.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Chọn đúng trường/ngữ nghĩa và nhận ra dòng thiếu ngày cần xử lý rõ. Tạo view cơ bản với bộ lọc kênh, nhãn/đơn vị rõ và đối chiếu tổng với tệp gốc.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Thử lọc nhiều kênh, kiểm tra quyền chia sẻ và giải thích giới hạn dữ liệu thiếu; không tuyên bố đã đạt năng lực nâng cao. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp AI, tình huống giả lập; rubric chưa được người có chuyên môn duyệt và không dùng để chấm tự động.",
+        "quality_reviewer": null,
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "data_engineer": [
@@ -142,7 +354,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến sql, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến sql, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_engineer_q02",
@@ -160,7 +375,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia xử lý thành hàm/module nhỏ, kiểm tra schema và kiểu dữ liệu ngay khi đọc vào, rồi xử lý bản ghi lỗi theo chính sách có thể truy vết thay vì âm thầm bỏ qua. Tôi dùng test với dữ liệu mẫu cố định để tái lập, đồng thời đo thời gian/bộ nhớ trên đầu vào đại diện."
+        "reference_answer": "Tôi sẽ chia xử lý thành hàm/module nhỏ, kiểm tra schema và kiểu dữ liệu ngay khi đọc vào, rồi xử lý bản ghi lỗi theo chính sách có thể truy vết thay vì âm thầm bỏ qua. Tôi dùng test với dữ liệu mẫu cố định để tái lập, đồng thời đo thời gian/bộ nhớ trên đầu vào đại diện.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_engineer_q03",
@@ -178,7 +396,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chọn partition theo kích thước và cách truy vấn dữ liệu, kiểm tra skew trước khi thêm bước xử lý riêng, đồng thời ưu tiên transformation cần thiết để tránh shuffle không cần thiết. Tôi xem kế hoạch thực thi/thời gian chạy và đối chiếu kết quả với mẫu hoặc tổng kiểm để bảo đảm cả hiệu năng lẫn tính đúng."
+        "reference_answer": "Tôi sẽ chọn partition theo kích thước và cách truy vấn dữ liệu, kiểm tra skew trước khi thêm bước xử lý riêng, đồng thời ưu tiên transformation cần thiết để tránh shuffle không cần thiết. Tôi xem kế hoạch thực thi/thời gian chạy và đối chiếu kết quả với mẫu hoặc tổng kiểm để bảo đảm cả hiệu năng lẫn tính đúng.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_engineer_q04",
@@ -196,7 +417,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ trích xuất theo watermark hoặc checkpoint, biến đổi theo quy tắc có phiên bản rồi nạp theo cách chạy lại không tạo bản ghi trùng. Tôi xử lý late/duplicate record theo khóa và chính sách nghiệp vụ đã thống nhất, sau đó đối soát đầu vào/đầu ra và lưu trạng thái lần chạy."
+        "reference_answer": "Tôi sẽ trích xuất theo watermark hoặc checkpoint, biến đổi theo quy tắc có phiên bản rồi nạp theo cách chạy lại không tạo bản ghi trùng. Tôi xử lý late/duplicate record theo khóa và chính sách nghiệp vụ đã thống nhất, sau đó đối soát đầu vào/đầu ra và lưu trạng thái lần chạy.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_engineer_q05",
@@ -214,7 +438,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia DAG theo dependency rõ ràng, đặt retry/timeout có giới hạn và thiết kế task idempotent để backfill không nhân đôi dữ liệu. Tôi cấu hình cảnh báo khi run trễ/thất bại, rồi thử retry/backfill trên phạm vi kiểm soát và kiểm tra log cùng trạng thái đầu ra."
+        "reference_answer": "Tôi sẽ chia DAG theo dependency rõ ràng, đặt retry/timeout có giới hạn và thiết kế task idempotent để backfill không nhân đôi dữ liệu. Tôi cấu hình cảnh báo khi run trễ/thất bại, rồi thử retry/backfill trên phạm vi kiểm soát và kiểm tra log cùng trạng thái đầu ra.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_engineer_q06",
@@ -232,7 +459,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "machine_learning_engineer": [
@@ -252,7 +482,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "machine_learning_engineer_q02",
@@ -270,7 +503,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết lập baseline và chia train/validation/test theo cấu trúc dữ liệu để tránh leakage, sau đó chọn metric phản ánh chi phí false positive/false negative của bài toán. Tôi tuning trong phạm vi có kiểm soát và dừng khi tiêu chí đã định đạt hoặc kết quả validation không còn cải thiện; quyết định cuối cần được xác nhận trên tập đánh giá chưa dùng để tuning."
+        "reference_answer": "Tôi sẽ thiết lập baseline và chia train/validation/test theo cấu trúc dữ liệu để tránh leakage, sau đó chọn metric phản ánh chi phí false positive/false negative của bài toán. Tôi tuning trong phạm vi có kiểm soát và dừng khi tiêu chí đã định đạt hoặc kết quả validation không còn cải thiện; quyết định cuối cần được xác nhận trên tập đánh giá chưa dùng để tuning.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "machine_learning_engineer_q03",
@@ -288,7 +524,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ triển khai Dataset/DataLoader tách biệt, giữ vòng train và eval rõ ràng, chọn loss/optimizer theo bài toán và cố định seed cùng cấu hình cần thiết. Tôi theo dõi metric trên validation, lưu checkpoint kèm cấu hình và kiểm tra khả năng tải lại để tái lập kết quả."
+        "reference_answer": "Tôi sẽ triển khai Dataset/DataLoader tách biệt, giữ vòng train và eval rõ ràng, chọn loss/optimizer theo bài toán và cố định seed cùng cấu hình cần thiết. Tôi theo dõi metric trên validation, lưu checkpoint kèm cấu hình và kiểm tra khả năng tải lại để tái lập kết quả.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "machine_learning_engineer_q04",
@@ -306,7 +545,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả."
+        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "machine_learning_engineer_q05",
@@ -324,7 +566,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ nêu giả định của loss/gradient hoặc xác suất đang dùng và liên hệ chúng với cách mô hình cập nhật hay diễn giải dự đoán. Tôi kiểm tra bằng ví dụ nhỏ hoặc phân tích độ ổn định khi thay đổi đầu vào/tham số, rồi so sánh với hành vi quan sát được của mô hình."
+        "reference_answer": "Tôi sẽ nêu giả định của loss/gradient hoặc xác suất đang dùng và liên hệ chúng với cách mô hình cập nhật hay diễn giải dự đoán. Tôi kiểm tra bằng ví dụ nhỏ hoặc phân tích độ ổn định khi thay đổi đầu vào/tham số, rồi so sánh với hành vi quan sát được của mô hình.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "machine_learning_engineer_q06",
@@ -342,7 +587,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "business_intelligence_analyst": [
@@ -362,7 +610,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả."
+        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "business_intelligence_analyst_q02",
@@ -380,7 +631,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ mô hình hóa dữ liệu theo fact/dimension với relationship có hướng lọc rõ, đặt phép tính tổng hợp vào measure và chỉ dùng calculated column khi cần giá trị theo từng dòng. Tôi kiểm tra filter context bằng cách đối chiếu các lát cắt trên dashboard với truy vấn hoặc số liệu nguồn."
+        "reference_answer": "Tôi sẽ mô hình hóa dữ liệu theo fact/dimension với relationship có hướng lọc rõ, đặt phép tính tổng hợp vào measure và chỉ dùng calculated column khi cần giá trị theo từng dòng. Tôi kiểm tra filter context bằng cách đối chiếu các lát cắt trên dashboard với truy vấn hoặc số liệu nguồn.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "business_intelligence_analyst_q03",
@@ -398,7 +652,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy phân tích, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy phân tích, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "business_intelligence_analyst_q04",
@@ -416,7 +673,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chuẩn hóa kiểu dữ liệu và khóa trước, kiểm tra ô thiếu/trùng rồi chọn công thức hoặc PivotTable theo phép tổng hợp cần trả lời. Tôi đối chiếu tổng và một số bản ghi với nguồn, đồng thời ghi rõ bộ lọc/giả định để người khác tái kiểm tra."
+        "reference_answer": "Tôi sẽ chuẩn hóa kiểu dữ liệu và khóa trước, kiểm tra ô thiếu/trùng rồi chọn công thức hoặc PivotTable theo phép tổng hợp cần trả lời. Tôi đối chiếu tổng và một số bản ghi với nguồn, đồng thời ghi rõ bộ lọc/giả định để người khác tái kiểm tra.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "business_intelligence_analyst_q05",
@@ -434,7 +694,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xác định grain trước, thiết kế fact/dimension và cách lưu lịch sử phù hợp với nhu cầu truy vấn. Incremental load cần có khóa/watermark và xử lý chạy lại an toàn; tôi kiểm tra chất lượng, đối soát nguồn và thử truy vấn tiêu thụ đại diện."
+        "reference_answer": "Tôi sẽ xác định grain trước, thiết kế fact/dimension và cách lưu lịch sử phù hợp với nhu cầu truy vấn. Incremental load cần có khóa/watermark và xử lý chạy lại an toàn; tôi kiểm tra chất lượng, đối soát nguồn và thử truy vấn tiêu thụ đại diện.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "business_intelligence_analyst_q06",
@@ -452,7 +715,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong công việc, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong công việc, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "data_scientist": [
@@ -472,7 +738,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia xử lý thành hàm/module nhỏ, kiểm tra schema và kiểu dữ liệu ngay khi đọc vào, rồi xử lý bản ghi lỗi theo chính sách có thể truy vết thay vì âm thầm bỏ qua. Tôi dùng test với dữ liệu mẫu cố định để tái lập, đồng thời đo thời gian/bộ nhớ trên đầu vào đại diện."
+        "reference_answer": "Tôi sẽ chia xử lý thành hàm/module nhỏ, kiểm tra schema và kiểu dữ liệu ngay khi đọc vào, rồi xử lý bản ghi lỗi theo chính sách có thể truy vết thay vì âm thầm bỏ qua. Tôi dùng test với dữ liệu mẫu cố định để tái lập, đồng thời đo thời gian/bộ nhớ trên đầu vào đại diện.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_scientist_q02",
@@ -490,7 +759,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả."
+        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_scientist_q03",
@@ -508,7 +780,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chọn phép ước lượng/kiểm định sau khi xác định loại biến, cách lấy mẫu và giả định phân phối; kết quả nên kèm khoảng tin cậy và cân nhắc cỡ mẫu. Tôi kiểm tra phân phối/outlier và trình bày độ bất định, tránh diễn giải quan hệ quan sát được thành quan hệ nhân quả nếu thiết kế không hỗ trợ."
+        "reference_answer": "Tôi sẽ chọn phép ước lượng/kiểm định sau khi xác định loại biến, cách lấy mẫu và giả định phân phối; kết quả nên kèm khoảng tin cậy và cân nhắc cỡ mẫu. Tôi kiểm tra phân phối/outlier và trình bày độ bất định, tránh diễn giải quan hệ quan sát được thành quan hệ nhân quả nếu thiết kế không hỗ trợ.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_scientist_q04",
@@ -526,7 +801,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết lập baseline và chia train/validation/test theo cấu trúc dữ liệu để tránh leakage, sau đó chọn metric phản ánh chi phí false positive/false negative của bài toán. Tôi tuning trong phạm vi có kiểm soát và dừng khi tiêu chí đã định đạt hoặc kết quả validation không còn cải thiện; quyết định cuối cần được xác nhận trên tập đánh giá chưa dùng để tuning."
+        "reference_answer": "Tôi sẽ thiết lập baseline và chia train/validation/test theo cấu trúc dữ liệu để tránh leakage, sau đó chọn metric phản ánh chi phí false positive/false negative của bài toán. Tôi tuning trong phạm vi có kiểm soát và dừng khi tiêu chí đã định đạt hoặc kết quả validation không còn cải thiện; quyết định cuối cần được xác nhận trên tập đánh giá chưa dùng để tuning.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_scientist_q05",
@@ -544,7 +822,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong công việc, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong công việc, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_scientist_q06",
@@ -562,7 +843,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "ai_engineer": [
@@ -582,7 +866,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ai_engineer_q02",
@@ -600,7 +887,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến thuật toán học máy, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến thuật toán học máy, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ai_engineer_q03",
@@ -618,7 +908,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ triển khai Dataset/DataLoader tách biệt, giữ vòng train và eval rõ ràng, chọn loss/optimizer theo bài toán và cố định seed cùng cấu hình cần thiết. Tôi theo dõi metric trên validation, lưu checkpoint kèm cấu hình và kiểm tra khả năng tải lại để tái lập kết quả."
+        "reference_answer": "Tôi sẽ triển khai Dataset/DataLoader tách biệt, giữ vòng train và eval rõ ràng, chọn loss/optimizer theo bài toán và cố định seed cùng cấu hình cần thiết. Tôi theo dõi metric trên validation, lưu checkpoint kèm cấu hình và kiểm tra khả năng tải lại để tái lập kết quả.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ai_engineer_q04",
@@ -636,7 +929,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xây input pipeline nhất quán, định nghĩa model/loss phù hợp với mục tiêu và tách train/eval để không đánh giá trên dữ liệu đã tối ưu trực tiếp. Tôi theo dõi metric, lưu checkpoint cùng cấu hình và kiểm tra chạy lại trên cùng dữ liệu để đánh giá mức tái lập."
+        "reference_answer": "Tôi sẽ xây input pipeline nhất quán, định nghĩa model/loss phù hợp với mục tiêu và tách train/eval để không đánh giá trên dữ liệu đã tối ưu trực tiếp. Tôi theo dõi metric, lưu checkpoint cùng cấu hình và kiểm tra chạy lại trên cùng dữ liệu để đánh giá mức tái lập.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ai_engineer_q05",
@@ -654,7 +950,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chuẩn hóa văn bản tiếng Việt theo một quy tắc nhất quán, xử lý mất cân bằng nhãn trong huấn luyện và chọn metric phù hợp với mục tiêu phân loại. Tôi phân tích lỗi theo loại văn bản/nhãn để phân biệt lỗi tiền xử lý với giới hạn mô hình, rồi xác nhận thay đổi trên tập đánh giá giữ riêng."
+        "reference_answer": "Tôi sẽ chuẩn hóa văn bản tiếng Việt theo một quy tắc nhất quán, xử lý mất cân bằng nhãn trong huấn luyện và chọn metric phù hợp với mục tiêu phân loại. Tôi phân tích lỗi theo loại văn bản/nhãn để phân biệt lỗi tiền xử lý với giới hạn mô hình, rồi xác nhận thay đổi trên tập đánh giá giữ riêng.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ai_engineer_q06",
@@ -672,7 +971,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chuẩn hóa kích thước/định dạng ảnh và chỉ augmentation phù hợp với điều kiện vận hành, tránh biến đổi làm sai nhãn. Tôi chọn metric theo chi phí bỏ sót so với phát hiện nhầm, rồi đánh giá riêng theo điều kiện ánh sáng/góc chụp để thấy nơi mô hình còn yếu."
+        "reference_answer": "Tôi sẽ chuẩn hóa kích thước/định dạng ảnh và chỉ augmentation phù hợp với điều kiện vận hành, tránh biến đổi làm sai nhãn. Tôi chọn metric theo chi phí bỏ sót so với phát hiện nhầm, rồi đánh giá riêng theo điều kiện ánh sáng/góc chụp để thấy nơi mô hình còn yếu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "nlp_engineer": [
@@ -692,7 +994,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "nlp_engineer_q02",
@@ -710,7 +1015,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chuẩn hóa văn bản tiếng Việt theo một quy tắc nhất quán, xử lý mất cân bằng nhãn trong huấn luyện và chọn metric phù hợp với mục tiêu phân loại. Tôi phân tích lỗi theo loại văn bản/nhãn để phân biệt lỗi tiền xử lý với giới hạn mô hình, rồi xác nhận thay đổi trên tập đánh giá giữ riêng."
+        "reference_answer": "Tôi sẽ chuẩn hóa văn bản tiếng Việt theo một quy tắc nhất quán, xử lý mất cân bằng nhãn trong huấn luyện và chọn metric phù hợp với mục tiêu phân loại. Tôi phân tích lỗi theo loại văn bản/nhãn để phân biệt lỗi tiền xử lý với giới hạn mô hình, rồi xác nhận thay đổi trên tập đánh giá giữ riêng.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "nlp_engineer_q03",
@@ -728,7 +1036,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ triển khai Dataset/DataLoader tách biệt, giữ vòng train và eval rõ ràng, chọn loss/optimizer theo bài toán và cố định seed cùng cấu hình cần thiết. Tôi theo dõi metric trên validation, lưu checkpoint kèm cấu hình và kiểm tra khả năng tải lại để tái lập kết quả."
+        "reference_answer": "Tôi sẽ triển khai Dataset/DataLoader tách biệt, giữ vòng train và eval rõ ràng, chọn loss/optimizer theo bài toán và cố định seed cùng cấu hình cần thiết. Tôi theo dõi metric trên validation, lưu checkpoint kèm cấu hình và kiểm tra khả năng tải lại để tái lập kết quả.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "nlp_engineer_q04",
@@ -746,7 +1057,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết lập baseline và chia train/validation/test theo cấu trúc dữ liệu để tránh leakage, sau đó chọn metric phản ánh chi phí false positive/false negative của bài toán. Tôi tuning trong phạm vi có kiểm soát và dừng khi tiêu chí đã định đạt hoặc kết quả validation không còn cải thiện; quyết định cuối cần được xác nhận trên tập đánh giá chưa dùng để tuning."
+        "reference_answer": "Tôi sẽ thiết lập baseline và chia train/validation/test theo cấu trúc dữ liệu để tránh leakage, sau đó chọn metric phản ánh chi phí false positive/false negative của bài toán. Tôi tuning trong phạm vi có kiểm soát và dừng khi tiêu chí đã định đạt hoặc kết quả validation không còn cải thiện; quyết định cuối cần được xác nhận trên tập đánh giá chưa dùng để tuning.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "nlp_engineer_q05",
@@ -764,7 +1078,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chọn tokenizer và giới hạn context phù hợp với văn bản, fine-tune trên split tránh leakage và theo dõi overfit giữa train/validation. Tôi batching theo độ dài khi phù hợp, rồi đánh giá metric và lỗi theo lát cắt dữ liệu để xem cải thiện có đồng đều không."
+        "reference_answer": "Tôi sẽ chọn tokenizer và giới hạn context phù hợp với văn bản, fine-tune trên split tránh leakage và theo dõi overfit giữa train/validation. Tôi batching theo độ dài khi phù hợp, rồi đánh giá metric và lỗi theo lát cắt dữ liệu để xem cải thiện có đồng đều không.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "nlp_engineer_q06",
@@ -782,7 +1099,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "computer_vision_engineer": [
@@ -802,7 +1122,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "computer_vision_engineer_q02",
@@ -820,7 +1143,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chuẩn hóa kích thước/định dạng ảnh và chỉ augmentation phù hợp với điều kiện vận hành, tránh biến đổi làm sai nhãn. Tôi chọn metric theo chi phí bỏ sót so với phát hiện nhầm, rồi đánh giá riêng theo điều kiện ánh sáng/góc chụp để thấy nơi mô hình còn yếu."
+        "reference_answer": "Tôi sẽ chuẩn hóa kích thước/định dạng ảnh và chỉ augmentation phù hợp với điều kiện vận hành, tránh biến đổi làm sai nhãn. Tôi chọn metric theo chi phí bỏ sót so với phát hiện nhầm, rồi đánh giá riêng theo điều kiện ánh sáng/góc chụp để thấy nơi mô hình còn yếu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "computer_vision_engineer_q03",
@@ -838,7 +1164,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ triển khai Dataset/DataLoader tách biệt, giữ vòng train và eval rõ ràng, chọn loss/optimizer theo bài toán và cố định seed cùng cấu hình cần thiết. Tôi theo dõi metric trên validation, lưu checkpoint kèm cấu hình và kiểm tra khả năng tải lại để tái lập kết quả."
+        "reference_answer": "Tôi sẽ triển khai Dataset/DataLoader tách biệt, giữ vòng train và eval rõ ràng, chọn loss/optimizer theo bài toán và cố định seed cùng cấu hình cần thiết. Tôi theo dõi metric trên validation, lưu checkpoint kèm cấu hình và kiểm tra khả năng tải lại để tái lập kết quả.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "computer_vision_engineer_q04",
@@ -856,7 +1185,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ kiểm tra ảnh đọc vào có hợp lệ không, chuẩn hóa màu/kích thước theo hợp đồng đầu vào rồi áp dụng phép biến đổi nhất quán với tọa độ cần trả về. Tôi xử lý rõ file hỏng/định dạng lạ và kiểm tra kích thước, màu cùng tọa độ đầu ra trên ảnh mẫu đã biết."
+        "reference_answer": "Tôi sẽ kiểm tra ảnh đọc vào có hợp lệ không, chuẩn hóa màu/kích thước theo hợp đồng đầu vào rồi áp dụng phép biến đổi nhất quán với tọa độ cần trả về. Tôi xử lý rõ file hỏng/định dạng lạ và kiểm tra kích thước, màu cùng tọa độ đầu ra trên ảnh mẫu đã biết.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "computer_vision_engineer_q05",
@@ -874,7 +1206,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết lập baseline và chia train/validation/test theo cấu trúc dữ liệu để tránh leakage, sau đó chọn metric phản ánh chi phí false positive/false negative của bài toán. Tôi tuning trong phạm vi có kiểm soát và dừng khi tiêu chí đã định đạt hoặc kết quả validation không còn cải thiện; quyết định cuối cần được xác nhận trên tập đánh giá chưa dùng để tuning."
+        "reference_answer": "Tôi sẽ thiết lập baseline và chia train/validation/test theo cấu trúc dữ liệu để tránh leakage, sau đó chọn metric phản ánh chi phí false positive/false negative của bài toán. Tôi tuning trong phạm vi có kiểm soát và dừng khi tiêu chí đã định đạt hoặc kết quả validation không còn cải thiện; quyết định cuối cần được xác nhận trên tập đánh giá chưa dùng để tuning.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "computer_vision_engineer_q06",
@@ -892,7 +1227,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "mlops_engineer": [
@@ -912,7 +1250,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến python, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mlops_engineer_q02",
@@ -930,7 +1271,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng image nhỏ có version, cấu hình runtime tường minh và kiểm tra health/resource, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng image nhỏ có version, cấu hình runtime tường minh và kiểm tra health/resource, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mlops_engineer_q03",
@@ -948,7 +1292,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết kế pipeline build-test-package-deploy tạo artifact có phiên bản, chỉ promotion khi kiểm tra chất lượng và điều kiện môi trường đạt. Triển khai theo rollout có quan sát, giữ artifact/revision ổn định để rollback, và kiểm tra đường rollback trước khi cần dùng."
+        "reference_answer": "Tôi sẽ thiết kế pipeline build-test-package-deploy tạo artifact có phiên bản, chỉ promotion khi kiểm tra chất lượng và điều kiện môi trường đạt. Triển khai theo rollout có quan sát, giữ artifact/revision ổn định để rollback, và kiểm tra đường rollback trước khi cần dùng.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mlops_engineer_q04",
@@ -966,7 +1313,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng Deployment để quản lý replica và rollout, Service để định tuyến tới pod khỏe; readiness/liveness probe cần phản ánh khả năng nhận tải và tình trạng tiến trình. Tôi đặt requests/limits theo quan sát tải, theo dõi event/metric trong rollout và rollback revision nếu pod lỗi hoặc tín hiệu sức khỏe xấu."
+        "reference_answer": "Tôi sẽ dùng Deployment để quản lý replica và rollout, Service để định tuyến tới pod khỏe; readiness/liveness probe cần phản ánh khả năng nhận tải và tình trạng tiến trình. Tôi đặt requests/limits theo quan sát tải, theo dõi event/metric trong rollout và rollback revision nếu pod lỗi hoặc tín hiệu sức khỏe xấu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mlops_engineer_q05",
@@ -984,7 +1334,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chọn dịch vụ lưu trữ/tính toán theo yêu cầu tải và khả năng vận hành, giới hạn IAM theo quyền tối thiểu, bật mã hóa và theo dõi chi phí theo tài nguyên. Tôi xác minh quyền bằng danh tính/luồng truy cập dự kiến và thử quy trình khôi phục dữ liệu hoặc cấu hình trong phạm vi an toàn."
+        "reference_answer": "Tôi sẽ chọn dịch vụ lưu trữ/tính toán theo yêu cầu tải và khả năng vận hành, giới hạn IAM theo quyền tối thiểu, bật mã hóa và theo dõi chi phí theo tài nguyên. Tôi xác minh quyền bằng danh tính/luồng truy cập dự kiến và thử quy trình khôi phục dữ liệu hoặc cấu hình trong phạm vi an toàn.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mlops_engineer_q06",
@@ -1002,7 +1355,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "data_architect": [
@@ -1022,7 +1378,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến data warehouse, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến data warehouse, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_architect_q02",
@@ -1040,7 +1399,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả."
+        "reference_answer": "Tôi sẽ chốt grain của mỗi bản ghi và khóa join, rồi viết truy vấn có xử lý null/trùng lặp tường minh để tránh nhân đôi kết quả. Tôi đối soát số dòng hoặc tổng kiểm với nguồn và kiểm tra vài trường hợp mẫu trước khi dùng kết quả.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_architect_q03",
@@ -1058,7 +1420,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ vẽ ranh giới thành phần và đường đi dữ liệu, rồi chọn phương án dựa trên yêu cầu độ trễ, khả dụng và chi phí thay vì giả định một thiết kế luôn tối ưu. Tôi nêu failure mode, cách giới hạn ảnh hưởng và tín hiệu đo SLO để xác nhận kiến trúc đáp ứng mục tiêu đã thống nhất."
+        "reference_answer": "Tôi sẽ vẽ ranh giới thành phần và đường đi dữ liệu, rồi chọn phương án dựa trên yêu cầu độ trễ, khả dụng và chi phí thay vì giả định một thiết kế luôn tối ưu. Tôi nêu failure mode, cách giới hạn ảnh hưởng và tín hiệu đo SLO để xác nhận kiến trúc đáp ứng mục tiêu đã thống nhất.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_architect_q04",
@@ -1076,7 +1441,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ trích xuất theo watermark hoặc checkpoint, biến đổi theo quy tắc có phiên bản rồi nạp theo cách chạy lại không tạo bản ghi trùng. Tôi xử lý late/duplicate record theo khóa và chính sách nghiệp vụ đã thống nhất, sau đó đối soát đầu vào/đầu ra và lưu trạng thái lần chạy."
+        "reference_answer": "Tôi sẽ trích xuất theo watermark hoặc checkpoint, biến đổi theo quy tắc có phiên bản rồi nạp theo cách chạy lại không tạo bản ghi trùng. Tôi xử lý late/duplicate record theo khóa và chính sách nghiệp vụ đã thống nhất, sau đó đối soát đầu vào/đầu ra và lưu trạng thái lần chạy.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_architect_q05",
@@ -1094,7 +1462,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chọn partition theo kích thước và cách truy vấn dữ liệu, kiểm tra skew trước khi thêm bước xử lý riêng, đồng thời ưu tiên transformation cần thiết để tránh shuffle không cần thiết. Tôi xem kế hoạch thực thi/thời gian chạy và đối chiếu kết quả với mẫu hoặc tổng kiểm để bảo đảm cả hiệu năng lẫn tính đúng."
+        "reference_answer": "Tôi sẽ chọn partition theo kích thước và cách truy vấn dữ liệu, kiểm tra skew trước khi thêm bước xử lý riêng, đồng thời ưu tiên transformation cần thiết để tránh shuffle không cần thiết. Tôi xem kế hoạch thực thi/thời gian chạy và đối chiếu kết quả với mẫu hoặc tổng kiểm để bảo đảm cả hiệu năng lẫn tính đúng.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_architect_q06",
@@ -1112,7 +1483,10 @@
           "Không nêu được bằng chứng kiểm chứng hoặc không gắn quyết định với yêu cầu của bài toán."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong công việc, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong công việc, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ]
   }

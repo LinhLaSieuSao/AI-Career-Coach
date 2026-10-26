@@ -63,6 +63,11 @@ def build_profile(
     raw_skills = skills if skills is not None else form_data.get("skills")
     skill_items = _split_values(raw_skills)
     interests = _split_values(form_data.get("interests"))
+    raw_activity_ids = form_data.get("interest_activity_ids", ())
+    activity_ids = _unique([
+        value.strip() for value in raw_activity_ids
+        if isinstance(value, str) and value.strip()
+    ]) if isinstance(raw_activity_ids, (list, tuple)) else []
 
     kept_skills: list[str] = []
     unrecognized: list[str] = []
@@ -92,7 +97,7 @@ def build_profile(
             kept_skills.append(canonical)
             if canonical not in vocabulary:
                 unrecognized.append(canonical)
-    return {
+    result = {
         "skills": _unique(kept_skills),
         "interests": _unique(interests),
         "experience": _clean_text(form_data.get("experience")),
@@ -100,19 +105,35 @@ def build_profile(
         "moved": moved,
         "levels": levels,
     }
+    if activity_ids:
+        result["interest_activity_ids"] = activity_ids
+    return result
 
 
-def build_profile_from_cv(form_data: dict | None = None, cv_text: str = "") -> dict:
+def build_profile_from_cv(
+    form_data: dict | None = None,
+    cv_text: str = "",
+    *,
+    include_source_metadata: bool = False,
+) -> dict:
     """Merge recognized CV skills with form claims, retaining unknown claims.
 
     Free CV prose is extracted against the shared role vocabulary; arbitrary
-    words in that prose are not interpreted as claimed unknown skills.
+    words in that prose are not interpreted as claimed unknown skills. The
+    optional source metadata is intended for UI flows that ask users to review
+    extracted evidence; the default preserves the established profile schema.
     """
     profile = build_profile(form_data)
     vocabulary = load_skill_vocabulary()
     aliases = load_aliases(DATA_DIR / "skill_aliases.json")
     cv_skills = extract_skills(cv_text, vocabulary, aliases=aliases)
-    profile["skills"] = _unique(merge_skills(cv_skills, profile["skills"], aliases))
+    experience_skills = extract_skills(profile["experience"], vocabulary, aliases=aliases)
+    profile["skills"] = _unique(merge_skills(
+        [*cv_skills, *experience_skills], profile["skills"], aliases
+    ))
+    if include_source_metadata:
+        profile["skills_from_cv"] = _unique(cv_skills)
+        profile["skills_from_experience"] = _unique(experience_skills)
     return profile
 
 

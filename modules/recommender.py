@@ -12,6 +12,8 @@ from typing import Any
 from urllib.parse import urlsplit, urlunsplit
 
 from .skill_extractor import normalize_skill
+from .resource_policy import is_recommendable_resource, resource_exclusion_reason, resource_review_status
+from .practice_guidance import get_practice_routes
 
 
 _DATA_DIR = Path(__file__).resolve().parent.parent / "Data"
@@ -76,8 +78,8 @@ def _resource_tokens(resource: Mapping[str, Any]) -> list[str]:
 
 def _resource_catalog(
     skills: list[str], resources: Mapping[str, Any]
-) -> tuple[dict[str, dict[str, Any]], dict[str, list[str]]]:
-    """Group shared resources and retain every skill's references to them."""
+) -> tuple[dict[str, dict[str, Any]], dict[str, list[str]], dict[str, dict[str, Any]]]:
+    """Group eligible resources and retain rejected-resource reasons by skill."""
     index: dict[str, Any] = {}
     for name, entry in resources.items():
         if not isinstance(name, str):
@@ -99,6 +101,13 @@ def _resource_catalog(
         return token
 
     rows: list[tuple[str, Mapping[str, Any], list[str]]] = []
+    eligible_by_skill: dict[str, list[tuple[str, Mapping[str, Any], list[str]]]] = {
+        skill: [] for skill in skills
+    }
+    review_summary = {
+        skill: {"candidate_count": 0, "eligible_count": 0, "excluded_statuses": set(), "reasons": set()}
+        for skill in skills
+    }
     for skill in skills:
         if skill not in index:
             continue
@@ -108,12 +117,43 @@ def _resource_catalog(
         for resource in group["resources"]:
             if not isinstance(resource, Mapping):
                 raise ValueError(f"Tài liệu của {skill!r} phải là object.")
+            summary = review_summary[skill]
+            summary["candidate_count"] += 1
+            reason = resource_exclusion_reason(resource, require_verified=True, skill=skill)
+            if not reason:
+                url = resource.get("url")
+                try:
+                    parsed = urlsplit(url) if isinstance(url, str) else None
+                except ValueError:
+                    parsed = None
+                if parsed is None or parsed.scheme not in {"http", "https"} or not parsed.netloc:
+                    reason = "missing_url"
+            if reason:
+                summary["reasons"].add(reason)
+                summary["excluded_statuses"].add(resource_review_status(resource))
+                continue
+            if not is_recommendable_resource(resource, require_verified=True, skill=skill):
+                continue
             tokens = _resource_tokens(resource)
             if not tokens:
+                summary["reasons"].add("missing_resource_identity")
                 continue
+            eligible_by_skill[skill].append((skill, resource, tokens))
+
+    # A partial mapping is a fallback for the same skill only when no
+    # recommendable reviewed mapping exists for that skill.
+    for skill, candidates in eligible_by_skill.items():
+        has_reviewed = any(resource_review_status(record) == "reviewed" for _, record, _ in candidates)
+        selected = [
+            candidate for candidate in candidates
+            if not (has_reviewed and resource_review_status(candidate[1]) == "partial")
+        ]
+        for candidate in selected:
+            _, resource, tokens = candidate
+            review_summary[skill]["eligible_count"] += 1
             for token in tokens[1:]:
                 parents[root(token)] = root(tokens[0])
-            rows.append((skill, resource, tokens))
+            rows.append(candidate)
 
     catalog: dict[str, dict[str, Any]] = {}
     refs: dict[str, list[str]] = {skill: [] for skill in skills}
@@ -128,7 +168,7 @@ def _resource_catalog(
         if key not in refs[skill]:
             refs[skill].append(key)
             catalog[key]["skills"].append(skill)
-    return catalog, refs
+    return catalog, refs, review_summary
 
 
 def build_roadmap(
@@ -146,17 +186,17 @@ def build_roadmap(
     to infer study time or resource suitability. Names use the shared skill
     normalizer; aliases should already have been resolved by Matcher.
 
-    Each week contains week, skills, resources, resource_keys, and
-    skills_without_resources. A resource occurs once in the whole roadmap,
-    at its earliest related skill's week. resource_keys maps each skill to
-    those resources' keys, including resources introduced in earlier weeks.
-    Duplicates sharing an ID or normalized URL are grouped. Original fields
-    are preserved from the first record and augmented with key and skills.
+    Each week contains week, skills, eligible resources, resource_keys,
+    skills_without_resources, unresolved, and partial_resources. A resource
+    occurs once in the whole roadmap at its earliest related skill's week;
+    resource_keys maps every skill to eligible resources, including items
+    introduced earlier. Duplicate IDs/URLs are grouped.
 
-    Unknown skills remain scheduled and are listed in skills_without_resources.
-    Resources without an ID or usable HTTP(S) URL are ignored. Inputs are not
-    mutated. Invalid weeks, metadata, or requested resource groups raise an
-    explicit TypeError or ValueError.
+    Only verified HTTP(S) resources whose content review is reviewed/partial
+    and includes a review note may be recommended. Unknown skills and skills
+    with only excluded resources remain scheduled and receive an unresolved
+    reason. Inputs are not mutated. Invalid weeks, metadata, or requested
+    resource groups raise an explicit TypeError or ValueError.
     """
     if isinstance(weeks, bool) or not isinstance(weeks, int) or weeks <= 0:
         raise ValueError("weeks phải là số nguyên dương.")
@@ -165,7 +205,7 @@ def build_roadmap(
     skills = _prioritize(_skill_list(missing), missing_details)
     if not skills:
         return []
-    catalog, refs = _resource_catalog(skills, resources)
+    catalog, refs, review_summary = _resource_catalog(skills, resources)
     week_count = min(weeks, len(skills))
     base_size, remainder = divmod(len(skills), week_count)
     roadmap: list[dict[str, Any]] = []
@@ -181,6 +221,33 @@ def build_roadmap(
                 if key not in assigned:
                     week_resources.append(catalog[key])
                     assigned.add(key)
+        unresolved = []
+        partial_resources = []
+        for skill in week_skills:
+            summary = review_summary[skill]
+            if not refs[skill]:
+                if summary["candidate_count"] == 0:
+                    reason = "no_resources"
+                else:
+                    reason = next((candidate for candidate in (
+                        "specialized_source_required",
+                        "unreviewed_content", "blocked_resource", "unsuitable_content",
+                        "unverified_link", "missing_url", "missing_resource_identity",
+                    ) if candidate in summary["reasons"]), "unreviewed_content")
+                issue = {"skill": skill, "reason": reason}
+                if summary["excluded_statuses"]:
+                    issue["excluded_statuses"] = sorted(summary["excluded_statuses"])
+                if summary["reasons"]:
+                    issue["exclusion_reasons"] = sorted(summary["reasons"])
+                unresolved.append(issue)
+            for key in refs[skill]:
+                resource = catalog[key]
+                if resource_review_status(resource) == "partial":
+                    partial_resources.append({
+                        "skill": skill,
+                        "resource_key": key,
+                        "review_note": resource.get("review_note", ""),
+                    })
         roadmap.append(
             {
                 "week": index + 1,
@@ -188,6 +255,9 @@ def build_roadmap(
                 "resources": week_resources,
                 "resource_keys": {skill: refs[skill] for skill in week_skills},
                 "skills_without_resources": [skill for skill in week_skills if not refs[skill]],
+                "unresolved": unresolved,
+                "partial_resources": partial_resources,
+                "practice_routes": get_practice_routes(week_skills, resources),
             }
         )
     return roadmap

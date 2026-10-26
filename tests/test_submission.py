@@ -5,7 +5,7 @@ from io import BytesIO
 import pytest
 
 from document_fixtures import docx_bytes, pdf_bytes
-from modules.submission import prepare_submission
+from modules.submission import SUBMISSION_REQUIRED_INPUT_MESSAGE, prepare_submission
 
 
 @pytest.mark.parametrize("form", [{}, {"skills": " , ; \n "}, {"skills": "interest: games"}, {"interests": "AI", "experience": "Developer"}])
@@ -22,12 +22,13 @@ def test_jd_only_requests_cv_without_creating_profile():
     assert not result["accepted"]
     assert result["profile"] is None
     assert result["cv_jd_result"] is None
-    assert len(result["errors"]) == 1
+    assert len(result["errors"]) == 2
     assert "Hãy tải lên CV" in result["errors"][0]
+    assert "ít nhất một kỹ năng hoặc một CV hợp lệ" in result["errors"][1]
 
 
 @pytest.mark.parametrize("filename,content,code", [
-    ("cv.pdf", b"broken", "UNREADABLE"),
+    ("cv.pdf", b"broken", "INVALID_SIGNATURE"),
     ("cv.pdf", pdf_bytes(), "EMPTY"),
     ("cv.pdf", pdf_bytes(image=True), "SCANNED_PDF"),
     ("cv.docx", docx_bytes(), "EMPTY"),
@@ -39,7 +40,13 @@ def test_invalid_upload_cannot_create_profile_but_manual_claims_remain_usable(fi
         assert result["accepted"] is accepted
         assert result["document"]["error_code"] == code
         assert result["cv_extraction"] is None
-        assert result["errors"] == [result["document"]["message"]]
+        if accepted:
+            assert result["errors"] == [result["document"]["message"]]
+        else:
+            assert result["errors"] == [
+                result["document"]["message"],
+                SUBMISSION_REQUIRED_INPUT_MESSAGE,
+            ]
         if accepted:
             assert result["profile"]["skills"] == ["custom", "python"]
             assert result["profile"]["unrecognized_skills"] == ["custom"]

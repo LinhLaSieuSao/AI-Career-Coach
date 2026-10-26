@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "method": "Synthetic regression benchmark; not a psychometric or hiring-validity study.",
+  "profiles": [
+    {
+      "id": "backend_java_core",
+      "scenario": "specialized",
+      "skills": [
+        "java",
+        "spring boot",
+        "rest api"
+      ],
+      "interests": [
+        "solve_technical"
+      ],
+      "expected_top_roles": [
+        "backend_developer_java"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "frontend_react_core",
+      "scenario": "specialized",
+      "skills": [
+        "reactjs",
+        "redux",
+        "typescript"
+      ],
+      "interests": [
+        "design_visual"
+      ],
+      "expected_top_roles": [
+        "frontend_developer_react"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "frontend_vue_core",
+      "scenario": "specialized",
+      "skills": [
+        "vuejs",
+        "vuex",
+        "tailwind css"
+      ],
+      "interests": [
+        "design_visual"
+      ],
+      "expected_top_roles": [
+        "frontend_developer_vue"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "fullstack_mern_core",
+      "scenario": "specialized",
+      "skills": [
+        "nodejs",
+        "mongodb",
+        "expressjs"
+      ],
+      "interests": [
+        "invent_solutions"
+      ],
+      "expected_top_roles": [
+        "fullstack_developer_mern"
+      ],
+      "forbidden_top_roles": [
+        "accountant",
+        "recruitment_specialist"
+      ]
+    },
+    {
+      "id": "android_core",
+      "scenario": "specialized",
+      "skills": [
+        "kotlin",
+        "android sdk",
+        "mvvm"
+      ],
+      "interests": [
+        "build_repair"
+      ],
+      "expected_top_roles": [
+        "mobile_developer_android"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "data_analyst_core",
+      "scenario": "specialized",
+      "skills": [
+        "power bi",
+        "tableau",
+        "excel"
+      ],
+      "interests": [
+        "analyze_data"
+      ],
+      "expected_top_roles": [
+        "data_analyst",
+        "business_intelligence_analyst"
+      ],
+      "forbidden_top_roles": [
+        "cb_specialist",
+        "sales_executive"
+      ]
+    },
+    {
+      "id": "data_engineering_core",
+      "scenario": "specialized",
+      "skills": [
+        "apache spark",
+        "etl",
+        "airflow"
+      ],
+      "interests": [
+        "solve_technical"
+      ],
+      "expected_top_roles": [
+        "data_engineer"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "machine_learning_core",
+      "scenario": "specialized",
+      "skills": [
+        "pytorch",
+        "thuật toán học máy",
+        "toán học"
+      ],
+      "interests": [
+        "solve_technical"
+      ],
+      "expected_top_roles": [
+        "machine_learning_engineer"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "recruitment_specialist"
+      ]
+    },
+    {
+      "id": "devops_core",
+      "scenario": "specialized",
+      "skills": [
+        "kubernetes",
+        "terraform",
+        "ci/cd"
+      ],
+      "interests": [
+        "operate_equipment"
+      ],
+      "expected_top_roles": [
+        "devops_engineer"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "security_core",
+      "scenario": "specialized",
+      "skills": [
+        "siem",
+        "firewall",
+        "bảo mật hệ thống"
+      ],
+      "interests": [
+        "investigate_users"
+      ],
+      "expected_top_roles": [
+        "security_engineer"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "product_management_core",
+      "scenario": "specialized",
+      "skills": [
+        "quản lý sản phẩm",
+        "nghiên cứu thị trường",
+        "jira"
+      ],
+      "interests": [
+        "lead_projects"
+      ],
+      "expected_top_roles": [
+        "product_manager"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "business_analysis_core",
+      "scenario": "specialized",
+      "skills": [
+        "phân tích yêu cầu",
+        "vẽ quy trình",
+        "sql"
+      ],
+      "interests": [
+        "analyze_data",
+        "advise_solutions"
+      ],
+      "expected_top_roles": [
+        "business_analyst"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "uiux_core",
+      "scenario": "specialized",
+      "skills": [
+        "figma",
+        "nghiên cứu người dùng",
+        "prototyping"
+      ],
+      "interests": [
+        "design_visual",
+        "investigate_users"
+      ],
+      "expected_top_roles": [
+        "ui_ux_designer"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "digital_marketing_core",
+      "scenario": "specialized",
+      "skills": [
+        "seo",
+        "facebook ads",
+        "google ads"
+      ],
+      "interests": [
+        "create_content",
+        "develop_business"
+      ],
+      "expected_top_roles": [
+        "digital_marketing_executive"
+      ],
+      "forbidden_top_roles": [
+        "accountant",
+        "security_engineer"
+      ]
+    },
+    {
+      "id": "sales_core",
+      "scenario": "specialized",
+      "skills": [
+        "bán hàng",
+        "tìm kiếm khách hàng",
+        "thuyết phục"
+      ],
+      "interests": [
+        "negotiate",
+        "develop_business"
+      ],
+      "expected_top_roles": [
+        "sales_executive"
+      ],
+      "forbidden_top_roles": [
+        "accountant",
+        "security_engineer"
+      ]
+    },
+    {
+      "id": "key_account_core",
+      "scenario": "specialized",
+      "skills": [
+        "quản lý tài khoản",
+        "bán hàng b2b",
+        "thương lượng"
+      ],
+      "interests": [
+        "negotiate",
+        "lead_projects"
+      ],
+      "expected_top_roles": [
+        "key_account_manager"
+      ],
+      "forbidden_top_roles": [
+        "accountant",
+        "security_engineer"
+      ]
+    },
+    {
+      "id": "accounting_core",
+      "scenario": "specialized",
+      "skills": [
+        "misa",
+        "luật kế toán",
+        "kế toán doanh nghiệp"
+      ],
+      "interests": [
+        "quality_check",
+        "organize_processes"
+      ],
+      "expected_top_roles": [
+        "accountant"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "security_engineer"
+      ]
+    },
+    {
+      "id": "recruiting_core",
+      "scenario": "specialized",
+      "skills": [
+        "tuyển dụng",
+        "tìm kiếm ứng viên",
+        "linkedin"
+      ],
+      "interests": [
+        "support_people",
+        "advise_solutions"
+      ],
+      "expected_top_roles": [
+        "recruitment_specialist"
+      ],
+      "forbidden_top_roles": [
+        "accountant",
+        "security_engineer"
+      ]
+    },
+    {
+      "id": "mechanical_core",
+      "scenario": "specialized",
+      "skills": [
+        "solidworks",
+        "đọc bản vẽ kỹ thuật",
+        "gia công cơ khí"
+      ],
+      "interests": [
+        "operate_equipment",
+        "build_repair"
+      ],
+      "expected_top_roles": [
+        "mechanical_engineer"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "architecture_core",
+      "scenario": "specialized",
+      "skills": [
+        "revit architecture",
+        "3ds max",
+        "tư duy không gian"
+      ],
+      "interests": [
+        "design_visual",
+        "invent_solutions"
+      ],
+      "expected_top_roles": [
+        "architect"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "single_common_python",
+      "scenario": "single_common_skill",
+      "skills": [
+        "python"
+      ],
+      "interests": [
+        "analyze_data"
+      ],
+      "expected_top_roles": [
+        "data_analyst",
+        "data_engineer",
+        "machine_learning_engineer",
+        "backend_developer_java"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant",
+        "architect"
+      ]
+    },
+    {
+      "id": "multi_domain_sql_python_powerbi",
+      "scenario": "multi_domain",
+      "skills": [
+        "sql",
+        "python",
+        "power bi",
+        "excel"
+      ],
+      "interests": [
+        "analyze_data",
+        "organize_processes"
+      ],
+      "expected_top_roles": [
+        "data_analyst",
+        "business_intelligence_analyst",
+        "data_engineer"
+      ],
+      "forbidden_top_roles": [
+        "sales_executive",
+        "accountant"
+      ]
+    },
+    {
+      "id": "conflicting_sales_interest_data_skills",
+      "scenario": "conflicting_interests",
+      "skills": [
+        "power bi",
+        "tableau",
+        "excel",
+        "sql"
+      ],
+      "interests": [
+        "negotiate",
+        "develop_business"
+      ],
+      "expected_top_roles": [
+        "data_analyst",
+        "business_intelligence_analyst"
+      ],
+      "forbidden_top_roles": [
+        "cb_specialist",
+        "sales_executive"
+      ]
+    }
+  ]
+}

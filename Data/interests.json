@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "model": "RIASEC activity map for preliminary career exploration; not a standardized psychometric assessment",
+  "dimensions": ["R", "I", "A", "S", "E", "C"],
+  "activities": [
+    {"id": "operate_equipment", "label": "Vận hành thiết bị hoặc hệ thống phần cứng", "dimension": "R", "vector": {"R": 1, "I": 0, "A": 0, "S": 0, "E": 0, "C": 0}, "aliases": ["vận hành thiết bị", "lắp ráp phần cứng", "thi công mạng", "hardware operations"]},
+    {"id": "build_repair", "label": "Lắp ráp, sửa chữa hoặc cấu hình thiết bị", "dimension": "R", "vector": {"R": 1, "I": 0, "A": 0, "S": 0, "E": 0, "C": 0}, "aliases": ["lắp ráp và sửa chữa thiết bị", "sửa chữa thiết bị", "lắp ráp hệ thống"]},
+    {"id": "field_work", "label": "Khảo sát hoặc làm việc tại hiện trường", "dimension": "R", "vector": {"R": 1, "I": 0, "A": 0, "S": 0, "E": 0, "C": 0}, "aliases": ["làm việc hiện trường", "khảo sát hiện trường", "thực địa"]},
+    {"id": "analyze_data", "label": "Tìm quy luật và phân tích số liệu", "dimension": "I", "vector": {"R": 0, "I": 1, "A": 0, "S": 0, "E": 0, "C": 0}, "aliases": ["phân tích dữ liệu", "tìm quy luật số liệu", "data analysis", "data analytics", "phân tích số liệu"]},
+    {"id": "solve_technical", "label": "Nghiên cứu thuật toán hoặc xử lý vấn đề kỹ thuật", "dimension": "I", "vector": {"R": 0, "I": 1, "A": 0, "S": 0, "E": 0, "C": 0}, "aliases": ["nghiên cứu thuật toán", "giải quyết vấn đề kỹ thuật", "debug hệ thống", "technical problem solving"]},
+    {"id": "investigate_users", "label": "Tìm hiểu hành vi và nhu cầu người dùng", "dimension": "I", "vector": {"R": 0, "I": 1, "A": 0, "S": 0, "E": 0, "C": 0}, "aliases": ["phân tích hành vi người dùng", "nghiên cứu người dùng", "user research"]},
+    {"id": "design_visual", "label": "Thiết kế giao diện hoặc trải nghiệm trực quan", "dimension": "A", "vector": {"R": 0, "I": 0, "A": 1, "S": 0, "E": 0, "C": 0}, "aliases": ["thiết kế giao diện", "thiết kế trực quan", "thiết kế sản phẩm", "visual design", "ui ux"]},
+    {"id": "create_content", "label": "Sáng tạo nội dung hoặc phong cách thương hiệu", "dimension": "A", "vector": {"R": 0, "I": 0, "A": 1, "S": 0, "E": 0, "C": 0}, "aliases": ["sáng tạo nội dung", "viết nội dung", "xây dựng phong cách thương hiệu", "content creation", "content writing"]},
+    {"id": "invent_solutions", "label": "Phát triển ý tưởng và cách giải quyết mới", "dimension": "A", "vector": {"R": 0, "I": 0, "A": 1, "S": 0, "E": 0, "C": 0}, "aliases": ["sáng tạo giải pháp", "phát triển ý tưởng", "creative problem solving"]},
+    {"id": "teach_guide", "label": "Đào tạo, hướng dẫn hoặc cố vấn người khác", "dimension": "S", "vector": {"R": 0, "I": 0, "A": 0, "S": 1, "E": 0, "C": 0}, "aliases": ["đào tạo và hướng dẫn", "hướng dẫn người khác", "đào tạo", "teaching", "coaching"]},
+    {"id": "advise_solutions", "label": "Tư vấn phương án phù hợp cho người khác", "dimension": "S", "vector": {"R": 0, "I": 0, "A": 0, "S": 1, "E": 0, "C": 0}, "aliases": ["tư vấn giải pháp", "tư vấn khách hàng", "tư vấn", "consulting"]},
+    {"id": "support_people", "label": "Chăm sóc và hỗ trợ khách hàng hoặc người dùng", "dimension": "S", "vector": {"R": 0, "I": 0, "A": 0, "S": 1, "E": 0, "C": 0}, "aliases": ["chăm sóc và hỗ trợ khách hàng", "hỗ trợ người dùng", "customer support", "customer service"]},
+    {"id": "negotiate", "label": "Đàm phán và thuyết phục trong giao dịch", "dimension": "E", "vector": {"R": 0, "I": 0, "A": 0, "S": 0, "E": 1, "C": 0}, "aliases": ["đàm phán thương mại", "đàm phán", "bán hàng", "sales", "negotiation"]},
+    {"id": "lead_projects", "label": "Điều phối nhóm và tiến độ dự án", "dimension": "E", "vector": {"R": 0, "I": 0, "A": 0, "S": 0, "E": 1, "C": 0}, "aliases": ["quản lý tiến độ dự án", "lãnh đạo dự án", "quản lý dự án", "project management"]},
+    {"id": "develop_business", "label": "Phát triển kinh doanh và quan hệ đối tác", "dimension": "E", "vector": {"R": 0, "I": 0, "A": 0, "S": 0, "E": 1, "C": 0}, "aliases": ["phát triển kinh doanh", "phát triển khách hàng", "business development"]},
+    {"id": "quality_check", "label": "Kiểm tra chất lượng và tính chính xác của dữ liệu", "dimension": "C", "vector": {"R": 0, "I": 0, "A": 0, "S": 0, "E": 0, "C": 1}, "aliases": ["kiểm soát chất lượng dữ liệu", "kiểm tra chất lượng", "quality assurance"]},
+    {"id": "organize_processes", "label": "Chuẩn hóa quy trình và hồ sơ", "dimension": "C", "vector": {"R": 0, "I": 0, "A": 0, "S": 0, "E": 0, "C": 1}, "aliases": ["thiết lập quy trình", "chuẩn hóa quy trình", "quản lý quy trình"]},
+    {"id": "plan_resources", "label": "Lập kế hoạch nguồn lực và tối ưu chi phí", "dimension": "C", "vector": {"R": 0, "I": 0, "A": 0, "S": 0, "E": 0, "C": 1}, "aliases": ["lập kế hoạch nguồn lực", "tối ưu chi phí", "quản lý hồ sơ"]}
+  ]
+}

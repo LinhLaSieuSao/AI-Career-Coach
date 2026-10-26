@@ -15,13 +15,12 @@ def test_level_mode_requires_explicit_consent_and_calls_core_without_inferring_c
         calls.append((levels, role))
         return compute_gap(levels, role)
     monkeypatch.setattr(modules, "compute_gap", spy)
-    def question_spy(role_id, n=5, seed=None, focus_skills=None):
+    def question_spy(role_id, n=5, seed=None, focus_skills=None, *, prefer_reviewed=False):
         focus_calls.append(focus_skills)
-        return get_questions(role_id, n, 14, focus_skills)
+        return get_questions(role_id, n, 14, focus_skills, prefer_reviewed=prefer_reviewed)
     monkeypatch.setattr(modules, "get_questions", question_spy)
     app = _upload(_start(), "Python developer")
-    _field(app, "Level tự khai báo (JSON, không bắt buộc)").input('{"SQL": 1}')
-    app = _submit(app)
+    app = _submit(app, "SQL", levels={"sql": 1})
     profile = app.session_state["profile_result"]
     assert profile["levels"] == {"sql": 1} and profile["skills"] == ["python", "sql"]
     role = next(r for r in load_roles() if r["id"] == "data_analyst")
@@ -43,18 +42,16 @@ def test_level_mode_requires_explicit_consent_and_calls_core_without_inferring_c
     assert focus_calls[-1] == expected["missing"] and "sql" in focus_calls[-1]
 
 
-def test_level_form_errors_preserve_last_accepted_snapshot():
-    app = _submit(_start(), "SQL")
+def test_level_selectors_store_explicit_values_and_rejected_draft_preserves_snapshot():
+    app = _submit(_start(), "SQL", levels={"sql": 2})
     saved = app.session_state["profile_result"]
     revision = app.session_state["profile_revision"]
-    for invalid in ('{"SQL": true}', '{broken', '{"JS":1,"javascript":2}', '{"SQL":1,"SQL":2}'):
-        _field(app, "Level tự khai báo (JSON, không bắt buộc)").input(invalid)
-        app = _submit(app, "Python")
-        assert app.session_state["profile_result"] == saved
-        assert app.session_state["profile_revision"] == revision
-        assert app.error and app.warning
-    _field(app, "Level tự khai báo (JSON, không bắt buộc)").input('{"Python3":2}')
-    app = _submit(app, "Python")
+    assert saved["levels"] == {"sql": 2}
+    app = _submit(app, "")
+    assert app.session_state["profile_result"] == saved
+    assert app.session_state["profile_revision"] == revision
+    assert app.error
+    app = _submit(app, "Python", levels={"python": 2})
     assert app.session_state["profile_result"]["levels"] == {"python": 2}
     assert not app.error
 
@@ -62,6 +59,8 @@ def test_level_form_errors_preserve_last_accepted_snapshot():
 def test_role_suggestions_require_explicit_selection_and_show_explanations():
     app = _submit(_start(), "Java; Spring Boot", role_id=None)
     assert app.session_state["career_role_id"] is None and not app.metric
+    assert any("Hãy chọn vị trí" in item.value for item in app.info)
+    assert not any("Chưa có dữ liệu cho mục này" in item.value for item in app.info)
     assert "không là xác suất tuyển dụng" in " ".join(c.value for c in app.caption)
     choices = [b for b in app.button if b.key and b.key.startswith("choose_role_")]
     assert choices and "Kỹ năng trùng" in " ".join(c.value for c in app.caption)
@@ -71,14 +70,13 @@ def test_role_suggestions_require_explicit_selection_and_show_explanations():
     assert app.session_state["career_role_id"] == chosen_id
     assert app.selectbox[0].value == chosen_id
     assert app.metric
-    _field(app, "Kỹ năng").input("Java; SQL")
-    next(b for b in app.button if b.label == "Tạo hồ sơ nghề nghiệp").click().run()
+    app = _submit(app, "Java; SQL", role_id=chosen_id)
     assert not app.exception and app.session_state["career_role_id"] == chosen_id
 
 
 def _interview_with_single_gap(monkeypatch, skill):
-    def seeded(role_id, n=5, seed=None, focus_skills=None):
-        return get_questions(role_id, n, 14, focus_skills)
+    def seeded(role_id, n=5, seed=None, focus_skills=None, *, prefer_reviewed=False):
+        return get_questions(role_id, n, 14, focus_skills, prefer_reviewed=prefer_reviewed)
     monkeypatch.setattr(modules, "get_questions", seeded)
     role = next(r for r in load_roles() if r["id"] == "data_analyst")
     skills = ";".join(s["name"] for s in role["skills"] if s["name"] != skill)
@@ -88,38 +86,45 @@ def _interview_with_single_gap(monkeypatch, skill):
     return app
 
 
-def test_interview_focus_privacy_empty_answer_and_scoring_after_submission(monkeypatch):
+def test_interview_focus_privacy_empty_answer_and_guidance_after_submission(monkeypatch):
     app = _interview_with_single_gap(monkeypatch, "sql")
     questions = app.session_state["interview_session"]["questions"]
     assert questions[0]["skill"] == "sql"
     assert "Đáp án mẫu tham khảo" not in _markdown(app)
-    assert "Điểm rubric:" not in _markdown(app)
+    assert "Điểm phủ khái niệm" not in _markdown(app)
     buttons = lambda: [b for b in app.button if b.label == "Gửi câu trả lời"]
     buttons()[0].click().run()
-    assert app.warning and app.session_state["interview_session"]["scores"] == {}
+    assert app.warning and app.session_state["interview_session"]["answered_ids"] == []
     q = _question_for_id(questions[0]["id"])
     _field(app, "Câu trả lời của bạn").input(q["reference_answer"])
     buttons()[0].click().run()
     assert not app.exception
-    assert "**Điểm rubric:** 10/10" in _markdown(app)
-    assert "Đáp án mẫu tham khảo" in _markdown(app)
-    assert "không xác minh" in " ".join(c.value for c in app.caption)
-    _field(app, "Câu trả lời của bạn").input("Nội dung không liên quan")
+    assert "**Khung trả lời tham khảo**" in _markdown(app)
+    assert any("Hệ thống không phân tích nội dung" in caption.value for caption in app.caption)
+    assert any("không được suy ra từ câu trả lời vừa gửi" in caption.value for caption in app.caption)
+    assert "learn.microsoft.com" in _markdown(app)
+    submitted = app.session_state["interview_session"]["submitted_answers"][questions[0]["id"]]
+    _field(app, "Câu trả lời của bạn").input("Bản sửa chưa gửi")
+    assert app.session_state["interview_session"]["submitted_answers"][questions[0]["id"]] == submitted
+    _field(app, "Câu trả lời của bạn").input("Câu trả lời đã gửi lần hai")
     buttons()[0].click().run()
-    assert "**Điểm rubric:** 0/10" in _markdown(app)
+    assert app.session_state["interview_session"]["submitted_answers"][questions[0]["id"]] == "Câu trả lời đã gửi lần hai"
+    assert "Điểm phủ khái niệm" not in _markdown(app)
     app.radio[0].set_value("Theo level tự khai báo").run()
     assert "interview_session" not in app.session_state
-    assert "Đáp án mẫu tham khảo" not in _markdown(app)
+    assert "Khung trả lời tham khảo" not in _markdown(app)
 
 
-def test_template_answer_reveals_reference_after_submit_without_fake_zero(monkeypatch):
+def test_ai_assisted_answer_reveals_bounded_guidance_after_submit_without_scoring(monkeypatch):
     app = _interview_with_single_gap(monkeypatch, "tư duy phân tích")
-    assert app.session_state["interview_session"]["questions"][0]["quality"] == "template"
+    assert app.session_state["interview_session"]["questions"][0]["quality"] == "unreviewed"
     _field(app, "Câu trả lời của bạn").input("Ví dụ thực tế theo STAR của tôi")
     next(b for b in app.button if b.label == "Gửi câu trả lời").click().run()
     assert not app.exception
-    assert any("rubric chưa sẵn sàng" in i.value for i in app.info)
-    assert "Đáp án mẫu tham khảo" in _markdown(app) and "Điểm rubric:" not in _markdown(app)
+    assert any("chưa được review đầy đủ" in i.value for i in app.info)
+    expected_guidance = "Cách triển khai câu trả lời" if app.session_state["interview_session"]["questions"][0]["type"] == "scenario" else "Khung trả lời tham khảo"
+    assert expected_guidance in _markdown(app)
+    assert "Điểm phủ khái niệm" not in _markdown(app)
 
 
 def test_demo_profile_button_populates_widgets_and_creates_labeled_synthetic_profile():
@@ -130,12 +135,14 @@ def test_demo_profile_button_populates_widgets_and_creates_labeled_synthetic_pro
     assert not app.exception
     next(button for button in app.button if button.key == "use_demo_backend-java").click().run()
     assert not app.exception
+    assert app.session_state["profile_draft"]["role_id"] == "backend_developer_java"
+    assert app.session_state["profile_step"] == 2
+    assert "java" in app.multiselect[0].value
+    assert app.session_state["job_description_input"] == ""
+    app = _submit(app)
     assert app.session_state["career_role_id"] == "backend_developer_java"
     assert app.session_state["active_demo_profile_id"] == "backend-java"
     assert app.session_state["profile_result"]["skills"]
-    assert "Java" in _field(app, "Kỹ năng").value
-    assert app.selectbox[0].value == "backend_developer_java"
-    assert _field(app, "Mô tả công việc cần đối chiếu (không bắt buộc)").value == ""
     assert any("Hồ sơ tổng hợp minh họa" in item.value for item in app.info)
     assert not app.error
 
@@ -180,3 +187,15 @@ def test_timed_ui_can_show_complete_fixture_and_explicit_estimates():
     assert len(app.expander) == 3
     assert any("ước lượng" in w.value for w in app.warning)
     assert "Two measured trial tasks" in " ".join(c.value for c in app.caption)
+
+
+def test_timed_ui_explains_when_only_unreviewed_material_exists():
+    unreviewed = resource(content_review_status="unreviewed")
+    timed = build_timed_roadmap(gap(("sql", 2, 1)), catalog(sql=[unreviewed]))
+    app = AppTest.from_string(f"from app import render_timed_roadmap\nrender_timed_roadmap({timed!r})").run()
+
+    assert not app.exception
+    assert _metric(app, "Tổng giờ công bố đã chọn") == "0.00"
+    assert _metric(app, "Số tuần toàn lộ trình") == "Chưa xác định"
+    assert any("Chưa có tài liệu được review nội dung" in warning.value for warning in app.warning)
+    assert not app.expander

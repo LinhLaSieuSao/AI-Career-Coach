@@ -18,7 +18,10 @@
           "Kết luận về kế toán doanh nghiệp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu bút toán với hóa đơn/chứng từ gốc, hợp đồng, phê duyệt và sổ chi tiết; phân tích theo tài khoản, kỳ và đối tượng để tìm ghi nhận thiếu, trùng hoặc sai kỳ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu bút toán với hóa đơn/chứng từ gốc, hợp đồng, phê duyệt và sổ chi tiết; phân tích theo tài khoản, kỳ và đối tượng để tìm ghi nhận thiếu, trùng hoặc sai kỳ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "accountant_q02",
@@ -36,7 +39,10 @@
           "Kết luận về excel mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "accountant_q03",
@@ -54,7 +60,10 @@
           "Kết luận về misa mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Truy từ báo cáo/sổ trên MISA về chứng từ và bút toán gốc, kiểm tra kỳ, tài khoản, đối tượng và trạng thái ghi sổ; chỉ sửa sau khi xác minh và có phê duyệt phù hợp. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Truy từ báo cáo/sổ trên MISA về chứng từ và bút toán gốc, kiểm tra kỳ, tài khoản, đối tượng và trạng thái ghi sổ; chỉ sửa sau khi xác minh và có phê duyệt phù hợp. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "accountant_q04",
@@ -72,7 +81,10 @@
           "Kết luận về luật kế toán mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Xác định bản chất nghiệp vụ, thời điểm ghi nhận và hồ sơ; tra cứu quy định/chuẩn mực đang áp dụng cho đơn vị, ghi lại căn cứ thay vì suy luận từ riêng số liệu. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Xác định bản chất nghiệp vụ, thời điểm ghi nhận và hồ sơ; tra cứu quy định/chuẩn mực đang áp dụng cho đơn vị, ghi lại căn cứ thay vì suy luận từ riêng số liệu. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "accountant_q05",
@@ -90,7 +102,10 @@
           "Kết luận về cẩn thận mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "accountant_q06",
@@ -108,7 +123,10 @@
           "Kết luận về giao tiếp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "general_accountant": [
@@ -128,7 +146,10 @@
           "Kết luận về kế toán tổng hợp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu sổ cái với sổ chi tiết và chứng từ của các phần hành, kiểm tra bút toán kết chuyển/phân bổ và biến động bất thường theo kỳ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu sổ cái với sổ chi tiết và chứng từ của các phần hành, kiểm tra bút toán kết chuyển/phân bổ và biến động bất thường theo kỳ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "general_accountant_q02",
@@ -146,7 +167,10 @@
           "Kết luận về lập báo cáo tài chính mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu trial balance với sổ chi tiết, ngân hàng, công nợ, hàng tồn và tài sản; kiểm tra phân loại, cutoff, kết chuyển và thuyết minh nhất quán giữa các báo cáo. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu trial balance với sổ chi tiết, ngân hàng, công nợ, hàng tồn và tài sản; kiểm tra phân loại, cutoff, kết chuyển và thuyết minh nhất quán giữa các báo cáo. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "general_accountant_q03",
@@ -164,7 +188,10 @@
           "Kết luận về excel mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "general_accountant_q04",
@@ -182,7 +209,10 @@
           "Kết luận về misa mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Truy từ báo cáo/sổ trên MISA về chứng từ và bút toán gốc, kiểm tra kỳ, tài khoản, đối tượng và trạng thái ghi sổ; chỉ sửa sau khi xác minh và có phê duyệt phù hợp. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Truy từ báo cáo/sổ trên MISA về chứng từ và bút toán gốc, kiểm tra kỳ, tài khoản, đối tượng và trạng thái ghi sổ; chỉ sửa sau khi xác minh và có phê duyệt phù hợp. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "general_accountant_q05",
@@ -200,7 +230,10 @@
           "Kết luận về kế toán thuế mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu tờ khai với hóa đơn, sổ kế toán và chứng từ liên quan; truy nguyên chênh lệch theo kỳ/loại giao dịch, không tự suy diễn cách áp dụng khi căn cứ chưa rõ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu tờ khai với hóa đơn, sổ kế toán và chứng từ liên quan; truy nguyên chênh lệch theo kỳ/loại giao dịch, không tự suy diễn cách áp dụng khi căn cứ chưa rõ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "general_accountant_q06",
@@ -218,7 +251,10 @@
           "Kết luận về tư duy phân tích mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "general_accountant_q07",
@@ -236,7 +272,10 @@
           "Kết luận về cẩn thận mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "chief_accountant": [
@@ -256,7 +295,10 @@
           "Kết luận về quản lý tài chính mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu số liệu với ngân sách, dòng tiền và chứng từ; phân tích biến động theo khoản mục/kỳ, nêu nguyên nhân đã xác minh và tác động tới khả năng thanh toán/nguồn lực. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu số liệu với ngân sách, dòng tiền và chứng từ; phân tích biến động theo khoản mục/kỳ, nêu nguyên nhân đã xác minh và tác động tới khả năng thanh toán/nguồn lực. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "chief_accountant_q02",
@@ -274,7 +316,10 @@
           "Kết luận về lập báo cáo tài chính mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu trial balance với sổ chi tiết, ngân hàng, công nợ, hàng tồn và tài sản; kiểm tra phân loại, cutoff, kết chuyển và thuyết minh nhất quán giữa các báo cáo. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu trial balance với sổ chi tiết, ngân hàng, công nợ, hàng tồn và tài sản; kiểm tra phân loại, cutoff, kết chuyển và thuyết minh nhất quán giữa các báo cáo. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "chief_accountant_q03",
@@ -292,7 +337,10 @@
           "Kết luận về quản lý đội ngũ mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Phân công người rà từng phần hành, thống nhất checklist và hạn chốt; phân tách người lập/người soát xét khi phù hợp, theo dõi ngoại lệ đến khi được xử lý. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Phân công người rà từng phần hành, thống nhất checklist và hạn chốt; phân tách người lập/người soát xét khi phù hợp, theo dõi ngoại lệ đến khi được xử lý. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "chief_accountant_q04",
@@ -310,7 +358,10 @@
           "Kết luận về luật kế toán mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Xác định bản chất nghiệp vụ, thời điểm ghi nhận và hồ sơ; tra cứu quy định/chuẩn mực đang áp dụng cho đơn vị, ghi lại căn cứ thay vì suy luận từ riêng số liệu. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Xác định bản chất nghiệp vụ, thời điểm ghi nhận và hồ sơ; tra cứu quy định/chuẩn mực đang áp dụng cho đơn vị, ghi lại căn cứ thay vì suy luận từ riêng số liệu. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "chief_accountant_q05",
@@ -328,7 +379,10 @@
           "Kết luận về kế toán thuế mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu tờ khai với hóa đơn, sổ kế toán và chứng từ liên quan; truy nguyên chênh lệch theo kỳ/loại giao dịch, không tự suy diễn cách áp dụng khi căn cứ chưa rõ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu tờ khai với hóa đơn, sổ kế toán và chứng từ liên quan; truy nguyên chênh lệch theo kỳ/loại giao dịch, không tự suy diễn cách áp dụng khi căn cứ chưa rõ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "chief_accountant_q06",
@@ -346,7 +400,10 @@
           "Kết luận về giao tiếp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "chief_accountant_q07",
@@ -364,7 +421,10 @@
           "Kết luận về giải quyết vấn đề mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "tax_accountant": [
@@ -384,7 +444,10 @@
           "Kết luận về kế toán thuế mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu tờ khai với hóa đơn, sổ kế toán và chứng từ liên quan; truy nguyên chênh lệch theo kỳ/loại giao dịch, không tự suy diễn cách áp dụng khi căn cứ chưa rõ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu tờ khai với hóa đơn, sổ kế toán và chứng từ liên quan; truy nguyên chênh lệch theo kỳ/loại giao dịch, không tự suy diễn cách áp dụng khi căn cứ chưa rõ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "tax_accountant_q02",
@@ -402,7 +465,10 @@
           "Kết luận về luật thuế mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Xác định kỳ tính thuế, loại giao dịch và hồ sơ; đối chiếu với văn bản/hướng dẫn hiện hành áp dụng cho đơn vị, ghi rõ căn cứ và xin rà soát chuyên môn khi còn cách hiểu khác nhau. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Xác định kỳ tính thuế, loại giao dịch và hồ sơ; đối chiếu với văn bản/hướng dẫn hiện hành áp dụng cho đơn vị, ghi rõ căn cứ và xin rà soát chuyên môn khi còn cách hiểu khác nhau. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "tax_accountant_q03",
@@ -420,7 +486,10 @@
           "Kết luận về kê khai thuế mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu dữ liệu kê khai với hóa đơn đầu vào/ra, sổ và biên nhận kỳ trước; kiểm tra mã số, kỳ, chỉ tiêu và chênh lệch trước khi gửi hoặc điều chỉnh. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu dữ liệu kê khai với hóa đơn đầu vào/ra, sổ và biên nhận kỳ trước; kiểm tra mã số, kỳ, chỉ tiêu và chênh lệch trước khi gửi hoặc điều chỉnh. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "tax_accountant_q04",
@@ -438,7 +507,10 @@
           "Kết luận về lập báo cáo tài chính mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu trial balance với sổ chi tiết, ngân hàng, công nợ, hàng tồn và tài sản; kiểm tra phân loại, cutoff, kết chuyển và thuyết minh nhất quán giữa các báo cáo. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu trial balance với sổ chi tiết, ngân hàng, công nợ, hàng tồn và tài sản; kiểm tra phân loại, cutoff, kết chuyển và thuyết minh nhất quán giữa các báo cáo. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "tax_accountant_q05",
@@ -456,7 +528,10 @@
           "Kết luận về htkk mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu chỉ tiêu trên HTKK với tờ khai, hóa đơn/sổ và kỳ tính thuế; lưu bản nháp, kiểm tra cảnh báo và biên nhận, chỉ nộp/điều chỉnh sau khi căn cứ được xác nhận. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu chỉ tiêu trên HTKK với tờ khai, hóa đơn/sổ và kỳ tính thuế; lưu bản nháp, kiểm tra cảnh báo và biên nhận, chỉ nộp/điều chỉnh sau khi căn cứ được xác nhận. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "tax_accountant_q06",
@@ -474,7 +549,10 @@
           "Kết luận về cẩn thận mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "tax_accountant_q07",
@@ -492,7 +570,10 @@
           "Kết luận về giao tiếp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "auditor": [
@@ -512,7 +593,10 @@
           "Kết luận về kiểm toán mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Xác định assertion/rủi ro, chọn chứng từ và thủ tục phù hợp như đối chiếu, xác nhận hoặc kiểm tra mẫu; ghi bằng chứng đủ để người khác lần lại kết luận. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Xác định assertion/rủi ro, chọn chứng từ và thủ tục phù hợp như đối chiếu, xác nhận hoặc kiểm tra mẫu; ghi bằng chứng đủ để người khác lần lại kết luận. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "auditor_q02",
@@ -530,7 +614,10 @@
           "Kết luận về chuẩn mực kế toán mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Xác định bản chất giao dịch và chính sách áp dụng, đối chiếu với chuẩn mực/chế độ kế toán của đơn vị; ghi nhận phán đoán và ảnh hưởng, xin ý kiến chuyên môn nếu có nhiều cách hiểu. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Xác định bản chất giao dịch và chính sách áp dụng, đối chiếu với chuẩn mực/chế độ kế toán của đơn vị; ghi nhận phán đoán và ảnh hưởng, xin ý kiến chuyên môn nếu có nhiều cách hiểu. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "auditor_q03",
@@ -548,7 +635,10 @@
           "Kết luận về tư duy phân tích mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "auditor_q04",
@@ -566,7 +656,10 @@
           "Kết luận về lập báo cáo tài chính mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu trial balance với sổ chi tiết, ngân hàng, công nợ, hàng tồn và tài sản; kiểm tra phân loại, cutoff, kết chuyển và thuyết minh nhất quán giữa các báo cáo. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu trial balance với sổ chi tiết, ngân hàng, công nợ, hàng tồn và tài sản; kiểm tra phân loại, cutoff, kết chuyển và thuyết minh nhất quán giữa các báo cáo. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "auditor_q05",
@@ -584,7 +677,10 @@
           "Kết luận về excel mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "auditor_q06",
@@ -602,7 +698,10 @@
           "Kết luận về giao tiếp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "internal_auditor": [
@@ -622,7 +721,10 @@
           "Kết luận về kiểm toán nội bộ mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Xác định mục tiêu kiểm soát và rủi ro của quy trình, kiểm tra thiết kế/vận hành qua hồ sơ và mẫu giao dịch; phân biệt phát hiện có bằng chứng với giả thuyết nguyên nhân. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Xác định mục tiêu kiểm soát và rủi ro của quy trình, kiểm tra thiết kế/vận hành qua hồ sơ và mẫu giao dịch; phân biệt phát hiện có bằng chứng với giả thuyết nguyên nhân. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "internal_auditor_q02",
@@ -640,7 +742,10 @@
           "Kết luận về quản trị rủi ro mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Mô tả rủi ro theo nguyên nhân–sự kiện–tác động, đánh giá kiểm soát hiện có và rủi ro còn lại; gắn biện pháp, owner, hạn và chỉ báo theo dõi. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Mô tả rủi ro theo nguyên nhân–sự kiện–tác động, đánh giá kiểm soát hiện có và rủi ro còn lại; gắn biện pháp, owner, hạn và chỉ báo theo dõi. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "internal_auditor_q03",
@@ -658,7 +763,10 @@
           "Kết luận về kiểm soát nội bộ mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Lần theo giao dịch từ khởi tạo tới phê duyệt/ghi sổ, kiểm tra phân quyền, đối chiếu và dấu vết; đề xuất kiểm soát bù khi tách nhiệm vụ chưa khả thi. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Lần theo giao dịch từ khởi tạo tới phê duyệt/ghi sổ, kiểm tra phân quyền, đối chiếu và dấu vết; đề xuất kiểm soát bù khi tách nhiệm vụ chưa khả thi. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "internal_auditor_q04",
@@ -676,7 +784,10 @@
           "Kết luận về chuẩn mực kế toán mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Xác định bản chất giao dịch và chính sách áp dụng, đối chiếu với chuẩn mực/chế độ kế toán của đơn vị; ghi nhận phán đoán và ảnh hưởng, xin ý kiến chuyên môn nếu có nhiều cách hiểu. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Xác định bản chất giao dịch và chính sách áp dụng, đối chiếu với chuẩn mực/chế độ kế toán của đơn vị; ghi nhận phán đoán và ảnh hưởng, xin ý kiến chuyên môn nếu có nhiều cách hiểu. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "internal_auditor_q05",
@@ -694,7 +805,10 @@
           "Kết luận về tư duy phân tích mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "internal_auditor_q06",
@@ -712,7 +826,10 @@
           "Kết luận về giao tiếp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "financial_analyst": [
@@ -732,7 +849,10 @@
           "Kết luận về phân tích tài chính mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Chuẩn hóa kỳ và cách phân loại, đọc kết quả kinh doanh, bảng cân đối và dòng tiền cùng nhau; phân rã biến động/biên lợi nhuận, kiểm tra nguyên nhân với dữ liệu nguồn. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Chuẩn hóa kỳ và cách phân loại, đọc kết quả kinh doanh, bảng cân đối và dòng tiền cùng nhau; phân rã biến động/biên lợi nhuận, kiểm tra nguyên nhân với dữ liệu nguồn. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "financial_analyst_q02",
@@ -750,7 +870,10 @@
           "Kết luận về mô hình tài chính mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Tách giả định, driver và công thức khỏi đầu ra; kiểm tra liên kết ba báo cáo, cân đối, dòng tiền và đơn vị, rồi chạy kịch bản/độ nhạy quanh giả định quan trọng. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Tách giả định, driver và công thức khỏi đầu ra; kiểm tra liên kết ba báo cáo, cân đối, dòng tiền và đơn vị, rồi chạy kịch bản/độ nhạy quanh giả định quan trọng. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "financial_analyst_q03",
@@ -768,7 +891,10 @@
           "Kết luận về đọc báo cáo tài chính mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đọc ba báo cáo liên kết: lợi nhuận, tài sản/nợ và dòng tiền; rà chất lượng khoản mục, biến động kỳ và thuyết minh trước khi kết luận về sức khỏe tài chính. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đọc ba báo cáo liên kết: lợi nhuận, tài sản/nợ và dòng tiền; rà chất lượng khoản mục, biến động kỳ và thuyết minh trước khi kết luận về sức khỏe tài chính. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "financial_analyst_q04",
@@ -786,7 +912,10 @@
           "Kết luận về excel mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "financial_analyst_q05",
@@ -804,7 +933,10 @@
           "Kết luận về power bi mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Xác định grain/định nghĩa KPI và nguồn, tạo measure thay vì công thức khó kiểm soát; đối chiếu một số lát cắt với sổ/nguồn và kiểm tra filter context trước bàn giao. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Xác định grain/định nghĩa KPI và nguồn, tạo measure thay vì công thức khó kiểm soát; đối chiếu một số lát cắt với sổ/nguồn và kiểm tra filter context trước bàn giao. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "financial_analyst_q06",
@@ -822,7 +954,10 @@
           "Kết luận về tư duy phân tích mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "financial_analyst_q07",
@@ -840,7 +975,10 @@
           "Kết luận về thuyết trình mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách làm rõ mục tiêu và vai trò cá nhân, kiểm tra thông tin, phối hợp đúng đầu mối và ghi nhận quyết định. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách làm rõ mục tiêu và vai trò cá nhân, kiểm tra thông tin, phối hợp đúng đầu mối và ghi nhận quyết định. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "credit_officer": [
@@ -860,7 +998,10 @@
           "Kết luận về thẩm định tín dụng mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Xác minh hồ sơ, mục đích vay, nguồn trả nợ, dòng tiền và nghĩa vụ hiện hữu; đánh giá khả năng trả nợ cùng rủi ro theo chính sách nội bộ, ghi căn cứ và điều kiện cần bổ sung. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Xác minh hồ sơ, mục đích vay, nguồn trả nợ, dòng tiền và nghĩa vụ hiện hữu; đánh giá khả năng trả nợ cùng rủi ro theo chính sách nội bộ, ghi căn cứ và điều kiện cần bổ sung. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "credit_officer_q02",
@@ -878,7 +1019,10 @@
           "Kết luận về bán hàng mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Tìm hiểu nhu cầu và khả năng phù hợp trước khi giới thiệu; nêu điều kiện/sản phẩm rõ ràng, không hứa kết quả tín dụng khi chưa thẩm định và ghi nhận bước tiếp theo. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Tìm hiểu nhu cầu và khả năng phù hợp trước khi giới thiệu; nêu điều kiện/sản phẩm rõ ràng, không hứa kết quả tín dụng khi chưa thẩm định và ghi nhận bước tiếp theo. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "credit_officer_q03",
@@ -896,7 +1040,10 @@
           "Kết luận về giao tiếp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "credit_officer_q04",
@@ -914,7 +1061,10 @@
           "Kết luận về phân tích tài chính mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Chuẩn hóa kỳ và cách phân loại, đọc kết quả kinh doanh, bảng cân đối và dòng tiền cùng nhau; phân rã biến động/biên lợi nhuận, kiểm tra nguyên nhân với dữ liệu nguồn. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Chuẩn hóa kỳ và cách phân loại, đọc kết quả kinh doanh, bảng cân đối và dòng tiền cùng nhau; phân rã biến động/biên lợi nhuận, kiểm tra nguyên nhân với dữ liệu nguồn. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "credit_officer_q05",
@@ -932,7 +1082,10 @@
           "Kết luận về xây dựng mối quan hệ mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Lắng nghe mục tiêu, cung cấp thông tin nhất quán và thực hiện đúng cam kết; ghi lại việc cần theo dõi, bảo vệ thông tin khách hàng và xử lý vướng mắc qua kênh phù hợp. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Lắng nghe mục tiêu, cung cấp thông tin nhất quán và thực hiện đúng cam kết; ghi lại việc cần theo dõi, bảo vệ thông tin khách hàng và xử lý vướng mắc qua kênh phù hợp. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "credit_officer_q06",
@@ -950,7 +1103,10 @@
           "Kết luận về chịu áp lực mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách ưu tiên theo hạn/rủi ro, chia việc và cập nhật sớm khi có vướng mắc mà vẫn giữ bước kiểm tra trọng yếu. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách ưu tiên theo hạn/rủi ro, chia việc và cập nhật sớm khi có vướng mắc mà vẫn giữ bước kiểm tra trọng yếu. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "risk_management_officer": [
@@ -970,7 +1126,10 @@
           "Kết luận về quản trị rủi ro mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Mô tả rủi ro theo nguyên nhân–sự kiện–tác động, đánh giá kiểm soát hiện có và rủi ro còn lại; gắn biện pháp, owner, hạn và chỉ báo theo dõi. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Mô tả rủi ro theo nguyên nhân–sự kiện–tác động, đánh giá kiểm soát hiện có và rủi ro còn lại; gắn biện pháp, owner, hạn và chỉ báo theo dõi. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "risk_management_officer_q02",
@@ -988,7 +1147,10 @@
           "Kết luận về phân tích dữ liệu mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Tôi sẽ xác định giao dịch/kỳ và hồ sơ nguồn, đối chiếu với sổ hoặc hệ thống liên quan rồi truy nguyên chênh lệch theo đối tượng. Tôi ghi căn cứ, đánh giá ảnh hưởng và xin phê duyệt/ý kiến chuyên môn nếu cách xử lý chưa rõ; sau đó đối chiếu lại kết quả và lưu dấu vết. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Tôi sẽ xác định giao dịch/kỳ và hồ sơ nguồn, đối chiếu với sổ hoặc hệ thống liên quan rồi truy nguyên chênh lệch theo đối tượng. Tôi ghi căn cứ, đánh giá ảnh hưởng và xin phê duyệt/ý kiến chuyên môn nếu cách xử lý chưa rõ; sau đó đối chiếu lại kết quả và lưu dấu vết. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "risk_management_officer_q03",
@@ -1006,7 +1168,10 @@
           "Kết luận về luật ngân hàng mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Xác định loại nghiệp vụ và chủ thể, tra cứu quy định/hướng dẫn hiện hành cùng chính sách nội bộ áp dụng; lưu căn cứ và chuyển pháp chế/tuân thủ rà soát khi phạm vi hoặc cách hiểu chưa rõ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Xác định loại nghiệp vụ và chủ thể, tra cứu quy định/hướng dẫn hiện hành cùng chính sách nội bộ áp dụng; lưu căn cứ và chuyển pháp chế/tuân thủ rà soát khi phạm vi hoặc cách hiểu chưa rõ. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "risk_management_officer_q04",
@@ -1024,7 +1189,10 @@
           "Kết luận về tư duy phân tích mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "risk_management_officer_q05",
@@ -1042,7 +1210,10 @@
           "Kết luận về mô hình rủi ro mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Tôi sẽ xác định giao dịch/kỳ và hồ sơ nguồn, đối chiếu với sổ hoặc hệ thống liên quan rồi truy nguyên chênh lệch theo đối tượng. Tôi ghi căn cứ, đánh giá ảnh hưởng và xin phê duyệt/ý kiến chuyên môn nếu cách xử lý chưa rõ; sau đó đối chiếu lại kết quả và lưu dấu vết. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Tôi sẽ xác định giao dịch/kỳ và hồ sơ nguồn, đối chiếu với sổ hoặc hệ thống liên quan rồi truy nguyên chênh lệch theo đối tượng. Tôi ghi căn cứ, đánh giá ảnh hưởng và xin phê duyệt/ý kiến chuyên môn nếu cách xử lý chưa rõ; sau đó đối chiếu lại kết quả và lưu dấu vết. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "risk_management_officer_q06",
@@ -1060,7 +1231,10 @@
           "Kết luận về giao tiếp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "bank_teller": [
@@ -1080,7 +1254,10 @@
           "Kết luận về nghiệp vụ giao dịch mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Xác minh khách hàng, yêu cầu, chứng từ và số tiền theo quy trình giao dịch; nhập liệu, đối chiếu trạng thái và xử lý sai lệch trước khi xác nhận hoàn tất. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Xác minh khách hàng, yêu cầu, chứng từ và số tiền theo quy trình giao dịch; nhập liệu, đối chiếu trạng thái và xử lý sai lệch trước khi xác nhận hoàn tất. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "bank_teller_q02",
@@ -1098,7 +1275,10 @@
           "Kết luận về chăm sóc khách hàng mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách xác nhận nhu cầu, giải thích phương án trong phạm vi cho phép, hẹn cập nhật và theo dõi đến khi khép việc. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách xác nhận nhu cầu, giải thích phương án trong phạm vi cho phép, hẹn cập nhật và theo dõi đến khi khép việc. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "bank_teller_q03",
@@ -1116,7 +1296,10 @@
           "Kết luận về giao tiếp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "bank_teller_q04",
@@ -1134,7 +1317,10 @@
           "Kết luận về cẩn thận mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "bank_teller_q05",
@@ -1152,7 +1338,10 @@
           "Kết luận về giải quyết vấn đề mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "investment_analyst": [
@@ -1172,7 +1361,10 @@
           "Kết luận về phân tích đầu tư mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Làm rõ thesis, thời hạn và rủi ro; kiểm tra mô hình kinh doanh, dòng tiền, định giá và giả định với hồ sơ/nguồn độc lập, chạy kịch bản bất lợi trước khi nêu luận điểm. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Làm rõ thesis, thời hạn và rủi ro; kiểm tra mô hình kinh doanh, dòng tiền, định giá và giả định với hồ sơ/nguồn độc lập, chạy kịch bản bất lợi trước khi nêu luận điểm. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "investment_analyst_q02",
@@ -1190,7 +1382,10 @@
           "Kết luận về định giá doanh nghiệp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Chọn phương pháp phù hợp dữ liệu và mục tiêu (dòng tiền, so sánh hoặc tài sản), nêu giả định/nguồn đầu vào; kiểm tra độ nhạy và đối chiếu với giao dịch/thị trường tương đồng khi có dữ liệu. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Chọn phương pháp phù hợp dữ liệu và mục tiêu (dòng tiền, so sánh hoặc tài sản), nêu giả định/nguồn đầu vào; kiểm tra độ nhạy và đối chiếu với giao dịch/thị trường tương đồng khi có dữ liệu. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "investment_analyst_q03",
@@ -1208,7 +1403,10 @@
           "Kết luận về phân tích kinh tế vĩ mô mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Theo dõi chỉ báo theo kỳ và nguồn, phân biệt dữ liệu danh nghĩa/thực và yếu tố mùa vụ; xây kịch bản tác động tới ngành/doanh nghiệp, nêu độ trễ và bất định thay vì khẳng định nhân quả. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Theo dõi chỉ báo theo kỳ và nguồn, phân biệt dữ liệu danh nghĩa/thực và yếu tố mùa vụ; xây kịch bản tác động tới ngành/doanh nghiệp, nêu độ trễ và bất định thay vì khẳng định nhân quả. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "investment_analyst_q04",
@@ -1226,7 +1424,10 @@
           "Kết luận về mô hình tài chính mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Tách giả định, driver và công thức khỏi đầu ra; kiểm tra liên kết ba báo cáo, cân đối, dòng tiền và đơn vị, rồi chạy kịch bản/độ nhạy quanh giả định quan trọng. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Tách giả định, driver và công thức khỏi đầu ra; kiểm tra liên kết ba báo cáo, cân đối, dòng tiền và đơn vị, rồi chạy kịch bản/độ nhạy quanh giả định quan trọng. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "investment_analyst_q05",
@@ -1244,7 +1445,10 @@
           "Kết luận về excel mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Kiểm tra nguồn, kỳ, mã đối tượng và công thức; dùng bảng có cấu trúc/Pivot để đối chiếu, rà ô trống, trùng, tham chiếu sai và giữ lại dấu vết công thức. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "investment_analyst_q06",
@@ -1262,7 +1466,10 @@
           "Kết luận về tư duy phân tích mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "investment_analyst_q07",
@@ -1280,7 +1487,10 @@
           "Kết luận về thuyết trình mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách làm rõ mục tiêu và vai trò cá nhân, kiểm tra thông tin, phối hợp đúng đầu mối và ghi nhận quyết định. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách làm rõ mục tiêu và vai trò cá nhân, kiểm tra thông tin, phối hợp đúng đầu mối và ghi nhận quyết định. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "financial_controller": [
@@ -1300,7 +1510,10 @@
           "Kết luận về kiểm soát tài chính mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu actual với ngân sách/forecast, kiểm tra phân quyền và chứng từ cho khoản lệch; xác định nguyên nhân, owner và biện pháp, lưu dấu vết phê duyệt. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu actual với ngân sách/forecast, kiểm tra phân quyền và chứng từ cho khoản lệch; xác định nguyên nhân, owner và biện pháp, lưu dấu vết phê duyệt. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "financial_controller_q02",
@@ -1318,7 +1531,10 @@
           "Kết luận về lập ngân sách mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Dựng ngân sách từ driver/định mức và giả định được xác nhận, tách fixed/variable và owner; so actual/forecast, giải thích variance và cập nhật theo quy trình phê duyệt. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Dựng ngân sách từ driver/định mức và giả định được xác nhận, tách fixed/variable và owner; so actual/forecast, giải thích variance và cập nhật theo quy trình phê duyệt. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "financial_controller_q03",
@@ -1336,7 +1552,10 @@
           "Kết luận về kế toán quản trị mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Phân bổ chi phí theo cost center/driver hợp lý, đối chiếu với sổ tài chính và phân tích variance theo sản phẩm/hoạt động; nêu giả định phân bổ để tránh kết luận sai. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Phân bổ chi phí theo cost center/driver hợp lý, đối chiếu với sổ tài chính và phân tích variance theo sản phẩm/hoạt động; nêu giả định phân bổ để tránh kết luận sai. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "financial_controller_q04",
@@ -1354,7 +1573,10 @@
           "Kết luận về lập báo cáo tài chính mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu trial balance với sổ chi tiết, ngân hàng, công nợ, hàng tồn và tài sản; kiểm tra phân loại, cutoff, kết chuyển và thuyết minh nhất quán giữa các báo cáo. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu trial balance với sổ chi tiết, ngân hàng, công nợ, hàng tồn và tài sản; kiểm tra phân loại, cutoff, kết chuyển và thuyết minh nhất quán giữa các báo cáo. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "financial_controller_q05",
@@ -1372,7 +1594,10 @@
           "Kết luận về erp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Đối chiếu giao dịch và master data giữa module, kiểm tra kỳ/trạng thái phê duyệt và log thay đổi; thử lại báo cáo sau khi sửa dữ liệu có phê duyệt. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt."
+        "reference_answer": "Đối chiếu giao dịch và master data giữa module, kiểm tra kỳ/trạng thái phê duyệt và log thay đổi; thử lại báo cáo sau khi sửa dữ liệu có phê duyệt. Trước khi kết luận, tôi sẽ kiểm tra độc lập một mẫu/trường hợp biên và lưu căn cứ, phiên bản dữ liệu cùng người phê duyệt.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "financial_controller_q06",
@@ -1390,7 +1615,10 @@
           "Kết luận về giao tiếp mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách lắng nghe và nhắc lại thông tin để xác nhận, truyền đạt dữ kiện/tác động rõ ràng, thống nhất owner và bước tiếp theo. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "financial_controller_q07",
@@ -1408,7 +1636,10 @@
           "Kết luận về giải quyết vấn đề mà không kiểm tra chứng từ hoặc dữ liệu nguồn"
         ],
         "time_minutes": 3,
-        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống."
+        "reference_answer": "Một câu trả lời STAR nên nêu tình huống/mục tiêu và phần việc cá nhân, rồi mô tả cách đối chiếu nguồn, phân tách dấu hiệu khỏi nguyên nhân, ghi lại các bước kiểm tra và phối hợp người có thẩm quyền xử lý ngoại lệ. Kết quả cần gắn với hồ sơ/đầu ra có thể kiểm chứng cùng bài học; chỉ nêu số liệu nếu có dữ liệu thực của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ]
   }

@@ -4,8 +4,9 @@ import docx
 import pytest
 
 from modules import parse_document
-from modules.cv_parser import extract_text, extract_text_from_pdf, extract_text_from_docx
+from modules.cv_parser import MAX_UPLOAD_BYTES, extract_text, extract_text_from_pdf, extract_text_from_docx
 from document_fixtures import pdf_bytes, docx_bytes
+from fixtures.cv_edge_cases import create_cv_edge_cases
 
 def _minimal_pdf_bytes(text: str) -> bytes:
     escaped_text = text.replace("\\", "\\\\").replace("(", "\\(").replace(")", "\\)")
@@ -84,13 +85,14 @@ def test_structured_parser_no_file(source):
     ("drawing.pdf", pdf_bytes(vector=True), "EMPTY"),
     ("blank.docx", docx_bytes(), "EMPTY"),
     ("broken.pdf", b"%PDF-1.4 broken", "UNREADABLE"),
-    ("broken.docx", b"not a zip file", "UNREADABLE"),
+    ("broken.docx", b"PK\x03\x04not a zip file", "UNREADABLE"),
     ("image.pdf", pdf_bytes(image=True), "SCANNED_PDF"),
     ("other.txt", b"Python", "UNSUPPORTED_FORMAT"),
     ("no_extension", pdf_bytes("Python"), "UNSUPPORTED_FORMAT"),
-    ("fake.pdf", docx_bytes("Python"), "UNREADABLE"),
-    ("fake.docx", pdf_bytes("Python"), "UNREADABLE"),
-], ids=["valid-pdf", "valid-docx", "zero-pdf", "zero-docx", "blank-pdf", "vector-pdf", "blank-docx", "broken-pdf", "broken-docx", "image-pdf", "text-file", "no-suffix", "docx-as-pdf", "pdf-as-docx"])
+    ("fake.pdf", docx_bytes("Python"), "INVALID_SIGNATURE"),
+    ("fake.docx", pdf_bytes("Python"), "INVALID_SIGNATURE"),
+    ("renamed.exe.pdf", b"MZ\x90\x00executable", "INVALID_SIGNATURE"),
+], ids=["valid-pdf", "valid-docx", "zero-pdf", "zero-docx", "blank-pdf", "vector-pdf", "blank-docx", "broken-pdf", "broken-docx", "image-pdf", "text-file", "no-suffix", "docx-as-pdf", "pdf-as-docx", "renamed-exe"])
 def test_structured_parser_paths_and_consumed_streams(tmp_path, name, content, code):
     path = tmp_path / name
     path.write_bytes(content)
@@ -111,6 +113,25 @@ def test_explicit_filename_overrides_stream_name():
     stream.name = "wrong.txt"
     assert parse_document(stream, filename="CV.PDF")["text"] == "SQL"
     assert parse_document(stream)["error_code"] == "UNSUPPORTED_FORMAT"
+
+
+def test_parser_limits_pdf_pages_and_rejects_oversized_input_before_reading():
+    result = parse_document(BytesIO(pdf_bytes("Python developer", pages=11)), "long.pdf")
+    assert result["error_code"] is None
+    assert result["pages_read"] == 10
+    assert result["total_pages"] == 11
+    assert result["page_truncated"] is True
+
+    class OversizedSource:
+        size = MAX_UPLOAD_BYTES + 1
+
+        def read(self, *_args, **_kwargs):
+            raise AssertionError("oversized input must be rejected before reading")
+
+    oversized = parse_document(OversizedSource(), "large.docx")
+    assert oversized["error_code"] == "FILE_TOO_LARGE"
+    assert oversized["size_bytes"] == MAX_UPLOAD_BYTES + 1
+    assert oversized["max_bytes"] == MAX_UPLOAD_BYTES
 
 
 def test_unusable_stream_is_unreadable():
@@ -144,3 +165,26 @@ def test_legacy_pdf_wrapper_and_structured_parser_share_reader():
     assert extract_text_from_pdf(source) == parse_document(source, "cv.pdf")["text"]
     assert extract_text_from_pdf(BytesIO(b"broken")) == ""
     assert extract_text_from_docx(BytesIO(b"broken")) == ""
+
+
+def test_synthetic_edge_case_files_cover_unicode_columns_tables_and_rejections(tmp_path):
+    cases = create_cv_edge_cases(tmp_path)
+    vietnamese = parse_document(cases["valid_vietnamese.pdf"])
+    assert vietnamese["error_code"] is None
+    assert "Nguyễn An" in vietnamese["text"]
+    assert "phân tích dữ liệu" in vietnamese["text"]
+
+    columns = parse_document(cases["two_column_resume.pdf"])
+    assert columns["error_code"] is None
+    assert "Python, SQL" in columns["text"]
+    assert "Báo cáo dữ liệu" in columns["text"]
+
+    table = parse_document(cases["docx_table_resume.docx"])
+    assert table["error_code"] is None
+    assert "Python" in table["text"]
+    assert "Kinh nghiệm với dữ liệu có dấu" in table["text"]
+
+    assert parse_document(cases["scanned_image.pdf"])["error_code"] == "SCANNED_PDF"
+    assert parse_document(cases["empty.pdf"])["error_code"] == "EMPTY"
+    assert parse_document(cases["empty.docx"])["error_code"] == "EMPTY"
+    assert parse_document(cases["wrong_magic.pdf"])["error_code"] == "INVALID_SIGNATURE"

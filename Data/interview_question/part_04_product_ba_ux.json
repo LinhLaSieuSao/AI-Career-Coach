@@ -18,7 +18,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Làm rõ người dùng, vấn đề và mục tiêu; so sánh phương án theo giá trị, chi phí và rủi ro rồi chốt phạm vi/tiêu chí chấp nhận trong backlog. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Làm rõ người dùng, vấn đề và mục tiêu; so sánh phương án theo giá trị, chi phí và rủi ro rồi chốt phạm vi/tiêu chí chấp nhận trong backlog. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "product_manager_q02",
@@ -36,7 +39,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "product_manager_q03",
@@ -54,7 +60,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Đưa yêu cầu vào backlog, làm rõ outcome/acceptance criteria và refinement để chia thành increment nhỏ; nếu đổi ưu tiên giữa sprint, trao đổi tác động với nhóm và ghi nhận quyết định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Đưa yêu cầu vào backlog, làm rõ outcome/acceptance criteria và refinement để chia thành increment nhỏ; nếu đổi ưu tiên giữa sprint, trao đổi tác động với nhóm và ghi nhận quyết định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "product_manager_q04",
@@ -72,7 +81,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Xác định câu hỏi quyết định, phân khúc và nguồn; kết hợp dữ liệu thứ cấp với phỏng vấn/khảo sát khi cần, ghi rõ cách lấy mẫu và giới hạn trước khi kết luận. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Xác định câu hỏi quyết định, phân khúc và nguồn; kết hợp dữ liệu thứ cấp với phỏng vấn/khảo sát khi cần, ghi rõ cách lấy mẫu và giới hạn trước khi kết luận. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "product_manager_q05",
@@ -90,7 +102,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Làm rõ tác vụ/người dùng, dựng luồng rồi prototype; kiểm tra trạng thái lỗi/trống và thao tác chính với người dùng/đại diện, chỉnh theo điểm vướng quan sát được. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Làm rõ tác vụ/người dùng, dựng luồng rồi prototype; kiểm tra trạng thái lỗi/trống và thao tác chính với người dùng/đại diện, chỉnh theo điểm vướng quan sát được. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "product_manager_q06",
@@ -108,7 +123,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "product_owner": [
@@ -128,7 +146,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Đưa yêu cầu vào backlog, làm rõ outcome/acceptance criteria và refinement để chia thành increment nhỏ; nếu đổi ưu tiên giữa sprint, trao đổi tác động với nhóm và ghi nhận quyết định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Đưa yêu cầu vào backlog, làm rõ outcome/acceptance criteria và refinement để chia thành increment nhỏ; nếu đổi ưu tiên giữa sprint, trao đổi tác động với nhóm và ghi nhận quyết định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "product_owner_q02",
@@ -146,7 +167,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Xếp item theo giá trị, độ khẩn cấp, phụ thuộc và effort; làm refinement cho item thiếu acceptance criteria thay vì đưa thẳng vào sprint. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Xếp item theo giá trị, độ khẩn cấp, phụ thuộc và effort; làm refinement cho item thiếu acceptance criteria thay vì đưa thẳng vào sprint. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "product_owner_q03",
@@ -164,7 +188,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Mô tả ai cần gì và vì sao, bổ sung acceptance criteria cho luồng chuẩn, quyền và trường hợp biên; rà story với stakeholder và đội phát triển. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Mô tả ai cần gì và vì sao, bổ sung acceptance criteria cho luồng chuẩn, quyền và trường hợp biên; rà story với stakeholder và đội phát triển. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "product_owner_q04",
@@ -182,7 +209,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "product_owner_q05",
@@ -200,7 +230,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "business_analyst": [
@@ -220,7 +253,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Làm rõ vấn đề, người dùng, quy trình hiện tại, quy tắc và ngoại lệ; ghi yêu cầu chức năng/phi chức năng, xác nhận bằng ví dụ rồi truy vết tới test. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Làm rõ vấn đề, người dùng, quy trình hiện tại, quy tắc và ngoại lệ; ghi yêu cầu chức năng/phi chức năng, xác nhận bằng ví dụ rồi truy vết tới test. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "business_analyst_q02",
@@ -238,7 +274,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "business_analyst_q03",
@@ -256,7 +295,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Xác định điểm đầu/cuối, vai trò, quyết định và ngoại lệ; vẽ luồng hiện tại/đề xuất, walkthrough với người thực hiện để tìm bước thiếu hoặc bàn giao mơ hồ. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Xác định điểm đầu/cuối, vai trò, quyết định và ngoại lệ; vẽ luồng hiện tại/đề xuất, walkthrough với người thực hiện để tìm bước thiếu hoặc bàn giao mơ hồ. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "business_analyst_q04",
@@ -274,7 +316,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "business_analyst_q05",
@@ -292,7 +337,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu chung, vai trò và phụ thuộc, phối hợp các bên rồi theo dõi cam kết. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu chung, vai trò và phụ thuộc, phối hợp các bên rồi theo dõi cam kết. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "it_business_analyst": [
@@ -312,7 +360,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Làm rõ vấn đề, người dùng, quy trình hiện tại, quy tắc và ngoại lệ; ghi yêu cầu chức năng/phi chức năng, xác nhận bằng ví dụ rồi truy vết tới test. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Làm rõ vấn đề, người dùng, quy trình hiện tại, quy tắc và ngoại lệ; ghi yêu cầu chức năng/phi chức năng, xác nhận bằng ví dụ rồi truy vết tới test. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "it_business_analyst_q02",
@@ -330,7 +381,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Cấu trúc SRS theo phạm vi, actor, chức năng, giao diện và ràng buộc; viết yêu cầu đơn nghĩa/kiểm thử được, gắn mã truy vết rồi review với business và kỹ thuật. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Cấu trúc SRS theo phạm vi, actor, chức năng, giao diện và ràng buộc; viết yêu cầu đơn nghĩa/kiểm thử được, gắn mã truy vết rồi review với business và kỹ thuật. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "it_business_analyst_q03",
@@ -348,7 +402,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Xác định grain/khóa, viết join và bộ lọc rõ, xử lý null/trùng để tránh đếm sai; đối soát dòng/tổng với nguồn và thử dữ liệu rỗng hoặc nhiều bản ghi khớp. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Xác định grain/khóa, viết join và bộ lọc rõ, xử lý null/trùng để tránh đếm sai; đối soát dòng/tổng với nguồn và thử dữ liệu rỗng hoặc nhiều bản ghi khớp. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "it_business_analyst_q04",
@@ -366,7 +423,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Thống nhất resource, request/response, validation, quyền và lỗi với consumer; mô tả schema/status nhất quán và xác nhận contract cho thành công, dữ liệu sai, thiếu quyền, không tìm thấy. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Thống nhất resource, request/response, validation, quyền và lỗi với consumer; mô tả schema/status nhất quán và xác nhận contract cho thành công, dữ liệu sai, thiếu quyền, không tìm thấy. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "it_business_analyst_q05",
@@ -384,7 +444,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "it_business_analyst_q06",
@@ -402,7 +465,10 @@
           "Không xác định được đối tượng giao tiếp hoặc không đưa bằng chứng cho kết quả đạt được."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "project_manager": [
@@ -422,7 +488,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Chốt phạm vi, deliverable, owner, phụ thuộc và nghiệm thu, cập nhật mốc/đường găng; khi có đổi scope, phân tích tác động thời gian/nguồn lực/chất lượng và đưa phương án quyết định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Chốt phạm vi, deliverable, owner, phụ thuộc và nghiệm thu, cập nhật mốc/đường găng; khi có đổi scope, phân tích tác động thời gian/nguồn lực/chất lượng và đưa phương án quyết định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "project_manager_q02",
@@ -440,7 +509,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ghi nguyên nhân–sự kiện–tác động, ưu tiên, owner, biện pháp giảm thiểu và tín hiệu cảnh báo; nếu rủi ro xảy ra thì kích hoạt ứng phó/khôi phục và cập nhật rủi ro còn lại. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Ghi nguyên nhân–sự kiện–tác động, ưu tiên, owner, biện pháp giảm thiểu và tín hiệu cảnh báo; nếu rủi ro xảy ra thì kích hoạt ứng phó/khôi phục và cập nhật rủi ro còn lại. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "project_manager_q03",
@@ -458,7 +530,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "project_manager_q04",
@@ -476,7 +551,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Dự báo mục tiêu, kênh/SKU, tồn, budget và fulfillment, lập timeline/owner/phụ thuộc; đặt trigger khi tồn/traffic/giao hàng lệch và phương án điều chuyển. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Dự báo mục tiêu, kênh/SKU, tồn, budget và fulfillment, lập timeline/owner/phụ thuộc; đặt trigger khi tồn/traffic/giao hàng lệch và phương án điều chuyển. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "project_manager_q05",
@@ -494,7 +572,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Đưa yêu cầu vào backlog, làm rõ outcome/acceptance criteria và refinement để chia thành increment nhỏ; nếu đổi ưu tiên giữa sprint, trao đổi tác động với nhóm và ghi nhận quyết định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Đưa yêu cầu vào backlog, làm rõ outcome/acceptance criteria và refinement để chia thành increment nhỏ; nếu đổi ưu tiên giữa sprint, trao đổi tác động với nhóm và ghi nhận quyết định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "project_manager_q06",
@@ -512,7 +593,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "scrum_master": [
@@ -532,7 +616,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Đưa yêu cầu vào backlog, làm rõ outcome/acceptance criteria và refinement để chia thành increment nhỏ; nếu đổi ưu tiên giữa sprint, trao đổi tác động với nhóm và ghi nhận quyết định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Đưa yêu cầu vào backlog, làm rõ outcome/acceptance criteria và refinement để chia thành increment nhỏ; nếu đổi ưu tiên giữa sprint, trao đổi tác động với nhóm và ghi nhận quyết định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "scrum_master_q02",
@@ -550,7 +637,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Gửi trước mục tiêu/quyết định cần đạt, điều phối ý kiến theo dữ kiện; cuối buổi chốt quyết định, owner, hạn và chia biên bản để xác nhận. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Gửi trước mục tiêu/quyết định cần đạt, điều phối ý kiến theo dữ kiện; cuối buổi chốt quyết định, owner, hạn và chia biên bản để xác nhận. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "scrum_master_q03",
@@ -568,7 +658,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "scrum_master_q04",
@@ -586,7 +679,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "scrum_master_q05",
@@ -604,7 +700,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tạo issue có scope, acceptance criteria, owner, phụ thuộc và liên kết epic/task; cập nhật blocker/trạng thái rồi đối chiếu board với đầu ra thực tế. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Tạo issue có scope, acceptance criteria, owner, phụ thuộc và liên kết epic/task; cập nhật blocker/trạng thái rồi đối chiếu board với đầu ra thực tế. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "ui_ux_designer": [
@@ -624,7 +723,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Làm rõ tác vụ/người dùng, dựng luồng rồi prototype; kiểm tra trạng thái lỗi/trống và thao tác chính với người dùng/đại diện, chỉnh theo điểm vướng quan sát được. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Làm rõ tác vụ/người dùng, dựng luồng rồi prototype; kiểm tra trạng thái lỗi/trống và thao tác chính với người dùng/đại diện, chỉnh theo điểm vướng quan sát được. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ui_ux_designer_q02",
@@ -642,7 +744,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tổ chức page/component và style/token có tên rõ, dùng variant nhất quán; prototype luồng/trạng thái, kiểm tra responsive và ghi chú tương tác trước bàn giao. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Tổ chức page/component và style/token có tên rõ, dùng variant nhất quán; prototype luồng/trạng thái, kiểm tra responsive và ghi chú tương tác trước bàn giao. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ui_ux_designer_q03",
@@ -660,7 +765,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Chọn low-fi để kiểm tra luồng hoặc high-fi để thử tương tác/nội dung; đưa tác vụ cho người dùng, quan sát vướng mắc rồi chỉnh prototype. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Chọn low-fi để kiểm tra luồng hoặc high-fi để thử tương tác/nội dung; đưa tác vụ cho người dùng, quan sát vướng mắc rồi chỉnh prototype. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ui_ux_designer_q04",
@@ -678,7 +786,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Đặt câu hỏi nghiên cứu, tuyển đúng nhóm và chọn phỏng vấn/quan sát/test; dùng câu hỏi trung tính, tách bằng chứng khỏi diễn giải và nêu giới hạn mẫu. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Đặt câu hỏi nghiên cứu, tuyển đúng nhóm và chọn phỏng vấn/quan sát/test; dùng câu hỏi trung tính, tách bằng chứng khỏi diễn giải và nêu giới hạn mẫu. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ui_ux_designer_q05",
@@ -696,7 +807,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ui_ux_designer_q06",
@@ -714,7 +828,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "ux_researcher": [
@@ -734,7 +851,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Đặt câu hỏi nghiên cứu, tuyển đúng nhóm và chọn phỏng vấn/quan sát/test; dùng câu hỏi trung tính, tách bằng chứng khỏi diễn giải và nêu giới hạn mẫu. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Đặt câu hỏi nghiên cứu, tuyển đúng nhóm và chọn phỏng vấn/quan sát/test; dùng câu hỏi trung tính, tách bằng chứng khỏi diễn giải và nêu giới hạn mẫu. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ux_researcher_q02",
@@ -752,7 +872,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Chuẩn bị câu hỏi mở về hành vi gần đây, tránh dẫn dắt; ghi lời nói và quan sát riêng với diễn giải, hỏi tiếp điểm chưa rõ rồi tổng hợp chủ đề. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Chuẩn bị câu hỏi mở về hành vi gần đây, tránh dẫn dắt; ghi lời nói và quan sát riêng với diễn giải, hỏi tiếp điểm chưa rõ rồi tổng hợp chủ đề. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ux_researcher_q03",
@@ -770,7 +893,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ux_researcher_q04",
@@ -788,7 +914,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Chốt metric, kỳ và nguồn; rà missing, trùng, tracking và phân khúc gây lệch; đối chiếu mẫu với nguồn và chỉ kết luận nguyên nhân khi bằng chứng ủng hộ. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Chốt metric, kỳ và nguồn; rà missing, trùng, tracking và phân khúc gây lệch; đối chiếu mẫu với nguồn và chỉ kết luận nguyên nhân khi bằng chứng ủng hộ. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ux_researcher_q05",
@@ -806,7 +935,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "ui_designer": [
@@ -826,7 +958,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ưu tiên thứ bậc thông tin/tác vụ, grid, spacing và component nhất quán; kiểm tra tương phản, focus, responsive, trạng thái rồi so với bản triển khai. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Ưu tiên thứ bậc thông tin/tác vụ, grid, spacing và component nhất quán; kiểm tra tương phản, focus, responsive, trạng thái rồi so với bản triển khai. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ui_designer_q02",
@@ -844,7 +979,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tổ chức page/component và style/token có tên rõ, dùng variant nhất quán; prototype luồng/trạng thái, kiểm tra responsive và ghi chú tương tác trước bàn giao. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Tổ chức page/component và style/token có tên rõ, dùng variant nhất quán; prototype luồng/trạng thái, kiểm tra responsive và ghi chú tương tác trước bàn giao. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ui_designer_q03",
@@ -862,7 +1000,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Dùng màu theo vai trò và phân cấp chữ theo mức quan trọng, không truyền trạng thái chỉ bằng màu; kiểm tra contrast/khả năng đọc trên màn hình thực. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Dùng màu theo vai trò và phân cấp chữ theo mức quan trọng, không truyền trạng thái chỉ bằng màu; kiểm tra contrast/khả năng đọc trên màn hình thực. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ui_designer_q04",
@@ -880,7 +1021,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Làm rõ tác vụ/người dùng, dựng luồng rồi prototype; kiểm tra trạng thái lỗi/trống và thao tác chính với người dùng/đại diện, chỉnh theo điểm vướng quan sát được. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Làm rõ tác vụ/người dùng, dựng luồng rồi prototype; kiểm tra trạng thái lỗi/trống và thao tác chính với người dùng/đại diện, chỉnh theo điểm vướng quan sát được. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ui_designer_q05",
@@ -898,7 +1042,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Chọn low-fi để kiểm tra luồng hoặc high-fi để thử tương tác/nội dung; đưa tác vụ cho người dùng, quan sát vướng mắc rồi chỉnh prototype. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Chọn low-fi để kiểm tra luồng hoặc high-fi để thử tương tác/nội dung; đưa tác vụ cho người dùng, quan sát vướng mắc rồi chỉnh prototype. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ui_designer_q06",
@@ -916,7 +1063,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ui_designer_q07",
@@ -934,7 +1084,10 @@
           "Không xác định được đối tượng giao tiếp hoặc không đưa bằng chứng cho kết quả đạt được."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "data_business_analyst": [
@@ -954,7 +1107,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Làm rõ vấn đề, người dùng, quy trình hiện tại, quy tắc và ngoại lệ; ghi yêu cầu chức năng/phi chức năng, xác nhận bằng ví dụ rồi truy vết tới test. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Làm rõ vấn đề, người dùng, quy trình hiện tại, quy tắc và ngoại lệ; ghi yêu cầu chức năng/phi chức năng, xác nhận bằng ví dụ rồi truy vết tới test. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_business_analyst_q02",
@@ -972,7 +1128,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Xác định grain/khóa, viết join và bộ lọc rõ, xử lý null/trùng để tránh đếm sai; đối soát dòng/tổng với nguồn và thử dữ liệu rỗng hoặc nhiều bản ghi khớp. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Xác định grain/khóa, viết join và bộ lọc rõ, xử lý null/trùng để tránh đếm sai; đối soát dòng/tổng với nguồn và thử dữ liệu rỗng hoặc nhiều bản ghi khớp. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_business_analyst_q03",
@@ -990,7 +1149,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_business_analyst_q04",
@@ -1008,7 +1170,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Mô hình fact/dimension với grain, relationship rõ; dùng measure cho tính toán phụ thuộc filter context, đối chiếu lát cắt với nguồn và kiểm tra độ mới/quyền trước bàn giao. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Mô hình fact/dimension với grain, relationship rõ; dùng measure cho tính toán phụ thuộc filter context, đối chiếu lát cắt với nguồn và kiểm tra độ mới/quyền trước bàn giao. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "data_business_analyst_q05",
@@ -1026,7 +1191,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "ux_writer": [
@@ -1046,7 +1214,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Viết nhãn/hướng dẫn/lỗi theo tác vụ bằng từ quen thuộc và hành động tiếp theo; kiểm tra trong ngữ cảnh UI, trạng thái lỗi/empty, độ dài và thuật ngữ với owner. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Viết nhãn/hướng dẫn/lỗi theo tác vụ bằng từ quen thuộc và hành động tiếp theo; kiểm tra trong ngữ cảnh UI, trạng thái lỗi/empty, độ dài và thuật ngữ với owner. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ux_writer_q02",
@@ -1064,7 +1235,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ux_writer_q03",
@@ -1082,7 +1256,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Đặt câu hỏi nghiên cứu, tuyển đúng nhóm và chọn phỏng vấn/quan sát/test; dùng câu hỏi trung tính, tách bằng chứng khỏi diễn giải và nêu giới hạn mẫu. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Đặt câu hỏi nghiên cứu, tuyển đúng nhóm và chọn phỏng vấn/quan sát/test; dùng câu hỏi trung tính, tách bằng chứng khỏi diễn giải và nêu giới hạn mẫu. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ux_writer_q04",
@@ -1100,7 +1277,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Làm rõ tác vụ/người dùng, dựng luồng rồi prototype; kiểm tra trạng thái lỗi/trống và thao tác chính với người dùng/đại diện, chỉnh theo điểm vướng quan sát được. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Làm rõ tác vụ/người dùng, dựng luồng rồi prototype; kiểm tra trạng thái lỗi/trống và thao tác chính với người dùng/đại diện, chỉnh theo điểm vướng quan sát được. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "ux_writer_q05",
@@ -1118,7 +1298,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách làm rõ mục tiêu/dữ kiện, phối hợp người liên quan, ghi lại quyết định và theo dõi thực hiện. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "technical_product_manager": [
@@ -1138,7 +1321,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Làm rõ người dùng, vấn đề và mục tiêu; so sánh phương án theo giá trị, chi phí và rủi ro rồi chốt phạm vi/tiêu chí chấp nhận trong backlog. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Làm rõ người dùng, vấn đề và mục tiêu; so sánh phương án theo giá trị, chi phí và rủi ro rồi chốt phạm vi/tiêu chí chấp nhận trong backlog. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "technical_product_manager_q02",
@@ -1156,7 +1342,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Vẽ thành phần, ranh giới và luồng dữ liệu; so trade-off latency, khả dụng, bảo mật, chi phí, nêu failure mode/khôi phục rồi review với nhóm liên quan. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Vẽ thành phần, ranh giới và luồng dữ liệu; so trade-off latency, khả dụng, bảo mật, chi phí, nêu failure mode/khôi phục rồi review với nhóm liên quan. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "technical_product_manager_q03",
@@ -1174,7 +1363,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách lắng nghe và nhắc lại nhu cầu để xác nhận, trình bày trade-off theo dữ kiện rồi ghi lại quyết định và bước tiếp theo. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "technical_product_manager_q04",
@@ -1192,7 +1384,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Thống nhất resource, request/response, validation, quyền và lỗi với consumer; mô tả schema/status nhất quán và xác nhận contract cho thành công, dữ liệu sai, thiếu quyền, không tìm thấy. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Thống nhất resource, request/response, validation, quyền và lỗi với consumer; mô tả schema/status nhất quán và xác nhận contract cho thành công, dữ liệu sai, thiếu quyền, không tìm thấy. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "technical_product_manager_q05",
@@ -1210,7 +1405,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Đưa yêu cầu vào backlog, làm rõ outcome/acceptance criteria và refinement để chia thành increment nhỏ; nếu đổi ưu tiên giữa sprint, trao đổi tác động với nhóm và ghi nhận quyết định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch."
+        "reference_answer": "Đưa yêu cầu vào backlog, làm rõ outcome/acceptance criteria và refinement để chia thành increment nhỏ; nếu đổi ưu tiên giữa sprint, trao đổi tác động với nhóm và ghi nhận quyết định. Tôi sẽ đối chiếu đầu ra với mục tiêu/tiêu chí đã thống nhất, thử một trường hợp biên phù hợp và điều chỉnh hoặc báo lại nếu có sai lệch.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "technical_product_manager_q06",
@@ -1228,7 +1426,10 @@
           "Bỏ qua nhu cầu/tiêu chí của bên liên quan hoặc không nêu được bằng chứng về kết quả và đóng góp cá nhân."
         ],
         "time_minutes": 4,
-        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống."
+        "reference_answer": "Một câu trả lời STAR có thể nêu bối cảnh và phần trách nhiệm cá nhân, rồi giải thích cách tách triệu chứng khỏi nguyên nhân, kiểm tra dữ liệu/bằng chứng và thử nguyên nhân có khả năng trước khi chọn hành động. Kết quả cần gắn với đầu ra kiểm chứng được và bài học; chỉ nêu số đo nếu có dữ liệu thật của tình huống.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ]
   }

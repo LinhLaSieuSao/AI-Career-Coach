@@ -1,0 +1,54 @@
+{
+  "observed_at_utc": "2026-10-25T23:08:33.931693+00:00",
+  "method": "Unauthenticated read-only GitHub API",
+  "repository": "LinhLaSieuSao/AI-Career-Coach",
+  "responses": {
+    "repo": {
+      "status": 200,
+      "value": {
+        "visibility": "public",
+        "has_issues": true,
+        "has_discussions": true,
+        "default_branch": "main",
+        "pushed_at": "2026-10-25T08:57:22Z"
+      }
+    },
+    "main": {
+      "status": 200,
+      "value": {
+        "sha": "8827a81f11f24e11fde54319a09a458f7b8b50b9"
+      }
+    },
+    "Nhanh-Linh": {
+      "status": 200,
+      "value": {
+        "sha": "79e082176768e5312527acb621630c578419ba5b"
+      }
+    },
+    "releases": {
+      "status": 200,
+      "value": {
+        "count_on_first_page": 0,
+        "first": null
+      }
+    },
+    "tags": {
+      "status": 200,
+      "value": {
+        "count_on_first_page": 0,
+        "first": null
+      }
+    },
+    "main_runs": {
+      "status": 200,
+      "value": {
+        "first": {
+          "id": 40157639170,
+          "head_sha": "8827a81f11f24e11fde54319a09a458f7b8b50b9",
+          "conclusion": "success",
+          "html_url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/runs/40157639170"
+        }
+      }
+    }
+  }
+}

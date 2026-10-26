@@ -1,0 +1,361 @@
+{
+  "version": 1,
+  "model_note": "Static, heuristic role-family vectors for exploration; not independently validated psychometric norms.",
+  "dimensions": [
+    "R",
+    "I",
+    "A",
+    "S",
+    "E",
+    "C"
+  ],
+  "families": [
+    {
+      "id": "software_development",
+      "label": "Phát triển phần mềm",
+      "role_prefixes": [
+        "backend_developer_",
+        "frontend_developer_",
+        "fullstack_developer_",
+        "mobile_developer_",
+        "game_developer_",
+        "embedded_"
+      ],
+      "role_ids": [],
+      "vector": {
+        "R": 0.120892,
+        "I": 0.664905,
+        "A": 0.241784,
+        "S": 0.120892,
+        "E": 0.120892,
+        "C": 0.674979
+      }
+    },
+    {
+      "id": "quality_testing",
+      "label": "Kiểm thử và đảm bảo chất lượng",
+      "role_prefixes": [],
+      "role_ids": [
+        "automation_tester",
+        "manual_tester"
+      ],
+      "vector": {
+        "R": 0.1598,
+        "I": 0.679152,
+        "A": 0.0799,
+        "S": 0.1598,
+        "E": 0.0799,
+        "C": 0.689139
+      }
+    },
+    {
+      "id": "data_analytics",
+      "label": "Phân tích dữ liệu",
+      "role_prefixes": [],
+      "role_ids": [
+        "data_analyst",
+        "business_intelligence_analyst",
+        "data_scientist"
+      ],
+      "vector": {
+        "R": 0.0,
+        "I": 0.959645,
+        "A": 0.101015,
+        "S": 0.050508,
+        "E": 0.050508,
+        "C": 0.252538
+      }
+    },
+    {
+      "id": "data_ai_platform",
+      "label": "Dữ liệu, AI và nền tảng dữ liệu",
+      "role_prefixes": [],
+      "role_ids": [
+        "data_engineer",
+        "machine_learning_engineer",
+        "ai_engineer",
+        "nlp_engineer",
+        "computer_vision_engineer",
+        "mlops_engineer",
+        "data_architect"
+      ],
+      "vector": {
+        "R": 0.100246,
+        "I": 0.862115,
+        "A": 0.140344,
+        "S": 0.050123,
+        "E": 0.050123,
+        "C": 0.471156
+      }
+    },
+    {
+      "id": "infrastructure_security",
+      "label": "Hạ tầng, cloud và an ninh mạng",
+      "role_prefixes": [
+        "devops_",
+        "network_",
+        "security_",
+        "penetration_",
+        "cloud_",
+        "sre_"
+      ],
+      "role_ids": [
+        "system_administrator",
+        "it_support"
+      ],
+      "vector": {
+        "R": 0.664332,
+        "I": 0.422757,
+        "A": 0.050328,
+        "S": 0.100656,
+        "E": 0.050328,
+        "C": 0.603938
+      }
+    },
+    {
+      "id": "product_business_analysis",
+      "label": "Sản phẩm, dự án và phân tích nghiệp vụ",
+      "role_prefixes": [
+        "product_"
+      ],
+      "role_ids": [
+        "business_analyst",
+        "it_business_analyst",
+        "project_manager",
+        "scrum_master",
+        "data_business_analyst",
+        "technical_product_manager"
+      ],
+      "vector": {
+        "R": 0.049858,
+        "I": 0.528496,
+        "A": 0.209404,
+        "S": 0.418808,
+        "E": 0.528496,
+        "C": 0.468666
+      }
+    },
+    {
+      "id": "design_user_research",
+      "label": "Thiết kế và nghiên cứu trải nghiệm",
+      "role_prefixes": [
+        "ui_",
+        "ux_"
+      ],
+      "role_ids": [
+        "graphic_designer"
+      ],
+      "vector": {
+        "R": 0.050418,
+        "I": 0.302506,
+        "A": 0.836933,
+        "S": 0.363007,
+        "E": 0.100835,
+        "C": 0.252088
+      }
+    },
+    {
+      "id": "marketing_communication",
+      "label": "Marketing, nội dung và truyền thông",
+      "role_prefixes": [
+        "digital_marketing_",
+        "content_marketing_",
+        "seo_",
+        "social_media_",
+        "performance_marketing_",
+        "pr_",
+        "brand_",
+        "trade_marketing_",
+        "internal_comms_",
+        "employer_branding_"
+      ],
+      "role_ids": [
+        "event_executive",
+        "marketing_analyst",
+        "video_creator",
+        "video_editor",
+        "content_creator",
+        "copywriter"
+      ],
+      "vector": {
+        "R": 0.049744,
+        "I": 0.348211,
+        "A": 0.646678,
+        "S": 0.397956,
+        "E": 0.517343,
+        "C": 0.17908
+      }
+    },
+    {
+      "id": "sales_customer",
+      "label": "Kinh doanh và chăm sóc khách hàng",
+      "role_prefixes": [
+        "sales_",
+        "b2b_sales_",
+        "key_account_",
+        "telesales_",
+        "customer_service_",
+        "customer_success_",
+        "business_development_",
+        "ecommerce_",
+        "retail_store_",
+        "real_estate_sales_",
+        "technical_sales_",
+        "channel_sales_"
+      ],
+      "role_ids": [
+        "merchandiser"
+      ],
+      "vector": {
+        "R": 0.078868,
+        "I": 0.27604,
+        "A": 0.078868,
+        "S": 0.542221,
+        "E": 0.74925,
+        "C": 0.236605
+      }
+    },
+    {
+      "id": "finance_accounting",
+      "label": "Tài chính và kế toán",
+      "role_prefixes": [],
+      "role_ids": [
+        "accountant",
+        "general_accountant",
+        "chief_accountant",
+        "tax_accountant",
+        "auditor",
+        "internal_auditor",
+        "financial_analyst",
+        "credit_officer",
+        "risk_management_officer",
+        "bank_teller",
+        "investment_analyst",
+        "financial_controller"
+      ],
+      "vector": {
+        "R": 0.099607,
+        "I": 0.577722,
+        "A": 0.049804,
+        "S": 0.179293,
+        "E": 0.348626,
+        "C": 0.707212
+      }
+    },
+    {
+      "id": "people_legal_compliance",
+      "label": "Nhân sự, pháp lý và tuân thủ",
+      "role_prefixes": [
+        "hr_",
+        "recruitment_",
+        "admin_",
+        "legal_",
+        "compliance_"
+      ],
+      "role_ids": [
+        "cb_specialist",
+        "ld_specialist"
+      ],
+      "vector": {
+        "R": 0.049532,
+        "I": 0.336815,
+        "A": 0.099063,
+        "S": 0.663724,
+        "E": 0.455691,
+        "C": 0.475504
+      }
+    },
+    {
+      "id": "logistics_supply_chain",
+      "label": "Logistics và chuỗi cung ứng",
+      "role_prefixes": [
+        "logistics_",
+        "procurement_",
+        "import_export_",
+        "warehouse_",
+        "supply_chain_",
+        "customs_"
+      ],
+      "role_ids": [],
+      "vector": {
+        "R": 0.445058,
+        "I": 0.364138,
+        "A": 0.050575,
+        "S": 0.242759,
+        "E": 0.303449,
+        "C": 0.718162
+      }
+    },
+    {
+      "id": "engineering_manufacturing",
+      "label": "Kỹ thuật và sản xuất",
+      "role_prefixes": [
+        "mechanical_",
+        "electrical_",
+        "process_",
+        "quality_assurance_",
+        "maintenance_",
+        "cnc_",
+        "production_"
+      ],
+      "role_ids": [
+        "automation_engineer"
+      ],
+      "vector": {
+        "R": 0.769731,
+        "I": 0.489829,
+        "A": 0.049983,
+        "S": 0.119958,
+        "E": 0.079972,
+        "C": 0.379867
+      }
+    },
+    {
+      "id": "construction_architecture",
+      "label": "Xây dựng, kiến trúc và an toàn",
+      "role_prefixes": [
+        "civil_",
+        "mep_",
+        "site_",
+        "estimation_",
+        "hvac_",
+        "safety_"
+      ],
+      "role_ids": [
+        "architect"
+      ],
+      "vector": {
+        "R": 0.754178,
+        "I": 0.367165,
+        "A": 0.148851,
+        "S": 0.158774,
+        "E": 0.148851,
+        "C": 0.476323
+      }
+    },
+    {
+      "id": "health_education_hospitality",
+      "label": "Y tế, giáo dục và dịch vụ",
+      "role_prefixes": [],
+      "role_ids": [
+        "doctor",
+        "registered_nurse",
+        "pharmacist",
+        "english_teacher",
+        "primary_school_teacher",
+        "hotel_receptionist",
+        "tour_guide",
+        "travel_consultant",
+        "event_planner"
+      ],
+      "vector": {
+        "R": 0.200663,
+        "I": 0.391293,
+        "A": 0.200663,
+        "S": 0.772554,
+        "E": 0.280929,
+        "C": 0.300995
+      }
+    }
+  ]
+}

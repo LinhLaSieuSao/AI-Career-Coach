@@ -1,20 +1,20 @@
-"""Gap selection, rubric fallback, review provenance and public/private boundaries."""
+"""Interview answer guidance, bounded question data and review provenance."""
 
 from collections import Counter
 from copy import deepcopy
-import json
 
 import pytest
 
+import modules
 from modules import interview
 from modules.catalog import DATA_DIR
-from modules.data_quality import inspect_rubrics
 
 
-def question(qid, skill, kind="technical", quality="template"):
+def question(qid, skill, kind="technical", quality="unreviewed"):
     return {"id": qid, "skill": skill, "type": kind, "question": "Question?", "level": 1,
-            "quality": quality, "reference_answer": "SECRET ANSWER", "good_answer_points": ["SECRET"],
-            "red_flags": ["SECRET"], "rubric": {"SECRET": True}, "quality_note": "PRIVATE NOTE"}
+            "weight": 1, "quality": quality, "reference_answer": "REFERENCE ANSWER",
+            "good_answer_points": ["GOOD POINT"], "red_flags": ["RED FLAG"],
+            "quality_note": "PRIVATE NOTE"}
 
 
 @pytest.fixture
@@ -33,14 +33,16 @@ def test_focus_alias_seed_and_backfill_no_repeat_or_private_metadata(bank):
     assert len({q["id"] for q in result}) == 3
     assert result[2]["skill"] != "javascript"
     assert {q["type"] for q in result[:2]} == {"technical", "scenario"}
+    private_fields = {"reference_answer", "good_answer_points", "red_flags", "rubric",
+                      "quality_note", "quality_review_note", "quality_sources"}
     for q in result:
-        assert not {"reference_answer", "good_answer_points", "red_flags", "rubric", "quality_note"} & q.keys()
-        assert "SECRET" not in json.dumps(q) and "PRIVATE" not in json.dumps(q)
+        assert not private_fields & q.keys()
+        assert "REFERENCE" not in str(q) and "PRIVATE" not in str(q)
     result[0]["question"] = "mutated"
     assert all(q["question"] != "mutated" for q in bank)
 
 
-def test_none_empty_and_absent_focus_preserve_old_seeded_behavior(bank):
+def test_none_empty_and_absent_focus_preserve_seeded_behavior(bank):
     old = interview.get_questions("r", 4, 123)
     assert old == interview.get_questions("r", 4, 123, None)
     assert old == interview.get_questions("r", 4, 123, [])
@@ -48,102 +50,120 @@ def test_none_empty_and_absent_focus_preserve_old_seeded_behavior(bank):
     assert len(interview.get_questions("r", 20, 123, ["JS"])) == 4
 
 
-@pytest.fixture
-def rubric_bank(monkeypatch):
-    q = question("reviewed", "sql", quality="reviewed")
-    monkeypatch.setattr(interview, "_load_question_data", lambda: {"r": [q, question("template", "sql")]})
-    rubric = {"review_status": "reviewed", "review_note": "Criteria checked for this question", "criteria": [
-        {"id": "grain", "label": "grain and key", "points": 4, "groups": [["grain", "mức chi tiết"], ["key", "khóa"]]},
-        {"id": "check", "label": "compare source", "points": 6, "groups": [["đối soát", "reconcile"], ["nguồn", "source"]]},
-    ]}
-    monkeypatch.setattr(interview, "_load_rubrics", lambda: {"reviewed": rubric})
-    return q, rubric
+def test_review_filter_orders_internal_then_ai_assisted_then_unreviewed(bank, monkeypatch):
+    reviewed = question("human", "sql", quality="reviewed")
+    reviewed.update(quality_reviewed_at="2026-10-24", quality_review_note="Internal review.",
+                    quality_sources=["https://example.org/sql"])
+    ai_assisted = question("ai", "sql", quality="ai_reviewed_internal")
+    ai_assisted.update(quality_reviewed_at="2026-10-25", quality_reviewer="AI assistant",
+                       quality_review_note="AI review, not an independent review.",
+                       quality_sources=["https://example.org/sql"])
+    unreviewed = question("plain", "sql")
+    monkeypatch.setattr(interview, "_load_question_data", lambda: {"r": [unreviewed, ai_assisted, reviewed]})
+
+    selected = interview.get_questions("r", 3, seed=123, prefer_reviewed=True)
+    assert [item["id"] for item in selected] == ["human", "ai", "plain"]
 
 
-def test_rubric_scores_concept_groups_partial_empty_and_feedback(rubric_bank):
-    result = interview.score_answer("reviewed", "Tôi xác định mức chi tiết và khóa, rồi đối soát với nguồn.")
-    assert result["score"] == 10 and result["status"] == "scored" and result["method"] == "rubric"
-    assert all(c["met"] for c in result["criteria"])
-    assert "không xác minh" in result["feedback"][-1]
-    assert interview.score_answer("reviewed", "grain key")["score"] == 4
-    assert interview.score_answer("reviewed", "grain only")["score"] == 0
-    assert interview.score_answer("reviewed", "")["score"] == 0
-    assert interview.score_answer("reviewed", "unrelated long answer "*300)["score"] == 0
-    assert interview.score_answer("reviewed", "SECRET ANSWER")["score"] == 0
+def test_answer_guidance_reports_review_status_and_only_sources_for_reviewed_content(bank, monkeypatch):
+    reviewed = question("reviewed", "sql")
+    reviewed.update(quality="reviewed", quality_reviewed_at="2026-10-24",
+                    quality_review_note="Internal review only", quality_sources=["https://example.org/sql"])
+    unreviewed = question("unreviewed", "sql", "scenario")
+    monkeypatch.setattr(interview, "_load_question_data", lambda: {"r": [reviewed, unreviewed]})
+
+    reviewed_feedback = interview.get_question_feedback("reviewed")
+    assert reviewed_feedback["content_reviewed"] is True
+    assert reviewed_feedback["quality_sources"] == ["https://example.org/sql"]
+    assert reviewed_feedback["question_type"] == "technical"
+    unreviewed_feedback = interview.get_question_feedback("unreviewed")
+    assert unreviewed_feedback["content_reviewed"] is False
+    assert unreviewed_feedback["quality_sources"] == []
+    assert unreviewed_feedback["question_type"] == "scenario"
 
 
-def test_rubric_does_not_match_substring_or_simple_negation(rubric_bank):
-    assert interview.score_answer("reviewed", "grain keypress")["score"] == 0
-    assert interview.score_answer("reviewed", "không xác định grain key")["score"] == 0
-    assert interview.score_answer("reviewed", "reconcile source")["score"] == 6
+def test_ai_assisted_review_is_distinct_and_requires_explicit_limitations(bank, monkeypatch):
+    assisted = question("ai-reviewed", "sql")
+    assisted.update(
+        quality="ai_reviewed_internal",
+        quality_reviewed_at="2026-10-25",
+        quality_reviewer="Codex (AI-assisted editorial review)",
+        quality_review_note="AI-assisted editorial review; not an independent review.",
+        quality_sources=["https://www.postgresql.org/docs/current/tutorial-transactions.html"],
+    )
+    monkeypatch.setattr(interview, "_load_question_data", lambda: {"r": [assisted]})
+
+    feedback = interview.get_question_feedback("ai-reviewed")
+    assert feedback["content_reviewed"] is True
+    assert feedback["quality"] == "ai_reviewed_internal"
+    assert "AI hỗ trợ" in feedback["quality_label"]
+    assert "Codex" in feedback["quality_reviewer"]
+
+    assisted["quality_review_note"] = "Reviewed internally."
+    assert interview.get_question_feedback("ai-reviewed")["content_reviewed"] is False
 
 
-def test_no_rubric_or_unreviewed_question_returns_unavailable_including_empty(rubric_bank):
-    result = interview.score_answer("template", "")
-    assert result["status"] == "unavailable" and result["score"] is None
-    assert result["reason"] and result["criteria"] == []
-    rubric_bank[0]["quality"] = "template"
-    assert interview.score_answer("reviewed", "grain key reconcile source")["score"] is None
+def test_reviewed_question_without_provenance_is_not_called_reviewed(bank, monkeypatch):
+    incomplete = question("reviewed", "sql", quality="reviewed")
+    monkeypatch.setattr(interview, "_load_question_data", lambda: {"r": [incomplete]})
+    feedback = interview.get_question_feedback("reviewed")
+    assert feedback["content_reviewed"] is False
+    assert feedback["quality_sources"] == []
 
 
-@pytest.mark.parametrize("change", ["missing_groups", "points", "unreviewed", "duplicate_id"])
-def test_malformed_rubric_cannot_generate_fake_score(rubric_bank, change):
-    _, rubric = rubric_bank
-    if change == "missing_groups":
-        rubric["criteria"][0].pop("groups")
-    elif change == "points":
-        rubric["criteria"][0]["points"] = True
-    elif change == "unreviewed":
-        rubric["review_status"] = "template"
-    else:
-        rubric["criteria"][1]["id"] = "grain"
-    assert interview.score_answer("reviewed", "grain key reconcile source")["status"] == "unavailable"
-
-
-def test_unknown_id_wrong_type_and_duplicate_id_errors(rubric_bank, monkeypatch):
+def test_missing_duplicate_and_invalid_question_ids_raise(bank, monkeypatch):
     with pytest.raises(ValueError, match="Không tìm thấy"):
-        interview.score_answer("not-found", "answer")
+        interview.get_question_feedback("missing")
     with pytest.raises(ValueError, match="question_id"):
-        interview.score_answer("", "answer")
-    with pytest.raises(TypeError, match="answer"):
-        interview.score_answer("reviewed", None)
-    q = rubric_bank[0]
-    monkeypatch.setattr(interview, "_load_question_data", lambda: {"r": [q, deepcopy(q)]})
+        interview.get_question_feedback("")
+    question_row = bank[0]
+    monkeypatch.setattr(interview, "_load_question_data", lambda: {"r": [question_row, deepcopy(question_row)]})
     with pytest.raises(ValueError, match="trùng"):
-        interview.score_answer("reviewed", "answer")
+        interview.get_question_feedback(question_row["id"])
 
 
-def test_real_demo_reviewed_questions_have_individual_rubrics_and_templates_fallback():
+def test_real_bank_review_provenance_question_count_and_scoring_removal():
     interview._clear_cache()
-    rubrics = json.loads((DATA_DIR / "interview_rubrics.json").read_text(encoding="utf8"))["questions"]
-    demo_ids = ("backend_developer_java", "data_analyst", "sales_executive")
-    questions = [q for rid in demo_ids for q in interview._load_question_data()[rid]]
-    assert Counter(q["quality"] for q in questions) == {"reviewed": 6, "template": 12}
+    questions = [q for bank in interview._load_question_data().values() for q in bank]
+    quality = Counter(q.get("quality", "unreviewed") for q in questions)
+    assert len(questions) == 766
+    assert quality == {"unreviewed": 766}
     for q in questions:
-        if q["quality"] == "reviewed":
-            assert q["quality_reviewed_at"] and interview._valid_rubric(rubrics[q["id"]])
-            assert rubrics[q["id"]]["sources"] and rubrics[q["id"]]["reviewed_at"]
-            assert interview.score_answer(q["id"], q["reference_answer"])["score"] == 10
-        else:
-            assert interview.score_answer(q["id"], q["reference_answer"])["score"] is None
-    assert set(rubrics) == {q["id"] for q in questions if q["quality"] == "reviewed"}
-    public = [q for rid in demo_ids for q in interview.get_questions(rid, 99, 42)]
-    assert all(not {"rubric", "criteria", "review_note", "sources", "reference_answer"} & q.keys() for q in public)
+        if q.get("quality") == "reviewed":
+            feedback = interview.get_question_feedback(q["id"])
+            assert feedback["content_reviewed"]
+            assert feedback["quality_sources"]
+            assert q["quality_reviewed_at"] and q["quality_review_note"]
+        if q.get("quality") == "ai_reviewed_internal":
+            assert interview.get_question_feedback(q["id"])["content_reviewed"]
+            assert "AI" in q["quality_reviewer"]
+            assert "not an independent" in q["quality_review_note"].casefold()
+    assert not hasattr(interview, "score_answer")
+    assert not hasattr(interview, "get_rubric_coverage")
+    assert not hasattr(modules, "score_answer")
+    assert not hasattr(modules, "get_rubric_coverage")
 
 
-def test_rubric_integrity_rejects_foreign_key_missing_review_and_bad_criteria():
-    q = question("q", "sql", quality="reviewed")
-    banks = [("fixture", {"roles": {"r": [q]}})]
-    assert inspect_rubrics({"questions": {}}, banks) == []  # Review of content need not imply a machine rubric.
-    assert any("unknown question" in e for e in inspect_rubrics({"questions": {"foreign": {}}}, banks))
-    assert any("invalid machine criteria" in e for e in inspect_rubrics({"questions": {"q": {}}}, banks))
+def test_question_quality_summary_keeps_interview_backlog_separate_and_current():
+    summary = interview.question_bank_quality_summary()
+    assert summary == {
+        "role_count": 131,
+        "total": 766,
+        "reviewed_internal": 0,
+        "ai_reviewed_internal": 0,
+        "template": 0,
+        "unreviewed": 766,
+    }
 
 
-def test_missing_or_corrupt_rubric_file_is_unavailable_without_invented_points(tmp_path, monkeypatch):
-    monkeypatch.setattr(interview, "_RUBRICS_FILE", tmp_path / "rubrics.json")
-    interview._load_rubrics.cache_clear()
-    assert interview.score_answer("data_analyst_q01", "grain key")["status"] == "unavailable"
-    (tmp_path / "rubrics.json").write_text("{broken", encoding="utf8")
-    interview._load_rubrics.cache_clear()
-    assert interview.score_answer("data_analyst_q01", "grain key")["score"] is None
-    interview._load_rubrics.cache_clear()
+@pytest.mark.parametrize("role_id", ["data_analyst", "frontend_developer_react", "backend_developer_java"])
+def test_demo_role_question_banks_have_draft_guidance_pending_review(role_id):
+    questions = interview._load_question_data()[role_id]
+    assert questions
+    assert all(q.get("reference_answer") and q.get("good_answer_points") for q in questions)
+    assert all(q.get("context_scenario") and all(q["evaluation_rubric"].values()) for q in questions)
+    assert all(not interview.get_question_feedback(q["id"])["content_reviewed"] for q in questions)
+
+
+def test_no_rubric_machine_score_file_remains():
+    assert not (DATA_DIR / "interview_rubrics.json").exists()

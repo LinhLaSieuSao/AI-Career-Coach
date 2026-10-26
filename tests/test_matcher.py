@@ -41,6 +41,25 @@ def skill_data(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     matcher._load_alias_map.cache_clear()
 
 
+@pytest.fixture
+def jd_skill_data(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
+    data_dir = tmp_path / "JDData"
+    data_dir.mkdir()
+    skills = ["python", "sql", "nodejs", "docker", "postgresql", "giải quyết vấn đề", "git"]
+    roles = [{"id": "sample_role", "name": "Sample Role", "skills": skills}]
+    (data_dir / "roles.json").write_text(json.dumps(roles, ensure_ascii=False), encoding="utf-8")
+    (data_dir / "skill_aliases.json").write_text(
+        json.dumps({"node.js": "nodejs", "xử lý vấn đề": "giải quyết vấn đề"}, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(matcher, "_DATA_DIR", data_dir)
+    matcher._load_role_catalog.cache_clear()
+    matcher._load_alias_map.cache_clear()
+    yield data_dir
+    matcher._load_role_catalog.cache_clear()
+    matcher._load_alias_map.cache_clear()
+
+
 def _role() -> dict:
     return {
         "id": "sample_role",
@@ -305,3 +324,73 @@ def test_cv_jd_independent_catalog_skills_do_not_match_parent_technologies():
     assert result["missing"] == result["jd_skills"]
     exact = matcher.match_cv_to_jd("pandas MySQL English GTM .NET Core", "pandas MySQL English Google Tag Manager .NET Core")
     assert exact["percent"] == 100.0
+
+
+def test_jd_extractor_classifies_only_explicit_sections_and_preserves_unclassified(jd_skill_data):
+    result = matcher.extract_jd_skill_requirements(
+        "Trách nhiệm:\nDùng Node.js hằng ngày.\n"
+        "Yêu cầu bắt buộc: Python và SQL.\n"
+        "Ưu tiên:\nDocker"
+    )
+
+    assert result == {
+        "all_skills": ["nodejs", "python", "sql", "docker"],
+        "must_have": ["python", "sql"],
+        "nice_to_have": ["docker"],
+        "unclassified": ["nodejs"],
+    }
+
+
+def test_jd_extractor_keeps_skills_unclassified_without_explicit_heading(jd_skill_data):
+    result = matcher.extract_jd_skill_requirements("Python, SQL và Docker là những công cụ quen thuộc.")
+
+    assert result["must_have"] == []
+    assert result["nice_to_have"] == []
+    assert result["unclassified"] == ["python", "sql", "docker"]
+
+
+def test_jd_extractor_handles_multiple_explicit_sections_in_one_paragraph(jd_skill_data):
+    result = matcher.extract_jd_skill_requirements(
+        "Yêu cầu bắt buộc: Python và SQL. Ưu tiên: Docker; Trách nhiệm: Node.js"
+    )
+
+    assert result["must_have"] == ["python", "sql"]
+    assert result["nice_to_have"] == ["docker"]
+    assert result["unclassified"] == ["nodejs"]
+
+
+def test_jd_extractor_normalizes_alias_in_explicit_must_have_section(jd_skill_data):
+    result = matcher.extract_jd_skill_requirements("Yêu cầu:\nCó khả năng xử lý vấn đề.")
+
+    assert result["must_have"] == ["giải quyết vấn đề"]
+    assert result["unclassified"] == []
+
+
+def test_categorized_jd_matching_uses_85_15_and_excludes_unclassified(jd_skill_data):
+    result = matcher.compare_confirmed_jd_requirements(
+        ["python", "sql", "nodejs", "postgresql", "xử lý vấn đề"],
+        ["python", "sql", "nodejs", "docker", "postgresql"],
+        ["giải quyết vấn đề", "git"],
+        ["javascript"],
+    )
+
+    assert result["must_have"]["percent"] == 80.0
+    assert result["nice_to_have"]["percent"] == 50.0
+    assert result["unclassified"]["percent"] == 0.0
+    assert result["overall_percent"] == 75.5
+    assert result["method"] == "confirmed_categorized_skill_overlap"
+
+
+def test_categorized_jd_matching_does_not_create_aggregate_without_must_have(jd_skill_data):
+    result = matcher.compare_confirmed_jd_requirements(
+        ["python"], [], ["python", "sql"], ["docker"]
+    )
+
+    assert result["overall_percent"] is None
+    assert result["nice_to_have"]["percent"] == 50.0
+    assert result["unclassified"]["percent"] == 0.0
+
+
+def test_categorized_jd_matching_rejects_skill_assigned_to_multiple_groups(jd_skill_data):
+    with pytest.raises(ValueError, match="đang nằm ở cả"):
+        matcher.compare_confirmed_jd_requirements(["python"], ["python"], [], ["PYTHON"])

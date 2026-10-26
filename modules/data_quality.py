@@ -43,13 +43,13 @@ def inspect_data(roles, resources, aliases, extra_skills, banks) -> dict:
     def url(value):
         try:
             return isinstance(value, str) and value == value.strip() and urlsplit(value).scheme in {"http", "https"} and bool(urlsplit(value).netloc)
-        except ValueError:
+        except (ValueError, TypeError):
             return False
 
     def valid_date(value):
         try:
             return isinstance(value, str) and date.fromisoformat(value) <= date.today()
-        except ValueError:
+        except (ValueError, TypeError):
             return False
 
     role_ids, role_skills = set(), {}
@@ -149,6 +149,7 @@ def inspect_data(roles, resources, aliases, extra_skills, banks) -> dict:
     for skill in uncovered:
         warnings.append(f"recognition_only.{skill}: no learning resource")
     question_ids, question_roles = set(), set()
+    question_quality = Counter()
     for filename, bank in banks:
         mapping = bank.get("roles") if isinstance(bank, dict) else None
         if not require(isinstance(mapping, dict), filename, "roles object required"):
@@ -176,6 +177,21 @@ def inspect_data(roles, resources, aliases, extra_skills, banks) -> dict:
                 require(question.get("type") in ("technical", "scenario"), qp, "invalid question type")
                 require(isinstance(question.get("question"), str) and bool(question["question"].strip()), qp, "question text required")
                 require(bool(question.get("reference_answer")) or bool(question.get("good_answer_points")), qp, "answer guidance required")
+                quality = question.get("quality", "unreviewed")
+                allowed_quality = ("reviewed", "ai_reviewed_internal", "template", "unreviewed")
+                require(quality in allowed_quality, qp + ".quality", "invalid guidance review status")
+                question_quality[quality if quality in allowed_quality else "invalid"] += 1
+                if quality in ("reviewed", "ai_reviewed_internal"):
+                    sources = question.get("quality_sources")
+                    require(bool(question.get("quality_review_note")) and valid_date(question.get("quality_reviewed_at")),
+                            qp + ".quality_review", "review note and date required")
+                    require(isinstance(sources, list) and bool(sources) and all(url(source) for source in sources),
+                            qp + ".quality_sources", "reviewed guidance requires HTTP(S) sources")
+                    if quality == "ai_reviewed_internal":
+                        require(bool(question.get("quality_reviewer")) and "AI" in str(question.get("quality_reviewer")),
+                                qp + ".quality_reviewer", "AI-assisted review must be labeled")
+                        require("not an independent" in str(question.get("quality_review_note", "")).casefold(),
+                                qp + ".quality_review_note", "AI-assisted review must state it is not independent")
     for rid in sorted(role_ids - question_roles):
         errors.append(f"questions.{rid}: role has no question bank")
     statistics = {"roles": len(role_ids), "role_skills": len(required), "recognition_skills": len(vocabulary),
@@ -185,7 +201,8 @@ def inspect_data(roles, resources, aliases, extra_skills, banks) -> dict:
                   "published_duration_urls": len({r["url"] for _, r in rows if r.get("duration_hours") is not None and url(r.get("url"))}),
                   "estimated_durations": sum(r.get("estimated_duration_hours") is not None for _, r in rows),
                   "content_reviews": dict(Counter(str(r.get("content_review_status", "unreviewed")) for _, r in rows)),
-                  "questions": len(question_ids), "recognition_without_resources": uncovered}
+                  "questions": len(question_ids), "question_guidance_reviews": dict(question_quality),
+                  "recognition_without_resources": uncovered}
     return {"errors": errors, "warnings": warnings, "stats": statistics}
 
 
@@ -198,44 +215,5 @@ def audit_project(data_dir: Path = DATA_DIR) -> dict:
     banks = [(p.name, json.loads(p.read_text(encoding="utf-8"))) for p in sorted(directory.glob("*.json"))]
     roles = read("roles.json")
     result = inspect_data(roles, read("resources.json"), read("skill_aliases.json"), read("skill_catalog.json"), banks)
-    if (data_dir / "interview_rubrics.json").is_file():
-        result["errors"].extend(inspect_rubrics(read("interview_rubrics.json"), banks))
     result["top30"] = top_skills(roles)
     return result
-
-
-def inspect_rubrics(payload, banks) -> list[str]:
-    """Private rubric foreign keys and review provenance, without HTTP calls."""
-    from .interview import _valid_rubric
-    errors = []
-    rubrics = payload.get("questions") if isinstance(payload, dict) else None
-    if not isinstance(rubrics, dict):
-        return ["interview_rubrics: questions object required"]
-    questions = {}
-    for _, bank in banks:
-        mapping = bank.get("roles") if isinstance(bank, dict) else None
-        if isinstance(mapping, dict):
-            for rows in mapping.values():
-                if isinstance(rows, list):
-                    for question in rows:
-                        if isinstance(question, dict) and isinstance(question.get("id"), str):
-                            questions[question["id"]] = question
-    for qid, rubric in rubrics.items():
-        question = questions.get(qid)
-        if question is None:
-            errors.append(f"rubric.{qid}: unknown question ID")
-        elif question.get("quality") != "reviewed" or not question.get("quality_note"):
-            errors.append(f"rubric.{qid}: question must be reviewed with note")
-        if not _valid_rubric(rubric):
-            errors.append(f"rubric.{qid}: invalid machine criteria")
-            continue
-        try:
-            valid_date = date.fromisoformat(rubric.get("reviewed_at", "")) <= date.today()
-        except (ValueError, TypeError):
-            valid_date = False
-        sources = rubric.get("sources")
-        if not valid_date or not isinstance(sources, list) or not sources or any(
-            not isinstance(source, str) or not source.startswith(("https://", "http://")) for source in sources
-        ):
-            errors.append(f"rubric.{qid}: review date and sources required")
-    return errors

@@ -9,6 +9,13 @@ from urllib.parse import urlsplit
 
 from .levels import canonical_skill
 from .recommender import _resource_tokens
+from .resource_policy import (
+    has_granular_level_evidence,
+    is_recommendable_resource,
+    resource_exclusion_reason,
+    resource_review_status,
+)
+from .practice_guidance import get_practice_routes
 
 
 def _positive(value):
@@ -79,6 +86,7 @@ def plan(gap, resources, hours_per_week=8):
 
     # Union IDs and normalized URLs before selection. Metadata remains per mapping.
     parents, rows = {}, []
+    excluded_without_url = {item["skill"]: [] for item in items}
     def root(token):
         parents.setdefault(token, token)
         while parents[token] != token:
@@ -94,6 +102,7 @@ def plan(gap, resources, hours_per_week=8):
                 raise ValueError("Resource phải là object.")
             tokens = _resource_tokens(record)
             if not tokens or not _url(record.get("url")):
+                excluded_without_url[item["skill"]].append((record, "missing_url" if tokens else "missing_resource_identity"))
                 continue
             for token in tokens[1:]:
                 parents[root(token)] = root(tokens[0])
@@ -102,10 +111,14 @@ def plan(gap, resources, hours_per_week=8):
     candidates = {item["skill"]: [] for item in items}
     for skill, record, tokens in rows:
         key = identities.setdefault(root(tokens[0]), tokens[0])
-        start, end = record.get("level_from"), record.get("level_to")
-        if any(type(v) is not int or not 1 <= v <= 3 for v in (start, end)) or start > end:
-            raise ValueError(f"Khoảng level resource của {skill} không hợp lệ.")
-        duration = _duration(record)
+        eligible = is_recommendable_resource(record, require_verified=True, skill=skill)
+        if eligible:
+            start, end = record.get("level_from"), record.get("level_to")
+            if any(type(v) is not int or not 1 <= v <= 3 for v in (start, end)) or start > end:
+                raise ValueError(f"Khoảng level resource của {skill} không hợp lệ.")
+            duration = _duration(record)
+        else:
+            duration = None
         candidates[skill].append((key, record, duration))
 
     catalog, refs, unresolved, coverage = {}, {}, [], []
@@ -115,13 +128,39 @@ def plan(gap, resources, hours_per_week=8):
         needed = set(range(item["current"]+1, item["required"]+1))
         all_candidates = candidates[skill]
         eligible = [(key, r, duration) for key, r, duration in all_candidates
-                    if r.get("verified") is True and r.get("content_review_status") in ("reviewed", "partial")]
+                    if is_recommendable_resource(r, require_verified=True, skill=skill)]
         while needed:
             level = min(needed)
             choices = [(k, r, d) for k, r, d in eligible if r["level_from"] <= level <= r["level_to"]]
+            reviewed_choices = [choice for choice in choices if resource_review_status(choice[1]) == "reviewed"]
+            if reviewed_choices:
+                choices = reviewed_choices
             if not choices:
-                reason = "no_resources" if not all_candidates else "unreviewed_content" if not eligible else "level_mismatch"
-                unresolved.append({"skill": skill, "reason": reason, "levels": sorted(needed)})
+                excluded = excluded_without_url[skill]
+                exclusion_reasons = {
+                    resource_exclusion_reason(record, require_verified=True, skill=skill)
+                    for _, record, _ in all_candidates
+                }
+                exclusion_reasons.update(reason_code for _, reason_code in excluded)
+                exclusion_reasons.discard(None)
+                if not all_candidates and not excluded:
+                    reason = "no_resources"
+                elif not eligible:
+                    reason = next((candidate for candidate in (
+                        "specialized_source_required",
+                        "unreviewed_content", "blocked_resource", "unsuitable_content",
+                        "unverified_link", "missing_url", "missing_resource_identity",
+                    ) if candidate in exclusion_reasons), "unreviewed_content")
+                else:
+                    reason = "level_mismatch"
+                issue = {"skill": skill, "reason": reason, "levels": sorted(needed)}
+                status_records = [record for _, record, _ in all_candidates] + [record for record, _ in excluded]
+                statuses = sorted({resource_review_status(record) for record in status_records})
+                if statuses:
+                    issue["resource_statuses"] = statuses
+                if exclusion_reasons:
+                    issue["exclusion_reasons"] = sorted(exclusion_reasons)
+                unresolved.append(issue)
                 break
             # Prefer reviewed, sourced duration, then broader coverage; stable data order.
             key, record, duration = min(choices, key=lambda choice: (
@@ -135,7 +174,17 @@ def plan(gap, resources, hours_per_week=8):
                 refs[skill].append(key)
             coverage.append({"skill": skill, "resource_key": key, "levels": covered,
                              "content_review_status": record["content_review_status"],
-                             "review_note": record.get("review_note", "")})
+                             "review_note": record.get("review_note", ""),
+                             "level_evidence": (
+                                 "bounded_unit_recorded" if has_granular_level_evidence(record)
+                                 else "scope_pending" if "scope_granularity" in record
+                                 else "legacy_metadata_unavailable"
+                             )})
+            if "scope_granularity" in record and not has_granular_level_evidence(record):
+                unresolved.append({
+                    "skill": skill, "resource_key": key,
+                    "reason": "scope_evidence_pending", "levels": covered,
+                })
             if record["content_review_status"] == "partial":
                 unresolved.append({"skill": skill, "resource_key": key, "reason": "partial_content", "levels": covered})
             if key not in catalog:
@@ -195,4 +244,5 @@ def plan(gap, resources, hours_per_week=8):
             "total_known_hours": float(published), "total_estimated_hours": float(estimated),
             "total_planned_hours": float(published+estimated), "is_estimated": bool(estimated),
             "unresolved": unresolved, "unknown_duration": unknown,
+            "practice_routes": get_practice_routes([item["skill"] for item in items], resources),
             "completion_basis": "resource_metadata_not_skill_attainment"}

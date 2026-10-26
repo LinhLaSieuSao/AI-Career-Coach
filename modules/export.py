@@ -167,10 +167,10 @@ def export_report(profile, gap, roadmap, format="markdown") -> str:
             lines.append(f"- Chưa rõ thời lượng: [{md(resource.get('title'))}]({md(resource.get('url'))}) · {md(item.get('resource_key'))}")
         lines += ["", "Tổng tuần là chưa xác định khi còn phần gap/tài liệu/thời lượng chưa giải quyết. Giờ ước lượng được ghi riêng; tài liệu hoàn thành không chứng nhận đạt kỹ năng hay level.", ""]
     else:
-        lines += ["## Tài liệu", "", "| Tuần | Kỹ năng | Tài liệu | Trạng thái |", "| ---: | --- | --- | --- |"]
+        lines += ["## Tài liệu theo giai đoạn (chưa ước lượng tuần)", "", "| Giai đoạn | Kỹ năng | Tài liệu | Trạng thái |", "| ---: | --- | --- | --- |"]
         for row in rows:
             if row["section"] == "roadmap":
                 lines.append(f"| {md(row.get('week'))} | {md(row.get('skill'))} | [{md(row.get('title'))}]({md(row.get('url'))}) | {md(row.get('status'))} |")
         lines.append("")
-    lines += ["## Giới hạn", "", "Điểm presence phản ánh kỹ năng nhận diện hiện có; điểm level dùng riêng các level khai báo. Gợi ý role là heuristic, không phải xác suất tuyển dụng. Thời lượng/tuần chưa biết được giữ là chưa xác định; resource chung chỉ được tính một lần.", ""]
+    lines += ["## Giới hạn", "", "Điểm presence phản ánh kỹ năng nhận diện hiện có; điểm level dùng riêng các level khai báo. Gợi ý role là heuristic, không phải xác suất tuyển dụng. Lộ trình presence chỉ xếp giai đoạn; tuần của lộ trình theo giờ chưa biết được giữ là chưa xác định. Resource chung chỉ được tính một lần.", ""]
     return "\n".join(lines)

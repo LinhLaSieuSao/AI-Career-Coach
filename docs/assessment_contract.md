@@ -29,6 +29,36 @@ khi thiếu trường weight); required không có
 không được suy ngầm. Tên/alias trùng sau canonical gây lỗi. Không mutate input.
 `match_role.percent` tiếp tục là phần trọng số **presence**, không đổi semantics.
 
+## Đối chiếu JD theo nhóm đã xác nhận
+
+`extract_jd_skill_requirements(jd_text) -> dict` trả `all_skills`,
+`must_have`, `nice_to_have`, `unclassified`. Bộ trích xuất chỉ gán nhóm khi
+nhận ra tiêu đề rõ ràng như “Yêu cầu bắt buộc / Requirements”, “Ưu tiên / Nice
+to have” hoặc “Trách nhiệm / Responsibilities” (tiêu đề đứng riêng, ở đầu
+dòng, hoặc sau dấu câu/phân tách danh sách). Kỹ năng trong phần văn bản
+không có tiêu đề tương ứng nằm ở `unclassified`; ứng dụng không suy mức độ bắt
+buộc chỉ từ việc một kỹ năng xuất hiện trong câu.
+
+Người dùng có thể bỏ kỹ năng không đúng hoặc chuyển kỹ năng giữa ba nhóm ở bước
+rà soát. Mỗi kỹ năng canonical chỉ được nằm trong một nhóm. Alias được giải về
+tên canonical trước khi kiểm tra trùng.
+
+`compare_confirmed_jd_requirements(candidate, must_have, nice_to_have,
+unclassified=(), *, must_weight=.85, nice_weight=.15) -> dict` trả từng nhóm
+với `skills`, `matched`, `missing`, `count`, `percent`. Tỷ lệ từng nhóm là số
+kỹ năng trùng hồ sơ chia cho số kỹ năng trong nhóm đó. `overall_percent` và
+`percent` chỉ có khi có ít nhất một kỹ năng bắt buộc; khi có cả hai nhóm bắt
+buộc và ưu tiên, tổng hợp = (85% × tỷ lệ bắt buộc + 15% × tỷ lệ ưu tiên) / tổng
+trọng số được cấu hình. Khi không có nhóm ưu tiên, tỷ lệ bắt buộc được dùng
+riêng. Nhóm chưa phân loại luôn có tỷ lệ riêng và không tham gia tổng hợp.
+
+Các tỷ lệ chỉ là heuristic trùng khớp tên kỹ năng trong vocabulary đã được
+người dùng xác nhận. Chúng không xác minh mức độ thành thạo, đầy đủ các yêu cầu
+ngoài catalog, đủ điều kiện ứng tuyển hay xác suất tuyển dụng. Nếu không có kỹ
+năng bắt buộc, không tạo điểm tổng hợp; UI phải nói rõ điều đó. API cũ
+`compare_confirmed_skills_to_jd` và `match_cv_to_jd` tiếp tục được giữ cho các
+caller cần schema phẳng.
+
 ## build_timed_roadmap(gap, resources, hours_per_week=8) -> dict
 
 ```python
@@ -85,7 +115,8 @@ Không gap trả 0 tuần/giờ và danh sách rỗng.
 
 `unknown_duration` liệt kê resource_key, skills, reason.
 `unresolved` có reason và skill hoặc skills/resource_key/levels phù hợp:
-no_resources, unreviewed_content (gồm blocked/unsuitable), level_mismatch,
+no_resources, unreviewed_content, blocked_resource, unsuitable_content,
+missing_url, missing_resource_identity, unverified_link, level_mismatch,
 partial_content, unknown_duration, unverified_duration, estimate_without_basis,
 conflicting_duration. Partial vẫn có thể xếp phần đọc được nhưng không coi
 skill đã được bao phủ đầy đủ. Có link/range không chứng minh đạt năng lực;
@@ -113,44 +144,41 @@ matched, missing, matched_interests, reasons:list[str], method='heuristic'.
 không có sở thích cá nhân chuẩn hóa sâu; tên/sở thích ngoài phạm vi khớp có thể
 không tạo tín hiệu. UI không tự chọn role đầu danh sách.
 
-UI nhập levels bằng object JSON trong form, từ chối khóa trùng kể cả cùng
-chính tả trước khi parser ghi đè. Level lỗi giữ nguyên hồ sơ đã chấp nhận trước;
-thay hồ sơ hợp lệ reset consent/mode và câu trả lời. Đổi mode/role/gap reset
-phiên phỏng vấn để không dùng đáp án/điểm của bộ câu hỏi cũ. Form vẫn giữ điều
-kiện hợp lệ Đợt 2: kỹ năng có nội dung hoặc CV hợp lệ, không lưu hồ sơ chỉ có
-interests; API suggest_roles riêng vẫn nhận được interests-only.
+UI dùng wizard hai bước: nhập hồ sơ, sau đó xác nhận/bỏ kỹ năng và chọn Level
+0–3 bằng selectbox cho từng kỹ năng. Không yêu cầu nhập JSON. Giá trị thiếu
+Level vẫn là unknown; Level 3 không được gợi ý tự động. Thay hồ sơ đã xác nhận
+reset mode/kết quả/phỏng vấn cũ; lỗi ở bản nháp không ghi đè hồ sơ đã lưu.
+Điều kiện tạo hồ sơ là có kỹ năng hoặc CV hợp lệ; chỉ có interests/experience
+không tạo hồ sơ. API suggest_roles riêng vẫn nhận được interests-only.
 
-## get_questions(..., focus_skills=None) và score_answer(question_id, answer)
+## Luyện phỏng vấn và hướng dẫn câu trả lời
 
-None giữ thuật toán cũ: shuffle theo seed, xen kẽ technical/scenario, không
-lặp ID. Focus chuẩn hóa/alias: đưa câu có skill trong focus lên trước, giữ thứ
-tự seed/xen kẽ trong từng nhóm, sau đó bù câu role còn lại tới n. Danh sách
-focus rỗng tương đương không ưu tiên. Không có câu cho một gap không bịa câu.
-Public whitelist chỉ id/type/skill/level/weight/question/time_minutes/quality
-và role_id; không reference_answer/good_answer_points/red_flags/rubric/review_note.
+`get_questions(role_id, n, seed=None, focus_skills=None)` trả bản sao công khai,
+xen kẽ câu kỹ thuật/tình huống, không lặp ID và ưu tiên gap trước. `n` phải là
+số nguyên dương; UI giới hạn tối đa ở `min(10, số câu hợp lệ hiện có của role)`
+để không yêu cầu vượt số dữ liệu ngân hàng thực sự có. Focus rỗng tương đương
+không ưu tiên. Không có câu phù hợp thì UI thông báo, không tự tạo câu.
 
-Rubric private ở `Data/interview_rubrics.json`: từng question_id có review_status,
-reviewed_at, review_note, sources và criteria[{id,label,points,groups}]. Mỗi
-group là OR các cụm tương đương; criterion đòi **mọi group** (AND), tổng points
-bằng 10. Không tạo rubric tự động từ câu trả lời mẫu. Câu hỏi và rubric phải
-cùng được reviewed; thiếu/không hợp lệ trả:
+Public whitelist gồm id/type/skill/level/weight/question/time_minutes/quality
+và role_id. Đáp án, gợi ý, lưu ý cần tránh và nguồn review chỉ được truy xuất
+sau khi người dùng gửi câu trả lời trong UI. Phiên chỉ giữ câu trả lời đã gửi
+trong session hiện tại; không lưu vào file hoặc dịch vụ ngoài.
 
-```python
-{"score": None, "criteria": [], "feedback": ["..."], "method": "rubric",
- "status": "unavailable", "reason": "missing_or_unreviewed_rubric"}
-```
+Ứng dụng **không tính điểm tự động**, không khớp cụm từ và không xếp hạng câu
+trả lời. Checklist là danh sách tự phản tư, không cộng thành điểm. Câu hỏi có
+`quality=reviewed` phải có ngày, ghi chú và URL nguồn trong chính record; trạng
+thái này chỉ nói đã review nội bộ, không phải thẩm định độc lập. Mọi record
+không đạt điều kiện đó được xem là chưa review. UI gắn cảnh báo, yêu cầu kiểm
+chứng nội dung chuyên môn và gọi câu trả lời tình huống là cách triển khai tham
+khảo, không phải đáp án duy nhất.
 
-Rubric dùng được trả status=scored, score 0–10, criteria có id/label/met/score/
-max_score và feedback nêu ý đạt/thiếu. Answer trống ở API này có score=0 khi
-rubric có sẵn; không có rubric vẫn None. UI yêu cầu trả lời trước khi submit.
-ID không tồn tại/trùng gây ValueError, answer không phải str gây TypeError.
-Chuẩn hóa riêng phần chấm: NFC/lowercase, bỏ dấu tiếng Việt, so cụm theo ranh
-giới từ, không fuzzy; phủ định gần cụm có thể ngăn nhận điểm. Quy tắc không
-hiểu ngữ nghĩa sâu, không xác minh sự thật hay tính nhất quán lập luận, có thể
-bỏ sót cách diễn đạt mới hoặc cho điểm câu liệt kê khái niệm. Luôn nêu giới hạn.
+`get_question_feedback(question_id)` trả nội dung tham khảo, loại câu hỏi,
+trạng thái review và nguồn tương ứng (nếu có). ID không tồn tại hoặc trùng gây
+`ValueError`. Nội dung chưa review không được gắn nhãn đáp án đã kiểm chứng.
+Người dùng tự rà soát bối cảnh, lý do, bằng chứng, kết quả và điều đã học; app
+không suy diễn ý nghĩa hay xác nhận tính đúng thay cho người phỏng vấn.
 
-Đã review nội bộ 6 cặp question/rubric thuộc ba role demo (2/role), sửa câu hỏi
-thành tình huống cụ thể. 12 câu demo còn lại quality=template và unavailable.
-Không giả tên reviewer hoặc thẩm định độc lập. Câu khác trong bank chưa được
-gắn reviewed. UI chỉ gọi feedback/reference/scoring sau submit; các API đọc
-feedback cũ dành cho caller tin cậy, không là cơ chế xác thực người dùng.
+Trong bộ dữ liệu hiện tại có 752 câu: 6 record đã review nội bộ, 12 record có
+nhãn template, còn 734 record chưa có trạng thái review. Sáu record review đã
+giữ ngày, ghi chú và nguồn ngay trong câu hỏi; rubric cụm từ chấm máy đã được
+loại bỏ vì không thể đánh giá ngữ nghĩa hoặc chứng cứ trải nghiệm đáng tin cậy.

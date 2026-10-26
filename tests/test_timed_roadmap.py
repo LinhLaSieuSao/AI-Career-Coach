@@ -15,6 +15,7 @@ def gap(*skills):
 def resource(rid="r", hours=10, **kwargs):
     return {"id": rid, "url": "https://example.org/"+rid, "title": "Course "+rid,
             "level_from": 1, "level_to": 3, "verified": True, "content_review_status": "reviewed",
+            "review_note": "Reviewed learning outcomes for the covered levels.",
             "duration_hours": hours, "duration_source": "https://example.org/evidence", "duration_basis": "publisher",
             **kwargs}
 
@@ -37,6 +38,28 @@ def test_long_shared_resource_is_split_once_and_respects_budget_without_mutation
     assert keys == set(result["resource_keys"]["sql"]) == set(result["resource_keys"]["python"])
     assert next(iter(result["resources"].values()))["skills"] == ["python", "sql"]
     assert r == before
+
+
+def test_sales_practice_route_exists_even_when_no_course_is_recommendable():
+    result = build_timed_roadmap(
+        gap(("bán hàng", 1, 1)),
+        {"bán hàng": {"category": "technical", "resources": []}},
+    )
+    assert result["unresolved"][0]["reason"] == "no_resources"
+    route = result["practice_routes"][0]
+    assert route["skill"] == "bán hàng"
+    assert "đóng vai khách hàng" in " ".join(route["steps"])
+
+
+def test_catalog_page_can_be_scheduled_as_reference_but_not_claim_verified_level():
+    record = resource(
+        scope_granularity="catalog", evidence_locator="Trang danh mục khóa học",
+    )
+    result = build_timed_roadmap(gap(("python", 2, 2)), catalog(python=[record]))
+    assert result["total_known_hours"] == 10
+    assert result["total_weeks"] is None
+    assert result["level_coverage"][0]["level_evidence"] == "scope_pending"
+    assert any(item["reason"] == "scope_evidence_pending" for item in result["unresolved"])
 
 
 def test_priority_then_stable_tie_and_multiple_resources_pack_into_one_week():
@@ -71,8 +94,8 @@ def test_estimate_is_separate_and_requires_its_basis():
 @pytest.mark.parametrize("reason,r", [
     ("level_mismatch", resource(level_from=1, level_to=1)),
     ("unreviewed_content", resource(content_review_status="unreviewed")),
-    ("unreviewed_content", resource(content_review_status="blocked", verified=False)),
-    ("unreviewed_content", resource(content_review_status="unsuitable", verified=False)),
+    ("blocked_resource", resource(content_review_status="blocked", verified=False)),
+    ("unsuitable_content", resource(content_review_status="unsuitable", verified=False)),
 ])
 def test_level_mismatch_and_unreviewed_content_are_not_assumed_sufficient(reason, r):
     g = compute_gap({"sql": 1}, {"skills": [{"name": "sql", "level": 3}]})

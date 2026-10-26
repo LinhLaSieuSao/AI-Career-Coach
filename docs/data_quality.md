@@ -1,5 +1,12 @@
 # Chất lượng dữ liệu — Đợt 3
 
+> **Snapshot lịch sử của Đợt 3 (24/10/2026).** Các thống kê Đợt 3 bên dưới
+> ghi lại trạng thái tại thời điểm đó và đã được snapshot cuối ngày 25/10/2026
+> thay thế. Hiện catalog có 471 mapping, 0 mapping `unreviewed`; xem báo cáo
+> [kiểm kê cuối](reports/resource-audit-2026-10-25.md) và
+> [inventory tái lập 26/10](verification/data-readiness-2026-10-26.md). Đây là review nội bộ
+> mapping, không phải thẩm định độc lập của chuyên gia nghề nghiệp/pháp lý.
+
 Ngày review: **24/10/2026**. Repo `AI-Specialist`, nền `a430250` cùng thay đổi
 Đợt 1/2 chưa commit. Dữ liệu dưới đây được tính lại từ JSON thật, không là giới
 hạn schema. Giữ đủ 410 ID tài nguyên gốc, 410 nhóm skill, 131 role, 752 câu hỏi;
@@ -183,7 +190,8 @@ Không tạo ước lượng biên tập để lấp số còn thiếu.
   `unreviewed`, cùng `partial` theo ngữ cảnh. Core hiện chưa tự bỏ các bản ghi
   này để giữ hợp đồng Recommender; chưa có bộ xếp hạng tài nguyên mới.
 - Đợt 5 dùng đúng ba ID demo trong bảng; không gọi chúng là hồ sơ mẫu đã tạo
-  sẵn. Review câu hỏi/rubric và mở rộng nguồn còn thiếu là công việc tiếp theo.
+  sẵn. Soft skill có tuyến luyện qua công việc và phản hồi riêng, không phụ thuộc
+  vào việc catalog có khóa học cho mọi kỹ năng.
 
 Kiểm thử offline và lệnh nghiệm thu thực tế: [tiến độ Đợt 3](progress/dot_03.md).
 
@@ -218,11 +226,44 @@ cần nâng, nên số giờ chọn **giảm**, không có nghĩa đường họ
 Snapshot đầy đủ hai probe mỗi role:
 [dot04_demo_assessments.json](reports/dot04_demo_assessments.json).
 
-Review phỏng vấn Đợt 4: giữ nguyên 752 ID/thứ tự/ngân hàng role; 6 câu thuộc
-ba role demo được sửa tình huống và review cặp rubric tường minh (2 câu/role).
-12 câu demo còn lại là template, 734 câu ngoài phạm vi chưa gắn reviewed.
-Chỉ 6/752 câu có điểm rubric; 746 câu còn lại trả unavailable/score=null, không
-biến đáp án mẫu thành tiêu chí tự động. Rubric có nguồn và ngày ở
-`Data/interview_rubrics.json`; đây là review nội bộ, chưa thẩm định độc lập.
-Chi tiết công thức, schema và giới hạn:
-[assessment_contract.md](assessment_contract.md), [tiến độ Đợt 4](progress/dot_04.md).
+Ngân hàng phỏng vấn có 752 câu trên 131 role, mỗi role hiện có 5–7 câu. Chỉ
+6 record có nguồn/ngày/ghi chú review nội bộ, 12 record mang nhãn template và
+734 record chưa có trạng thái review. UI giới hạn số câu ở min(10, số câu có
+sẵn của role); một role có 5 câu chỉ cho chọn tối đa 5. Không chấm điểm tự
+động. Đáp án/gợi ý chỉ hiện sau khi gửi, kèm cảnh báo nếu chưa review. Review
+nội bộ không phải thẩm định độc lập. Chi tiết: [assessment contract](assessment_contract.md).
+
+## Kiểm kê học liệu cuối ngày 2026-10-25
+
+Catalog cuối có 471 mapping trên 410 kỹ năng role và 416 kỹ năng nhận diện,
+trải trên 165 URL. Trạng thái nội dung hiện tại: 54 reviewed, 201 partial, 175
+unsuitable, 41 blocked và **0 unreviewed**. Trong 187 mapping `unreviewed` ở
+đợt cuối, 126 được giữ ở mức partial có ghi chú phạm vi, 49 bị loại là
+unsuitable và 12 bị blocked. Không coi việc xử lý hết backlog này là thẩm định
+độc lập hoặc xác nhận pháp lý.
+
+Ứng dụng chỉ gợi ý mapping reviewed/partial đủ điều kiện và có link hợp lệ;
+partial kèm giới hạn cùng bài tập áp dụng theo bối cảnh. Giao tiếp, bán hàng,
+xử lý vấn đề và teamwork có route mô phỏng/nhiệm vụ giám sát, phản hồi từ
+mentor/đồng nghiệp và bằng chứng thực tế, kể cả khi không có khóa học.
+
+Thuế và luật lao động chỉ được mở lại khi có nguồn chính thức tại Việt Nam,
+ngày kiểm tra hiệu lực còn mới và review của người có chuyên môn được ghi rõ.
+Nguồn safety intro như ILO PAOT không được coi là chứng nhận hoặc huấn luyện
+được cấp phép. Học liệu kiến trúc hiện bao phủ phần mềm hoặc nền tảng cloud,
+không đại diện kiến trúc hệ thống rộng hơn. Các bài toán tồn kho, quantity
+takeoff, phân tích yêu cầu và tài chính cần portfolio/dữ liệu thực tế hoặc mô
+phỏng theo domain Việt Nam cùng phản hồi người có kinh nghiệm.
+
+Ngân hàng phỏng vấn là backlog riêng: 752 câu trên 131 role; 6 câu có review
+nội bộ, 16 câu AI hỗ trợ rà soát, 3 template và 727 chưa review. Số liệu câu hỏi không được gộp vào số
+mapping học liệu. Chi tiết nguồn, từng quyết định và giới hạn nằm trong
+[báo cáo kiểm kê cuối](reports/resource-audit-2026-10-25.md),
+[bảng review 187 mapping](reports/resource-review-2026-10-25.md) và
+[snapshot JSON](reports/resource-audit-2026-10-25.json).
+
+## Kiểm kê sâu ngày 26-10-2026
+
+[Inventory hiện tại](verification/data-readiness-2026-10-26.md) đo cả **Level mà từng role yêu cầu**, thay vì chỉ hỏi kỹ năng có bất kỳ link nào: 666/1.192 cặp nghề–kỹ năng có học liệu đúng Level đang gán; 764/1.192 cặp có ít nhất một câu hỏi. Ở nhóm weight ≥ 2, tương ứng 497/950 và 720/950. Ngân hàng có 766 câu, tất cả đang chờ duyệt phần nội dung hiện hành, 0 template; 59 câu ngoài demo còn mẫu lời hỏi chung. Bốn nghề demo đã có 39/39 cặp câu hỏi, bối cảnh và rubric bản nháp AI. Toàn catalog còn 428 cặp thiếu câu và 764/1.248 ô skill×Level thiếu nguồn đủ điều kiện; xem [hàng đợi học liệu demo](verification/needs-human-resource.md).
+
+Người dùng dự án đã báo tự mở được tập 165 URL cũ ở nguồn gốc. Sau khi thay 7 URL bằng trang cụ thể hoặc bản ngôn ngữ có thể đọc và đối chiếu độc lập 29 nguồn demo, catalog có 166 URL và [bản ghi attestation](../Data/link_review_attestation.json) mang fingerprint cũ, nên cổng yêu cầu xác nhận **stale** cho tới khi người dùng xác nhận lại tập mới. Đây là kiểm tra link riêng, không chuyển nội dung hoặc quyền dữ liệu thành đã duyệt. [Module sweep](verification/module-paths-2026-10-26.md) cho thấy 131/131 role qua matcher, gap, hai lộ trình và câu hỏi/đáp án bằng hồ sơ tổng hợp; tính đúng nghề nghiệp vẫn cần review chuyên môn.

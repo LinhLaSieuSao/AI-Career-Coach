@@ -84,23 +84,36 @@ def catalog(monkeypatch):
     roles = [role(rid="z"), role(rid="a"), {"id": "sales", "name": "Sales", "name_vi": "Bán hàng",
                                            "skills": [{"name": "giao tiếp", "weight": 1, "level": 2}]}]
     monkeypatch.setattr(matcher, "_load_role_catalog", lambda: roles)
+    vectors = {
+        "z": {"R": 0, "I": 1, "A": 0, "S": 0, "E": 0, "C": 0},
+        "a": {"R": 0, "I": 1, "A": 0, "S": 0, "E": 0, "C": 0},
+        "sales": {"R": 0, "I": 0, "A": 0, "S": 0, "E": 1, "C": 0},
+    }
+    monkeypatch.setattr(matcher, "load_role_family_vectors", lambda: {
+        role_id: {"family_id": role_id, "family_label": role_id, "vector": vector}
+        for role_id, vector in vectors.items()
+    })
     return roles
 
 
 def test_suggestions_skill_only_tie_topk_and_reasons(catalog):
     result = suggest_roles({"skills": ["Python3"]}, top_k=2)
     assert [r["role_id"] for r in result] == ["a", "z"]
-    assert result[0]["score"] == result[0]["skill_percent"] == 75
+    assert result[0]["skill_percent"] > 0
     assert result[0]["matched"] == ["python"] and result[0]["missing"] == ["sql"]
-    assert result[0]["reasons"] and result[0]["method"] == "heuristic"
+    assert result[0]["reasons"] and result[0]["method"] == "role_idf_riasec_skill_gated"
+    assert result[0]["score"] <= 100
     assert suggest_roles({"skills": ["python"]}, top_k=0) == []
 
 
 def test_suggestions_interest_only_combined_and_no_signal(catalog):
-    assert [r["role_id"] for r in suggest_roles({"interests": "Bán hàng"})] == ["sales"]
-    result = suggest_roles({"skills": ["python"], "interests": ["Data", "Sales"]})
-    assert result[0]["score"] == 70  # 0.8*75 + 0.2*50, components normalized first.
-    for profile in ({}, {"levels": {"sql": 3}}, {"skills": ["unknown"]}, {"interests": ["ai"]}):
+    sales_only = suggest_roles({"interest_activity_ids": ["negotiate"]})
+    assert sales_only[0]["role_id"] == "sales"
+    assert sales_only[0]["score"] <= 5  # Interest alone cannot create a high-confidence match.
+    result = suggest_roles({"skills": ["python"], "interest_activity_ids": ["analyze_data"]})
+    assert result[0]["skill_percent"] > 0
+    assert result[0]["interest_percent"] > 0
+    for profile in ({}, {"levels": {"sql": 3}}, {"skills": ["unknown"]}, {"interests": ["unmapped free text"]}):
         assert suggest_roles(profile) == []
 
 

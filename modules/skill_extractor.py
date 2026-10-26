@@ -5,13 +5,66 @@ from __future__ import annotations
 import json
 import re
 import unicodedata
+from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Iterable
 
 
+_VERSIONED_SKILL_BASES = {
+    "angular", "angularjs", "asp.net", "asp.net core", "c#", "c++", "django",
+    "docker", "flask", "java", "kotlin", "laravel", "maven", "mongodb",
+    "mysql", "node", "node.js", "nodejs", "postgresql", "python", "pytorch",
+    "react", "react native", "react.js", "reactjs", "redis", "spring boot",
+    "sql server", "swift", "tensorflow", "typescript", "vue", "vue.js", "vuejs",
+    ".net", ".net core", ".net framework", "windows server",
+}
+
+# Explicit statements of missing experience are not evidence of a skill.
+# Keep this narrow: ambiguous prose still goes through the review step.
+_NEGATED_CLAIM = re.compile(
+    r"\b(?:chưa\s+(?:từng\s+)?(?:sử\s+dụng|dùng|học|biết|thành\s+thạo|"
+    r"có\s+kinh\s+nghiệm(?:\s+(?:với|về))?)|"
+    r"không\s+(?:sử\s+dụng|dùng|biết|thành\s+thạo|"
+    r"có\s+kinh\s+nghiệm(?:\s+(?:với|về))?)|"
+    r"never\s+(?:used|learned|worked\s+with)|"
+    r"not\s+(?:familiar\s+with|experienced\s+with|proficient\s+in)|"
+    r"no\s+experience\s+(?:with|in))\b",
+    re.IGNORECASE,
+)
+_POSITIVE_CLAIM = re.compile(
+    r"\b(?:đã\s+(?:sử\s+dụng|dùng|học|biết|làm\s+việc\s+với)|"
+    r"có\s+kinh\s+nghiệm\s+(?:với|về)|"
+    r"(?:have|has)\s+experience\s+(?:with|in)|"
+    r"(?:used|learned|worked\s+with))\b",
+    re.IGNORECASE,
+)
+_CLAUSE_BREAK = re.compile(r"[.;!?]|\b(?:nhưng|tuy\s+nhiên|but|however)\b", re.IGNORECASE)
+
+
+def _is_explicitly_negated(source: str, start: int) -> bool:
+    """Exclude a nearby, explicit lack-of-skill claim from extracted evidence."""
+    # A bounded window avoids quadratic scans in a long pasted CV with many
+    # repeated skill mentions. The rule only considers nearby negation anyway.
+    prefix = source[max(0, start - 128):start]
+    boundaries = list(_CLAUSE_BREAK.finditer(prefix))
+    clause = prefix[boundaries[-1].end():] if boundaries else prefix
+    negations = list(_NEGATED_CLAIM.finditer(clause))
+    if not negations:
+        return False
+    last_negation = negations[-1]
+    if len(clause) - last_negation.end() > 60:
+        return False
+    return not any(match.start() >= last_negation.end() for match in _POSITIVE_CLAIM.finditer(clause))
+
+
 def normalize_skill(name: str) -> str:
-    """Chuẩn hóa tên kỹ năng; matcher và recommender nên dùng chung hàm này."""
-    return re.sub(r"\s+", " ", unicodedata.normalize("NFC", name or "").strip().lower())
+    """Normalize labels and strip version suffixes only from known software skills."""
+    cleaned = unicodedata.normalize("NFC", name or "").strip().lower()
+    cleaned = re.sub(r"\s+", " ", cleaned)
+    versioned = re.fullmatch(r"(?P<base>.+?)\s+v?\d+(?:\.\d+)*", cleaned, flags=re.IGNORECASE)
+    if versioned and versioned.group("base") in _VERSIONED_SKILL_BASES:
+        cleaned = versioned.group("base")
+    return cleaned
 
 
 def _skill_names(roles: Iterable[dict[str, Any]]) -> Iterable[str]:
@@ -50,6 +103,7 @@ def extract_skills(
     if not text:
         return []
     working = normalize_skill(text.replace("\r", " ").replace("\n", " "))
+    source = working
     alias_map = {normalize_skill(k): normalize_skill(v) for k, v in (aliases or {}).items()}
     canonical_vocab = {normalize_skill(skill) for skill in vocabulary if normalize_skill(skill)}
     candidates: dict[str, str] = {skill: skill for skill in canonical_vocab}
@@ -62,7 +116,10 @@ def extract_skills(
         pattern = re.compile(r"(?<!\w)" + re.escape(phrase) + r"(?!\w)")
         found = list(pattern.finditer(working))
         if found:
-            matches.extend((match.start(), canonical) for match in found)
+            matches.extend(
+                (match.start(), canonical) for match in found
+                if not _is_explicitly_negated(source, match.start())
+            )
             working = pattern.sub(lambda match: " " * len(match.group(0)), working)
 
     if fuzzy:
@@ -75,7 +132,7 @@ def extract_skills(
             for token_match in re.finditer(r"(?<!\w)\w{5,}(?!\w)", working):
                 token = token_match.group(0)
                 best = max(((ratio(token, skill), skill) for skill in one_word), default=(0, ""))
-                if best[0] >= 90:
+                if best[0] >= 90 and not _is_explicitly_negated(source, token_match.start()):
                     matches.append((token_match.start(), best[1]))
 
     result: list[str] = []
@@ -102,3 +159,52 @@ def merge_skills(
             seen.add(canonical)
             result.append(canonical)
     return result
+
+
+def suggest_skill_candidates(
+    value: str,
+    vocabulary: Iterable[str],
+    aliases: dict[str, str] | None = None,
+    *,
+    limit: int = 3,
+) -> list[str]:
+    """Return close catalog labels for a user-confirmed spelling suggestion.
+
+    Suggestions never normalize or replace the user's claim automatically.
+    Accent and punctuation are ignored for comparison, which helps with common
+    misspellings while keeping canonical matching itself exact.
+    """
+    if not isinstance(value, str):
+        raise TypeError("Tên kỹ năng phải là chuỗi.")
+    if type(limit) is not int or limit < 0:
+        raise ValueError("limit phải là số nguyên không âm.")
+    if not value.strip() or limit == 0:
+        return []
+
+    def comparable(text: str) -> str:
+        decomposed = unicodedata.normalize("NFD", normalize_skill(text))
+        plain = "".join(char for char in decomposed if unicodedata.category(char) != "Mn")
+        return re.sub(r"[^a-z0-9]+", "", plain)
+
+    source = comparable(value)
+    alias_map = {normalize_skill(key): normalize_skill(target) for key, target in (aliases or {}).items()}
+    options = set()
+    for item in vocabulary:
+        canonical = alias_map.get(normalize_skill(item), normalize_skill(item))
+        if canonical:
+            options.add(canonical)
+    # If the entered label is an explicit catalog alias, it is already
+    # recognized by the profile parser; do not offer its canonical label as a
+    # fuzzy correction (for example, "postgre sql" -> "postgresql").
+    if alias_map.get(normalize_skill(value), normalize_skill(value)) in options:
+        return []
+    ranked = []
+    for candidate in options:
+        target = comparable(candidate)
+        if not target or candidate == normalize_skill(value):
+            continue
+        similarity = SequenceMatcher(a=source, b=target).ratio()
+        if similarity >= 0.76:
+            ranked.append((similarity, candidate))
+    ranked.sort(key=lambda item: (-item[0], item[1]))
+    return [candidate for _, candidate in ranked[:limit]]

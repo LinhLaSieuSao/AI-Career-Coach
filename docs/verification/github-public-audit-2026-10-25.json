@@ -1,0 +1,595 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-25T15:18:18.440202+00:00",
+  "method": "Unauthenticated read-only GitHub REST API and public codeload download; no remote mutations.",
+  "repository": {
+    "full_name": "LinhLaSieuSao/AI-Career-Coach",
+    "private": false,
+    "visibility": "public",
+    "default_branch": "main",
+    "html_url": "https://github.com/LinhLaSieuSao/AI-Career-Coach",
+    "homepage": null,
+    "has_issues": true,
+    "has_discussions": true,
+    "has_pages": false,
+    "archived": false,
+    "fork": false,
+    "size": 676,
+    "created_at": "2026-10-20T13:46:07Z",
+    "updated_at": "2026-10-25T03:17:08Z",
+    "pushed_at": "2026-10-25T08:57:22Z",
+    "open_issues_count": 1,
+    "stargazers_count": 0,
+    "forks_count": 0
+  },
+  "api_observations": {
+    "repo": {
+      "status": 200,
+      "url": "https://api.github.com/repos/LinhLaSieuSao/AI-Career-Coach"
+    },
+    "branches": {
+      "status": 200,
+      "url": "https://api.github.com/repos/LinhLaSieuSao/AI-Career-Coach/branches?per_page=100"
+    },
+    "tags": {
+      "status": 200,
+      "url": "https://api.github.com/repos/LinhLaSieuSao/AI-Career-Coach/tags?per_page=100"
+    },
+    "releases": {
+      "status": 200,
+      "url": "https://api.github.com/repos/LinhLaSieuSao/AI-Career-Coach/releases?per_page=100"
+    },
+    "actions": {
+      "status": 200,
+      "url": "https://api.github.com/repos/LinhLaSieuSao/AI-Career-Coach/actions/runs?per_page=5"
+    },
+    "readme": {
+      "status": 200,
+      "url": "https://api.github.com/repos/LinhLaSieuSao/AI-Career-Coach/readme"
+    },
+    "license": {
+      "status": 200,
+      "url": "https://api.github.com/repos/LinhLaSieuSao/AI-Career-Coach/license"
+    },
+    "tree": {
+      "status": 200,
+      "url": "https://api.github.com/repos/LinhLaSieuSao/AI-Career-Coach/git/trees/main?recursive=1"
+    },
+    "main_workflow": {
+      "status": 200,
+      "url": "https://api.github.com/repos/LinhLaSieuSao/AI-Career-Coach/contents/.github/workflows/ci.yml?ref=main"
+    },
+    "main_ci_jobs": {
+      "status": 200,
+      "url": "https://api.github.com/repos/LinhLaSieuSao/AI-Career-Coach/actions/runs/40157639170/jobs"
+    },
+    "main_issues": {
+      "status": 200,
+      "url": "https://api.github.com/repos/LinhLaSieuSao/AI-Career-Coach/issues?state=all&per_page=100"
+    },
+    "main_docs": {
+      "status": 200,
+      "url": "https://api.github.com/repos/LinhLaSieuSao/AI-Career-Coach/contents/docs?ref=main"
+    },
+    "source_archive": {
+      "url": "https://codeload.github.com/LinhLaSieuSao/AI-Career-Coach/tar.gz/8827a81f11f24e11fde54319a09a458f7b8b50b9",
+      "status": 200
+    }
+  },
+  "branches": [
+    {
+      "name": "AI-Specialist",
+      "sha": "a43025018a9febdee033e96e0f906b913647892b",
+      "protected": false
+    },
+    {
+      "name": "Nhanh-Linh",
+      "sha": "79e082176768e5312527acb621630c578419ba5b",
+      "protected": false
+    },
+    {
+      "name": "feature/backend-infra",
+      "sha": "0fae385d6ff0fca94472121e8e2bb6cf397a539c",
+      "protected": false
+    },
+    {
+      "name": "main",
+      "sha": "8827a81f11f24e11fde54319a09a458f7b8b50b9",
+      "protected": false
+    },
+    {
+      "name": "sondong",
+      "sha": "8827a81f11f24e11fde54319a09a458f7b8b50b9",
+      "protected": false
+    }
+  ],
+  "public_tags": [],
+  "public_releases": [],
+  "recent_actions": [
+    {
+      "id": 40178673370,
+      "name": "CI",
+      "head_branch": "sondong",
+      "head_sha": "8827a81f11f24e11fde54319a09a458f7b8b50b9",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/runs/40178673370",
+      "created_at": "2026-10-25T08:57:24Z",
+      "updated_at": "2026-10-25T08:58:33Z"
+    },
+    {
+      "id": 40157639170,
+      "name": "CI",
+      "head_branch": "main",
+      "head_sha": "8827a81f11f24e11fde54319a09a458f7b8b50b9",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/runs/40157639170",
+      "created_at": "2026-10-25T03:17:05Z",
+      "updated_at": "2026-10-25T03:18:16Z"
+    },
+    {
+      "id": 40076283108,
+      "name": "CI",
+      "head_branch": "Nghiem-Thu-Sau-Mapping",
+      "head_sha": "b7bcc3a98b9945de63299c0c250b36003c41fa70",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/runs/40076283108",
+      "created_at": "2026-10-24T07:59:38Z",
+      "updated_at": "2026-10-24T08:00:47Z"
+    },
+    {
+      "id": 40070890292,
+      "name": "CI",
+      "head_branch": "Nghiem-Thu-Sau-Mapping",
+      "head_sha": "29fd91d31afd0c265872330d496529cca69a5e8d",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/runs/40070890292",
+      "created_at": "2026-10-24T06:36:46Z",
+      "updated_at": "2026-10-24T06:37:36Z"
+    },
+    {
+      "id": 40062397432,
+      "name": "CI",
+      "head_branch": "AI-Specialist",
+      "head_sha": "a43025018a9febdee033e96e0f906b913647892b",
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/runs/40062397432",
+      "created_at": "2026-10-24T04:27:17Z",
+      "updated_at": "2026-10-24T04:27:57Z"
+    }
+  ],
+  "main_ci_run": {
+    "id": 40157639170,
+    "name": "CI",
+    "head_branch": "main",
+    "head_sha": "8827a81f11f24e11fde54319a09a458f7b8b50b9",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/runs/40157639170",
+    "created_at": "2026-10-25T03:17:05Z",
+    "updated_at": "2026-10-25T03:18:16Z"
+  },
+  "main_ci_jobs": [
+    {
+      "name": "Docker build and healthcheck",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-25T03:17:08Z",
+      "completed_at": "2026-10-25T03:18:01Z",
+      "html_url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/runs/40157639170/job/121062323372",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-25T03:17:09Z",
+          "completed_at": "2026-10-25T03:17:09Z"
+        },
+        {
+          "name": "Lấy mã nguồn",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-25T03:17:09Z",
+          "completed_at": "2026-10-25T03:17:10Z"
+        },
+        {
+          "name": "Build image",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-25T03:17:10Z",
+          "completed_at": "2026-10-25T03:17:56Z"
+        },
+        {
+          "name": "Start container and check local health endpoint",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-25T03:17:56Z",
+          "completed_at": "2026-10-25T03:17:58Z"
+        },
+        {
+          "name": "Cleanup container",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-25T03:17:58Z",
+          "completed_at": "2026-10-25T03:17:58Z"
+        },
+        {
+          "name": "Post Lấy mã nguồn",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-25T03:17:58Z",
+          "completed_at": "2026-10-25T03:17:58Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-25T03:17:58Z",
+          "completed_at": "2026-10-25T03:17:58Z"
+        }
+      ]
+    },
+    {
+      "name": "Tests (3.12)",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-25T03:17:08Z",
+      "completed_at": "2026-10-25T03:18:15Z",
+      "html_url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/runs/40157639170/job/121062323483",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-25T03:17:08Z",
+          "completed_at": "2026-10-25T03:17:09Z"
+        },
+        {
+          "name": "Lấy mã nguồn",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-25T03:17:09Z",
+          "completed_at": "2026-10-25T03:17:10Z"
+        },
+        {
+          "name": "Cài Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-25T03:17:10Z",
+          "completed_at": "2026-10-25T03:17:14Z"
+        },
+        {
+          "name": "Cài dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-25T03:17:14Z",
+          "completed_at": "2026-10-25T03:17:35Z"
+        },
+        {
+          "name": "Chạy test và đo coverage",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-25T03:17:35Z",
+          "completed_at": "2026-10-25T03:18:10Z"
+        },
+        {
+          "name": "Lưu báo cáo coverage",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-25T03:18:10Z",
+          "completed_at": "2026-10-25T03:18:11Z"
+        },
+        {
+          "name": "Post Cài Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-25T03:18:11Z",
+          "completed_at": "2026-10-25T03:18:13Z"
+        },
+        {
+          "name": "Post Lấy mã nguồn",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-25T03:18:13Z",
+          "completed_at": "2026-10-25T03:18:13Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-25T03:18:13Z",
+          "completed_at": "2026-10-25T03:18:13Z"
+        }
+      ]
+    },
+    {
+      "name": "Tests (3.11)",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-25T03:17:07Z",
+      "completed_at": "2026-10-25T03:17:45Z",
+      "html_url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/runs/40157639170/job/121062323561",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-25T03:17:08Z",
+          "completed_at": "2026-10-25T03:17:09Z"
+        },
+        {
+          "name": "Lấy mã nguồn",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-25T03:17:09Z",
+          "completed_at": "2026-10-25T03:17:10Z"
+        },
+        {
+          "name": "Cài Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-25T03:17:10Z",
+          "completed_at": "2026-10-25T03:17:12Z"
+        },
+        {
+          "name": "Cài dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-25T03:17:12Z",
+          "completed_at": "2026-10-25T03:17:24Z"
+        },
+        {
+          "name": "Chạy test và đo coverage",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-25T03:17:24Z",
+          "completed_at": "2026-10-25T03:17:40Z"
+        },
+        {
+          "name": "Lưu báo cáo coverage",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-25T03:17:40Z",
+          "completed_at": "2026-10-25T03:17:41Z"
+        },
+        {
+          "name": "Post Cài Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-25T03:17:41Z",
+          "completed_at": "2026-10-25T03:17:43Z"
+        },
+        {
+          "name": "Post Lấy mã nguồn",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-25T03:17:43Z",
+          "completed_at": "2026-10-25T03:17:43Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-25T03:17:43Z",
+          "completed_at": "2026-10-25T03:17:44Z"
+        }
+      ]
+    }
+  ],
+  "public_readme": {
+    "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/README.md",
+    "blob_sha": "9983c415c8d793c4afad3677e333f3abb99ae54e",
+    "windows_install_documented": true,
+    "unix_install_documented": true,
+    "docker_documented": true,
+    "stale_communication_notice_present": true,
+    "stale_interview_scoring_notice_present": true
+  },
+  "public_license": {
+    "file_url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/LICENSE",
+    "blob_sha": "e0fb03570abe20991ddc97fb07933c7b3289af04",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "osi_reference": "https://opensource.org/license/mit"
+  },
+  "public_documentation": [
+    {
+      "path": "CHANGELOG.md",
+      "blob_sha": "4fa5fbb1ae9150439c94131f39693ba79dab38ab",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/CHANGELOG.md"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "blob_sha": "9db6b8237342660bc1f5d44f3b6ed057590bd681",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/CONTRIBUTING.md"
+    },
+    {
+      "path": "LICENSES.md",
+      "blob_sha": "7753134a9c7804fa6d44d45cf7b53e7a2f7577a7",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/LICENSES.md"
+    },
+    {
+      "path": "README.md",
+      "blob_sha": "9983c415c8d793c4afad3677e333f3abb99ae54e",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/README.md"
+    },
+    {
+      "path": "docs/architecture.md",
+      "blob_sha": "e85a90872020f8d2159116acb88f9c5a9d0a3158",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/architecture.md"
+    },
+    {
+      "path": "docs/assessment_contract.md",
+      "blob_sha": "9dafbfd57431db820bed1774fbe8041eb22ba714",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/assessment_contract.md"
+    },
+    {
+      "path": "docs/data_quality.md",
+      "blob_sha": "350b55cddf34e2fe4e9ce8c73b214c755a824982",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/data_quality.md"
+    },
+    {
+      "path": "docs/demo.md",
+      "blob_sha": "7beae345b71107307b36cabe70fd0cd49f075004",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/demo.md"
+    },
+    {
+      "path": "docs/interface.md",
+      "blob_sha": "e6242a3a0cfa66b23654e4c3066e849ed378ba34",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/interface.md"
+    },
+    {
+      "path": "docs/matrix_status.md",
+      "blob_sha": "72200383b21c2702edb32194dc4ee74a8a3dd7f1",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/matrix_status.md"
+    },
+    {
+      "path": "docs/pof-checklist.md",
+      "blob_sha": "4fa56d80326c7ce9844e530e2cf7f29b0e72c52a",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/pof-checklist.md"
+    },
+    {
+      "path": "docs/progress/dot_01.md",
+      "blob_sha": "cec9ed21ef274ff246b7c613c3ae768f4e608969",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/progress/dot_01.md"
+    },
+    {
+      "path": "docs/progress/dot_02.md",
+      "blob_sha": "bc5e0313e8576d3408182ac700c706f45e8e3abb",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/progress/dot_02.md"
+    },
+    {
+      "path": "docs/progress/dot_03.md",
+      "blob_sha": "343b5c1d4f4e4e169a355df6c24f527627663c1b",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/progress/dot_03.md"
+    },
+    {
+      "path": "docs/progress/dot_04.md",
+      "blob_sha": "1edbf5635b743aea306f82a19ef06d0e762261bc",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/progress/dot_04.md"
+    },
+    {
+      "path": "docs/progress/dot_05.md",
+      "blob_sha": "128ab001e225c87c82cc542589d3917395715a71",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/progress/dot_05.md"
+    },
+    {
+      "path": "docs/release-notes/dot_05.md",
+      "blob_sha": "73012f3bcb6722e76db0a7c7e6da484e50495c03",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/release-notes/dot_05.md"
+    },
+    {
+      "path": "docs/reports/dot03_after.json",
+      "blob_sha": "3d67773bf392c4d31c57cf6046270d8fbe2d63ad",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/reports/dot03_after.json"
+    },
+    {
+      "path": "docs/reports/dot03_baseline.json",
+      "blob_sha": "5e51bd184a03b3fdd74f7c2514f51e6d25ff65c5",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/reports/dot03_baseline.json"
+    },
+    {
+      "path": "docs/reports/dot03_content_reviews.json",
+      "blob_sha": "e7b558a69c42bd17f688828d3a6c2dc0974ea649",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/reports/dot03_content_reviews.json"
+    },
+    {
+      "path": "docs/reports/dot03_links_after.json",
+      "blob_sha": "4db7eb4057863d727278968985c66667ce02284f",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/reports/dot03_links_after.json"
+    },
+    {
+      "path": "docs/reports/dot03_links_before.json",
+      "blob_sha": "8282105741bcca132ac1ff1f1a0cf96cb3176817",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/reports/dot03_links_before.json"
+    },
+    {
+      "path": "docs/reports/dot03_published_durations.json",
+      "blob_sha": "f5c3c901d6fb2688dd7ed7e49a26df1b2b62c5e8",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/reports/dot03_published_durations.json"
+    },
+    {
+      "path": "docs/reports/dot04_demo_assessments.json",
+      "blob_sha": "5fd1a486bdfc69a919112e0b8a1198e7f7be522a",
+      "url": "https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/8827a81f11f24e11fde54319a09a458f7b8b50b9/docs/reports/dot04_demo_assessments.json"
+    }
+  ],
+  "source_tree": {
+    "sha": "8827a81f11f24e11fde54319a09a458f7b8b50b9",
+    "truncated": false,
+    "entry_count": 104,
+    "blob_bytes_sum": 2362672,
+    "app_py_blob_sha": "21e627d84559e9190efc7d2491b7ce8d8f77164f"
+  },
+  "source_archive": {
+    "url": "https://codeload.github.com/LinhLaSieuSao/AI-Career-Coach/tar.gz/8827a81f11f24e11fde54319a09a458f7b8b50b9",
+    "status": 200,
+    "downloaded_bytes": 359048,
+    "sha256": "3a70830dca79d50c8c14d6cb87b816a27ef96fbbed97f265e4f3f8ca6cca4b04",
+    "root_directory": "AI-Career-Coach-8827a81f11f24e11fde54319a09a458f7b8b50b9",
+    "member_count": 105
+  },
+  "local_snapshot": {
+    "branch": "Nhanh-Linh",
+    "head": "b67cb26da1f517f30652896c4f5f3d5b61baf026",
+    "app_git_blob": "af1930409636f4f6020b7cfc389d3e98ca0062bb",
+    "source_eol_sample": "i/lf    w/crlf  attr/text=auto        \tREADME.md\ni/lf    w/crlf  attr/text=auto        \tapp.py\ni/lf    w/crlf  attr/text=auto        \tmodules/skill_extractor.py",
+    "dirty_entries_count": 78,
+    "comparison_with_cached_origin_main": {
+      "behind": 0,
+      "ahead": 5
+    },
+    "comparison_with_cached_origin_Nhanh_Linh": {
+      "behind": 0,
+      "ahead": 17
+    }
+  },
+  "issues_summary": {
+    "tracker_enabled": true,
+    "discussions_enabled": true,
+    "standalone_issues_returned": 0,
+    "pull_requests_returned": 5,
+    "note": "An enabled public tracker is usable even if the current issues listing contains only pull requests."
+  },
+  "limitations": [
+    "Remote CI applies only to main SHA 8827a81f11f24e11fde54319a09a458f7b8b50b9, not dirty local code.",
+    "No separate homepage configured and GitHub Pages disabled do not prove that no project website exists elsewhere.",
+    "No mailing list link or release announcement was found in inspected README/docs; absence outside these surfaces is unverified.",
+    "Public releases/tags endpoints do not reveal private draft releases.",
+    "Source archive is a commit archive, not a named version release."
+  ]
+}

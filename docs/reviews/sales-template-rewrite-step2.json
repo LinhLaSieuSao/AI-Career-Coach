@@ -1,0 +1,120 @@
+{
+  "role_id": "sales_executive",
+  "note": "Ba tình huống giả lập do Codex (AI) biên soạn theo kế hoạch của chủ dự án. Chưa có người duyệt; không dùng nguồn ngoài để tuyên bố đã đối chuẩn.",
+  "records": [
+    {
+      "id": "sales_executive_q02",
+      "expected": {
+        "skill": "giao tiếp", "level": 3, "weight": 3, "quality": "template",
+        "quality_reviewer": null, "quality_reviewed_at": null,
+        "question": "Hãy kể theo STAR về lần bạn dùng giao tiếp để xử lý một trở ngại cụ thể trong pipeline bán gói phần mềm cho khách hàng SME."
+      },
+      "changes": {
+        "question": "Tình huống giả lập: còn 5 ngày trước khi ký gói CRM 120 triệu đồng/năm cho một SME, CFO yêu cầu giảm ngân sách 30% xuống 84 triệu đồng. Trưởng phòng kinh doanh khách hàng vẫn muốn đủ tính năng và triển khai trong 4 tuần; đội triển khai của bạn chưa xác nhận lịch này. Bạn phụ trách cuộc họp 30 phút với ba bên. Bạn sẽ mở đầu, làm rõ ưu tiên và trình bày các lựa chọn như thế nào? Hãy nêu cách xử lý bất đồng, điều cần xin phê duyệt và nội dung biên bản quyết định để không tạo cam kết vượt thẩm quyền.",
+        "context_scenario": "Ca giả lập CRM cho SME: ngân sách giảm từ 120 xuống 84 triệu đồng/năm ngay trước ký; CFO, trưởng phòng kinh doanh và đội triển khai có ưu tiên khác nhau. Người trả lời điều phối cuộc họp 30 phút, chưa có quyền chốt giá hoặc xác nhận lịch triển khai.",
+        "evaluation_rubric": {
+          "level_1_criteria": "Nhắc lại đúng mức ngân sách 84 triệu đồng và thời hạn 4 tuần; hỏi rõ các tính năng bắt buộc; ghi nhận điều chưa được đội triển khai xác nhận thay vì tự hứa.",
+          "level_2_criteria": "Tự tổ chức cuộc họp theo mục tiêu và thời lượng; hỏi từng bên, diễn giải lại để họ xác nhận; trình bày ít nhất hai lựa chọn có phạm vi, điều kiện và phần cần phê duyệt; chốt người phụ trách và thời hạn phản hồi bằng văn bản.",
+          "level_3_criteria": "Điều phối xung đột giữa ngân sách, phạm vi và lịch: thiết lập tiêu chí quyết định chung, phân biệt điểm đã thống nhất với bất đồng còn mở, yêu cầu bên có thẩm quyền xác nhận đánh đổi. Kiểm tra lại cách hiểu của từng bên, ghi cả phương án hoãn ký nếu chưa đủ căn cứ và đặt mốc rà soát để tránh cam kết bị diễn giải khác nhau sau cuộc họp."
+        },
+        "good_answer_points": [
+          "Mở đầu bằng mục tiêu chung, xác nhận ngân sách và nêu rõ các điều kiện chưa được phê duyệt.",
+          "Mời từng bên nói ưu tiên; tóm tắt lại nhu cầu và phần bất đồng trước khi đưa phương án.",
+          "So sánh thu hẹp phạm vi, chia giai đoạn hoặc điều chỉnh lịch; không mặc định có thể giữ mọi tính năng với giá thấp hơn.",
+          "Chốt biên bản có phạm vi, điều kiện, người quyết định, người thực hiện, hạn phản hồi và phương án khi chưa đạt đồng thuận."
+        ],
+        "red_flags": [
+          "Hứa giữ nguyên mọi tính năng, mức giá 84 triệu và lịch 4 tuần khi chưa có phê duyệt hoặc xác nhận triển khai.",
+          "Bỏ qua ý kiến một bên hoặc dùng sức ép ký ngay để che bất đồng về phạm vi.",
+          "Ghi cuộc họp là đã thống nhất dù điều kiện hoặc người có quyền phê duyệt vẫn chưa rõ."
+        ],
+        "reference_answer": "Một phương án cho ca giả lập này: tôi mở đầu bằng việc xác nhận mục tiêu của khách hàng, mức 84 triệu đồng và các điều kiện chưa được phê duyệt. Tôi dành phần đầu để CFO nói rõ giới hạn ngân sách, trưởng phòng kinh doanh xác định tính năng bắt buộc, đội triển khai nêu phụ thuộc và khả năng thực hiện. Sau mỗi phần, tôi tóm tắt để người nói xác nhận.\n\nTôi trình bày hai hướng cần thẩm định: thu hẹp phạm vi đợt đầu, hoặc chia triển khai thành giai đoạn với lịch và chi phí được xác nhận riêng. Tôi không tự khẳng định hướng nào đáp ứng 84 triệu đồng hay 4 tuần. Nếu các yêu cầu xung đột, tôi hỏi bên có quyền quyết định ưu tiên nào có thể điều chỉnh và ghi rõ phần chưa đồng thuận.\n\nCuối cuộc họp, biên bản ghi phạm vi dự kiến, tiêu chí khách hàng dùng để chọn, điều kiện phê duyệt giá/lịch, người phụ trách và hạn trả lời trước ngày ký. Tôi gửi bản tóm tắt để cả ba bên xác nhận; nếu chưa đủ căn cứ, đề xuất hoãn cam kết thay vì ghi một lịch không thể bảo đảm. Đây là một cách triển khai tham khảo, không phải kết quả thương lượng đã xảy ra.",
+        "time_minutes": 6,
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp do AI biên soạn; số liệu và các bên là giả lập. Rubric dùng quan sát hành vi, chưa được người có chuyên môn duyệt và không dùng để tự động chấm điểm.",
+        "quality_reviewer": null, "quality_reviewed_at": null, "quality_review_note": null, "quality_sources": [],
+        "provenance": {
+          "source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập theo kế hoạch của chủ dự án",
+          "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null,
+          "rights_basis": null, "license_notes": null
+        }
+      }
+    },
+    {
+      "id": "sales_executive_q04",
+      "expected": {
+        "skill": "chăm sóc khách hàng", "level": 2, "weight": 2, "quality": "template",
+        "quality_reviewer": null, "quality_reviewed_at": null,
+        "question": "Trong pipeline bán gói phần mềm cho khách hàng SME, hãy mô tả quy trình bạn dùng chăm sóc khách hàng để phối hợp các bên, kiểm soát rủi ro và theo dõi kết quả."
+      },
+      "changes": {
+        "question": "Tình huống giả lập: khách SME báo CRM gián đoạn lần thứ ba trong tháng, lần này kéo dài 5 giờ. Trong ca này, SLA đã xác nhận quy định phản hồi trong 2 giờ và khôi phục trong 4 giờ, nên mốc khôi phục đã bị vượt. Khách sẽ gia hạn sau 30 ngày và đe dọa dừng hợp đồng. Bạn phụ trách chăm sóc khách hàng, không có quyền tự phê duyệt bồi hoàn và đội kỹ thuật chưa xác nhận nguyên nhân hay thời điểm khôi phục. Bạn sẽ trả lời khách, phối hợp xử lý và theo dõi đến khi đóng vụ việc như thế nào?",
+        "context_scenario": "Ca giả lập CRM gián đoạn lần thứ ba trong tháng, đã kéo dài 5 giờ so với mốc khôi phục 4 giờ được quy định riêng trong tình huống. Khách sắp gia hạn sau 30 ngày. Người phụ trách CSKH có thể điều phối và cập nhật thông tin nhưng chưa được phép cam kết bồi hoàn hoặc thời gian sửa lỗi.",
+        "evaluation_rubric": {
+          "level_1_criteria": "Ghi nhận ảnh hưởng với thái độ tôn trọng, tạo hồ sơ vụ việc và chuyển đúng nhóm kỹ thuật; phân biệt thông tin đã xác nhận với điều chưa biết.",
+          "level_2_criteria": "Tự điều phối một vụ việc: xác nhận tác động và mốc SLA của ca, gắn các lần gián đoạn vào hồ sơ, chuyển cấp theo quy trình, thống nhất một mốc cập nhật tiếp theo dù chưa có thời gian sửa. Theo dõi giải pháp tạm chỉ khi được kỹ thuật xác nhận, chuyển yêu cầu bồi hoàn tới người có quyền và kiểm tra khách đã sử dụng lại được trước khi đóng.",
+          "level_3_criteria": "Ngoài xử lý vụ việc, tổ chức rà soát nguyên nhân tái diễn với các nhóm có trách nhiệm; phân biệt nguyên nhân đã chứng minh với giả thuyết, theo dõi hành động phòng ngừa có chủ sở hữu và kiểm tra hiệu quả qua các kỳ dịch vụ. Đề xuất cải tiến cách thông báo và chuyển cấp dựa trên phản hồi của khách mà không tự thay đổi điều khoản hợp đồng."
+        },
+        "good_answer_points": [
+          "Xin lỗi về ảnh hưởng, hỏi chức năng và hoạt động đang bị gián đoạn; không yêu cầu mật khẩu hoặc dữ liệu khách hàng không cần thiết.",
+          "Ghi thời điểm, tác động, SLA đã xác nhận và lịch sử ba sự cố vào một hồ sơ có người phụ trách.",
+          "Chuyển cấp và hẹn mốc cập nhật kế tiếp, không bịa nguyên nhân hoặc giờ khôi phục.",
+          "Theo dõi việc khôi phục với khách; chuyển đề nghị bồi hoàn đúng thẩm quyền và lên lịch trao đổi về hành động phòng ngừa trước gia hạn."
+        ],
+        "red_flags": [
+          "Tự cam kết bồi hoàn, nguyên nhân hoặc giờ khôi phục khi chưa được xác nhận.",
+          "Đổ lỗi cho khách hoặc nhóm kỹ thuật; đóng ticket ngay khi kỹ thuật báo xong mà chưa kiểm tra tác động với khách.",
+          "Im lặng khi chưa có cách sửa hoặc yêu cầu khách gửi mật khẩu để xử lý nhanh."
+        ],
+        "reference_answer": "Tôi ghi nhận việc gián đoạn lặp lại và xin lỗi về ảnh hưởng, sau đó hỏi những hoạt động đang bị chặn và cách liên hệ cập nhật phù hợp. Tôi mở hoặc nối vào một hồ sơ vụ việc, ghi thời điểm, tác động và hai sự cố trước. Vì SLA trong ca đã xác nhận, tôi ghi rõ mốc khôi phục đã bị vượt, nhưng chưa kết luận điều khoản bồi hoàn khi chưa được người phụ trách hợp đồng rà.\n\nTôi chuyển cấp tới nhóm kỹ thuật và người quản lý theo quy trình, giữ một đầu mối liên hệ với khách. Tôi thống nhất một mốc cập nhật tiếp theo mà mình có thể thực hiện; nếu chưa có ETA, tôi nói rõ điều đó và vẫn cập nhật tại mốc đã hẹn. Tôi chỉ đề xuất cách làm tạm khi nhóm kỹ thuật xác nhận phù hợp.\n\nKhi dịch vụ hoạt động lại, tôi nhờ khách kiểm tra các thao tác bị ảnh hưởng, ghi nhận phần còn lỗi và chỉ đóng khi tiêu chí xử lý đã được xác nhận hoặc chuyển rõ cho người tiếp nhận. Yêu cầu bồi hoàn được chuyển đúng người có quyền. Trước kỳ gia hạn, tôi gửi thông tin về điều tra nguyên nhân và hành động phòng ngừa đã được xác nhận, không hứa sự cố sẽ không bao giờ tái diễn.",
+        "time_minutes": 5,
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp do AI biên soạn; SLA và số liệu chỉ là giả định của tình huống, không phải chuẩn áp dụng chung. Chưa được người có chuyên môn duyệt; không tự động chấm điểm.",
+        "quality_reviewer": null, "quality_reviewed_at": null, "quality_review_note": null, "quality_sources": [],
+        "provenance": {
+          "source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập theo kế hoạch của chủ dự án",
+          "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null,
+          "rights_basis": null, "license_notes": null
+        }
+      }
+    },
+    {
+      "id": "sales_executive_q05",
+      "expected": {
+        "skill": "thuyết phục", "level": 2, "weight": 2, "quality": "template",
+        "quality_reviewer": null, "quality_reviewed_at": null,
+        "question": "Hãy kể theo STAR về lần có thay đổi gấp trong pipeline bán gói phần mềm cho khách hàng SME và bạn vận dụng thuyết phục để giữ chất lượng/kết quả như thế nào?"
+      },
+      "changes": {
+        "question": "Tình huống giả lập: còn 14 ngày đến hạn gia hạn CRM, khách SME gửi đề xuất của đối thủ có giá thấp hơn 15% và nói sẽ chuyển nhà cung cấp. Bạn chưa biết hai gói có cùng phạm vi hay không. Khách muốn một tính năng mà sản phẩm của bạn chưa xác nhận hỗ trợ; bạn chỉ có quyền đề xuất phương án để quản lý phê duyệt. Trong cuộc trao đổi 20 phút, bạn sẽ hỏi gì, dùng bằng chứng nào để so sánh và đề nghị bước tiếp theo ra sao? Nếu sản phẩm không đáp ứng nhu cầu bắt buộc, bạn xử lý thế nào?",
+        "context_scenario": "Ca giả lập gia hạn CRM còn 14 ngày, đối thủ chào giá thấp hơn 15%. Phạm vi hai gói và khả năng hỗ trợ một tính năng bắt buộc chưa được xác minh. Người bán không tự có quyền giảm giá hoặc cam kết tính năng.",
+        "evaluation_rubric": {
+          "level_1_criteria": "Hỏi lý do khách muốn chuyển, xác định nhu cầu bắt buộc và nhắc lại điều chưa biết; tránh tự nhận sản phẩm có tính năng chưa xác nhận.",
+          "level_2_criteria": "Tự làm rõ tiêu chí mua và người quyết định; lập so sánh trên cùng phạm vi với bằng chứng được phép dùng, đánh dấu phần chưa xác minh; trả lời phản đối bằng lợi ích gắn với nhu cầu thực. Đề xuất một buổi kiểm chứng hoặc phương án được phê duyệt với thời hạn trước ngày gia hạn; chấp nhận không phù hợp khi thiếu tính năng bắt buộc.",
+          "level_3_criteria": "Điều phối quyết định nhiều bên khi yêu cầu, chi phí và rủi ro chuyển đổi xung đột; thiết lập tiêu chí thử nghiệm và điều kiện dừng thống nhất, ghi lại lý do khách chọn phương án để cải tiến quá trình bán hàng. Không dùng suy đoán về chi phí chuyển đổi để gây áp lực giữ khách."
+        },
+        "good_answer_points": [
+          "Khám phá tiêu chí quyết định, tính năng bắt buộc và lý do không hài lòng trước khi đề xuất giảm giá.",
+          "So sánh phạm vi, hỗ trợ, tích hợp và chi phí từ tài liệu được xác nhận; phần chưa biết phải được đánh dấu.",
+          "Gắn lợi ích với dữ liệu sử dụng hoặc một bản demo có tiêu chí kiểm tra, không bịa ROI hay nói xấu đối thủ.",
+          "Thống nhất bước kiểm chứng, người phụ trách và hạn phản hồi; chấp nhận khách chọn giải pháp khác nếu sản phẩm không đáp ứng yêu cầu."
+        ],
+        "red_flags": [
+          "Cam kết tính năng chưa được xác nhận hoặc tự hứa giảm giá vượt quyền.",
+          "Bịa số tiết kiệm, phóng đại rủi ro chuyển đổi hoặc hạ thấp đối thủ khi chưa có bằng chứng.",
+          "Gây áp lực ký trước khi khách được làm rõ tính năng bắt buộc hoặc che giấu phần sản phẩm chưa đáp ứng."
+        ],
+        "reference_answer": "Tôi bắt đầu bằng câu hỏi về lý do khách muốn chuyển và tiêu chí quyết định: giá, tính năng, hỗ trợ hay cách sử dụng hiện tại. Tôi xác nhận tính năng nào là bắt buộc và ai sẽ quyết định, rồi xin thông tin phạm vi đề xuất đối thủ mà khách được phép chia sẻ. Mức rẻ hơn 15% chưa đủ để kết luận hai gói tương đương.\n\nTôi lập bảng so sánh cùng phạm vi, chỉ dùng điều đã được xác nhận và đánh dấu phần chưa biết. Với sản phẩm của mình, tôi dùng dữ liệu sử dụng đã được phép hoặc một demo cụ thể để chứng minh giá trị liên quan tới nhu cầu. Tính năng chưa xác nhận được chuyển cho người phụ trách sản phẩm; tôi không hứa có ngay hoặc suy từ roadmap.\n\nTôi đề nghị buổi kiểm chứng có tiêu chí do hai bên thống nhất và hạn phản hồi trước ngày gia hạn. Mọi ưu đãi hoặc thay đổi phạm vi đi qua phê duyệt. Nếu nhu cầu bắt buộc không được đáp ứng, tôi nói rõ giới hạn, tôn trọng quyết định chuyển và thống nhất việc bàn giao theo quy trình được phép; giữ quan hệ bằng thông tin chính xác thay vì ép chốt hợp đồng.",
+        "time_minutes": 5,
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp do AI biên soạn; khách hàng, sản phẩm và con số là giả lập. Cần người có chuyên môn duyệt rubric trước khi dùng để đánh giá; hệ thống không tự động chấm điểm.",
+        "quality_reviewer": null, "quality_reviewed_at": null, "quality_review_note": null, "quality_sources": [],
+        "provenance": {
+          "source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập theo kế hoạch của chủ dự án",
+          "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null,
+          "rights_basis": null, "license_notes": null
+        }
+      }
+    }
+  ]
+}

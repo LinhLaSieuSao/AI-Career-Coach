@@ -26,6 +26,22 @@ def test_independent_recognition_skills_without_resources_are_kept_and_reported(
     assert all(keys == [] for week in roadmap for keys in week["resource_keys"].values())
 
 
+def test_sales_and_soft_skill_gaps_get_experience_routes_without_course_dependency():
+    resources = json.loads((ROOT / "Data/resources.json").read_text(encoding="utf-8"))
+    roadmap = build_roadmap(["bán hàng", "bán hàng b2b", "thuyết phục", "giao tiếp", "quản lý đội ngũ", "viết nội dung"], resources, weeks=1)
+    routes = roadmap[0]["practice_routes"]
+    by_skill = {route["skill"]: route for route in routes}
+    assert set(by_skill) == {"bán hàng", "bán hàng b2b", "thuyết phục", "giao tiếp", "quản lý đội ngũ", "viết nội dung"}
+    assert by_skill["thuyết phục"]["title"] == by_skill["bán hàng"]["title"]
+    assert by_skill["bán hàng b2b"]["title"] == by_skill["bán hàng"]["title"]
+    assert "đóng vai khách hàng" in " ".join(by_skill["bán hàng"]["steps"])
+    assert "người quan sát" in by_skill["bán hàng"]["evidence"]
+    assert "không tính điểm" not in by_skill["bán hàng"]["evidence"]
+    assert "phản hồi" in " ".join(by_skill["giao tiếp"]["steps"])
+    assert "điều phối" in " ".join(by_skill["quản lý đội ngũ"]["steps"])
+    assert "portfolio" in by_skill["viết nội dung"]["title"]
+
+
 def _resource(name: str, **overrides) -> dict:
     return {
         "id": name,
@@ -33,6 +49,9 @@ def _resource(name: str, **overrides) -> dict:
         "url": "https://example.org/" + name,
         "provider": "Example",
         "duration_hours": None,
+        "verified": True,
+        "content_review_status": "reviewed",
+        "review_note": "Reviewed for this test fixture.",
         **overrides,
     }
 
@@ -195,19 +214,22 @@ def test_multiple_resources_for_one_skill_are_kept_once() -> None:
 
 def test_url_path_and_query_case_are_not_conflated() -> None:
     resources = {"sql": {"resources": [
-        {"url": "https://example.org/Docs?topic=SQL"},
-        {"url": "https://example.org/docs?topic=SQL"},
-        {"url": "https://example.org/docs?topic=sql"},
+        _resource("upper-path", url="https://example.org/Docs?topic=SQL"),
+        _resource("lower-path", url="https://example.org/docs?topic=SQL"),
+        _resource("lower-query", url="https://example.org/docs?topic=sql"),
     ]}}
 
     assert len(_documents(build_roadmap(["sql"], resources))) == 3
 
 
 def test_id_only_and_url_only_resources_have_usable_keys() -> None:
-    resources = {"sql": {"resources": [{"id": "offline", "title": "Book"}, {"url": "https://example.org/sql"}]}}
+    resources = {"sql": {"resources": [
+        _resource("offline", url=""),
+        _resource("url-only", url="https://example.org/sql"),
+    ]}}
 
     assert [r["key"] for r in _documents(build_roadmap(["sql"], resources))] == [
-        "id:offline", "url:https://example.org/sql"
+        "url:https://example.org/sql"
     ]
 
 
@@ -287,7 +309,6 @@ def test_every_repository_role_can_flow_from_matcher_to_roadmap() -> None:
         roadmap = build_roadmap(gap["missing"], resources, missing_details=gap["missing_details"])
         expected = [skill["name"] for skill in sorted(role["skills"], key=lambda s: -s["weight"])]
         assert _scheduled(roadmap) == expected, role["id"]
-        assert not any(week["skills_without_resources"] for week in roadmap), role["id"]
         documents = _documents(roadmap)
         assert len({doc["key"] for doc in documents}) == len(documents), role["id"]
         assert len({doc["id"] for doc in documents}) == len(documents), role["id"]
@@ -295,7 +316,16 @@ def test_every_repository_role_can_flow_from_matcher_to_roadmap() -> None:
         introduced: set[str] = set()
         for week in roadmap:
             introduced.update(doc["key"] for doc in week["resources"])
-            assert all(keys and set(keys) <= introduced for keys in week["resource_keys"].values())
+            issues = {issue["skill"] for issue in week["unresolved"]}
+            assert set(week["skills_without_resources"]) <= issues, role["id"]
+            for skill, keys in week["resource_keys"].items():
+                assert not keys or set(keys) <= introduced, (role["id"], skill)
+                assert all(
+                    catalog_resource["verified"] is True
+                    and catalog_resource["content_review_status"] in {"reviewed", "partial"}
+                    and catalog_resource.get("review_note", "").strip()
+                    for catalog_resource in (next(doc for doc in documents if doc["key"] == key) for key in keys)
+                ), (role["id"], skill)
         assert build_roadmap(gap["missing"], resources, missing_details=gap["missing_details"]) == roadmap
 
 

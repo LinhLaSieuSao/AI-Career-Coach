@@ -8,19 +8,37 @@
         "skill": "java",
         "level": 3,
         "weight": 3,
-        "question": "Trong dịch vụ Java/Spring Boot xử lý đơn hàng, hãy mô tả cách bạn dùng java để triển khai luồng chính; nêu lựa chọn thiết kế, trường hợp lỗi cần xử lý và cách xác nhận kết quả.",
+        "question": "Hai khách cùng đặt sản phẩm còn một đơn vị trong kho. Bạn thiết kế luồng Java để giữ giá tiền và trạng thái đơn nhất quán, xử lý lỗi và kiểm thử cạnh tranh thế nào?",
         "good_answer_points": [
-          "Nêu đúng cơ chế hoặc thành phần cốt lõi của kỹ năng và cách áp dụng vào luồng đã nêu.",
-          "Đưa ra thiết kế cụ thể, gồm dữ liệu/đầu vào, đầu ra và xử lý lỗi hoặc biên.",
-          "Mô tả bước kiểm chứng bằng test, log, truy vấn hoặc chỉ số phù hợp với kỹ năng."
+          "Phân tách HTTP và nghiệp vụ; nêu kiểu dữ liệu phù hợp cho tiền/trạng thái.",
+          "Xác định điều kiện validation và phạm vi transaction/rollback.",
+          "Kiểm thử quy tắc nghiệp vụ và luồng tích hợp, bao gồm lỗi."
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tách xử lý nghiệp vụ khỏi lớp giao tiếp, dùng kiểu dữ liệu rõ ràng và xử lý ngoại lệ tại ranh giới phù hợp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
-        "quality": "template",
-        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
+        "reference_answer": "Tôi tách lớp HTTP khỏi nghiệp vụ đơn hàng, dùng kiểu dữ liệu rõ cho tiền và trạng thái thay vì phép toán floating point, kiểm tra bất biến đầu vào và đặt ranh giới transaction ở thao tác cần tính nhất quán. Tôi không bắt mọi ngoại lệ rồi bỏ qua; lỗi được chuyển thành phản hồi phù hợp ở lớp biên và log không làm lộ dữ liệu nhạy cảm. Tôi viết unit test cho quy tắc nghiệp vụ và integration test cho lưu/đọc, lỗi validation và rollback.",
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_sources": [],
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Dịch vụ Java nhận hai yêu cầu đặt cùng sản phẩm gần đồng thời khi tồn kho còn một; đơn hàng, giá tiền và trạng thái phải nhất quán.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Dịch vụ Java nhận hai yêu cầu đặt cùng sản phẩm gần đồng thời khi tồn kho còn một; đơn hàng, giá tiền và trạng thái phải nhất quán. Phân tách HTTP và nghiệp vụ; nêu kiểu dữ liệu phù hợp cho tiền/trạng thái.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Phân tách HTTP và nghiệp vụ; nêu kiểu dữ liệu phù hợp cho tiền/trạng thái. Xác định điều kiện validation và phạm vi transaction/rollback.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Kiểm thử quy tắc nghiệp vụ và luồng tích hợp, bao gồm lỗi. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://docs.spring.io/spring-boot/reference/using/spring-beans-and-dependency-injection.html",
+            "https://docs.spring.io/spring-boot/reference/testing/"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        }
       },
       {
         "id": "backend_developer_java_q02",
@@ -39,9 +57,25 @@
         ],
         "time_minutes": 4,
         "reference_answer": "Controller xử lý HTTP, service giữ nghiệp vụ và repository truy cập dữ liệu. Tôi dùng constructor injection để khai báo dependency và dễ thay bằng test double. Tôi validate request, trả lỗi 400 với nội dung có cấu trúc qua handler phù hợp; test kiểm tra cả luồng hợp lệ và request sai dữ liệu.",
-        "quality": "reviewed",
-        "quality_note": "Đã sửa thành tình huống cụ thể và đối chiếu từng tiêu chí rubric với câu hỏi/nguồn.",
-        "quality_reviewed_at": "2026-10-24"
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "context_scenario": "Endpoint tạo đơn Spring Boot nhận request thiếu số lượng và mã sản phẩm; nhóm muốn lỗi 400 rõ ràng mà không đưa stack trace ra client.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Endpoint tạo đơn Spring Boot nhận request thiếu số lượng và mã sản phẩm; nhóm muốn lỗi 400 rõ ràng mà không đưa stack trace ra client. Phân tách controller/service/repository theo trách nhiệm", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Phân tách controller/service/repository theo trách nhiệm Khai báo dependency qua constructor injection", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Xử lý request không hợp lệ và kiểm thử phản hồi lỗi Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "reviewed",
+          "quality_reviewer": null,
+          "quality_reviewed_at": "2026-10-24",
+          "quality_review_note": "Review nội bộ nội dung câu hỏi và nhóm khái niệm theo nguồn; không phải thẩm định của chuyên gia độc lập.",
+          "quality_sources": [
+            "https://docs.spring.io/spring-framework/reference/core/beans/annotation-config/autowired.html"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "reviewed_internal", "reviewed_at": "2026-10-24", "rights_basis": null, "license_notes": null}
+        },
+        "quality_reviewer": null
       },
       {
         "id": "backend_developer_java_q03",
@@ -60,9 +94,25 @@
         ],
         "time_minutes": 4,
         "reference_answer": "Tôi dùng POST /orders để tạo đơn, trả 201 Created và tham chiếu tài nguyên được tạo. Tôi validate đầu vào, trả 400 kèm thông tin lỗi có cấu trúc khi request sai. Integration test kiểm tra HTTP status, response body và cả trường hợp thành công/lỗi.",
-        "quality": "reviewed",
-        "quality_note": "Đã sửa thành tình huống cụ thể và đối chiếu từng tiêu chí rubric với câu hỏi/nguồn.",
-        "quality_reviewed_at": "2026-10-24"
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "context_scenario": "Client gửi POST tạo đơn rồi timeout và thử lại; API cần phản hồi HTTP rõ ràng và tránh ghi đơn trùng theo hợp đồng đã thống nhất.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Client gửi POST tạo đơn rồi timeout và thử lại; API cần phản hồi HTTP rõ ràng và tránh ghi đơn trùng theo hợp đồng đã thống nhất. Dùng POST và phản hồi 201 cho thao tác tạo đơn", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Dùng POST và phản hồi 201 cho thao tác tạo đơn Validate request và phản hồi 400 khi dữ liệu sai", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Kiểm thử status và nội dung response Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "reviewed",
+          "quality_reviewer": null,
+          "quality_reviewed_at": "2026-10-24",
+          "quality_review_note": "Review nội bộ nội dung câu hỏi và nhóm khái niệm theo nguồn; không phải thẩm định của chuyên gia độc lập.",
+          "quality_sources": [
+            "https://www.rfc-editor.org/rfc/rfc9110.html"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "reviewed_internal", "reviewed_at": "2026-10-24", "rights_basis": null, "license_notes": null}
+        },
+        "quality_reviewer": null
       },
       {
         "id": "backend_developer_java_q04",
@@ -70,19 +120,37 @@
         "skill": "sql",
         "level": 2,
         "weight": 3,
-        "question": "Trong dịch vụ Java/Spring Boot xử lý đơn hàng, hãy mô tả cách bạn dùng sql để triển khai luồng chính; nêu lựa chọn thiết kế, trường hợp lỗi cần xử lý và cách xác nhận kết quả.",
+        "question": "Hai request đồng thời trừ tồn kho cuối cùng và bước lưu đơn có thể lỗi. Bạn dùng SQL, ràng buộc và transaction nào; kiểm tra rollback và query plan ra sao?",
         "good_answer_points": [
-          "Nêu đúng cơ chế hoặc thành phần cốt lõi của kỹ năng và cách áp dụng vào luồng đã nêu.",
-          "Đưa ra thiết kế cụ thể, gồm dữ liệu/đầu vào, đầu ra và xử lý lỗi hoặc biên.",
-          "Mô tả bước kiểm chứng bằng test, log, truy vấn hoặc chỉ số phù hợp với kỹ năng."
+          "Nêu tham số hóa truy vấn và tránh ghép chuỗi đầu vào.",
+          "Xác định tính toàn vẹn/transaction khi nhiều bảng hoặc tồn kho cùng thay đổi.",
+          "Đối chiếu execution plan và test lỗi/đồng thời thay vì thêm index theo cảm tính."
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xác định grain và khóa join trước, dùng truy vấn tham số hóa và kiểm tra null/trùng lặp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
-        "quality": "template",
-        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
+        "reference_answer": "Tôi xác định transaction và các ràng buộc dữ liệu cần được bảo vệ, dùng query có tham số thay vì nối chuỗi từ đầu vào. Khi tạo đơn, tôi cần lưu ý việc cập nhật đơn và trừ tồn kho có thể cạnh tranh; thiết kế phải có transaction, constraint hoặc cơ chế khóa/idempotency phù hợp với yêu cầu. Tôi xem execution plan và index dựa trên truy vấn thực tế, rồi test cả dữ liệu hợp lệ, lỗi giữa chừng và hai yêu cầu đồng thời.",
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_sources": [],
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Hai request đồng thời trừ cùng một đơn vị tồn kho; bảng đơn và tồn kho phải đồng bộ nếu ghi dữ liệu thất bại giữa chừng.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Hai request đồng thời trừ cùng một đơn vị tồn kho; bảng đơn và tồn kho phải đồng bộ nếu ghi dữ liệu thất bại giữa chừng. Nêu tham số hóa truy vấn và tránh ghép chuỗi đầu vào.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Nêu tham số hóa truy vấn và tránh ghép chuỗi đầu vào. Xác định tính toàn vẹn/transaction khi nhiều bảng hoặc tồn kho cùng thay đổi.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Đối chiếu execution plan và test lỗi/đồng thời thay vì thêm index theo cảm tính. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://www.postgresql.org/docs/current/tutorial-transactions.html",
+            "https://www.postgresql.org/docs/current/indexes.html"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        }
       },
       {
         "id": "backend_developer_java_q05",
@@ -90,19 +158,36 @@
         "skill": "git",
         "level": 2,
         "weight": 2,
-        "question": "Trong dịch vụ Java/Spring Boot xử lý đơn hàng, hãy mô tả cách bạn dùng git để triển khai luồng chính; nêu lựa chọn thiết kế, trường hợp lỗi cần xử lý và cách xác nhận kết quả.",
+        "question": "Hai pull request cùng đổi contract tạo đơn và migration nên conflict; CI báo integration test lỗi. Bạn tổ chức commit, resolve và xác minh trước merge thế nào?",
         "good_answer_points": [
-          "Nêu đúng cơ chế hoặc thành phần cốt lõi của kỹ năng và cách áp dụng vào luồng đã nêu.",
-          "Đưa ra thiết kế cụ thể, gồm dữ liệu/đầu vào, đầu ra và xử lý lỗi hoặc biên.",
-          "Mô tả bước kiểm chứng bằng test, log, truy vấn hoặc chỉ số phù hợp với kỹ năng."
+          "Nêu cách chia commit/nhánh để người khác review được.",
+          "Mô tả cách xử lý xung đột có kiểm tra lại và tránh đưa secret vào commit.",
+          "Nêu kiểm tra trước merge và phương án khôi phục phù hợp với thay đổi."
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
-        "quality": "template",
-        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
+        "reference_answer": "Tôi tạo nhánh cho thay đổi có phạm vi rõ, chia commit theo đơn vị có thể review và ghi thông điệp phản ánh mục đích. Trước khi mở pull request, tôi chạy kiểm tra liên quan và đọc diff để loại dữ liệu bí mật hoặc thay đổi ngoài phạm vi. Khi có xung đột, tôi hiểu cả hai phía rồi kiểm tra lại kết quả sau khi resolve. Nếu triển khai lỗi, cách rollback phải dựa trên quy trình của nhóm và thay đổi dữ liệu tương ứng.",
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_sources": [],
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Hai pull request cùng sửa contract tạo đơn và file migration; trước merge xuất hiện conflict và CI báo một integration test lỗi.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Hai pull request cùng sửa contract tạo đơn và file migration; trước merge xuất hiện conflict và CI báo một integration test lỗi. Nêu cách chia commit/nhánh để người khác review được.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Nêu cách chia commit/nhánh để người khác review được. Mô tả cách xử lý xung đột có kiểm tra lại và tránh đưa secret vào commit.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Nêu kiểm tra trước merge và phương án khôi phục phù hợp với thay đổi. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://git-scm.com/docs/gittutorial/2.46.1"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        }
       },
       {
         "id": "backend_developer_java_q06",
@@ -110,19 +195,36 @@
         "skill": "giải quyết vấn đề",
         "level": 2,
         "weight": 2,
-        "question": "Hãy kể một tình huống thực tế khi bạn dùng giải quyết vấn đề để xử lý vấn đề trong công việc tương tự dịch vụ Java/Spring Boot xử lý đơn hàng; trình bày theo STAR và nêu kết quả đo được.",
+        "question": "Sau triển khai, lỗi 5xx ở API tạo đơn tăng và có request đã ghi đơn trước khi lỗi. Bạn giảm ảnh hưởng, thu thập bằng chứng và kiểm tra bản sửa thế nào?",
         "good_answer_points": [
-          "Nêu bối cảnh và trách nhiệm cá nhân cụ thể, phân biệt rõ phần việc của mình.",
-          "Mô tả hành động theo trình tự, có quyết định hoặc cách phối hợp phù hợp với kỹ năng.",
-          "Đưa kết quả có bằng chứng/đo lường và bài học hoặc thay đổi được áp dụng sau đó."
+          "Nêu tác động, vai trò và thứ tự xử lý sự cố.",
+          "Phân biệt giảm ảnh hưởng tức thời với sửa nguyên nhân gốc.",
+          "Có kiểm chứng sau khôi phục và hành động phòng ngừa có người phụ trách."
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
-        "quality": "template",
-        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
+        "reference_answer": "Tôi chọn sự cố thật, nêu tác động và phần mình chịu trách nhiệm. Tôi mô tả cách thu thập log/metric, tái hiện hoặc thu hẹp phạm vi, kiểm tra giả thuyết và giảm ảnh hưởng trước khi sửa nguyên nhân gốc. Sau khi khôi phục, tôi xác minh bằng test/metric và ghi lại hành động phòng ngừa. Tôi không nhận mình đã làm việc của người khác và không tự đưa ra con số nếu không có dữ liệu.",
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_sources": [],
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Tỷ lệ 5xx của endpoint tạo đơn tăng sau triển khai, một số request đã ghi đơn trước khi lỗi; nhóm cần giảm ảnh hưởng rồi tìm nguyên nhân.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Tỷ lệ 5xx của endpoint tạo đơn tăng sau triển khai, một số request đã ghi đơn trước khi lỗi; nhóm cần giảm ảnh hưởng rồi tìm nguyên nhân. Nêu tác động, vai trò và thứ tự xử lý sự cố.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Nêu tác động, vai trò và thứ tự xử lý sự cố. Phân biệt giảm ảnh hưởng tức thời với sửa nguyên nhân gốc.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Có kiểm chứng sau khôi phục và hành động phòng ngừa có người phụ trách. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://www.opm.gov/policy-data-oversight/assessment-and-selection/structured-interviews/guide/"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        }
       },
       {
         "id": "backend_developer_java_q07",
@@ -130,19 +232,120 @@
         "skill": "giao tiếp",
         "level": 2,
         "weight": 1,
-        "question": "Hãy kể một tình huống thực tế khi bạn dùng giao tiếp để xử lý vấn đề trong công việc tương tự dịch vụ Java/Spring Boot xử lý đơn hàng; trình bày theo STAR và nêu kết quả đo được.",
+        "question": "Frontend hiểu lỗi 409 là 400, QA dùng contract cũ. Bạn dẫn dắt trao đổi để chốt phản hồi API, test và thông báo thay đổi trước phát hành ra sao?",
         "good_answer_points": [
-          "Nêu bối cảnh và trách nhiệm cá nhân cụ thể, phân biệt rõ phần việc của mình.",
-          "Mô tả hành động theo trình tự, có quyết định hoặc cách phối hợp phù hợp với kỹ năng.",
-          "Đưa kết quả có bằng chứng/đo lường và bài học hoặc thay đổi được áp dụng sau đó."
+          "Nêu người liên quan và mâu thuẫn/điểm chưa rõ cụ thể.",
+          "Dùng ví dụ hợp đồng API, trạng thái lỗi và tiêu chí nghiệm thu để xác nhận hiểu chung.",
+          "Nêu thay đổi/kết quả thật và cách lưu lại quyết định để giảm lặp lỗi."
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong dịch vụ Java/Spring Boot xử lý đơn hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
-        "quality": "template",
-        "quality_note": "Chưa review tiêu chí máy chấm theo tình huống; đáp án mẫu không đủ để suy rubric."
+        "reference_answer": "Tôi kể một lần cần thống nhất hợp đồng API hoặc cách xử lý một yêu cầu với frontend/QA/product. Tôi nêu cách làm rõ dữ liệu vào/ra, trạng thái lỗi, tương thích ngược và tiêu chí nghiệm thu; sau đó xác nhận bằng ví dụ request/response hoặc tài liệu ngắn. Khi có thay đổi, tôi thông báo phần bị ảnh hưởng và ghi lại quyết định. Kết quả cần gắn với trao đổi hoặc lỗi tích hợp thực tế, không tự nhận số liệu.",
+        "quality": "unreviewed",
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới.",
+        "quality_sources": [],
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Frontend hiểu phản hồi lỗi 409 là 400 trong khi QA dùng contract cũ; bạn phải thống nhất request/response trước bản phát hành.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Frontend hiểu phản hồi lỗi 409 là 400 trong khi QA dùng contract cũ; bạn phải thống nhất request/response trước bản phát hành. Nêu người liên quan và mâu thuẫn/điểm chưa rõ cụ thể.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Nêu người liên quan và mâu thuẫn/điểm chưa rõ cụ thể. Dùng ví dụ hợp đồng API, trạng thái lỗi và tiêu chí nghiệm thu để xác nhận hiểu chung.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Nêu thay đổi/kết quả thật và cách lưu lại quyết định để giảm lặp lỗi. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://www.opm.gov/policy-data-oversight/assessment-and-selection/structured-interviews/guide/"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        }
+      },
+      {
+        "id": "backend_developer_java_q08",
+        "type": "technical",
+        "skill": "docker",
+        "level": 1,
+        "weight": 2,
+        "question": "Tình huống giả lập: Dịch vụ Spring Boot chạy trên máy lập trình nhưng container không khởi động vì thiếu biến môi trường; image cần được chia sẻ để QA thử. Bạn tạo Dockerfile và cấu hình chạy tối thiểu thế nào? Bạn kiểm tra log, cổng và tránh đưa secret vào image ra sao?",
+        "good_answer_points": [
+          "Biết image/container, cổng dịch vụ và biến cấu hình cần thiết.",
+          "Build/run image, truyền cấu hình khi chạy thay vì nhúng secret; xem log và health endpoint để tìm lỗi.",
+          "Ghi lệnh tái hiện cho QA, kiểm tra image không chứa secret và nêu giới hạn của bài thực hành nhập môn."
+        ],
+        "red_flags": [
+          "Tự khẳng định dữ liệu, kết quả hoặc quyền phê duyệt chưa được cung cấp trong tình huống.",
+          "Không có bước xác minh, người phụ trách hoặc bằng chứng để kiểm tra kết quả."
+        ],
+        "time_minutes": 5,
+        "reference_answer": "Tôi tạo Dockerfile dùng runtime phù hợp, build JAR rồi chạy với port và biến cấu hình được truyền từ môi trường an toàn. Tôi không COPY file secret vào image. Khi container thoát, tôi xem logs và exit code, xác nhận port/health endpoint; sau đó cung cấp QA lệnh chạy và biến bắt buộc đã được ẩn giá trị.",
+        "context_scenario": "Dịch vụ Spring Boot chạy trên máy lập trình nhưng container không khởi động vì thiếu biến môi trường; image cần được chia sẻ để QA thử.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Dịch vụ Spring Boot chạy trên máy lập trình nhưng container không khởi động vì thiếu biến môi trường; image cần được chia sẻ để QA thử. Biết image/container, cổng dịch vụ và biến cấu hình cần thiết.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Biết image/container, cổng dịch vụ và biến cấu hình cần thiết. Build/run image, truyền cấu hình khi chạy thay vì nhúng secret; xem log và health endpoint để tìm lỗi.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Ghi lệnh tái hiện cho QA, kiểm tra image không chứa secret và nêu giới hạn của bài thực hành nhập môn. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp AI, tình huống giả lập; rubric chưa được người có chuyên môn duyệt và không dùng để chấm tự động.",
+        "quality_reviewer": null,
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null}
+      },
+      {
+        "id": "backend_developer_java_q09",
+        "type": "scenario",
+        "skill": "làm việc nhóm",
+        "level": 2,
+        "weight": 1,
+        "question": "Tình huống giả lập: Frontend nhận API tạo đơn khác contract, QA viết test theo mẫu cũ và backend phải chốt thay đổi trong sprint. Bạn phân chia việc và xử lý bất đồng về mã lỗi/trường dữ liệu ra sao để tích hợp không bị chặn?",
+        "good_answer_points": [
+          "Xác định contract sai khác và người liên quan; không đổ lỗi cho một nhóm.",
+          "Thống nhất request/response bằng ví dụ, owner và hạn cập nhật backend/frontend/test.",
+          "Chạy test contract cùng nhau, lưu quyết định và theo dõi lỗi sau tích hợp."
+        ],
+        "red_flags": [
+          "Tự khẳng định dữ liệu, kết quả hoặc quyền phê duyệt chưa được cung cấp trong tình huống.",
+          "Không có bước xác minh, người phụ trách hoặc bằng chứng để kiểm tra kết quả."
+        ],
+        "time_minutes": 5,
+        "reference_answer": "Tôi lấy hai request/response cụ thể để chỉ ra khác biệt, mời frontend và QA cùng chọn contract theo yêu cầu sản phẩm. Tôi ghi các trường, mã lỗi và hạn cập nhật cho từng bên. Sau sửa, chúng tôi chạy integration/contract test trên cùng fixture, lưu quyết định trong PR và theo dõi kết quả CI.",
+        "context_scenario": "Frontend nhận API tạo đơn khác contract, QA viết test theo mẫu cũ và backend phải chốt thay đổi trong sprint.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Frontend nhận API tạo đơn khác contract, QA viết test theo mẫu cũ và backend phải chốt thay đổi trong sprint. Xác định contract sai khác và người liên quan; không đổ lỗi cho một nhóm.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Xác định contract sai khác và người liên quan; không đổ lỗi cho một nhóm. Thống nhất request/response bằng ví dụ, owner và hạn cập nhật backend/frontend/test.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Chạy test contract cùng nhau, lưu quyết định và theo dõi lỗi sau tích hợp. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp AI, tình huống giả lập; rubric chưa được người có chuyên môn duyệt và không dùng để chấm tự động.",
+        "quality_reviewer": null,
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null}
+      },
+      {
+        "id": "backend_developer_java_q10",
+        "type": "technical",
+        "skill": "linux",
+        "level": 1,
+        "weight": 1,
+        "question": "Tình huống giả lập: Dịch vụ Java trong môi trường thử nghiệm không mở cổng; process có vẻ đang chạy nhưng health endpoint trả lỗi. Bạn dùng thao tác Linux cơ bản nào để kiểm tra process, log và cổng trước khi chuyển cấp? Nêu điều không nên làm trên máy dùng chung.",
+        "good_answer_points": [
+          "Biết kiểm tra process, trạng thái service, log và cổng theo quyền được cấp.",
+          "Dùng kết quả log/cổng để khoanh vùng cấu hình hoặc quyền, ghi lệnh và thời điểm kiểm tra.",
+          "Báo người phụ trách với bằng chứng, không sudo bừa bãi, xóa log hay đổi quyền rộng trên máy dùng chung."
+        ],
+        "red_flags": [
+          "Tự khẳng định dữ liệu, kết quả hoặc quyền phê duyệt chưa được cung cấp trong tình huống.",
+          "Không có bước xác minh, người phụ trách hoặc bằng chứng để kiểm tra kết quả."
+        ],
+        "time_minutes": 5,
+        "reference_answer": "Tôi xác nhận service/process, xem log ứng dụng và journal theo quyền được cấp, rồi kiểm tra cổng lắng nghe và biến cấu hình không nhạy cảm. Tôi ghi timestamp và lỗi cụ thể, đối chiếu health endpoint. Nếu cần quyền cao hơn hoặc đổi cấu hình hệ thống, tôi chuyển cho người vận hành; không chmod 777 hay in secret ra log.",
+        "context_scenario": "Dịch vụ Java trong môi trường thử nghiệm không mở cổng; process có vẻ đang chạy nhưng health endpoint trả lỗi.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Dịch vụ Java trong môi trường thử nghiệm không mở cổng; process có vẻ đang chạy nhưng health endpoint trả lỗi. Biết kiểm tra process, trạng thái service, log và cổng theo quyền được cấp.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Biết kiểm tra process, trạng thái service, log và cổng theo quyền được cấp. Dùng kết quả log/cổng để khoanh vùng cấu hình hoặc quyền, ghi lệnh và thời điểm kiểm tra.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Báo người phụ trách với bằng chứng, không sudo bừa bãi, xóa log hay đổi quyền rộng trên máy dùng chung. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp AI, tình huống giả lập; rubric chưa được người có chuyên môn duyệt và không dùng để chấm tự động.",
+        "quality_reviewer": null,
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "backend_developer_nodejs": [
@@ -162,7 +365,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến javascript, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến javascript, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "backend_developer_nodejs_q02",
@@ -180,7 +386,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ giữ xử lý I/O bất đồng bộ, xác thực đầu vào và chuyển lỗi về middleware tập trung, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ giữ xử lý I/O bất đồng bộ, xác thực đầu vào và chuyển lỗi về middleware tập trung, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "backend_developer_nodejs_q03",
@@ -198,7 +407,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tách router, middleware và handler; xác thực request và chuẩn hóa phản hồi lỗi, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ tách router, middleware và handler; xác thực request và chuẩn hóa phản hồi lỗi, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "backend_developer_nodejs_q04",
@@ -216,7 +428,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "backend_developer_nodejs_q05",
@@ -234,7 +449,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chọn cấu trúc document theo truy vấn chính, tạo index phù hợp và xử lý cập nhật đồng thời có cân nhắc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ chọn cấu trúc document theo truy vấn chính, tạo index phù hợp và xử lý cập nhật đồng thời có cân nhắc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "backend_developer_nodejs_q06",
@@ -252,7 +470,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xác định grain và khóa join trước, dùng truy vấn tham số hóa và kiểm tra null/trùng lặp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ xác định grain và khóa join trước, dùng truy vấn tham số hóa và kiểm tra null/trùng lặp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "backend_developer_nodejs_q07",
@@ -270,7 +491,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "backend_developer_net": [
@@ -290,7 +514,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng kiểu dữ liệu rõ ràng, tách nghiệp vụ khỏi hạ tầng và xử lý ngoại lệ tại ranh giới, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng kiểu dữ liệu rõ ràng, tách nghiệp vụ khỏi hạ tầng và xử lý ngoại lệ tại ranh giới, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "backend_developer_net_q02",
@@ -308,7 +535,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tách controller, service và truy cập dữ liệu; dùng DI, validation và middleware lỗi tập trung, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ tách controller, service và truy cập dữ liệu; dùng DI, validation và middleware lỗi tập trung, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "backend_developer_net_q03",
@@ -326,7 +556,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng truy vấn tham số hóa, transaction cho cập nhật liên quan và kiểm tra khóa/index theo truy vấn, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng truy vấn tham số hóa, transaction cho cập nhật liên quan và kiểm tra khóa/index theo truy vấn, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "backend_developer_net_q04",
@@ -344,7 +577,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ ánh xạ entity rõ ràng, kiểm soát tracking và transaction; tránh truy vấn dư thừa bằng cách xem SQL sinh ra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ ánh xạ entity rõ ràng, kiểm soát tracking và transaction; tránh truy vấn dư thừa bằng cách xem SQL sinh ra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "backend_developer_net_q05",
@@ -362,7 +598,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "backend_developer_net_q06",
@@ -380,7 +619,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "backend_developer_net_q07",
@@ -398,7 +640,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong dịch vụ ASP.NET Core quản lý giao dịch, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong dịch vụ ASP.NET Core quản lý giao dịch, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "frontend_developer_react": [
@@ -408,17 +653,37 @@
         "skill": "html",
         "level": 3,
         "weight": 3,
-        "question": "Trong trang React hiển thị danh sách sản phẩm, hãy mô tả cách bạn dùng html để triển khai luồng chính; nêu lựa chọn thiết kế, trường hợp lỗi cần xử lý và cách xác nhận kết quả.",
+        "question": "Danh sách 500 sản phẩm có ảnh thiếu và phải dùng được bằng bàn phím. Bạn sẽ chọn cấu trúc HTML, nhãn và trạng thái rỗng/lỗi nào? Nêu cách kiểm tra với trình đọc màn hình và một dữ liệu biên.",
         "good_answer_points": [
-          "Nêu đúng cơ chế hoặc thành phần cốt lõi của kỹ năng và cách áp dụng vào luồng đã nêu.",
-          "Đưa ra thiết kế cụ thể, gồm dữ liệu/đầu vào, đầu ra và xử lý lỗi hoặc biên.",
-          "Mô tả bước kiểm chứng bằng test, log, truy vấn hoặc chỉ số phù hợp với kỹ năng."
+          "Chọn phần tử HTML theo đúng ý nghĩa và gắn nhãn điều khiển/ảnh phù hợp.",
+          "Nêu rõ trạng thái loading, empty, error và nội dung sản phẩm.",
+          "Kiểm tra keyboard, label/accessibility cơ bản và các trường hợp dữ liệu thiếu."
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng phần tử semantic, liên kết nhãn với điều khiển và biểu diễn trạng thái tải/rỗng/lỗi rõ ràng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi dùng cấu trúc HTML có ý nghĩa cho danh sách sản phẩm, chẳng hạn danh sách và từng mục sản phẩm, tiêu đề rõ ràng, ảnh có văn bản thay thế phù hợp và điều khiển có nhãn. Với dữ liệu, giao diện cần thể hiện trạng thái đang tải, rỗng, lỗi và có kết quả. Tôi kiểm tra bằng keyboard, trình đọc màn hình ở mức cơ bản và test giao diện cho dữ liệu rỗng/thiếu ảnh để bảo đảm thao tác vẫn dùng được.",
+        "quality_sources": [],
+        "quality": "unreviewed",
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Trang React liệt kê 500 sản phẩm, có ảnh thiếu, dữ liệu rỗng và người dùng điều hướng bằng bàn phím; bạn chịu trách nhiệm cấu trúc HTML.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Trang React liệt kê 500 sản phẩm, có ảnh thiếu, dữ liệu rỗng và người dùng điều hướng bằng bàn phím; bạn chịu trách nhiệm cấu trúc HTML. Chọn phần tử HTML theo đúng ý nghĩa và gắn nhãn điều khiển/ảnh phù hợp.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Chọn phần tử HTML theo đúng ý nghĩa và gắn nhãn điều khiển/ảnh phù hợp. Nêu rõ trạng thái loading, empty, error và nội dung sản phẩm.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Kiểm tra keyboard, label/accessibility cơ bản và các trường hợp dữ liệu thiếu. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML",
+            "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_forms"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        },
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới."
       },
       {
         "id": "frontend_developer_react_q02",
@@ -426,17 +691,36 @@
         "skill": "css",
         "level": 3,
         "weight": 3,
-        "question": "Trong trang React hiển thị danh sách sản phẩm, hãy mô tả cách bạn dùng css để triển khai luồng chính; nêu lựa chọn thiết kế, trường hợp lỗi cần xử lý và cách xác nhận kết quả.",
+        "question": "Thẻ sản phẩm tràn ở màn hình 320 px khi tên dài và focus khó thấy. Bạn sẽ tổ chức CSS grid/flex, breakpoint, xử lý ảnh và focus ra sao? Kiểm tra ở các độ rộng nào?",
         "good_answer_points": [
-          "Nêu đúng cơ chế hoặc thành phần cốt lõi của kỹ năng và cách áp dụng vào luồng đã nêu.",
-          "Đưa ra thiết kế cụ thể, gồm dữ liệu/đầu vào, đầu ra và xử lý lỗi hoặc biên.",
-          "Mô tả bước kiểm chứng bằng test, log, truy vấn hoặc chỉ số phù hợp với kỹ năng."
+          "Chọn layout linh hoạt và breakpoint theo nội dung/viewport.",
+          "Xử lý nội dung dài, ảnh, khoảng cách, focus và trạng thái tương tác.",
+          "Kiểm tra nhiều độ rộng, zoom và dữ liệu biên để phát hiện tràn hoặc khó thao tác."
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xây bố cục đáp ứng theo nội dung, giữ trạng thái tương tác dễ nhận biết và kiểm tra nhiều kích thước màn hình, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi bắt đầu từ bố cục linh hoạt theo nội dung, chọn grid/flex phù hợp và đặt breakpoint khi bố cục thực sự cần đổi, không gắn cứng vào một thiết bị cụ thể. Ảnh và thẻ sản phẩm cần giữ tỉ lệ, văn bản dài không làm tràn khung, focus và hover không phải cách duy nhất báo trạng thái. Tôi kiểm tra ở một số chiều rộng đại diện, zoom và nội dung dài/rỗng để tìm overflow hoặc vùng bấm khó dùng.",
+        "quality_sources": [],
+        "quality": "unreviewed",
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Danh sách sản phẩm phải dùng được từ màn hình 320 px đến desktop; tên sản phẩm dài, ảnh không đồng nhất và trạng thái focus phải nhìn thấy.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Danh sách sản phẩm phải dùng được từ màn hình 320 px đến desktop; tên sản phẩm dài, ảnh không đồng nhất và trạng thái focus phải nhìn thấy. Chọn layout linh hoạt và breakpoint theo nội dung/viewport.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Chọn layout linh hoạt và breakpoint theo nội dung/viewport. Xử lý nội dung dài, ảnh, khoảng cách, focus và trạng thái tương tác.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Kiểm tra nhiều độ rộng, zoom và dữ liệu biên để phát hiện tràn hoặc khó thao tác. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        },
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới."
       },
       {
         "id": "frontend_developer_react_q03",
@@ -444,17 +728,36 @@
         "skill": "javascript",
         "level": 3,
         "weight": 3,
-        "question": "Trong trang React hiển thị danh sách sản phẩm, hãy mô tả cách bạn dùng javascript để triển khai luồng chính; nêu lựa chọn thiết kế, trường hợp lỗi cần xử lý và cách xác nhận kết quả.",
+        "question": "Người dùng đổi bộ lọc liên tiếp, response cũ tới sau và đôi khi API trả 500 hoặc thiếu giá. Bạn xử lý request, state và dữ liệu lỗi thế nào để danh sách không hiển thị kết quả sai?",
         "good_answer_points": [
-          "Nêu đúng cơ chế hoặc thành phần cốt lõi của kỹ năng và cách áp dụng vào luồng đã nêu.",
-          "Đưa ra thiết kế cụ thể, gồm dữ liệu/đầu vào, đầu ra và xử lý lỗi hoặc biên.",
-          "Mô tả bước kiểm chứng bằng test, log, truy vấn hoặc chỉ số phù hợp với kỹ năng."
+          "Xử lý Promise/response và lỗi tường minh; không coi mọi HTTP response là thành công.",
+          "Quản lý trạng thái loading/error và kết quả cũ khi request thay đổi.",
+          "Có test cho success, lỗi mạng/status, hủy request và payload không hợp lệ."
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ kiểm tra dữ liệu ở biên, xử lý bất đồng bộ có kiểm soát và tránh để lỗi bị nuốt, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi tách lời gọi API khỏi phần render, kiểm tra status và shape dữ liệu trước khi đưa vào state, đồng thời quản lý loading, empty và error riêng. Khi người dùng đổi bộ lọc hoặc rời trang, tôi cân nhắc hủy request cũ hoặc bỏ qua kết quả lỗi thời để không ghi đè dữ liệu mới. Tôi kiểm tra thành công, response lỗi, timeout/hủy request và dữ liệu sai định dạng bằng test có thể lặp lại.",
+        "quality_sources": [],
+        "quality": "unreviewed",
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Người dùng đổi bộ lọc hai lần liên tiếp; API trả lời lần đầu sau lần thứ hai, đôi lúc trả HTTP 500 hoặc dữ liệu thiếu trường giá.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Người dùng đổi bộ lọc hai lần liên tiếp; API trả lời lần đầu sau lần thứ hai, đôi lúc trả HTTP 500 hoặc dữ liệu thiếu trường giá. Xử lý Promise/response và lỗi tường minh; không coi mọi HTTP response là thành công.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Xử lý Promise/response và lỗi tường minh; không coi mọi HTTP response là thành công. Quản lý trạng thái loading/error và kết quả cũ khi request thay đổi.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Có test cho success, lỗi mạng/status, hủy request và payload không hợp lệ. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        },
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới."
       },
       {
         "id": "frontend_developer_react_q04",
@@ -462,17 +765,36 @@
         "skill": "reactjs",
         "level": 2,
         "weight": 3,
-        "question": "Trong trang React hiển thị danh sách sản phẩm, hãy mô tả cách bạn dùng reactjs để triển khai luồng chính; nêu lựa chọn thiết kế, trường hợp lỗi cần xử lý và cách xác nhận kết quả.",
+        "question": "Sau khi sắp xếp 500 sản phẩm, state của thẻ bị gắn sang sản phẩm khác. Bạn chia component, đặt state và key thế nào; sẽ viết test gì để bắt lỗi này?",
         "good_answer_points": [
-          "Nêu đúng cơ chế hoặc thành phần cốt lõi của kỹ năng và cách áp dụng vào luồng đã nêu.",
-          "Đưa ra thiết kế cụ thể, gồm dữ liệu/đầu vào, đầu ra và xử lý lỗi hoặc biên.",
-          "Mô tả bước kiểm chứng bằng test, log, truy vấn hoặc chỉ số phù hợp với kỹ năng."
+          "Chia component hợp lý và xác định rõ nơi sở hữu state.",
+          "Render danh sách với key duy nhất, ổn định theo ID của dữ liệu.",
+          "Kiểm tra thêm/xóa/sắp xếp/lọc để phát hiện lỗi state hoặc key."
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia giao diện thành component, giữ state ở nơi có chủ sở hữu rõ ràng và xử lý loading/error/empty, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi chia danh sách thành component theo trách nhiệm, truyền dữ liệu cần thiết qua props và giữ state gần nơi sở hữu nó. Khi render mảng, mỗi sản phẩm cần key ổn định từ ID dữ liệu; tránh dùng index nếu danh sách có thể sắp xếp hoặc thay đổi. Tôi kiểm tra thêm loading/empty/error, thao tác lọc và cập nhật để xác nhận React giữ đúng state của từng mục.",
+        "quality_sources": [],
+        "quality": "unreviewed",
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Danh sách 500 sản phẩm có lọc và sắp xếp; một sản phẩm thay đổi vị trí sau cập nhật và giao diện phải giữ đúng state của từng thẻ.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Danh sách 500 sản phẩm có lọc và sắp xếp; một sản phẩm thay đổi vị trí sau cập nhật và giao diện phải giữ đúng state của từng thẻ. Chia component hợp lý và xác định rõ nơi sở hữu state.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Chia component hợp lý và xác định rõ nơi sở hữu state. Render danh sách với key duy nhất, ổn định theo ID của dữ liệu.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Kiểm tra thêm/xóa/sắp xếp/lọc để phát hiện lỗi state hoặc key. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://react.dev/learn/rendering-lists"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        },
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới."
       },
       {
         "id": "frontend_developer_react_q05",
@@ -480,17 +802,36 @@
         "skill": "redux",
         "level": 2,
         "weight": 2,
-        "question": "Trong trang React hiển thị danh sách sản phẩm, hãy mô tả cách bạn dùng redux để triển khai luồng chính; nêu lựa chọn thiết kế, trường hợp lỗi cần xử lý và cách xác nhận kết quả.",
+        "question": "Bộ lọc được dùng ở hai khu vực và request có trạng thái tải/lỗi. Trường hợp nào cần Redux Toolkit, trường hợp nào chỉ cần state cục bộ? Nêu slice, selector và phép thử cụ thể.",
         "good_answer_points": [
-          "Nêu đúng cơ chế hoặc thành phần cốt lõi của kỹ năng và cách áp dụng vào luồng đã nêu.",
-          "Đưa ra thiết kế cụ thể, gồm dữ liệu/đầu vào, đầu ra và xử lý lỗi hoặc biên.",
-          "Mô tả bước kiểm chứng bằng test, log, truy vấn hoặc chỉ số phù hợp với kỹ năng."
+          "Giải thích vì sao state cần store thay vì dùng state cục bộ.",
+          "Tổ chức slice, action/reducer và selector theo feature; giữ cập nhật dễ kiểm thử.",
+          "Mô tả pending/success/error và test cho reducer hoặc request bất đồng bộ."
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ đưa state dùng chung vào store, cập nhật qua action/reducer và giữ logic bất biến, dễ kiểm thử, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi chỉ đưa state dùng chung cho nhiều khu vực vào store; state cục bộ vẫn để ở component. Với Redux Toolkit, tôi xác định slice, action/reducer và selector theo feature, cập nhật bất biến qua API của Toolkit. Lời gọi bất đồng bộ cần trạng thái pending/fulfilled/rejected và lỗi hiển thị rõ. Tôi kiểm tra reducer/selector, trạng thái tải và lỗi, đồng thời cân nhắc liệu store có thực sự cần thiết cho danh sách này.",
+        "quality_sources": [],
+        "quality": "unreviewed",
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Bộ lọc sản phẩm được dùng ở danh sách và thanh điều hướng; nhóm đang cân nhắc Redux Toolkit so với state cục bộ khi API có trạng thái tải và lỗi.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Bộ lọc sản phẩm được dùng ở danh sách và thanh điều hướng; nhóm đang cân nhắc Redux Toolkit so với state cục bộ khi API có trạng thái tải và lỗi. Giải thích vì sao state cần store thay vì dùng state cục bộ.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Giải thích vì sao state cần store thay vì dùng state cục bộ. Tổ chức slice, action/reducer và selector theo feature; giữ cập nhật dễ kiểm thử.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Mô tả pending/success/error và test cho reducer hoặc request bất đồng bộ. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://redux-toolkit.js.org/usage/usage-guide/"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        },
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới."
       },
       {
         "id": "frontend_developer_react_q06",
@@ -498,17 +839,36 @@
         "skill": "làm việc nhóm",
         "level": 2,
         "weight": 1,
-        "question": "Hãy kể một tình huống thực tế khi bạn dùng làm việc nhóm để xử lý vấn đề trong công việc tương tự trang React hiển thị danh sách sản phẩm; trình bày theo STAR và nêu kết quả đo được.",
+        "question": "API sản phẩm đổi tên trường giữa sprint khi phần frontend đang review. Bạn sẽ chia trách nhiệm, xử lý bất đồng với backend/QA và lưu quyết định để kịp nghiệm thu như thế nào? Nêu hành vi và bằng chứng có thể quan sát.",
         "good_answer_points": [
-          "Nêu bối cảnh và trách nhiệm cá nhân cụ thể, phân biệt rõ phần việc của mình.",
-          "Mô tả hành động theo trình tự, có quyết định hoặc cách phối hợp phù hợp với kỹ năng.",
-          "Đưa kết quả có bằng chứng/đo lường và bài học hoặc thay đổi được áp dụng sau đó."
+          "Nêu vai trò cá nhân và bối cảnh nhóm rõ ràng.",
+          "Cho ví dụ cách phối hợp kỹ thuật, tiếp nhận phản hồi và giải quyết bất đồng.",
+          "Nêu kết quả thật có bằng chứng và điều nhóm duy trì sau đó."
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong trang React hiển thị danh sách sản phẩm, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Tôi chọn một tình huống thật, nêu mục tiêu và phần mình phụ trách trước khi kể hành động phối hợp. Tôi nói cụ thể cách tạo nhánh công việc, chia sẻ thay đổi qua pull request, phản hồi review hoặc xử lý bất đồng về giao diện/API. Kết quả cần là đầu ra có thể kiểm chứng như lỗi được sửa, tiêu chí chấp nhận được thống nhất hoặc thời gian tích hợp; không nhận công sức của cả nhóm là thành tích riêng.",
+        "quality_sources": [],
+        "quality": "unreviewed",
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Frontend, thiết kế và backend cùng sửa trang sản phẩm trong một sprint; response API đổi tên trường khi pull request giao diện đang chờ review.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Frontend, thiết kế và backend cùng sửa trang sản phẩm trong một sprint; response API đổi tên trường khi pull request giao diện đang chờ review. Nêu vai trò cá nhân và bối cảnh nhóm rõ ràng.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Nêu vai trò cá nhân và bối cảnh nhóm rõ ràng. Cho ví dụ cách phối hợp kỹ thuật, tiếp nhận phản hồi và giải quyết bất đồng.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Nêu kết quả thật có bằng chứng và điều nhóm duy trì sau đó. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://www.opm.gov/policy-data-oversight/assessment-and-selection/structured-interviews/guide/"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        },
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới."
       },
       {
         "id": "frontend_developer_react_q07",
@@ -516,17 +876,148 @@
         "skill": "giao tiếp",
         "level": 2,
         "weight": 1,
-        "question": "Hãy kể một tình huống thực tế khi bạn dùng giao tiếp để xử lý vấn đề trong công việc tương tự trang React hiển thị danh sách sản phẩm; trình bày theo STAR và nêu kết quả đo được.",
+        "question": "Designer muốn cả thẻ sản phẩm bấm được nhưng QA phát hiện không dùng được bằng bàn phím. Bạn trao đổi với hai bên và xác nhận tiêu chí chấp nhận ra sao? Nêu tài liệu hoặc bản thử sẽ dùng.",
         "good_answer_points": [
-          "Nêu bối cảnh và trách nhiệm cá nhân cụ thể, phân biệt rõ phần việc của mình.",
-          "Mô tả hành động theo trình tự, có quyết định hoặc cách phối hợp phù hợp với kỹ năng.",
-          "Đưa kết quả có bằng chứng/đo lường và bài học hoặc thay đổi được áp dụng sau đó."
+          "Xác định người nhận, nhu cầu thông tin và mục tiêu trao đổi.",
+          "Nêu cách làm rõ yêu cầu bằng ví dụ, tiêu chí chấp nhận hoặc xác nhận lại.",
+          "Đưa kết quả/bằng chứng thực tế và phản ánh bài học hoặc cải tiến tiếp theo."
         ],
         "red_flags": [
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong trang React hiển thị danh sách sản phẩm, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Tôi dùng một tình huống thật khi cần trao đổi yêu cầu hoặc giải thích một quyết định giao diện. Tôi nêu ai cần thông tin gì, cách tôi làm rõ thuật ngữ/tiêu chí chấp nhận bằng ví dụ hoặc prototype, và cách xác nhận hai bên hiểu giống nhau. Nếu phát hiện hiểu sai, tôi mô tả cách cập nhật tài liệu và thông báo tác động. Kết quả phải dựa trên phản hồi hoặc thay đổi thực tế, không tự thêm số liệu.",
+        "quality_sources": [],
+        "quality": "unreviewed",
+        "quality_reviewed_at": null,
+        "quality_reviewer": null,
+        "quality_review_note": null,
+        "context_scenario": "Thiết kế yêu cầu thẻ sản phẩm bấm được, QA báo điều hướng bàn phím không hoạt động; bạn cần thống nhất lại tiêu chí chấp nhận với designer và QA.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Thiết kế yêu cầu thẻ sản phẩm bấm được, QA báo điều hướng bàn phím không hoạt động; bạn cần thống nhất lại tiêu chí chấp nhận với designer và QA. Xác định người nhận, nhu cầu thông tin và mục tiêu trao đổi.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Xác định người nhận, nhu cầu thông tin và mục tiêu trao đổi. Nêu cách làm rõ yêu cầu bằng ví dụ, tiêu chí chấp nhận hoặc xác nhận lại.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Đưa kết quả/bằng chứng thực tế và phản ánh bài học hoặc cải tiến tiếp theo. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null},
+        "prior_review_metadata": {
+          "quality": "ai_reviewed_internal",
+          "quality_reviewer": "Codex (AI-assisted editorial review)",
+          "quality_reviewed_at": "2026-10-25",
+          "quality_review_note": "AI-assisted internal editorial review of role relevance, answer guidance, and self-reflection points. Not an independent subject-matter or legal review; project owner should validate before external use.",
+          "quality_sources": [
+            "https://www.opm.gov/policy-data-oversight/assessment-and-selection/structured-interviews/guide/"
+          ],
+          "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": "ai_reviewed_internal", "reviewed_at": "2026-10-25", "rights_basis": null, "license_notes": null}
+        },
+        "quality_note": "Bối cảnh và rubric bổ sung do AI biên soạn; metadata review trước được lưu trong prior_review_metadata nhưng không duyệt phần mới."
+      },
+      {
+        "id": "frontend_developer_react_q08",
+        "type": "technical",
+        "skill": "git",
+        "level": 2,
+        "weight": 2,
+        "question": "Tình huống giả lập: Hai nhánh cùng sửa component sản phẩm và hợp đồng API; khi merge có conflict, CI báo test danh sách thất bại. Bạn xử lý conflict, kiểm tra diff và đưa thay đổi lên pull request ra sao để không mất logic của nhánh kia?",
+        "good_answer_points": [
+          "Xác định file và ý định của hai nhánh trước khi chọn phần cần giữ.",
+          "Resolve theo contract đã thống nhất, chia commit có nghĩa, chạy test liên quan và kiểm tra diff/secret.",
+          "Yêu cầu review, giải thích quyết định conflict và xác minh lại sau merge; biết cách revert nếu phát hành lỗi."
+        ],
+        "red_flags": [
+          "Tự khẳng định dữ liệu, kết quả hoặc quyền phê duyệt chưa được cung cấp trong tình huống.",
+          "Không có bước xác minh, người phụ trách hoặc bằng chứng để kiểm tra kết quả."
+        ],
+        "time_minutes": 5,
+        "reference_answer": "Tôi đọc hai nhánh và hỏi owner API về contract cuối, không chọn nguyên một phía theo công cụ. Tôi resolve từng vùng, chạy test component và tích hợp, đọc diff để bảo đảm không bỏ mất hành vi hoặc đưa secret vào repo. Trong PR tôi ghi thay đổi contract, cách kiểm tra và vùng conflict để reviewer xác nhận; sau merge tôi theo dõi CI.",
+        "context_scenario": "Hai nhánh cùng sửa component sản phẩm và hợp đồng API; khi merge có conflict, CI báo test danh sách thất bại.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Hai nhánh cùng sửa component sản phẩm và hợp đồng API; khi merge có conflict, CI báo test danh sách thất bại. Xác định file và ý định của hai nhánh trước khi chọn phần cần giữ.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Xác định file và ý định của hai nhánh trước khi chọn phần cần giữ. Resolve theo contract đã thống nhất, chia commit có nghĩa, chạy test liên quan và kiểm tra diff/secret.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Yêu cầu review, giải thích quyết định conflict và xác minh lại sau merge; biết cách revert nếu phát hành lỗi. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp AI, tình huống giả lập; rubric chưa được người có chuyên môn duyệt và không dùng để chấm tự động.",
+        "quality_reviewer": null,
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null}
+      },
+      {
+        "id": "frontend_developer_react_q09",
+        "type": "technical",
+        "skill": "rest api",
+        "level": 2,
+        "weight": 2,
+        "question": "Tình huống giả lập: Trang sản phẩm gọi GET /products, đôi khi nhận 429, 500 hoặc item thiếu giá; người dùng có thể đổi bộ lọc trong lúc tải. Bạn xử lý status, dữ liệu và request cũ thế nào? Nêu trạng thái giao diện và test cho từng trường hợp.",
+        "good_answer_points": [
+          "Phân biệt HTTP thành công với lỗi, xác nhận shape tối thiểu của sản phẩm.",
+          "Hiển thị loading/empty/error, tránh kết quả cũ ghi đè bộ lọc mới và chỉ retry 429 theo chính sách API.",
+          "Kiểm tra bằng mock response cho 200, 429, 500, dữ liệu sai và request đến không theo thứ tự."
+        ],
+        "red_flags": [
+          "Tự khẳng định dữ liệu, kết quả hoặc quyền phê duyệt chưa được cung cấp trong tình huống.",
+          "Không có bước xác minh, người phụ trách hoặc bằng chứng để kiểm tra kết quả."
+        ],
+        "time_minutes": 5,
+        "reference_answer": "Tôi kiểm tra response.ok và validate item trước khi render, tách trạng thái tải/rỗng/lỗi. Khi bộ lọc đổi, tôi hủy request cũ hoặc bỏ qua kết quả không còn khớp. Với 429, tôi chỉ thử lại nếu API cho phép và dùng mốc chờ phù hợp; với 500 báo lỗi và cho thử lại. Test mô phỏng phản hồi đảo thứ tự và item thiếu giá.",
+        "context_scenario": "Trang sản phẩm gọi GET /products, đôi khi nhận 429, 500 hoặc item thiếu giá; người dùng có thể đổi bộ lọc trong lúc tải.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Trang sản phẩm gọi GET /products, đôi khi nhận 429, 500 hoặc item thiếu giá; người dùng có thể đổi bộ lọc trong lúc tải. Phân biệt HTTP thành công với lỗi, xác nhận shape tối thiểu của sản phẩm.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Phân biệt HTTP thành công với lỗi, xác nhận shape tối thiểu của sản phẩm. Hiển thị loading/empty/error, tránh kết quả cũ ghi đè bộ lọc mới và chỉ retry 429 theo chính sách API.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Kiểm tra bằng mock response cho 200, 429, 500, dữ liệu sai và request đến không theo thứ tự. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp AI, tình huống giả lập; rubric chưa được người có chuyên môn duyệt và không dùng để chấm tự động.",
+        "quality_reviewer": null,
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null}
+      },
+      {
+        "id": "frontend_developer_react_q10",
+        "type": "technical",
+        "skill": "typescript",
+        "level": 1,
+        "weight": 2,
+        "question": "Tình huống giả lập: Payload sản phẩm có id/name bắt buộc nhưng price có thể null; một item test thiếu cả id. Bạn khai báo type và kiểm tra dữ liệu ở ranh giới API thế nào để thẻ sản phẩm không lỗi hoặc hiển thị giá sai?",
+        "good_answer_points": [
+          "Khai báo id/name và price tùy chọn/null theo contract, không dùng any để bỏ qua lỗi.",
+          "Kiểm tra đầu vào runtime trước render, xử lý price null và item không có id bằng trạng thái rõ ràng.",
+          "Nêu test type/runtime với item hợp lệ, price null và payload thiếu id; không coi type assertion là validation."
+        ],
+        "red_flags": [
+          "Tự khẳng định dữ liệu, kết quả hoặc quyền phê duyệt chưa được cung cấp trong tình huống.",
+          "Không có bước xác minh, người phụ trách hoặc bằng chứng để kiểm tra kết quả."
+        ],
+        "time_minutes": 5,
+        "reference_answer": "Tôi khai báo Product theo contract, với price: number | null nếu API cho phép. Vì JSON không được TypeScript xác thực lúc chạy, tôi kiểm tra id/name/price sau fetch. Item không có id được ghi lỗi và bỏ khỏi danh sách hoặc báo dữ liệu lỗi theo thiết kế; price null hiện 'Chưa có giá'. Tôi test ba payload này thay vì ép kiểu bằng as Product.",
+        "context_scenario": "Payload sản phẩm có id/name bắt buộc nhưng price có thể null; một item test thiếu cả id.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Payload sản phẩm có id/name bắt buộc nhưng price có thể null; một item test thiếu cả id. Khai báo id/name và price tùy chọn/null theo contract, không dùng any để bỏ qua lỗi.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Khai báo id/name và price tùy chọn/null theo contract, không dùng any để bỏ qua lỗi. Kiểm tra đầu vào runtime trước render, xử lý price null và item không có id bằng trạng thái rõ ràng.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Nêu test type/runtime với item hợp lệ, price null và payload thiếu id; không coi type assertion là validation. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp AI, tình huống giả lập; rubric chưa được người có chuyên môn duyệt và không dùng để chấm tự động.",
+        "quality_reviewer": null,
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null}
+      },
+      {
+        "id": "frontend_developer_react_q11",
+        "type": "scenario",
+        "skill": "thiết kế ui ux",
+        "level": 1,
+        "weight": 1,
+        "question": "Tình huống giả lập: Trên màn hình 320 px, bộ lọc che sản phẩm; QA báo nút áp dụng khó dùng bằng bàn phím và trạng thái rỗng thiếu hướng dẫn. Bạn kiểm tra luồng tìm sản phẩm và đề xuất điều chỉnh đầu tiên nào? Bạn xác nhận với người dùng/QA ra sao?",
+        "good_answer_points": [
+          "Nhận ra các vấn đề khả dụng: lọc che nội dung, bàn phím, trạng thái rỗng.",
+          "Đề xuất một bố cục/nhãn và thứ tự thao tác rõ, thử bản mẫu ở màn hình nhỏ và bàn phím.",
+          "Thu phản hồi theo nhiệm vụ tìm sản phẩm, đối chiếu tiêu chí và ghi giới hạn của kết quả thử."
+        ],
+        "red_flags": [
+          "Tự khẳng định dữ liệu, kết quả hoặc quyền phê duyệt chưa được cung cấp trong tình huống.",
+          "Không có bước xác minh, người phụ trách hoặc bằng chứng để kiểm tra kết quả."
+        ],
+        "time_minutes": 5,
+        "reference_answer": "Tôi quan sát nhiệm vụ tìm một sản phẩm trên màn 320 px, thử tab qua bộ lọc và ghi bước bị kẹt. Tôi đề xuất bộ lọc có nhãn rõ, nút áp dụng dễ thấy, trả focus hợp lý và thông điệp rỗng có cách xóa lọc. Tôi thử prototype với QA/người dùng theo cùng nhiệm vụ, ghi thay đổi và điểm chưa kiểm chứng.",
+        "context_scenario": "Trên màn hình 320 px, bộ lọc che sản phẩm; QA báo nút áp dụng khó dùng bằng bàn phím và trạng thái rỗng thiếu hướng dẫn.",
+        "evaluation_rubric": {"level_1_criteria": "Nhận diện đúng dữ kiện và rủi ro trong ca: Trên màn hình 320 px, bộ lọc che sản phẩm; QA báo nút áp dụng khó dùng bằng bàn phím và trạng thái rỗng thiếu hướng dẫn. Nhận ra các vấn đề khả dụng: lọc che nội dung, bàn phím, trạng thái rỗng.", "level_2_criteria": "Thực hiện có giải thích và đầu ra kiểm tra được: Nhận ra các vấn đề khả dụng: lọc che nội dung, bàn phím, trạng thái rỗng. Đề xuất một bố cục/nhãn và thứ tự thao tác rõ, thử bản mẫu ở màn hình nhỏ và bàn phím.", "level_3_criteria": "Đáp ứng mức 2, chủ động kiểm chứng và xử lý giới hạn: Thu phản hồi theo nhiệm vụ tìm sản phẩm, đối chiếu tiêu chí và ghi giới hạn của kết quả thử. Ghi rõ giả định, người xác nhận và bằng chứng kết quả; không tự tạo số liệu."},
+        "quality": "unreviewed",
+        "quality_note": "Bản nháp AI, tình huống giả lập; rubric chưa được người có chuyên môn duyệt và không dùng để chấm tự động.",
+        "quality_reviewer": null,
+        "quality_reviewed_at": null,
+        "quality_review_note": null,
+        "quality_sources": [],
+        "provenance": {"source_url": null, "author_origin": "Codex (AI) biên soạn tình huống giả lập", "curated_by": null, "review_tier": "ai_assisted_draft", "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "frontend_developer_vue": [
@@ -546,7 +1037,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng phần tử semantic, liên kết nhãn với điều khiển và biểu diễn trạng thái tải/rỗng/lỗi rõ ràng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng phần tử semantic, liên kết nhãn với điều khiển và biểu diễn trạng thái tải/rỗng/lỗi rõ ràng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "frontend_developer_vue_q02",
@@ -564,7 +1058,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xây bố cục đáp ứng theo nội dung, giữ trạng thái tương tác dễ nhận biết và kiểm tra nhiều kích thước màn hình, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ xây bố cục đáp ứng theo nội dung, giữ trạng thái tương tác dễ nhận biết và kiểm tra nhiều kích thước màn hình, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "frontend_developer_vue_q03",
@@ -582,7 +1079,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ kiểm tra dữ liệu ở biên, xử lý bất đồng bộ có kiểm soát và tránh để lỗi bị nuốt, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ kiểm tra dữ liệu ở biên, xử lý bất đồng bộ có kiểm soát và tránh để lỗi bị nuốt, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "frontend_developer_vue_q04",
@@ -600,7 +1100,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tách component theo trách nhiệm, dùng reactive state và xử lý rõ trạng thái tải/lỗi, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ tách component theo trách nhiệm, dùng reactive state và xử lý rõ trạng thái tải/lỗi, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "frontend_developer_vue_q05",
@@ -618,7 +1121,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ đặt state dùng chung trong store, thay đổi có kiểm soát qua mutation/action và tránh nhân bản trạng thái, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ đặt state dùng chung trong store, thay đổi có kiểm soát qua mutation/action và tránh nhân bản trạng thái, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "frontend_developer_vue_q06",
@@ -636,7 +1142,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng Vue quản lý giỏ hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng Vue quản lý giỏ hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "frontend_developer_vue_q07",
@@ -654,7 +1163,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng Vue quản lý giỏ hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng Vue quản lý giỏ hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "frontend_developer_angular": [
@@ -674,7 +1186,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng phần tử semantic, liên kết nhãn với điều khiển và biểu diễn trạng thái tải/rỗng/lỗi rõ ràng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng phần tử semantic, liên kết nhãn với điều khiển và biểu diễn trạng thái tải/rỗng/lỗi rõ ràng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "frontend_developer_angular_q02",
@@ -692,7 +1207,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xây bố cục đáp ứng theo nội dung, giữ trạng thái tương tác dễ nhận biết và kiểm tra nhiều kích thước màn hình, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ xây bố cục đáp ứng theo nội dung, giữ trạng thái tương tác dễ nhận biết và kiểm tra nhiều kích thước màn hình, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "frontend_developer_angular_q03",
@@ -710,7 +1228,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ định nghĩa kiểu cho dữ liệu vào/ra, thu hẹp kiểu ở biên và tránh ép kiểu khi chưa kiểm chứng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ định nghĩa kiểu cho dữ liệu vào/ra, thu hẹp kiểu ở biên và tránh ép kiểu khi chưa kiểm chứng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "frontend_developer_angular_q04",
@@ -728,7 +1249,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tách component và service, dùng dependency injection, kiểm tra form và quản lý vòng đời đăng ký, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ tách component và service, dùng dependency injection, kiểm tra form và quản lý vòng đời đăng ký, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "frontend_developer_angular_q05",
@@ -746,7 +1270,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chọn operator phù hợp cho luồng bất đồng bộ, hủy subscription đúng vòng đời và xử lý lỗi trong stream, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ chọn operator phù hợp cho luồng bất đồng bộ, hủy subscription đúng vòng đời và xử lý lỗi trong stream, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "frontend_developer_angular_q06",
@@ -764,7 +1291,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "frontend_developer_angular_q07",
@@ -782,7 +1312,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong màn hình Angular theo dõi trạng thái xử lý, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong màn hình Angular theo dõi trạng thái xử lý, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "fullstack_developer_mern": [
@@ -802,7 +1335,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến javascript, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến javascript, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "fullstack_developer_mern_q02",
@@ -820,7 +1356,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia giao diện thành component, giữ state ở nơi có chủ sở hữu rõ ràng và xử lý loading/error/empty, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ chia giao diện thành component, giữ state ở nơi có chủ sở hữu rõ ràng và xử lý loading/error/empty, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "fullstack_developer_mern_q03",
@@ -838,7 +1377,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ giữ xử lý I/O bất đồng bộ, xác thực đầu vào và chuyển lỗi về middleware tập trung, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ giữ xử lý I/O bất đồng bộ, xác thực đầu vào và chuyển lỗi về middleware tập trung, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "fullstack_developer_mern_q04",
@@ -856,7 +1398,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "fullstack_developer_mern_q05",
@@ -874,7 +1419,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chọn cấu trúc document theo truy vấn chính, tạo index phù hợp và xử lý cập nhật đồng thời có cân nhắc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ chọn cấu trúc document theo truy vấn chính, tạo index phù hợp và xử lý cập nhật đồng thời có cân nhắc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "fullstack_developer_mern_q06",
@@ -892,7 +1440,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tách router, middleware và handler; xác thực request và chuẩn hóa phản hồi lỗi, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ tách router, middleware và handler; xác thực request và chuẩn hóa phản hồi lỗi, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "fullstack_developer_mern_q07",
@@ -910,7 +1461,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "fullstack_developer_net_angular": [
@@ -930,7 +1484,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng kiểu dữ liệu rõ ràng, tách nghiệp vụ khỏi hạ tầng và xử lý ngoại lệ tại ranh giới, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng kiểu dữ liệu rõ ràng, tách nghiệp vụ khỏi hạ tầng và xử lý ngoại lệ tại ranh giới, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "fullstack_developer_net_angular_q02",
@@ -948,7 +1505,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tách controller, service và truy cập dữ liệu; dùng DI, validation và middleware lỗi tập trung, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ tách controller, service và truy cập dữ liệu; dùng DI, validation và middleware lỗi tập trung, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "fullstack_developer_net_angular_q03",
@@ -966,7 +1526,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tách component và service, dùng dependency injection, kiểm tra form và quản lý vòng đời đăng ký, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ tách component và service, dùng dependency injection, kiểm tra form và quản lý vòng đời đăng ký, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "fullstack_developer_net_angular_q04",
@@ -984,7 +1547,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ định nghĩa kiểu cho dữ liệu vào/ra, thu hẹp kiểu ở biên và tránh ép kiểu khi chưa kiểm chứng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ định nghĩa kiểu cho dữ liệu vào/ra, thu hẹp kiểu ở biên và tránh ép kiểu khi chưa kiểm chứng, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "fullstack_developer_net_angular_q05",
@@ -1002,7 +1568,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng truy vấn tham số hóa, transaction cho cập nhật liên quan và kiểm tra khóa/index theo truy vấn, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng truy vấn tham số hóa, transaction cho cập nhật liên quan và kiểm tra khóa/index theo truy vấn, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "fullstack_developer_net_angular_q06",
@@ -1020,7 +1589,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "fullstack_developer_net_angular_q07",
@@ -1038,7 +1610,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhiều đầu việc cùng hạn, tôi sẽ xác định mức ưu tiên và phụ thuộc, chia nhỏ việc, thống nhất mốc bàn giao với các bên rồi cập nhật sớm khi có rủi ro. Kết quả cần gắn với tiến độ hoặc chất lượng thực tế có thể kiểm chứng, sau đó nêu cách lập kế hoạch được cải thiện."
+        "reference_answer": "Ví dụ, khi nhiều đầu việc cùng hạn, tôi sẽ xác định mức ưu tiên và phụ thuộc, chia nhỏ việc, thống nhất mốc bàn giao với các bên rồi cập nhật sớm khi có rủi ro. Kết quả cần gắn với tiến độ hoặc chất lượng thực tế có thể kiểm chứng, sau đó nêu cách lập kế hoạch được cải thiện.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "mobile_developer_ios": [
@@ -1058,7 +1633,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ mô hình hóa trạng thái đồng bộ rõ ràng, xử lý lỗi mạng và cập nhật giao diện trên đúng execution context, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ mô hình hóa trạng thái đồng bộ rõ ràng, xử lý lỗi mạng và cập nhật giao diện trên đúng execution context, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_ios_q02",
@@ -1076,7 +1654,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng API nền tảng phù hợp, xử lý quyền/trạng thái mạng và kiểm tra hành vi trên simulator hoặc thiết bị, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng API nền tảng phù hợp, xử lý quyền/trạng thái mạng và kiểm tra hành vi trên simulator hoặc thiết bị, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_ios_q03",
@@ -1094,7 +1675,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ cấu hình scheme và build nhất quán, xem diagnostics/log, chạy test và lưu artifact có thể truy vết, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ cấu hình scheme và build nhất quán, xem diagnostics/log, chạy test và lưu artifact có thể truy vết, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_ios_q04",
@@ -1112,7 +1696,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_ios_q05",
@@ -1130,7 +1717,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_ios_q06",
@@ -1148,7 +1738,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_ios_q07",
@@ -1166,7 +1759,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng iOS đồng bộ dữ liệu hồ sơ, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng iOS đồng bộ dữ liệu hồ sơ, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "mobile_developer_android": [
@@ -1186,7 +1782,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng kiểu null-safe, tách nghiệp vụ khỏi UI và quản lý coroutine/lỗi theo vòng đời phù hợp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng kiểu null-safe, tách nghiệp vụ khỏi UI và quản lý coroutine/lỗi theo vòng đời phù hợp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_android_q02",
@@ -1204,7 +1803,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng component và lifecycle API đúng cách, xử lý quyền/trạng thái vòng đời và kiểm tra trên emulator/thiết bị, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng component và lifecycle API đúng cách, xử lý quyền/trạng thái vòng đời và kiểm tra trên emulator/thiết bị, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_android_q03",
@@ -1222,7 +1824,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng cấu hình build rõ ràng, đọc logcat và chạy test trên emulator với cấu hình có thể tái lập, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng cấu hình build rõ ràng, đọc logcat và chạy test trên emulator với cấu hình có thể tái lập, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_android_q04",
@@ -1240,7 +1845,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_android_q05",
@@ -1258,7 +1866,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_android_q06",
@@ -1276,7 +1887,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_android_q07",
@@ -1294,7 +1908,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng Android đặt dịch vụ, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng Android đặt dịch vụ, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "mobile_developer_flutter": [
@@ -1314,7 +1931,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng kiểu dữ liệu rõ ràng, xử lý Future/Stream có lỗi và tách logic khỏi giao diện, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng kiểu dữ liệu rõ ràng, xử lý Future/Stream có lỗi và tách logic khỏi giao diện, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_flutter_q02",
@@ -1332,7 +1952,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tách widget theo trách nhiệm, quản lý state nhất quán và xử lý loading/error trong luồng dữ liệu, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ tách widget theo trách nhiệm, quản lý state nhất quán và xử lý loading/error trong luồng dữ liệu, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_flutter_q03",
@@ -1350,7 +1973,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_flutter_q04",
@@ -1368,7 +1994,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_flutter_q05",
@@ -1386,7 +2015,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xác định state nào là nguồn sự thật, nơi sở hữu và các chuyển trạng thái hợp lệ; kiểm tra trạng thái biên, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ xác định state nào là nguồn sự thật, nơi sở hữu và các chuyển trạng thái hợp lệ; kiểm tra trạng thái biên, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_flutter_q06",
@@ -1404,7 +2036,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến giải quyết vấn đề, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_flutter_q07",
@@ -1422,7 +2057,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng Flutter đa nền tảng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng Flutter đa nền tảng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "mobile_developer_react_native": [
@@ -1442,7 +2080,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến javascript, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế."
+        "reference_answer": "Ví dụ, khi có lỗi hoặc rủi ro chất lượng liên quan đến javascript, tôi sẽ khoanh vùng bằng log và khả năng tái hiện, đánh giá ảnh hưởng rồi chọn biện pháp giảm tác động trước khi sửa nguyên nhân. Sau đó tôi xác nhận bằng test hoặc theo dõi lại cùng tín hiệu, ghi nhận biện pháp phòng ngừa; thời gian khôi phục hay mức giảm lỗi chỉ nêu khi có dữ liệu thực tế.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_react_native_q02",
@@ -1460,7 +2101,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tách component, quản lý state và kiểm tra khác biệt hành vi giữa nền tảng iOS/Android, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ tách component, quản lý state và kiểm tra khác biệt hành vi giữa nền tảng iOS/Android, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_react_native_q03",
@@ -1478,7 +2122,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ thiết kế tài nguyên, phương thức HTTP và mã trạng thái nhất quán; kiểm tra đầu vào và trả lỗi có cấu trúc, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_react_native_q04",
@@ -1496,7 +2143,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia giao diện thành component, giữ state ở nơi có chủ sở hữu rõ ràng và xử lý loading/error/empty, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ chia giao diện thành component, giữ state ở nơi có chủ sở hữu rõ ràng và xử lý loading/error/empty, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_react_native_q05",
@@ -1514,7 +2164,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ đưa state dùng chung vào store, cập nhật qua action/reducer và giữ logic bất biến, dễ kiểm thử, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ đưa state dùng chung vào store, cập nhật qua action/reducer và giữ logic bất biến, dễ kiểm thử, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_react_native_q06",
@@ -1532,7 +2185,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "mobile_developer_react_native_q07",
@@ -1550,7 +2206,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng React Native theo dõi đơn hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong ứng dụng React Native theo dõi đơn hàng, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "game_developer_unity": [
@@ -1570,7 +2229,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ dùng kiểu dữ liệu rõ ràng, tách nghiệp vụ khỏi hạ tầng và xử lý ngoại lệ tại ranh giới, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ dùng kiểu dữ liệu rõ ràng, tách nghiệp vụ khỏi hạ tầng và xử lý ngoại lệ tại ranh giới, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "game_developer_unity_q02",
@@ -1588,7 +2250,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ tách logic gameplay khỏi hiển thị, quản lý vòng đời object và đo hiệu năng trên cảnh đại diện, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ tách logic gameplay khỏi hiển thị, quản lý vòng đời object và đo hiệu năng trên cảnh đại diện, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "game_developer_unity_q03",
@@ -1606,7 +2271,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy logic, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy logic, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "game_developer_unity_q04",
@@ -1624,7 +2292,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xác định hệ tọa độ và quy ước vector trước, kiểm tra phép biến đổi bằng trường hợp đơn giản có kết quả dự đoán được, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ xác định hệ tọa độ và quy ước vector trước, kiểm tra phép biến đổi bằng trường hợp đơn giản có kết quả dự đoán được, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "game_developer_unity_q05",
@@ -1642,7 +2313,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "game_developer_unity_q06",
@@ -1660,7 +2334,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xác định đơn vị, timestep và lực/tương tác cần mô phỏng; kiểm tra tính ổn định qua nhiều timestep, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ xác định đơn vị, timestep và lực/tương tác cần mô phỏng; kiểm tra tính ổn định qua nhiều timestep, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "game_developer_unity_q07",
@@ -1678,7 +2355,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong game Unity có màn chơi nhiều vật thể tương tác, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu."
+        "reference_answer": "Ví dụ, khi nhóm gặp vướng mắc trong game Unity có màn chơi nhiều vật thể tương tác, tôi sẽ nêu rõ mục tiêu và phần việc mình phụ trách, chia sẻ thông tin/bằng chứng với các bên liên quan rồi thống nhất bước tiếp theo. Kết quả nên được chứng minh bằng đầu ra hoặc chỉ số thực tế của tình huống, đồng thời nêu điều nhóm duy trì sau đó; không nên đưa con số nếu không có dữ liệu.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ],
     "embedded_software_engineer": [
@@ -1698,7 +2378,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến c++, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến c++, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "embedded_software_engineer_q02",
@@ -1716,7 +2399,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xác định chân giao tiếp, timing và trạng thái lỗi; kiểm thử tín hiệu/ngoại vi bằng log hoặc thiết bị đo phù hợp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ xác định chân giao tiếp, timing và trạng thái lỗi; kiểm thử tín hiệu/ngoại vi bằng log hoặc thiết bị đo phù hợp, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "embedded_software_engineer_q03",
@@ -1734,7 +2420,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ phân chia task theo thời hạn và ưu tiên, đồng bộ tài nguyên dùng chung, kiểm tra timeout và hành vi khi quá tải, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ phân chia task theo thời hạn và ưu tiên, đồng bộ tài nguyên dùng chung, kiểm tra timeout và hành vi khi quá tải, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "embedded_software_engineer_q04",
@@ -1752,7 +2441,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy logic, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp."
+        "reference_answer": "Ví dụ, với một sự cố liên quan đến tư duy logic, tôi sẽ mô tả bối cảnh và phần trách nhiệm của mình, lần lượt nêu cách khoanh vùng, quyết định xử lý và phối hợp. Kết quả cần có bằng chứng kiểm chứng cùng bài học/biện pháp duy trì; không gán số đo hay thành tích nếu tình huống không cung cấp.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "embedded_software_engineer_q05",
@@ -1770,7 +2462,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ chia thay đổi thành commit nhỏ, tạo nhánh và review diff; giải quyết xung đột rồi chạy lại kiểm tra, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       },
       {
         "id": "embedded_software_engineer_q06",
@@ -1788,7 +2483,10 @@
           "Không nêu được quyết định hoặc bằng chứng kiểm chứng gắn với tình huống."
         ],
         "time_minutes": 4,
-        "reference_answer": "Tôi sẽ xác định framing, encoding, timeout và phản hồi lỗi; kiểm thử dữ liệu sai định dạng và mất kết nối, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận."
+        "reference_answer": "Tôi sẽ xác định framing, encoding, timeout và phản hồi lỗi; kiểm thử dữ liệu sai định dạng và mất kết nối, đồng thời xác định rõ đầu vào, đầu ra và xử lý trường hợp dữ liệu sai/thiếu hoặc phụ thuộc gặp lỗi. Tôi sẽ xác nhận bằng test phù hợp, kiểm tra log/truy vấn hoặc metric trước và sau thay đổi; nếu lỗi vượt phạm vi xử lý, giới hạn tác động và khôi phục phiên bản/trạng thái ổn định đã ghi nhận.",
+        "context_scenario": null,
+        "evaluation_rubric": {"level_1_criteria": null, "level_2_criteria": null, "level_3_criteria": null},
+        "provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
       }
     ]
   }

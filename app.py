@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import base64
+import hashlib
 import json
+import re
 from pathlib import Path
 from uuid import uuid4
 
@@ -14,15 +16,32 @@ from modules import (
     match_role,
     get_question_feedback,
     get_questions,
+    count_reviewed_questions,
+    question_bank_quality_summary,
+    question_quality_label,
+    POST_SUBMISSION_GUIDANCE_NOTICE,
+    STATIC_SELF_REVIEW_TITLE,
+    STATIC_SELF_REVIEW_NOTICE,
     compute_gap,
     suggest_roles,
     build_timed_roadmap,
-    score_answer,
 )
-from modules.catalog import DATA_DIR, load_roles
-from modules.profile import undo_profile_move
-from modules.submission import prepare_submission
+from modules.catalog import DATA_DIR, load_roles, load_skill_vocabulary
+from modules.matcher import (
+    LOW_CONFIDENCE_ROLE_MESSAGE,
+    LOW_SKILL_ROLE_SCORE_CAP,
+    compare_confirmed_jd_requirements,
+    extract_jd_skill_requirements,
+    role_recommendation_is_low_confidence,
+)
+from modules.interests import activity_label, load_interest_activities
+from modules.profile import build_profile, undo_profile_move
+from modules.skill_extractor import load_aliases, normalize_skill, suggest_skill_candidates
+from modules.submission import PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE, prepare_submission
 from modules.export import export_report
+from modules.practice_guidance import get_partial_resource_assignment
+from modules.resource_policy import has_granular_level_evidence, resource_level_gap, resource_review_label, skill_scope_caution, summarize_resource_reviews
+from modules.evidence_presentation import resource_evidence_badge, role_domain_notice
 
 
 PROJECT_DIR = Path(__file__).resolve().parent
@@ -44,6 +63,7 @@ SKILL_NAMES_VI = {
     "model evaluation": "Đánh giá mô hình",
     "report building": "Xây dựng báo cáo",
 }
+MAX_INTERVIEW_QUESTIONS = 10
 
 
 @st.cache_data(max_entries=1)
@@ -96,13 +116,26 @@ def display_skill(skill: str) -> str:
     return SKILL_NAMES_VI.get(skill.casefold(), skill)
 
 
-def _level_json_object(pairs):
-    result = {}
-    for key, value in pairs:
-        if key in result:
-            raise ValueError(f"Level trùng khóa JSON: {key}.")
-        result[key] = value
-    return result
+RESOURCE_REASON_LABELS: dict[str, str] = {
+    "no_resources": "Chưa có tài liệu được xác minh cho kỹ năng này.",
+    "unreviewed_content": "Chưa có tài liệu được review nội dung để đề xuất.",
+    "blocked_resource": "Các tài liệu hiện có chưa truy cập được.",
+    "unsuitable_content": "Các tài liệu đã xem chưa phù hợp với kỹ năng.",
+    "specialized_source_required": "Chưa có nguồn chuyên biệt, hiện hành và được review đúng chuyên môn để gợi ý an toàn.",
+    "missing_url": "Tài liệu chưa có liên kết web hợp lệ.",
+    "level_mismatch": "Chưa có tài liệu được review cho level cần học.",
+    "partial_content": "Tài liệu chỉ bao phủ một phần phạm vi kỹ năng.",
+    "scope_evidence_pending": "Chưa có dẫn chứng ở cấp bài học/mục cụ thể để xác nhận Level của tài liệu; lịch chỉ dùng để tham khảo.",
+    "unverified_link": "Liên kết chưa được xác minh.",
+    "missing_resource_identity": "Tài liệu chưa có ID hoặc liên kết để tham chiếu.",
+}
+INTERVIEW_SELF_REVIEW = (
+    ("answers_prompt", "Câu trả lời đi đúng vào từng phần mà câu hỏi yêu cầu."),
+    ("explains_reasoning", "Tôi giải thích vì sao chọn cách làm, không chỉ liệt kê thuật ngữ."),
+    ("fits_context", "Tôi gắn cách làm với bối cảnh/tình huống cụ thể trong câu hỏi."),
+    ("gives_evidence", "Tôi nêu hành động hoặc bằng chứng kiểm chứng phù hợp (test, log, truy vấn, chỉ số, ví dụ)."),
+    ("states_outcome", "Tôi nói rõ kết quả, giới hạn hoặc điều sẽ làm khác đi nếu có."),
+)
 
 
 def inject_styles() -> None:
@@ -180,103 +213,331 @@ def render_toolkit() -> None:
         if demo and demo["role_id"] in role_by_id:
             values = demo["profile"]
             st.session_state["skills_input"] = "; ".join(values["skills"])
-            st.session_state["levels_input"] = json.dumps(values["levels"], ensure_ascii=False)
             st.session_state["interests_input"] = "; ".join(values["interests"])
+            st.session_state["interest_activity_input"] = []
             st.session_state["experience_input"] = values["experience"]
             st.session_state["career_role_picker"] = demo["role_id"]
             st.session_state["job_description_input"] = ""
             st.session_state.pop("uploaded_cv_input", None)
             candidate = prepare_submission(values, None)
             if candidate["accepted"]:
-                for key in list(st.session_state):
-                    if key.startswith(("keep_unknown_", "undo_move_", "answer_", "interview_", "start_interview_")):
-                        del st.session_state[key]
-                st.session_state.update({
-                    "career_role_id": demo["role_id"],
-                    "profile_result": candidate["profile"],
-                    "profile_original_interests": candidate["original_interests"],
-                    "profile_revision": st.session_state.get("profile_revision", 0) + 1,
-                    "cv_jd_result": None,
-                    "cv_extraction": None,
-                    "submission_errors": [],
-                    "submission_rejected": False,
-                    "submission_notice": f"Đã nạp hồ sơ tổng hợp “{demo['label']}”. {demo['notice']}",
-                    "active_demo_profile_id": demo["id"],
-                })
+                st.session_state["profile_draft"] = {
+                    "id": uuid4().hex[:10], "profile": candidate["profile"],
+                    "cv_extraction": None, "document": candidate["document"],
+                    "jd_text": "", "jd_skill_options": [], "jd_error": None,
+                    "role_id": demo["role_id"], "demo_id": demo["id"], "warnings": [],
+                    "demo_label": demo["label"], "demo_notice": demo["notice"],
+                }
+                st.session_state["profile_step"] = 2
+                st.session_state["wizard_errors"] = []
 
     pending_role = st.session_state.pop("pending_career_role", None)
     if pending_role in role_by_id:
         st.session_state["career_role_picker"] = pending_role
 
-    with st.container(border=True):
-        st.subheader("Dùng hồ sơ mẫu tổng hợp")
-        st.caption("Ví dụ dùng role/skill thật trong catalog; không đại diện người thật, kinh nghiệm thật hay kết quả tuyển dụng.")
-        cols = st.columns(3)
-        for col, demo in zip(cols, load_demo_profiles()):
-            col.button(
-                f"Dùng hồ sơ mẫu · {demo['label']}",
-                key=f"use_demo_{demo['id']}",
-                on_click=lambda demo_id=demo["id"]: st.session_state.update({"pending_demo_profile_id": demo_id}),
-            )
+    if st.session_state.get("profile_step", 1) == 1:
+        with st.container(border=True):
+            st.subheader("Dùng hồ sơ mẫu tổng hợp")
+            st.caption("Ví dụ dùng role/skill thật trong catalog; không đại diện người thật, kinh nghiệm thật hay kết quả tuyển dụng.")
+            cols = st.columns(3)
+            for col, demo in zip(cols, load_demo_profiles()):
+                col.button(
+                    f"Dùng hồ sơ mẫu · {demo['label']}",
+                    key=f"use_demo_{demo['id']}",
+                    on_click=lambda demo_id=demo["id"]: st.session_state.update({"pending_demo_profile_id": demo_id}),
+                )
 
-    with st.form("profile_form"):
-        skills_text = st.text_area("Kỹ năng", placeholder="Python, SQL, phân tích dữ liệu", key="skills_input")
-        st.caption("Ngăn cách các kỹ năng bằng dấu phẩy, dấu chấm phẩy hoặc xuống dòng.")
-        levels_text = st.text_area(
-            "Level tự khai báo (JSON, không bắt buộc)",
-            placeholder='{"Python": 2, "SQL": 1}',
-            help="0: chưa có; 1: cơ bản cần hướng dẫn; 2: độc lập tác vụ quen; 3: tác vụ phức tạp. Không suy level từ CV.",
-            key="levels_input",
-        )
-        interests_text = st.text_area("Sở thích nghề nghiệp", placeholder="Phân tích dữ liệu, thiết kế sản phẩm", key="interests_input")
-        experience_text = st.text_area("Kinh nghiệm", placeholder="Mô tả ngắn về kinh nghiệm của bạn", key="experience_input")
-        selected_role_id = st.selectbox(
-            "Vị trí công việc bạn quan tâm", list(role_by_id),
-            format_func=lambda value: format_role(role_by_id[value]), index=None,
-            placeholder="Chọn vị trí để xem gợi ý (không bắt buộc)", key="career_role_picker",
-        )
-        uploaded_cv = st.file_uploader(
-            "Tải CV định dạng PDF hoặc DOCX (không bắt buộc)", type=["pdf", "docx"],
-            help="PDF cần có lớp văn bản; PDF scan dạng ảnh chưa được OCR.", key="uploaded_cv_input",
-        )
-        job_description = st.text_area("Mô tả công việc cần đối chiếu (không bắt buộc)", key="job_description_input")
-        submitted = st.form_submit_button("Tạo hồ sơ nghề nghiệp")
-    if submitted:
-        try:
-            levels = json.loads(levels_text, object_pairs_hook=_level_json_object) if levels_text.strip() else {}
-            candidate = prepare_submission(
-                {"skills": skills_text, "interests": interests_text, "experience": experience_text, "levels": levels},
-                uploaded_cv, jd_text=job_description,
+        st.markdown("### Bước 1/2 · Tạo hoặc nạp hồ sơ")
+        st.caption("Bắt đầu: cần ít nhất kỹ năng hoặc tệp CV hợp lệ (*). Sở thích và kinh nghiệm là thông tin bổ trợ giúp định hướng sâu hơn. JD là tùy chọn.")
+        with st.form("profile_form"):
+            skills_text = st.text_area("Kỹ năng bạn muốn đưa vào hồ sơ (*)", placeholder="Python, SQL, phân tích dữ liệu", key="skills_input")
+            st.caption("Ngăn cách các kỹ năng bằng dấu phẩy, dấu chấm phẩy hoặc xuống dòng.")
+            interests_text = st.text_area("Sở thích nghề nghiệp", placeholder="Phân tích dữ liệu, thiết kế sản phẩm", key="interests_input")
+            activity_ids = [activity["id"] for activity in load_interest_activities()]
+            selected_activity_ids = st.multiselect(
+                "Hoạt động nghề nghiệp yêu thích (tùy chọn)",
+                options=activity_ids,
+                format_func=activity_label,
+                key="interest_activity_input",
+                help="Có thể chọn 2–4 hoạt động để gợi ý có cấu trúc hơn. Đây là định hướng heuristic, không phải bài trắc nghiệm tâm lý chuẩn hóa.",
             )
-        except (ValueError, TypeError) as exc:
-            candidate = {"accepted": False, "errors": [f"Level chưa hợp lệ: {exc}"]}
-        st.session_state["submission_errors"] = candidate["errors"]
-        st.session_state["submission_rejected"] = not candidate["accepted"]
-        if candidate["accepted"]:
-            for key in list(st.session_state):
-                if key.startswith(("keep_unknown_", "undo_move_", "answer_", "interview_", "start_interview_")):
-                    del st.session_state[key]
-            st.session_state.update({
-                "career_role_id": selected_role_id,
-                "profile_result": candidate["profile"],
-                "profile_original_interests": candidate["original_interests"],
-                "profile_revision": st.session_state.get("profile_revision", 0) + 1,
-                "cv_jd_result": candidate["cv_jd_result"],
-                "cv_extraction": candidate["cv_extraction"],
-                "submission_notice": "Hồ sơ đã được cập nhật. Kết quả bên dưới phản ánh lần gửi này.",
-                "active_demo_profile_id": None,
-            })
-    for error in st.session_state.get("submission_errors", []):
-        st.error(error)
+            experience_text = st.text_area("Kinh nghiệm (không bắt buộc)", placeholder="Mô tả ngắn về kinh nghiệm của bạn", key="experience_input")
+            pasted_cv_text = st.text_area(
+                "Dán nội dung CV (nếu không tải tệp, không bắt buộc)",
+                placeholder="Dán phần kinh nghiệm, dự án và kỹ năng từ CV. Kỹ năng nhận diện sẽ được đưa sang bước rà soát.",
+                height=160,
+                key="pasted_cv_input",
+            )
+            selected_role_id = st.selectbox(
+                "Vị trí công việc bạn quan tâm", list(role_by_id),
+                format_func=lambda value: format_role(role_by_id[value]), index=None,
+                placeholder="Chọn vị trí để xem gợi ý (không bắt buộc)", key="career_role_picker",
+            )
+            uploaded_cv = st.file_uploader(
+                "Tải CV định dạng PDF hoặc DOCX (*)", type=["pdf", "docx"],
+                help="PDF cần có lớp văn bản; tối đa 10 trang được đọc. Phần vượt trang giới hạn không được phân tích.", key="uploaded_cv_input",
+            )
+            st.caption("🔒 Quyền riêng tư: CV được xử lý trong phiên Streamlit local để trích xuất kỹ năng; ứng dụng không ghi CV thành tệp dự án và không gửi tới API bên ngoài. Kết quả không được lưu để khôi phục sau khi tải lại trang.")
+            job_description = st.text_area("Mô tả công việc cần đối chiếu (không bắt buộc)", key="job_description_input")
+            submitted = st.form_submit_button("Tiếp tục rà soát hồ sơ")
+        if submitted:
+            if len(selected_activity_ids) > 4:
+                st.session_state["wizard_errors"] = ["Hãy chọn tối đa 4 hoạt động nghề nghiệp yêu thích."]
+                candidate = {"accepted": False, "errors": st.session_state["wizard_errors"]}
+            else:
+                candidate = prepare_submission(
+                    {
+                        "skills": skills_text,
+                        "interests": interests_text,
+                        "interest_activity_ids": selected_activity_ids,
+                        "experience": experience_text,
+                    },
+                    uploaded_cv,
+                    pasted_cv_text=pasted_cv_text,
+                )
+            st.session_state["wizard_errors"] = candidate.get("errors", [])
+            jd_requirements = {"all_skills": [], "must_have": [], "nice_to_have": [], "unclassified": []}
+            jd_error = None
+            if job_description.strip():
+                try:
+                    jd_requirements = extract_jd_skill_requirements(job_description)
+                except ValueError as exc:
+                    jd_error = str(exc)
+            if candidate["accepted"]:
+                st.session_state["profile_draft"] = {
+                    "id": uuid4().hex[:10], "profile": candidate["profile"],
+                    "cv_extraction": candidate["cv_extraction"], "document": candidate["document"],
+                    "jd_text": job_description,
+                    "jd_skill_options": jd_requirements["all_skills"],
+                    "jd_skill_requirements": jd_requirements,
+                    "jd_error": jd_error,
+                    "role_id": selected_role_id, "demo_id": None,
+                    "warnings": list(candidate["errors"]),
+                }
+                st.session_state["profile_step"] = 2
+                st.rerun()
+            else:
+                st.session_state["submission_rejected"] = bool(st.session_state.get("profile_result"))
+        for error in st.session_state.get("wizard_errors", []):
+            st.error(error)
+    else:
+        draft = st.session_state.get("profile_draft")
+        if not draft:
+            st.session_state["profile_step"] = 1
+            st.rerun()
+        st.markdown("### Bước 2/2 · Rà soát kỹ năng và Level")
+        st.caption("Kỹ năng nhận diện từ CV và kinh nghiệm chỉ được dùng sau khi bạn xác nhận. Level không được suy ra tự động từ CV hay kinh nghiệm.")
+        for error in st.session_state.get("wizard_errors", []):
+            st.warning(error)
+        document = draft.get("document", {})
+        if document.get("page_truncated"):
+            st.warning(f"PDF có {document['total_pages']} trang; ứng dụng chỉ trích xuất {document['pages_read']} trang đầu. Phần còn lại chưa được phân tích.")
+        if draft.get("jd_error"):
+            st.warning(draft["jd_error"] + " Có thể tiếp tục hồ sơ mà không đối chiếu JD.")
+
+        original_profile = draft["profile"]
+        initial_skills = original_profile.get("skills", [])
+        options = sorted(load_skill_vocabulary() | set(initial_skills))
+        initial_levels = original_profile.get("levels", {})
+        level_labels = {
+            None: "Chưa khai báo",
+            0: "0 · Chưa biết kỹ năng",
+            1: "1 · Cơ bản, cần hướng dẫn",
+            2: "2 · Tự làm tác vụ quen thuộc",
+            3: "3 · Xử lý việc phức tạp / hướng dẫn người khác",
+        }
+        unknown_count = len(original_profile.get("unrecognized_skills", []))
+        catalog_count = max(0, len(initial_skills) - unknown_count)
+        st.info(
+            f"📊 Hồ sơ có **{len(initial_skills)}** kỹ năng · **{catalog_count}** khớp catalog · "
+            f"**{unknown_count}** tên cần bạn rà soát."
+        )
+        aliases = load_aliases(DATA_DIR / "skill_aliases.json")
+        # This input must rerun independently so newly added skills receive
+        # their own level and spelling controls before the review form submits.
+        new_skills_text = st.text_area(
+            "Thêm hoặc sửa tên kỹ năng khác (không bắt buộc)",
+            placeholder="Ví dụ: công cụ nội bộ, kỹ năng chuyên ngành",
+            key=f"review_new_skills_{draft['id']}",
+        )
+        custom_by_key = {}
+        for part in re.split(r"[,;\n]+", new_skills_text):
+            if part.strip():
+                normalized = normalize_skill(part)
+                custom_by_key.setdefault(aliases.get(normalized, normalized), part.strip())
+        custom_skills = list(custom_by_key.values())
+        st.caption("Nhập kỹ năng mới rồi rời ô nhập để chọn Level trước khi xác nhận.")
+        with st.form(f"profile_review_{draft['id']}"):
+            selected_skills = st.multiselect(
+                "Kỹ năng nhận diện · bỏ chọn mục không đúng với bạn",
+                options=options, default=initial_skills, format_func=display_skill,
+                key=f"review_skills_{draft['id']}",
+            )
+            vocabulary = load_skill_vocabulary()
+            suggestion_targets = {}
+            candidate_by_key = {}
+            for skill in [*original_profile.get("unrecognized_skills", []), *custom_skills]:
+                candidate_by_key.setdefault(normalize_skill(skill), skill)
+            review_candidates = list(candidate_by_key.values())
+            for unknown in review_candidates:
+                candidates = suggest_skill_candidates(unknown, vocabulary, aliases)
+                if candidates:
+                    value = st.selectbox(
+                        f"Tên gần giống với ‘{unknown}’ (tùy chọn)",
+                        options=[None, *candidates],
+                        format_func=lambda item: "Giữ nguyên tên" if item is None else display_skill(item),
+                        key=f"skill_suggestion_{draft['id']}_{hashlib.sha256(unknown.casefold().encode('utf-8')).hexdigest()[:12]}",
+                    )
+                    if value is not None:
+                        suggestion_targets[normalize_skill(unknown)] = value
+            level_values = {}
+            level_skills_by_key = {}
+            for skill in [*selected_skills, *custom_skills]:
+                normalized = normalize_skill(skill)
+                level_skills_by_key.setdefault(aliases.get(normalized, normalized), skill)
+            for skill in level_skills_by_key.values():
+                existing = initial_levels.get(skill)
+                skill_key = hashlib.sha256(skill.casefold().encode("utf-8")).hexdigest()[:12]
+                level_values[skill] = st.selectbox(
+                    f"Level · {display_skill(skill)}", [None, 0, 1, 2, 3],
+                    index=[None, 0, 1, 2, 3].index(existing) if existing in (0, 1, 2, 3) else 0,
+                    format_func=lambda value: level_labels[value],
+                    key=f"review_level_{draft['id']}_{skill_key}",
+                )
+            confirmed_jd_categories = {"must_have": [], "nice_to_have": [], "unclassified": []}
+            if draft.get("jd_text") and draft.get("jd_skill_options"):
+                st.markdown("#### Phân loại kỹ năng nhận diện từ JD")
+                st.caption(
+                    f"Nhận diện {len(draft['jd_skill_options'])} kỹ năng theo catalog. "
+                    "Bạn có thể chuyển kỹ năng giữa các nhóm; kỹ năng chưa phân loại không ảnh hưởng điểm tổng hợp."
+                )
+                if len(draft["jd_skill_options"]) < 3:
+                    st.warning("JD có ít hơn 3 kỹ năng nhận diện; hãy xem kết quả như phạm vi đầu vào hẹp.")
+                parsed_groups = draft.get("jd_skill_requirements", {})
+                group_labels = {
+                    "must_have": "Kỹ năng JD bắt buộc",
+                    "nice_to_have": "Kỹ năng JD ưu tiên / điểm cộng",
+                    "unclassified": "Kỹ năng JD chưa phân loại · không tính điểm tổng hợp",
+                }
+                for kind, label in group_labels.items():
+                    confirmed_jd_categories[kind] = st.multiselect(
+                        label,
+                        options=draft["jd_skill_options"],
+                        default=parsed_groups.get(kind, []),
+                        format_func=display_skill,
+                        key=f"review_jd_{kind}_{draft['id']}",
+                    )
+            confirm = st.form_submit_button("Xác nhận hồ sơ và xem kết quả")
+
+        back_col, _ = st.columns([1, 4])
+        if back_col.button("Quay lại chỉnh đầu vào", key=f"back_profile_{draft['id']}"):
+            st.session_state["profile_step"] = 1
+            st.rerun()
+
+        if confirm:
+            try:
+                confirmed_skills = [suggestion_targets.get(normalize_skill(skill), skill) for skill in selected_skills]
+                confirmed_skills.extend(suggestion_targets.get(normalize_skill(skill), skill) for skill in custom_skills)
+                confirmed_levels = {
+                    suggestion_targets.get(normalize_skill(key), key): value for key, value in level_values.items()
+                    if value is not None
+                }
+                profile = build_profile({
+                    "skills": confirmed_skills,
+                    "interests": original_profile.get("interests", []),
+                    "interest_activity_ids": original_profile.get("interest_activity_ids", []),
+                    "experience": original_profile.get("experience", ""),
+                    "levels": confirmed_levels,
+                })
+                if not profile["skills"]:
+                    raise ValueError(PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE)
+                profile["moved"] = list(original_profile.get("moved", []))
+                confirmed_set = set(profile["skills"])
+                profile["skills_from_cv"] = [
+                    skill for skill in original_profile.get("skills_from_cv", []) if skill in confirmed_set
+                ]
+                profile["skills_from_experience"] = [
+                    skill for skill in original_profile.get("skills_from_experience", []) if skill in confirmed_set
+                ]
+                jd_result = None
+                if any(confirmed_jd_categories.values()):
+                    candidate_skills = [skill for skill in profile["skills"] if skill not in profile["unrecognized_skills"]]
+                    jd_result = compare_confirmed_jd_requirements(
+                        candidate_skills,
+                        confirmed_jd_categories["must_have"],
+                        confirmed_jd_categories["nice_to_have"],
+                        confirmed_jd_categories["unclassified"],
+                    )
+            except (TypeError, ValueError) as exc:
+                if str(exc) == PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE:
+                    st.error(f"❌ {exc}")
+                    st.info(
+                        "💡 Cách xử lý: Hãy tích chọn lại ít nhất 1 kỹ năng ở danh sách phía trên, "
+                        "hoặc thêm kỹ năng mới vào ô bên dưới rồi bấm xác nhận lại."
+                    )
+                else:
+                    st.error(f"Không thể xác nhận hồ sơ: {exc}")
+            else:
+                submission_warnings = list(draft.get("warnings", []))
+                if draft.get("jd_error"):
+                    submission_warnings.append(
+                        draft["jd_error"] + " Có thể tiếp tục hồ sơ mà không đối chiếu JD."
+                    )
+                elif draft.get("jd_text") and draft.get("jd_skill_options") and not any(confirmed_jd_categories.values()):
+                    submission_warnings.append(
+                        "Chưa xác nhận kỹ năng nào từ JD; hồ sơ vẫn được lưu nhưng chưa có kết quả đối chiếu."
+                    )
+                if draft.get("document", {}).get("page_truncated"):
+                    document = draft["document"]
+                    submission_warnings.append(
+                        f"PDF có {document['total_pages']} trang; ứng dụng chỉ trích xuất "
+                        f"{document['pages_read']} trang đầu. Phần còn lại chưa được phân tích."
+                    )
+                for key in list(st.session_state):
+                    if isinstance(key, str) and key.startswith(("keep_unknown_", "undo_move_", "answer_", "interview_", "start_interview_", "self_review_")):
+                        del st.session_state[key]
+                st.session_state.update({
+                    "career_role_id": draft.get("role_id"),
+                    "profile_result": profile,
+                    "profile_original_interests": list(original_profile.get("interests", [])),
+                    "profile_revision": st.session_state.get("profile_revision", 0) + 1,
+                    "cv_jd_result": jd_result,
+                    "cv_extraction": draft.get("cv_extraction"),
+                    "jd_provided": bool(draft.get("jd_text")),
+                    "submission_errors": [],
+                    "submission_rejected": False,
+                    "submission_warnings": submission_warnings,
+                    "submission_notice": (
+                        f"Đã nạp hồ sơ tổng hợp “{draft['demo_label']}”. {draft['demo_notice']}"
+                        if draft.get("demo_id") else "Hồ sơ đã được xác nhận. Kết quả phản ánh kỹ năng và Level bạn đã chọn."
+                    ),
+                    "active_demo_profile_id": draft.get("demo_id"),
+                    "profile_step": 1,
+                })
+                st.session_state.pop("profile_draft", None)
+                st.session_state.pop("wizard_errors", None)
+                st.rerun()
+
+    if st.session_state.get("profile_step", 1) == 2:
+        return
     profile = st.session_state.get("profile_result")
     if not profile:
         return
+    if st.button("Xóa hồ sơ phiên này và bắt đầu lại", key="clear_local_profile"):
+        for key in list(st.session_state):
+            del st.session_state[key]
+        st.rerun()
     if st.session_state.get("submission_rejected"):
         st.warning("Lần gửi mới chưa hợp lệ. Đang giữ hồ sơ đã lưu trước đó.")
+    for warning in st.session_state.get("submission_warnings", []):
+        st.warning(warning)
     if st.session_state.get("submission_notice"):
         st.success(st.session_state["submission_notice"])
 
     revision = st.session_state.get("profile_revision", 0)
+    domain_notice = role_domain_notice(st.session_state.get("career_role_id", ""))
+    if domain_notice:
+        st.warning(domain_notice)
     tabs = st.tabs(RESULT_TABS)
     cv_jd = st.session_state.get("cv_jd_result")
     cv_extraction = st.session_state.get("cv_extraction")
@@ -293,13 +554,34 @@ def render_toolkit() -> None:
         if st.session_state.get("active_demo_profile_id"):
             st.info("Hồ sơ tổng hợp minh họa · không phải hồ sơ của người thật.")
         if cv_jd:
-            st.metric("Mức độ phù hợp giữa CV và mô tả công việc", f"{cv_jd['percent']}%")
-            st.caption("Tỷ lệ kỹ năng nhận diện trong JD có trong CV; không đánh giá mức độ thành thạo.")
-            st.write("**Kỹ năng CV khớp JD:**", ", ".join(display_skill(s) for s in cv_jd["matched"]) or "Chưa có")
-            st.write("**Kỹ năng JD còn thiếu trong CV:**", ", ".join(display_skill(s) for s in cv_jd["missing"]) or "Không có")
+            metric_columns = st.columns(3)
+            metric_specs = (
+                ("must_have", "Bao phủ kỹ năng bắt buộc"),
+                ("nice_to_have", "Bao phủ kỹ năng ưu tiên"),
+                ("unclassified", "Trùng kỹ năng chưa phân loại"),
+            )
+            for column, (kind, label) in zip(metric_columns, metric_specs):
+                category = cv_jd[kind]
+                value = f"{category['percent']}%" if category["percent"] is not None else "—"
+                column.metric(label, value, delta=f"{len(category['matched'])}/{category['count']} kỹ năng")
+            if cv_jd["overall_percent"] is not None:
+                st.metric("Chỉ số bao phủ JD tổng hợp · heuristic 85/15", f"{cv_jd['overall_percent']}%")
+                st.caption("Chỉ số chỉ tính nhóm bắt buộc và ưu tiên đã xác nhận (85%/15%); nhóm chưa phân loại được hiển thị riêng. Đây không phải đánh giá đủ điều kiện ứng tuyển, năng lực thực tế hay xác suất được tuyển.")
+            else:
+                st.info("Chưa có kỹ năng nào được xác nhận là bắt buộc; ứng dụng không tạo điểm tổng hợp. Kỹ năng chưa phân loại vẫn được đối chiếu riêng.")
+            st.caption(f"Đối chiếu theo kỹ năng trong catalog do người dùng xác nhận; không đánh giá level hoặc năng lực thực tế. Số kỹ năng JD đã phân loại: {cv_jd.get('recognized_count', len(cv_jd['jd_skills']))}.")
+            if cv_jd.get("low_confidence"):
+                st.warning("Có dưới 3 kỹ năng bắt buộc được xác nhận; chỉ số tổng hợp có phạm vi đầu vào hẹp.")
+            for kind, label in metric_specs:
+                category = cv_jd[kind]
+                st.write(f"**{label} khớp hồ sơ:**", ", ".join(display_skill(s) for s in category["matched"]) or "Chưa có")
+                st.write(f"**{label} chưa có trong hồ sơ:**", ", ".join(display_skill(s) for s in category["missing"]) or "Không có")
         if cv_extraction:
             if not cv_jd:
-                st.info("Đã gộp kỹ năng nhận diện từ CV vào hồ sơ. Thêm JD để đối chiếu.")
+                if st.session_state.get("jd_provided"):
+                    st.info("Đã gộp kỹ năng nhận diện từ CV vào hồ sơ; lần gửi này chưa tạo được kết quả đối chiếu JD.")
+                else:
+                    st.info("Đã gộp kỹ năng nhận diện từ CV vào hồ sơ. Thêm JD để đối chiếu.")
             with st.expander(f"Văn bản đã trích xuất · {cv_extraction['filename']}"):
                 st.caption(f"{len(cv_extraction['text']):,} ký tự")
                 st.text_area("Nội dung CV", value=cv_extraction["text"], height=260, disabled=True, label_visibility="collapsed")
@@ -314,7 +596,7 @@ def render_toolkit() -> None:
         retained = []
         if profile["unrecognized_skills"]:
             st.subheader("Kỹ năng chưa nhận diện được")
-            st.caption("Chọn kỹ năng muốn giữ lại trong hồ sơ.")
+            st.caption("Chọn kỹ năng muốn giữ lại trong hồ sơ. Tên chưa nhận diện không được tính vào điểm đối chiếu hoặc học liệu gợi ý.")
             for skill in profile["unrecognized_skills"]:
                 if st.checkbox(f"Giữ ‘{skill}’ trong hồ sơ", value=True, key=f"keep_unknown_{revision}_{skill}"):
                     retained.append(skill)
@@ -324,12 +606,43 @@ def render_toolkit() -> None:
         ]
         st.subheader("Hồ sơ của bạn")
         st.write("**Kỹ năng:**", ", ".join(display_skill(s) for s in effective_skills) or "Chưa có thông tin")
+        if profile.get("skills_from_cv"):
+            st.caption("Kỹ năng trích từ CV và đã xác nhận: " + ", ".join(display_skill(s) for s in profile["skills_from_cv"]))
+        if profile.get("skills_from_experience"):
+            st.caption("Kỹ năng trích từ kinh nghiệm và đã xác nhận: " + ", ".join(display_skill(s) for s in profile["skills_from_experience"]))
+        elif profile.get("experience"):
+            st.caption("Kinh nghiệm được lưu để tham khảo; hệ thống chỉ dùng kỹ năng trong đó khi nhận diện được và bạn xác nhận, không chấm số năm hay thâm niên.")
         st.write("**Sở thích:**", ", ".join(profile["interests"]) or "Chưa có thông tin")
+        if profile.get("interest_activity_ids"):
+            st.write(
+                "**Hoạt động nghề nghiệp đã chọn:**",
+                ", ".join(activity_label(value) for value in profile["interest_activity_ids"]),
+            )
         st.write("**Kinh nghiệm:**", profile["experience"] or "Chưa có thông tin")
         st.write("**Level đã khai báo:**", profile.get("levels", {}) or "Chưa khai báo; không suy từ CV")
         st.subheader("Vị trí gợi ý từ hồ sơ")
+        with st.expander("Cách đọc và hiểu đúng điểm số gợi ý"):
+            st.markdown(
+                "- **Skill fit:** Tỷ lệ bao phủ kỹ năng yêu cầu của nghề, có tính trọng số đặc thù Role-IDF.\n"
+                "- **Interest fit:** Độ tương đồng giữa sở thích nghề nghiệp và hồ sơ RIASEC sáu chiều của họ nghề.\n"
+                "- **Điểm gợi ý:** Kết hợp 75% skill fit và 25% interest fit; nếu skill fit dưới 15%, điểm bị giới hạn tối đa 5/100.\n"
+                "- *Lưu ý:* Đây là định hướng heuristic, không phải xác suất tuyển dụng thực tế hoặc kết luận về năng lực."
+            )
         st.caption("Điểm heuristic theo kỹ năng/sở thích; không là xác suất tuyển dụng hay đánh giá level.")
+        if profile.get("unrecognized_skills"):
+            st.warning(
+                "⚠️ Có kỹ năng bạn nhập chưa thuộc catalog nên chưa được tính vào điểm khớp. "
+                "Hãy dùng tên kỹ năng chuẩn trong biểu mẫu hồ sơ phía trên để hệ thống đối chiếu chính xác hơn."
+            )
         suggestions = suggest_roles({**profile, "skills": effective_skills})
+        if role_recommendation_is_low_confidence({"skills": effective_skills}):
+            st.warning(LOW_CONFIDENCE_ROLE_MESSAGE)
+        if not effective_skills and (profile.get("interests") or profile.get("interest_activity_ids")):
+            st.info(
+                "Chỉ có sở thích được ánh xạ; gợi ý bị giới hạn tối đa "
+                f"{100 * LOW_SKILL_ROLE_SCORE_CAP:.0f}/100 vì chưa có kỹ năng trùng. "
+                "Điểm này không phản ánh mức đáp ứng kỹ năng."
+            )
         if not suggestions:
             st.caption("Chưa có tín hiệu khớp catalog để xếp hạng vị trí.")
         for item in suggestions:
@@ -345,9 +658,9 @@ def render_toolkit() -> None:
     has_signal = bool(effective_skills or profile.get("levels"))
     if position is None or not has_signal:
         gap_message = "Hãy chọn vị trí để xem khoảng cách." if position is None else "Chưa có kỹ năng để đối chiếu. Hãy bổ sung kỹ năng vào form hoặc CV."
-        for tab, label in zip(tabs[1:], ["Khoảng cách", "Lộ trình", "Tài liệu", "Phỏng vấn"]):
+        for tab in tabs[1:]:
             with tab:
-                st.info(gap_message if label == "Khoảng cách" or not effective_skills else "Chưa có dữ liệu cho mục này.")
+                st.info(gap_message)
         if position:
             with tabs[3]:
                 exported_profile = {**profile, "role_id": position["id"]}
@@ -356,6 +669,7 @@ def render_toolkit() -> None:
         return
 
     role = position
+    target_levels = {normalize_skill(item["name"]): item["level"] for item in role["skills"]}
     mode_key = f"assessment_mode_{revision}"
     selected_mode = st.session_state.get(mode_key, "Theo kỹ năng đã có")
     if st.session_state.get("assessment_snapshot") != (revision, selected_mode, role["id"]):
@@ -385,7 +699,7 @@ def render_toolkit() -> None:
         else:
             st.metric("Mức độ đáp ứng kỹ năng vị trí", f"{presence['percent']}%")
             st.progress(presence["percent"] / 100, text="Presence score · kỹ năng nhận diện theo trọng số role")
-            st.caption("Không đánh giá level hoặc xác suất tuyển dụng.")
+            st.caption("Chỉ tính kỹ năng đã xác nhận, gồm mục trích từ CV/kinh nghiệm; không tính sở thích, thâm niên hay xác suất tuyển dụng.")
             st.write("**Kỹ năng khớp vị trí:**", ", ".join(display_skill(s) for s in presence["matched"]) or "Chưa có")
             st.write("**Kỹ năng còn thiếu:**", ", ".join(display_skill(s) for s in presence["missing"]) or "Không có")
         st.caption("Điểm gợi ý role được tính riêng bằng heuristic.")
@@ -395,26 +709,38 @@ def render_toolkit() -> None:
             if gap_result is not None:
                 budget = st.number_input("Ngân sách giờ học mỗi tuần", min_value=0.5, max_value=40.0, value=8.0, step=0.5, key=f"study_budget_{revision}")
                 timed_result = build_timed_roadmap(gap_result, load_resources(), hours_per_week=budget)
-                render_timed_roadmap(timed_result)
+                render_timed_roadmap(timed_result, role_context=format_role(role), target_levels=target_levels)
             else:
                 st.info("Xác nhận quy ước level chưa khai báo ở tab Khoảng cách để xem lộ trình.")
         elif presence["missing"]:
             weekly_roadmap = build_roadmap(presence["missing"], load_resources(), missing_details=presence["missing_details"])
-            render_roadmap(weekly_roadmap)
+            render_roadmap(weekly_roadmap, role_context=format_role(role), target_levels=target_levels)
         else:
             st.success("Hồ sơ của bạn đã có đủ các kỹ năng được liệt kê cho vị trí này.")
 
     with tabs[3]:
         st.subheader("Tài liệu được tham chiếu")
+        _render_resource_quality_disclosure(load_resources())
         if timed_result is not None:
             for key, item in timed_result["resources"].items():
                 st.markdown(f"[{item.get('title', 'Tài liệu học tập')}]({item.get('url', '')})")
                 st.caption(f"{', '.join(item.get('skills', []))} · {item.get('duration_kind', 'unknown')} · {key}")
+                _render_resource_level_scope(item, target_levels, warn_gap=False)
                 evidence = item.get("duration_evidence", {})
                 if evidence.get("source"):
                     st.caption(f"Nguồn thời lượng: {evidence['source']}")
                 if item.get("review_note"):
                     st.caption(item["review_note"])
+                if item.get("duration_issue") == "conflicting_duration":
+                    st.warning("Các nguồn công bố thời lượng mâu thuẫn; thời lượng không được cộng vào lịch.")
+                _render_partial_practice_assignments(
+                    item.get("skills", []), item, role_context=format_role(role),
+                    resources=load_resources(),
+                )
+                for skill in item.get("skills", []):
+                    caution = skill_scope_caution(skill)
+                    if caution:
+                        st.warning(caution)
                 if item.get("access_note"):
                     st.caption(item["access_note"])
             if timed_result["unknown_duration"] or timed_result["unresolved"]:
@@ -429,11 +755,27 @@ def render_toolkit() -> None:
                             continue
                         seen.add(key)
                         item = catalog[key]
-                        first_week = next(w["week"] for w in weekly_roadmap if any(r["key"] == key for r in w["resources"]))
+                        first_phase = next(w["week"] for w in weekly_roadmap if any(r["key"] == key for r in w["resources"]))
                         st.markdown(f"[{item.get('title', 'Tài liệu học tập')}]({item.get('url', '')}) · {', '.join(item.get('skills', []))}")
-                        st.caption(f"Giới thiệu lần đầu ở tuần {first_week}.")
+                        st.caption(f"Giới thiệu lần đầu ở giai đoạn {first_phase}; đây không phải lịch theo tuần.")
+                        _render_resource_level_scope(item, target_levels)
+                        status = item.get("content_review_status", "unreviewed")
+                        st.caption("Trạng thái nội dung: " + resource_review_label(status))
+                        review_note = item.get("review_note")
+                        if status == "partial" and isinstance(review_note, str) and review_note.strip():
+                            st.warning("Phạm vi review một phần: " + review_note)
+                            _render_partial_practice_assignments(
+                                item.get("skills", []), item, role_context=format_role(role),
+                                resources=load_resources(),
+                            )
+                        for skill in item.get("skills", []):
+                            caution = skill_scope_caution(skill)
+                            if caution:
+                                st.warning(caution)
+                        if item.get("access_note"):
+                            st.caption(item["access_note"])
             if any(w["skills_without_resources"] for w in weekly_roadmap):
-                st.warning("Một số kỹ năng chưa có tài liệu.")
+                st.warning("Một số kỹ năng chưa có tài liệu đủ điều kiện đề xuất; xem lý do trong tab Lộ trình.")
         else:
             st.info("Chưa có tài liệu để xuất.")
         exported_profile = {**profile, "role_id": role["id"]}
@@ -443,18 +785,27 @@ def render_toolkit() -> None:
                            "bao-cao-ho-so.csv", "text/csv")
 
     with tabs[4]:
-        st.caption("Phỏng vấn theo gap hiện tại; rubric chưa có sẽ ghi rõ chưa chấm.")
+        st.caption("Phỏng vấn ưu tiên kỹ năng còn thiếu; hệ thống chỉ hiển thị hướng dẫn sau khi bạn gửi câu trả lời.")
         focus = gap_result["missing"] if gap_result is not None else presence["missing"]
         render_interview_practice(role, focus_skills=focus, assessment="levels" if gap_result is not None else "presence")
 
 
-def render_timed_roadmap(roadmap: dict) -> None:
+def render_timed_roadmap(roadmap: dict, *, role_context: str | None = None, target_levels: dict[str, int] | None = None) -> None:
     st.subheader("Lộ trình theo giờ")
     st.caption("Hoàn thành tài liệu không chứng nhận đạt level.")
     st.metric("Tổng giờ công bố đã chọn", f"{roadmap['total_known_hours']:.2f}")
     st.metric("Giờ ước lượng biên tập", f"{roadmap['total_estimated_hours']:.2f}")
     st.metric("Số tuần toàn lộ trình", "Chưa xác định" if roadmap["total_weeks"] is None else str(roadmap["total_weeks"]))
     st.caption(f"Phần đã phân bổ: {roadmap['known_weeks']} tuần; ngân sách {roadmap['hours_per_week']} giờ/tuần.")
+    _render_roadmap_diagram([
+        {
+            "week": phase["week"],
+            "label": f"{phase['hours']:.2f} giờ · {len(phase['segments'])} phần",
+            "warning": any(roadmap["resources"][segment["resource_key"]]["duration_kind"] == "estimated" for segment in phase["segments"]),
+        }
+        for phase in roadmap["phases"]
+    ], alt="Sơ đồ các tuần học theo số giờ và phần tài liệu đã xếp lịch.")
+    _render_practice_routes(roadmap.get("practice_routes", []))
     if roadmap["is_estimated"]:
         st.warning("Lịch có giờ ước lượng biên tập; số tuần là dự kiến theo căn cứ.")
     for phase in roadmap["phases"]:
@@ -463,6 +814,9 @@ def render_timed_roadmap(roadmap: dict) -> None:
                 item = roadmap["resources"][segment["resource_key"]]
                 st.markdown(f"[{item['title']}]({item['url']}) · phần {segment['part']} · {segment['hours']:.2f} giờ")
                 st.caption(f"{segment['duration_kind']} · {', '.join(item['skills'])}")
+                _render_resource_level_scope(item, target_levels, warn_gap=False)
+                status = item.get("content_review_status", "unreviewed")
+                st.caption("Trạng thái nội dung: " + resource_review_label(status))
                 evidence = item.get("duration_evidence", {})
                 if segment["duration_kind"] == "estimated":
                     st.caption(f"Cơ sở ước lượng: {evidence.get('basis') or item.get('estimated_duration_basis') or item.get('duration_basis') or 'chưa có thông tin'}")
@@ -472,29 +826,94 @@ def render_timed_roadmap(roadmap: dict) -> None:
                     st.caption(item["review_note"])
                 if item.get("access_note"):
                     st.caption(item["access_note"])
+                if item.get("duration_issue") == "conflicting_duration":
+                    st.warning("Các nguồn công bố thời lượng mâu thuẫn; thời lượng không được cộng vào lịch.")
+                _render_partial_practice_assignments(
+                    item.get("skills", []), item, role_context=role_context, resources=load_resources()
+                )
     for item in roadmap["unresolved"]:
-        st.warning(f"Chưa giải quyết: {item.get('skill') or ', '.join(item.get('skills', []))} · {item['reason']}")
+        skill = item.get("skill") or ", ".join(item.get("skills", []))
+        st.warning(f"{display_skill(skill)}: {RESOURCE_REASON_LABELS.get(item['reason'], 'Chưa đủ dữ liệu để xếp lịch.')}")
+        caution = skill_scope_caution(skill)
+        if caution:
+            st.warning(caution)
+        if item.get("resource_statuses"):
+            st.caption("Trạng thái tài liệu hiện có: " + ", ".join(item["resource_statuses"]))
     for item in roadmap["unknown_duration"]:
         record = roadmap["resources"][item["resource_key"]]
         st.markdown(f"[{record['title']}]({record['url']}) · thời lượng chưa xác định")
 
 
-def render_roadmap(roadmap: list[dict]) -> None:
+def _render_resource_level_scope(resource: dict, target_levels: dict[str, int] | None, *, warn_gap: bool = True) -> None:
+    """Distinguish the page's teaching range from the role's target level."""
+    st.caption("Mức bằng chứng: " + resource_evidence_badge(resource))
+    lower, upper = resource.get("level_from"), resource.get("level_to")
+    if type(lower) is not int or type(upper) is not int or not 1 <= lower <= upper <= 3:
+        return
+    label = f"Level {lower}" if lower == upper else f"Level {lower}–{upper}"
+    st.caption(f"Level do dự án gán cho mapping: {label}; đọc tài liệu không chứng nhận đã đạt Level.")
+    scope = resource.get("scope_granularity")
+    locator = resource.get("evidence_locator")
+    if not has_granular_level_evidence(resource):
+        st.warning(
+            "Chưa xác định đủ bài học/mục cụ thể và dẫn chứng để xác nhận mapping đúng Level. "
+            "Hãy dùng liên kết này như tài liệu tham khảo; không tính là đã phủ yêu cầu nghề."
+        )
+    else:
+        st.caption(f"Đơn vị nội dung: {scope} · Vị trí đối chiếu nội bộ: {locator}")
+        st.caption("Phạm vi và Level của đơn vị này vẫn cần chủ dự án/chuyên gia xác nhận độc lập.")
+    axes = resource.get("verification_axes")
+    if isinstance(axes, dict) and axes.get("access_status") == "user_attested_manual":
+        st.caption("Khả năng mở link: chủ dự án báo đã kiểm tra thủ công; chưa phải xác minh độc lập.")
+    provenance = resource.get("provenance")
+    if not isinstance(provenance, dict) or not provenance.get("rights_basis"):
+        st.caption("Cơ sở quyền tái sử dụng dữ liệu chưa được ghi nhận; chỉ dẫn sang nguồn ngoài.")
+    gaps = resource_level_gap(resource, target_levels or {})
+    if warn_gap and gaps:
+        details = ", ".join(f"{display_skill(item['skill'])} cần Level {item['required_level']}" for item in gaps)
+        st.info(f"Tài liệu này mới hỗ trợ tới Level {upper}; {details}. Cần nguồn hoặc bài thực hành bổ sung cho phần còn lại.")
+
+
+def render_roadmap(roadmap: list[dict], *, role_context: str | None = None, target_levels: dict[str, int] | None = None) -> None:
     """Resolve shared documents across the whole roadmap, including prior weeks."""
     catalog = {
         resource["key"]: (resource, week["week"])
         for week in roadmap for resource in week["resources"]
     }
-    st.subheader("Lộ trình học theo tuần")
-    st.caption("Ưu tiên theo trọng số; phân bổ kỹ năng theo tuần, chưa lập lịch theo giờ hoặc level.")
+    st.subheader("Lộ trình theo giai đoạn")
+    st.caption("Các giai đoạn thể hiện thứ tự ưu tiên theo trọng số vị trí, không cam kết thời gian hoàn thành. Chỉ đề xuất mapping đã review nội dung; partial luôn kèm ghi chú phạm vi. Lộ trình này chưa lập lịch theo giờ hoặc level.")
+    _render_roadmap_diagram([
+        {
+            "week": week["week"],
+            "label": ", ".join(display_skill(skill) for skill in week["skills"][:2])
+                     + (f" và {len(week['skills']) - 2} kỹ năng khác" if len(week["skills"]) > 2 else "")
+                     + f"\n{len({key for keys in week['resource_keys'].values() for key in keys})} tài liệu · {len(week.get('practice_routes', []))} bài thực hành",
+            "warning": bool(week.get("unresolved")) or bool(week.get("partial_resources")),
+        }
+        for week in roadmap
+    ], alt="Sơ đồ các giai đoạn ưu tiên, kỹ năng, tài liệu và bài thực hành.", step_label="Giai đoạn")
     for week in roadmap:
-        with st.expander(f"Tuần {week['week']} · {', '.join(display_skill(s) for s in week['skills'])}"):
+        with st.expander(f"Giai đoạn {week['week']} · {', '.join(display_skill(s) for s in week['skills'])}"):
+            _render_practice_routes(week.get("practice_routes", []))
             for resource in week["resources"]:
                 title = resource.get("title", "Tài liệu học tập")
                 url = resource.get("url")
                 st.markdown(f"[{title}]({url})" if url else title)
                 details = [resource.get(key) for key in ("provider", "type", "language", "cost")]
                 st.caption(" · ".join(str(item) for item in details if item))
+                _render_resource_level_scope(resource, target_levels)
+                status = resource.get("content_review_status", "unreviewed")
+                st.caption("Trạng thái nội dung: " + resource_review_label(status))
+                if status == "partial" and resource.get("review_note"):
+                    st.warning("Phạm vi review một phần: " + resource["review_note"])
+                    _render_partial_practice_assignments(
+                        resource.get("skills", []), resource,
+                        role_context=role_context, resources=load_resources(),
+                    )
+                for skill in resource.get("skills", []):
+                    caution = skill_scope_caution(skill)
+                    if caution:
+                        st.warning(caution)
             for skill, keys in week["resource_keys"].items():
                 for key in keys:
                     resource, introduced_week = catalog[key]
@@ -502,28 +921,166 @@ def render_roadmap(roadmap: list[dict]) -> None:
                         title = resource.get("title", "Tài liệu học tập")
                         url = resource.get("url")
                         link = f"[{title}]({url})" if url else title
-                        st.markdown(f"{display_skill(skill)}: {link} (đã giới thiệu ở tuần {introduced_week})")
+                        st.markdown(f"{display_skill(skill)}: {link} (đã giới thiệu ở giai đoạn {introduced_week})")
             if week["skills_without_resources"]:
-                st.info("Chưa có tài liệu cho: " + ", ".join(display_skill(s) for s in week["skills_without_resources"]))
+                for issue in week.get("unresolved", []):
+                    label = RESOURCE_REASON_LABELS.get(issue["reason"], "Chưa đủ dữ liệu để đề xuất tài liệu.")
+                    st.info(f"{display_skill(issue['skill'])}: {label}")
+                    caution = skill_scope_caution(issue["skill"])
+                    if caution:
+                        st.warning(caution)
+                    reasons = [
+                        RESOURCE_REASON_LABELS.get(reason, reason)
+                        for reason in (issue.get("exclusion_reasons") or [])
+                        if isinstance(reason, str) and reason
+                    ]
+                    if reasons:
+                        st.caption("Các lý do loại tài liệu: " + " ".join(reasons))
+
+
+def _render_roadmap_diagram(steps: list[dict], *, alt: str, step_label: str = "Tuần") -> None:
+    """Render a compact, desktop-first sequence of native roadmap cards."""
+    if not steps:
+        return
+    st.markdown("#### Sơ đồ lộ trình")
+    st.caption(alt)
+    for offset in range(0, len(steps), 4):
+        row = steps[offset:offset + 4]
+        widths = [weight for _ in row for weight in (3, 0.45)][:-1]
+        columns = st.columns(widths, vertical_alignment="center")
+        column_index = 0
+        for index, item in enumerate(row):
+            with columns[column_index].container(border=True):
+                st.caption(f"ƯU TIÊN {item['week']}")
+                st.markdown(f"**{step_label} {item['week']}**")
+                st.markdown(str(item["label"]).replace("\n", "  \n"))
+                if item.get("warning"):
+                    st.caption("Có phần cần xem lại phạm vi hoặc dữ liệu")
+                else:
+                    st.caption("Có học liệu đã qua review")
+            column_index += 1
+            if index < len(row) - 1:
+                with columns[column_index]:
+                    st.markdown("→")
+                column_index += 1
+
+
+def _render_practice_routes(routes: list[dict]) -> None:
+    if not routes:
+        return
+    st.markdown("**Luyện kỹ năng qua công việc và phản hồi**")
+    st.caption("Với kỹ năng mềm, thực hành có quan sát và phản hồi là một lộ trình chính; không cần hoàn thành khóa học để được xem là tiến bộ. Bài tập do dự án biên soạn, chưa phải chứng nhận năng lực hay review chuyên gia.")
+    for route in routes:
+        with st.expander(f"{display_skill(route['skill'])} · {route['title']}"):
+            st.caption(route["framing"])
+            for index, step in enumerate(route["steps"], 1):
+                st.markdown(f"{index}. {step}")
+            if route.get("observation_checklist"):
+                st.markdown("**Checklist quan sát hành vi**")
+                for item in route["observation_checklist"]:
+                    st.markdown(f"- {item}")
+            if route.get("tracks"):
+                st.markdown("**Bài tập đọc theo nhóm nghề**")
+                for track in route["tracks"]:
+                    st.markdown(f"**{track['name']}** · {track['terms']}")
+                    st.caption(track["exercise"])
+                    st.markdown(f"[Mở nguồn tham chiếu]({track['reference_url']})")
+            st.caption("Bằng chứng để tự theo dõi: " + route["evidence"])
+
+
+def _render_resource_quality_disclosure(resources: dict) -> dict:
+    summary = summarize_resource_reviews(resources)
+    st.caption(
+        f"Kiểm kê mapping kỹ năng–học liệu riêng: {summary['mapping_count']} mapping; "
+        f"{summary['reviewed']} reviewed, {summary['partial']} partial, "
+        f"{summary['unsuitable']} unsuitable, {summary['blocked']} blocked, "
+        f"{summary['unreviewed']} unreviewed."
+    )
+    st.warning(
+        "Đây là rà soát nội bộ về nội dung và phạm vi mapping, không phải review độc lập "
+        "bởi chuyên gia nghề nghiệp hoặc pháp lý. Số liệu này không bao gồm ngân hàng câu hỏi phỏng vấn."
+    )
+    return summary
+
+
+def _render_partial_practice_assignments(
+    skills: list[str],
+    resource: dict,
+    *,
+    role_context: str | None,
+    resources: dict,
+) -> None:
+    """Show applied work for the reviewed portion of partial resources."""
+    for skill in skills:
+        assignment = get_partial_resource_assignment(
+            skill, resource, resources, role_context=role_context
+        )
+        if not assignment:
+            continue
+        with st.expander(f"Bài tập/portfolio · {display_skill(skill)}"):
+            if assignment.get("scope"):
+                st.caption("Nguồn chỉ hỗ trợ trong phạm vi: " + assignment["scope"])
+            for index, step in enumerate(assignment["steps"], 1):
+                st.markdown(f"{index}. {step}")
+            st.caption("Minh chứng cần tạo: " + assignment["evidence"])
+            if assignment.get("caution"):
+                st.warning(assignment["caution"])
 
 
 def render_interview_practice(position: dict, focus_skills=None, assessment="presence") -> None:
-    """Ask first; show feedback and reference material only after submission."""
+    """Ask first; show answer guidance after submission without automatic scoring."""
     role_id = position["id"]
     st.subheader("Luyện phỏng vấn")
-    st.caption("Điểm rubric chỉ phản ánh khái niệm được nhắc; không xác minh tính đúng của toàn bộ câu trả lời.")
-    context = (role_id, assessment, tuple(focus_skills or []))
+    st.caption("Hệ thống không chấm điểm câu trả lời. Sau khi gửi, bạn sẽ thấy khung tham khảo và checklist tự rà soát; tình huống thực tế không có một đáp án chung.")
+    bank_summary = question_bank_quality_summary()
+    st.warning(
+        f"Ngân hàng phỏng vấn riêng: {bank_summary['total']} câu trên {bank_summary['role_count']} vị trí — "
+        f"{bank_summary['reviewed_internal']} câu review nội bộ, "
+        f"{bank_summary['ai_reviewed_internal']} câu AI hỗ trợ rà soát, {bank_summary['template']} template, "
+        f"{bank_summary['unreviewed']} câu chưa review. Đây là backlog khác với mapping học liệu; "
+        "AI hỗ trợ rà soát không phải thẩm định chuyên gia/độc lập."
+    )
+    if role_id not in {"sales_executive", "frontend_developer_react", "data_analyst", "backend_developer_java"}:
+        st.info("Vị trí này chưa được biên tập bối cảnh và rubric theo cổng bằng chứng của nhóm demo; dùng câu hỏi như bản tham khảo chưa qua duyệt chuyên môn.")
+    else:
+        st.info("Câu hỏi nhóm demo đã có bối cảnh và rubric bản nháp AI; cần người có chuyên môn duyệt trước khi công bố là đã rà soát.")
+    try:
+        available_count = len(get_questions(role_id, MAX_INTERVIEW_QUESTIONS, seed=0))
+    except ValueError as exc:
+        st.info(str(exc))
+        return
+    if available_count == 0:
+        st.info("Chưa có câu hỏi cho vị trí này.")
+        return
+    prefer_reviewed = st.checkbox(
+        "Ưu tiên câu hỏi có rubric đã rà soát nội bộ / AI hỗ trợ",
+        value=True,
+        key=f"interview_prefer_reviewed_{role_id}",
+        help="Review nội bộ hoặc AI hỗ trợ chỉ giúp rà soát cấu trúc; chưa thay thế owner/chuyên gia xác nhận.",
+    )
+    reviewed_count = count_reviewed_questions(role_id)
+    if prefer_reviewed and reviewed_count == 0:
+        st.info("Vị trí này chưa có câu hỏi đủ điều kiện review nội bộ; bộ câu hỏi tham khảo vẫn hiển thị nhãn trạng thái.")
+    context = (role_id, assessment, tuple(focus_skills or []), prefer_reviewed)
     previous = st.session_state.get("interview_session")
     if previous and previous.get("context") != context:
         st.session_state.pop("interview_session", None)
-    count = st.number_input("Số câu hỏi", min_value=1, max_value=10, value=3, step=1,
+    max_count = min(MAX_INTERVIEW_QUESTIONS, available_count)
+    count = st.number_input(f"Số câu hỏi (tối đa {max_count} câu có sẵn)", min_value=1, max_value=max_count, value=min(3, max_count), step=1,
                             key=f"interview_count_{role_id}")
     if st.button("Tạo bộ câu hỏi", key=f"start_interview_{role_id}", icon=":material/quiz:"):
         try:
-            questions = get_questions(role_id, int(count), focus_skills=focus_skills)
+            requested_count = int(count)
+            questions = get_questions(
+                role_id,
+                requested_count,
+                focus_skills=focus_skills,
+                prefer_reviewed=prefer_reviewed,
+            )
             st.session_state["interview_session"] = {
                 "role_id": role_id, "batch_id": uuid4().hex[:10], "questions": questions,
-                "answered_ids": [], "scores": {}, "context": context,
+                "requested_count": requested_count,
+                "answered_ids": [], "submitted_answers": {}, "context": context,
             }
         except ValueError as exc:
             st.error(str(exc))
@@ -542,52 +1099,67 @@ def render_interview_practice(position: dict, focus_skills=None, assessment="pre
         duration = f" · {question['time_minutes']} phút" if question.get("time_minutes") else ""
         with st.container():
             st.caption(f"Câu {index} · {kind}{duration}")
+            st.caption("Trạng thái nội dung: " + question_quality_label(question.get("quality")))
+            if question.get("quality_note"):
+                st.caption(question["quality_note"])
             st.markdown(f"**{question.get('question', '')}**")
             with st.form(f"answer_form_{session['batch_id']}_{question_id}"):
                 answer = st.text_area("Câu trả lời của bạn", key=key, height=120)
                 submitted = st.form_submit_button("Gửi câu trả lời")
             if submitted:
                 if answer.strip():
-                    session["scores"][question_id] = score_answer(question_id, answer)
+                    session.setdefault("submitted_answers", {})[question_id] = answer.strip()
+                    for review_key, _ in INTERVIEW_SELF_REVIEW:
+                        st.session_state.pop(f"self_review_{session['batch_id']}_{question_id}_{review_key}", None)
                     answered.add(question_id)
                     session["answered_ids"] = list(answered)
                     st.session_state["interview_session"] = session
                 else:
                     st.warning("Hãy nhập câu trả lời trước khi xem ý tham khảo.")
             if question_id in answered:
-                result = session["scores"][question_id]
-                st.caption("Feedback phản ánh câu trả lời đã gửi gần nhất.")
-                if result["status"] == "scored":
-                    st.write(f"**Điểm rubric:** {result['score']}/10")
-                else:
-                    st.info("Chưa có điểm: rubric chưa sẵn sàng.")
-                for note in result["feedback"]:
-                    st.caption(note)
-                st.caption("Phép chấm từ khóa không xác minh độ đúng, ngữ cảnh hoặc trải nghiệm thực tế.")
+                st.caption(POST_SUBMISSION_GUIDANCE_NOTICE)
+                with st.expander("Tự rà soát ý nghĩa và chất lượng câu trả lời"):
+                    st.caption("Checklist tự rà soát, không tính điểm và không thay cho đánh giá của người phỏng vấn.")
+                    for review_key, label in INTERVIEW_SELF_REVIEW:
+                        st.checkbox(label, key=f"self_review_{session['batch_id']}_{question_id}_{review_key}")
                 try:
                     feedback = get_question_feedback(question_id)
                 except ValueError as exc:
                     st.warning(str(exc))
                     continue
                 has_answer = feedback.get("has_reference_answer", bool(feedback.get("reference_answer")))
-                if has_answer:
-                    st.markdown("**Đáp án mẫu tham khảo**")
-                    st.markdown(feedback["reference_answer"])
-                    if feedback.get("good_answer_points"):
-                        st.markdown("**Các ý nên có trong câu trả lời**")
-                        for point in feedback["good_answer_points"]:
-                            st.markdown(f"- {point}")
+                is_scenario = feedback.get("question_type") == "scenario"
+                if is_scenario:
+                    st.markdown("**Cách triển khai câu trả lời (hãy dùng trải nghiệm thật)**")
+                    st.caption("Tình huống có thể có nhiều phương án hợp lý; nêu bối cảnh, hành động, lý do và kết quả bạn quan sát được.")
                 else:
-                    st.markdown("**Các ý tham khảo**")
-                    st.markdown(feedback["reference_answer"])
+                    st.markdown("**Khung trả lời tham khảo**")
+                if not feedback.get("content_reviewed"):
+                    st.info("Câu hỏi/đáp án này chưa được review đầy đủ. Hãy kiểm chứng phần kiến thức chuyên môn bằng tài liệu phù hợp và chỉnh ví dụ theo trải nghiệm của bạn.")
+                elif feedback.get("quality") == "ai_reviewed_internal":
+                    st.info("Khung này được AI hỗ trợ rà soát nội bộ; chưa được chuyên gia độc lập xác nhận. Hãy đối chiếu nguồn và kinh nghiệm thực tế.")
+                elif feedback.get("quality_sources"):
+                    st.caption("Nguồn tham khảo khi review nội bộ:")
+                    for source in feedback["quality_sources"]:
+                        st.markdown(f"- {source}")
+                st.markdown(feedback["reference_answer"])
+                if feedback.get("good_answer_points"):
+                    st.markdown("**Các ý có thể cân nhắc**")
+                    for point in feedback["good_answer_points"]:
+                        st.markdown(f"- {point}")
                 if feedback["red_flags"]:
-                    st.caption("Điểm cần tránh")
+                    st.caption(STATIC_SELF_REVIEW_TITLE)
+                    st.caption(STATIC_SELF_REVIEW_NOTICE)
                     for flag in feedback["red_flags"]:
                         st.markdown(f"- {flag}")
 
 
 def run_app() -> None:
     st.set_page_config(page_title="AI Career Coach | Cộng đồng nghề nghiệp", page_icon="✦", layout="wide")
+    # Streamlit's shell defaults to English and has no native page-language
+    # option. This fixed code-owned script adds Vietnamese language metadata;
+    # it never receives or evaluates user-provided content.
+    st.html("<script>document.documentElement.lang = 'vi';</script>", unsafe_allow_javascript=True)
     inject_styles()
     render_landing_page()
     render_toolkit()

@@ -11,6 +11,7 @@ from modules.skill_extractor import (
     normalize_skill,
 )
 from modules.catalog import load_skill_vocabulary
+from modules.profile import build_profile
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -73,6 +74,27 @@ def test_normalize_skill_collapses_whitespace_and_is_idempotent() -> None:
     assert normalize_skill(normalized) == normalized
 
 
+def test_trailing_version_suffix_is_removed_without_deleting_internal_numbers():
+    assert normalize_skill("Python 3.12") == "python"
+    assert normalize_skill("SQL Server 2019") == "sql server"
+    assert normalize_skill("Vue v3.0.1") == "vue"
+    assert normalize_skill("SQL 2019 specialist") == "sql 2019 specialist"
+    assert normalize_skill("skill 11") == "skill 11"
+    assert normalize_skill("ISO 45001") == "iso 45001"
+
+
+def test_common_versioned_and_written_skill_aliases_map_to_catalog_canonicals():
+    profile = build_profile({
+        "skills": (
+            "Python 3.12; SQL Server 2019; Vue 3; Vue3; Vue.js; "
+            "React.js; ReactJS; React.js / ReactJS; C# / .NET"
+        )
+    })
+
+    assert set(profile["skills"]) == {"python", "sql server", "vuejs", "reactjs", "c#"}
+    assert profile["unrecognized_skills"] == []
+
+
 def test_special_character_skills() -> None:
     """Nhận diện kỹ năng có dấu câu và ký tự đặc biệt."""
     vocabulary = {"c#", "c++", "ci/cd", "agile/scrum", "routing & switching"}
@@ -85,6 +107,25 @@ def test_fuzzy_is_disabled_by_default_and_does_not_confuse_csharp_css() -> None:
     """Mặc định không fuzzy và kỹ năng ngắn không bị nhận nhầm."""
     assert extract_skills("pythno css", {"python", "c#"}) == []
     assert extract_skills("css", {"c#", "css"}, fuzzy=True) == ["css"]
+
+
+def test_explicit_lack_of_experience_is_not_claimed_as_a_skill() -> None:
+    vocabulary = {"python", "sql", "docker", "git"}
+    assert extract_skills(
+        "Đã dùng Python và SQL để làm báo cáo, chưa sử dụng Docker.", vocabulary
+    ) == ["python", "sql"]
+    assert extract_skills(
+        "Không có kinh nghiệm với Docker và Git; đã dùng Python.", vocabulary
+    ) == ["python"]
+    assert extract_skills(
+        "No experience with Docker; used Python and SQL.", vocabulary
+    ) == ["python", "sql"]
+    assert extract_skills(
+        "Chưa dùng Docker, đã dùng Python.", vocabulary
+    ) == ["python"]
+    assert extract_skills(
+        "Không chỉ Python mà còn Docker.", vocabulary
+    ) == ["python", "docker"]
 
 
 def test_roles_skills_have_resource_keys_after_normalization() -> None:

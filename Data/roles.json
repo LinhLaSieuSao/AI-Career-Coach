@@ -16,7 +16,8 @@
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "linux", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "backend_developer_nodejs",
@@ -35,7 +36,8 @@
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "docker", "level": 1, "weight": 1},
 {"name": "redis", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "backend_developer_net",
@@ -55,7 +57,8 @@
 {"name": "html", "level": 1, "weight": 1},
 {"name": "css", "level": 1, "weight": 1},
 {"name": "javascript", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "frontend_developer_react",
@@ -75,7 +78,8 @@
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "thiết kế ui ux", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "frontend_developer_vue",
@@ -95,7 +99,8 @@
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "thiết kế ui ux", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "frontend_developer_angular",
@@ -115,7 +120,8 @@
 {"name": "sass", "level": 2, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "thiết kế ui ux", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "fullstack_developer_mern",
@@ -135,7 +141,8 @@
 {"name": "git", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "docker", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "fullstack_developer_net_angular",
@@ -155,7 +162,8 @@
 {"name": "git", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "mobile_developer_ios",
@@ -174,7 +182,8 @@
 {"name": "core data", "level": 1, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "thiết kế ui ux", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "mobile_developer_android",
@@ -193,7 +202,8 @@
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "thiết kế ui ux", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "mobile_developer_flutter",
@@ -212,7 +222,8 @@
 {"name": "thiết kế ui ux", "level": 1, "weight": 1},
 {"name": "lập trình android", "level": 1, "weight": 1},
 {"name": "lập trình ios", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "mobile_developer_react_native",
@@ -231,7 +242,8 @@
 {"name": "thiết kế ui ux", "level": 1, "weight": 1},
 {"name": "lập trình android", "level": 1, "weight": 1},
 {"name": "lập trình ios", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "game_developer_unity",
@@ -250,7 +262,8 @@
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "thiết kế trò chơi", "level": 1, "weight": 1},
 {"name": "lập trình shader", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "embedded_software_engineer",
@@ -269,7 +282,8 @@
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "thiết kế mạch", "level": 1, "weight": 2},
 {"name": "linux nhúng", "level": 1, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "automation_tester",
@@ -288,7 +302,8 @@
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "ci/cd", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "data_analyst",
@@ -307,7 +322,8 @@
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "tableau", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "data_engineer",
@@ -327,7 +343,8 @@
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "docker", "level": 1, "weight": 1},
 {"name": "linux", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "machine_learning_engineer",
@@ -346,7 +363,8 @@
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "aws", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "business_intelligence_analyst",
@@ -365,7 +383,8 @@
 {"name": "tableau", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "python", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "data_scientist",
@@ -384,7 +403,8 @@
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "git", "level": 2, "weight": 1},
 {"name": "power bi", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "ai_engineer",
@@ -403,7 +423,8 @@
 {"name": "toán học", "level": 2, "weight": 2},
 {"name": "git", "level": 2, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "nlp_engineer",
@@ -422,7 +443,8 @@
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "git", "level": 2, "weight": 1},
 {"name": "docker", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "computer_vision_engineer",
@@ -441,7 +463,8 @@
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "git", "level": 2, "weight": 1},
 {"name": "docker", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "mlops_engineer",
@@ -460,7 +483,8 @@
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "etl", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "data_architect",
@@ -479,7 +503,8 @@
 {"name": "bảo mật dữ liệu", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "devops_engineer",
@@ -498,7 +523,8 @@
 {"name": "terraform", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "system_administrator",
@@ -516,7 +542,8 @@
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "network_engineer",
@@ -534,7 +561,8 @@
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "security_engineer",
@@ -553,7 +581,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1},
 {"name": "kiến trúc hệ thống", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "penetration_tester",
@@ -571,7 +600,8 @@
 {"name": "metasploit", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "cloud_engineer",
@@ -589,7 +619,8 @@
 {"name": "mạng máy tính", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "manual_tester",
@@ -607,7 +638,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "it_support",
@@ -624,7 +656,8 @@
 {"name": "chăm sóc khách hàng", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "tiếng anh cơ bản", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "sre_engineer",
@@ -644,7 +677,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "product_manager",
@@ -663,7 +697,8 @@
 {"name": "làm việc nhóm", "level": 3, "weight": 1},
 {"name": "jira", "level": 2, "weight": 2},
 {"name": "agile/scrum", "level": 2, "weight": 3}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "product_owner",
@@ -681,7 +716,8 @@
 {"name": "thiết kế ui ux", "level": 1, "weight": 1},
 {"name": "làm việc nhóm", "level": 3, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "business_analyst",
@@ -698,7 +734,8 @@
 {"name": "sql", "level": 1, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "it_business_analyst",
@@ -716,7 +753,8 @@
 {"name": "uml", "level": 2, "weight": 2},
 {"name": "jira", "level": 2, "weight": 2},
 {"name": "agile/scrum", "level": 2, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "project_manager",
@@ -734,7 +772,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "scrum_master",
@@ -751,7 +790,8 @@
 {"name": "làm việc nhóm", "level": 3, "weight": 2},
 {"name": "quản lý xung đột", "level": 2, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "ui_ux_designer",
@@ -769,7 +809,8 @@
 {"name": "css", "level": 1, "weight": 1},
 {"name": "giao tiếp", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "ux_researcher",
@@ -786,7 +827,8 @@
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "figma", "level": 1, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "ui_designer",
@@ -803,7 +845,8 @@
 {"name": "html", "level": 1, "weight": 1},
 {"name": "css", "level": 1, "weight": 1},
 {"name": "giao tiếp", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "data_business_analyst",
@@ -820,7 +863,8 @@
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "ux_writer",
@@ -837,7 +881,8 @@
 {"name": "tư duy thiết kế", "level": 2, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "technical_product_manager",
@@ -855,7 +900,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "jira", "level": 2, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "digital_marketing_executive",
@@ -874,7 +920,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "content_marketing_executive",
@@ -893,7 +940,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "seo_specialist",
@@ -912,7 +960,8 @@
 {"name": "tư duy phân tích", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "social_media_executive",
@@ -930,7 +979,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "chăm sóc khách hàng", "level": 2, "weight": 1},
 {"name": "viết nội dung", "level": 2, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "performance_marketing_executive",
@@ -949,7 +999,8 @@
 {"name": "sql", "level": 1, "weight": 1},
 {"name": "a/b testing", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "pr_executive",
@@ -967,7 +1018,8 @@
 {"name": "lập kế hoạch", "level": 2, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "brand_executive",
@@ -985,7 +1037,8 @@
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "tư duy phân tích", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "event_executive",
@@ -1003,7 +1056,8 @@
 {"name": "quản lý thời gian", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 2},
 {"name": "marketing tại điểm bán", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "marketing_analyst",
@@ -1022,7 +1076,8 @@
 {"name": "thống kê", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "trade_marketing_executive",
@@ -1040,7 +1095,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "video_creator",
@@ -1058,7 +1114,8 @@
 {"name": "youtube", "level": 2, "weight": 2},
 {"name": "bắt trend", "level": 2, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "internal_comms_executive",
@@ -1076,7 +1133,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "employer_branding_executive",
@@ -1094,7 +1152,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "sáng tạo", "level": 2, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "ecommerce_executive",
@@ -1113,7 +1172,8 @@
 {"name": "tư duy phân tích", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "sales_executive",
@@ -1130,7 +1190,8 @@
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "b2b_sales_executive",
@@ -1148,7 +1209,8 @@
 {"name": "excel", "level": 2, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "key_account_manager",
@@ -1167,7 +1229,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 3, "weight": 2},
 {"name": "excel", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "telesales_representative",
@@ -1185,7 +1248,8 @@
 {"name": "crm", "level": 1, "weight": 2},
 {"name": "chịu áp lực", "level": 2, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "customer_service_executive",
@@ -1203,7 +1267,8 @@
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "tiếng anh cơ bản", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "customer_success_manager",
@@ -1221,7 +1286,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "business_development_executive",
@@ -1239,7 +1305,8 @@
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "excel", "level": 2, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "sales_manager",
@@ -1258,7 +1325,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "phân tích dữ liệu", "level": 2, "weight": 2},
 {"name": "excel", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "ecommerce_manager",
@@ -1277,7 +1345,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 1},
 {"name": "excel", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "retail_store_manager",
@@ -1295,7 +1364,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "pos", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "sales_admin",
@@ -1313,7 +1383,8 @@
 {"name": "cẩn thận", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "merchandiser",
@@ -1331,7 +1402,8 @@
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "cẩn thận", "level": 3, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "real_estate_sales_executive",
@@ -1349,7 +1421,8 @@
 {"name": "marketing cá nhân", "level": 2, "weight": 2},
 {"name": "luật bất động sản", "level": 1, "weight": 2},
 {"name": "chịu áp lực", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "technical_sales_engineer",
@@ -1367,7 +1440,8 @@
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "xây dựng mối quan hệ", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "channel_sales_manager",
@@ -1385,7 +1459,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "phân tích dữ liệu", "level": 2, "weight": 2},
 {"name": "excel", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "accountant",
@@ -1402,7 +1477,8 @@
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1},
 {"name": "lập báo cáo", "level": 2, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "general_accountant",
@@ -1420,7 +1496,8 @@
 {"name": "tư duy phân tích", "level": 2, "weight": 2},
 {"name": "cẩn thận", "level": 3, "weight": 1},
 {"name": "giao tiếp", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "chief_accountant",
@@ -1439,7 +1516,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1},
 {"name": "thuyết trình", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "tax_accountant",
@@ -1458,7 +1536,8 @@
 {"name": "cẩn thận", "level": 3, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "auditor",
@@ -1477,7 +1556,8 @@
 {"name": "làm việc nhóm", "level": 3, "weight": 2},
 {"name": "chịu áp lực", "level": 3, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "internal_auditor",
@@ -1496,7 +1576,8 @@
 {"name": "lập báo cáo", "level": 3, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1},
 {"name": "cẩn thận", "level": 3, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "financial_analyst",
@@ -1515,7 +1596,8 @@
 {"name": "thuyết trình", "level": 2, "weight": 2},
 {"name": "sql", "level": 1, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "credit_officer",
@@ -1534,7 +1616,8 @@
 {"name": "chịu áp lực", "level": 2, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "cẩn thận", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "risk_management_officer",
@@ -1553,7 +1636,8 @@
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 3, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "bank_teller",
@@ -1570,7 +1654,8 @@
 {"name": "chịu áp lực", "level": 2, "weight": 1},
 {"name": "đếm tiền", "level": 3, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "investment_analyst",
@@ -1589,7 +1674,8 @@
 {"name": "bloomberg terminal", "level": 2, "weight": 2},
 {"name": "thuyết trình", "level": 3, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "financial_controller",
@@ -1608,7 +1694,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "hr_executive",
@@ -1626,7 +1713,8 @@
 {"name": "excel", "level": 2, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "cẩn thận", "level": 3, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "recruitment_specialist",
@@ -1644,7 +1732,8 @@
 {"name": "linkedin", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "cb_specialist",
@@ -1662,7 +1751,8 @@
 {"name": "phân tích dữ liệu", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "erp", "level": 1, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "ld_specialist",
@@ -1680,7 +1770,8 @@
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "quản lý ngân sách", "level": 1, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "hr_manager",
@@ -1698,7 +1789,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "quản lý ngân sách", "level": 2, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "admin_executive",
@@ -1716,7 +1808,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "quản lý thiết bị", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "legal_executive",
@@ -1734,7 +1827,8 @@
 {"name": "tiếng anh pháp lý", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "logistics_coordinator",
@@ -1752,7 +1846,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "procurement_specialist",
@@ -1770,7 +1865,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "erp", "level": 2, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "import_export_executive",
@@ -1788,7 +1884,8 @@
 {"name": "cẩn thận", "level": 3, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "excel", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "warehouse_supervisor",
@@ -1806,7 +1903,8 @@
 {"name": "excel", "level": 2, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "lập báo cáo", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "supply_chain_planner",
@@ -1824,7 +1922,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "supply_chain_manager",
@@ -1843,7 +1942,8 @@
 {"name": "erp", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "compliance_officer",
@@ -1860,7 +1960,8 @@
 {"name": "giải quyết vấn đề", "level": 3, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "customs_declaration_specialist",
@@ -1877,7 +1978,8 @@
 {"name": "giải quyết vấn đề", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "cẩn thận", "level": 3, "weight": 2}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "mechanical_engineer",
@@ -1894,7 +1996,8 @@
 {"name": "bóc tách khối lượng", "level": 2, "weight": 2},
 {"name": "tiếng anh giao tiếp", "level": 1, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "electrical_engineer",
@@ -1911,7 +2014,8 @@
 {"name": "plc basic", "level": 1, "weight": 2},
 {"name": "quản lý thời gian", "level": 2, "weight": 1},
 {"name": "giao tiếp", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "automation_engineer",
@@ -1928,7 +2032,8 @@
 {"name": "autocad", "level": 2, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1},
 {"name": "tư duy logic", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "civil_engineer",
@@ -1945,7 +2050,8 @@
 {"name": "dự toán công trình", "level": 2, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "quản lý tiến độ", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "mep_engineer",
@@ -1962,7 +2068,8 @@
 {"name": "bóc tách khối lượng", "level": 2, "weight": 2},
 {"name": "tiếng anh giao tiếp", "level": 1, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "process_engineer",
@@ -1979,7 +2086,8 @@
 {"name": "excel", "level": 2, "weight": 2},
 {"name": "tư duy logic", "level": 2, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "quality_assurance_engineer",
@@ -1996,7 +2104,8 @@
 {"name": "excel", "level": 2, "weight": 2},
 {"name": "tiếng anh giao tiếp", "level": 2, "weight": 1},
 {"name": "giao tiếp", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "maintenance_engineer",
@@ -2013,7 +2122,8 @@
 {"name": "plc basic", "level": 1, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "site_engineer",
@@ -2030,7 +2140,8 @@
 {"name": "nghiệm thu công trình", "level": 2, "weight": 2},
 {"name": "quản lý thời gian", "level": 2, "weight": 1},
 {"name": "giao tiếp", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "estimation_engineer",
@@ -2047,7 +2158,8 @@
 {"name": "định mức xây dựng", "level": 2, "weight": 2},
 {"name": "đàm phán", "level": 1, "weight": 1},
 {"name": "cẩn thận", "level": 3, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "architect",
@@ -2064,7 +2176,8 @@
 {"name": "phong thủy cơ bản", "level": 1, "weight": 1},
 {"name": "thuyết trình", "level": 2, "weight": 1},
 {"name": "sáng tạo", "level": 3, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "hvac_engineer",
@@ -2081,7 +2194,8 @@
 {"name": "revit mep", "level": 1, "weight": 2},
 {"name": "tiếng anh chuyên ngành", "level": 2, "weight": 1},
 {"name": "giải quyết vấn đề", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "cnc_operator",
@@ -2097,7 +2211,8 @@
 {"name": "an toàn lao động", "level": 3, "weight": 2},
 {"name": "cẩn thận", "level": 3, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "production_planner",
@@ -2114,7 +2229,8 @@
 {"name": "quản lý thời gian", "level": 2, "weight": 1},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "tư duy logic", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "safety_engineer",
@@ -2131,7 +2247,8 @@
 {"name": "luật an toàn lao động", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "thuyết trình", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "doctor",
@@ -2148,7 +2265,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "lắng nghe chủ động", "level": 3, "weight": 2},
 {"name": "giải quyết vấn đề", "level": 3, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "registered_nurse",
@@ -2165,7 +2283,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 2, "weight": 1},
 {"name": "cẩn thận", "level": 3, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "pharmacist",
@@ -2182,7 +2301,8 @@
 {"name": "excel", "level": 2, "weight": 1},
 {"name": "cẩn thận", "level": 3, "weight": 1},
 {"name": "lắng nghe chủ động", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "english_teacher",
@@ -2199,7 +2319,8 @@
 {"name": "ielts preparation", "level": 2, "weight": 2},
 {"name": "giao tiếp", "level": 3, "weight": 1},
 {"name": "sáng tạo", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "primary_school_teacher",
@@ -2216,7 +2337,8 @@
 {"name": "sáng tạo", "level": 2, "weight": 1},
 {"name": "kiên nhẫn", "level": 3, "weight": 1},
 {"name": "làm việc nhóm", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "graphic_designer",
@@ -2233,7 +2355,8 @@
 {"name": "sáng tạo", "level": 3, "weight": 2},
 {"name": "quản lý thời gian", "level": 2, "weight": 1},
 {"name": "giao tiếp", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "video_editor",
@@ -2250,12 +2373,13 @@
 {"name": "tư duy hình ảnh", "level": 2, "weight": 2},
 {"name": "sáng tạo", "level": 2, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "content_creator",
 "name": "Content Creator",
-"name_vi": "sáng tạo số",
+"name_vi": "Sáng tạo số",
 "difficulty": "dễ",
 "learning_time_months": 3,
 "skills": [
@@ -2267,7 +2391,8 @@
 {"name": "giao tiếp", "level": 2, "weight": 2},
 {"name": "sáng tạo", "level": 3, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "copywriter",
@@ -2284,7 +2409,8 @@
 {"name": "giao tiếp", "level": 2, "weight": 1},
 {"name": "tiếng anh giao tiếp", "level": 2, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "hotel_receptionist",
@@ -2300,7 +2426,8 @@
 {"name": "chăm sóc khách hàng", "level": 2, "weight": 2},
 {"name": "quản lý thời gian", "level": 2, "weight": 1},
 {"name": "lắng nghe chủ động", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "tour_guide",
@@ -2317,7 +2444,8 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "sơ cứu cấp cứu", "level": 1, "weight": 1},
 {"name": "sáng tạo", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "travel_consultant",
@@ -2334,7 +2462,8 @@
 {"name": "tiếng anh giao tiếp", "level": 2, "weight": 2},
 {"name": "đàm phán", "level": 2, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "customer_service_representative",
@@ -2351,7 +2480,8 @@
 {"name": "tiếng anh giao tiếp", "level": 1, "weight": 1},
 {"name": "quản lý thời gian", "level": 2, "weight": 1},
 {"name": "kiên nhẫn", "level": 3, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 },
 {
 "id": "event_planner",
@@ -2368,6 +2498,7 @@
 {"name": "giao tiếp", "level": 3, "weight": 2},
 {"name": "làm việc nhóm", "level": 3, "weight": 1},
 {"name": "sáng tạo", "level": 2, "weight": 1}
-]
+],
+"provenance": {"source_url": null, "author_origin": null, "curated_by": null, "review_tier": null, "reviewed_at": null, "rights_basis": null, "license_notes": null}
 }
 ]
