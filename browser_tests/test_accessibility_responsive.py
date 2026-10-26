@@ -209,7 +209,9 @@ def test_reload_recovers_app_and_resource_links_are_safe_new_tabs(page: Page, lo
     assert not bad_links, bad_links
 
     page.reload(wait_until="domcontentloaded")
-    page.get_by_text("AI Career Coach").wait_for(timeout=20_000)
+    footer_title = page.locator(".footer b")
+    footer_title.wait_for(timeout=20_000)
+    assert footer_title.inner_text() == "AI Career Coach"
     assert not page.get_by_text("Exception", exact=False).count()
     print({"external_learning_links": external_link_count, "bad_target_rel_pairs": len(bad_links), "reload": "passed"})
 
