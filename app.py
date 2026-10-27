@@ -18,11 +18,6 @@ from modules import (
     get_question_feedback,
     get_questions,
     count_reviewed_questions,
-    question_bank_quality_summary,
-    question_quality_label,
-    POST_SUBMISSION_GUIDANCE_NOTICE,
-    STATIC_SELF_REVIEW_TITLE,
-    STATIC_SELF_REVIEW_NOTICE,
     compute_gap,
     suggest_roles,
     build_timed_roadmap,
@@ -106,7 +101,7 @@ FAQ_ITEMS = (
     ),
     (
         "Luyện phỏng vấn có chấm điểm câu trả lời của mình không?",
-        "<p><strong>Không.</strong> Sau khi bạn gửi câu trả lời, web hiện khung trả lời tham khảo, những ý nên cân nhắc và checklist để bạn tự đối chiếu. Web không phân tích nội dung vừa nhập và không chấm điểm câu trả lời. Nhãn <strong>“AI hỗ trợ rà soát nội bộ”</strong> nói về trạng thái rà soát nội dung câu hỏi/khung tham khảo; đó không phải đánh giá của chuyên gia độc lập.</p>",
+        "<p>Web cho điểm tham khảo theo tiêu chí bằng cách so khớp từ khóa hoặc nhận xét từ AI nếu bạn chọn và nhập khóa API. Điểm không xác nhận câu trả lời đúng hay sai và không phải đánh giá tuyển dụng. Trạng thái duyệt nội dung cho biết mức rà soát câu hỏi, không phải xác nhận của chuyên gia độc lập.</p>",
     ),
 )
 
@@ -270,7 +265,7 @@ INTERVIEW_SELF_REVIEW = (
     ("answers_prompt", "Câu trả lời đi đúng vào từng phần mà câu hỏi yêu cầu."),
     ("explains_reasoning", "Tôi giải thích vì sao chọn cách làm, không chỉ liệt kê thuật ngữ."),
     ("fits_context", "Tôi gắn cách làm với bối cảnh/tình huống cụ thể trong câu hỏi."),
-    ("gives_evidence", "Tôi nêu hành động hoặc bằng chứng kiểm chứng phù hợp (test, log, truy vấn, chỉ số, ví dụ)."),
+    ("gives_evidence", "Tôi nêu hành động hoặc bằng chứng kiểm chứng phù hợp (kiểm thử, nhật ký hệ thống, truy vấn, chỉ số, ví dụ)."),
     ("states_outcome", "Tôi nói rõ kết quả, giới hạn hoặc điều sẽ làm khác đi nếu có."),
 )
 
@@ -2015,43 +2010,37 @@ def _render_partial_practice_assignments(
 
 
 def render_interview_practice(position: dict, focus_skills=None, assessment="presence") -> None:
+    """Render interview practice with its own accessible typography."""
+    with st.container(key="interview_practice"):
+        _render_interview_practice(position, focus_skills, assessment)
+
+
+def _render_interview_practice(position: dict, focus_skills=None, assessment="presence") -> None:
     """Ask first, then review the answer against the question rubric."""
     from modules import review_answer
 
     role_id = position["id"]
     st.subheader("Luyện phỏng vấn")
-    st.caption("Sau khi gửi, bạn sẽ thấy điểm tham khảo theo rubric, khung trả lời và checklist tự rà soát; tình huống thực tế không có một đáp án chung.")
+    st.write("Sau khi gửi, bạn sẽ thấy điểm tham khảo theo tiêu chí chấm, khung trả lời và các ý để tự rà soát. Tình huống thực tế không có một đáp án chung.")
     mode = st.radio("Chọn cách nhận góp ý", ["Tự đánh giá theo tiêu chí", "Nhận góp ý từ AI"],
                     key="interview_review_mode")
     ai_mode = mode == "Nhận góp ý từ AI"
     active_key = ""
     if ai_mode:
-        st.caption("AI phân tích câu trả lời theo tiêu chí của câu hỏi; kết quả chỉ mang tính tham khảo.")
-        with st.expander("Cách tạo và sử dụng API key Groq", expanded=True):
+        st.write("AI phân tích câu trả lời theo tiêu chí của câu hỏi; kết quả chỉ mang tính tham khảo.")
+        with st.expander("Cách tạo và sử dụng khóa API Groq", expanded=True):
             st.markdown(
                 "1. Đăng nhập hoặc tạo tài khoản tại [Groq Console](https://console.groq.com/).\n"
-                "2. Mở [API Keys](https://console.groq.com/keys), tạo một key và sao chép.\n"
-                "3. Dán key vào ô bên dưới, đóng hướng dẫn nếu muốn và gửi câu trả lời."
+                "2. Mở [API Keys](https://console.groq.com/keys), tạo một khóa và sao chép.\n"
+                "3. Dán khóa vào ô bên dưới, đóng hướng dẫn nếu muốn và gửi câu trả lời."
             )
-            st.caption("Không chia sẻ key với người khác. Key chỉ dùng trong phiên này; hạn mức và chi phí phụ thuộc tài khoản Groq của bạn.")
-        active_key = st.text_input("API key Groq", type="password", key="llm_cfg_api_key").strip()
+            st.caption("Không chia sẻ khóa với người khác. Khóa chỉ dùng trong phiên này; hạn mức và chi phí phụ thuộc tài khoản Groq của bạn.")
+        active_key = st.text_input("Khóa API Groq", type="password", key="llm_cfg_api_key").strip()
         st.caption("Khi gửi, câu hỏi, tiêu chí và câu trả lời được gửi tới Groq. Không nhập thông tin nhạy cảm.")
         if not active_key:
-            st.info("Nhập API key Groq để nhận góp ý từ AI, hoặc chọn tự đánh giá theo tiêu chí.")
+            st.info("Nhập khóa API Groq để nhận góp ý từ AI, hoặc chọn tự đánh giá theo tiêu chí.")
     else:
-        st.caption("Đối chiếu từ khóa với tiêu chí; không gửi câu trả lời tới AI và không cần API key. Kết quả không đánh giá đầy đủ ý nghĩa câu trả lời.")
-    bank_summary = question_bank_quality_summary()
-    st.warning(
-        f"Ngân hàng phỏng vấn riêng: {bank_summary['total']} câu trên {bank_summary['role_count']} vị trí — "
-        f"{bank_summary['reviewed_internal']} câu review nội bộ, "
-        f"{bank_summary['ai_reviewed_internal']} câu AI hỗ trợ rà soát, {bank_summary['template']} template, "
-        f"{bank_summary['unreviewed']} câu chưa review. Đây là backlog khác với mapping học liệu; "
-        "AI hỗ trợ rà soát không phải thẩm định chuyên gia/độc lập."
-    )
-    if role_id not in {"sales_executive", "frontend_developer_react", "data_analyst", "backend_developer_java"}:
-        st.info("Vị trí này chưa được biên tập bối cảnh và rubric theo cổng bằng chứng của nhóm demo; dùng câu hỏi như bản tham khảo chưa qua duyệt chuyên môn.")
-    else:
-        st.info("Câu hỏi nhóm demo đã có bối cảnh và rubric bản nháp AI; cần người có chuyên môn duyệt trước khi công bố là đã rà soát.")
+        st.write("Hệ thống sẽ so các từ khóa trong câu trả lời của bạn với tiêu chí chấm. Câu trả lời không được gửi cho AI và không cần khóa API. Kết quả chỉ mang tính tham khảo, chưa đánh giá đầy đủ ý nghĩa câu trả lời.")
     try:
         available_count = len(get_questions(role_id, MAX_INTERVIEW_QUESTIONS, seed=0))
     except ValueError as exc:
@@ -2061,14 +2050,14 @@ def render_interview_practice(position: dict, focus_skills=None, assessment="pre
         st.info("Chưa có câu hỏi cho vị trí này.")
         return
     prefer_reviewed = st.checkbox(
-        "Ưu tiên câu hỏi có rubric đã rà soát nội bộ / AI hỗ trợ",
+        "Ưu tiên câu hỏi đã được duyệt (nội bộ hoặc có AI hỗ trợ)",
         value=True,
         key=f"interview_prefer_reviewed_{role_id}",
-        help="Review nội bộ hoặc AI hỗ trợ chỉ giúp rà soát cấu trúc; chưa thay thế owner/chuyên gia xác nhận.",
+        help="Duyệt nội bộ hoặc có AI hỗ trợ chưa thay thế việc xác nhận của chuyên gia độc lập.",
     )
     reviewed_count = count_reviewed_questions(role_id)
     if prefer_reviewed and reviewed_count == 0:
-        st.info("Vị trí này chưa có câu hỏi đủ điều kiện review nội bộ; bộ câu hỏi tham khảo vẫn hiển thị nhãn trạng thái.")
+        st.info("Vị trí này chưa có câu hỏi nào được duyệt nội dung. Bạn vẫn có thể luyện với các câu hỏi tham khảo bên dưới.")
     context = (role_id, assessment, tuple(focus_skills or []), prefer_reviewed)
     previous = st.session_state.get("interview_session")
     if previous and previous.get("context") != context:
@@ -2104,19 +2093,31 @@ def render_interview_practice(position: dict, focus_skills=None, assessment="pre
         question_id = question["id"]
         key = f"answer_{session['batch_id']}_{question_id}"
         kind = "Tình huống" if question.get("type") == "scenario" else "Kỹ thuật"
-        duration = f" · {question['time_minutes']} phút" if question.get("time_minutes") else ""
+        duration = f" · Thời gian gợi ý: {question['time_minutes']} phút" if question.get("time_minutes") else ""
         with st.container():
-            st.caption(f"Câu {index} · {kind}{duration}")
-            st.caption("Trạng thái nội dung: " + question_quality_label(question.get("quality")))
-            if question.get("quality_note"):
-                st.caption(question["quality_note"])
+            st.caption(f"Câu {index} · Nhóm câu hỏi: {kind}{duration}")
+            try:
+                question_feedback = get_question_feedback(question_id)
+            except ValueError:
+                question_feedback = {}
+            content_reviewed = question_feedback.get("content_reviewed", False)
+            quality = question_feedback.get("quality")
+            if content_reviewed and quality == "ai_reviewed_internal":
+                quality_label = "AI hỗ trợ duyệt nội bộ; cần chuyên gia xác nhận"
+            elif content_reviewed:
+                quality_label = "Đã duyệt nội bộ; chưa được chuyên gia độc lập xác nhận"
+            elif quality == "template":
+                quality_label = "Mẫu tham khảo, chưa duyệt nội dung"
+            else:
+                quality_label = "Chưa duyệt nội dung"
+            st.markdown(f"**Trạng thái nội dung:** {quality_label}")
             st.markdown(f"**{question.get('question', '')}**")
             with st.form(f"answer_form_{session['batch_id']}_{question_id}"):
-                answer = st.text_area("Câu trả lời của bạn", key=key, height=120)
-                submitted = st.form_submit_button("Gửi câu trả lời")
+                answer = st.text_area("Câu trả lời của bạn", key=key, height=160, placeholder="Hãy chia sẻ cách bạn sẽ trả lời câu hỏi này.")
+                submitted = st.form_submit_button("Gửi câu trả lời", use_container_width=True)
             if submitted:
                 if answer.strip() and ai_mode and not active_key:
-                    st.warning("Bạn cần nhập API key Groq trước khi gửi, hoặc chuyển sang tự đánh giá theo tiêu chí.")
+                    st.error("Bạn cần nhập khóa API Groq trước khi gửi, hoặc chuyển sang tự đánh giá theo tiêu chí.")
                 elif answer.strip():
                     session.setdefault("submitted_answers", {})[question_id] = answer.strip()
                     session["llm_limit_reached_ids"] = [
@@ -2140,45 +2141,60 @@ def render_interview_practice(position: dict, focus_skills=None, assessment="pre
                     session.setdefault("reviews", {})[question_id] = review
                     st.session_state["interview_session"] = session
                 else:
-                    st.warning("Hãy nhập câu trả lời trước khi xem ý tham khảo.")
+                    st.error("Hãy nhập câu trả lời trước khi xem ý tham khảo.")
             if question_id in answered:
-                st.caption(POST_SUBMISSION_GUIDANCE_NOTICE)
+                st.write("Nhận xét có thể do AI hoặc do so khớp từ khóa. Hãy xem cách đánh giá bên dưới và tự đối chiếu với các ý tham khảo. Điểm không cho biết câu trả lời đúng hay sai.")
                 review = session.get("reviews", {}).get(question_id)
                 if review:
-                    if review["source"] != "llm" and review.get("fallback_reason") not in (None, "no_key"):
-                        st.warning("Chưa nhận được góp ý từ AI. Kết quả bên dưới chỉ đối chiếu từ khóa với tiêu chí; hãy kiểm tra key, hạn mức hoặc thử lại.")
-                    label = "Góp ý từ AI" if review["source"] == "llm" else "Tự đánh giá theo tiêu chí"
-                    st.markdown(f"**{label} · Điểm tham khảo: {review['score']:.1f}/10**")
+                    is_ai_review = review["source"] == "llm"
+                    if not is_ai_review and review.get("fallback_reason") not in (None, "no_key"):
+                        st.info("Chưa nhận được góp ý từ AI. Kết quả bên dưới chỉ đối chiếu từ khóa với tiêu chí; hãy kiểm tra khóa API, hạn mức hoặc thử lại.")
+                    label = "Góp ý từ AI" if is_ai_review else "Kết quả tự đánh giá"
+                    st.markdown(f"<div class='interview-heading'>{label}</div><div class='interview-score'>Điểm tham khảo: {review['score']:.1f}/10</div>", unsafe_allow_html=True)
                     if question_id in session.get("llm_limit_reached_ids", []):
-                        st.info("Đã đạt giới hạn 20 lần gọi LLM trong phiên; câu này được chấm offline.")
+                        st.info("Đã đạt giới hạn 20 lần gọi AI trong phiên; câu này được đối chiếu bằng từ khóa.")
                     for item in review["criteria"]:
-                        st.markdown(f"{'✓' if item['met'] else '✗'} {item['point']}")
+                        status = ("Đã thấy" if item["met"] else "Chưa thấy") if not is_ai_review else ("Có dẫn chứng" if item["met"] else "Cần xem lại")
+                        symbol = "✓" if item["met"] else "✗"
+                        color_class = "met" if item["met"] else "missing"
+                        st.markdown(f"<div class='interview-criterion {color_class}'>{symbol} {status}: {escape(item['point'])}</div>", unsafe_allow_html=True)
                         if item["evidence"]:
-                            st.caption(f"Bằng chứng: “{item['evidence']}”")
+                            st.caption(f"Dẫn chứng: “{item['evidence']}”")
                     if review["red_flags_hit"]:
-                        st.warning("Điểm cần lưu ý: " + "; ".join(review["red_flags_hit"]))
-                    st.write(review["feedback"])
-                    if review["improvement"]:
-                        st.write("Gợi ý cải thiện: " + review["improvement"])
-                    if review["source"] == "llm":
-                        st.caption(f"Nhận xét bởi {review['model']}")
+                        st.info("Điểm cần lưu ý: " + "; ".join(review["red_flags_hit"]))
+                    if is_ai_review:
+                        st.write(review["feedback"])
                     else:
-                        reasons = {"no_key": "chưa cấu hình key", "timeout": "dịch vụ phản hồi quá chậm",
-                                   "auth": "xác thực thất bại", "rate_limit": "dịch vụ giới hạn lượt gọi",
-                                   "bad_json": "phản hồi không đúng JSON", "mismatch": "phản hồi không khớp rubric",
-                                   "http_error": "dịch vụ không khả dụng"}
-                        reason = review.get("fallback_reason")
-                        detail = f" ({reasons.get(reason, 'không thể dùng LLM')})" if reason and reason != "no_key" else ""
-                        st.caption("Đối chiếu từ khóa với tiêu chí — không dùng LLM" + detail)
-                    st.caption("Điểm đo mức đạt rubric, chỉ mang tính tham khảo, không phải đánh giá tuyển dụng.")
+                        matched = sum(item["met"] for item in review["criteria"])
+                        st.write(f"Hệ thống tìm thấy từ khóa liên quan đến {matched}/{len(review['criteria'])} ý trong tiêu chí chấm. Đây chỉ là gợi ý để bạn tự rà soát, chưa xác nhận ý đúng hoặc sai.")
+                    with st.container(key=f"interview_improvement_{question_id}"):
+                        st.markdown("<div class='interview-heading'>Gợi ý cải thiện</div>", unsafe_allow_html=True)
+                        if is_ai_review:
+                            st.write(review["improvement"] or "Hãy đối chiếu từng ý với câu trả lời và bổ sung ví dụ thực tế nếu cần.")
+                        else:
+                            missing = [item["point"] for item in review["criteria"] if not item["met"]]
+                            if missing:
+                                st.write("Hãy tự kiểm tra và làm rõ các ý sau nếu câu trả lời chưa đề cập:")
+                                for point in missing:
+                                    st.markdown(f"- {point.rstrip().rstrip('.;').rstrip()}.")
+                            else:
+                                st.write("Hãy đối chiếu từng ý với câu trả lời; thêm ví dụ hoặc kết quả thực tế nếu còn thiếu.")
+                    method = ("Nhận xét được tạo bằng dịch vụ AI đã cấu hình." if is_ai_review else
+                              "Hệ thống chỉ so khớp từ khóa trong câu trả lời với tiêu chí chấm, không dùng AI.")
+                    notice = [method, "Điểm chỉ đo mức đạt tiêu chí chấm, mang tính tham khảo, không phải đánh giá tuyển dụng."]
+                    if not content_reviewed:
+                        notice.append("Câu hỏi chỉ để tham khảo, chưa qua duyệt chuyên môn.")
+                    st.warning("**Lưu ý từ hệ thống**\n\n" + "\n".join(f"- {item}" for item in notice), icon="⚠️")
+                    if is_ai_review:
+                        st.caption(f"Nhận xét bởi {review['model']}")
                 with st.expander("Tự rà soát ý nghĩa và chất lượng câu trả lời"):
-                    st.caption("Checklist tự rà soát, không tính điểm và không thay cho đánh giá của người phỏng vấn.")
+                    st.caption("Danh sách tự rà soát, không tính điểm và không thay cho đánh giá của người phỏng vấn.")
                     for review_key, label in INTERVIEW_SELF_REVIEW:
                         st.checkbox(label, key=f"self_review_{session['batch_id']}_{question_id}_{review_key}")
                 try:
                     feedback = get_question_feedback(question_id)
                 except ValueError as exc:
-                    st.warning(str(exc))
+                    st.info(str(exc))
                     continue
                 has_answer = feedback.get("has_reference_answer", bool(feedback.get("reference_answer")))
                 is_scenario = feedback.get("question_type") == "scenario"
@@ -2188,11 +2204,11 @@ def render_interview_practice(position: dict, focus_skills=None, assessment="pre
                 else:
                     st.markdown("**Khung trả lời tham khảo**")
                 if not feedback.get("content_reviewed"):
-                    st.info("Câu hỏi/đáp án này chưa được review đầy đủ. Hãy kiểm chứng phần kiến thức chuyên môn bằng tài liệu phù hợp và chỉnh ví dụ theo trải nghiệm của bạn.")
+                    st.info("Câu hỏi và đáp án này chưa được duyệt đầy đủ. Hãy kiểm chứng phần kiến thức chuyên môn bằng tài liệu phù hợp và chỉnh ví dụ theo trải nghiệm của bạn.")
                 elif feedback.get("quality") == "ai_reviewed_internal":
-                    st.info("Khung này được AI hỗ trợ rà soát nội bộ; chưa được chuyên gia độc lập xác nhận. Hãy đối chiếu nguồn và kinh nghiệm thực tế.")
+                    st.info("Khung này được AI hỗ trợ duyệt nội bộ; chưa được chuyên gia độc lập xác nhận. Hãy đối chiếu nguồn và kinh nghiệm thực tế.")
                 elif feedback.get("quality_sources"):
-                    st.caption("Nguồn tham khảo khi review nội bộ:")
+                    st.caption("Nguồn tham khảo khi duyệt nội bộ:")
                     for source in feedback["quality_sources"]:
                         st.markdown(f"- {source}")
                 st.markdown(feedback["reference_answer"])
@@ -2201,8 +2217,8 @@ def render_interview_practice(position: dict, focus_skills=None, assessment="pre
                     for point in feedback["good_answer_points"]:
                         st.markdown(f"- {point}")
                 if feedback["red_flags"]:
-                    st.caption(STATIC_SELF_REVIEW_TITLE)
-                    st.caption(STATIC_SELF_REVIEW_NOTICE)
+                    st.caption("Danh sách tự rà soát của câu hỏi")
+                    st.caption("Các điểm dưới đây là gợi ý có sẵn theo câu hỏi, không được suy ra từ câu trả lời vừa gửi và không phải kết quả đánh giá.")
                     for flag in feedback["red_flags"]:
                         st.markdown(f"- {flag}")
 

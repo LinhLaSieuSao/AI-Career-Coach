@@ -2637,3 +2637,65 @@ body.career-menu-open [data-testid="stMain"] {
   color: #475569 !important;
   line-height: 1.5 !important;
 }
+
+/* Interview practice: three readable type levels, scoped to this tab. */
+.st-key-interview_practice {
+  --interview-heading-size: var(--font-cap1-size, 1.15rem);
+  --interview-body-size: var(--font-cap2-size, 1.02rem);
+  --interview-note-size: 0.95rem;
+  color: #172b3a;
+  min-width: 0;
+}
+.st-key-interview_practice p,
+.st-key-interview_practice li,
+.st-key-interview_practice textarea,
+.st-key-interview_practice input,
+.st-key-interview_practice button,
+.st-key-interview_practice [data-testid="stRadio"] label,
+.st-key-interview_practice [data-testid="stCheckbox"] label {
+  font-size: var(--interview-body-size) !important;
+  line-height: 1.55 !important;
+  overflow-wrap: anywhere;
+}
+.st-key-interview_practice [data-testid="stWidgetLabel"] p {
+  font-size: var(--interview-heading-size) !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+}
+.st-key-interview_practice [data-testid="stCaptionContainer"] p,
+.st-key-interview_practice .stCaption p {
+  font-size: var(--interview-note-size) !important;
+  color: #34495a !important;
+  line-height: 1.55 !important;
+}
+.st-key-interview_practice [data-testid="stAlert"] p,
+.st-key-interview_practice [data-testid="stAlert"] li {
+  font-size: var(--interview-body-size) !important;
+  color: #172b3a !important;
+}
+.st-key-interview_practice button {
+  min-height: 48px;
+  white-space: normal;
+}
+.st-key-interview_practice .interview-heading,
+.st-key-interview_practice .interview-score {
+  color: #172b3a;
+  font-size: var(--interview-heading-size);
+  font-weight: 700;
+  line-height: 1.5;
+}
+.st-key-interview_practice .interview-score { font-size: 1.4rem; }
+.st-key-interview_practice .interview-criterion {
+  font-size: var(--interview-body-size);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.st-key-interview_practice .interview-criterion.met { color: #166534; }
+.st-key-interview_practice .interview-criterion.missing { color: #9a3412; }
+.st-key-interview_practice [class*="st-key-interview_improvement_"] {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 0.65rem;
+  padding: 1rem;
+  min-width: 0;
+}

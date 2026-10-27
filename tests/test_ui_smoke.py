@@ -391,13 +391,13 @@ def test_interview_modes_keep_offline_and_ai_distinct(monkeypatch):
     _field(app, "Câu trả lời của bạn").input("Câu trả lời thử.")
     next(button for button in app.button if button.label == "Gửi câu trả lời").click().run()
     assert calls[-1]["api_key"] == ""
-    assert "Tự đánh giá theo tiêu chí" in _markdown(app)
+    assert "Kết quả tự đánh giá" in _markdown(app)
 
     app.radio(key="interview_review_mode").set_value("Nhận góp ý từ AI").run()
     before = len(calls)
     next(button for button in app.button if button.label == "Gửi câu trả lời").click().run()
     assert len(calls) == before
-    assert any("cần nhập API key" in item.value for item in app.warning)
+    assert any("cần nhập khóa API" in item.value for item in app.error)
     app.text_input(key="llm_cfg_api_key").input("key-thu").run()
     next(button for button in app.button if button.label == "Gửi câu trả lời").click().run()
     assert calls[-1]["api_key"] == "key-thu"
@@ -418,8 +418,8 @@ def test_interview_submission_shows_offline_review_without_network(monkeypatch):
     )
     next(button for button in app.button if button.label == "Gửi câu trả lời").click().run()
     assert not app.exception
-    assert "Tự đánh giá theo tiêu chí · Điểm tham khảo" in _markdown(app)
-    assert "không dùng LLM" in " ".join(item.value for item in app.caption)
+    assert "Kết quả tự đánh giá" in _markdown(app) and "Điểm tham khảo" in _markdown(app)
+    assert "không dùng AI" in " ".join(item.value for item in app.warning)
     review = next(iter(app.session_state["interview_session"]["reviews"].values()))
     assert review["source"] == "offline_rubric"
     app.run()

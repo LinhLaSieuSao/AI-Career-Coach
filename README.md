@@ -130,7 +130,7 @@ python3.12 -m venv .venv
 
 Mở **http://localhost:8501**, nhập hồ sơ hoặc chọn hồ sơ mẫu, rà soát kỹ năng và level rồi xem lần lượt năm tab. Có thể chạy `python scripts/demo_smoke.py` để chạy test rồi mở web, `--test-only` để chỉ kiểm thử, hoặc `--web-only` để chỉ mở web. Dùng `--no-browser` nếu muốn tự mở địa chỉ được in ra. Giữ terminal mở khi dùng web và nhấn Ctrl+C để dừng.
 
-- Trong phần **Luyện phỏng vấn**, chọn **Tự đánh giá theo tiêu chí** để đối chiếu từ khóa với rubric mà không cần key hoặc gửi câu trả lời tới LLM. Cách này không đánh giá đầy đủ ý nghĩa câu trả lời.
+- Trong phần **Luyện phỏng vấn**, chọn **Tự đánh giá theo tiêu chí** để đối chiếu từ khóa mà không cần khóa API hoặc gửi câu trả lời tới AI. Kết quả hiển thị từng ý đã thấy hoặc chưa thấy, gợi ý cải thiện và các giới hạn của điểm tham khảo. Cách này không đánh giá đầy đủ ý nghĩa câu trả lời.
 - Để **Nhận góp ý từ AI**, đăng nhập [Groq Console](https://console.groq.com/), tạo key tại [API Keys](https://console.groq.com/keys) và dán vào ô API key Groq trên trang. Key thuộc tài khoản của người dùng, không đưa vào repo; hạn mức và chi phí tùy tài khoản. Câu hỏi, tiêu chí và câu trả lời được gửi tới Groq; không nhập thông tin nhạy cảm.
 - Key được giữ trong phiên ứng dụng. Không gửi key qua chat, chia sẻ key hoặc đưa key vào mã nguồn. Ứng dụng gọi `openai/gpt-oss-120b` qua API Groq; cần quyền sử dụng mô hình này trên tài khoản Groq.
 
