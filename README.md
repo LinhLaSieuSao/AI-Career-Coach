@@ -79,11 +79,11 @@ Trên macOS/Linux thay hai lệnh đầu bằng `python3.12 -m venv .venv` và `
 
 ## Bật nhận xét AI
 
-- Trong mục **Cấu hình nhận xét AI** của phần Luyện phỏng vấn, dán API key và chọn base URL/model. Key chỉ giữ trong phiên Streamlit.
-- Đặt `LLM_API_KEY`, `LLM_BASE_URL`, `LLM_MODEL` trong môi trường hoặc `st.secrets`. Ví dụ PowerShell: `$env:LLM_API_KEY="..."`; bash: `export LLM_API_KEY="..."`. Docker Compose chuyển tiếp ba biến này; xem `.env.example` để biết URL mẫu. Mặc định dùng Groq `https://api.groq.com/openai/v1` và model `llama-3.3-70b-versatile`.
-- Với Ollama local, dùng base URL `http://localhost:11434/v1` và model có sẵn trong Ollama; không cần key.
+- Trong phần **Luyện phỏng vấn**, chọn **Tự đánh giá theo tiêu chí** để đối chiếu từ khóa với rubric mà không cần key hoặc gửi câu trả lời tới LLM. Cách này không đánh giá đầy đủ ý nghĩa câu trả lời.
+- Để **Nhận góp ý từ AI**, đăng nhập [Groq Console](https://console.groq.com/), tạo key tại [API Keys](https://console.groq.com/keys) và dán vào ô API key Groq trên trang. Key thuộc tài khoản của người dùng, không đưa vào repo; hạn mức và chi phí tùy tài khoản. Câu hỏi, tiêu chí và câu trả lời được gửi tới Groq; không nhập thông tin nhạy cảm.
+- Key được giữ trong phiên ứng dụng. Không gửi key qua chat, chia sẻ key hoặc đưa key vào mã nguồn. Ứng dụng gọi `openai/gpt-oss-120b` qua API Groq; cần quyền sử dụng mô hình này trên tài khoản Groq.
 
-Không có key vẫn dùng được phần phỏng vấn với chấm offline. Dịch vụ LLM lỗi cũng tự chuyển sang offline. Tối đa 20 lượt nhận xét qua LLM trong một phiên; câu trả lời được cắt còn 3.000 ký tự trước khi gửi.
+Nếu dịch vụ AI lỗi, ứng dụng ghi rõ kết quả dự phòng chỉ đối chiếu từ khóa, không phải nhận xét của LLM. Tối đa 20 lượt nhận xét qua LLM trong một phiên; câu trả lời được cắt còn 3.000 ký tự trước khi gửi. Module vẫn hỗ trợ cấu hình API và Ollama cho các tích hợp khác; giao diện web hai chế độ sử dụng key Groq do người dùng nhập.
 
 `requirements.txt` liệt kê thư viện web, `requirements-dev.txt` thêm pytest/ruff, `requirements-ai.txt` dành cho mở rộng sau này. Lock duy nhất chứa cả runtime và công cụ kiểm thử để ba môi trường dùng cùng phiên bản.
 

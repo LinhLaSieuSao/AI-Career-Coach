@@ -3,6 +3,7 @@
   "description": "A skill-by-skill learning overlay that links to academic/OER sources and applied work; text is not redistributed.",
   "sources": {
     "data": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Principles of Data Science · Using Technology for Data Science",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/principles-data-science/pages/1-4-using-technology-for-data-science",
@@ -12,6 +13,7 @@
       "access": "free_open_access"
     },
     "stats": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Principles of Data Science · Statistics and Probability",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/principles-data-science/pages/3-introduction",
@@ -21,6 +23,7 @@
       "access": "free_open_access"
     },
     "python": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Introduction to Python Programming",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/introduction-python-programming/pages/1-introduction",
@@ -30,6 +33,7 @@
       "access": "free_open_access"
     },
     "java": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Java, Java, Java: Object-Oriented Problem Solving",
       "provider": "Open Textbook Library · University of Minnesota",
       "url": "https://open.umn.edu/opentextbooks/textbooks/218",
@@ -39,6 +43,7 @@
       "access": "free_open_access"
     },
     "csharp": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "C# Yellow Book",
       "provider": "Rob Miles · giáo trình khóa lập trình năm nhất tại University of Hull",
       "url": "https://www.robmiles.com/c-yellow-book",
@@ -48,6 +53,7 @@
       "access": "free_open_access"
     },
     "cs": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Introductory Programming",
       "provider": "MIT OpenCourseWare",
       "url": "https://ocw.mit.edu/collections/introductory-programming/",
@@ -57,6 +63,7 @@
       "access": "free_open_access"
     },
     "se": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Software Engineering · Introduction to Engineering Concepts",
       "provider": "MIT OpenCourseWare",
       "url": "https://ocw.mit.edu/courses/res.ll-004-ll-educate-introduction-to-engineering-concepts-spring-2022/pages/software-engineering/",
@@ -66,6 +73,7 @@
       "access": "free_open_access"
     },
     "db": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Database Design, 2nd Edition",
       "provider": "Open Textbook Library · University of Minnesota",
       "url": "https://open.umn.edu/opentextbooks/textbooks/database-design-2nd-edition",
@@ -75,6 +83,7 @@
       "access": "free_open_access"
     },
     "network": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "An Introduction to Computer Networks",
       "provider": "Open Textbook Library · University of Minnesota",
       "url": "https://open.umn.edu/opentextbooks/textbooks/353",
@@ -84,6 +93,7 @@
       "access": "free_open_access"
     },
     "is": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Foundations of Information Systems",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/foundations-information-systems/pages/1-1-introduction-to-information-systems",
@@ -93,6 +103,7 @@
       "access": "free_open_access"
     },
     "office": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Workplace Software and Skills",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/workplace-software-skills/pages/preface",
@@ -102,6 +113,7 @@
       "access": "free_open_access"
     },
     "ml": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Dive into Deep Learning",
       "provider": "D2L · giáo trình mở do nhà nghiên cứu/giảng viên biên soạn",
       "url": "https://d2l.ai/",
@@ -111,6 +123,7 @@
       "access": "free_open_access"
     },
     "business": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Fundamentals of Business, 4th Edition",
       "provider": "Open Textbook Library · University of Minnesota; Virginia Tech",
       "url": "https://open.umn.edu/opentextbooks/textbooks/319",
@@ -120,6 +133,7 @@
       "access": "free_open_access"
     },
     "management": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Principles of Management",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/principles-management/pages/1-introduction",
@@ -129,6 +143,7 @@
       "access": "free_open_access"
     },
     "org": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Organizational Behavior",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/organizational-behavior/pages/1-introduction",
@@ -138,6 +153,7 @@
       "access": "free_open_access"
     },
     "marketing": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Principles of Marketing",
       "provider": "Open Textbook Library · University of Minnesota",
       "url": "https://open.umn.edu/opentextbooks/textbooks/1325",
@@ -147,6 +163,7 @@
       "access": "free_open_access"
     },
     "acct": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Principles of Financial Accounting",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements",
@@ -156,6 +173,7 @@
       "access": "free_open_access"
     },
     "acct_managerial": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Principles of Managerial Accounting",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/principles-managerial-accounting/pages/preface",
@@ -165,6 +183,7 @@
       "access": "free_open_access"
     },
     "finance": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Principles of Finance",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/principles-finance/pages/preface",
@@ -174,6 +193,7 @@
       "access": "free_open_access"
     },
     "economics": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Principles of Economics 3e",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/principles-economics-3e/pages/1-introduction",
@@ -183,6 +203,8 @@
       "access": "free_open_access"
     },
     "law": {
+      "practice_access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP; không xác nhận nội dung, tính thời sự hoặc quyền sử dụng."},
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Business Law and the Legal Environment",
       "provider": "Open Textbook Library · University of Minnesota",
       "url": "https://open.umn.edu/opentextbooks/textbooks/business-law-and-the-legal-environment",
@@ -195,6 +217,7 @@
       "jurisdiction": "US"
     },
     "supply": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Inventory Analytics",
       "provider": "Open Textbook Library · University of Minnesota; University of Edinburgh Business School",
       "url": "https://open.umn.edu/opentextbooks/textbooks/1008",
@@ -204,6 +227,8 @@
       "access": "free_open_access"
     },
     "nursing": {
+      "practice_access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP; không xác nhận nội dung, tính thời sự hoặc quyền sử dụng."},
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Clinical Nursing Skills · Nursing Assessment",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/clinical-nursing-skills/pages/24-3-nursing-assessment",
@@ -215,6 +240,7 @@
       "practice_title": "Đánh giá năng lực trong chương trình điều dưỡng"
     },
     "clinical": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Clinical Methods: The History, Physical, and Laboratory Examinations",
       "provider": "NCBI Bookshelf · National Library of Medicine",
       "url": "https://www.ncbi.nlm.nih.gov/books/NBK201/",
@@ -224,6 +250,7 @@
       "access": "free_open_access"
     },
     "pharmacy": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Public Health in Pharmacy Practice: A Casebook, 2nd Edition",
       "provider": "Open Textbook Library · University of Minnesota",
       "url": "https://open.umn.edu/opentextbooks/textbooks/public-health-in-pharmacy-practice-a-casebook",
@@ -233,6 +260,7 @@
       "access": "free_open_access"
     },
     "education": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Educational Psychology",
       "provider": "Nicole Arduini-Van Hoose · Hudson Valley Community College",
       "url": "https://open.umn.edu/opentextbooks/textbooks/educational-psychology-2020",
@@ -242,6 +270,7 @@
       "access": "free_open_access"
     },
     "communication": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Introduction to Professional Communications",
       "provider": "BCcampus Open Education",
       "url": "https://pressbooks.bccampus.ca/professionalcomms/",
@@ -251,6 +280,7 @@
       "access": "free_open_access"
     },
     "english": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Advanced Academic Grammar for ESL Students",
       "provider": "Open Textbook Library · University of Minnesota",
       "url": "https://open.umn.edu/opentextbooks/textbooks/advanced-academic-grammar-for-esl-students",
@@ -260,6 +290,7 @@
       "access": "free_open_access"
     },
     "math": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Algebra and Trigonometry",
       "provider": "OpenStax · Rice University",
       "url": "https://openstax.org/books/algebra-and-trigonometry/pages/preface",
@@ -269,6 +300,7 @@
       "access": "free_open_access"
     },
     "design": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Graphic Design and Print Production Fundamentals",
       "provider": "BCcampus · British Columbia Institute of Technology và Emily Carr University",
       "url": "https://open.umn.edu/opentextbooks/textbooks/graphic-design-and-print-production-fundamentals",
@@ -278,6 +310,7 @@
       "access": "free_open_access"
     },
     "ux": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Textbook of Usability",
       "provider": "Open-access usability textbook",
       "url": "https://www.textbookofusability.com/",
@@ -287,6 +320,7 @@
       "access": "free_open_access"
     },
     "media": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Moving Pictures: An Introduction to Cinema",
       "provider": "Russell Leigh Sharman · University of Arkansas",
       "url": "https://open.umn.edu/opentextbooks/textbooks/moving-pictures-an-introduction-to-cinema",
@@ -296,6 +330,7 @@
       "access": "free_open_access"
     },
     "electrical": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Electrical Engineering · OER by Discipline Guide",
       "provider": "eCampusOntario Pressbooks",
       "url": "https://ecampusontario.pressbooks.pub/oerdiscipline/chapter/electrical-engineering/",
@@ -305,6 +340,7 @@
       "access": "free_open_access"
     },
     "mechanical": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Introduction to Mechanical Design and Manufacturing",
       "provider": "University of Arkansas · Open Textbook Library",
       "url": "https://open.umn.edu/opentextbooks/textbooks/introduction-to-mechanical-design-and-manufacturing",
@@ -314,6 +350,8 @@
       "access": "free_open_access"
     },
     "construction": {
+      "practice_access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP; không xác nhận nội dung, tính thời sự hoặc quyền sử dụng."},
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Construction Technology I",
       "provider": "University of Cape Town · OpenUCT",
       "url": "https://open.uct.ac.za/handle/11427/2507",
@@ -325,6 +363,7 @@
       "practice_title": "Tra cứu quy định xây dựng Việt Nam hiện hành"
     },
     "tourism": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Introduction to Tourism and Hospitality in BC",
       "provider": "Open Textbook Library · University of Minnesota; BCcampus",
       "url": "https://open.umn.edu/opentextbooks/textbooks/introduction-to-tourism-and-hospitality-in-bc",
@@ -334,6 +373,8 @@
       "access": "free_open_access"
     },
     "safety": {
+      "practice_access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP; không xác nhận nội dung, tính thời sự hoặc quyền sử dụng."},
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Health and Safety in Canadian Workplaces",
       "provider": "Athabasca University Press · Open Textbook Library",
       "url": "https://open.umn.edu/opentextbooks/textbooks/health-and-safety-in-canadian-workplaces",
@@ -345,6 +386,8 @@
       "practice_title": "Tra cứu quy định an toàn Việt Nam hiện hành"
     },
     "environment": {
+      "practice_access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP; không xác nhận nội dung, tính thời sự hoặc quyền sử dụng."},
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Sustainability: A Comprehensive Foundation",
       "provider": "Open Textbook Library · University of Illinois faculty",
       "url": "https://open.umn.edu/opentextbooks/textbooks/96",
@@ -356,6 +399,7 @@
       "practice_title": "Tra cứu quy định môi trường Việt Nam hiện hành"
     },
     "quality": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Quality Control 1: Introduction to QC Tools and Techniques",
       "provider": "Penerbit UTHM · Universiti Tun Hussein Onn Malaysia",
       "url": "https://publisher.uthm.edu.my/omp/index.php/penerbituthm/catalog/book/449",
@@ -365,6 +409,7 @@
       "access": "free_open_access"
     },
     "culture": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 200, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "Perspectives: An Open Invitation to Cultural Anthropology · 2nd Edition",
       "provider": "American Anthropological Association · Open Textbook Library",
       "url": "https://open.umn.edu/opentextbooks/textbooks/464",
@@ -374,6 +419,7 @@
       "access": "free_open_access"
     },
     "feng_shui": {
+      "access_check": {"checked_at": "2026-10-27", "method": "GET", "http_status": 429, "scope": "Chỉ kiểm tra phản hồi HTTP sau chuyển hướng; không xác nhận nội dung phù hợp hoặc quyền sử dụng."},
       "title": "An Introduction to Feng Shui · A Brief History of Feng Shui",
       "provider": "Cambridge University Press",
       "url": "https://www.cambridge.org/core/books/abs/an-introduction-to-feng-shui/brief-history-of-feng-shui/463E07D18D67257B821EE9AC062B6F9D",
@@ -381,6 +427,309 @@
       "scope": "Chương học thuật về lịch sử và ý nghĩa văn hóa của phong thủy; không xác nhận các tuyên bố siêu nhiên hay hiệu quả khoa học.",
       "basis": "Chương sách học thuật do Cambridge University Press phát hành; nội dung lịch sử/văn hóa, không phải hướng dẫn kỹ thuật xây dựng.",
       "access": "may_require_library_or_paid_access"
+    }
+  },
+  "practice_tracks": {
+    "programming": {
+      "sources": [
+        "cs",
+        "python",
+        "java",
+        "csharp"
+      ],
+      "title": "Tạo và kiểm tra một ví dụ nhỏ",
+      "framing": "Luyện {skill} trong một ứng dụng hoặc đoạn mã nhỏ, dùng dữ liệu giả lập.",
+      "steps": [
+        "Chọn một yêu cầu nhỏ có thể hoàn thành bằng {skill}; ghi đầu vào và kết quả mong đợi trước khi viết mã.",
+        "Tạo ví dụ tối thiểu và ghi cách chạy cùng phiên bản công cụ; không dùng thông tin bí mật hoặc dữ liệu thật.",
+        "Thử một trường hợp bình thường và một đầu vào sai hoặc thiếu; so sánh kết quả với điều mong đợi.",
+        "Giải thích lựa chọn, ghi giới hạn và nhờ người khác đọc hoặc chạy lại ví dụ."
+      ],
+      "evidence": "Mã ví dụ, hướng dẫn chạy và kết quả kiểm tra."
+    },
+    "software": {
+      "sources": [
+        "se"
+      ],
+      "title": "Thiết kế và kiểm tra một yêu cầu",
+      "framing": "Thực hành {skill} với một chức năng giả lập và đầu ra có thể kiểm tra.",
+      "steps": [
+        "Chọn một chức năng nhỏ và viết mục tiêu, người dùng cùng điều kiện hoàn thành.",
+        "Áp dụng {skill} để tạo đầu ra phù hợp, chẳng hạn yêu cầu, sơ đồ, kiểm thử hoặc mã ví dụ.",
+        "Kiểm tra một trường hợp thông thường và một trường hợp biên; ghi điểm chưa rõ hoặc rủi ro.",
+        "Nhờ người khác đọc hoặc thử đầu ra, ghi phản hồi và điều chỉnh."
+      ],
+      "evidence": "Mô tả yêu cầu, sản phẩm thực hành và kết quả kiểm tra."
+    },
+    "infrastructure": {
+      "sources": [
+        "is",
+        "network"
+      ],
+      "title": "Thử trên môi trường mô phỏng",
+      "framing": "Luyện {skill} trong môi trường riêng được phép, không thao tác lên hệ thống thật.",
+      "steps": [
+        "Ghi mục tiêu và sơ đồ môi trường thử, xác định rõ hệ thống và tài khoản được phép sử dụng.",
+        "Dựng ví dụ nhỏ hoặc mô phỏng tình huống liên quan đến {skill}; dùng cấu hình và dữ liệu giả lập.",
+        "Ghi một cách xác minh kết quả, trường hợp lỗi và cách khôi phục; tránh công bố mật khẩu hoặc khóa.",
+        "Tóm tắt kết quả và giới hạn; nhờ người có kinh nghiệm rà soát trước khi áp dụng thực tế."
+      ],
+      "evidence": "Sơ đồ môi trường, cấu hình đã ẩn thông tin nhạy cảm và ghi chú kiểm tra."
+    },
+    "data": {
+      "sources": [
+        "data",
+        "ml",
+        "stats",
+        "math",
+        "db"
+      ],
+      "title": "Phân tích một bài toán với dữ liệu giả lập",
+      "framing": "Áp dụng {skill} cho một câu hỏi cụ thể, kiểm tra kết quả và trình bày giới hạn.",
+      "steps": [
+        "Chọn câu hỏi cần trả lời và chuẩn bị dữ liệu giả lập; mô tả các trường và kết quả mong đợi.",
+        "Áp dụng {skill} để xử lý hoặc phân tích dữ liệu; ghi các bước và giả định.",
+        "Kiểm tra dữ liệu thiếu, một trường hợp bất thường và đối chiếu một kết quả bằng cách độc lập.",
+        "Trình bày điều quan sát được, điều chưa thể kết luận và bước kiểm tra tiếp theo."
+      ],
+      "evidence": "Dữ liệu giả lập, các bước xử lý, một kết quả đã đối chiếu và giới hạn."
+    },
+    "campaign": {
+      "sources": [
+        "marketing"
+      ],
+      "title": "Xây dựng và đánh giá một phương án",
+      "framing": "Thực hành kỹ năng {skill} qua tình huống về một sản phẩm và nhóm khách hàng giả lập.",
+      "steps": [
+        "Xác định khách hàng, nhu cầu và mục tiêu cụ thể của tình huống giả lập.",
+        "Chuẩn bị một phương án để luyện kỹ năng này, chẳng hạn kịch bản tiếp cận, nội dung hoặc cách theo dõi khách hàng phù hợp với mục tiêu.",
+        "Chọn một tiêu chí đánh giá, dự kiến cách thu thập phản hồi và nêu giả định hoặc dữ liệu còn thiếu.",
+        "Nhờ người khác góp ý, sửa phương án và giải thích lựa chọn của bạn."
+      ],
+      "evidence": "Phương án hoặc kịch bản, tiêu chí đánh giá và bản chỉnh sửa theo phản hồi."
+    },
+    "business": {
+      "sources": [
+        "business",
+        "management",
+        "economics"
+      ],
+      "title": "Giải quyết một tình huống công việc",
+      "framing": "Thực hành kỹ năng {skill} qua một tình huống công việc giả lập.",
+      "steps": [
+        "Mô tả vấn đề, mục tiêu, người liên quan và thông tin đang có.",
+        "Chuẩn bị phương án hoặc bản phân tích cho tình huống, vận dụng kỹ năng này; ghi rõ giả định và dữ liệu còn thiếu.",
+        "So sánh ít nhất hai lựa chọn theo tác động, nguồn lực hoặc rủi ro phù hợp với tình huống.",
+        "Nêu cách theo dõi kết quả, xin phản hồi và điều chỉnh phương án."
+      ],
+      "evidence": "Bản mô tả tình huống, phương án, lý do lựa chọn và phản hồi."
+    },
+    "people": {
+      "sources": [
+        "org",
+        "communication"
+      ],
+      "title": "Luyện qua tình huống và phản hồi",
+      "framing": "Thực hành {skill} với bạn học hoặc trong một tình huống công việc mô phỏng.",
+      "steps": [
+        "Chọn một tình huống cụ thể, người tham gia và điều bạn muốn đạt được.",
+        "Viết hoặc diễn tập cách bạn sử dụng {skill}; chú ý lắng nghe và giải thích lựa chọn.",
+        "Xin phản hồi về một hành động cụ thể: điều gì dễ hiểu, điều gì cần thay đổi và vì sao.",
+        "Thử lại sau phản hồi và ghi sự khác biệt quan sát được, không tự suy ra đã thành thạo."
+      ],
+      "evidence": "Kịch bản, phản hồi cụ thể và ghi chú thay đổi sau lần thử lại."
+    },
+    "legal": {
+      "sources": [
+        "law"
+      ],
+      "title": "Tìm và đối chiếu nguồn cho tình huống giả lập",
+      "framing": "Luyện {skill} qua nghiên cứu tình huống; không coi bài tập là tư vấn pháp lý hoặc thay thế người có chuyên môn.",
+      "steps": [
+        "Mô tả tình huống giả lập, bên liên quan và câu hỏi cần làm rõ; không đưa dữ liệu cá nhân thật.",
+        "Tìm nguồn chính thức phù hợp với địa phương và thời điểm áp dụng, ghi tên nguồn, ngày truy cập và phạm vi.",
+        "Đối chiếu các điều kiện với tình huống, liệt kê điều chưa rõ và thông tin cần bổ sung; không tự kết luận khi chưa đủ căn cứ.",
+        "Nhờ người có chuyên môn rà lại phân tích trước khi sử dụng trong công việc thực tế."
+      ],
+      "evidence": "Tình huống giả lập, danh sách nguồn, câu hỏi còn mở và phản hồi chuyên môn."
+    },
+    "health": {
+      "sources": [
+        "nursing",
+        "pharmacy",
+        "clinical"
+      ],
+      "title": "Phân tích tình huống học tập có hướng dẫn",
+      "framing": "Tìm hiểu {skill} qua tình huống giả lập; không tự chẩn đoán, kê đơn hoặc thực hiện thủ thuật trên người thật.",
+      "steps": [
+        "Mô tả tình huống giả lập và mục tiêu học tập, không sử dụng hồ sơ bệnh nhân thật.",
+        "Tìm tài liệu hướng dẫn phù hợp với chương trình đào tạo và quy định hiện hành; ghi nguồn và phạm vi.",
+        "Liệt kê thông tin cần hỏi, dấu hiệu cần chuyển cho người có chuyên môn và các câu hỏi còn chưa chắc chắn.",
+        "Thảo luận phương án với giảng viên hoặc người hướng dẫn đủ chuyên môn; chỉ thực hành khi được đào tạo và giám sát."
+      ],
+      "evidence": "Bản phân tích tình huống, nguồn tham khảo và nhận xét của người hướng dẫn."
+    },
+    "safety": {
+      "sources": [
+        "safety",
+        "electrical",
+        "mechanical",
+        "construction",
+        "environment"
+      ],
+      "title": "Đánh giá tình huống kỹ thuật an toàn",
+      "framing": "Tìm hiểu {skill} bằng sơ đồ hoặc dữ liệu mô phỏng; thao tác thực tế cần đào tạo và giám sát phù hợp.",
+      "steps": [
+        "Mô tả công việc giả lập, điều kiện vận hành và người chịu trách nhiệm.",
+        "Lập sơ đồ, bản vẽ hoặc bảng kiểm thể hiện phần liên quan đến {skill}; ghi nguồn và các giả định.",
+        "Nhận diện rủi ro, thông tin còn thiếu và điểm cần người đủ chuyên môn kiểm tra trước khi thao tác.",
+        "Trao đổi với người hướng dẫn về phương án, giới hạn và cách xác minh; không tự vận hành thiết bị hoặc công trình."
+      ],
+      "evidence": "Sơ đồ hoặc bảng kiểm mô phỏng, giả định và phản hồi của người hướng dẫn."
+    },
+    "finance": {
+      "sources": [
+        "finance",
+        "acct",
+        "acct_managerial"
+      ],
+      "title": "Đọc và kiểm tra số liệu tài chính giả lập",
+      "framing": "Luyện {skill} với số liệu giả lập; các kết luận thực tế cần nguồn và người có chuyên môn kiểm tra.",
+      "steps": [
+        "Chuẩn bị một bảng số liệu giả lập và ghi mục tiêu phân tích, đơn vị tính cùng khoảng thời gian.",
+        "Áp dụng {skill} để lập bảng hoặc tính một chỉ số phù hợp; ghi công thức và giả định.",
+        "Đối chiếu ít nhất một con số với dữ liệu gốc, kiểm tra khoản thiếu hoặc cách phân loại khác nhau.",
+        "Giải thích kết quả và giới hạn; đối chiếu quy định hiện hành với người đủ chuyên môn khi áp dụng thực tế."
+      ],
+      "evidence": "Bảng tính giả lập, công thức, phép đối chiếu và ghi chú giới hạn."
+    },
+    "supply": {
+      "sources": [
+        "supply"
+      ],
+      "title": "Lập phương án chuỗi cung ứng mô phỏng",
+      "framing": "Thực hành kỹ năng {skill} qua tình huống về đơn hàng hoặc kho hàng giả lập.",
+      "steps": [
+        "Nêu mục tiêu, các bên liên quan và số liệu giả lập như số lượng, thời gian hoặc tồn kho.",
+        "Lập phương án cho tình huống, vận dụng kỹ năng này; ghi giả định và trách nhiệm của từng bên.",
+        "Kiểm tra một tình huống phát sinh, chẳng hạn chậm hàng hoặc sai số lượng, và đề xuất cách xử lý.",
+        "Đối chiếu số liệu trước/sau và ghi thông tin cần xác nhận với bên liên quan."
+      ],
+      "evidence": "Bảng kế hoạch, số liệu giả lập, tình huống phát sinh và cách xử lý."
+    },
+    "design": {
+      "sources": [
+        "design",
+        "ux"
+      ],
+      "title": "Thiết kế và nhận phản hồi",
+      "framing": "Áp dụng {skill} để giải quyết một nhu cầu của người dùng giả lập.",
+      "steps": [
+        "Mô tả người dùng, nhu cầu và mục tiêu của sản phẩm hoặc màn hình giả lập.",
+        "Tạo bản nháp, sơ đồ hoặc mẫu phù hợp với {skill}; ghi lý do cho các lựa chọn chính.",
+        "Nhờ một người thử xem hoặc sử dụng, quan sát chỗ khó hiểu và hỏi họ muốn làm gì.",
+        "Điều chỉnh bản nháp theo phản hồi và ghi điều vẫn cần kiểm chứng."
+      ],
+      "evidence": "Bản nháp trước/sau, mục tiêu thiết kế và ghi chú phản hồi."
+    },
+    "media": {
+      "sources": [
+        "media"
+      ],
+      "title": "Tạo một nội dung truyền thông ngắn",
+      "framing": "Luyện {skill} bằng nội dung tự tạo hoặc tài sản được phép sử dụng.",
+      "steps": [
+        "Chọn người xem, thông điệp và định dạng phù hợp cho một nội dung ngắn.",
+        "Lập dàn ý hoặc kịch bản, sau đó tạo bản nháp thể hiện {skill} bằng tài sản tự tạo hoặc được phép sử dụng.",
+        "Xem lại âm thanh, hình ảnh, chữ và tính dễ hiểu; ghi nguồn cho tài sản bên ngoài nếu có.",
+        "Xin phản hồi về thông điệp và chỉnh sửa một lần, lưu bản trước và sau."
+      ],
+      "evidence": "Kịch bản, bản nháp, nguồn tài sản và nội dung đã chỉnh sửa."
+    },
+    "education": {
+      "sources": [
+        "education"
+      ],
+      "title": "Chuẩn bị một hoạt động học tập",
+      "framing": "Luyện {skill} với bài học hoặc lớp học giả lập.",
+      "steps": [
+        "Chọn đối tượng học và một mục tiêu cụ thể có thể quan sát.",
+        "Thiết kế hoạt động ngắn áp dụng {skill}, kèm tài liệu và câu hỏi kiểm tra phù hợp.",
+        "Dạy thử hoặc giải thích cho bạn học; quan sát phần khó hiểu và nhận phản hồi.",
+        "Chỉnh hoạt động và ghi điều cần hỗ trợ thêm từ giảng viên có kinh nghiệm."
+      ],
+      "evidence": "Kế hoạch hoạt động, câu hỏi kiểm tra và phản hồi sau khi dạy thử."
+    },
+    "english": {
+      "sources": [
+        "english"
+      ],
+      "title": "Đọc và trao đổi theo bối cảnh nghề",
+      "framing": "Luyện {skill} từ một tình huống liên quan đến nghề bạn quan tâm.",
+      "steps": [
+        "Chọn một đoạn tài liệu hoặc tình huống giao tiếp ngắn phù hợp với trình độ.",
+        "Ghi các từ hoặc mẫu câu quan trọng trong ngữ cảnh và thử diễn đạt lại ý chính.",
+        "Viết hoặc nói một phản hồi ngắn; nhờ người có kinh nghiệm góp ý về ý nghĩa và cách dùng từ.",
+        "Sửa lại phần chưa rõ và lưu ví dụ trước/sau để ôn tập."
+      ],
+      "evidence": "Đoạn nguồn, ghi chú từ vựng trong ngữ cảnh và bản thực hành đã chỉnh sửa."
+    },
+    "quality": {
+      "sources": [
+        "quality"
+      ],
+      "title": "Kiểm tra chất lượng một quy trình giả lập",
+      "framing": "Áp dụng {skill} để phát hiện và theo dõi một vấn đề có thể quan sát.",
+      "steps": [
+        "Mô tả quy trình giả lập, yêu cầu chất lượng và cách đo kết quả.",
+        "Chọn một sai lệch hoặc rủi ro; dùng {skill} để phân tích thông tin có sẵn.",
+        "Đề xuất cách kiểm tra, người chịu trách nhiệm và dữ liệu cần thu thập trước khi kết luận.",
+        "Ghi kết quả kiểm tra và nhờ người có kinh nghiệm góp ý về phương án."
+      ],
+      "evidence": "Mô tả quy trình, tiêu chí, phân tích sai lệch và kế hoạch kiểm tra."
+    },
+    "service": {
+      "sources": [
+        "tourism"
+      ],
+      "title": "Lập kế hoạch phục vụ khách hàng giả lập",
+      "framing": "Luyện {skill} với một nhu cầu dịch vụ cụ thể.",
+      "steps": [
+        "Mô tả nhu cầu khách hàng giả lập, thời gian, ngân sách hoặc điều kiện liên quan.",
+        "Lập phương án cho tình huống, bao gồm các bước thực hiện và người cần phối hợp.",
+        "Kiểm tra một tình huống thay đổi hoặc phát sinh và nêu cách thông báo cho khách hàng.",
+        "Xin phản hồi về sự rõ ràng, tính khả thi và điều chỉnh phương án."
+      ],
+      "evidence": "Phương án dịch vụ, tình huống phát sinh và ghi chú điều chỉnh."
+    },
+    "office": {
+      "sources": [
+        "office"
+      ],
+      "title": "Tạo và kiểm tra một tài liệu công việc",
+      "framing": "Luyện {skill} bằng thông tin giả lập và đầu ra dễ kiểm tra.",
+      "steps": [
+        "Xác định người nhận, mục đích và thông tin cần có trong tài liệu.",
+        "Dùng {skill} để tạo bảng, biểu mẫu hoặc tài liệu phù hợp; không sử dụng dữ liệu cá nhân thật.",
+        "Kiểm tra nội dung, định dạng và đối chiếu một thông tin với dữ liệu đầu vào.",
+        "Nhờ người khác đọc thử và chỉnh những phần khó hiểu."
+      ],
+      "evidence": "Tài liệu giả lập, dữ liệu đầu vào và ghi chú đã kiểm tra."
+    },
+    "culture": {
+      "sources": [
+        "culture",
+        "feng_shui"
+      ],
+      "title": "Tìm hiểu và trình bày một chủ đề",
+      "framing": "Tìm hiểu {skill} từ nguồn có thể kiểm tra, phân biệt dữ kiện với quan điểm.",
+      "steps": [
+        "Chọn một câu hỏi hoặc trường hợp cụ thể liên quan đến {skill}.",
+        "Tìm ít nhất một nguồn phù hợp, ghi tác giả, bối cảnh và phạm vi thông tin.",
+        "Tóm tắt điều nguồn nêu, phân biệt thông tin có căn cứ với cách diễn giải hoặc quan điểm.",
+        "Trình bày giới hạn, câu hỏi còn mở và nhờ người am hiểu góp ý."
+      ],
+      "evidence": "Bản tóm tắt, nguồn tham khảo và các câu hỏi còn mở."
     }
   },
   "skills": {
@@ -582,6 +931,10 @@
     "an toàn điện": {
       "source_id": "electrical",
       "learning_plan": {
+        "user_title": "Lập bảng kiểm an toàn điện cho tình huống giả lập",
+        "user_framing": "Chỉ phân tích bằng hình ảnh hoặc sơ đồ; thao tác thực tế cần đào tạo và giám sát phù hợp.",
+        "user_steps": ["Chọn một sơ đồ thiết bị giả lập và mô tả người, thiết bị cùng môi trường liên quan.", "Đánh dấu nguy cơ có thể gặp và câu hỏi cần hỏi người phụ trách an toàn.", "Tra tài liệu đào tạo và quy định hiện hành phù hợp; ghi nguồn, phạm vi và giới hạn của bảng kiểm.", "Đưa bảng kiểm cho người đủ chuyên môn rà soát; không tự thao tác trên hệ thống điện."],
+        "user_evidence": "Sơ đồ, bảng kiểm nguy cơ, nguồn và ý kiến người hướng dẫn.",
         "title": "Học và luyện an toàn điện",
         "source_scope": "Điện/điện tử, đo kiểm, cảm biến, PLC, điều khiển và truyền động; thực hành phải theo quy trình an toàn và có người hướng dẫn.",
         "steps": [
@@ -807,6 +1160,10 @@
     "bán hàng": {
       "source_id": "marketing",
       "learning_plan": {
+        "user_title": "Luyện tư vấn cho khách hàng giả lập",
+        "user_framing": "Thực hành tìm hiểu nhu cầu trước khi giới thiệu giải pháp.",
+        "user_steps": ["Chọn một sản phẩm giả lập và mô tả nhóm khách hàng, nhu cầu cùng hạn chế ngân sách giả định.", "Viết ba câu hỏi để tìm hiểu nhu cầu; diễn tập lắng nghe và tóm tắt lại với bạn học.", "Đề xuất giải pháp phù hợp, nêu lợi ích và điều chưa chắc chắn; trả lời một thắc mắc mà không hứa quá khả năng.", "Xin người đóng vai khách hàng nhận xét và chỉnh lại kịch bản."],
+        "user_evidence": "Kịch bản hỏi nhu cầu, đề xuất, phản hồi và bản điều chỉnh.",
         "title": "Học và luyện bán hàng",
         "source_scope": "Nghiên cứu thị trường, phân khúc, khách hàng, truyền thông và bán hàng; nền tảng quảng cáo cần bổ sung tài liệu phiên bản hiện hành.",
         "steps": [
@@ -957,6 +1314,10 @@
     "bảo trì phòng ngừa": {
       "source_id": "mechanical",
       "learning_plan": {
+        "user_title": "Lập kế hoạch bảo trì cho máy giả lập",
+        "user_framing": "Dùng sơ đồ hoặc thông số giả lập; không tự vận hành hay sửa chữa máy thật.",
+        "user_steps": ["Mô tả thiết bị giả lập, mục đích sử dụng và thông tin kỹ thuật có sẵn.", "Lập lịch kiểm tra dựa trên tài liệu được cung cấp trong bài tập; ghi mục nào cần xác minh.", "Giả lập dấu hiệu bất thường và ghi cách báo người phụ trách cùng thông tin cần bàn giao.", "Nhờ người hướng dẫn rà soát tính khả thi và an toàn trước khi áp dụng thực tế."],
+        "user_evidence": "Lịch kiểm tra giả lập, tình huống bất thường và phản hồi người hướng dẫn.",
         "title": "Học và luyện bảo trì phòng ngừa",
         "source_scope": "Thiết kế cơ khí, tạo mẫu, lắp ráp, dung sai và gia công; máy móc chỉ vận hành trong xưởng đã huấn luyện/giám sát.",
         "steps": [
@@ -1137,6 +1498,10 @@
     "chăm sóc bệnh nhân": {
       "source_id": "nursing",
       "learning_plan": {
+        "user_title": "Phân tích một tình huống chăm sóc giả lập",
+        "user_framing": "Học với người hướng dẫn; không tự chẩn đoán hoặc xử lý người bệnh thật.",
+        "user_steps": ["Mô tả tình huống và mục tiêu chăm sóc giả lập, không dùng hồ sơ người thật.", "Liệt kê thông tin cần hỏi hoặc quan sát theo tài liệu đào tạo được phép sử dụng.", "Nêu điểm cần báo người có chuyên môn và câu hỏi cần làm rõ; không tự đưa ra chỉ định.", "Thảo luận với giảng viên hoặc người hướng dẫn, ghi nguồn và phản hồi; chỉ thực hành khi được đào tạo và giám sát."],
+        "user_evidence": "Bản phân tích giả lập, nguồn học và phản hồi người hướng dẫn.",
         "title": "Học và luyện chăm sóc bệnh nhân",
         "source_scope": "Kiến thức nền về đánh giá và kỹ năng điều dưỡng; không thay thực hành có giám sát hoặc giấy phép hành nghề.",
         "steps": [
@@ -1317,6 +1682,10 @@
     "content marketing": {
       "source_id": "marketing",
       "learning_plan": {
+        "user_title": "Lập kế hoạch nội dung cho một sản phẩm giả lập",
+        "user_framing": "Luyện xây dựng thông điệp theo nhu cầu của người đọc.",
+        "user_steps": ["Mô tả sản phẩm giả lập, nhóm người đọc và một vấn đề họ đang gặp.", "Viết một bài ngắn hoặc dàn ý trả lời vấn đề đó; xác định mục tiêu và lời mời hành động phù hợp.", "Chọn cách đo phản hồi và kiểm tra nội dung có tuyên bố nào cần dẫn nguồn hay không.", "Nhờ người khác đọc, ghi phần khó hiểu và chỉnh lại thông điệp."],
+        "user_evidence": "Mô tả người đọc, bản nội dung trước/sau và tiêu chí theo dõi.",
         "title": "Học và luyện content marketing",
         "source_scope": "Nghiên cứu thị trường, phân khúc, khách hàng, truyền thông và bán hàng; nền tảng quảng cáo cần bổ sung tài liệu phiên bản hiện hành.",
         "steps": [
@@ -1497,6 +1866,10 @@
     "docker": {
       "source_id": "is",
       "learning_plan": {
+        "user_title": "Chạy ứng dụng mẫu trong container",
+        "user_framing": "Thực hành trên máy của bạn với ứng dụng và dữ liệu giả lập.",
+        "user_steps": ["Chọn ứng dụng mẫu nhỏ và ghi cách chạy trực tiếp trước khi đóng gói.", "Tạo cấu hình container với phụ thuộc cần thiết; tránh đưa khóa hoặc dữ liệu cá nhân vào image.", "Khởi động container, kiểm tra ứng dụng phản hồi và thử trường hợp thiếu biến cấu hình.", "Ghi lệnh chạy, cách dừng và kết quả kiểm tra để người khác làm lại."],
+        "user_evidence": "Cấu hình container, hướng dẫn chạy và kết quả kiểm tra.",
         "title": "Học và luyện docker",
         "source_scope": "Nền tảng hệ thống thông tin, phần mềm, dữ liệu và công nghệ trong tổ chức; không phải hướng dẫn cấu hình chuyên sâu.",
         "steps": [
@@ -1587,6 +1960,10 @@
     "dự toán công trình": {
       "source_id": "construction",
       "learning_plan": {
+        "user_title": "Lập bảng khối lượng công trình giả lập",
+        "user_framing": "Bài tập là mô phỏng; định mức và chi phí thực tế cần nguồn hiện hành và người có chuyên môn kiểm tra.",
+        "user_steps": ["Chọn một hạng mục giả lập và ghi kích thước, đơn vị cùng phạm vi công việc.", "Lập bảng khối lượng theo giả định; trình bày công thức để người khác kiểm tra.", "Đối chiếu một phép tính bằng cách độc lập và ghi rõ các chi phí hoặc thông tin chưa có.", "Tra nguồn áp dụng phù hợp thời điểm và nhờ người có chuyên môn rà bảng, không coi kết quả là dự toán thực tế."],
+        "user_evidence": "Bảng khối lượng, giả định, phép đối chiếu và nguồn đã tra.",
         "title": "Học và luyện dự toán công trình",
         "source_scope": "Kiến thức nền về công nghệ/cấu kiện xây dựng; định mức, quy chuẩn và nghiệm thu phải theo quy định Việt Nam và hồ sơ được duyệt.",
         "steps": [
@@ -1662,6 +2039,15 @@
     "excel": {
       "source_id": "office",
       "learning_plan": {
+        "user_title": "Làm sạch và tổng hợp bảng bán hàng",
+        "user_framing": "Dùng dữ liệu giả lập để luyện kiểm tra bảng tính và giải thích kết quả.",
+        "user_steps": [
+          "Tạo bảng giả lập có ngày, sản phẩm, số lượng và doanh thu; thêm một vài giá trị trống hoặc dòng trùng để kiểm tra.",
+          "Ghi cách xử lý dữ liệu thiếu và trùng, rồi tổng hợp doanh thu theo sản phẩm bằng công thức hoặc bảng tổng hợp.",
+          "Đối chiếu tổng của một sản phẩm với phép cộng trực tiếp từ dữ liệu gốc và tạo một biểu đồ dễ đọc.",
+          "Viết nhận xét ngắn, nêu dữ liệu nào còn thiếu và lưu lại cách thực hiện."
+        ],
+        "user_evidence": "Bảng tính có dữ liệu giả lập, tổng theo sản phẩm, biểu đồ và phép đối chiếu.",
         "title": "Học và luyện excel",
         "source_scope": "Phần mềm văn phòng, bảng tính, tài liệu và cộng tác; thao tác cụ thể tùy phiên bản ứng dụng.",
         "steps": [
@@ -1827,6 +2213,15 @@
     "giao tiếp": {
       "source_id": "communication",
       "learning_plan": {
+        "user_title": "Giải thích kết quả cho người không chuyên",
+        "user_framing": "Thử trình bày một kết quả bằng lời dễ hiểu, có số liệu và giới hạn rõ ràng.",
+        "user_steps": [
+          "Chọn một kết quả từ dữ liệu giả lập và xác định người nghe cần quyết định điều gì.",
+          "Viết thông điệp trong 3 câu: kết quả chính, số liệu minh họa và điều chưa thể kết luận.",
+          "Giải thích cho một người không làm chuyên môn, xin họ nhắc lại ý chính và hỏi phần nào chưa rõ.",
+          "Chỉnh cách diễn đạt dựa trên phản hồi, giữ nguyên ý nghĩa của số liệu."
+        ],
+        "user_evidence": "Bản giải thích trước và sau phản hồi, kèm số liệu minh họa.",
         "title": "Học và luyện giao tiếp",
         "source_scope": "Giao tiếp nơi làm việc, teamwork, viết, người đọc, trình bày và đánh giá nguồn.",
         "steps": [
@@ -1902,6 +2297,15 @@
     "giải quyết vấn đề": {
       "source_id": "business",
       "learning_plan": {
+        "user_title": "Tìm và xử lý một sai lệch trong báo cáo",
+        "user_framing": "Bài tập giả lập giúp bạn đi từ triệu chứng đến cách kiểm tra giải pháp.",
+        "user_steps": [
+          "Giả lập tình huống tổng doanh thu trong dashboard cao hơn bảng nguồn và ghi rõ mức chênh lệch.",
+          "Liệt kê các nguyên nhân có thể có, chẳng hạn bản ghi trùng hoặc khác bộ lọc; chọn một cách kiểm tra cho từng giả thuyết.",
+          "Kiểm tra trên dữ liệu giả lập, ghi nguyên nhân tìm được và đề xuất cách sửa có thể giải thích.",
+          "Đối chiếu lại với nguồn sau khi sửa và ghi cách ngăn lỗi tương tự lặp lại."
+        ],
+        "user_evidence": "Mô tả lỗi, các phép kiểm tra, cách sửa và kết quả đối chiếu trước/sau.",
         "title": "Học và luyện giải quyết vấn đề",
         "source_scope": "Tổng quan quản trị, vận hành, nhân sự, marketing, kế toán, tài chính và dịch vụ; học phần theo đúng chủ đề.",
         "steps": [
@@ -2187,6 +2591,10 @@
     "java": {
       "source_id": "java",
       "learning_plan": {
+        "user_title": "Viết và kiểm tra chương trình Java nhỏ",
+        "user_framing": "Dùng dữ liệu giả lập để luyện Java từ đầu vào đến kiểm tra kết quả.",
+        "user_steps": ["Viết chương trình nhận danh sách đơn hàng giả lập gồm mã đơn và số tiền.", "Tạo lớp biểu diễn đơn hàng và hàm tính tổng; xử lý đầu vào thiếu hoặc số tiền không hợp lệ.", "Chạy thử với danh sách rỗng, một đơn và nhiều đơn; đối chiếu một tổng bằng phép tính thủ công.", "Ghi phiên bản JDK, hướng dẫn chạy và một điều bạn sẽ cải thiện sau khi người khác đọc mã."],
+        "user_evidence": "Mã Java, cách chạy và kết quả kiểm tra với ba trường hợp.",
         "title": "Học và luyện java",
         "source_scope": "Lập trình Java và tư duy hướng đối tượng; đối chiếu phiên bản JDK theo tài liệu Java chính thức.",
         "steps": [
@@ -2337,6 +2745,10 @@
     "kiểm soát chất lượng": {
       "source_id": "quality",
       "learning_plan": {
+        "user_title": "Theo dõi lỗi của một lô sản phẩm giả lập",
+        "user_framing": "Tập phân biệt số liệu quan sát với nguyên nhân cần kiểm tra thêm.",
+        "user_steps": ["Tạo danh sách sản phẩm giả lập với mã, tiêu chí kiểm tra và kết quả đạt hoặc chưa đạt.", "Tổng hợp số lỗi theo loại và đối chiếu tổng với bảng gốc.", "Chọn một loại lỗi, nêu hai giả thuyết và dữ liệu cần thu thập trước khi kết luận nguyên nhân.", "Đề xuất người xác nhận và cách theo dõi sau xử lý, nhờ người có kinh nghiệm góp ý."],
+        "user_evidence": "Bảng kiểm giả lập, tổng số lỗi và kế hoạch kiểm tra giả thuyết.",
         "title": "Học và luyện kiểm soát chất lượng",
         "source_scope": "Nền tảng công cụ kiểm soát chất lượng; bài tập nên dùng dữ liệu mẫu và tiêu chí của ngành/tiêu chuẩn áp dụng.",
         "steps": [
@@ -2472,6 +2884,10 @@
     "kê khai thuế": {
       "source_id": "law",
       "learning_plan": {
+        "user_title": "Chuẩn bị hồ sơ kê khai giả lập",
+        "user_framing": "Bài tập giúp nhận biết dữ liệu cần chuẩn bị, không thay hướng dẫn của cơ quan thuế hoặc người có chuyên môn.",
+        "user_steps": ["Chọn một tình huống giả lập, xác định loại hồ sơ, kỳ và đơn vị áp dụng.", "Liệt kê thông tin và chứng từ cần thu thập từ nguồn hướng dẫn chính thức phù hợp thời điểm.", "Lập bảng kiểm tra tính nhất quán và ghi rõ dữ liệu thiếu; không tự nộp hoặc đưa ra kết luận thuế.", "Nhờ người có chuyên môn rà bảng kiểm và xác nhận quy định hiện hành."],
+        "user_evidence": "Danh sách chứng từ giả lập, nguồn và bảng kiểm đã được góp ý.",
         "title": "Học và luyện kê khai thuế",
         "source_scope": "Giáo trình trình bày luật Hoa Kỳ, chỉ dùng học khái niệm và đọc tình huống. Áp dụng ở Việt Nam phải tra văn bản Việt Nam còn hiệu lực.",
         "steps": [
@@ -2532,6 +2948,10 @@
     "kế toán thuế": {
       "source_id": "acct",
       "learning_plan": {
+        "user_title": "Đối chiếu chứng từ thuế giả lập",
+        "user_framing": "Tìm hiểu bằng ví dụ giả lập và nguồn chính thức phù hợp thời điểm, dưới hướng dẫn chuyên môn.",
+        "user_steps": ["Lập một bộ chứng từ mua bán giả lập, ghi rõ kỳ và thông tin cần đối chiếu.", "Liệt kê các thông tin trên chứng từ cần kiểm tra; đánh dấu dữ liệu thiếu hoặc không nhất quán.", "Tra nguồn chính thức phù hợp thời điểm và ghi câu hỏi cần hỏi người phụ trách; không tự suy ra mức thuế hoặc nghĩa vụ.", "Nhờ giảng viên hoặc kế toán có chuyên môn kiểm tra cách lập bảng và nguồn sử dụng."],
+        "user_evidence": "Bảng đối chiếu giả lập, nguồn đã tra và các câu hỏi còn mở.",
         "title": "Học và luyện kế toán thuế",
         "source_scope": "Chu trình kế toán và báo cáo tài chính; đây là nền tảng kế toán Hoa Kỳ, cần đối chiếu chuẩn mực và biểu mẫu Việt Nam hiện hành.",
         "steps": [
@@ -2607,6 +3027,10 @@
     "kịch bản video": {
       "source_id": "media",
       "learning_plan": {
+        "user_title": "Viết kịch bản video giới thiệu ngắn",
+        "user_framing": "Dùng nội dung và hình ảnh tự tạo hoặc được phép sử dụng.",
+        "user_steps": ["Xác định người xem, mục tiêu và thông điệp chính trong một câu.", "Viết kịch bản gồm phần mở đầu, nội dung chính và kết thúc; ghi cảnh, lời thoại hoặc âm thanh cần thiết.", "Kiểm tra thời lượng ước tính, nguồn hình ảnh/âm thanh và phần người xem có thể hiểu nhầm.", "Nhờ người khác đọc hoặc xem thử, rồi chỉnh kịch bản."],
+        "user_evidence": "Kịch bản, ghi chú nguồn tư liệu và bản điều chỉnh.",
         "title": "Học và luyện kịch bản video",
         "source_scope": "Ngôn ngữ hình ảnh, kể chuyện, mise-en-scène, quay phim, âm thanh và biên tập; kỹ thuật phần mềm/camera cần bài tập và hướng dẫn thiết bị riêng.",
         "steps": [
@@ -2622,6 +3046,10 @@
     "kỹ năng giảng dạy": {
       "source_id": "education",
       "learning_plan": {
+        "user_title": "Dạy thử một nội dung ngắn",
+        "user_framing": "Luyện giải thích và điều chỉnh theo phản hồi của người học.",
+        "user_steps": ["Chọn một nội dung phù hợp, xác định người học và điều họ cần làm được sau buổi học.", "Chuẩn bị ví dụ, câu hỏi kiểm tra và một hoạt động luyện tập ngắn.", "Dạy thử cho bạn học, quan sát điểm chưa rõ và hỏi họ giải thích lại ý chính.", "Điều chỉnh cách trình bày và xin giảng viên góp ý."],
+        "user_evidence": "Dàn ý bài dạy, câu hỏi và ghi chú sau dạy thử.",
         "title": "Học và luyện kỹ năng giảng dạy",
         "source_scope": "Tâm lý học giáo dục, phát triển và động lực người học, dạy học và đánh giá; điều chỉnh hoạt động theo chương trình và quy định Việt Nam.",
         "steps": [
@@ -2847,6 +3275,15 @@
     "làm việc nhóm": {
       "source_id": "org",
       "learning_plan": {
+        "user_title": "Phối hợp làm một báo cáo chung",
+        "user_framing": "Bạn có thể luyện cùng bạn học hoặc mô phỏng vai trò trong một nhóm nhỏ.",
+        "user_steps": [
+          "Thống nhất mục tiêu báo cáo, người sử dụng và thời hạn với nhóm.",
+          "Chia nhiệm vụ thu thập, kiểm tra dữ liệu và trình bày; ghi người phụ trách và cách bàn giao.",
+          "Cùng kiểm tra một chỉ số và trao đổi khi có khác biệt trong cách tính.",
+          "Sau khi hoàn thành, hỏi mỗi thành viên một điều nên giữ và một điều nên cải thiện cho lần sau."
+        ],
+        "user_evidence": "Bảng phân công, định nghĩa chỉ số đã thống nhất và ghi chú phản hồi của nhóm.",
         "title": "Học và luyện làm việc nhóm",
         "source_scope": "Hành vi tổ chức, động lực, giao tiếp, nhóm và xung đột; cần luyện hành vi trong bối cảnh có phản hồi.",
         "steps": [
@@ -3432,6 +3869,10 @@
     "pccc": {
       "source_id": "safety",
       "learning_plan": {
+        "user_title": "Xem xét phương án phòng cháy giả lập",
+        "user_framing": "Chỉ thực hành nhận diện và báo cáo nguy cơ; không tự thực hiện thao tác ứng cứu nguy hiểm.",
+        "user_steps": ["Vẽ sơ đồ một không gian giả lập, xác định người sử dụng và lối thoát được cung cấp trong bài tập.", "Ghi các nguy cơ cần hỏi người phụ trách và thông tin còn thiếu về thiết bị hoặc quy trình.", "Tra hướng dẫn chính thức và quy định áp dụng, ghi nguồn và thời điểm kiểm tra.", "Nhờ người được đào tạo rà phương án và chỉ thực hành theo chương trình, hướng dẫn phù hợp."],
+        "user_evidence": "Sơ đồ giả lập, danh sách câu hỏi, nguồn và phản hồi người hướng dẫn.",
         "title": "Học và luyện pccc",
         "source_scope": "Nền tảng nhận diện nguy cơ và quản lý an toàn lao động theo bối cảnh Canada; phải tra quy định/huấn luyện Việt Nam hiện hành trước khi áp dụng.",
         "steps": [
@@ -3702,6 +4143,15 @@
     "power bi": {
       "source_id": "data",
       "learning_plan": {
+        "user_title": "Tạo báo cáo doanh thu trong Power BI",
+        "user_framing": "Bạn sẽ thực hành với dữ liệu bán hàng giả lập và kiểm tra báo cáo trước khi chia sẻ.",
+        "user_steps": [
+          "Tạo một bảng đơn hàng giả lập gồm ngày, mã đơn, sản phẩm, số lượng và doanh thu; thêm vài ô trống hoặc bản ghi trùng để luyện kiểm tra dữ liệu.",
+          "Nhập bảng vào Power BI, ghi cách xử lý dữ liệu thiếu và tạo biểu đồ doanh thu theo tháng cùng bộ lọc sản phẩm.",
+          "Chọn một tháng và đối chiếu tổng trên biểu đồ với phép tính độc lập trong bảng gốc; thử đổi bộ lọc để xem báo cáo có thay đổi đúng không.",
+          "Viết 2 nhận xét từ biểu đồ, nêu giới hạn của dữ liệu và nhờ một người khác đọc thử báo cáo."
+        ],
+        "user_evidence": "Một báo cáo Power BI, dữ liệu giả lập, phép đối chiếu tổng và hai nhận xét có nêu giới hạn.",
         "title": "Học và luyện power bi",
         "source_scope": "Nền tảng khoa học dữ liệu; có ví dụ Excel, SQL, Python, Tableau và Power BI. Phần mềm cụ thể cần luyện thêm theo tài liệu nhà sản xuất.",
         "steps": [
@@ -3732,6 +4182,15 @@
     "python": {
       "source_id": "python",
       "learning_plan": {
+        "user_title": "Phân tích dữ liệu đơn hàng bằng Python",
+        "user_framing": "Bắt đầu bằng một tập dữ liệu nhỏ và kiểm tra kết quả trước khi rút ra nhận xét.",
+        "user_steps": [
+          "Tạo hoặc tải bảng đơn hàng giả lập gồm ngày, sản phẩm và doanh thu; mô tả ý nghĩa từng cột.",
+          "Dùng Python đọc dữ liệu, kiểm tra kiểu dữ liệu, dòng trùng và giá trị thiếu; ghi lại cách xử lý.",
+          "Tính doanh thu theo sản phẩm hoặc tháng và đối chiếu một tổng với phép tính thủ công trên vài dòng mẫu.",
+          "Lưu mã hoặc notebook có hướng dẫn chạy, ghi kết quả chính và điều dữ liệu chưa thể chứng minh."
+        ],
+        "user_evidence": "Mã hoặc notebook chạy lại được, dữ liệu giả lập và một kết quả đã đối chiếu.",
         "title": "Học và luyện python",
         "source_scope": "Lập trình Python nhập môn, giải quyết vấn đề và bài tập; đối chiếu cú pháp với tài liệu Python hiện hành.",
         "steps": [
@@ -3912,6 +4371,10 @@
     "quản lý dự án": {
       "source_id": "management",
       "learning_plan": {
+        "user_title": "Lập kế hoạch cho dự án giả lập",
+        "user_framing": "Luyện xác định phạm vi, người phụ trách và cách theo dõi.",
+        "user_steps": ["Chọn mục tiêu nhỏ, sản phẩm bàn giao và thời hạn giả lập.", "Chia công việc, ghi phụ thuộc và người phụ trách; nêu giả định về nguồn lực.", "Giả lập một công việc bị chậm, xem ảnh hưởng đến các việc sau và đề xuất cách điều chỉnh.", "Xin nhóm góp ý và ghi lại quyết định cùng điều cần theo dõi."],
+        "user_evidence": "Bảng công việc, tình huống chậm và quyết định điều chỉnh.",
         "title": "Học và luyện quản lý dự án",
         "source_scope": "Nền tảng lập kế hoạch, tổ chức, vận hành và quản trị; áp dụng qua case và phản hồi.",
         "steps": [
@@ -4002,6 +4465,10 @@
     "quản lý kho": {
       "source_id": "supply",
       "learning_plan": {
+        "user_title": "Kiểm tra tồn kho và xử lý sai lệch",
+        "user_framing": "Luyện theo dữ liệu hàng hóa giả lập, không dùng dữ liệu doanh nghiệp thật.",
+        "user_steps": ["Tạo bảng nhập, xuất và tồn đầu kỳ cho ba mặt hàng giả lập.", "Tính tồn cuối kỳ theo từng mặt hàng; ghi đơn vị tính và giả định.", "Giả lập một lần kiểm kê lệch số lượng, đối chiếu chứng từ nhập xuất và nêu nguyên nhân cần xác minh.", "Đề xuất cách ghi nhận và bàn giao sai lệch cho người phụ trách; thử tính lại sau điều chỉnh giả lập."],
+        "user_evidence": "Bảng nhập xuất tồn, phép tính, biên bản sai lệch giả lập và cách theo dõi.",
         "title": "Học và luyện quản lý kho",
         "source_scope": "Mô hình tồn kho, dự báo nhu cầu và phân tích chuỗi cung ứng; chứng từ/quy trình cần tra nguồn áp dụng.",
         "steps": [
@@ -4257,6 +4724,10 @@
     "quản lý tồn kho": {
       "source_id": "supply",
       "learning_plan": {
+        "user_title": "Theo dõi tồn kho bằng dữ liệu giả lập",
+        "user_framing": "Dùng một bảng nhỏ để kiểm tra nhu cầu và rủi ro thiếu hàng.",
+        "user_steps": ["Tạo số liệu giả lập về tồn đầu kỳ, lượng bán và thời gian bổ sung cho ba mặt hàng.", "Tính tồn cuối kỳ và so sánh với nhu cầu giả định trong kỳ tiếp theo.", "Chọn mặt hàng cần xem xét bổ sung, nêu giả định và điều cần xác minh với nhà cung cấp.", "Thử một kịch bản giao hàng chậm và ghi cách theo dõi, không suy ra dự báo chắc chắn."],
+        "user_evidence": "Bảng số liệu, phép tính tồn kho và hai kịch bản giả lập.",
         "title": "Học và luyện quản lý tồn kho",
         "source_scope": "Mô hình tồn kho, dự báo nhu cầu và phân tích chuỗi cung ứng; chứng từ/quy trình cần tra nguồn áp dụng.",
         "steps": [
@@ -4722,6 +5193,10 @@
     "soạn giáo án": {
       "source_id": "education",
       "learning_plan": {
+        "user_title": "Soạn và dạy thử một hoạt động ngắn",
+        "user_framing": "Lựa chọn mục tiêu và cách kiểm tra phù hợp với người học giả lập.",
+        "user_steps": ["Chọn đối tượng học, chủ đề và một mục tiêu có thể quan sát sau bài học.", "Thiết kế hoạt động ngắn gồm mở đầu, thực hành và câu hỏi kiểm tra; dự kiến thời gian.", "Dạy thử cho bạn học và ghi những điểm họ chưa hiểu.", "Chỉnh giáo án theo phản hồi và nhờ giảng viên góp ý."],
+        "user_evidence": "Giáo án, câu hỏi kiểm tra và ghi chú sau dạy thử.",
         "title": "Học và luyện soạn giáo án",
         "source_scope": "Tâm lý học giáo dục, phát triển và động lực người học, dạy học và đánh giá; điều chỉnh hoạt động theo chương trình và quy định Việt Nam.",
         "steps": [
@@ -4767,6 +5242,10 @@
     "spring boot": {
       "source_id": "java",
       "learning_plan": {
+        "user_title": "Tạo API quản lý công việc giả lập",
+        "user_framing": "Thực hành Spring Boot với chức năng nhỏ, không dùng thông tin thật.",
+        "user_steps": ["Xác định dữ liệu công việc cần lưu và hai chức năng tạo, xem danh sách.", "Tạo ứng dụng mẫu và hai endpoint; kiểm tra dữ liệu đầu vào trước khi xử lý.", "Gửi yêu cầu hợp lệ và yêu cầu thiếu dữ liệu; ghi mã phản hồi và kết quả mong đợi.", "Viết hướng dẫn chạy và nhờ người khác thử lại trên môi trường riêng."],
+        "user_evidence": "Mã ứng dụng, hướng dẫn chạy và ví dụ yêu cầu/kết quả.",
         "title": "Học và luyện spring boot",
         "source_scope": "Lập trình Java và tư duy hướng đối tượng; đối chiếu phiên bản JDK theo tài liệu Java chính thức.",
         "steps": [
@@ -4782,6 +5261,15 @@
     "sql": {
       "source_id": "db",
       "learning_plan": {
+        "user_title": "Truy vấn doanh thu đơn hàng bằng SQL",
+        "user_framing": "Luyện truy vấn trên dữ liệu giả lập và kiểm tra số liệu trước khi dùng để báo cáo.",
+        "user_steps": [
+          "Tạo bảng đơn hàng giả lập với mã đơn, ngày, sản phẩm và doanh thu; thêm trường hợp giá trị trống hoặc trùng để thử.",
+          "Viết truy vấn lọc theo tháng và tổng hợp doanh thu theo sản phẩm; ghi rõ các giả định về dữ liệu.",
+          "Đối chiếu một tổng với phép cộng thủ công; kiểm tra xem bản ghi trùng hoặc giá trị trống có làm kết quả thay đổi không.",
+          "Lưu truy vấn, dữ liệu mẫu và kết quả mong đợi để người khác có thể chạy lại."
+        ],
+        "user_evidence": "Tệp truy vấn, dữ liệu giả lập, kết quả mong đợi và ghi chú về giả định.",
         "title": "Học và luyện sql",
         "source_scope": "Mô hình dữ liệu, ER, ràng buộc, chuẩn hóa và SQL; MongoDB/Redis cần thêm bài tập theo tài liệu chính thức.",
         "steps": [
@@ -4932,6 +5420,15 @@
     "tableau": {
       "source_id": "data",
       "learning_plan": {
+        "user_title": "Trực quan hóa doanh thu bằng Tableau",
+        "user_framing": "Dùng dữ liệu giả lập để tạo một bảng điều khiển dễ đọc và tự kiểm tra kết quả.",
+        "user_steps": [
+          "Chuẩn bị dữ liệu giả lập có ngày bán, sản phẩm, khu vực và doanh thu; kiểm tra kiểu dữ liệu sau khi kết nối vào Tableau.",
+          "Tạo biểu đồ doanh thu theo tháng và theo khu vực, sau đó thêm bộ lọc để người xem chọn một khu vực.",
+          "Đối chiếu tổng doanh thu của một khu vực với dữ liệu nguồn; thử giá trị trống và kiểm tra bộ lọc.",
+          "Sắp xếp biểu đồ thành một dashboard, viết một kết luận có dẫn số liệu và ghi điều dữ liệu chưa cho biết."
+        ],
+        "user_evidence": "Dashboard Tableau, dữ liệu giả lập, một phép đối chiếu và kết luận ngắn.",
         "title": "Học và luyện tableau",
         "source_scope": "Nền tảng khoa học dữ liệu; có ví dụ Excel, SQL, Python, Tableau và Power BI. Phần mềm cụ thể cần luyện thêm theo tài liệu nhà sản xuất.",
         "steps": [
@@ -5172,6 +5669,10 @@
     "thiết kế ui ux": {
       "source_id": "ux",
       "learning_plan": {
+        "user_title": "Thiết kế màn hình giải quyết một nhu cầu",
+        "user_framing": "Tập trung vào thao tác người dùng có thể kiểm tra.",
+        "user_steps": ["Chọn một người dùng giả lập và nhiệm vụ cụ thể, chẳng hạn tìm và lưu một khóa học.", "Phác thảo luồng và một màn hình; ghi mục tiêu của nút, nhãn và trạng thái khi chưa có dữ liệu.", "Nhờ một người thử hoàn thành nhiệm vụ mà không hướng dẫn, ghi chỗ họ do dự.", "Sửa màn hình theo phản hồi và ghi điều cần kiểm tra thêm."],
+        "user_evidence": "Luồng, màn hình trước/sau và ghi chú quan sát.",
         "title": "Học và luyện thiết kế ui ux",
         "source_scope": "Nguyên lý usability và đánh giá khả năng sử dụng; phải kiểm chứng bằng nghiên cứu người dùng.",
         "steps": [
@@ -5322,6 +5823,15 @@
     "thống kê": {
       "source_id": "stats",
       "learning_plan": {
+        "user_title": "So sánh hai nhóm bằng dữ liệu giả lập",
+        "user_framing": "Bắt đầu bằng mô tả dữ liệu và giới hạn trước khi đưa ra kết luận.",
+        "user_steps": [
+          "Tạo hai nhóm dữ liệu giả lập, chẳng hạn doanh thu đơn hàng của hai khu vực; ghi số lượng quan sát trong mỗi nhóm.",
+          "Tính trung bình và trung vị, quan sát phân bố và kiểm tra giá trị thiếu hoặc ngoại lệ.",
+          "So sánh kết quả giữa hai nhóm và nêu vì sao chênh lệch quan sát chưa đủ để khẳng định nguyên nhân.",
+          "Nếu đã học khoảng tin cậy hoặc kiểm định, thử áp dụng và ghi điều kiện, giả định cùng dữ liệu cần bổ sung."
+        ],
+        "user_evidence": "Bảng tóm tắt hai nhóm, phép tính có thể kiểm tra và kết luận nêu rõ giới hạn.",
         "title": "Học và luyện thống kê",
         "source_scope": "Nền tảng thống kê, xác suất và suy luận từ dữ liệu; cần kiểm tra giả định trên dữ liệu theo ngành.",
         "steps": [
@@ -5547,6 +6057,10 @@
     "tìm kiếm khách hàng": {
       "source_id": "marketing",
       "learning_plan": {
+        "user_title": "Lập danh sách khách hàng tiềm năng giả lập",
+        "user_framing": "Luyện tìm kiếm đúng đối tượng thay vì chỉ đếm số liên hệ.",
+        "user_steps": ["Mô tả sản phẩm giả lập và tiêu chí khách hàng phù hợp như ngành, quy mô và nhu cầu.", "Lập danh sách khách hàng hoàn toàn giả lập từ hai nguồn giả định; ghi lý do mỗi nhóm có thể phù hợp.", "Loại bản ghi trùng, chọn thông điệp tiếp cận cho từng nhóm và đặt tiêu chí theo dõi phản hồi.", "So sánh hai nguồn bằng số liệu giả lập, nêu dữ liệu còn thiếu và điều cần thử tiếp."],
+        "user_evidence": "Tiêu chí khách hàng, danh sách giả lập, thông điệp và bảng theo dõi.",
         "title": "Học và luyện tìm kiếm khách hàng",
         "source_scope": "Nghiên cứu thị trường, phân khúc, khách hàng, truyền thông và bán hàng; nền tảng quảng cáo cần bổ sung tài liệu phiên bản hiện hành.",
         "steps": [
@@ -5667,6 +6181,15 @@
     "tư duy phân tích": {
       "source_id": "data",
       "learning_plan": {
+        "user_title": "Tìm nguyên nhân doanh thu thay đổi",
+        "user_framing": "Hãy phân biệt điều dữ liệu cho thấy với giả thuyết cần kiểm tra thêm.",
+        "user_steps": [
+          "Đặt câu hỏi cụ thể: doanh thu tháng này thay đổi bao nhiêu so với tháng trước và ở nhóm sản phẩm nào?",
+          "Dùng bảng doanh thu giả lập để so sánh theo sản phẩm hoặc khu vực; kiểm tra tổng và dữ liệu thiếu trước khi kết luận.",
+          "Nêu ít nhất hai giả thuyết có thể giải thích sự thay đổi, ví dụ số đơn hoặc giá trung bình, rồi liệt kê dữ liệu cần có để kiểm tra từng giả thuyết.",
+          "Tóm tắt kết quả, phân biệt số liệu đã quan sát với điều chưa xác minh và đề xuất bước kiểm tra tiếp theo."
+        ],
+        "user_evidence": "Bảng so sánh, hai giả thuyết, dữ liệu cần kiểm tra và bản tóm tắt ngắn.",
         "title": "Học và luyện tư duy phân tích",
         "source_scope": "Nền tảng khoa học dữ liệu; có ví dụ Excel, SQL, Python, Tableau và Power BI. Phần mềm cụ thể cần luyện thêm theo tài liệu nhà sản xuất.",
         "steps": [
@@ -6312,6 +6835,10 @@
     "điều phối vận tải": {
       "source_id": "supply",
       "learning_plan": {
+        "user_title": "Lập kế hoạch giao hàng giả lập",
+        "user_framing": "Luyện sắp xếp chuyến và xử lý thay đổi bằng dữ liệu giả lập.",
+        "user_steps": ["Tạo danh sách ba đơn giả lập với điểm giao, thời gian mong muốn và số lượng.", "Đề xuất thứ tự giao và người phối hợp; ghi giả định về phương tiện và thời gian.", "Giả lập một chuyến chậm, đánh giá các đơn bị ảnh hưởng và cách thông báo cho người liên quan.", "Cập nhật kế hoạch và ghi dữ liệu cần xác nhận trước khi áp dụng thực tế."],
+        "user_evidence": "Bảng kế hoạch giao hàng, phương án khi chậm và thông tin cần xác nhận.",
         "title": "Học và luyện điều phối vận tải",
         "source_scope": "Mô hình tồn kho, dự báo nhu cầu và phân tích chuỗi cung ứng; chứng từ/quy trình cần tra nguồn áp dụng.",
         "steps": [

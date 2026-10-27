@@ -308,6 +308,24 @@ def test_review_llm_score_is_computed_and_prompt_is_bounded(question_data, monke
     assert len(calls) == 1
 
 
+def test_groq_gpt_oss_has_budget_for_reasoning_and_json(question_data, monkeypatch):
+    calls = []
+    monkeypatch.setattr(interview.requests, "post", lambda *args, **kw: (calls.append(kw), _Response(_llm_json()))[1])
+    result = interview.review_answer("t1", _ANSWER, api_key="key", model="openai/gpt-oss-120b")
+    assert result["source"] == "llm"
+    assert calls[0]["json"]["reasoning_effort"] == "low"
+    assert calls[0]["json"]["max_tokens"] == 1600
+
+
+def test_explicit_offline_ignores_server_key_and_local_fallback(question_data, monkeypatch):
+    monkeypatch.setenv("LLM_API_KEY", "server-key")
+    monkeypatch.setenv("LLM_FALLBACK_BASE_URL", "http://localhost:11434/v1")
+    monkeypatch.setenv("LLM_FALLBACK_MODEL", "local-model")
+    monkeypatch.setattr(interview.requests, "post", lambda *a, **kw: pytest.fail("offline called network"))
+    result = interview.review_answer("t1", _ANSWER, api_key="", base_url="https://api.groq.com/openai/v1")
+    assert result["source"] == "offline_rubric"
+
+
 @pytest.mark.parametrize("first,second,reason,source", [
     ("bad", _llm_json(), None, "llm"),
     ("bad", "still bad", "bad_json", "offline_rubric"),
@@ -367,6 +385,63 @@ def test_review_no_key_is_offline_and_deterministic(question_data, monkeypatch):
         assert not any(item["met"] for item in interview.review_answer("t1", short)["criteria"])
     with pytest.raises(ValueError):
         interview.review_answer("t1", "  ")
+
+
+def test_offline_feedback_does_not_infer_absence_from_overlapping_words(question_data):
+    answer = "Tôi nêu bằng chứng kiểm chứng kết quả bằng dữ liệu thử nghiệm và đối soát."
+    review = interview.review_answer("t1", answer, api_key="")
+    assert review["red_flags_hit"] == []
+    assert "chưa xác nhận ý đúng hoặc sai" in review["feedback"]
+    assert "tự kiểm tra" in review["improvement"]
+
+
+def test_offline_explicit_missing_knowledge_is_not_positive_evidence():
+    point = "Giải thích thiết kế và cách xử lý lỗi"
+    review = interview._offline_review(
+        "Tôi không biết giải thích thiết kế và cách xử lý lỗi trong hệ thống.",
+        [point], [], "no_key",
+    )
+    assert review["criteria"][0]["met"] is False
+    assert review["criteria"][0]["evidence"] == ""
+    assert point in review["improvement"]
+
+
+def test_offline_does_not_treat_incomplete_keyword_overlap_as_a_full_point():
+    point = "Chọn nguồn/kênh lead và kiểm tra trùng trước tiếp cận"
+    answer = "Em theo dõi tỷ lệ chuyển từ liên hệ thành cơ hội theo từng kênh và chọn kênh cần thử tiếp."
+    review = interview._offline_review(answer, [point], [], "no_key")
+    assert review["criteria"][0]["met"] is False
+    assert review["criteria"][0]["status_label"] == "Chưa tìm thấy đủ từ khóa"
+    assert "không kết luận" in review["score_notice"]
+
+
+def test_offline_negation_also_works_without_vietnamese_accents():
+    point = "Giải thích thiết kế và cách xử lý lỗi"
+    answer = "Toi khong biet giai thich thiet ke va cach xu ly loi trong he thong."
+    review = interview._offline_review(answer, [point], [], "no_key")
+    assert review["criteria"][0]["met"] is False
+    assert review["criteria"][0]["evidence"] == ""
+
+
+def test_llm_requires_an_actual_quote_even_when_the_text_is_similar(question_data, monkeypatch):
+    invented = "Tôi nêu cơ chế áp dụng kỹ năng không hiệu quả"
+    monkeypatch.setattr(interview.requests, "post", lambda *a, **kw: _Response(_llm_json(invented)))
+    result = interview.review_answer("t1", _ANSWER, api_key="private-key")
+    assert result["criteria"][0]["met"] is False
+    assert result["criteria"][0]["evidence"] == ""
+
+
+def test_legacy_role_questions_prioritize_the_requested_skill(question_data):
+    python_question = _question("focus-python", "technical", "python")
+    sql_question = _question("focus-sql", "scenario", "sql")
+    python_question["question"] = "Python được sử dụng thế nào?"
+    sql_question["question"] = "SQL được sử dụng thế nào?"
+    _write_data(question_data / "part_03.json", {
+        "focused_role": [python_question, sql_question]
+    })
+    interview._clear_cache()
+    result = interview.generate_interview_questions(["SQL"], max_per_skill=1, role="focused_role")
+    assert result == ["SQL được sử dụng thế nào?"]
 
 
 def test_offline_matching_tolerates_missing_diacritics(question_data):

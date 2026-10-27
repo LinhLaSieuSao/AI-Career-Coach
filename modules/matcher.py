@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Match candidate skills with career roles and job descriptions."""
 
 from __future__ import annotations
@@ -22,7 +23,8 @@ MIN_SKILL_SIGNAL_FOR_UNCAPPED_ROLE_SCORE = 0.15
 LOW_SKILL_ROLE_SCORE_CAP = 0.05
 LOW_CONFIDENCE_SKILL_COUNT = 3
 LOW_CONFIDENCE_ROLE_MESSAGE = (
-    "Độ tin cậy sơ bộ: Hồ sơ có ít kỹ năng; hãy bổ sung kỹ năng để gợi ý chính xác hơn."
+    "Hồ sơ có ít kỹ năng trùng danh mục nghề. Các gợi ý chỉ để khám phá, "
+    "chưa đủ cơ sở kết luận bạn phù hợp; hãy bổ sung kỹ năng để đối chiếu."
 )
 
 
@@ -554,10 +556,15 @@ def _weighted_role_skill_fit(
 
 
 def role_recommendation_is_low_confidence(profile: Mapping[str, Any]) -> bool:
-    """Flag recommendations from profiles with fewer than three claimed skills."""
+    """Flag profiles with fewer than three skills usable in the role catalog."""
     if not isinstance(profile, Mapping):
         raise TypeError("profile phải là object.")
-    return len(_candidate_skill_set(profile.get("skills", []), _load_alias_map())) < LOW_CONFIDENCE_SKILL_COUNT
+    aliases = _load_alias_map()
+    skills = _candidate_skill_set(profile.get("skills", []), aliases)
+    catalog_skills = {
+        record[1] for role in _load_role_catalog() for record in _role_skill_records(role, aliases)
+    }
+    return len(skills & catalog_skills) < LOW_CONFIDENCE_SKILL_COUNT
 
 
 def suggest_roles(profile, top_k=5) -> list[dict]:
@@ -610,12 +617,20 @@ def suggest_roles(profile, top_k=5) -> list[dict]:
             reasons.append(reason)
         if skill_part < MIN_SKILL_SIGNAL_FOR_UNCAPPED_ROLE_SCORE:
             reasons.append("Điểm bị giới hạn vì mức trùng kỹ năng dưới ngưỡng 15%.")
+        low_signal = skill_part < MIN_SKILL_SIGNAL_FOR_UNCAPPED_ROLE_SCORE
         results.append({"role_id": role["id"], "role_name": role.get("name_vi") or role.get("name"),
                         "score": score, "skill_percent": round(100 * skill_part, 1),
                         "interest_percent": round(100 * interest_part, 1), "matched": match["matched"],
                         "missing": match["missing"], "interest_activity_ids": activity_ids,
                         "role_family_id": family_info.get("family_id"),
-                        "reasons": reasons, "method": "role_idf_riasec_skill_gated"})
+                        "reasons": reasons, "method": "role_idf_riasec_skill_gated",
+                        "low_skill_signal": low_signal,
+                        "display_label": "Tín hiệu kỹ năng còn ít" if low_signal else "Mức trùng tín hiệu",
+                        "display_note": (
+                            "Chưa đủ kỹ năng trùng để kết luận phù hợp; hãy bổ sung hồ sơ và tự xem yêu cầu nghề."
+                            if low_signal else
+                            "Gợi ý dựa trên kỹ năng và sở thích đã khai báo, không dự đoán kết quả tuyển dụng."
+                        )})
     return sorted(
         results,
         key=lambda row: (-row["score"], -row["skill_percent"], -row["interest_percent"], row["role_id"]),

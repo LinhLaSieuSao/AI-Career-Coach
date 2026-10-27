@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Load, select, and reveal interview question guidance from bundled data."""
 
 from __future__ import annotations
@@ -43,8 +44,8 @@ QUESTION_REVIEW_LABELS = {
     "unreviewed": "Chưa review nội dung",
 }
 POST_SUBMISSION_GUIDANCE_NOTICE = (
-    "Sau khi gửi, bạn nhận điểm tham khảo theo rubric và có thể tự đối chiếu "
-    "với khung trả lời bên dưới."
+    "Nhận xét có thể dùng AI hoặc so khớp từ khóa. Hãy xem phương thức bên dưới "
+    "và tự đối chiếu với các ý tham khảo; điểm không xác nhận câu trả lời đúng hay sai."
 )
 STATIC_SELF_REVIEW_TITLE = "Checklist tự rà soát của câu hỏi"
 STATIC_SELF_REVIEW_NOTICE = (
@@ -200,6 +201,17 @@ def question_bank_quality_summary() -> dict[str, int]:
     }
 
 
+def question_bank_user_notice() -> str:
+    """Give the interface a concise notice without exposing internal jargon."""
+    summary = question_bank_quality_summary()
+    if summary["unreviewed"] or summary["template"] or summary["ai_reviewed_internal"]:
+        return (
+            "Một số câu hỏi chưa được rà soát đầy đủ. Hãy dùng câu hỏi và hướng dẫn "
+            "để luyện tập, rồi đối chiếu kiến thức với nguồn phù hợp hoặc người có kinh nghiệm."
+        )
+    return "Hãy dùng câu hỏi và hướng dẫn để luyện tập, kết hợp phản hồi của người có kinh nghiệm."
+
+
 def question_quality_label(quality: str | None) -> str:
     """Return the canonical user-facing label for question provenance."""
     return QUESTION_REVIEW_LABELS.get(quality, QUESTION_REVIEW_LABELS["unreviewed"])
@@ -341,6 +353,12 @@ _STOPWORDS = {
     "để", "khi", "trong", "với", "theo", "bằng", "này", "đó", "tôi",
     "bạn", "nêu", "cách", "hoặc", "như", "đã", "sẽ", "thì", "về",
 }
+_STOPWORDS_ASCII = frozenset(
+    "".join(char for char in unicodedata.normalize("NFD", word.replace("đ", "d"))
+            if not unicodedata.combining(char))
+    for word in _STOPWORDS
+)
+OFFLINE_KEYWORD_COVERAGE_THRESHOLD = 0.67
 
 
 def _normalized(value: str) -> str:
@@ -350,7 +368,7 @@ def _normalized(value: str) -> str:
 def _tokens(value: str) -> set[str]:
     return {
         token for token in re.findall(r"[^\W_]+", _normalized(value), re.UNICODE)
-        if len(token) >= 3 and token not in _STOPWORDS
+        if len(token) >= 3 and _comparison_token(token) not in _STOPWORDS_ASCII
     }
 
 
@@ -386,34 +404,83 @@ def _result(
 ) -> dict[str, Any]:
     score = max(0.0, round(10 * sum(item["met"] for item in criteria) / len(criteria), 1)
                 - len(red_flags_hit))
+    offline = source == "offline_rubric"
+    criteria = [
+        {
+            **item,
+            "status_label": (
+                ("Có từ khóa liên quan" if item["met"] else "Chưa tìm thấy đủ từ khóa")
+                if offline else ("Có dẫn chứng" if item["met"] else "Cần xem lại")
+            ),
+        }
+        for item in criteria
+    ]
     return AnswerReview(
         score=score, criteria=criteria, red_flags_hit=red_flags_hit,
         feedback=feedback, improvement=improvement, source=source,
         model=model, fallback_reason=fallback_reason,
+        display_title="Gợi ý tự rà soát" if offline else "Nhận xét từ AI",
+        score_label="Mức trùng từ khóa tham khảo" if offline else "Điểm theo tiêu chí tham khảo",
+        score_notice=(
+            "Điểm dựa trên từ khóa, có thể bỏ sót cách diễn đạt khác hoặc nhận nhầm ý; "
+            "không kết luận câu trả lời đúng hay sai."
+            if offline else
+            "Nhận xét do AI tạo, có thể chưa chính xác; hãy kiểm tra lại nội dung chuyên môn."
+        ),
+        method_notice=(
+            "Chưa bật nhận xét AI; ứng dụng dùng từ khóa để gợi ý tự rà soát."
+            if offline and fallback_reason == "no_key" else
+            "Không dùng được dịch vụ AI cho lượt này; ứng dụng dùng từ khóa để gợi ý tự rà soát."
+            if offline else "Nhận xét được tạo bằng dịch vụ AI đã cấu hình."
+        ),
     ).model_dump()
 
 
 def _offline_review(
     answer: str, points: list[str], red_flags: list[str], reason: str,
 ) -> dict[str, Any]:
-    answer_tokens = _tokens(answer)
+    # Do not treat an explicit admission of missing knowledge as evidence of
+    # mastery. This is deliberately limited to common phrases; it is not a
+    # general natural-language understanding or negation detector.
+    sentences = [part.strip() for part in re.split(r"(?<=[.!?;])\s+|\n+", answer) if part.strip()]
+    lack_pattern = re.compile(
+        r"\b(?:khong|chua|chang)\s+(?:biet|hieu|nam|co kinh nghiem|tung)\b"
+        r"|\b(?:do not|don't|never)\s+(?:know|understand|have experience)\b"
+        r"|\bno\s+experience\b",
+        re.IGNORECASE,
+    )
+    usable_sentences = [
+        part for part in sentences if not lack_pattern.search(_comparison_token(_normalized(part)))
+    ]
     criteria = [
-        {"point": point, "met": len(answer) >= 40 and _coverage(point, answer_tokens) >= 0.4,
-         "evidence": ""}
+        {
+            "point": point,
+            "met": len(answer) >= 40 and any(
+                _coverage(point, _tokens(sentence)) >= OFFLINE_KEYWORD_COVERAGE_THRESHOLD
+                for sentence in usable_sentences
+            ),
+            "evidence": "",
+        }
         for point in points
     ]
     for item in criteria:
         if item["met"]:
-            item["evidence"] = _evidence(answer, item["point"])
-    flags = [flag for flag in red_flags if len(answer) >= 40 and _coverage(flag, answer_tokens) >= 0.75]
+            item["evidence"] = max(
+                usable_sentences, key=lambda sentence: _coverage(item["point"], _tokens(sentence))
+            )[:200]
+    # A red flag often describes an omission ("không nêu..."). Word overlap
+    # cannot establish an omission or distinguish it from a positive claim.
+    # Keep these as self-review guidance instead of penalizing the candidate.
+    flags: list[str] = []
     missing = [item["point"] for item in criteria if not item["met"]]
     feedback = (
-        f"Câu trả lời đã đề cập {len(points) - len(missing)}/{len(points)} ý trong rubric "
-        "theo phép so khớp từ khóa gần đúng."
+        f"Công cụ tìm thấy từ khóa liên quan đến {len(points) - len(missing)}/{len(points)} ý "
+        "trong rubric. Đây chỉ là gợi ý để tự rà soát, chưa xác nhận ý đúng hoặc sai."
     )
     improvement = (
-        "Hãy bổ sung: " + "; ".join(missing[:3]) + "." if missing
-        else "Hãy thêm ví dụ cụ thể và kiểm chứng kết quả bằng trải nghiệm của bạn."
+        "Hãy tự kiểm tra và làm rõ các ý sau nếu câu trả lời chưa đề cập: "
+        + "; ".join(missing[:3]) + "." if missing
+        else "Hãy đối chiếu từng ý với câu trả lời; thêm ví dụ hoặc kết quả thực tế nếu còn thiếu."
     )
     return _result(criteria, flags, feedback, improvement, "offline_rubric", fallback_reason=reason)
 
@@ -441,9 +508,9 @@ def _parse_llm_text(content: str, points: list[str], red_flags: list[str], answe
         if not isinstance(raw, dict) or type(raw.get("met")) is not bool or not isinstance(raw.get("evidence"), str):
             raise ValueError("bad_json")
         evidence = raw["evidence"].strip()[:200]
-        met = raw["met"] and bool(evidence) and fuzz.partial_ratio(
-            _normalized(evidence), _normalized(answer)
-        ) >= 70
+        # The provider is asked for a quotation, so approximate text matches
+        # must not pass as evidence. Normalize Unicode and case only.
+        met = raw["met"] and bool(evidence) and _normalized(evidence) in _normalized(answer)
         criteria.append({"point": point, "met": met, "evidence": evidence if met else ""})
     indices = payload.get("red_flags_hit")
     if not isinstance(indices, list) or any(type(index) is not int or not 1 <= index <= len(red_flags) for index in indices):
@@ -458,7 +525,12 @@ def review_answer(
     question_id: str, answer: str, *, api_key: str | None = None,
     base_url: str | None = None, model: str | None = None,
 ) -> dict[str, Any]:
-    """Review only this question's rubric and a bounded answer; always fall back offline."""
+    """Review an answer with an optional local LLM fallback, then offline rubric.
+
+    Operators can set LLM_FALLBACK_BASE_URL to an Ollama loopback URL and
+    LLM_FALLBACK_MODEL to an installed model. Neither requires a user key.
+    The fallback is attempted only after a configured remote provider fails.
+    """
     if not isinstance(question_id, str) or not question_id.strip():
         raise ValueError("question_id phải là chuỗi không rỗng.")
     if not isinstance(answer, str) or not answer.strip():
@@ -476,8 +548,10 @@ def review_answer(
     url = url.strip() or "https://api.groq.com/openai/v1"
     selected_model = (model if model is not None else os.getenv("LLM_MODEL", "")).strip() or "llama-3.3-70b-versatile"
     try:
-        local_url = urlparse(url).hostname in {"localhost", "127.0.0.1", "::1"}
+        hostname = urlparse(url).hostname
+        local_url = hostname in {"localhost", "127.0.0.1", "::1"}
     except ValueError:
+        hostname = None
         local_url = False
     if not key and not local_url:
         return _offline_review(answer, points, flags, "no_key")
@@ -499,11 +573,16 @@ def review_answer(
     payload = {"model": selected_model, "temperature": 0, "max_tokens": 700,
                "response_format": {"type": "json_object"},
                "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
+    if hostname == "api.groq.com" and selected_model in {"openai/gpt-oss-20b", "openai/gpt-oss-120b"}:
+        # GPT-OSS uses part of its output budget for reasoning as well as JSON.
+        payload["reasoning_effort"] = "low"
+        payload["max_tokens"] = 1600
     reason = "http_error"
     for attempt in range(2):
         try:
             response = requests.post(
-                f"{url.rstrip('/')}/chat/completions", timeout=(5, 20),
+                # Local models can take longer to load and generate on CPU.
+                f"{url.rstrip('/')}/chat/completions", timeout=(5, 90 if local_url else 20),
                 headers={"Authorization": f"Bearer {key}"}, json=payload,
             )
             if response.status_code == 400 and attempt == 0:
@@ -537,6 +616,25 @@ def review_answer(
             reason = "http_error"
             break
     logger.warning("LLM review fallback: %s", reason)
+    # Only an operator-configured loopback server may receive the answer as a
+    # backup. Never send the primary provider's credentials to that server.
+    fallback_url = os.getenv("LLM_FALLBACK_BASE_URL", "").strip()
+    fallback_model = os.getenv("LLM_FALLBACK_MODEL", "").strip()
+    try:
+        fallback_parts = urlparse(fallback_url)
+        fallback_local = (
+            fallback_parts.scheme in {"http", "https"}
+            and fallback_parts.hostname in {"localhost", "127.0.0.1", "::1"}
+            and fallback_parts.username is None and fallback_parts.password is None
+        )
+    except ValueError:
+        fallback_local = False
+    if key and not local_url and fallback_local and fallback_model:
+        backup = review_answer(
+            question_id, answer, api_key="", base_url=fallback_url, model=fallback_model,
+        )
+        if backup["source"] == "llm":
+            return backup
     return _offline_review(answer, points, flags, reason)
 
 
@@ -559,7 +657,10 @@ def generate_interview_questions(
     role_id = _resolve_role_id(role or "")
     role_id = role_id if role_id in question_data else None
     if role_id:
-        return [item["question"] for item in get_questions(role_id, max_per_skill) if item.get("question")]
+        focus = [skill for skill in missing_skills if isinstance(skill, str) and skill.strip()]
+        return [item["question"] for item in get_questions(
+            role_id, max_per_skill, focus_skills=focus or None
+        ) if item.get("question")]
 
     skills = {skill.strip().casefold() for skill in missing_skills if isinstance(skill, str) and skill.strip()}
     if not skills:

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Application modules with lazy public imports.
 
 Importing one module (for example ``modules.matcher``) should not eagerly load
@@ -17,6 +18,7 @@ _EXPORTS = {
     "parse_document": ("cv_parser", "parse_document"),
     "build_profile": ("profile", "build_profile"),
     "build_profile_from_cv": ("profile", "build_profile_from_cv"),
+    "summarize_data_provenance": ("catalog", "summarize_data_provenance"),
     "match_role": ("matcher", "match_role"),
     "match_cv_to_jd": ("matcher", "match_cv_to_jd"),
     "extract_jd_skills": ("matcher", "extract_jd_skills"),
@@ -28,12 +30,14 @@ _EXPORTS = {
     "build_timed_roadmap": ("recommender", "build_timed_roadmap"),
     "build_roadmap": ("recommender", "build_roadmap"),
     "get_course_recommendations": ("recommender", "get_course_recommendations"),
+    "resource_access_notice": ("recommender", "resource_access_notice"),
     "generate_interview_questions": ("interview", "generate_interview_questions"),
     "get_questions": ("interview", "get_questions"),
     "get_reference_answer": ("interview", "get_reference_answer"),
     "get_question_feedback": ("interview", "get_question_feedback"),
     "review_answer": ("interview", "review_answer"),
     "question_bank_quality_summary": ("interview", "question_bank_quality_summary"),
+    "question_bank_user_notice": ("interview", "question_bank_user_notice"),
     "count_reviewed_questions": ("interview", "count_reviewed_questions"),
     "question_quality_label": ("interview", "question_quality_label"),
     "POST_SUBMISSION_GUIDANCE_NOTICE": ("interview", "POST_SUBMISSION_GUIDANCE_NOTICE"),
