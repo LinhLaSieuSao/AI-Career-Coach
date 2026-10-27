@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Typed contracts for values shared by the profile, matcher, and interview UI."""
 
 from __future__ import annotations

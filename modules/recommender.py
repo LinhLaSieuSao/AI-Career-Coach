@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Build weekly learning roadmaps from Matcher gaps and skill-indexed resources."""
 
 from __future__ import annotations
@@ -80,6 +81,27 @@ def _resource_tokens(resource: Mapping[str, Any]) -> list[str]:
 
 def _is_academic_foundation(resource: Mapping[str, Any]) -> bool:
     return isinstance(resource, Mapping) and resource.get("learning_role") == "academic_foundation"
+
+
+def resource_access_notice(resource: Mapping[str, Any]) -> str | None:
+    """Describe an inconclusive automated check without declaring a link dead."""
+    check = resource.get("latest_transport_check") if isinstance(resource, Mapping) else None
+    if isinstance(check, Mapping) and check.get("status") in {"blocked", "error", "timeout"}:
+        return (
+            "Lần kiểm tra tự động gần nhất chưa xác nhận được liên kết; trang có thể chặn máy kiểm tra "
+            "hoặc gặp lỗi tạm thời. Hãy thử mở và kiểm tra nội dung trước khi sử dụng."
+        )
+    return None
+
+
+def _with_access_notice(resource: Mapping[str, Any]) -> dict[str, Any]:
+    result = deepcopy(dict(resource))
+    notice = resource_access_notice(resource)
+    if notice:
+        result["access_notice"] = notice
+        prior = result.get("access_note")
+        result["access_note"] = f"{prior.strip()} {notice}" if isinstance(prior, str) and prior.strip() else notice
+    return result
 
 
 def _resource_catalog(
@@ -173,9 +195,12 @@ def _resource_catalog(
         if identity not in group_keys:
             key = tokens[0]
             group_keys[identity] = key
-            catalog[key] = {**deepcopy(dict(resource)), "key": key, "skills": []}
+            catalog[key] = {**_with_access_notice(resource), "key": key, "skills": []}
         key = group_keys[identity]
-        if _is_academic_foundation(resource):
+        # A shared textbook may appear under several skills. Keep the first
+        # displayed mapping stable: replacing it with a later skill's practice
+        # link can make a Power BI recommendation point to Tableau.
+        if _is_academic_foundation(resource) and not catalog[key].get("academic_source"):
             catalog[key].update({
                 field: deepcopy(resource[field])
                 for field in (
@@ -184,6 +209,14 @@ def _resource_catalog(
                     "verified_companion_title", "practice_url", "practice_title", "jurisdiction",
                 ) if field in resource
             })
+        if _is_academic_foundation(resource):
+            companions = catalog[key].setdefault("practice_by_skill", {})
+            url = resource.get("verified_companion_url") or resource.get("practice_url")
+            if url:
+                companions[skill] = {
+                    "url": url,
+                    "title": resource.get("verified_companion_title") or resource.get("practice_title") or "Tài liệu thực hành",
+                }
         if key not in refs[skill]:
             refs[skill].append(key)
             catalog[key]["skills"].append(skill)
@@ -823,12 +856,25 @@ def get_practice_routes(skills, resources: Mapping) -> list[dict]:
         ), {})
         learning_plan = group.get("learning_plan") if isinstance(group, Mapping) else None
         if isinstance(learning_plan, Mapping) and isinstance(learning_plan.get("steps"), list):
+            practice_plan = group.get("practice_plan")
+            if not learning_plan.get("user_steps") and isinstance(practice_plan, Mapping):
+                steps = practice_plan.get("steps")
+                if isinstance(steps, list) and steps:
+                    routes.append({
+                        "skill": skill,
+                        "title": practice_plan.get("title", f"Học và luyện {skill}"),
+                        "framing": practice_plan.get("framing", "Thực hành với một tình huống phù hợp."),
+                        "steps": list(steps),
+                        "evidence": practice_plan.get("evidence", "Sản phẩm thực hành và phản hồi nhận được."),
+                        "self_paced": practice_plan.get("self_paced", True),
+                    })
+                    continue
             routes.append({
                 "skill": skill,
-                "title": learning_plan.get("title", f"Học và luyện {skill}"),
-                "framing": "Đọc phần học liệu được chỉ định, làm bài tập mô phỏng và xin phản hồi trước khi tự đánh giá tiến bộ.",
-                "steps": list(learning_plan["steps"]),
-                "evidence": learning_plan.get("evidence", "Sản phẩm thực hành và phản hồi nhận được."),
+                "title": learning_plan.get("user_title") or learning_plan.get("title", f"Học và luyện {skill}"),
+                "framing": learning_plan.get("user_framing") or "Đọc phần học liệu được chỉ định, làm bài tập mô phỏng và xin phản hồi trước khi tự đánh giá tiến bộ.",
+                "steps": list(learning_plan.get("user_steps") or learning_plan["steps"]),
+                "evidence": learning_plan.get("user_evidence") or learning_plan.get("evidence", "Sản phẩm thực hành và phản hồi nhận được."),
                 "self_paced": learning_plan.get("self_paced", True),
             })
             continue
@@ -1023,6 +1069,7 @@ def plan(gap, resources, hours_per_week=8):
         candidates[skill].append((key, record, duration))
 
     catalog, refs, unresolved, coverage = {}, {}, [], []
+    mapping_records = {}
     for item in items:
         skill = item["skill"]
         refs[skill] = []
@@ -1077,6 +1124,7 @@ def plan(gap, resources, hours_per_week=8):
             needed.difference_update(covered)
             if key not in refs[skill]:
                 refs[skill].append(key)
+            mapping_records[(skill, key)] = record
             coverage.append({"skill": skill, "resource_key": key, "levels": covered,
                              "content_review_status": record["content_review_status"],
                              "review_note": record.get("review_note", ""),
@@ -1093,7 +1141,7 @@ def plan(gap, resources, hours_per_week=8):
             if record["content_review_status"] == "partial" and not _is_academic_foundation(record):
                 unresolved.append({"skill": skill, "resource_key": key, "reason": "partial_content", "levels": covered})
             if key not in catalog:
-                catalog[key] = {**deepcopy(dict(record)), "key": key, "skills": [],
+                catalog[key] = {**_with_access_notice(record), "key": key, "skills": [],
                                 "planned_hours": duration[0], "duration_kind": duration[1],
                                 "duration_issue": duration[2], "duration_evidence": {}}
             selected = catalog[key]
@@ -1150,6 +1198,20 @@ def plan(gap, resources, hours_per_week=8):
         keys = refs.get(skill, [])
         selected = [catalog[key] for key in keys if key in catalog]
         resource = next((record for record in selected if _is_academic_foundation(record)), None)
+        if resource is not None:
+            # The shared textbook is deduplicated in the catalog. A learning
+            # step must use this skill's own companion and scope, not whichever
+            # skill happened to introduce the shared book first.
+            resource = deepcopy(resource)
+            skill_record = mapping_records.get((skill, resource["key"]), {})
+            for field in (
+                "learning_scope", "learning_plan", "practice_url", "practice_title",
+                "verified_companion_url", "verified_companion_title",
+            ):
+                if field in skill_record:
+                    resource[field] = deepcopy(skill_record[field])
+                else:
+                    resource.pop(field, None)
         route = next(iter(get_practice_routes([skill], resources)), None)
         learning_steps.append({
             "step": number,

@@ -10,10 +10,50 @@ from pathlib import Path
 import pytest
 
 from modules import build_roadmap, recommender
+from modules.curriculum import merge_academic_curriculum
 from modules.matcher import match_cv_to_jd, match_role
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def test_shared_textbook_keeps_each_skills_practice_link_separate():
+    resources = json.loads((ROOT / "data/resources.json").read_text(encoding="utf-8"))
+    roadmap = build_roadmap(["power bi", "tableau"], merge_academic_curriculum(resources))
+    book = next(item for item in _documents(roadmap) if item.get("academic_source"))
+    assert "Power BI" in book["practice_title"]
+    assert "Power BI" in book["practice_by_skill"]["power bi"]["title"]
+    # Tableau's stored URL contains a placeholder and the live check returned
+    # 403. It remains in the data, but must not be presented as verified.
+    assert "tableau" not in book["practice_by_skill"]
+    assert not any("playlist_id" in item.get("url", "") for item in _documents(roadmap))
+
+
+def test_timed_plan_does_not_show_another_skills_companion():
+    resources = json.loads((ROOT / "data/resources.json").read_text(encoding="utf-8"))
+    gap = {"items": [
+        {"skill": "power bi", "current": 0, "required": 1, "gap": 1, "priority": 2},
+        {"skill": "tableau", "current": 0, "required": 1, "gap": 1, "priority": 1},
+    ]}
+    roadmap = recommender.build_timed_roadmap(gap, merge_academic_curriculum(resources))
+    steps = {step["skill"]: step for step in roadmap["learning_steps"]}
+    assert "Power BI" in steps["power bi"]["resource"]["practice_title"]
+    tableau = steps["tableau"]["resource"]
+    assert not tableau.get("practice_url")
+    assert not tableau.get("verified_companion_url")
+
+
+def test_inconclusive_link_check_is_explained_without_erasing_prior_review():
+    resources = _catalog("sql")
+    record = resources["sql"]["resources"][0]
+    record["latest_transport_check"] = {"status": "blocked", "http_status": 403}
+    original = deepcopy(resources)
+    recommendation = _documents(build_roadmap(["sql"], resources))[0]
+    assert recommendation["verified"] is True  # Historical review stays intact.
+    assert "chưa xác nhận" in recommendation["access_note"]
+    assert resources == original
+    academic = merge_academic_curriculum(resources)["sql"]["resources"][-1]
+    assert not academic.get("practice_url")
 
 
 def test_independent_recognition_skills_without_resources_are_kept_and_reported():

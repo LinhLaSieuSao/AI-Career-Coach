@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Build a normalized student profile from form input."""
 
 from __future__ import annotations

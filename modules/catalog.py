@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Read the shared role catalog without depending on the process directory."""
 
 from __future__ import annotations
@@ -75,3 +76,49 @@ def load_skill_vocabulary(
             raise ValueError(f"Catalog nhận diện chứa kỹ năng trùng trong {path}.")
         vocabulary.update(canonical)
     return vocabulary
+
+
+def summarize_data_provenance(data_dir: str | Path | None = None) -> dict[str, Any]:
+    """Count recorded provenance fields without asserting legal permission.
+
+    A recorded source or rights note is a lead for human review, not proof
+    that the project can redistribute an item or that licenses are compatible.
+    """
+    directory = Path(data_dir) if data_dir is not None else DATA_DIR
+    roles = load_roles(directory / "roles.json")
+    with (directory / "resources.json").open(encoding="utf-8") as source:
+        resources = json.load(source)
+    if not isinstance(resources, dict):
+        raise ValueError("resources.json phải là object theo tên kỹ năng.")
+
+    def count_records(records: list[dict[str, Any]]) -> dict[str, int]:
+        source_count = rights_count = 0
+        for item in records:
+            provenance = item.get("provenance")
+            if not isinstance(provenance, dict):
+                continue
+            source_url = provenance.get("source_url")
+            rights = provenance.get("rights_basis")
+            source_count += int(isinstance(source_url, str) and bool(source_url.strip()))
+            rights_count += int(isinstance(rights, str) and bool(rights.strip()))
+        return {
+            "total": len(records),
+            "source_url_recorded": source_count,
+            "source_url_missing": len(records) - source_count,
+            "rights_basis_recorded": rights_count,
+            "rights_basis_missing": len(records) - rights_count,
+        }
+
+    records = []
+    for group in resources.values():
+        if not isinstance(group, dict) or not isinstance(group.get("resources"), list):
+            raise ValueError("Mỗi nhóm resources phải có danh sách resources.")
+        for item in group["resources"]:
+            if not isinstance(item, dict):
+                raise ValueError("Mỗi học liệu phải là object.")
+            records.append(item)
+    return {
+        "roles": count_records(roles),
+        "resource_mappings": count_records(records),
+        "notice": "Trường có dữ liệu không tự chứng minh quyền phân phối; cần kiểm tra nguồn và giấy phép.",
+    }

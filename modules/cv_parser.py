@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Trích xuất văn bản từ CV (PDF hoặc DOCX)."""
 
 from __future__ import annotations

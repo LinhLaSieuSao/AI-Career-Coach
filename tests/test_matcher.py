@@ -394,3 +394,15 @@ def test_categorized_jd_matching_does_not_create_aggregate_without_must_have(jd_
 def test_categorized_jd_matching_rejects_skill_assigned_to_multiple_groups(jd_skill_data):
     with pytest.raises(ValueError, match="đang nằm ở cả"):
         matcher.compare_confirmed_jd_requirements(["python"], ["python"], [], ["PYTHON"])
+
+
+def test_unrecognized_skill_names_do_not_inflate_recommendation_confidence():
+    profile = {"skills": ["python", "invented-skill-one", "invented-skill-two"]}
+    assert matcher.role_recommendation_is_low_confidence(profile)
+
+
+def test_weak_role_recommendations_are_labeled_as_limited_signals():
+    suggestions = matcher.suggest_roles({"skills": ["giao tiếp", "làm việc nhóm"]}, top_k=20)
+    weak = [item for item in suggestions if item["low_skill_signal"]]
+    assert weak
+    assert all(item["score"] <= 5 and "chưa đủ" in item["display_note"].casefold() for item in weak)

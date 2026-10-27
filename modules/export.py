@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Export a compact career assessment without reproducing the source CV."""
 
 from __future__ import annotations

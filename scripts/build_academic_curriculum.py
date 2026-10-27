@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Build a sourced academic curriculum overlay for every skill in roles.json."""
 
 from __future__ import annotations
@@ -5,6 +6,7 @@ from __future__ import annotations
 import json
 import re
 import unicodedata
+from copy import deepcopy
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -216,6 +218,47 @@ def learning_plan(skill: str, source_id: str):
     }
 
 
+def preserve_curated_data(payload: dict, previous: dict) -> dict:
+    """Keep manual practice plans and link checks when regenerating the catalog.
+
+    Link checks are tied to the exact URLs observed. Refuse ambiguous changes
+    rather than attaching old evidence to a new source or discarding a plan.
+    """
+    if previous.get("schema_version") != 1:
+        raise ValueError("Không thể giữ dữ liệu biên tập từ phiên bản schema không được hỗ trợ.")
+    result = deepcopy(payload)
+    if "practice_tracks" in previous:
+        result["practice_tracks"] = deepcopy(previous["practice_tracks"])
+        missing = {
+            source_id for track in previous["practice_tracks"].values()
+            for source_id in track.get("sources", []) if source_id not in result["sources"]
+        }
+        if missing:
+            raise ValueError(f"Nhóm thực hành đang tham chiếu nguồn không còn tồn tại: {sorted(missing)}")
+    for source_id, old in previous.get("sources", {}).items():
+        checks = ("access_check", "practice_access_check")
+        if not any(field in old for field in checks):
+            continue
+        new = result["sources"].get(source_id)
+        if new is None:
+            raise ValueError(f"Không thể giữ kết quả kiểm tra cho nguồn đã xóa: {source_id}")
+        for field, url_key in (("access_check", "url"), ("practice_access_check", "practice_url")):
+            if field in old:
+                if old.get(url_key) != new.get(url_key):
+                    raise ValueError(f"URL đã đổi; cần kiểm tra lại trước khi cập nhật {source_id}: {url_key}")
+                new[field] = deepcopy(old[field])
+    for skill, old in previous.get("skills", {}).items():
+        old_plan = old.get("learning_plan", {})
+        curated = {key: value for key, value in old_plan.items() if key.startswith("user_")}
+        if not curated:
+            continue
+        new = result["skills"].get(skill)
+        if new is None or new.get("source_id") != old.get("source_id"):
+            raise ValueError(f"Không thể giữ bài tập biên soạn khi kỹ năng hoặc nguồn đã đổi: {skill}")
+        new["learning_plan"].update(deepcopy(curated))
+    return result
+
+
 def main():
     roles = json.loads((ROOT / "data" / "roles.json").read_text(encoding="utf-8"))
     skills = sorted({item["name"].strip() for role in roles for item in role["skills"]}, key=str.casefold)
@@ -232,6 +275,9 @@ def main():
         "skills": mappings,
     }
     output = ROOT / "data" / "academic_curriculum.json"
+    if output.is_file():
+        previous = json.loads(output.read_text(encoding="utf-8"))
+        payload = preserve_curated_data(payload, previous)
     output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {len(mappings)} mappings across {len(set(m['source_id'] for m in mappings.values()))} source tracks: {output}")
 
