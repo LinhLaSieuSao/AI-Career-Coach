@@ -177,7 +177,11 @@ def test_manual_profile_ui_uses_matcher_weights_and_roadmap_metadata(monkeypatch
     ]
     assert any(item.value == "Lộ trình học" for item in app.subheader)
     assert any("Học theo thứ tự ưu tiên" in item.value for item in app.caption)
-    assert any("Học và luyện " in label for label in expander_labels)
+    displayed_roadmap = build_roadmap(
+        expected["missing"], merge_academic_curriculum(resources), missing_details=expected["missing_details"]
+    )
+    practice_titles = [route["title"] for week in displayed_roadmap for route in week["practice_routes"]]
+    assert practice_titles and any(title in label for title in practice_titles for label in expander_labels)
     # Unknown claims stay available by default and can be excluded explicitly.
     assert app.checkbox[0].value is True
     app.checkbox[0].uncheck().run()
@@ -366,6 +370,40 @@ def test_interview_ui_can_create_questions_for_selected_real_role():
     assert all(question["role_id"] == "data_analyst" for question in questions)
 
 
+def test_interview_modes_keep_offline_and_ai_distinct(monkeypatch):
+    import modules
+
+    calls = []
+    def review(question_id, answer, **kwargs):
+        calls.append(kwargs)
+        is_ai = bool(kwargs.get("api_key"))
+        return {"source": "llm" if is_ai else "offline_rubric", "model": "test-model" if is_ai else None,
+                "score": 0.0, "criteria": [], "red_flags_hit": [], "feedback": "Góp ý thử",
+                "improvement": "", "fallback_reason": None if is_ai else "no_key"}
+
+    monkeypatch.setattr(modules, "review_answer", review)
+    monkeypatch.setenv("LLM_API_KEY", "server-key-should-not-be-used")
+    app = AppTest.from_string(
+        "from app import render_interview_practice\nrender_interview_practice({'id': 'data_analyst'})",
+        default_timeout=20,
+    ).run()
+    app.button(key="start_interview_data_analyst").click().run()
+    _field(app, "Câu trả lời của bạn").input("Câu trả lời thử.")
+    next(button for button in app.button if button.label == "Gửi câu trả lời").click().run()
+    assert calls[-1]["api_key"] == ""
+    assert "Tự đánh giá theo tiêu chí" in _markdown(app)
+
+    app.radio(key="interview_review_mode").set_value("Nhận góp ý từ AI").run()
+    before = len(calls)
+    next(button for button in app.button if button.label == "Gửi câu trả lời").click().run()
+    assert len(calls) == before
+    assert any("cần nhập API key" in item.value for item in app.warning)
+    app.text_input(key="llm_cfg_api_key").input("key-thu").run()
+    next(button for button in app.button if button.label == "Gửi câu trả lời").click().run()
+    assert calls[-1]["api_key"] == "key-thu"
+    assert "Góp ý từ AI" in _markdown(app)
+
+
 def test_interview_submission_shows_offline_review_without_network(monkeypatch):
     import requests
 
@@ -380,7 +418,7 @@ def test_interview_submission_shows_offline_review_without_network(monkeypatch):
     )
     next(button for button in app.button if button.label == "Gửi câu trả lời").click().run()
     assert not app.exception
-    assert "Nhận xét AI · Điểm rubric" in _markdown(app)
+    assert "Tự đánh giá theo tiêu chí · Điểm tham khảo" in _markdown(app)
     assert "không dùng LLM" in " ".join(item.value for item in app.caption)
     review = next(iter(app.session_state["interview_session"]["reviews"].values()))
     assert review["source"] == "offline_rubric"
@@ -407,6 +445,7 @@ def test_interview_review_is_not_called_again_on_rerun(monkeypatch):
 
     monkeypatch.setattr(requests, "post", post)
     app = _submit(_start(), "Python")
+    app.radio(key="interview_review_mode").set_value("Nhận góp ý từ AI").run()
     next(item for item in app.text_input if item.key == "llm_cfg_api_key").input("sample-key")
     app.button(key="start_interview_data_analyst").click().run()
     _field(app, "Câu trả lời của bạn").input(

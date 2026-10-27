@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Load the curated academic curriculum and attach it to skill resources."""
 
 from __future__ import annotations
@@ -13,6 +14,29 @@ from .skill_extractor import normalize_skill
 
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+
+
+def _practice_tracks(payload: Mapping[str, Any]) -> dict[str, dict[str, Any]]:
+    """Index optional practice guidance by source, preserving older catalogs."""
+    tracks = payload.get("practice_tracks", {})
+    if not isinstance(tracks, Mapping):
+        raise ValueError("practice_tracks phải là một object.")
+    result: dict[str, dict[str, Any]] = {}
+    for track in tracks.values():
+        if not isinstance(track, dict) or not isinstance(track.get("sources"), list):
+            raise ValueError("Mỗi nhóm thực hành phải có danh sách sources.")
+        if not all(isinstance(track.get(field), str) and track[field].strip()
+                   for field in ("title", "framing", "evidence")):
+            raise ValueError("Nhóm thực hành thiếu tiêu đề, hướng dẫn hoặc đầu ra.")
+        if not isinstance(track.get("steps"), list) or not track["steps"] or not all(
+            isinstance(step, str) and step.strip() for step in track["steps"]
+        ):
+            raise ValueError("Nhóm thực hành phải có các bước không rỗng.")
+        for source_id in track["sources"]:
+            if not isinstance(source_id, str) or source_id not in payload.get("sources", {}) or source_id in result:
+                raise ValueError(f"Nguồn thực hành không hợp lệ hoặc bị trùng: {source_id!r}.")
+            result[source_id] = track
+    return result
 
 
 def _slug(value: str) -> str:
@@ -63,6 +87,7 @@ def merge_academic_curriculum(
     skill level or a regulated qualification.
     """
     payload = curriculum or load_academic_curriculum()
+    tracks = _practice_tracks(payload)
     result = deepcopy(dict(resources))
     index = {normalize_skill(name): name for name in result if isinstance(name, str)}
     for skill, mapping in payload["skills"].items():
@@ -76,6 +101,11 @@ def merge_academic_curriculum(
             raise ValueError(f"Resource group for {skill!r} must contain a resource list.")
         source = payload["sources"][mapping["source_id"]]
         plan = deepcopy(mapping["learning_plan"])
+        access_check = source.get("access_check")
+        practice_access_check = source.get("practice_access_check")
+        # A successful HTTP response only supports link availability, not
+        # educational suitability, ownership or independent expert review.
+        http_ok = isinstance(access_check, Mapping) and access_check.get("http_status") == 200
         record = {
             "id": "academic_" + _slug(skill),
             "title": source["title"],
@@ -87,8 +117,9 @@ def merge_academic_curriculum(
             "level_from": 1,
             "level_to": 3,
             "duration_hours": None,
-            "verified": True,
-            "last_checked": "2026-10-27",
+            "verified": http_ok,
+            "last_checked": access_check.get("checked_at") if isinstance(access_check, Mapping) else None,
+            "access_check": deepcopy(access_check),
             "content_review_status": "partial",
             "review_note": plan["source_scope"],
             "academic_source": True,
@@ -99,8 +130,17 @@ def merge_academic_curriculum(
             "learning_scope": plan["source_scope"],
             "learning_plan": plan,
             "jurisdiction": source.get("jurisdiction"),
-            "verified_companion_url": source.get("practice_url"),
-            "verified_companion_title": source.get("practice_title"),
+            "verified_companion_url": (
+                source.get("practice_url")
+                if isinstance(practice_access_check, Mapping) and practice_access_check.get("http_status") == 200
+                else None
+            ),
+            "verified_companion_title": (
+                source.get("practice_title")
+                if isinstance(practice_access_check, Mapping) and practice_access_check.get("http_status") == 200
+                else None
+            ),
+            "practice_access_check": deepcopy(practice_access_check),
             "access_note": (
                 "Có thể cần truy cập qua thư viện hoặc mua tài liệu; kiểm tra tại trang nhà xuất bản."
                 if source.get("access") == "may_require_library_or_paid_access" else None
@@ -111,7 +151,7 @@ def merge_academic_curriculum(
                 "author_origin": source["provider"],
                 "curated_by": "academic_curriculum_catalog",
                 "review_tier": source["kind"],
-                "reviewed_at": "2026-10-27",
+                "reviewed_at": None,
                 "rights_basis": "Link to original source; no textbook content copied into this project.",
                 "license_notes": "Check the original source for its license and reuse terms.",
             },
@@ -123,6 +163,10 @@ def merge_academic_curriculum(
             if isinstance(item, dict)
             and item.get("verified") is True
             and item.get("content_review_status") in {"reviewed", "partial"}
+            and (
+                not isinstance(item.get("latest_transport_check"), Mapping)
+                or item["latest_transport_check"].get("status") in {"reachable", "redirect"}
+            )
             and isinstance(item.get("review_note"), str)
             and item["review_note"].strip()
             and isinstance(item.get("url"), str)
@@ -138,6 +182,18 @@ def merge_academic_curriculum(
         )]
         group["resources"].append(record)
         group["learning_plan"] = plan
+        track = tracks.get(mapping["source_id"])
+        if track and not plan.get("user_steps"):
+            # Keep the original plan intact and add a user-facing alternative.
+            # The template supplies a field-specific scenario; the skill name is
+            # inserted literally, without formatting arbitrary data as code.
+            group.setdefault("practice_plan", {
+                "title": track["title"].replace("{skill}", skill),
+                "framing": track["framing"].replace("{skill}", skill),
+                "steps": [step.replace("{skill}", skill) for step in track["steps"]],
+                "evidence": track["evidence"].replace("{skill}", skill),
+                "self_paced": True,
+            })
         group["academic_source"] = {key: record[key] for key in (
             "title", "provider", "url", "academic_label", "academic_source_kind", "academic_basis", "learning_scope",
             "verified_companion_url", "verified_companion_title",

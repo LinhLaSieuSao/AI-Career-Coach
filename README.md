@@ -128,9 +128,13 @@ python3.12 -m venv .venv
 .venv/bin/python -m streamlit run app.py
 ```
 
-Mở **http://localhost:8501**, chọn hồ sơ mẫu, rà soát kỹ năng và level rồi xem lần lượt năm tab. Muốn chạy kịch bản nhập liệu tự động **không cần API key**, dùng `python scripts/demo_smoke.py` trong môi trường đã cài dependencies. Chạy bộ test hiện có bằng `python -m pytest -q tests/`.
+Mở **http://localhost:8501**, nhập hồ sơ hoặc chọn hồ sơ mẫu, rà soát kỹ năng và level rồi xem lần lượt năm tab. Có thể chạy `python scripts/demo_smoke.py` để chạy test rồi mở web, `--test-only` để chỉ kiểm thử, hoặc `--web-only` để chỉ mở web. Dùng `--no-browser` nếu muốn tự mở địa chỉ được in ra. Giữ terminal mở khi dùng web và nhấn Ctrl+C để dừng.
 
-**Nhận xét LLM là tùy chọn.** Trong tab Phỏng vấn, mở **Cấu hình nhận xét AI** để nhập key, base URL và model; key nhập tại đây chỉ giữ trong phiên Streamlit. Cũng có thể đặt `LLM_API_KEY`, `LLM_BASE_URL`, `LLM_MODEL` qua biến môi trường hoặc Streamlit secrets; Docker Compose chuyển tiếp ba biến này. Xem [`.env.example`](.env.example) để biết các URL mẫu. Không có key, web chấm rubric offline. Nếu dùng dịch vụ chạy trên máy chủ cùng máy với Docker, cần chọn địa chỉ truy cập được **từ trong container** thay vì mặc định coi `localhost` là máy chủ.
+- Trong phần **Luyện phỏng vấn**, chọn **Tự đánh giá theo tiêu chí** để đối chiếu từ khóa với rubric mà không cần key hoặc gửi câu trả lời tới LLM. Cách này không đánh giá đầy đủ ý nghĩa câu trả lời.
+- Để **Nhận góp ý từ AI**, đăng nhập [Groq Console](https://console.groq.com/), tạo key tại [API Keys](https://console.groq.com/keys) và dán vào ô API key Groq trên trang. Key thuộc tài khoản của người dùng, không đưa vào repo; hạn mức và chi phí tùy tài khoản. Câu hỏi, tiêu chí và câu trả lời được gửi tới Groq; không nhập thông tin nhạy cảm.
+- Key được giữ trong phiên ứng dụng. Không gửi key qua chat, chia sẻ key hoặc đưa key vào mã nguồn. Ứng dụng gọi `openai/gpt-oss-120b` qua API Groq; cần quyền sử dụng mô hình này trên tài khoản Groq.
+
+Nếu dịch vụ AI lỗi, ứng dụng ghi rõ kết quả dự phòng chỉ đối chiếu từ khóa, không phải nhận xét của LLM. Tối đa 20 lượt nhận xét qua LLM trong một phiên; câu trả lời được cắt còn 3.000 ký tự trước khi gửi. Module vẫn hỗ trợ cấu hình API và Ollama cho các tích hợp khác; giao diện web hai chế độ sử dụng key Groq do người dùng nhập.
 
 `requirements.txt` là khai báo thư viện trực tiếp; `requirements-dev.txt` chỉ thêm công cụ phát triển. `requirements.lock` chốt cả môi trường runtime và test bằng phiên bản kèm hash; Docker và CI cài từ file này. Khi đổi dependency, cần tạo lại lock và chạy CI theo hướng dẫn trong [tài liệu đóng góp](CONTRIBUTING.md).
 
@@ -142,6 +146,8 @@ Mở **http://localhost:8501**, chọn hồ sơ mẫu, rà soát kỹ năng và 
 - Ngân hàng 766 câu hỏi hiện ở trạng thái **chưa review nội dung chuyên môn**. Điểm rubric offline dựa trên từ khóa nên có thể đánh giá thiếu hoặc quá mức; nhận xét LLM cũng có thể sai. Người dùng cần tự kiểm tra đáp án và bằng chứng.
 - Nếu cấu hình LLM bên ngoài, nội dung câu trả lời phỏng vấn được gửi tới nhà cung cấp đã chọn. Trước khi dùng dữ liệu thật hoặc triển khai trên máy chủ, cần xem chính sách riêng tư của môi trường đó. Chế độ offline không gửi request LLM.
 - Kết quả hồ sơ chỉ nằm trong phiên Streamlit; app không lưu CV vào cơ sở dữ liệu và không tự khôi phục phiên sau khi mất trạng thái.
+
+Thử chức năng AI cần key Groq hợp lệ và kết nối mạng; kiểm thử tự động không đảm bảo chất lượng nhận xét AI thực tế. Có thể chạy riêng `python -m pytest -q tests/`. CI chạy các bài test và Docker health check, đồng thời quét tên file nhạy cảm trong từng layer image. Bước Ruff hiện chỉ báo thông tin để nhóm xử lý dần các cảnh báo cũ.
 
 ## 9. Tài liệu và liên kết
 

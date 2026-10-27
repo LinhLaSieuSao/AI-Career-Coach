@@ -1483,34 +1483,30 @@ def _render_partial_practice_assignments(
 
 def render_interview_practice(position: dict, focus_skills=None, assessment="presence") -> None:
     """Ask first, then review the answer against the question rubric."""
-    import os
-    from urllib.parse import urlparse
-
     from modules import review_answer
 
     role_id = position["id"]
     st.subheader("Luyện phỏng vấn")
     st.caption("Sau khi gửi, bạn sẽ thấy điểm tham khảo theo rubric, khung trả lời và checklist tự rà soát; tình huống thực tế không có một đáp án chung.")
-    try:
-        llm_secrets = {name: st.secrets.get(name, "") for name in ("LLM_API_KEY", "LLM_BASE_URL", "LLM_MODEL")}
-    except Exception:  # noqa: BLE001 - Streamlit raises when secrets.toml is absent.
-        llm_secrets = {}
-    default_url = llm_secrets.get("LLM_BASE_URL") or os.getenv("LLM_BASE_URL") or "https://api.groq.com/openai/v1"
-    default_model = llm_secrets.get("LLM_MODEL") or os.getenv("LLM_MODEL") or "llama-3.3-70b-versatile"
-    with st.expander("Cấu hình nhận xét AI"):
-        entered_key = st.text_input("API key LLM", type="password", key="llm_cfg_api_key")
-        entered_url = st.text_input("Base URL LLM", value=default_url, key="llm_cfg_base_url")
-        entered_model = st.text_input("Model LLM", value=default_model, key="llm_cfg_model")
-        st.caption("Key chỉ lưu trong phiên, không ghi ra đĩa.")
-        active_key = entered_key or llm_secrets.get("LLM_API_KEY") or os.getenv("LLM_API_KEY", "")
-        active_url = entered_url.strip() or default_url
-        active_model = entered_model.strip() or default_model
-        try:
-            local_url = urlparse(active_url).hostname in {"localhost", "127.0.0.1", "::1"}
-        except ValueError:
-            local_url = False
-        llm_enabled = bool(active_key) or local_url
-        st.caption(f"Đang dùng LLM {active_model}" if llm_enabled else "Đang chấm offline theo rubric")
+    mode = st.radio("Chọn cách nhận góp ý", ["Tự đánh giá theo tiêu chí", "Nhận góp ý từ AI"],
+                    key="interview_review_mode")
+    ai_mode = mode == "Nhận góp ý từ AI"
+    active_key = ""
+    if ai_mode:
+        st.caption("AI phân tích câu trả lời theo tiêu chí của câu hỏi; kết quả chỉ mang tính tham khảo.")
+        with st.expander("Cách tạo và sử dụng API key Groq", expanded=True):
+            st.markdown(
+                "1. Đăng nhập hoặc tạo tài khoản tại [Groq Console](https://console.groq.com/).\n"
+                "2. Mở [API Keys](https://console.groq.com/keys), tạo một key và sao chép.\n"
+                "3. Dán key vào ô bên dưới, đóng hướng dẫn nếu muốn và gửi câu trả lời."
+            )
+            st.caption("Không chia sẻ key với người khác. Key chỉ dùng trong phiên này; hạn mức và chi phí phụ thuộc tài khoản Groq của bạn.")
+        active_key = st.text_input("API key Groq", type="password", key="llm_cfg_api_key").strip()
+        st.caption("Khi gửi, câu hỏi, tiêu chí và câu trả lời được gửi tới Groq. Không nhập thông tin nhạy cảm.")
+        if not active_key:
+            st.info("Nhập API key Groq để nhận góp ý từ AI, hoặc chọn tự đánh giá theo tiêu chí.")
+    else:
+        st.caption("Đối chiếu từ khóa với tiêu chí; không gửi câu trả lời tới AI và không cần API key. Kết quả không đánh giá đầy đủ ý nghĩa câu trả lời.")
     bank_summary = question_bank_quality_summary()
     st.warning(
         f"Ngân hàng phỏng vấn riêng: {bank_summary['total']} câu trên {bank_summary['role_count']} vị trí — "
@@ -1586,22 +1582,28 @@ def render_interview_practice(position: dict, focus_skills=None, assessment="pre
                 answer = st.text_area("Câu trả lời của bạn", key=key, height=120)
                 submitted = st.form_submit_button("Gửi câu trả lời")
             if submitted:
-                if answer.strip():
+                if answer.strip() and ai_mode and not active_key:
+                    st.warning("Bạn cần nhập API key Groq trước khi gửi, hoặc chuyển sang tự đánh giá theo tiêu chí.")
+                elif answer.strip():
                     session.setdefault("submitted_answers", {})[question_id] = answer.strip()
+                    session["llm_limit_reached_ids"] = [
+                        item for item in session.get("llm_limit_reached_ids", []) if item != question_id
+                    ]
                     for review_key, _ in INTERVIEW_SELF_REVIEW:
                         st.session_state.pop(f"self_review_{session['batch_id']}_{question_id}_{review_key}", None)
                     answered.add(question_id)
                     session["answered_ids"] = list(answered)
                     calls = st.session_state.get("llm_review_calls", 0)
-                    limit_reached = llm_enabled and calls >= 20
-                    if llm_enabled and not limit_reached:
+                    limit_reached = ai_mode and calls >= 20
+                    if ai_mode and not limit_reached:
                         st.session_state["llm_review_calls"] = calls + 1
                     with st.spinner("Đang nhận xét…"):
-                        if limit_reached:
+                        if limit_reached or not ai_mode:
                             review = review_answer(question_id, answer, api_key="", base_url="https://api.groq.com/openai/v1")
-                            session.setdefault("llm_limit_reached_ids", []).append(question_id)
+                            if limit_reached:
+                                session.setdefault("llm_limit_reached_ids", []).append(question_id)
                         else:
-                            review = review_answer(question_id, answer, api_key=active_key, base_url=active_url, model=active_model)
+                            review = review_answer(question_id, answer, api_key=active_key, base_url="https://api.groq.com/openai/v1", model="openai/gpt-oss-120b")
                     session.setdefault("reviews", {})[question_id] = review
                     st.session_state["interview_session"] = session
                 else:
@@ -1610,7 +1612,10 @@ def render_interview_practice(position: dict, focus_skills=None, assessment="pre
                 st.caption(POST_SUBMISSION_GUIDANCE_NOTICE)
                 review = session.get("reviews", {}).get(question_id)
                 if review:
-                    st.markdown(f"**Nhận xét AI · Điểm rubric: {review['score']:.1f}/10**")
+                    if review["source"] != "llm" and review.get("fallback_reason") not in (None, "no_key"):
+                        st.warning("Chưa nhận được góp ý từ AI. Kết quả bên dưới chỉ đối chiếu từ khóa với tiêu chí; hãy kiểm tra key, hạn mức hoặc thử lại.")
+                    label = "Góp ý từ AI" if review["source"] == "llm" else "Tự đánh giá theo tiêu chí"
+                    st.markdown(f"**{label} · Điểm tham khảo: {review['score']:.1f}/10**")
                     if question_id in session.get("llm_limit_reached_ids", []):
                         st.info("Đã đạt giới hạn 20 lần gọi LLM trong phiên; câu này được chấm offline.")
                     for item in review["criteria"]:
@@ -1629,8 +1634,9 @@ def render_interview_practice(position: dict, focus_skills=None, assessment="pre
                                    "auth": "xác thực thất bại", "rate_limit": "dịch vụ giới hạn lượt gọi",
                                    "bad_json": "phản hồi không đúng JSON", "mismatch": "phản hồi không khớp rubric",
                                    "http_error": "dịch vụ không khả dụng"}
-                        st.caption("Chấm theo từ khóa rubric — không dùng LLM" +
-                                   (f" ({reasons.get(review['fallback_reason'], 'không thể dùng LLM')})" if review.get("fallback_reason") else ""))
+                        reason = review.get("fallback_reason")
+                        detail = f" ({reasons.get(reason, 'không thể dùng LLM')})" if reason and reason != "no_key" else ""
+                        st.caption("Đối chiếu từ khóa với tiêu chí — không dùng LLM" + detail)
                     st.caption("Điểm đo mức đạt rubric, chỉ mang tính tham khảo, không phải đánh giá tuyển dụng.")
                 with st.expander("Tự rà soát ý nghĩa và chất lượng câu trả lời"):
                     st.caption("Checklist tự rà soát, không tính điểm và không thay cho đánh giá của người phỏng vấn.")

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Trích xuất và hợp nhất kỹ năng bằng quy tắc từ vựng."""
 
 from __future__ import annotations
