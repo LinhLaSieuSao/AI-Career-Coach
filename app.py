@@ -254,8 +254,8 @@ def render_landing_page() -> None:
         <div class="hero-wrap beams-surface" id="top">
           <div class="hero">
             <div>
-              <h1>Đi xa hơn với một <em>lộ trình nghề nghiệp rõ ràng.</em></h1>
-              <div class="hero-copy">Khám phá điểm mạnh từ kỹ năng và CV, đối chiếu với vị trí bạn quan tâm, rồi chọn từng bước học tập phù hợp với mục tiêu của mình.</div>
+              <h1>Tối ưu CV tức thì – <em>Định hướng sự nghiệp dài hạn</em></h1>
+              <div class="hero-copy">Nền tảng AI giúp đánh giá CV và thiết kế lộ trình phát triển nghề nghiệp cá nhân hóa cho bạn.</div>
               <div class="hero-actions"><a class="button-primary" href="#career-toolkit">Tạo hồ sơ nghề nghiệp&nbsp; →</a><a class="text-link" href="#how">Xem cách hoạt động <span>↓</span></a></div>
             </div>
           </div>
@@ -287,7 +287,7 @@ def render_landing_page() -> None:
               </div>
               <div class="how-panels">
                 <article class="how-panel" data-step-panel="1">
-                  <h3 tabindex="-1">Tạo hoặc nạp hồ sơ</h3>
+                  <h3 tabindex="-1">Tạo Hoặc Tải Hồ Sơ</h3>
                   <p class="how-lead">Bắt đầu tại mục Hồ sơ nghề nghiệp ngay dưới phần hướng dẫn.</p>
                   <ol class="how-detail-list">
                     <li><span class="how-detail-index" aria-hidden="true">1</span><div><strong>Thử nhanh hoặc nhập thông tin của bạn</strong><p>Chọn một hồ sơ mẫu, hoặc tự nhập kỹ năng, sở thích và kinh nghiệm.</p></div></li>
@@ -455,7 +455,7 @@ def render_closing_sections() -> None:
     )
 
 
-@st.dialog("Chọn Nhóm nghề, Nghề hoặc Chuyên môn", width="large")
+@st.dialog("Danh Mục Nghề", width="large")
 def open_role_taxonomy_dialog(positions: list[dict], role_by_id: dict[str, dict], taxonomy: dict[str, list[dict]]) -> None:
     st.markdown('<span class="role-dlg-marker"></span>', unsafe_allow_html=True)
     search_kw = st.text_input(
@@ -531,13 +531,287 @@ def open_role_taxonomy_dialog(positions: list[dict], role_by_id: dict[str, dict]
 
     c_foot_l, c_foot_r = st.columns([1.2, 2.8])
     with c_foot_l:
-        if st.button("Đóng duy nhất", key="dlg_close_btn", use_container_width=True):
+        if st.button("Đóng", key="dlg_close_btn", use_container_width=True):
             st.rerun()
     with c_foot_r:
         if current_role_id and current_role_id in role_by_id:
             st.markdown(
                 f"<div style='text-align:right;padding-top:8px;font-size:16px;'>Đã chọn: <b style='color:var(--color-plume-600);font-size:17px;'>{format_role(role_by_id[current_role_id])}</b></div>",
                 unsafe_allow_html=True,
+            )
+
+
+
+def deduplicate_skills(skills: list[str], exclude: set[str] | None = None) -> list[str]:
+    seen = set(exclude or ())
+    result = []
+    for s in skills:
+        key = normalize_skill(s)
+        if key not in seen:
+            seen.add(key)
+            result.append(display_skill(s))
+    return result
+
+
+def get_fit_tier(score: float | None) -> str:
+    if score is None:
+        return "Chưa xác định"
+    if score >= 75:
+        return "Cao"
+    if score >= 50:
+        return "Khá"
+    if score >= 25:
+        return "Trung bình"
+    return "Thấp"
+
+
+def get_summary_sentences(cv_jd: dict | None, saved_role: dict | None, effective_skills: list[str]) -> str:
+    if cv_jd:
+        mh = cv_jd.get("must_have", {})
+        nth = cv_jd.get("nice_to_have", {})
+        unc = cv_jd.get("unclassified", {})
+        mh_count = mh.get("count", 0)
+        mh_matched = len(mh.get("matched", []))
+        nth_count = nth.get("count", 0)
+        nth_matched = len(nth.get("matched", []))
+        unc_count = unc.get("count", 0)
+        unc_matched = len(unc.get("matched", []))
+
+        if mh_count > 0:
+            s1 = f"Bạn đã có {mh_matched}/{mh_count} kỹ năng bắt buộc."
+            if mh_matched == mh_count:
+                if nth_count > 0 and nth_matched < nth_count:
+                    s2 = "Nên bổ sung thêm kỹ năng ưu tiên để hồ sơ nổi bật hơn."
+                else:
+                    s2 = "Hồ sơ của bạn đáp ứng rất tốt các yêu cầu chính của vị trí."
+            else:
+                s2 = f"Nên ưu tiên bổ sung {mh_count - mh_matched} kỹ năng bắt buộc còn thiếu để tăng cơ hội trúng tuyển."
+            return f"{s1} {s2}"
+        elif unc_count > 0:
+            s1 = f"Bạn đã đáp ứng {unc_matched}/{unc_count} kỹ năng được tìm thấy trong mô tả công việc."
+            if unc_matched == unc_count:
+                s2 = "Hồ sơ của bạn bao phủ đầy đủ các kỹ năng yêu cầu trong JD."
+            else:
+                s2 = f"Nên trau dồi thêm {unc_count - unc_matched} kỹ năng còn thiếu để hoàn thiện hồ sơ."
+            return f"{s1} {s2}"
+        else:
+            return "Chưa xác định được kỹ năng cụ thể từ mô tả công việc."
+
+    if saved_role:
+        presence = match_role(effective_skills, saved_role)
+        m_count = len(presence.get("matched", []))
+        miss_count = len(presence.get("missing", []))
+        total_count = m_count + miss_count
+        score = presence.get("percent", 0.0)
+
+        s1 = f"Bạn đã có {m_count}/{total_count} kỹ năng cốt lõi của vị trí này."
+        if miss_count == 0:
+            s2 = "Hồ sơ của bạn đáp ứng trọn vẹn danh mục kỹ năng chuẩn của vị trí!"
+        elif score >= 50:
+            s2 = f"Nên bổ sung thêm {miss_count} kỹ năng còn thiếu để gia tăng cơ hội ứng tuyển."
+        else:
+            s2 = f"Hãy bắt đầu với các kỹ năng nền tảng còn thiếu để xây dựng lộ trình học tập hiệu quả."
+        return f"{s1} {s2}"
+
+    return "Hãy chọn một vị trí gợi ý bên dưới hoặc từ Danh Mục Nghề để xem phân tích độ phù hợp và lộ trình học tập tương ứng."
+
+
+def render_summary_hero(role_name: str, score: float | None, summary_text: str, has_target: bool):
+    with st.container(border=True):
+        tier = get_fit_tier(score)
+        if has_target:
+            st.markdown(f"### Bạn đang phù hợp ở mức **{tier}** với vị trí **{role_name}**")
+        else:
+            st.markdown("### Bạn chưa chọn vị trí mục tiêu")
+
+        if score is not None:
+            col_score, col_prog = st.columns([1.2, 3])
+            with col_score:
+                score_str = f"{int(score)}%" if score == int(score) else f"{score:.1f}%"
+                st.markdown(
+                    f'''<div style="margin: 4px 0 8px 0;">'''
+                    f'''<div style="font-size:38px;font-weight:800;color:#0284c7;line-height:1;">{score_str}</div>'''
+                    f'''<div style="font-size:13.5px;font-weight:600;color:var(--color-ink-faint);margin-top:4px;">Độ phù hợp tổng hợp</div>'''
+                    f'''</div>''',
+                    unsafe_allow_html=True,
+                )
+            with col_prog:
+                st.progress(max(0.0, min(1.0, score / 100.0)))
+
+        st.markdown(
+            f'''<p style="font-size:15px;color:var(--color-ink-soft);line-height:1.5;margin-top:8px;margin-bottom:6px;">{summary_text}</p>''',
+            unsafe_allow_html=True,
+        )
+        st.caption("Điểm mang tính tham khảo, không phải đánh giá chính thức về năng lực của bạn.")
+
+
+def render_skill_chips(matched_skills: list[str], missing_skills: list[str], has_target: bool):
+    col_has, col_need = st.columns(2)
+    with col_has:
+        with st.container(border=True):
+            st.markdown(f"#### Bạn đã có ({len(matched_skills)})")
+            if matched_skills:
+                chips = "".join(f'<span class="skill-chip skill-chip-matched">✓ {s}</span>' for s in matched_skills)
+                st.markdown(f'<div class="skill-chips-container">{chips}</div>', unsafe_allow_html=True)
+            else:
+                st.markdown('<p class="skill-chips-empty">Chưa ghi nhận kỹ năng nào phù hợp trong hồ sơ.</p>', unsafe_allow_html=True)
+
+    with col_need:
+        with st.container(border=True):
+            st.markdown(f"#### Cần bổ sung ({len(missing_skills)})")
+            if missing_skills:
+                chips = "".join(f'<span class="skill-chip skill-chip-missing">+ {s}</span>' for s in missing_skills)
+                st.markdown(f'<div class="skill-chips-container">{chips}</div>', unsafe_allow_html=True)
+            else:
+                if has_target:
+                    st.markdown('<p class="skill-chips-empty">Tuyệt vời! Bạn đã đáp ứng trọn vẹn các kỹ năng của vị trí này.</p>', unsafe_allow_html=True)
+                else:
+                    st.markdown('<p class="skill-chips-empty">Hãy chọn vị trí mục tiêu để xem các kỹ năng cần bổ sung.</p>', unsafe_allow_html=True)
+
+
+def render_suggested_roles(suggestions: list[dict], revision: int):
+    st.subheader("Vị trí gợi ý cho bạn")
+    if not suggestions:
+        st.info("Chưa có gợi ý vị trí nào phù hợp với kỹ năng hiện tại của bạn.")
+        return
+
+    top_3 = suggestions[:3]
+    rest = suggestions[3:]
+
+    for item in top_3:
+        with st.container(border=True):
+            col_info, col_btn = st.columns([3, 1.2])
+            with col_info:
+                st.markdown(
+                    f'''<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-height:36px;">'''
+                    f'''<span style="font-weight:700;font-size:16px;color:var(--color-ink);line-height:1.4;">{item['role_name']}</span>'''
+                    f'''<span class="role-match-badge">{item['score']}% Phù hợp</span>'''
+                    f'''</div>''',
+                    unsafe_allow_html=True,
+                )
+            with col_btn:
+                if st.button("Chọn vị trí này", key=f"choose_role_{revision}_{item['role_id']}", use_container_width=True):
+                    st.session_state["career_role_id"] = item["role_id"]
+                    st.session_state["pending_career_role"] = item["role_id"]
+                    st.session_state["career_role_picker"] = item["role_id"]
+                    st.session_state.pop("interview_session", None)
+                    st.rerun()
+
+    if rest:
+        with st.expander(f"Xem thêm vị trí khác ({len(rest)})", expanded=False):
+            for item in rest:
+                with st.container(border=True):
+                    col_info, col_btn = st.columns([3, 1.2])
+                    with col_info:
+                        st.markdown(
+                            f'''<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-height:36px;">'''
+                            f'''<span style="font-weight:700;font-size:15px;color:var(--color-ink);line-height:1.4;">{item['role_name']}</span>'''
+                            f'''<span class="role-match-badge">{item['score']}% Phù hợp</span>'''
+                            f'''</div>''',
+                            unsafe_allow_html=True,
+                        )
+                    with col_btn:
+                        if st.button("Chọn vị trí này", key=f"choose_role_{revision}_{item['role_id']}", use_container_width=True):
+                            st.session_state["career_role_id"] = item["role_id"]
+                            st.session_state["pending_career_role"] = item["role_id"]
+                            st.session_state["career_role_picker"] = item["role_id"]
+                            st.session_state.pop("interview_session", None)
+                            st.rerun()
+
+
+def render_profile_extracted_details(profile: dict, effective_skills: list[str], cv_extraction: dict | None, revision: int):
+    with st.expander("Hồ sơ đã trích xuất của bạn", expanded=False):
+        for index, item in enumerate(profile.get("moved", [])):
+            left, right = st.columns([4, 1])
+            left.info(f"Đã chuyển ‘{item['item']}’ từ {item['from']} sang {item['to']}.")
+            if right.button("Hoàn tác", key=f"undo_move_{revision}_{index}"):
+                st.session_state["profile_result"] = undo_profile_move(
+                    profile, index, original_interests=st.session_state.get("profile_original_interests", [])
+                )
+                st.rerun()
+
+        retained = []
+        if profile.get("unrecognized_skills"):
+            st.subheader("Kỹ năng chưa nhận diện được")
+            st.caption("Chọn kỹ năng muốn giữ lại trong hồ sơ. Tên chưa nhận diện không được tính vào điểm đối chiếu hoặc học liệu gợi ý.")
+            for skill in profile["unrecognized_skills"]:
+                if st.checkbox(f"Giữ ‘{skill}’ trong hồ sơ", value=True, key=f"keep_unknown_{revision}_{skill}"):
+                    retained.append(skill)
+
+        st.markdown("#### Hồ sơ của bạn")
+        st.write("**Kỹ năng:**", ", ".join(display_skill(s) for s in effective_skills) or "Chưa có thông tin")
+        if profile.get("skills_from_cv"):
+            st.caption("Kỹ năng trích từ CV và đã xác nhận: " + ", ".join(display_skill(s) for s in profile["skills_from_cv"]))
+        if profile.get("skills_from_experience"):
+            st.caption("Kỹ năng trích từ kinh nghiệm và đã xác nhận: " + ", ".join(display_skill(s) for s in profile["skills_from_experience"]))
+        elif profile.get("experience"):
+            st.caption("Kinh nghiệm được lưu để tham khảo; hệ thống chỉ dùng kỹ năng trong đó khi nhận diện được và bạn xác nhận, không chấm số năm hay thâm niên.")
+        st.write("**Sở thích:**", ", ".join(profile.get("interests", [])) or "Chưa có thông tin")
+        if profile.get("interest_activity_ids"):
+            st.write(
+                "**Hoạt động nghề nghiệp đã chọn:**",
+                ", ".join(activity_label(value) for value in profile["interest_activity_ids"]),
+            )
+        st.write("**Kinh nghiệm:**", profile.get("experience") or "Chưa có thông tin")
+        levels_map = profile.get("levels", {})
+        if levels_map:
+            level_items = [f"**{display_skill(k)}**: Cấp độ {v}" for k, v in levels_map.items()]
+            levels_display = " · ".join(level_items)
+        else:
+            levels_display = "Chưa khai báo; không suy từ CV"
+        st.write("**Level đã khai báo:**", levels_display)
+
+        if cv_extraction:
+            st.markdown(f"**Văn bản đã trích xuất · {cv_extraction['filename']}** ({len(cv_extraction['text']):,} ký tự)")
+            st.text_area("Nội dung CV", value=cv_extraction["text"], height=260, disabled=True, label_visibility="collapsed")
+
+
+def render_technical_details(cv_jd: dict | None, profile: dict, effective_skills: list[str]):
+    with st.expander("Chi tiết kỹ thuật & minh chứng", expanded=False):
+        if cv_jd:
+            metric_columns = st.columns(3)
+            metric_specs = (
+                ("must_have", "Bao phủ kỹ năng bắt buộc"),
+                ("nice_to_have", "Bao phủ kỹ năng ưu tiên"),
+                ("unclassified", "Trùng kỹ năng chưa phân loại"),
+            )
+            for column, (kind, label) in zip(metric_columns, metric_specs):
+                category = cv_jd[kind]
+                value = f"{category['percent']}%" if category["percent"] is not None else "—"
+                column.metric(label, value, delta=f"{len(category['matched'])}/{category['count']} kỹ năng")
+            if cv_jd["overall_percent"] is not None:
+                st.metric("Chỉ số bao phủ JD tổng hợp · heuristic 85/15", f"{cv_jd['overall_percent']}%")
+                st.caption("Chỉ số chỉ tính nhóm bắt buộc và ưu tiên đã xác nhận (85%/15%); nhóm chưa phân loại được hiển thị riêng. Đây không phải đánh giá đủ điều kiện ứng tuyển, năng lực thực tế hay xác suất được tuyển.")
+            else:
+                st.info("Chưa có kỹ năng nào được xác nhận là bắt buộc; ứng dụng không tạo điểm tổng hợp. Kỹ năng chưa phân loại vẫn được đối chiếu riêng.")
+            st.caption(f"Đối chiếu theo kỹ năng trong catalog do người dùng xác nhận; không đánh giá level hoặc năng lực thực tế. Số kỹ năng JD đã phân loại: {cv_jd.get('recognized_count', len(cv_jd['jd_skills']))}.")
+            if cv_jd.get("low_confidence"):
+                st.warning("Có dưới 3 kỹ năng bắt buộc được xác nhận; chỉ số tổng hợp có phạm vi đầu vào hẹp.")
+            for kind, label in metric_specs:
+                category = cv_jd[kind]
+                st.write(f"**{label} khớp hồ sơ:**", ", ".join(display_skill(s) for s in category["matched"]) or "Chưa có")
+                st.write(f"**{label} chưa có trong hồ sơ:**", ", ".join(display_skill(s) for s in category["missing"]) or "Không có")
+
+        with st.expander("Cách đọc và hiểu đúng điểm số gợi ý", expanded=False):
+            st.markdown(
+                "- **Skill fit:** Tỷ lệ bao phủ kỹ năng yêu cầu của nghề, có tính trọng số đặc thù Role-IDF.\n"
+                "- **Interest fit:** Độ tương đồng giữa sở thích nghề nghiệp và hồ sơ RIASEC sáu chiều của họ nghề.\n"
+                "- **Điểm gợi ý:** Kết hợp 75% skill fit và 25% interest fit; nếu skill fit dưới 15%, điểm bị giới hạn tối đa 5/100.\n"
+                "- *Lưu ý:* Đây là định hướng heuristic, không phải xác suất tuyển dụng thực tế hoặc kết luận về năng lực."
+            )
+        st.caption("Điểm heuristic theo kỹ năng/sở thích; không là xác suất tuyển dụng hay đánh giá level.")
+        if profile.get("unrecognized_skills"):
+            st.warning(
+                "⚠️ Có kỹ năng bạn nhập chưa thuộc catalog nên chưa được tính vào điểm khớp. "
+                "Hãy dùng tên kỹ năng chuẩn trong biểu mẫu hồ sơ phía trên để hệ thống đối chiếu chính xác hơn."
+            )
+        if role_recommendation_is_low_confidence({"skills": effective_skills}):
+            st.warning(LOW_CONFIDENCE_ROLE_MESSAGE)
+        if not effective_skills and (profile.get("interests") or profile.get("interest_activity_ids")):
+            st.info(
+                "Chỉ có sở thích được ánh xạ; gợi ý bị giới hạn tối đa "
+                f"{100 * LOW_SKILL_ROLE_SCORE_CAP:.0f}/100 vì chưa có kỹ năng trùng. "
+                "Điểm này không phản ánh mức đáp ứng kỹ năng."
             )
 
 
@@ -586,8 +860,8 @@ def render_toolkit() -> None:
         current_role_obj = role_by_id.get(current_role_id) if current_role_id else None
         selected_role_id = current_role_id
         with st.container(border=True, key="profile_entry_panel"):
-            st.markdown("### Bước 1/2 · Tạo hoặc nạp hồ sơ")
-            skills_text = st.text_area("Kỹ năng bạn muốn đưa vào hồ sơ (*)", placeholder="Python, SQL, phân tích dữ liệu", key="skills_input")
+            st.markdown("### Bước 1/2 · Tạo Hoặc Tải Hồ Sơ")
+            skills_text = st.text_area("Kỹ năng", placeholder="Python, SQL, phân tích dữ liệu", key="skills_input")
             st.caption("Ngăn cách các kỹ năng bằng dấu phẩy, dấu chấm phẩy hoặc xuống dòng.")
             interests_text = st.text_area("Sở thích nghề nghiệp", placeholder="Phân tích dữ liệu, thiết kế sản phẩm", key="interests_input")
             activity_ids = [activity["id"] for activity in load_interest_activities()]
@@ -923,121 +1197,64 @@ def render_toolkit() -> None:
             st.caption(f"Kết quả đã lưu gắn với vị trí: {format_role(saved_role)}.")
         if st.session_state.get("active_demo_profile_id"):
             st.info("Hồ sơ tổng hợp minh họa · không phải hồ sơ của người thật.")
-        if cv_jd:
-            metric_columns = st.columns(3)
-            metric_specs = (
-                ("must_have", "Bao phủ kỹ năng bắt buộc"),
-                ("nice_to_have", "Bao phủ kỹ năng ưu tiên"),
-                ("unclassified", "Trùng kỹ năng chưa phân loại"),
-            )
-            for column, (kind, label) in zip(metric_columns, metric_specs):
-                category = cv_jd[kind]
-                value = f"{category['percent']}%" if category["percent"] is not None else "—"
-                column.metric(label, value, delta=f"{len(category['matched'])}/{category['count']} kỹ năng")
-            if cv_jd["overall_percent"] is not None:
-                st.metric("Chỉ số bao phủ JD tổng hợp · heuristic 85/15", f"{cv_jd['overall_percent']}%")
-                st.caption("Chỉ số chỉ tính nhóm bắt buộc và ưu tiên đã xác nhận (85%/15%); nhóm chưa phân loại được hiển thị riêng. Đây không phải đánh giá đủ điều kiện ứng tuyển, năng lực thực tế hay xác suất được tuyển.")
+        if cv_extraction and not cv_jd:
+            if st.session_state.get("jd_provided"):
+                st.info("Đã gộp kỹ năng nhận diện từ CV vào hồ sơ; lần gửi này chưa tạo được kết quả đối chiếu JD.")
             else:
-                st.info("Chưa có kỹ năng nào được xác nhận là bắt buộc; ứng dụng không tạo điểm tổng hợp. Kỹ năng chưa phân loại vẫn được đối chiếu riêng.")
-            st.caption(f"Đối chiếu theo kỹ năng trong catalog do người dùng xác nhận; không đánh giá level hoặc năng lực thực tế. Số kỹ năng JD đã phân loại: {cv_jd.get('recognized_count', len(cv_jd['jd_skills']))}.")
-            if cv_jd.get("low_confidence"):
-                st.warning("Có dưới 3 kỹ năng bắt buộc được xác nhận; chỉ số tổng hợp có phạm vi đầu vào hẹp.")
-            for kind, label in metric_specs:
-                category = cv_jd[kind]
-                st.write(f"**{label} khớp hồ sơ:**", ", ".join(display_skill(s) for s in category["matched"]) or "Chưa có")
-                st.write(f"**{label} chưa có trong hồ sơ:**", ", ".join(display_skill(s) for s in category["missing"]) or "Không có")
-        if cv_extraction:
-            if not cv_jd:
-                if st.session_state.get("jd_provided"):
-                    st.info("Đã gộp kỹ năng nhận diện từ CV vào hồ sơ; lần gửi này chưa tạo được kết quả đối chiếu JD.")
-                else:
-                    st.info("Đã gộp kỹ năng nhận diện từ CV vào hồ sơ. Thêm JD để đối chiếu.")
-            with st.expander(f"Văn bản đã trích xuất · {cv_extraction['filename']}"):
-                st.caption(f"{len(cv_extraction['text']):,} ký tự")
-                st.text_area("Nội dung CV", value=cv_extraction["text"], height=260, disabled=True, label_visibility="collapsed")
-        for index, item in enumerate(profile["moved"]):
-            left, right = st.columns([4, 1])
-            left.info(f"Đã chuyển ‘{item['item']}’ từ {item['from']} sang {item['to']}.")
-            if right.button("Hoàn tác", key=f"undo_move_{revision}_{index}"):
-                st.session_state["profile_result"] = undo_profile_move(
-                    profile, index, original_interests=st.session_state.get("profile_original_interests", [])
-                )
-                st.rerun()
-        retained = []
-        if profile["unrecognized_skills"]:
-            st.subheader("Kỹ năng chưa nhận diện được")
-            st.caption("Chọn kỹ năng muốn giữ lại trong hồ sơ. Tên chưa nhận diện không được tính vào điểm đối chiếu hoặc học liệu gợi ý.")
-            for skill in profile["unrecognized_skills"]:
-                if st.checkbox(f"Giữ ‘{skill}’ trong hồ sơ", value=True, key=f"keep_unknown_{revision}_{skill}"):
-                    retained.append(skill)
-        effective_skills = [
-            skill for skill in profile["skills"]
-            if skill not in profile["unrecognized_skills"] or skill in retained
-        ]
-        st.subheader("Hồ sơ của bạn")
-        st.write("**Kỹ năng:**", ", ".join(display_skill(s) for s in effective_skills) or "Chưa có thông tin")
-        if profile.get("skills_from_cv"):
-            st.caption("Kỹ năng trích từ CV và đã xác nhận: " + ", ".join(display_skill(s) for s in profile["skills_from_cv"]))
-        if profile.get("skills_from_experience"):
-            st.caption("Kỹ năng trích từ kinh nghiệm và đã xác nhận: " + ", ".join(display_skill(s) for s in profile["skills_from_experience"]))
-        elif profile.get("experience"):
-            st.caption("Kinh nghiệm được lưu để tham khảo; hệ thống chỉ dùng kỹ năng trong đó khi nhận diện được và bạn xác nhận, không chấm số năm hay thâm niên.")
-        st.write("**Sở thích:**", ", ".join(profile["interests"]) or "Chưa có thông tin")
-        if profile.get("interest_activity_ids"):
-            st.write(
-                "**Hoạt động nghề nghiệp đã chọn:**",
-                ", ".join(activity_label(value) for value in profile["interest_activity_ids"]),
-            )
-        st.write("**Kinh nghiệm:**", profile["experience"] or "Chưa có thông tin")
-        levels_map = profile.get("levels", {})
-        if levels_map:
-            level_items = [f"**{display_skill(k)}**: Cấp độ {v}" for k, v in levels_map.items()]
-            levels_display = " · ".join(level_items)
-        else:
-            levels_display = "Chưa khai báo; không suy từ CV"
-        st.write("**Level đã khai báo:**", levels_display)
+                st.info("Đã gộp kỹ năng nhận diện từ CV vào hồ sơ. Thêm JD để đối chiếu.")
 
-        st.subheader("Vị trí gợi ý từ hồ sơ")
-        with st.expander("Cách đọc và hiểu đúng điểm số gợi ý"):
-            st.markdown(
-                "- **Skill fit:** Tỷ lệ bao phủ kỹ năng yêu cầu của nghề, có tính trọng số đặc thù Role-IDF.\n"
-                "- **Interest fit:** Độ tương đồng giữa sở thích nghề nghiệp và hồ sơ RIASEC sáu chiều của họ nghề.\n"
-                "- **Điểm gợi ý:** Kết hợp 75% skill fit và 25% interest fit; nếu skill fit dưới 15%, điểm bị giới hạn tối đa 5/100.\n"
-                "- *Lưu ý:* Đây là định hướng heuristic, không phải xác suất tuyển dụng thực tế hoặc kết luận về năng lực."
-            )
-        st.caption("Điểm heuristic theo kỹ năng/sở thích; không là xác suất tuyển dụng hay đánh giá level.")
-        if profile.get("unrecognized_skills"):
-            st.warning(
-                "⚠️ Có kỹ năng bạn nhập chưa thuộc catalog nên chưa được tính vào điểm khớp. "
-                "Hãy dùng tên kỹ năng chuẩn trong biểu mẫu hồ sơ phía trên để hệ thống đối chiếu chính xác hơn."
-            )
+        has_target = False
+        target_name = ""
+        score = None
+        if cv_jd:
+            has_target = True
+            target_name = saved_role["name"] if saved_role else "theo mô tả công việc (JD)"
+            if cv_jd["overall_percent"] is not None:
+                score = float(cv_jd["overall_percent"])
+            elif cv_jd["must_have"]["percent"] is not None:
+                score = float(cv_jd["must_have"]["percent"])
+            elif cv_jd["unclassified"]["percent"] is not None:
+                score = float(cv_jd["unclassified"]["percent"])
+            else:
+                score = 0.0
+        elif saved_role:
+            has_target = True
+            target_name = saved_role["name"]
+            presence = match_role(effective_skills, saved_role)
+            score = float(presence["percent"])
+
+        summary_text = get_summary_sentences(cv_jd, saved_role, effective_skills)
+
+        # 1. Hero Card
+        render_summary_hero(target_name, score, summary_text, has_target)
+
+        # 2. Hai cột "Bạn đã có" và "Cần bổ sung"
+        matched_skills = []
+        missing_skills = []
+        if cv_jd:
+            for kind in ("must_have", "nice_to_have", "unclassified"):
+                matched_skills.extend(cv_jd[kind]["matched"])
+                missing_skills.extend(cv_jd[kind]["missing"])
+        elif saved_role:
+            presence = match_role(effective_skills, saved_role)
+            matched_skills = presence["matched"]
+            missing_skills = presence["missing"]
+        else:
+            matched_skills = effective_skills
+            missing_skills = []
+
+        dedup_matched = deduplicate_skills(matched_skills)
+        matched_keys = {normalize_skill(s) for s in dedup_matched}
+        dedup_missing = deduplicate_skills(missing_skills, exclude=matched_keys)
+        render_skill_chips(dedup_matched, dedup_missing, has_target)
+
+        # 3. Vị trí gợi ý cho bạn
         suggestions = suggest_roles({**profile, "skills": effective_skills})
-        if role_recommendation_is_low_confidence({"skills": effective_skills}):
-            st.warning(LOW_CONFIDENCE_ROLE_MESSAGE)
-        if not effective_skills and (profile.get("interests") or profile.get("interest_activity_ids")):
-            st.info(
-                "Chỉ có sở thích được ánh xạ; gợi ý bị giới hạn tối đa "
-                f"{100 * LOW_SKILL_ROLE_SCORE_CAP:.0f}/100 vì chưa có kỹ năng trùng. "
-                "Điểm này không phản ánh mức đáp ứng kỹ năng."
-            )
-        if not suggestions:
-            st.caption("Chưa có tín hiệu khớp catalog để xếp hạng vị trí.")
-        for item in suggestions:
-            col_info, col_btn = st.columns([3, 1])
-            with col_info:
-                st.markdown(
-                    f'''<div style="padding:10px 14px;border:1px solid var(--color-line);border-radius:12px;background:var(--color-paper-raised);margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;">'''
-                    f'''<span style="font-weight:700;font-size:15px;color:var(--color-ink);">{item['role_name']}</span>'''
-                    f'''<span style="display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;background:var(--color-plume-50);color:var(--color-plume-700);border:1px solid var(--color-plume-200);">{item['score']}% Phù hợp</span>'''
-                    f'''</div>''',
-                    unsafe_allow_html=True,
-                )
-            with col_btn:
-                if st.button(f"Chọn {item['role_name']}", key=f"choose_role_{revision}_{item['role_id']}"):
-                    st.session_state["career_role_id"] = item["role_id"]
-                    st.session_state["pending_career_role"] = item["role_id"]
-                    st.session_state.pop("interview_session", None)
-                    st.rerun()
+        render_suggested_roles(suggestions, revision)
+
+        # 4. Các expander thu gọn
+        render_profile_extracted_details(profile, effective_skills, cv_extraction, revision)
+        render_technical_details(cv_jd, profile, effective_skills)
 
     position = role_by_id.get(st.session_state.get("career_role_id"))
     has_signal = bool(effective_skills or profile.get("levels"))

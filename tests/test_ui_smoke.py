@@ -33,7 +33,7 @@ def _field(app, label):
 
 def _draft(app, skills="", role_id="data_analyst", jd=""):
     if app.session_state.get("profile_step", 1) != 2:
-        _field(app, "Kỹ năng bạn muốn đưa vào hồ sơ").input(skills)
+        _field(app, "Kỹ năng").input(skills)
         _field(app, "Mô tả công việc cần đối chiếu (không bắt buộc)").input(jd)
         app.session_state["career_role_picker"] = role_id
         next(button for button in app.button if button.label == "Tiếp tục rà soát hồ sơ").click().run()
@@ -84,7 +84,7 @@ def test_profile_entry_keeps_accessible_widget_names():
     labels = {item.label for item in app.text_area} | {item.label for item in app.selectbox} | {
         item.label for item in app.button
     }
-    assert "Kỹ năng bạn muốn đưa vào hồ sơ (*)" in labels
+    assert "Kỹ năng" in labels
     assert "Tiếp tục rà soát hồ sơ" in labels
     assert "Chọn vị trí ▾" in labels
     assert any("Vị trí công việc bạn quan tâm" in item.value for item in app.markdown)
