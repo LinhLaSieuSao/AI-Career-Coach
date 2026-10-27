@@ -77,7 +77,7 @@ py -3.12 -m venv .venv
 
 Trên macOS/Linux thay hai lệnh đầu bằng `python3.12 -m venv .venv` và `.venv/bin/python -m pip install --require-hashes -r requirements.lock`, rồi chạy `.venv/bin/python -m streamlit run app.py`.
 
-`requirements.txt` liệt kê thư viện web, `requirements-dev.txt` thêm pytest/ruff, `requirements-ai.txt` dành cho mở rộng sau này. Lock duy nhất chứa cả runtime và công cụ kiểm thử để ba môi trường dùng cùng phiên bản.
+`requirements.txt` khai báo các thư viện trực tiếp, gồm cả pytest và Ruff. `requirements.lock` chốt toàn bộ phiên bản cùng hash để local, CI và Docker cài đặt giống nhau. Khi thay đổi `requirements.txt`, tạo lại lock bằng `uv pip compile requirements.txt --universal --python-version 3.12 --generate-hashes --output-file requirements.lock`; CI sẽ kiểm tra hai file luôn đồng bộ.
 
 ## Kiểm thử và CI
 
