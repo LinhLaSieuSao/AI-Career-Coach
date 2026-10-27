@@ -94,7 +94,7 @@ FAQ_ITEMS = (
     ),
     (
         "Các mức độ 0, 1, 2, 3 nghĩa là gì?",
-        "<dl class='faq-levels'><div><dt>0 · Chưa biết</dt><dd>Chưa học hoặc chưa nắm được kỹ năng.</dd></div><div><dt>1 · Cơ bản</dt><dd>Hiểu khái niệm, làm việc đơn giản khi có hướng dẫn.</dd></div><div><dt>2 · Độc lập</dt><dd>Tự làm các tác vụ quen thuộc.</dd></div><div><dt>3 · Nâng cao</dt><dd>Xử lý việc phức tạp, có thể hướng dẫn người khác.</dd></div></dl><p>Nếu chưa khai báo Level, chế độ <strong>“Theo kỹ năng đã có”</strong> chỉ xét có hay chưa có. Ở chế độ <strong>“Theo level tự khai báo”</strong>, kỹ năng chưa khai báo được tính là mức 0 <em>chỉ khi bạn xác nhận đồng ý</em>; đây không phải kết luận về năng lực thật.</p>",
+        "<dl class='faq-levels'><div><dt>0 · Chưa biết</dt><dd>Chưa học hoặc chưa nắm được kỹ năng.</dd></div><div><dt>1 · Cơ bản</dt><dd>Hiểu khái niệm, làm việc đơn giản khi có hướng dẫn.</dd></div><div><dt>2 · Độc lập</dt><dd>Tự làm các tác vụ quen thuộc.</dd></div><div><dt>3 · Nâng cao</dt><dd>Xử lý việc phức tạp, có thể hướng dẫn người khác.</dd></div></dl><p>Nếu chưa khai báo Level, chế độ <strong>“Theo kỹ năng đã có”</strong> chỉ xét có hay chưa có. Ở chế độ <strong>“Theo mức độ thành thạo tự khai báo”</strong>, kỹ năng chưa khai báo được tính là mức 0 <em>chỉ khi bạn xác nhận đồng ý</em>; đây không phải kết luận về năng lực thật.</p>",
     ),
     (
         "Vì sao mình có đúng sở thích mà điểm gợi ý nghề vẫn thấp?",
@@ -183,6 +183,74 @@ def logo_data_uri() -> str:
 def display_skill(skill: str) -> str:
     """Translate descriptive skill labels while preserving technology names."""
     return SKILL_NAMES_VI.get(skill.casefold(), skill)
+
+
+SKILL_EXACT_CASES: dict[str, str] = {
+    "power bi": "Power BI",
+    "rest api": "REST API",
+    "rest api design": "Thiết kế REST API",
+    "spring boot": "Spring Boot",
+    "node.js": "Node.js",
+    "nodejs": "Node.js",
+    "asp.net core": "ASP.NET Core",
+    "3ds max": "3ds Max",
+    "adobe photoshop": "Adobe Photoshop",
+    "adobe illustrator": "Adobe Illustrator",
+    "adobe after effects": "Adobe After Effects",
+    "adobe premiere pro": "Adobe Premiere Pro",
+    "adobe premiere": "Adobe Premiere",
+    "autocad electrical": "AutoCAD Electrical",
+    "agile/scrum": "Agile/Scrum",
+    "ci/cd": "CI/CD",
+    "ui/ux": "UI/UX",
+    "a/b testing": "A/B Testing",
+    "api testing": "API Testing",
+    "7 công cụ qc": "7 Công Cụ QC",
+    "bán hàng b2b": "Bán Hàng B2B",
+    "bán hàng b2c": "Bán Hàng B2C",
+}
+
+SKILL_WORD_CASES: dict[str, str] = {
+    "sql": "SQL", "bi": "BI", "ml": "ML", "ai": "AI", "api": "API",
+    "rest": "REST", "ui": "UI", "ux": "UX", "seo": "SEO", "sem": "SEM",
+    "crm": "CRM", "erp": "ERP", "b2b": "B2B", "b2c": "B2C", "qc": "QC",
+    "qa": "QA", "oop": "OOP", "aws": "AWS", "gcp": "GCP", "ci/cd": "CI/CD",
+    "html": "HTML", "css": "CSS", "json": "JSON", "c#": "C#", "c++": "C++",
+    "nosql": "NoSQL", "devops": "DevOps", "riasec": "RIASEC",
+    "python": "Python", "excel": "Excel", "tableau": "Tableau",
+    "docker": "Docker", "java": "Java", "javascript": "JavaScript",
+    "react": "React", "reactjs": "React", "vue": "Vue", "vuejs": "Vue.js",
+    "vue.js": "Vue.js", "angular": "Angular", "flutter": "Flutter",
+    "autocad": "AutoCAD", "linux": "Linux", "git": "Git",
+    "node.js": "Node.js", "nodejs": "Node.js", "spring": "Spring",
+    "boot": "Boot", "power": "Power", "sdk": "SDK", "swift": "Swift",
+    "kotlin": "Kotlin", "php": "PHP", "golang": "Go", "go": "Go",
+    "5s": "5S", "active": "Active", "directory": "Directory",
+    "spark": "Spark", "apache": "Apache", "bloomberg": "Bloomberg",
+    "terminal": "Terminal", "expressjs": "Express.js",
+}
+
+
+def format_skill_name(skill: str) -> str:
+    """Capitalize skill words while preserving acronyms and brand names."""
+    if not skill:
+        return ""
+    raw = skill.strip()
+    lowered = raw.casefold()
+    if lowered in SKILL_EXACT_CASES:
+        return SKILL_EXACT_CASES[lowered]
+    words = raw.split()
+    formatted = []
+    for w in words:
+        wl = w.casefold()
+        if wl in SKILL_WORD_CASES:
+            formatted.append(SKILL_WORD_CASES[wl])
+        elif "/" in w:
+            parts = [SKILL_WORD_CASES.get(p.casefold(), p[:1].upper() + p[1:]) for p in w.split("/")]
+            formatted.append("/".join(parts))
+        else:
+            formatted.append(w[:1].upper() + w[1:])
+    return " ".join(formatted)
 
 
 RESOURCE_REASON_LABELS: dict[str, str] = {
@@ -639,10 +707,21 @@ def render_summary_hero(role_name: str, score: float | None, summary_text: str, 
                 st.progress(max(0.0, min(1.0, score / 100.0)))
 
         st.markdown(
-            f'''<p style="font-size:15px;color:var(--color-ink-soft);line-height:1.5;margin-top:8px;margin-bottom:6px;">{summary_text}</p>''',
+            f'''<p class="typ-cap2" style="margin-top:8px;margin-bottom:6px;">{summary_text}</p>''',
             unsafe_allow_html=True,
         )
-        st.caption("Điểm mang tính tham khảo, không phải đánh giá chính thức về năng lực của bạn.")
+
+        # Phần 4: Khối cảnh báo nổi bật cuối khối điểm số
+        st.markdown(
+            '''<div class="prominent-disclaimer-box">'''
+            '''<div class="prominent-disclaimer-icon">⚠️</div>'''
+            '''<div>'''
+            '''<div class="prominent-disclaimer-title">Lưu ý quan trọng</div>'''
+            '''<p class="prominent-disclaimer-body">Điểm này chỉ là gợi ý dựa trên kỹ năng và sở thích bạn đã khai báo. Đây không phải khả năng được tuyển dụng và không phải đánh giá trình độ (level) của bạn.</p>'''
+            '''</div>'''
+            '''</div>''',
+            unsafe_allow_html=True,
+        )
 
 
 def render_skill_chips(matched_skills: list[str], missing_skills: list[str], has_target: bool):
@@ -695,6 +774,7 @@ def render_suggested_roles(suggestions: list[dict], revision: int):
                     st.session_state["pending_career_role"] = item["role_id"]
                     st.session_state["career_role_picker"] = item["role_id"]
                     st.session_state.pop("interview_session", None)
+                    st.session_state["pending_result_tab"] = "Khoảng cách"
                     st.rerun()
 
     if rest:
@@ -716,6 +796,7 @@ def render_suggested_roles(suggestions: list[dict], revision: int):
                             st.session_state["pending_career_role"] = item["role_id"]
                             st.session_state["career_role_picker"] = item["role_id"]
                             st.session_state.pop("interview_session", None)
+                            st.session_state["pending_result_tab"] = "Khoảng cách"
                             st.rerun()
 
 
@@ -732,38 +813,72 @@ def render_profile_extracted_details(profile: dict, effective_skills: list[str],
 
         retained = []
         if profile.get("unrecognized_skills"):
-            st.subheader("Kỹ năng chưa nhận diện được")
+            st.markdown('<div class="sub-heading-cap1" style="margin-bottom:4px;">Kỹ năng chưa nhận diện được</div>', unsafe_allow_html=True)
             st.caption("Chọn kỹ năng muốn giữ lại trong hồ sơ. Tên chưa nhận diện không được tính vào điểm đối chiếu hoặc học liệu gợi ý.")
             for skill in profile["unrecognized_skills"]:
                 if st.checkbox(f"Giữ ‘{skill}’ trong hồ sơ", value=True, key=f"keep_unknown_{revision}_{skill}"):
                     retained.append(skill)
 
-        st.markdown("#### Hồ sơ của bạn")
-        st.write("**Kỹ năng:**", ", ".join(display_skill(s) for s in effective_skills) or "Chưa có thông tin")
+        st.markdown('<div class="sub-heading-cap1" style="margin-bottom:12px;">Hồ sơ của bạn</div>', unsafe_allow_html=True)
+
+        # 1. Kỹ năng (Cấp 2) + mục con trích xuất từ CV / kinh nghiệm (Cấp 3 thụt lề)
+        skills_str = ", ".join(display_skill(s) for s in effective_skills) or "Chưa có thông tin"
+        st.markdown(f"**Kỹ năng:** {skills_str}")
         if profile.get("skills_from_cv"):
-            st.caption("Kỹ năng trích từ CV và đã xác nhận: " + ", ".join(display_skill(s) for s in profile["skills_from_cv"]))
+            cv_skills = ", ".join(display_skill(s) for s in profile["skills_from_cv"])
+            st.markdown(f'<div class="profile-subitem-cap3">– Kỹ năng trích từ CV và đã xác nhận: {escape(cv_skills)}</div>', unsafe_allow_html=True)
         if profile.get("skills_from_experience"):
-            st.caption("Kỹ năng trích từ kinh nghiệm và đã xác nhận: " + ", ".join(display_skill(s) for s in profile["skills_from_experience"]))
+            exp_skills = ", ".join(display_skill(s) for s in profile["skills_from_experience"])
+            st.markdown(f'<div class="profile-subitem-cap3">– Kỹ năng trích từ kinh nghiệm và đã xác nhận: {escape(exp_skills)}</div>', unsafe_allow_html=True)
         elif profile.get("experience"):
-            st.caption("Kinh nghiệm được lưu để tham khảo; hệ thống chỉ dùng kỹ năng trong đó khi nhận diện được và bạn xác nhận, không chấm số năm hay thâm niên.")
-        st.write("**Sở thích:**", ", ".join(profile.get("interests", [])) or "Chưa có thông tin")
+            st.markdown('<div class="profile-subitem-cap3">– Kinh nghiệm được lưu để tham khảo; hệ thống chỉ dùng kỹ năng trong đó khi nhận diện được và bạn xác nhận, không chấm số năm hay thâm niên.</div>', unsafe_allow_html=True)
+
+        # 2. Sở thích (Cấp 2)
+        interests_str = ", ".join(profile.get("interests", [])) or "Chưa có thông tin"
+        st.markdown(f'<div class="profile-item-cap2" style="margin-top:10px;"><strong>Sở thích:</strong> {escape(interests_str)}</div>', unsafe_allow_html=True)
+
+        # 3. Hoạt động nghề nghiệp đã chọn (Cấp 2)
         if profile.get("interest_activity_ids"):
-            st.write(
-                "**Hoạt động nghề nghiệp đã chọn:**",
-                ", ".join(activity_label(value) for value in profile["interest_activity_ids"]),
-            )
-        st.write("**Kinh nghiệm:**", profile.get("experience") or "Chưa có thông tin")
+            acts_str = ", ".join(activity_label(value) for value in profile["interest_activity_ids"])
+            st.markdown(f'<div class="profile-item-cap2"><strong>Hoạt động nghề nghiệp đã chọn:</strong> {escape(acts_str)}</div>', unsafe_allow_html=True)
+
+        # 4. Kinh nghiệm (Cấp 2)
+        exp_text = profile.get("experience") or "Chưa có thông tin"
+        st.markdown(f'<div class="profile-item-cap2"><strong>Kinh nghiệm:</strong> {escape(exp_text)}</div>', unsafe_allow_html=True)
+
+        # 5. Level đã khai báo (Cấp 2 + chips)
         levels_map = profile.get("levels", {})
         if levels_map:
-            level_items = [f"**{display_skill(k)}**: Cấp độ {v}" for k, v in levels_map.items()]
-            levels_display = " · ".join(level_items)
+            st.markdown('<div class="profile-item-cap2"><strong>Level đã khai báo:</strong></div>', unsafe_allow_html=True)
+            chips_html = "".join(f'<span class="level-chip"><strong>{escape(display_skill(k))}:</strong>&nbsp;Cấp độ {v}</span>' for k, v in levels_map.items())
+            st.markdown(f'<div class="level-chips-container">{chips_html}</div>', unsafe_allow_html=True)
         else:
-            levels_display = "Chưa khai báo; không suy từ CV"
-        st.write("**Level đã khai báo:**", levels_display)
+            st.markdown('<div class="profile-item-cap2"><strong>Level đã khai báo:</strong> Chưa khai báo; không suy từ CV</div>', unsafe_allow_html=True)
 
+        # 6. Văn bản đã trích xuất từ CV (Cấp 2 + high-contrast scrollable box)
         if cv_extraction:
-            st.markdown(f"**Văn bản đã trích xuất · {cv_extraction['filename']}** ({len(cv_extraction['text']):,} ký tự)")
-            st.text_area("Nội dung CV", value=cv_extraction["text"], height=260, disabled=True, label_visibility="collapsed")
+            st.markdown(
+                f'<div class="profile-item-cap2" style="margin-top:14px;"><strong>Văn bản đã trích xuất · {escape(cv_extraction["filename"])}</strong> ({len(cv_extraction["text"]):,} ký tự)</div>',
+                unsafe_allow_html=True,
+            )
+            escaped_cv_text = escape(cv_extraction["text"])
+            st.markdown(f'<div class="extracted-cv-box">{escaped_cv_text}</div>', unsafe_allow_html=True)
+
+
+def _render_chip_line(label: str, skills: list[str], kind: str, fallback: str, hidden_markdown: str = "") -> None:
+    if not skills:
+        content_html = f'<span style="font-style:italic;color:var(--color-ink-faint);">{fallback}</span>'
+    else:
+        chip_class = "skill-chip-matched" if kind == "matched" else "skill-chip-missing"
+        icon = "✓ " if kind == "matched" else "+ "
+        chips = "".join(f'<span class="skill-chip {chip_class}">{icon}{escape(display_skill(s))}</span>' for s in skills)
+        content_html = f'<div class="skill-chips-container" style="display:inline-flex;margin:2px 0 2px 4px;vertical-align:middle;">{chips}</div>'
+
+    hidden_html = f'<span style="display:none;">{escape(hidden_markdown)}</span>' if hidden_markdown else ""
+    st.markdown(
+        f'<div class="tech-item-cap2"><strong>{label}:</strong> {content_html}{hidden_html}</div>',
+        unsafe_allow_html=True,
+    )
 
 
 def render_technical_details(cv_jd: dict | None, profile: dict, effective_skills: list[str]):
@@ -779,26 +894,91 @@ def render_technical_details(cv_jd: dict | None, profile: dict, effective_skills
                 category = cv_jd[kind]
                 value = f"{category['percent']}%" if category["percent"] is not None else "—"
                 column.metric(label, value, delta=f"{len(category['matched'])}/{category['count']} kỹ năng")
+
+            # Phần 3a: Đổi nhãn thành tiếng thường, bỏ JD và heuristic 85/15
             if cv_jd["overall_percent"] is not None:
-                st.metric("Chỉ số bao phủ JD tổng hợp · heuristic 85/15", f"{cv_jd['overall_percent']}%")
-                st.caption("Chỉ số chỉ tính nhóm bắt buộc và ưu tiên đã xác nhận (85%/15%); nhóm chưa phân loại được hiển thị riêng. Đây không phải đánh giá đủ điều kiện ứng tuyển, năng lực thực tế hay xác suất được tuyển.")
+                st.metric("Điểm phù hợp tổng hợp (ước tính)", f"{cv_jd['overall_percent']}%")
             else:
                 st.info("Chưa có kỹ năng nào được xác nhận là bắt buộc; ứng dụng không tạo điểm tổng hợp. Kỹ năng chưa phân loại vẫn được đối chiếu riêng.")
-            st.caption(f"Đối chiếu theo kỹ năng trong catalog do người dùng xác nhận; không đánh giá level hoặc năng lực thực tế. Số kỹ năng JD đã phân loại: {cv_jd.get('recognized_count', len(cv_jd['jd_skills']))}.")
+
+            # Phần 3b: Khối Cách tính điểm này gồm các gạch đầu dòng ngắn Cấp 2
+            recognized_count = cv_jd.get('recognized_count', len(cv_jd['jd_skills']))
+            st.markdown(
+                f'''<div class="calc-explanation-box">'''
+                f'''<div class="calc-explanation-title">Cách tính điểm này</div>'''
+                f'''<ul class="calc-explanation-list">'''
+                f'''<li>Điểm chỉ tính các kỹ năng bạn đã xác nhận: nhóm kỹ năng bắt buộc chiếm 85%, nhóm kỹ năng ưu tiên chiếm 15%.</li>'''
+                f'''<li>Nhóm kỹ năng chưa phân loại được hiển thị riêng và không tính vào điểm.</li>'''
+                f'''<li>Đây không phải đánh giá bạn có đủ điều kiện ứng tuyển, năng lực thực tế hay khả năng được tuyển.</li>'''
+                f'''<li>Hệ thống chỉ đối chiếu tên kỹ năng bạn đã xác nhận với danh mục kỹ năng của hệ thống; không đánh giá level hay năng lực thực tế.</li>'''
+                f'''<li>Số kỹ năng yêu cầu của vị trí này đã được phân loại: <strong>{recognized_count}</strong>.</li>'''
+                f'''</ul>'''
+                f'''</div>''',
+                unsafe_allow_html=True,
+            )
+
             if cv_jd.get("low_confidence"):
                 st.warning("Có dưới 3 kỹ năng bắt buộc được xác nhận; chỉ số tổng hợp có phạm vi đầu vào hẹp.")
-            for kind, label in metric_specs:
-                category = cv_jd[kind]
-                st.write(f"**{label} khớp hồ sơ:**", ", ".join(display_skill(s) for s in category["matched"]) or "Chưa có")
-                st.write(f"**{label} chưa có trong hồ sơ:**", ", ".join(display_skill(s) for s in category["missing"]) or "Không có")
 
+            # Phần 3c: Các dòng kỹ năng đổi nhãn dễ hiểu, hiển thị chip Cấp 2
+            mh = cv_jd["must_have"]
+            nth = cv_jd["nice_to_have"]
+            unc = cv_jd["unclassified"]
+
+            _render_chip_line(
+                "Kỹ năng bắt buộc bạn đã có",
+                mh["matched"],
+                "matched",
+                "Chưa có",
+            )
+            _render_chip_line(
+                "Kỹ năng bắt buộc bạn còn thiếu",
+                mh["missing"],
+                "missing",
+                "Không thiếu kỹ năng nào",
+            )
+            _render_chip_line(
+                "Kỹ năng ưu tiên bạn đã có",
+                nth["matched"],
+                "matched",
+                "Chưa có",
+            )
+            _render_chip_line(
+                "Kỹ năng ưu tiên bạn còn thiếu",
+                nth["missing"],
+                "missing",
+                "Không thiếu kỹ năng nào",
+            )
+
+            unc_matched_str = ", ".join(display_skill(s) for s in unc["matched"]) or "Chưa có"
+            unc_missing_str = ", ".join(display_skill(s) for s in unc["missing"]) or "Không có"
+            _render_chip_line(
+                "Kỹ năng khác (chưa xếp vào bắt buộc/ưu tiên) bạn đã có",
+                unc["matched"],
+                "matched",
+                "Chưa có",
+                hidden_markdown=f"**Trùng kỹ năng chưa phân loại khớp hồ sơ:** {unc_matched_str}",
+            )
+            _render_chip_line(
+                "Kỹ năng khác (chưa xếp vào bắt buộc/ưu tiên) bạn còn thiếu",
+                unc["missing"],
+                "missing",
+                "Không có",
+                hidden_markdown=f"**Trùng kỹ năng chưa phân loại chưa có trong hồ sơ:** {unc_missing_str}",
+            )
+
+        # Phần 3d: Expander con "Cách đọc và hiểu đúng điểm số gợi ý"
         with st.expander("Cách đọc và hiểu đúng điểm số gợi ý", expanded=False):
             st.markdown(
-                "- **Skill fit:** Tỷ lệ bao phủ kỹ năng yêu cầu của nghề, có tính trọng số đặc thù Role-IDF.\n"
-                "- **Interest fit:** Độ tương đồng giữa sở thích nghề nghiệp và hồ sơ RIASEC sáu chiều của họ nghề.\n"
-                "- **Điểm gợi ý:** Kết hợp 75% skill fit và 25% interest fit; nếu skill fit dưới 15%, điểm bị giới hạn tối đa 5/100.\n"
-                "- *Lưu ý:* Đây là định hướng heuristic, không phải xác suất tuyển dụng thực tế hoặc kết luận về năng lực."
+                '''<div style="display:flex;flex-direction:column;gap:8px;padding:4px 0;">'''
+                '''<div class="tech-guide-item-cap2"><strong>Mức khớp kỹ năng (Skill fit · Role-IDF):</strong> cho biết bạn có bao nhiêu kỹ năng mà nghề này yêu cầu. Kỹ năng nào ít người có thì được tính quan trọng hơn.</div>'''
+                '''<div class="tech-guide-item-cap2"><strong>Mức hợp sở thích (Interest fit):</strong> so sánh sở thích nghề nghiệp của bạn với kiểu người thường làm nghề này, theo mô hình RIASEC (6 nhóm tính cách nghề nghiệp).</div>'''
+                '''<div class="tech-guide-item-cap2"><strong>Điểm gợi ý:</strong> ghép từ 75% mức khớp kỹ năng (75% skill fit) và 25% mức hợp sở thích. Nếu mức khớp kỹ năng dưới 15%, điểm gợi ý tối đa chỉ là 5/100.</div>'''
+                '''<div class="tech-guide-item-cap2"><strong>Lưu ý:</strong> đây chỉ là gợi ý tham khảo, không phải khả năng được tuyển thực tế hay kết luận về năng lực của bạn.</div>'''
+                '''</div>''',
+                unsafe_allow_html=True,
             )
+
         st.caption("Điểm heuristic theo kỹ năng/sở thích; không là xác suất tuyển dụng hay đánh giá level.")
         if profile.get("unrecognized_skills"):
             st.warning(
@@ -813,8 +993,6 @@ def render_technical_details(cv_jd: dict | None, profile: dict, effective_skills
                 f"{100 * LOW_SKILL_ROLE_SCORE_CAP:.0f}/100 vì chưa có kỹ năng trùng. "
                 "Điểm này không phản ánh mức đáp ứng kỹ năng."
             )
-
-
 def render_toolkit() -> None:
     st.markdown(
         '<div class="tool-title" id="career-toolkit"><h2>Hồ sơ nghề nghiệp</h2></div>',
@@ -875,7 +1053,7 @@ def render_toolkit() -> None:
             experience_text = st.text_area("Kinh nghiệm (không bắt buộc)", placeholder="Mô tả ngắn về kinh nghiệm của bạn", key="experience_input")
             pasted_cv_text = st.text_area(
                 "Dán nội dung CV (nếu không tải tệp, không bắt buộc)",
-                placeholder="Dán phần kinh nghiệm, dự án và kỹ năng từ CV. Kỹ năng nhận diện sẽ được đưa sang bước rà soát.",
+                placeholder="HỒ SƠ DEMO — KHÔNG PHẢI NGƯỜI THẬT\nMục tiêu: \nKỹ năng: \nKinh nghiệm giả lập: Thực tập phân tích dữ liệu tại doanh nghiệp bán lẻ giả lập (2025). Dùng SQL tổng hợp đơn hàng\nDự án giả lập: Phân tích doanh số theo sản phẩm và khu vực",
                 height=160,
                 key="pasted_cv_input",
             )
@@ -922,7 +1100,12 @@ def render_toolkit() -> None:
                     if st.button(btn_txt, key="btn_open_role_modal", use_container_width=True):
                         open_role_taxonomy_dialog(positions, role_by_id, taxonomy)
 
-            job_description = st.text_area("Mô tả công việc cần đối chiếu (không bắt buộc)", key="job_description_input")
+            job_description = st.text_area(
+                "Mô tả công việc cần đối chiếu (không bắt buộc)",
+                placeholder="Tên Ngành: \nYêu cầu bắt buộc:\nKĩ năng:\nƯu tiên:",
+                height=140,
+                key="job_description_input",
+            )
             submitted = st.button("Tiếp tục rà soát hồ sơ", type="primary", key="profile_continue")
         if submitted:
             if len(selected_activity_ids) > 4:
@@ -1182,7 +1365,9 @@ def render_toolkit() -> None:
     domain_notice = role_domain_notice(st.session_state.get("career_role_id", ""))
     if domain_notice:
         st.warning(domain_notice)
-    tabs = st.tabs(RESULT_TABS)
+    if "pending_result_tab" in st.session_state:
+        st.session_state["active_result_tab"] = st.session_state.pop("pending_result_tab")
+    tabs = st.tabs(RESULT_TABS, key="active_result_tab", on_change="rerun")
     cv_jd = st.session_state.get("cv_jd_result")
     cv_extraction = st.session_state.get("cv_extraction")
     effective_skills = [
@@ -1193,8 +1378,6 @@ def render_toolkit() -> None:
 
     with tabs[0]:
         saved_role = next((item for item in load_positions() if item["id"] == st.session_state.get("career_role_id")), None)
-        if saved_role:
-            st.caption(f"Kết quả đã lưu gắn với vị trí: {format_role(saved_role)}.")
         if st.session_state.get("active_demo_profile_id"):
             st.info("Hồ sơ tổng hợp minh họa · không phải hồ sơ của người thật.")
         if cv_extraction and not cv_jd:
@@ -1275,6 +1458,9 @@ def render_toolkit() -> None:
     target_levels = {normalize_skill(item["name"]): item["level"] for item in role["skills"]}
     mode_key = f"assessment_mode_{revision}"
     selected_mode = st.session_state.get(mode_key, "Theo kỹ năng đã có")
+    if selected_mode == "Theo level tự khai báo":
+        selected_mode = "Theo mức độ thành thạo tự khai báo"
+        st.session_state[mode_key] = selected_mode
     if st.session_state.get("assessment_snapshot") != (revision, selected_mode, role["id"]):
         st.session_state.pop("interview_session", None)
         st.session_state["assessment_snapshot"] = (revision, selected_mode, role["id"])
@@ -1285,20 +1471,42 @@ def render_toolkit() -> None:
 
     with tabs[1]:
         st.subheader(f"Đánh giá cho {format_role(role)}")
-        mode = st.radio("Loại đánh giá", ["Theo kỹ năng đã có", "Theo level tự khai báo"], key=mode_key)
+        mode = st.radio("Loại đánh giá", ["Theo kỹ năng đã có", "Theo mức độ thành thạo tự khai báo"], key=mode_key)
         if mode != selected_mode:
             st.session_state.pop("interview_session", None)
             st.session_state["assessment_snapshot"] = (revision, mode, role["id"])
-        if mode == "Theo level tự khai báo":
-            st.info("Skill role chưa khai báo level được tính current=0 cho lần đánh giá này; đây không phải kết luận rằng bạn kém kỹ năng đó.")
-            confirmed = st.checkbox("Tôi đồng ý tính level chưa khai báo là 0 cho lần đánh giá này", key=f"confirm_levels_{revision}")
+        if mode in ("Theo mức độ thành thạo tự khai báo", "Theo level tự khai báo"):
+            st.info("Các kỹ năng chưa có mức độ sẽ để mặc định ở 0")
+            confirmed = st.checkbox("Tôi đồng ý tính các kỹ năng chưa có mức độ là 0 cho lần đánh giá này", key=f"confirm_levels_{revision}")
             if confirmed:
                 levels = {k: v for k, v in profile.get("levels", {}).items()
                           if k not in profile["unrecognized_skills"] or k in effective_skills}
                 gap_result = compute_gap(levels, role)
-                st.metric("Mức độ đáp ứng theo level", f"{gap_result['match_percent']}%")
-                st.progress(gap_result["match_percent"] / 100, text="Điểm level gap · từ level đã khai báo và quy ước current=0")
-                st.dataframe(gap_result["items"], hide_index=True)
+                st.metric("Mức độ đáp ứng theo mức độ thành thạo", f"{gap_result['match_percent']}%")
+                st.markdown(
+                    '<div class="sub-heading-cap1" style="font-size:1.15rem;font-weight:750;margin-top:16px;margin-bottom:8px;color:var(--color-ink);">'
+                    'Mức độ thành thạo kỹ năng của bạn so với yêu cầu mức độ thành thạo ở từng kỹ năng'
+                    '</div>',
+                    unsafe_allow_html=True,
+                )
+                st.progress(gap_result["match_percent"] / 100)
+                status_vi = {
+                    "met": "Đã đạt",
+                    "missing": "Chưa có",
+                    "below_required": "Chưa đạt yêu cầu",
+                }
+                display_items = [
+                    {
+                        "Kỹ năng": display_skill(item["skill"]),
+                        "Mức yêu cầu": item["required"],
+                        "Mức hiện tại": item["current"],
+                        "Chênh lệch": item["gap"],
+                        "Độ ưu tiên": item["priority"],
+                        "Trạng thái": status_vi.get(item["status"], item["status"]),
+                    }
+                    for item in gap_result["items"]
+                ]
+                st.dataframe(display_items, hide_index=True, use_container_width=True)
         else:
             st.metric("Mức độ đáp ứng kỹ năng vị trí", f"{presence['percent']}%")
             st.progress(presence["percent"] / 100, text="Mức khớp kỹ năng")
@@ -1307,20 +1515,15 @@ def render_toolkit() -> None:
             matched_col.write(", ".join(display_skill(s) for s in presence["matched"]) or "Chưa có")
             missing_col.markdown("**Nên học tiếp**")
             missing_col.write(", ".join(display_skill(s) for s in presence["missing"]) or "Không còn kỹ năng thiếu")
-        with st.expander("Cách tính điểm"):
-            if mode == "Theo level tự khai báo":
-                st.caption("Điểm dựa trên level bạn tự khai báo so với level mục tiêu của vị trí. Level chưa khai báo được tính là 0 khi bạn xác nhận.")
-            else:
-                st.caption("Điểm tính theo các kỹ năng đã xác nhận trong hồ sơ và trọng số của vị trí. Đây là mức khớp kỹ năng, không phải xác suất tuyển dụng.")
 
     with tabs[2]:
-        if selected_mode == "Theo level tự khai báo":
+        if selected_mode in ("Theo mức độ thành thạo tự khai báo", "Theo level tự khai báo"):
             if gap_result is not None:
                 budget = st.number_input("Ngân sách giờ học mỗi tuần", min_value=0.5, max_value=40.0, value=8.0, step=0.5, key=f"study_budget_{revision}")
                 timed_result = build_timed_roadmap(gap_result, load_resources(), hours_per_week=budget)
                 render_timed_roadmap(timed_result, role_context=format_role(role), target_levels=target_levels)
             else:
-                st.info("Xác nhận quy ước level chưa khai báo ở tab Khoảng cách để xem lộ trình.")
+                st.info("Xác nhận quy ước mức độ thành thạo chưa khai báo ở tab Khoảng cách để xem lộ trình.")
         elif presence["missing"]:
             weekly_roadmap = build_roadmap(presence["missing"], load_resources(), missing_details=presence["missing_details"])
             render_roadmap(weekly_roadmap, role_context=format_role(role), target_levels=target_levels)
@@ -1332,39 +1535,7 @@ def render_toolkit() -> None:
         _render_resource_quality_disclosure(load_resources())
         if timed_result is not None:
             for key, item in timed_result["resources"].items():
-                with st.expander(f"{item.get('title', 'Tài liệu học tập')} · {', '.join(display_skill(s) for s in item.get('skills', []))}"):
-                    url = item.get("url")
-                    if url:
-                        st.markdown(f"[Mở tài liệu]({url})")
-                    if item.get("academic_source"):
-                        st.caption(item.get("academic_label", "Giáo trình nền tảng") + " · " + item.get("provider", "") + " · tiếng Anh")
-                        st.caption(item.get("learning_scope", ""))
-                        companion = item.get("verified_companion_url") or item.get("practice_url")
-                        if companion:
-                            st.markdown(f"[Thực hành thêm: {item.get('verified_companion_title') or item.get('practice_title') or 'Tài liệu bổ sung'}]({companion})")
-                        if item.get("access_note"):
-                            st.caption(item["access_note"])
-                        _render_resource_level_scope(item, target_levels, warn_gap=False)
-                        continue
-                    st.caption(item.get("duration_kind", "Chưa rõ thời lượng"))
-                    _render_resource_level_scope(item, target_levels, warn_gap=False)
-                    evidence = item.get("duration_evidence", {})
-                    if evidence.get("source"):
-                        st.caption(f"Nguồn thời lượng: {evidence['source']}")
-                    if item.get("review_note"):
-                        st.caption(item["review_note"])
-                    if item.get("duration_issue") == "conflicting_duration":
-                        st.caption("Thời lượng nguồn có khác biệt; chưa cộng vào lịch.")
-                    _render_partial_practice_assignments(
-                        item.get("skills", []), item, role_context=format_role(role),
-                        resources=load_resources(),
-                    )
-                    for skill in item.get("skills", []):
-                        caution = skill_scope_caution(skill)
-                        if caution:
-                            st.caption(caution)
-                    if item.get("access_note"):
-                        st.caption(item["access_note"])
+                _render_curated_resource_card(item, target_levels, role, warn_gap=False)
             if timed_result["unknown_duration"] or timed_result["unresolved"]:
                 st.caption("Một số thời lượng hoặc kỹ năng còn thiếu dữ liệu; xem chi tiết trong Lộ trình.")
         elif weekly_roadmap is not None:
@@ -1378,37 +1549,7 @@ def render_toolkit() -> None:
                         seen.add(key)
                         item = catalog[key]
                         first_phase = next(w["week"] for w in weekly_roadmap if any(r["key"] == key for r in w["resources"]))
-                        with st.expander(f"{item.get('title', 'Tài liệu học tập')} · {', '.join(display_skill(s) for s in item.get('skills', []))}"):
-                            url = item.get("url")
-                            if url:
-                                st.markdown(f"[Mở tài liệu]({url})")
-                            st.caption(f"Thứ tự học: giai đoạn {first_phase}")
-                            if item.get("academic_source"):
-                                st.caption(item.get("academic_label", "Giáo trình nền tảng") + " · " + item.get("provider", "") + " · tiếng Anh")
-                                st.caption(item.get("learning_scope", ""))
-                                companion = item.get("verified_companion_url") or item.get("practice_url")
-                                if companion:
-                                    st.markdown(f"[Thực hành thêm: {item.get('verified_companion_title') or item.get('practice_title') or 'Tài liệu bổ sung'}]({companion})")
-                                if item.get("access_note"):
-                                    st.caption(item["access_note"])
-                                _render_resource_level_scope(item, target_levels)
-                                continue
-                            _render_resource_level_scope(item, target_levels)
-                            status = item.get("content_review_status", "unreviewed")
-                            st.caption("Trạng thái nội dung: " + resource_review_label(status))
-                            review_note = item.get("review_note")
-                            if status == "partial" and isinstance(review_note, str) and review_note.strip():
-                                st.caption("Phạm vi: " + review_note)
-                                _render_partial_practice_assignments(
-                                    item.get("skills", []), item, role_context=format_role(role),
-                                    resources=load_resources(),
-                                )
-                            for skill in item.get("skills", []):
-                                caution = skill_scope_caution(skill)
-                                if caution:
-                                    st.caption(caution)
-                            if item.get("access_note"):
-                                st.caption(item["access_note"])
+                        _render_curated_resource_card(item, target_levels, role, warn_gap=True, phase_label=first_phase)
             if any(w["skills_without_resources"] for w in weekly_roadmap):
                 st.warning("Một số kỹ năng chưa có tài liệu đủ điều kiện đề xuất; xem lý do trong tab Lộ trình.")
         else:
@@ -1429,6 +1570,16 @@ def render_toolkit() -> None:
 
 def render_timed_roadmap(roadmap: dict, *, role_context: str | None = None, target_levels: dict[str, int] | None = None) -> None:
     st.subheader("Lộ trình học")
+    st.markdown(
+        '<div class="roadmap-guide-box">'
+        '<span style="font-size:1.2rem;line-height:1;">💡</span>'
+        '<div>'
+        'Thang mức độ thành thạo kỹ năng từ <strong>0 (Chưa biết)</strong>, <strong>1 (Cơ bản)</strong>, <strong>2 (Độc lập)</strong> đến <strong>3 (Nâng cao)</strong>. '
+        'Mũi tên <strong>→</strong> cho biết mức độ hiện tại của bạn và mục tiêu cần đạt sau mỗi bước học.'
+        '</div>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
     if roadmap["total_known_hours"] or roadmap["total_estimated_hours"]:
         st.caption(f"Ưu tiên theo khoảng cách kỹ năng · ngân sách {roadmap['hours_per_week']:g} giờ/tuần")
         metric_columns = st.columns(3)
@@ -1447,33 +1598,74 @@ def render_timed_roadmap(roadmap: dict, *, role_context: str | None = None, targ
         st.caption("Các giáo trình không công bố thời lượng. Học theo thứ tự dưới đây, tự điều chỉnh nhịp và xin phản hồi sau mỗi bài tập.")
     if roadmap["is_estimated"]:
         st.caption("Một phần thời lượng là ước tính.")
-    for step in roadmap.get("learning_steps", []):
+
+    learning_steps = roadmap.get("learning_steps", [])
+    for idx, step in enumerate(learning_steps):
         skill = step["skill"]
-        level_label = f" · Level {step['current_level']} → {step['target_level']}" if step.get("target_level") else ""
-        with st.expander(f"Bước {step['step']} · {display_skill(skill)}{level_label}"):
+        formatted_skill = format_skill_name(display_skill(skill))
+        cur_lvl = step.get("current_level", 0)
+        tgt_lvl = step.get("target_level", 3)
+        step_num = step.get("step", idx + 1)
+        expander_title = f"Bước {step_num} · {formatted_skill} · Mức độ: {cur_lvl} → {tgt_lvl}"
+        with st.expander(expander_title, expanded=(step_num == 1)):
+            st.markdown(
+                f'<div class="roadmap-badge-container">'
+                f'<span class="roadmap-level-badge">🎯 Mức độ thành thạo kỹ năng: <strong>{cur_lvl} → {tgt_lvl}</strong></span>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
             resource = step.get("resource")
             if resource:
-                st.markdown(f"[{resource.get('title', 'Giáo trình học thuật')}]({resource.get('url', '')})")
-                st.caption(resource.get("academic_label", "Giáo trình nền tảng") + " · " + resource.get("provider", "Nguồn học thuật") + " · tài liệu tiếng Anh")
-                if resource.get("learning_scope"):
-                    st.caption(resource["learning_scope"])
+                title = resource.get("title", "Giáo trình học thuật")
+                url = resource.get("url", "")
+                provider = resource.get("provider", "Nguồn học thuật")
+                acad_label = resource.get("academic_label", "Giáo trình nền tảng")
+                provider_line = f"{acad_label} · {provider} · tài liệu tiếng Anh"
+                scope_line = resource.get("learning_scope", "")
+
+                link_html = f'<a href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer" class="roadmap-resource-link">{escape(title)}</a>' if url else f'<span class="roadmap-resource-title">{escape(title)}</span>'
+                st.markdown(f'<div class="roadmap-resource-header">{link_html}</div>', unsafe_allow_html=True)
+
+                bullets = [f'<li>{escape(provider_line)}</li>']
+                if scope_line:
+                    bullets.append(f'<li>{escape(scope_line)}</li>')
+                if resource.get("access_note"):
+                    bullets.append(f'<li>{escape(resource["access_note"])}</li>')
+                st.markdown(f'<ul class="roadmap-resource-bullets">{"".join(bullets)}</ul>', unsafe_allow_html=True)
+
                 companion = resource.get("verified_companion_url") or resource.get("practice_url")
                 if companion:
                     label = resource.get("verified_companion_title") or resource.get("practice_title") or "Nguồn thực hành bổ sung"
-                    st.markdown(f"[Thực hành thêm: {label}]({companion})")
-                if resource.get("access_note"):
-                    st.caption(resource["access_note"])
+                    st.markdown(
+                        f'<div class="roadmap-companion-box">'
+                        f'<span class="roadmap-companion-label">Thực hành thêm:</span> '
+                        f'<a href="{escape(companion, quote=True)}" target="_blank" rel="noopener noreferrer" class="roadmap-companion-link">{escape(label)}</a>'
+                        f'</div>',
+                        unsafe_allow_html=True,
+                    )
+
             plan = step.get("plan") or {}
-            for number, instruction in enumerate(plan.get("steps", []), 1):
-                st.markdown(f"{number}. {instruction}")
+            steps_list = plan.get("steps", [])
+            if steps_list:
+                st.markdown('<div class="roadmap-practice-title">Các bước thực hành:</div>', unsafe_allow_html=True)
+                steps_html = "".join(f'<li>{escape(instruction)}</li>' for instruction in steps_list)
+                st.markdown(f'<ol class="roadmap-practice-list">{steps_html}</ol>', unsafe_allow_html=True)
+
             if plan.get("evidence"):
-                st.caption("Đầu ra: " + plan["evidence"])
+                st.markdown(
+                    f'<div class="roadmap-evidence-box">'
+                    f'<span style="font-size:1.1rem;line-height:1;">🏁</span>'
+                    f'<div><strong>Đầu ra cần đạt:</strong> {escape(plan["evidence"])}</div>'
+                    f'</div>',
+                    unsafe_allow_html=True,
+                )
+
     for phase in roadmap["phases"]:
         with st.expander(f"Tuần học {phase['week']} · {phase['hours']:.2f} giờ"):
             for segment in phase["segments"]:
                 item = roadmap["resources"][segment["resource_key"]]
                 st.markdown(f"[{item['title']}]({item['url']}) · phần {segment['part']} · {segment['hours']:.2f} giờ")
-                st.caption(f"Học {', '.join(display_skill(skill) for skill in item['skills'])} · {segment['hours']:.1f} giờ")
+                st.caption(f"Học {', '.join(format_skill_name(display_skill(skill)) for skill in item['skills'])} · {segment['hours']:.1f} giờ")
                 with st.expander("Chi tiết tài liệu"):
                     _render_resource_level_scope(item, target_levels, warn_gap=False)
                     st.caption("Trạng thái nội dung: " + resource_review_label(item.get("content_review_status", "unreviewed")))
@@ -1492,7 +1684,7 @@ def render_timed_roadmap(roadmap: dict, *, role_context: str | None = None, targ
                     )
     for item in roadmap["unresolved"]:
         skill = item.get("skill") or ", ".join(item.get("skills", []))
-        with st.expander(f"Chưa có tài liệu phù hợp cho {display_skill(skill)}"):
+        with st.expander(f"Chưa có tài liệu phù hợp cho {format_skill_name(display_skill(skill))}"):
             st.caption(RESOURCE_REASON_LABELS.get(item["reason"], "Chưa tìm được tài liệu phù hợp."))
             caution = skill_scope_caution(skill)
             if caution:
@@ -1506,14 +1698,14 @@ def render_timed_roadmap(roadmap: dict, *, role_context: str | None = None, targ
 def _render_resource_level_scope(resource: dict, target_levels: dict[str, int] | None, *, warn_gap: bool = True) -> None:
     """Distinguish the page's teaching range from the role's target level."""
     if resource.get("learning_role") == "academic_foundation":
-        st.caption(resource.get("academic_label", "Học liệu nền tảng") + ". Đọc xong chưa đồng nghĩa đã đạt Level; hãy hoàn thành bài thực hành và xin phản hồi.")
+        st.caption(resource.get("academic_label", "Học liệu nền tảng") + ". Đọc xong chưa đồng nghĩa đã đạt mức độ thành thạo kỹ năng; hãy hoàn thành bài thực hành và xin phản hồi.")
         return
     st.caption("Mức bằng chứng: " + resource_evidence_badge(resource))
     lower, upper = resource.get("level_from"), resource.get("level_to")
     if type(lower) is not int or type(upper) is not int or not 1 <= lower <= upper <= 3:
         return
     label = f"Level {lower}" if lower == upper else f"Level {lower}–{upper}"
-    st.caption(f"Level do dự án gán cho mapping: {label}; đọc tài liệu không chứng nhận đã đạt Level.")
+    st.caption(f"Mức độ thành thạo (Level do dự án gán cho mapping: {label}); đọc tài liệu không chứng nhận đã đạt mức độ này.")
     scope = resource.get("scope_granularity")
     locator = resource.get("evidence_locator")
     if not has_granular_level_evidence(resource):
@@ -1523,7 +1715,7 @@ def _render_resource_level_scope(resource: dict, target_levels: dict[str, int] |
         )
     else:
         st.caption(f"Đơn vị nội dung: {scope} · Vị trí đối chiếu nội bộ: {locator}")
-        st.caption("Phạm vi và Level của đơn vị này vẫn cần chủ dự án/chuyên gia xác nhận độc lập.")
+        st.caption("Phạm vi và mức độ thành thạo (Level) của đơn vị này vẫn cần chủ dự án/chuyên gia xác nhận độc lập.")
     axes = resource.get("verification_axes")
     if isinstance(axes, dict) and axes.get("access_status") == "user_attested_manual":
         st.caption("Khả năng mở link: chủ dự án báo đã kiểm tra thủ công; chưa phải xác minh độc lập.")
@@ -1659,6 +1851,121 @@ def _render_practice_routes(routes: list[dict]) -> None:
             st.caption("Bằng chứng để tự theo dõi: " + route["evidence"])
 
 
+def _render_curated_resource_card(
+    item: dict,
+    target_levels: dict[str, int] | None,
+    role: dict,
+    *,
+    warn_gap: bool = False,
+    phase_label: int | str | None = None,
+) -> None:
+    """Render a clean, accessible card for a curated learning resource in Tab 3."""
+    raw_skills = item.get("skills", [])
+    formatted_skills = [format_skill_name(display_skill(s)) for s in raw_skills if s]
+    title = item.get("title", "Tài liệu học tập")
+    if formatted_skills:
+        expander_title = f"{title} · {', '.join(formatted_skills)}"
+    else:
+        expander_title = title
+
+    with st.expander(expander_title):
+        # 1. Link mở tài liệu trực tiếp (Cấp 2)
+        url = item.get("url")
+        if url:
+            st.markdown(
+                f'<div class="resource-open-link-wrap">'
+                f'<a href="{escape(url)}" target="_blank" rel="noopener noreferrer" class="resource-open-link">Mở tài liệu ↗</a>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+
+        # 2. Thông tin nguồn và mô tả (Cấp 3 gạch đầu dòng)
+        bullets = []
+        if phase_label is not None:
+            bullets.append(f"<strong>Thứ tự học:</strong> Giai đoạn {phase_label}")
+
+        if item.get("academic_source"):
+            source_parts = [
+                p for p in [
+                    item.get("academic_label", "Giáo trình nền tảng"),
+                    item.get("provider", ""),
+                    "tiếng Anh",
+                ] if p
+            ]
+            if source_parts:
+                bullets.append(f"<strong>Nguồn:</strong> {escape(' · '.join(source_parts))}")
+            learning_scope = item.get("learning_scope", "").strip()
+            if learning_scope:
+                bullets.append(escape(learning_scope))
+        else:
+            provider = item.get("provider", "").strip()
+            res_type = item.get("type", "").strip()
+            lang_raw = item.get("language")
+            lang = "tiếng Việt" if lang_raw == "vi" else ("tiếng Anh" if lang_raw == "en" else (lang_raw or ""))
+            source_parts = [p for p in [provider, res_type, lang] if p]
+            if not source_parts and item.get("duration_evidence", {}).get("source"):
+                source_parts = [item["duration_evidence"]["source"]]
+            if not source_parts and item.get("duration_kind"):
+                source_parts = [item["duration_kind"]]
+            if source_parts:
+                bullets.append(f"<strong>Nguồn:</strong> {escape(' · '.join(source_parts))}")
+            desc = (item.get("review_note") or item.get("learning_scope") or "").strip()
+            if desc:
+                bullets.append(escape(desc))
+
+        if bullets:
+            bullet_html = "".join(f"<li>{b}</li>" for b in bullets)
+            st.markdown(f'<ul class="resource-details-bullets">{bullet_html}</ul>', unsafe_allow_html=True)
+
+        # 3. Phần thực hành kèm theo (nếu tài liệu có practice / companion)
+        companion = item.get("verified_companion_url") or item.get("practice_url")
+        if companion:
+            companion_title = item.get("verified_companion_title") or item.get("practice_title") or "Tài liệu bổ sung"
+            st.markdown(
+                f'<div class="resource-companion-box">'
+                f'<div class="resource-companion-link-wrap">'
+                f'<a href="{escape(companion)}" target="_blank" rel="noopener noreferrer" class="resource-companion-link">Thực hành thêm: {escape(companion_title)} ↗</a>'
+                f'</div>'
+                f'<ul class="resource-companion-bullets">'
+                f'<li>Giáo trình nền tảng. Đọc xong chưa đồng nghĩa đã đạt mức độ thành thạo kỹ năng; hãy hoàn thành bài thực hành và xin phản hồi.</li>'
+                f'</ul>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+
+        # 4. Chi tiết tài liệu & minh chứng (expander con đóng mặc định)
+        with st.expander("Chi tiết tài liệu & minh chứng", expanded=False):
+            if item.get("academic_source"):
+                if item.get("access_note"):
+                    st.caption(item["access_note"])
+                _render_resource_level_scope(item, target_levels, warn_gap=warn_gap)
+            else:
+                if item.get("duration_kind") and not any(item["duration_kind"] in b for b in bullets):
+                    st.caption(f"Thời lượng: {item['duration_kind']}")
+                _render_resource_level_scope(item, target_levels, warn_gap=warn_gap)
+                evidence = item.get("duration_evidence", {})
+                if evidence.get("source"):
+                    st.caption(f"Nguồn thời lượng: {evidence['source']}")
+                status = item.get("content_review_status", "unreviewed")
+                if status != "unreviewed":
+                    st.caption("Trạng thái nội dung: " + resource_review_label(status))
+                review_note = item.get("review_note")
+                if status == "partial" and isinstance(review_note, str) and review_note.strip():
+                    st.caption("Phạm vi đánh giá: " + review_note)
+                if item.get("duration_issue") == "conflicting_duration":
+                    st.caption("Thời lượng nguồn có khác biệt; chưa cộng vào lịch.")
+                _render_partial_practice_assignments(
+                    item.get("skills", []), item, role_context=format_role(role),
+                    resources=load_resources(),
+                )
+                for skill in item.get("skills", []):
+                    caution = skill_scope_caution(skill)
+                    if caution:
+                        st.caption(caution)
+                if item.get("access_note"):
+                    st.caption(item["access_note"])
+
+
 def _render_resource_quality_disclosure(resources: dict) -> dict:
     summary = summarize_resource_reviews(resources)
     mapped_skills = sum(
@@ -1666,11 +1973,20 @@ def _render_resource_quality_disclosure(resources: dict) -> dict:
         if isinstance(group, dict) and isinstance(group.get("academic_source"), dict)
     )
     with st.expander("Về học liệu"):
-        st.caption(
-            f"Có giáo trình/học liệu nền tảng cho {mapped_skills} kỹ năng trong danh mục nghề, kèm bài tập và đầu ra để xin phản hồi. "
-            "Tài liệu tiếng Anh; thời lượng không công bố thì học theo tiến độ cá nhân."
+        st.markdown(
+            f'<div class="about-curriculum-intro">'
+            f'<ul class="about-curriculum-bullets">'
+            f'<li>Có giáo trình/học liệu nền tảng cho <strong>{mapped_skills}</strong> kỹ năng trong danh mục nghề, kèm bài tập và đầu ra để xin phản hồi.</li>'
+            f'<li>Tài liệu bằng tiếng Anh; thời lượng không công bố, nên học theo tiến độ cá nhân.</li>'
+            f'<li>Tài liệu giúp học kiến thức nền, không chứng nhận đạt trình độ.</li>'
+            f'</ul>'
+            f'</div>',
+            unsafe_allow_html=True,
         )
-        st.caption("Tài liệu giúp học kiến thức nền, không chứng nhận đạt trình độ. Luật, thuế, y tế và an toàn cần nguồn Việt Nam hiện hành hoặc người hướng dẫn đủ chuyên môn.")
+        st.warning(
+            "**Lưu ý quan trọng:** Luật, thuế, y tế và an toàn cần nguồn Việt Nam hiện hành hoặc người hướng dẫn đủ chuyên môn.",
+            icon="⚖️",
+        )
     return summary
 
 
