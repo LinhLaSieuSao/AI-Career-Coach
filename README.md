@@ -89,7 +89,15 @@ Nếu dịch vụ AI lỗi, ứng dụng ghi rõ kết quả dự phòng chỉ �
 
 ## Kiểm thử và CI
 
-Chạy `python -m pytest -q tests/`. CI chạy tám file test và Docker health check, đồng thời quét tên file nhạy cảm trong từng layer image. Bước Ruff hiện chỉ báo thông tin để nhóm xử lý dần các cảnh báo cũ.
+Sau khi cài thư viện như hướng dẫn ở trên, chạy nhanh kiểm thử và mở web trên máy:
+
+```bash
+python scripts/demo_smoke.py
+```
+
+Script báo kết quả pytest, sau đó mở website ngay cả khi có bài kiểm thử thất bại để có thể kiểm tra thủ công. Giữ terminal mở khi dùng web và nhấn Ctrl+C để dừng. Dùng `--test-only` để chỉ chạy kiểm thử hoặc `--web-only` để chỉ mở web; thêm `--no-browser` nếu muốn tự mở địa chỉ được in ra. Website chỉ mở trên máy đang chạy script. Thử chức năng AI cần key Groq hợp lệ và kết nối mạng; kiểm thử tự động không đảm bảo chất lượng nhận xét AI thực tế.
+
+Có thể chạy riêng `python -m pytest -q tests/`. CI chạy tám file test và Docker health check, đồng thời quét tên file nhạy cảm trong từng layer image. Bước Ruff hiện chỉ báo thông tin để nhóm xử lý dần các cảnh báo cũ.
 
 ## Nhóm, demo và giấy phép
 
