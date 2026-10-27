@@ -1558,123 +1558,23 @@ body.career-menu-open [data-testid="stMain"] {
 
 
 /* ========================================================= */
-/* DIALOG & ROLE TAXONOMY MODAL STYLING                     */
+/* DIALOG BASE STYLING                                       */
 /* ========================================================= */
 [data-testid="stDialog"] {
   border-radius: 20px !important;
 }
 
-/* Dialog title styling */
 [data-testid="stDialog"] [data-testid="stDialogHeader"] h2,
 [data-testid="stDialog"] [data-testid="stDialogHeader"] div,
 [data-testid="stDialog"] [role="dialog"] h2,
 [data-testid="stDialog"] h2 {
   font-family: var(--font-sans) !important;
-  font-size: 26px !important;
+  font-size: 24px !important;
   font-weight: 800 !important;
   color: var(--color-ink) !important;
   letter-spacing: -0.02em !important;
   line-height: 1.3 !important;
 }
-
-[data-testid="stDialog"] [data-testid="stVerticalBlock"] {
-  gap: 12px;
-}
-
-/* Modal Buttons (Pill tags) */
-[data-testid="stDialog"] button[kind="primary"],
-[data-testid="stDialog"] button[kind="primary"] p,
-[data-testid="stDialog"] button[kind="primary"] div {
-  background: var(--color-plume-500) !important;
-  color: #ffffff !important;
-  border: 1px solid var(--color-plume-500) !important;
-  border-radius: 12px !important;
-  font-family: var(--font-sans) !important;
-  font-weight: 750 !important;
-  font-size: 16.5px !important;
-  box-shadow: 0 4px 12px rgba(10, 122, 255, 0.3) !important;
-  transition: all 0.2s ease !important;
-}
-
-[data-testid="stDialog"] button[kind="secondary"],
-[data-testid="stDialog"] button[kind="secondary"] p,
-[data-testid="stDialog"] button[kind="secondary"] div {
-  background: #ffffff !important;
-  color: #0f172a !important;
-  border: 1.5px solid #cbd5e1 !important;
-  border-radius: 12px !important;
-  font-family: var(--font-sans) !important;
-  font-weight: 650 !important;
-  font-size: 16.5px !important;
-  transition: all 0.2s ease !important;
-}
-
-[data-testid="stDialog"] button[kind="secondary"]:hover {
-  background: #e0f2fe !important;
-  border-color: #38bdf8 !important;
-  color: #0369a1 !important;
-  transform: translateY(-1px);
-}
-
-/* Modal Left Radio Group (Nhóm nghề) */
-[data-testid="stDialog"] [data-testid="stRadio"] > div {
-  padding-right: 6px;
-  gap: 2px;
-}
-
-[data-testid="stDialog"] [data-testid="stRadioGroup"] {
-  width: 100%;
-  max-height: min(420px, 45vh) !important;
-  box-sizing: border-box;
-  flex-wrap: nowrap !important;
-  align-items: stretch;
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
-  scrollbar-width: thin;
-}
-[data-testid="stDialog"] [data-testid="stRadioGroup"] > div,
-[data-testid="stDialog"] [data-testid="stRadioGroup"] label {
-  width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
-}
-[data-testid="stDialog"] [data-testid="stRadioGroup"] label {
-  white-space: normal !important;
-}
-
-@media (max-width: 767px) {
-  [data-testid="stDialog"] [data-testid="stRadioGroup"] {
-    max-height: 320px !important;
-  }
-}
-
-[data-testid="stDialog"] [data-testid="stRadio"] label,
-[data-testid="stDialog"] [data-testid="stRadio"] label p,
-[data-testid="stDialog"] [data-testid="stRadio"] label div {
-  border-radius: 10px !important;
-  padding: 11px 14px !important;
-  font-family: var(--font-sans) !important;
-  font-size: 16.5px !important;
-  font-weight: 600 !important;
-  color: #1e293b !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
-  transition: all 0.15s ease !important;
-}
-
-[data-testid="stDialog"] [data-testid="stRadio"] label:hover {
-  background: #f1f5f9 !important;
-  color: #0f172a !important;
-}
-
-[data-testid="stDialog"] [data-testid="stRadio"] label[data-checked="true"],
-[data-testid="stDialog"] [data-testid="stRadio"] label[data-checked="true"] p,
-[data-testid="stDialog"] [data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked),
-[data-testid="stDialog"] [data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked) p {
-  background: #e0f2fe !important;
-  color: #0284c7 !important;
-  font-weight: 800 !important;
-}
-
 
 /* ============================================================
    WebGL Cloud Shader (Aceternity UI) - Integration & Theming
@@ -1930,32 +1830,31 @@ body.career-menu-open [data-testid="stMain"] {
 }
 
 /* ========================================================= */
-/* DIALOG & ROLE TAXONOMY MODAL STYLING (SCOPED VIA MARKER) */
+/* DIALOG & ROLE TAXONOMY MODAL STYLING (CLEAN & NON-OVERLAPPING) */
 /* ========================================================= */
 
-/* Ẩn khung chứa marker để không tạo khoảng trống */
-[data-testid="stElementContainer"]:has(.role-dlg-marker) { display: none; }
+/* Ẩn marker */
+[data-testid="stElementContainer"]:has(.role-dlg-marker) {
+  display: none !important;
+}
 
-/* Lớp phủ: giảm padding, không để cuộn chuỗi ra trang nền */
+/* Modal Dialog Wrapper */
 [data-testid="stDialog"]:has(.role-dlg-marker) {
   padding-top: 16px !important;
   padding-bottom: 16px !important;
   overscroll-behavior: contain;
 }
 
-/* Hộp thoại: không cao quá viewport */
 [data-testid="stDialog"]:has(.role-dlg-marker) > div {
   max-height: calc(100dvh - 32px);
 }
 
-/* Khung role=dialog: chiếm phần còn lại, tự nó không cuộn */
 [data-testid="stDialog"]:has(.role-dlg-marker) [role="dialog"] {
   flex: 1 1 auto;
   min-height: 0;
   overflow: hidden;
 }
 
-/* Vùng nội dung: vùng cuộn duy nhất (tiêu đề và nút X nằm ngoài vùng này) */
 [data-testid="stDialog"]:has(.role-dlg-marker) [role="dialog"] > div:has([data-testid="stVerticalBlock"]) {
   flex: 1 1 auto;
   min-height: 0;
@@ -1964,124 +1863,242 @@ body.career-menu-open [data-testid="stMain"] {
   scrollbar-width: thin;
 }
 
-/* Ô tìm kiếm dính trên cùng của vùng nội dung */
+/* Ô tìm kiếm: vị trí tự nhiên, không position: sticky để không đè nội dung khi cuộn */
 [data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stElementContainer"]:has([data-testid="stTextInput"]) {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  background: var(--color-paper, #fff);
-  padding: 4px 0 8px;
-}
-
-/* Danh sách nhóm nghề: chỉ một lớp cuộn, thấp hơn để cả hộp vừa màn hình */
-[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadioGroup"] {
-  max-height: min(360px, 40dvh) !important;
-  overflow-y: auto !important;
-  overscroll-behavior: contain;
+  position: relative !important;
+  margin-bottom: 14px !important;
+  width: 100% !important;
 }
 
 .dlg-group-title,
 .dlg-roles-title {
-  font-size: 17px !important;
+  font-family: var(--font-sans) !important;
+  font-size: 16px !important;
   font-weight: 800 !important;
   color: #0f172a !important;
-  margin-bottom: 8px !important;
+  margin-bottom: 10px !important;
+  letter-spacing: 0.02em;
 }
 
-[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] label,
-[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] label p,
-[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] label div {
+/* ========================================== */
+/* CỘT TRÁI: NHÓM NGHỀ (RADIO CARDS)          */
+/* ========================================== */
+
+/* Khung cuộn nhóm nghề */
+[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadioGroup"] {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  max-height: min(440px, 48dvh) !important;
+  overflow-y: auto !important;
+  padding-right: 4px !important;
+  scrollbar-width: thin;
+}
+
+/* Thẻ label nhóm nghề */
+[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] label {
   border-radius: 10px !important;
-  padding: 11px 14px !important;
-  font-family: var(--font-sans) !important;
-  font-size: 16.5px !important;
-  font-weight: 600 !important;
-  color: #1e293b !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
-  margin-bottom: 3px !important;
-  line-height: 1.4 !important;
+  padding: 10px 14px !important;
+  margin: 0 !important;
+  background: #ffffff !important;
+  border: 1.5px solid #e2e8f0 !important;
+  display: flex !important;
+  align-items: center !important;
+  cursor: pointer !important;
   transition: all 0.15s ease !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 [data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] label:hover {
-  background: #f1f5f9 !important;
-  color: #0f172a !important;
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
 }
 
+/* Khi nhóm nghề được chọn */
 [data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] label[data-checked="true"],
-[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] label[data-checked="true"] p,
-[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked),
-[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked) p {
-  background: #e0f2fe !important;
-  color: #0284c7 !important;
-  font-weight: 800 !important;
-  border: 1.5px solid #7dd3fc !important;
+[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] label:has(input:checked) {
+  background: #f0f9ff !important;
+  border: 1.5px solid #0284c7 !important;
 }
 
-[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="secondary"],
-[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="secondary"] p,
-[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="secondary"] div {
-  min-height: 52px !important;
+/* Xóa viền/padding lồng nhau ở các thẻ con bên trong radio label */
+[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] label div {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] label p {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 0 0 8px !important;
+  margin: 0 !important;
   font-family: var(--font-sans) !important;
-  font-size: 16.5px !important;
-  font-weight: 650 !important;
-  padding: 12px 14px !important;
-  border-radius: 12px !important;
-  white-space: normal !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
   line-height: 1.35 !important;
+}
+
+[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] label:has(input:checked) p,
+[data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stRadio"] label[data-checked="true"] p {
+  color: #0284c7 !important;
+  font-weight: 750 !important;
+}
+
+/* ========================================== */
+/* CỘT PHẢI: CÁC NÚT VỊ TRÍ CHUYÊN MÔN        */
+/* ========================================== */
+
+/* Nút vị trí chưa chọn (Secondary) */
+[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="secondary"] {
+  min-height: 48px !important;
+  height: auto !important;
+  padding: 10px 12px !important;
+  border-radius: 12px !important;
   background: #ffffff !important;
   border: 1.5px solid #cbd5e1 !important;
-  color: #0f172a !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.2s ease !important;
+  margin-bottom: 4px !important;
 }
 
 [data-testid="stDialog"]:has(.role-dlg-marker) button[kind="secondary"]:hover {
-  background: #e0f2fe !important;
+  background: #f0f9ff !important;
   border-color: #38bdf8 !important;
-  color: #0369a1 !important;
-  transform: translateY(-1px);
+  transform: translateY(-1px) !important;
 }
 
-[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="primary"],
-[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="primary"] p,
-[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="primary"] div {
-  min-height: 52px !important;
+/* Xóa viền/padding lồng nhau ở div con của button secondary */
+[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="secondary"] div {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: unset !important;
+  height: auto !important;
+  width: 100% !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="secondary"] p {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: unset !important;
+  height: auto !important;
+  box-shadow: none !important;
   font-family: var(--font-sans) !important;
-  font-size: 16.5px !important;
-  font-weight: 750 !important;
-  padding: 12px 14px !important;
-  border-radius: 12px !important;
-  white-space: normal !important;
+  font-size: 15px !important;
+  font-weight: 650 !important;
+  color: #0f172a !important;
   line-height: 1.35 !important;
+  white-space: normal !important;
+  text-align: center !important;
+}
+
+[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="secondary"]:hover p {
+  color: #0284c7 !important;
+}
+
+/* Nút vị trí đã chọn (Primary) */
+[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="primary"] {
+  min-height: 48px !important;
+  height: auto !important;
+  padding: 10px 12px !important;
+  border-radius: 12px !important;
   background: #0284c7 !important;
   border: 1.5px solid #0284c7 !important;
-  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25) !important;
+  transition: all 0.2s ease !important;
+  margin-bottom: 4px !important;
 }
 
+/* Xóa viền/padding lồng nhau ở div con của button primary */
+[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="primary"] div {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: unset !important;
+  height: auto !important;
+  width: 100% !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+[data-testid="stDialog"]:has(.role-dlg-marker) button[kind="primary"] p {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: unset !important;
+  height: auto !important;
+  box-shadow: none !important;
+  font-family: var(--font-sans) !important;
+  font-size: 15px !important;
+  font-weight: 750 !important;
+  color: #ffffff !important;
+  line-height: 1.35 !important;
+  white-space: normal !important;
+  text-align: center !important;
+}
+
+/* Caption hướng dẫn */
 [data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stCaptionContainer"],
 [data-testid="stDialog"]:has(.role-dlg-marker) [data-testid="stCaptionContainer"] p,
 [data-testid="stDialog"]:has(.role-dlg-marker) .stCaption,
 [data-testid="stDialog"]:has(.role-dlg-marker) .stCaption p {
   font-family: var(--font-sans) !important;
-  font-size: 15px !important;
-  font-weight: 550 !important;
-  color: #475569 !important;
-  margin-bottom: 12px !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+  color: #64748b !important;
+  margin-bottom: 10px !important;
 }
 
+/* Nút Đóng modal */
 [data-testid="stDialog"]:has(.role-dlg-marker) button[key="dlg_close_btn"],
-[data-testid="stDialog"]:has(.role-dlg-marker) button[key="dlg_close_btn"] p,
 [data-testid="stDialog"]:has(.role-dlg-marker) .st-key-dlg_close_btn button,
-[data-testid="stDialog"]:has(.role-dlg-marker) .st-key-dlg_close_btn button p,
-.st-key-dlg_close_btn button,
-.st-key-dlg_close_btn button p {
+.st-key-dlg_close_btn button {
   font-family: var(--font-sans) !important;
   background: #f1f5f9 !important;
-  border: 2px solid #94a3b8 !important;
+  border: 1.5px solid #94a3b8 !important;
   color: #0f172a !important;
-  font-size: 16.5px !important;
+  font-size: 15.5px !important;
   font-weight: 700 !important;
   border-radius: 10px !important;
-  min-height: 48px !important;
+  min-height: 44px !important;
+  transition: all 0.15s ease !important;
+}
+
+[data-testid="stDialog"]:has(.role-dlg-marker) button[key="dlg_close_btn"] div,
+[data-testid="stDialog"]:has(.role-dlg-marker) button[key="dlg_close_btn"] p,
+[data-testid="stDialog"]:has(.role-dlg-marker) .st-key-dlg_close_btn button div,
+[data-testid="stDialog"]:has(.role-dlg-marker) .st-key-dlg_close_btn button p,
+.st-key-dlg_close_btn button div,
+.st-key-dlg_close_btn button p {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: inherit !important;
 }
 
 [data-testid="stDialog"]:has(.role-dlg-marker) button[key="dlg_close_btn"]:hover,
@@ -2091,7 +2108,6 @@ body.career-menu-open [data-testid="stMain"] {
   border-color: #64748b !important;
   color: #000000 !important;
 }
-
 
 /* Tab 0 Tóm tắt UX Redesign */
 .skill-chips-container {
@@ -2145,4 +2161,479 @@ body.career-menu-open [data-testid="stMain"] {
   background: var(--color-plume-50) !important;
   color: var(--color-plume-700) !important;
   border: 1px solid var(--color-plume-200) !important;
+}
+
+
+/* ========================================================= */
+/* TYPOGRAPHY SYSTEM FOR SUMMARY TAB (CẤP 1, CẤP 2, CẤP 3)  */
+/* ========================================================= */
+
+:root {
+  --font-cap1-size: 1.15rem; /* ~18.4px, in đậm bằng thẻ gợi ý */
+  --font-cap2-size: 1.02rem; /* ~16.3px, nội dung chính */
+  --font-cap3-size: 0.92rem; /* ~14.7px, mục con, nhánh con */
+}
+
+/* Cấp 1: Tiêu đề đầu mục và Tiêu đề chữ của Expanders */
+.sub-heading-cap1,
+[data-testid="stExpander"] summary [data-testid="stMarkdownContainer"] p,
+[data-testid="stExpander"] summary p,
+.streamlit-expanderHeader p {
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-cap1-size) !important;
+  font-weight: 750 !important;
+  color: var(--color-ink) !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+}
+
+/* Khung Expander đồng bộ với thẻ vị trí phía trên */
+[data-testid="stExpander"] {
+  border: 1px solid var(--color-line) !important;
+  border-radius: 12px !important;
+  background: var(--color-paper-raised) !important;
+  margin-bottom: 12px !important;
+  box-shadow: var(--shadow-card) !important;
+  overflow: hidden !important;
+}
+
+[data-testid="stExpander"] summary {
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  transition: background 0.15s ease !important;
+}
+
+[data-testid="stExpander"] summary:hover {
+  background: #f8fafc !important;
+}
+
+/* Đảm bảo icon mở rộng của expander luôn hiển thị đúng kí hiệu mũi tên, không bị biến thành chữ */
+[data-testid="stExpander"] summary span:not([data-testid="stMarkdownContainer"] span),
+[data-testid="stExpander"] summary [data-testid="stIconMaterial"],
+[data-testid="stExpander"] summary svg {
+  font-family: "Material Symbols Rounded", "Material Icons", sans-serif !important;
+  font-size: 22px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  line-height: 1 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important;
+  direction: ltr !important;
+  -webkit-font-smoothing: antialiased !important;
+  color: var(--color-ink-faint) !important;
+  user-select: none !important;
+}
+
+[data-testid="stExpander"] [data-testid="stExpanderDetails"] {
+  padding: 16px 18px !important;
+  border-top: 1px solid var(--color-line) !important;
+}
+
+/* Cấp 2: Nội dung chính bên trong */
+.typ-cap2,
+.profile-item-cap2,
+.tech-item-cap2,
+.tech-guide-item-cap2 {
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-cap2-size) !important;
+  color: var(--color-ink) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 8px !important;
+}
+
+.profile-item-cap2 strong,
+.tech-item-cap2 strong,
+.typ-cap2 strong,
+.tech-guide-item-cap2 strong {
+  font-weight: 700 !important;
+  color: var(--color-ink) !important;
+}
+
+/* Cấp 3: Mục con / nhánh con / chú thích rõ ràng */
+.typ-cap3,
+.profile-subitem-cap3,
+.tech-subitem-cap3 {
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-cap3-size) !important;
+  color: var(--color-ink-soft) !important;
+  line-height: 1.5 !important;
+  margin-left: 20px !important;
+  margin-top: 2px !important;
+  margin-bottom: 4px !important;
+}
+
+/* Khối văn bản CV đã trích xuất */
+.extracted-cv-box {
+  font-family: var(--font-mono, monospace) !important;
+  font-size: 0.95rem !important;
+  color: #0f172a !important;
+  background: #f8fafc !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  padding: 14px 16px !important;
+  max-height: 280px !important;
+  overflow-y: auto !important;
+  white-space: pre-wrap !important;
+  line-height: 1.55 !important;
+  margin-top: 8px !important;
+}
+
+/* Level chips container */
+.level-chips-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-top: 6px !important;
+  margin-bottom: 8px !important;
+}
+
+.level-chip {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 5px 12px !important;
+  border-radius: 8px !important;
+  background: #f1f5f9 !important;
+  border: 1px solid #cbd5e1 !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-cap3-size) !important;
+  color: var(--color-ink) !important;
+}
+
+/* Khối giải thích cách tính điểm (Phần 3b) */
+.calc-explanation-box {
+  background: #f8fafc !important;
+  border: 1px solid var(--color-line) !important;
+  border-radius: 10px !important;
+  padding: 14px 18px !important;
+  margin: 12px 0 16px 0 !important;
+}
+
+.calc-explanation-title {
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-cap2-size) !important;
+  font-weight: 750 !important;
+  color: var(--color-ink) !important;
+  margin-bottom: 8px !important;
+}
+
+.calc-explanation-list {
+  margin: 0 !important;
+  padding-left: 20px !important;
+}
+
+.calc-explanation-list li {
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-cap2-size) !important;
+  color: var(--color-ink-soft) !important;
+  line-height: 1.55 !important;
+  margin-bottom: 6px !important;
+}
+
+/* Khối cảnh báo nổi bật (Phần 4) */
+.prominent-disclaimer-box {
+  background: #fffbeb !important;
+  border: 1.5px solid #fde68a !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  margin-top: 14px !important;
+  margin-bottom: 6px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+}
+
+.prominent-disclaimer-icon {
+  font-size: 20px !important;
+  line-height: 1.3 !important;
+}
+
+.prominent-disclaimer-title {
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-cap2-size) !important;
+  font-weight: 750 !important;
+  color: #92400e !important;
+  margin-bottom: 4px !important;
+}
+
+.prominent-disclaimer-body {
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-cap2-size) !important;
+  color: #78350f !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+
+/* ========================================================= */
+/* LỘ TRÌNH HỌC (TAB 2) TYPOGRAPHY & LAYOUT                 */
+/* ========================================================= */
+
+/* Hộp giải thích thang mức độ thành thạo */
+.roadmap-guide-box {
+  background: #f0fdf4 !important;
+  border: 1.5px solid #bbf7d0 !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  margin: 10px 0 16px 0 !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-cap2-size, 1.02rem) !important;
+  color: #166534 !important;
+  line-height: 1.55 !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+}
+
+.roadmap-guide-box strong {
+  color: #14532d !important;
+}
+
+/* Badge hiển thị mức độ thành thạo kỹ năng */
+.roadmap-badge-container {
+  margin-bottom: 14px !important;
+}
+
+.roadmap-level-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 6px 14px !important;
+  border-radius: 8px !important;
+  background: #e0f2fe !important;
+  border: 1px solid #bae6fd !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: #0369a1 !important;
+}
+
+.roadmap-level-badge strong {
+  font-weight: 750 !important;
+  color: #0284c7 !important;
+}
+
+/* Link tài liệu học tập (Cấp 2) */
+.roadmap-resource-header {
+  margin-bottom: 6px !important;
+}
+
+.roadmap-resource-link {
+  font-family: var(--font-sans) !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: var(--color-plume-600, #0a7aff) !important;
+  text-decoration: none !important;
+  line-height: 1.5 !important;
+  display: inline-block !important;
+}
+
+.roadmap-resource-link:hover {
+  text-decoration: underline !important;
+  color: #0056b3 !important;
+}
+
+.roadmap-resource-title {
+  font-family: var(--font-sans) !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: var(--color-ink) !important;
+  line-height: 1.5 !important;
+}
+
+/* Danh sách gạch đầu dòng nguồn & mô tả dưới link (Cấp 3) */
+.roadmap-resource-bullets {
+  margin: 6px 0 14px 0 !important;
+  padding-left: 20px !important;
+  list-style-type: disc !important;
+}
+
+.roadmap-resource-bullets li {
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-cap3-size, 0.94rem) !important;
+  color: #334155 !important; /* Đạt chuẩn WCAG AA tương phản cao */
+  line-height: 1.55 !important;
+  margin-bottom: 6px !important;
+}
+
+/* Khối thực hành thêm (Cấp 2) */
+.roadmap-companion-box {
+  background: #f8fafc !important;
+  border-left: 3.5px solid var(--color-plume-500, #0a7aff) !important;
+  padding: 10px 14px !important;
+  margin: 10px 0 14px 0 !important;
+  border-radius: 4px 8px 8px 4px !important;
+  font-family: var(--font-sans) !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
+
+.roadmap-companion-label {
+  font-weight: 700 !important;
+  color: var(--color-ink) !important;
+}
+
+.roadmap-companion-link {
+  font-weight: 600 !important;
+  color: var(--color-plume-600, #0a7aff) !important;
+  text-decoration: underline !important;
+}
+
+/* Các bước thực hành (Cấp 2) */
+.roadmap-practice-title {
+  font-family: var(--font-sans) !important;
+  font-size: 1.05rem !important;
+  font-weight: 750 !important;
+  color: var(--color-ink) !important;
+  margin-top: 14px !important;
+  margin-bottom: 8px !important;
+}
+
+.roadmap-practice-list {
+  margin: 0 0 14px 0 !important;
+  padding-left: 22px !important;
+}
+
+.roadmap-practice-list li {
+  font-family: var(--font-sans) !important;
+  font-size: 1rem !important;
+  color: var(--color-ink) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 8px !important;
+}
+
+/* Khối đầu ra cần đạt (Cấp 3) */
+.roadmap-evidence-box {
+  background: #fffbeb !important;
+  border: 1px solid #fde68a !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  margin-top: 12px !important;
+  margin-bottom: 6px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-cap3-size, 0.94rem) !important;
+  color: #78350f !important;
+  line-height: 1.55 !important;
+}
+
+.roadmap-evidence-box strong {
+  color: #92400e !important;
+}
+
+
+/* ========================================================= */
+/* TAB 3: TÀI LIỆU NÊN HỌC — HỆ THỐNG CỠ CHỮ & BỐ CỤC */
+/* ========================================================= */
+
+/* Khối giới thiệu "Về học liệu" (Cấp 2) */
+.about-curriculum-intro {
+  margin: 4px 0 10px 0 !important;
+}
+
+.about-curriculum-bullets {
+  margin: 4px 0 12px 0 !important;
+  padding-left: 22px !important;
+  list-style-type: disc !important;
+}
+
+.about-curriculum-bullets li {
+  font-family: var(--font-sans) !important;
+  font-size: 1.02rem !important; /* Cấp 2 */
+  color: #1e293b !important;
+  line-height: 1.6 !important;
+  margin-bottom: 6px !important;
+}
+
+.about-curriculum-bullets strong {
+  color: var(--color-ink, #10213f) !important;
+  font-weight: 700 !important;
+}
+
+/* Link mở tài liệu trực tiếp (Cấp 2) */
+.resource-open-link-wrap {
+  margin: 4px 0 8px 0 !important;
+}
+
+.resource-open-link {
+  font-family: var(--font-sans) !important;
+  font-size: 1.05rem !important; /* Cấp 2 */
+  font-weight: 700 !important;
+  color: var(--color-plume-600, #0a7aff) !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.resource-open-link:hover {
+  text-decoration: underline !important;
+  color: #0056b3 !important;
+}
+
+/* Danh sách gạch đầu dòng thông tin nguồn & mô tả (Cấp 3) */
+.resource-details-bullets {
+  margin: 6px 0 12px 0 !important;
+  padding-left: 20px !important;
+  list-style-type: disc !important;
+}
+
+.resource-details-bullets li {
+  font-family: var(--font-sans) !important;
+  font-size: 0.95rem !important; /* Cấp 3 */
+  color: #334155 !important; /* Tương phản cao, đạt WCAG AA, không dùng xám nhạt */
+  line-height: 1.55 !important;
+  margin-bottom: 5px !important;
+}
+
+.resource-details-bullets strong {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+/* Khối bài thực hành kèm theo (Cấp 2 & Cấp 3) */
+.resource-companion-box {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-left: 4px solid var(--color-plume-500, #0a7aff) !important;
+  border-radius: 6px !important;
+  padding: 10px 14px !important;
+  margin: 10px 0 12px 0 !important;
+}
+
+.resource-companion-link-wrap {
+  margin-bottom: 6px !important;
+}
+
+.resource-companion-link {
+  font-family: var(--font-sans) !important;
+  font-size: 1.02rem !important; /* Cấp 2 */
+  font-weight: 700 !important;
+  color: var(--color-plume-600, #0a7aff) !important;
+  text-decoration: none !important;
+}
+
+.resource-companion-link:hover {
+  text-decoration: underline !important;
+  color: #0056b3 !important;
+}
+
+.resource-companion-bullets {
+  margin: 0 !important;
+  padding-left: 18px !important;
+  list-style-type: disc !important;
+}
+
+.resource-companion-bullets li {
+  font-family: var(--font-sans) !important;
+  font-size: 0.94rem !important; /* Cấp 3 */
+  color: #475569 !important;
+  line-height: 1.5 !important;
 }
