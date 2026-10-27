@@ -191,9 +191,9 @@ def test_get_reference_answer_rejects_duplicate_question_id(
 
 
 def test_real_question_data_has_answer_guidance_and_unique_ids() -> None:
-    data_dir = Path(interview._PROJECT_ROOT) / "Data" / "interview_question"
+    data_dir = Path(interview._PROJECT_ROOT) / "data" / "interview_questions"
     if not data_dir.is_dir():
-        data_dir = Path(interview._PROJECT_ROOT) / "Data" / "interview_questions"
+        data_dir = Path(interview._PROJECT_ROOT) / "data" / "interview_questions"
     if not data_dir.is_dir():
         pytest.skip("Không có thư mục dữ liệu câu hỏi trong workspace.")
     interview._clear_cache()

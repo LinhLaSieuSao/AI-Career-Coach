@@ -6,6 +6,7 @@ import base64
 import hashlib
 import json
 import re
+from html import escape
 from pathlib import Path
 from uuid import uuid4
 
@@ -34,20 +35,21 @@ from modules.matcher import (
     extract_jd_skill_requirements,
     role_recommendation_is_low_confidence,
 )
-from modules.interests import activity_label, load_interest_activities
+from modules.matcher import activity_label, load_interest_activities
 from modules.profile import build_profile, undo_profile_move
 from modules.skill_extractor import load_aliases, normalize_skill, suggest_skill_candidates
-from modules.submission import PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE, prepare_submission
+from modules.profile import PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE, prepare_submission
 from modules.export import export_report
-from modules.practice_guidance import get_partial_resource_assignment
-from modules.resource_policy import has_granular_level_evidence, resource_level_gap, resource_review_label, skill_scope_caution, summarize_resource_reviews
-from modules.evidence_presentation import resource_evidence_badge, role_domain_notice
+from modules.recommender import get_partial_resource_assignment
+from modules.recommender import has_granular_level_evidence, resource_level_gap, resource_review_label, skill_scope_caution, summarize_resource_reviews
+from modules.recommender import resource_evidence_badge, role_domain_notice
 
 
 PROJECT_DIR = Path(__file__).resolve().parent
 CAREERS_PATH = DATA_DIR / "roles.json"
 LOGO_PATH = PROJECT_DIR / "brand_assets" / "LogoAICC.jpg"
 STYLE_PATH = PROJECT_DIR / "assets" / "style.css"
+SITE_SCRIPT_PATH = PROJECT_DIR / "assets" / "site.js"
 DEMO_PROFILES_PATH = DATA_DIR / "demo_profiles.json"
 RESULT_TABS = ("Tóm tắt", "Khoảng cách", "Lộ trình", "Tài liệu", "Phỏng vấn")
 SKILL_NAMES_VI = {
@@ -64,6 +66,48 @@ SKILL_NAMES_VI = {
     "report building": "Xây dựng báo cáo",
 }
 MAX_INTERVIEW_QUESTIONS = 10
+FAQ_ITEMS = (
+    (
+        "Web này giúp được gì cho mình?",
+        "<p>Bạn nhập kỹ năng hoặc CV, rồi chọn vị trí muốn tìm hiểu. Web đối chiếu hồ sơ với yêu cầu nghề để chỉ ra <strong>kỹ năng đã có, kỹ năng còn thiếu</strong>, gợi ý lộ trình học, tài liệu tham khảo và câu hỏi luyện phỏng vấn. Danh mục hiện có 131 vị trí thuộc 15 nhóm ngành.</p>",
+    ),
+    (
+        "Dữ liệu và CV của mình có bị gửi đi đâu không?",
+        "<p>Khi bạn tải CV, trình duyệt gửi tệp tới <strong>máy chủ đang chạy ứng dụng Streamlit</strong> để đọc văn bản trong phiên sử dụng. Ứng dụng không ghi CV thành tệp dự án và không gọi ChatGPT, Gemini hay API AI bên ngoài để tính kết quả. Web không có tính năng lưu hoặc khôi phục hồ sơ; tải lại trang có thể làm mất dữ liệu phiên. Nếu bạn chủ động tải báo cáo về, tệp đó sẽ nằm trên thiết bị của bạn.</p>",
+    ),
+    (
+        "Điểm phần trăm có phải khả năng mình được nhận việc không?",
+        "<p><strong>Không.</strong> Phần trăm đối chiếu vị trí thể hiện mức trùng kỹ năng với yêu cầu nghề. Điểm gợi ý nghề còn kết hợp tín hiệu kỹ năng và sở thích theo quy tắc có sẵn. Các điểm này chỉ giúp bạn định hướng, <strong>không dự đoán kết quả tuyển dụng</strong> hay chứng nhận năng lực.</p>",
+    ),
+    (
+        "Mình cần chuẩn bị gì để bắt đầu?",
+        "<p>Chỉ cần <strong>ít nhất một kỹ năng</strong> (ví dụ Python, SQL hoặc giao tiếp), hoặc một CV có văn bản đọc được. Bạn có thể tải PDF/DOCX tối đa 10 MB hoặc dán nội dung CV; với PDF, web chỉ đọc 10 trang đầu. Sở thích, kinh nghiệm và mô tả công việc là thông tin bổ sung. Muốn thử nhanh, hãy chọn một hồ sơ mẫu tổng hợp.</p>",
+    ),
+    (
+        "Mình tải CV lên nhưng web không đọc được chữ nào?",
+        "<p>CV có thể là ảnh chụp hoặc PDF scan chưa có lớp văn bản; web chưa hỗ trợ đọc chữ trong ảnh. Hãy xuất lại CV từ trình soạn thảo thành PDF <strong>có thể bôi đen chữ</strong>, hoặc sao chép nội dung rồi dán vào ô <strong>“Dán nội dung CV”</strong>.</p>",
+    ),
+    (
+        "Vì sao phải rà soát kỹ năng ở Bước 2?",
+        "<p>Việc trích xuất từ CV có thể nhận nhầm một từ thành kỹ năng. Ở Bước 2, bạn kiểm tra kỹ năng nào đúng, bỏ kỹ năng không thuộc về mình và tự chọn mức độ nếu biết. Web <strong>không tự suy ra trình độ</strong> từ số năm kinh nghiệm hoặc độ dài CV.</p>",
+    ),
+    (
+        "Các mức độ 0, 1, 2, 3 nghĩa là gì?",
+        "<dl class='faq-levels'><div><dt>0 · Chưa biết</dt><dd>Chưa học hoặc chưa nắm được kỹ năng.</dd></div><div><dt>1 · Cơ bản</dt><dd>Hiểu khái niệm, làm việc đơn giản khi có hướng dẫn.</dd></div><div><dt>2 · Độc lập</dt><dd>Tự làm các tác vụ quen thuộc.</dd></div><div><dt>3 · Nâng cao</dt><dd>Xử lý việc phức tạp, có thể hướng dẫn người khác.</dd></div></dl><p>Nếu chưa khai báo Level, chế độ <strong>“Theo kỹ năng đã có”</strong> chỉ xét có hay chưa có. Ở chế độ <strong>“Theo level tự khai báo”</strong>, kỹ năng chưa khai báo được tính là mức 0 <em>chỉ khi bạn xác nhận đồng ý</em>; đây không phải kết luận về năng lực thật.</p>",
+    ),
+    (
+        "Vì sao mình có đúng sở thích mà điểm gợi ý nghề vẫn thấp?",
+        "<p>Điểm gợi ý dựa chủ yếu vào <strong>mức khớp kỹ năng có trọng số</strong> (75%), cùng với sở thích (25%). Khi mức khớp kỹ năng dưới ngưỡng 15%, điểm gợi ý bị giới hạn tối đa 5/100. Điều này nhắc bạn cần xây thêm nền tảng kỹ năng, <strong>không kết luận bạn không hợp nghề</strong>.</p>",
+    ),
+    (
+        "Vì sao có kỹ năng chưa có tài liệu hoặc không có link khóa học?",
+        "<p>Web chỉ đề xuất tài liệu đáp ứng tiêu chí kiểm tra nguồn, nội dung và mức độ phù hợp. Khi chưa đủ căn cứ, web báo <strong>“Chưa có tài liệu được xác minh”</strong> thay vì gợi ý bừa. Với kỹ năng mềm, web ưu tiên bài tập thực hành, tình huống và gợi ý tự đánh giá; không mặc định rằng xem một khóa học là đủ để thành thạo.</p>",
+    ),
+    (
+        "Luyện phỏng vấn có chấm điểm câu trả lời của mình không?",
+        "<p><strong>Không.</strong> Sau khi bạn gửi câu trả lời, web hiện khung trả lời tham khảo, những ý nên cân nhắc và checklist để bạn tự đối chiếu. Web không phân tích nội dung vừa nhập và không chấm điểm câu trả lời. Nhãn <strong>“AI hỗ trợ rà soát nội bộ”</strong> nói về trạng thái rà soát nội dung câu hỏi/khung tham khảo; đó không phải đánh giá của chuyên gia độc lập.</p>",
+    ),
+)
 
 
 @st.cache_data(max_entries=1)
@@ -83,8 +127,31 @@ def load_demo_profiles() -> list[dict]:
     with DEMO_PROFILES_PATH.open(encoding="utf-8") as source:
         demos = json.load(source)
     if not isinstance(demos, list) or any(not item.get("synthetic") for item in demos):
-        raise ValueError("Data/demo_profiles.json must contain explicitly synthetic profiles.")
+        raise ValueError("data/demo_profiles.json must contain explicitly synthetic profiles.")
     return demos
+
+
+@st.cache_data(max_entries=1)
+def load_role_taxonomy() -> dict[str, list[dict]]:
+    """Group positions by their RIASEC career family taxonomy."""
+    rf_path = DATA_DIR / "role_families_riasec.json"
+    with rf_path.open(encoding="utf-8") as source:
+        rf = json.load(source)
+    positions = load_positions()
+    taxonomy: dict[str, list[dict]] = {}
+    for fam in rf.get("families", []):
+        f_label = fam["label"]
+        assigned = []
+        for rid in fam.get("role_ids", []):
+            r_obj = next((r for r in positions if r["id"] == rid), None)
+            if r_obj and r_obj not in assigned:
+                assigned.append(r_obj)
+        for prefix in fam.get("role_prefixes", []):
+            for r in positions:
+                if r["id"].startswith(prefix) and r not in assigned:
+                    assigned.append(r)
+        taxonomy[f_label] = sorted(assigned, key=lambda x: x["name_vi"].casefold())
+    return taxonomy
 
 
 def format_role(position: dict) -> str:
@@ -103,7 +170,7 @@ def logo_data_uri() -> str:
     fallback_svg = (
         '<svg xmlns="http://www.w3.org/2000/svg" width="96" height="72" '
         'viewBox="0 0 96 72"><rect width="96" height="72" rx="18" '
-        'fill="#1556A8"/><text x="48" y="48" text-anchor="middle" '
+        'fill="#1B7A66"/><text x="48" y="48" text-anchor="middle" '
         'font-family="Arial,sans-serif" font-size="34" font-weight="700" '
         'fill="#fff">AI</text></svg>'
     )
@@ -143,68 +210,361 @@ def inject_styles() -> None:
     st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
 
+def inject_site_script() -> None:
+    script = SITE_SCRIPT_PATH.read_text(encoding="utf-8")
+    st.html(f"<script>{script}</script>", unsafe_allow_javascript=True)
+
+
 def render_landing_page() -> None:
     logo = logo_data_uri()
     st.markdown(
         f"""
-        <div class="hero-wrap" id="top">
-          <div class="topbar">
-            <a class="brand" href="#top"><img src="{logo}" alt="Biểu trưng AI Career Coach"><span class="brand-word">AI CAREER COACH<span>CÔNG CỤ ĐỊNH HƯỚNG</span></span></a>
-            <nav class="nav-links"><a href="#why">Về công cụ</a><a href="#how">Cách hoạt động</a><a class="nav-cta" href="#career-toolkit">Bắt đầu ngay&nbsp; →</a></nav>
+        <header class="topbar-sticky" id="sticky-header">
+          <div class="topbar-inner">
+            <a class="brand" href="#top">
+              <img src="{logo}" alt="Biểu trưng AI Career Coach">
+              <span class="brand-word">AI CAREER COACH<span>ĐỊNH HƯỚNG NGHỀ NGHIỆP</span></span>
+            </a>
+            <nav aria-label="Điều hướng chính" class="desktop-nav">
+              <a href="#why">Tính năng</a>
+              <a href="#how">Cách hoạt động</a>
+              <a href="#career-toolkit">Hồ sơ nghề nghiệp</a>
+              <a href="#contact">Liên hệ</a>
+            </nav>
+            <div class="topbar-actions">
+              <a class="nav-cta" href="#career-toolkit">Bắt đầu ngay <span aria-hidden="true">↗</span></a>
+              <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mobile-navigation">
+                <svg class="menu-open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                <svg class="menu-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg>
+              </button>
+            </div>
           </div>
+          <nav id="mobile-navigation" class="mobile-nav" aria-label="Điều hướng trên điện thoại" hidden>
+            <div class="mobile-nav-links">
+              <a href="#why">Tính năng <span aria-hidden="true">↗</span></a>
+              <a href="#how">Cách hoạt động <span aria-hidden="true">↗</span></a>
+              <a href="#career-toolkit">Hồ sơ nghề nghiệp <span aria-hidden="true">↗</span></a>
+              <a href="#contact">Liên hệ <span aria-hidden="true">↗</span></a>
+            </div>
+            <a class="mobile-nav-cta" href="#career-toolkit">Bắt đầu với hồ sơ của bạn <span aria-hidden="true">→</span></a>
+          </nav>
+        </header>
+        <div class="hero-wrap beams-surface" id="top">
           <div class="hero">
             <div>
-              <div class="eyebrow">Công cụ định hướng nghề nghiệp</div>
-              <h1>Tự tin chọn <em>con đường sự nghiệp</em> của bạn.</h1>
-              <div class="hero-copy">Tổng hợp kỹ năng, đối chiếu với yêu cầu nghề nghiệp và biến mục tiêu thành các bước học tập có căn cứ.</div>
-              <div class="hero-actions"><a class="button-primary" href="#career-toolkit">Khám phá hồ sơ nghề nghiệp&nbsp; →</a><a class="text-link" href="#why">Xem cách hoạt động <span>↓</span></a></div>
-              <div class="social-proof"><span>Ứng dụng mã nguồn mở · xử lý bằng quy tắc có thể kiểm tra</span></div>
-            </div>
-            <div class="hero-art" aria-label="Minh họa hồ sơ nghề nghiệp">
-              <div class="orbit"></div>
-              <div class="career-card"><div class="card-kicker"><span>Minh họa tổng hợp</span><span class="live">DỮ LIỆU VÍ DỤ</span></div><div class="role-row"><div class="role-icon">✳</div><div><div class="role-title">Phân tích dữ liệu</div><div class="role-sub">Ví dụ kỹ năng, không phải kết quả người dùng</div></div></div><div class="skills"><span class="skill">Python</span><span class="skill">Phân tích dữ liệu</span><span class="skill">SQL</span></div></div>
-              <div class="floating float-top"><strong><span class="spark">✦</span>Lộ trình của bạn</strong>Từng bước nhỏ, tiến xa hơn</div>
-              <div class="floating float-bottom"><strong>Học tập có định hướng</strong>Kỹ năng · Tài liệu · Luyện tập</div>
+              <h1>Đi xa hơn với một <em>lộ trình nghề nghiệp rõ ràng.</em></h1>
+              <div class="hero-copy">Khám phá điểm mạnh từ kỹ năng và CV, đối chiếu với vị trí bạn quan tâm, rồi chọn từng bước học tập phù hợp với mục tiêu của mình.</div>
+              <div class="hero-actions"><a class="button-primary" href="#career-toolkit">Tạo hồ sơ nghề nghiệp&nbsp; →</a><a class="text-link" href="#how">Xem cách hoạt động <span>↓</span></a></div>
             </div>
           </div>
         </div>
-        <section class="section" id="why"><div class="section-heading"><div class="eyebrow">Biến mục tiêu thành hành động</div><h2>Rõ hướng đi, vững bước tiến</h2><p>Hành trình sự nghiệp sẽ dễ dàng hơn khi bạn hiểu mình đang ở đâu, nên tập trung vào điều gì tiếp theo và có thể tìm sự hỗ trợ ở đâu. Hãy bắt đầu từ những gì bạn đã có.</p></div>
+        <section class="section feature-section" id="why">
+          <div class="section-heading"><h2>Rõ hướng đi, vững bước tiến</h2></div>
           <div class="feature-grid">
-            <article class="feature"><div class="feature-icon">⌕</div><h3>Nhận diện thế mạnh</h3><p>Tổng hợp kỹ năng, sở thích và kinh nghiệm để hiểu rõ những giá trị bạn có thể mang đến.</p></article>
-            <article class="feature"><div class="feature-icon">◎</div><h3>Tìm công việc phù hợp</h3><p>Đối chiếu kỹ năng hiện tại với vị trí bạn quan tâm và khám phá những cơ hội phía trước.</p></article>
-            <article class="feature"><div class="feature-icon">↗</div><h3>Bổ sung kỹ năng cần thiết</h3><p>Xác định năng lực nên trau dồi tiếp theo để việc học có mục tiêu và định hướng rõ ràng.</p></article>
-            <article class="feature"><div class="feature-icon">▤</div><h3>Lập lộ trình học tập</h3><p>Tìm khóa học và tài liệu phù hợp để biến mục tiêu nghề nghiệp thành tiến bộ mỗi ngày.</p></article>
-            <article class="feature"><div class="feature-icon">✧</div><h3>Luyện phỏng vấn tự tin</h3><p>Thực hành với các câu hỏi phỏng vấn gắn với vị trí bạn đang hướng đến.</p></article>
-            <article class="feature"><div class="feature-icon">♡</div><h3>Tự học theo định hướng</h3><p>Tham khảo tài liệu, ghi nhận gap và luyện tập theo mục tiêu cá nhân.</p></article>
+            <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0M3 7V4h3m12 0h3v3M3 17v3h3m12 0h3v-3"/></svg></div><h3><span>Nhận diện thế mạnh</span></h3><p>Tổng hợp kỹ năng và kinh nghiệm để thấy rõ điểm mạnh hiện có.</p></article>
+            <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div><h3><span>Đối chiếu vị trí</span></h3><p>So sánh hồ sơ với yêu cầu của nghề bạn đang quan tâm.</p></article>
+            <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 10-13h-7l0-7Z"/></svg></div><h3><span>Hiểu khoảng cách kỹ năng</span></h3><p>Nhìn ra năng lực cần bổ sung để tập trung học đúng việc.</p></article>
+            <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="18" r="2"/><circle cx="18" cy="5" r="2"/><path d="M7 18h7a4 4 0 0 0 0-8h-4a4 4 0 0 1 0-8h6"/></svg></div><h3><span>Lập lộ trình học tập</span></h3><p>Chọn từng bước học phù hợp với mục tiêu nghề nghiệp.</p></article>
+            <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5c3-1.5 6-1.5 9 0 3-1.5 6-1.5 9 0V19c-3-1.5-6-1.5-9 0-3-1.5-6-1.5-9 0V5.5ZM12 5.5V19"/></svg></div><h3><span>Tài liệu tham khảo</span></h3><p>Khám phá nguồn học tập gắn với kỹ năng cần phát triển.</p></article>
+            <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5ZM8 9h8M8 12h5"/></svg></div><h3><span>Luyện phỏng vấn</span></h3><p>Thực hành câu hỏi theo vị trí bạn đang hướng đến.</p></article>
+            <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h8l4 4v16H6V2ZM14 2v5h5M9 11h6M9 15h6M9 19h4"/></svg></div><h3><span>Rà soát CV</span></h3><p>Dùng thông tin từ CV làm điểm khởi đầu cho hồ sơ kỹ năng.</p></article>
+            <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 16V9m5 7V5m5 11v-4m4 4V8"/></svg></div><h3><span>Chủ động quyết định</span></h3><p>Xem rõ cơ sở gợi ý rồi tự chọn hướng đi phù hợp.</p></article>
           </div>
         </section>
-        <section class="path-section" id="how"><div class="path-inner"><div class="path-copy"><div class="eyebrow">Bắt đầu thật đơn giản</div><h2>Chủ động cho bước tiến tiếp theo.</h2><p>Bạn không cần phải có sẵn mọi câu trả lời. Một chút rõ ràng có thể biến câu hỏi lớn về nghề nghiệp thành vài việc cụ thể để bắt đầu.</p><div class="path-list"><div class="path-item"><span class="check">✓</span>Bắt đầu từ kỹ năng và kinh nghiệm bạn đang có</div><div class="path-item"><span class="check">✓</span>Chọn vị trí hoặc hướng đi bạn quan tâm</div><div class="path-item"><span class="check">✓</span>Nhận gợi ý học tập và luyện tập thiết thực</div></div></div>
-          <div class="steps"><article class="step"><div class="step-num">01</div><div><h3>Tạo hồ sơ cá nhân</h3><p>Nhập kỹ năng, sở thích, kinh nghiệm hoặc tải CV để bắt đầu.</p></div></article><article class="step"><div class="step-num">02</div><div><h3>Khám phá mức độ phù hợp</h3><p>Tìm hiểu yêu cầu của vị trí mục tiêu và xác định kỹ năng cần phát triển.</p></div></article><article class="step"><div class="step-num">03</div><div><h3>Tự tin tiến thêm một bước</h3><p>Nhận gợi ý học tập và câu hỏi phỏng vấn phù hợp với định hướng của bạn.</p></div></article></div>
-          </div></section>
+        <section class="path-section beams-surface" id="how">
+          <div class="how-inner">
+            <h2>Cách hoạt động</h2>
+            <div class="how-wizard" id="how-steps" data-step="1" style="--how-progress: 0%">
+              <div class="how-progress-row">
+                <span class="how-step-label" aria-live="polite">Bước 1 / 3</span>
+                <div class="how-progress" role="progressbar" aria-label="Tiến trình cách hoạt động" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1" aria-valuetext="Bước 1 trên 3">
+                  <span class="how-progress-dot is-current" aria-hidden="true"></span>
+                  <span class="how-progress-dot" aria-hidden="true"></span>
+                  <span class="how-progress-dot" aria-hidden="true"></span>
+                </div>
+              </div>
+              <div class="how-panels">
+                <article class="how-panel" data-step-panel="1">
+                  <span class="how-panel-number">01</span>
+                  <h3 tabindex="-1">Tạo hoặc nạp hồ sơ</h3>
+                  <p class="how-lead">Bắt đầu tại mục Hồ sơ nghề nghiệp ngay dưới phần hướng dẫn.</p>
+                  <ol class="how-detail-list">
+                    <li><span class="how-detail-index" aria-hidden="true">1</span><div><strong>Thử nhanh hoặc nhập thông tin của bạn</strong><p>Chọn một hồ sơ mẫu, hoặc tự nhập kỹ năng, sở thích và kinh nghiệm.</p></div></li>
+                    <li><span class="how-detail-index" aria-hidden="true">2</span><div><strong>Chuẩn bị thông tin bắt buộc</strong><p>Nếu tự nhập, cần ít nhất một kỹ năng, ví dụ “Python, SQL” (cách nhau bằng dấu phẩy), hoặc tải CV PDF/DOCX. JD và các mục còn lại là tùy chọn.</p></div></li>
+                    <li><span class="how-detail-index" aria-hidden="true">3</span><div><strong>Chuyển sang rà soát</strong><p>Nhấn “Tiếp tục rà soát hồ sơ” ở cuối biểu mẫu.</p></div></li>
+                  </ol>
+                  <p class="how-outcome"><strong>Sau bước này</strong> Bạn sẽ thấy những kỹ năng cần kiểm tra trước khi tạo kết quả.</p>
+                </article>
+                <article class="how-panel" data-step-panel="2" hidden>
+                  <span class="how-panel-number">02</span>
+                  <h3 tabindex="-1">Rà soát và chọn vị trí</h3>
+                  <p class="how-lead">Hãy chắc rằng hồ sơ phản ánh đúng kỹ năng bạn có.</p>
+                  <ol class="how-detail-list">
+                    <li><span class="how-detail-index" aria-hidden="true">1</span><div><strong>Kiểm tra kỹ năng nhận diện</strong><p>Bỏ chọn mục không đúng; thêm hoặc sửa tên kỹ năng nếu còn thiếu.</p></div></li>
+                    <li><span class="how-detail-index" aria-hidden="true">2</span><div><strong>Tự khai báo Level nếu bạn biết</strong><p>Chọn mức cho từng kỹ năng, hoặc để “Chưa khai báo”. Web không tự suy Level từ CV.</p></div></li>
+                    <li><span class="how-detail-index" aria-hidden="true">3</span><div><strong>Xác nhận và chọn nghề mục tiêu</strong><p>Nhấn “Xác nhận hồ sơ và xem kết quả”. Nếu chưa chọn vị trí trong biểu mẫu, hãy chọn ở mục gợi ý của tab “Tóm tắt”.</p></div></li>
+                  </ol>
+                  <p class="how-outcome"><strong>Sau bước này</strong> Hồ sơ đã xác nhận sẽ được dùng để đối chiếu với vị trí bạn chọn.</p>
+                </article>
+                <article class="how-panel" data-step-panel="3" hidden>
+                  <span class="how-panel-number">03</span>
+                  <h3 tabindex="-1">Đọc kết quả và lập kế hoạch</h3>
+                  <p class="how-lead">Dùng các tab kết quả để chọn việc cần làm tiếp theo.</p>
+                  <ol class="how-detail-list">
+                    <li><span class="how-detail-index" aria-hidden="true">1</span><div><strong>Đọc “Tóm tắt” và “Khoảng cách”</strong><p>Xem kỹ năng đã lưu, kỹ năng khớp và kỹ năng còn thiếu của vị trí mục tiêu.</p></div></li>
+                    <li><span class="how-detail-index" aria-hidden="true">2</span><div><strong>Mở “Lộ trình” và “Tài liệu”</strong><p>Tham khảo thứ tự học, nguồn học liệu và những phần chưa đủ dữ liệu để đề xuất.</p></div></li>
+                    <li><span class="how-detail-index" aria-hidden="true">3</span><div><strong>Luyện tập và lưu lại</strong><p>Vào tab “Phỏng vấn” để tự luyện. Tải báo cáo Markdown, CSV hoặc JSON ở tab “Tài liệu” nếu muốn giữ kết quả.</p></div></li>
+                  </ol>
+                  <p class="how-outcome"><strong>Ghi nhớ</strong> Điểm đối chiếu là mức bao phủ kỹ năng, không phải xác suất tuyển dụng.</p>
+                </article>
+              </div>
+              <div class="how-actions">
+                <button class="how-back" type="button" hidden>← Quay lại</button>
+                <button class="how-next" type="button" disabled>Tiếp tục <span aria-hidden="true">→</span></button>
+                <a class="how-finish" href="#career-toolkit" hidden>Tạo hồ sơ ngay <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
         """,
         unsafe_allow_html=True,
+    )
+    st.html(
+        """<script>
+        (() => {
+          if (window.__careerHeaderCleanup) window.__careerHeaderCleanup();
+          const observer = new MutationObserver(() => {
+            if (bindHeader()) observer.disconnect();
+          });
+          const bindHeader = () => {
+            const header = document.getElementById('sticky-header');
+            const toggle = header?.querySelector('.menu-toggle');
+            const menu = document.getElementById('mobile-navigation');
+            const scrollHost = document.querySelector('main[data-testid="stMain"]');
+            if (!header || !toggle || !menu || !scrollHost) return false;
+            const controller = new AbortController();
+            const signal = controller.signal;
+            const setOpen = (open) => {
+              toggle.setAttribute('aria-expanded', String(open));
+              toggle.setAttribute('aria-label', open ? 'Đóng menu' : 'Mở menu');
+              menu.hidden = !open;
+              header.classList.toggle('menu-open', open);
+              document.body.classList.toggle('career-menu-open', open);
+            };
+            const updateScroll = () => header.classList.toggle('is-scrolled', scrollHost.scrollTop > 10);
+            toggle.addEventListener('click', () => setOpen(menu.hidden), {signal});
+            menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false), {signal}));
+            document.addEventListener('keydown', event => {
+              if (event.key === 'Escape' && !menu.hidden) {
+                setOpen(false);
+                toggle.focus();
+              }
+            }, {signal});
+            window.addEventListener('resize', () => {
+              if (window.innerWidth >= 768 && !menu.hidden) setOpen(false);
+            }, {signal});
+            scrollHost.addEventListener('scroll', updateScroll, {signal, passive: true});
+            updateScroll();
+            window.__careerHeaderCleanup = () => {
+              controller.abort();
+              document.body.classList.remove('career-menu-open');
+            };
+            return true;
+          };
+          window.__careerHeaderCleanup = () => observer.disconnect();
+          if (!bindHeader()) observer.observe(document.body, {childList: true, subtree: true});
+        })();
+        </script>""",
+        unsafe_allow_javascript=True,
     )
 
 
 def render_closing_sections() -> None:
+    logo = logo_data_uri()
+    faq_markup = "\n".join(
+        f'<article class="faq-item{" is-open" if index == 1 else ""}" data-faq-id="{index}">'
+        f'<div class="faq-item-heading"><button class="faq-trigger" type="button" id="faq-trigger-{index}" '
+        f'aria-controls="faq-panel-{index}" aria-expanded="{"true" if index == 1 else "false"}">'
+        f'<span class="faq-question">{escape(question)}</span>'
+        f'<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+        f'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+        f'<path d="m6 9 6 6 6-6"/></svg></button></div>'
+        f'<div class="faq-panel" id="faq-panel-{index}" role="region" '
+        f'aria-labelledby="faq-trigger-{index}" aria-hidden="{"false" if index == 1 else "true"}"'
+        f'{"" if index == 1 else " inert"}><div class="faq-panel-inner">'
+        f'<div class="faq-answer">{answer}</div></div></div></article>'
+        for index, (question, answer) in enumerate(FAQ_ITEMS, 1)
+    )
     st.markdown(
-        """
-        <section class="community"><div class="community-box"><div class="eyebrow">Bắt đầu với dữ liệu của bạn</div><h2>Mỗi gợi ý đều có thể xem lại.</h2><p>Điểm đối chiếu, khoảng cách và tài liệu tham khảo được trình bày riêng để bạn tự đánh giá và chọn bước tiếp theo.</p><a class="button-light" href="#career-toolkit">Tạo hồ sơ nghề nghiệp&nbsp; →</a></div></section>
-        <div class="footer"><span><b>AI Career Coach</b> &nbsp;·&nbsp; Ứng dụng mã nguồn mở.</span><span>Điểm heuristic không phải xác suất tuyển dụng.</span></div>
+        f"""
+        <section class="faq-section" id="faq" aria-labelledby="faq-title">
+          <div class="faq-inner">
+            <div class="faq-intro">
+              <h2 id="faq-title">Câu hỏi thường gặp</h2>
+              <p>Những điều cần biết trước khi bắt đầu khám phá nghề nghiệp cùng AI Career Coach.</p>
+            </div>
+            <div class="faq-content">
+              <div class="faq-search">
+                <svg class="faq-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>
+                <input class="faq-search-input" type="search" placeholder="Tìm câu hỏi hoặc từ khóa..." aria-label="Tìm trong câu hỏi thường gặp" aria-controls="faq-list" autocomplete="off">
+                <button class="faq-search-clear" type="button" aria-label="Xóa từ khóa tìm kiếm" hidden>×</button>
+              </div>
+              <span class="faq-search-status" role="status" aria-live="polite"></span>
+              <div class="faq-list" id="faq-list">{faq_markup}</div>
+              <p class="faq-empty" hidden>Không tìm thấy câu hỏi phù hợp. Hãy thử từ khóa khác.</p>
+            </div>
+          </div>
+        </section>
+        <footer class="site-footer" id="contact">
+          <div class="site-footer-inner">
+            <div class="site-footer-intro">
+              <a class="site-footer-brand" href="#top" aria-label="AI Career Coach — về đầu trang">
+                <img src="{logo}" alt="">
+                <span>AI CAREER COACH</span>
+              </a>
+              <p>Từng bước rõ ràng hơn trên hành trình nghề nghiệp của bạn.</p>
+            </div>
+            <nav class="site-footer-nav" aria-label="Điều hướng cuối trang">
+              <div class="site-footer-column">
+                <h3>Khám phá</h3>
+                <a href="#why">Tính năng</a>
+                <a href="#how">Cách hoạt động</a>
+                <a href="#career-toolkit">Hồ sơ nghề nghiệp</a>
+                <a href="#faq">Câu hỏi thường gặp</a>
+              </div>
+              <div class="site-footer-column">
+                <h3>Dự án</h3>
+                <a href="https://github.com/LinhLaSieuSao/AI-Career-Coach" target="_blank" rel="noopener noreferrer">Mã nguồn <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/LinhLaSieuSao/AI-Career-Coach/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Đóng góp <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/LinhLaSieuSao/AI-Career-Coach/issues" target="_blank" rel="noopener noreferrer">Báo lỗi <span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="site-footer-column site-footer-contact">
+                <h3>Liên hệ nhóm phát triển</h3>
+                <p>Có câu hỏi hoặc ý tưởng? Hãy trao đổi cùng nhóm qua GitHub.</p>
+                <a class="site-footer-contact-link" href="https://github.com/LinhLaSieuSao/AI-Career-Coach/discussions" target="_blank" rel="noopener noreferrer">Mở Discussions <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/LinhLaSieuSao/AI-Career-Coach/issues" target="_blank" rel="noopener noreferrer">Gửi phản hồi <span aria-hidden="true">↗</span></a>
+              </div>
+            </nav>
+          </div>
+          <div class="site-footer-bottom">
+            <span>AI Career Coach · Dự án mã nguồn mở</span>
+            <span>Điểm heuristic phản ánh mức độ bao phủ kỹ năng, không phải xác suất tuyển dụng.</span>
+          </div>
+        </footer>
         """,
         unsafe_allow_html=True,
     )
 
 
+@st.dialog("Chọn Nhóm nghề, Nghề hoặc Chuyên môn", width="large")
+def open_role_taxonomy_dialog(positions: list[dict], role_by_id: dict[str, dict], taxonomy: dict[str, list[dict]]) -> None:
+    search_kw = st.text_input(
+        "Nhập từ khóa tìm kiếm",
+        placeholder="🔍 Nhập từ khóa tìm kiếm chuyên môn (VD: data, sales, kế toán, java, marketing, tester...)",
+        key="dlg_taxonomy_search",
+        label_visibility="collapsed",
+    )
+
+    current_role_id = st.session_state.get("career_role_picker")
+
+    if search_kw.strip():
+        kw = search_kw.strip().casefold()
+        matching_roles = [
+            r for r in positions
+            if kw in r["name_vi"].casefold()
+            or kw in r["name"].casefold()
+            or any(kw in s["name"].casefold() for s in r["skills"])
+        ]
+        st.markdown(f"**Kết quả tìm kiếm:** {len(matching_roles)} vị trí chuyên môn phù hợp")
+        if matching_roles:
+            c1, c2 = st.columns(2)
+            for idx, r in enumerate(matching_roles):
+                is_sel = (r["id"] == current_role_id)
+                btn_label = f"✓ {r['name_vi']}" if is_sel else r["name_vi"]
+                btn_type = "primary" if is_sel else "secondary"
+                target_col = c1 if idx % 2 == 0 else c2
+                if target_col.button(btn_label, key=f"dlg_search_role_{r['id']}", type=btn_type, use_container_width=True):
+                    st.session_state["career_role_picker"] = r["id"]
+                    st.rerun()
+        else:
+            st.info("Không tìm thấy vị trí nào phù hợp với từ khóa.")
+    else:
+        col_left, col_right = st.columns([1.1, 2.2])
+        family_names = list(taxonomy.keys())
+        family_icons = {
+            "Phát triển phần mềm": "💻",
+            "Kiểm thử và đảm bảo chất lượng": "🧪",
+            "Phân tích dữ liệu": "📊",
+            "Dữ liệu, AI và nền tảng dữ liệu": "🤖",
+            "Hạ tầng, cloud và an ninh mạng": "☁️",
+            "Sản phẩm, dự án và phân tích nghiệp vụ": "📋",
+            "Thiết kế và nghiên cứu trải nghiệm": "🎨",
+            "Marketing, nội dung và truyền thông": "📢",
+            "Kinh doanh và chăm sóc khách hàng": "🤝",
+            "Tài chính và kế toán": "💰",
+            "Nhân sự, pháp lý và tuân thủ": "⚖️",
+            "Logistics và chuỗi cung ứng": "🚚",
+            "Kỹ thuật và sản xuất": "⚙️",
+            "Xây dựng, kiến trúc và an toàn": "🏗️",
+            "Y tế, giáo dục và dịch vụ": "🏥",
+        }
+
+        default_idx = 0
+        if current_role_id:
+            for idx, (f_name, r_list) in enumerate(taxonomy.items()):
+                if any(r["id"] == current_role_id for r in r_list):
+                    default_idx = idx
+                    break
+
+        with col_left:
+            st.markdown("**NHÓM NGHỀ**")
+            selected_family = st.radio(
+                "Nhóm nghề",
+                options=family_names,
+                index=default_idx,
+                format_func=lambda name: f"{family_icons.get(name, '📁')} {name}",
+                key="dlg_selected_family_radio",
+                label_visibility="collapsed",
+            )
+
+        with col_right:
+            roles_in_group = taxonomy.get(selected_family, [])
+            st.markdown(f"**VỊ TRÍ CHUYÊN MÔN · {selected_family}** ({len(roles_in_group)} vị trí)")
+            st.caption("Bấm chọn đúng 1 vị trí chuyên môn (bấm để áp dụng ngay):")
+
+            col_p1, col_p2 = st.columns(2)
+            for idx, r in enumerate(roles_in_group):
+                is_sel = (r["id"] == current_role_id)
+                btn_label = f"✓ {r['name_vi']}" if is_sel else r["name_vi"]
+                btn_type = "primary" if is_sel else "secondary"
+                target_p = col_p1 if idx % 2 == 0 else col_p2
+                if target_p.button(
+                    btn_label,
+                    key=f"dlg_pill_role_{r['id']}",
+                    type=btn_type,
+                    use_container_width=True,
+                ):
+                    st.session_state["career_role_picker"] = r["id"]
+                    st.rerun()
+
+    c_foot_l, c_foot_r = st.columns([3, 1])
+    with c_foot_l:
+        if current_role_id and current_role_id in role_by_id:
+            st.markdown(f"Đã chọn: <b style='color:var(--color-plume-600);'>{format_role(role_by_id[current_role_id])}</b>", unsafe_allow_html=True)
+    with c_foot_r:
+        if st.button("Đóng hộp thoại", key="dlg_close_btn", use_container_width=True):
+            st.rerun()
+
+
 def render_toolkit() -> None:
     st.markdown(
-        '<div class="tool-title" id="career-toolkit"><div class="eyebrow">Bắt đầu với bước tiếp theo</div><h2>Hồ sơ nghề nghiệp</h2><p>Chia sẻ một chút về bản thân để khám phá mức độ phù hợp với công việc, tài liệu học tập và nội dung luyện phỏng vấn.</p></div>',
+        '<div class="tool-title" id="career-toolkit"><h2>Hồ sơ nghề nghiệp</h2></div>',
         unsafe_allow_html=True,
     )
     positions = load_positions()
     role_by_id = {position["id"]: position for position in positions}
     if not role_by_id:
-        st.error("Chưa có dữ liệu vị trí nghề nghiệp trong Data/roles.json.")
+        st.error("Chưa có dữ liệu vị trí nghề nghiệp trong data/roles.json.")
         return
 
     pending_demo = st.session_state.pop("pending_demo_profile_id", None)
@@ -236,20 +596,12 @@ def render_toolkit() -> None:
         st.session_state["career_role_picker"] = pending_role
 
     if st.session_state.get("profile_step", 1) == 1:
-        with st.container(border=True):
-            st.subheader("Dùng hồ sơ mẫu tổng hợp")
-            st.caption("Ví dụ dùng role/skill thật trong catalog; không đại diện người thật, kinh nghiệm thật hay kết quả tuyển dụng.")
-            cols = st.columns(3)
-            for col, demo in zip(cols, load_demo_profiles()):
-                col.button(
-                    f"Dùng hồ sơ mẫu · {demo['label']}",
-                    key=f"use_demo_{demo['id']}",
-                    on_click=lambda demo_id=demo["id"]: st.session_state.update({"pending_demo_profile_id": demo_id}),
-                )
-
-        st.markdown("### Bước 1/2 · Tạo hoặc nạp hồ sơ")
-        st.caption("Bắt đầu: cần ít nhất kỹ năng hoặc tệp CV hợp lệ (*). Sở thích và kinh nghiệm là thông tin bổ trợ giúp định hướng sâu hơn. JD là tùy chọn.")
-        with st.form("profile_form"):
+        taxonomy = load_role_taxonomy()
+        current_role_id = st.session_state.get("career_role_picker")
+        current_role_obj = role_by_id.get(current_role_id) if current_role_id else None
+        selected_role_id = current_role_id
+        with st.container(border=True, key="profile_entry_panel"):
+            st.markdown("### Bước 1/2 · Tạo hoặc nạp hồ sơ")
             skills_text = st.text_area("Kỹ năng bạn muốn đưa vào hồ sơ (*)", placeholder="Python, SQL, phân tích dữ liệu", key="skills_input")
             st.caption("Ngăn cách các kỹ năng bằng dấu phẩy, dấu chấm phẩy hoặc xuống dòng.")
             interests_text = st.text_area("Sở thích nghề nghiệp", placeholder="Phân tích dữ liệu, thiết kế sản phẩm", key="interests_input")
@@ -268,18 +620,53 @@ def render_toolkit() -> None:
                 height=160,
                 key="pasted_cv_input",
             )
-            selected_role_id = st.selectbox(
-                "Vị trí công việc bạn quan tâm", list(role_by_id),
-                format_func=lambda value: format_role(role_by_id[value]), index=None,
-                placeholder="Chọn vị trí để xem gợi ý (không bắt buộc)", key="career_role_picker",
-            )
             uploaded_cv = st.file_uploader(
                 "Tải CV định dạng PDF hoặc DOCX (*)", type=["pdf", "docx"],
                 help="PDF cần có lớp văn bản; tối đa 10 trang được đọc. Phần vượt trang giới hạn không được phân tích.", key="uploaded_cv_input",
             )
             st.caption("🔒 Quyền riêng tư: CV được xử lý trong phiên Streamlit local để trích xuất kỹ năng; ứng dụng không ghi CV thành tệp dự án và không gửi tới API bên ngoài. Kết quả không được lưu để khôi phục sau khi tải lại trang.")
+
+            with st.container(border=True, key="demo_profiles_panel"):
+                st.subheader("Dùng hồ sơ mẫu tổng hợp")
+                cols = st.columns(3)
+                demo_icons = {"backend-java": "☕", "data-analyst": "📊", "sales-executive": "🤝"}
+                for col, demo in zip(cols, load_demo_profiles()):
+                    icon = demo_icons.get(demo["id"], "✦")
+                    skills_preview = ", ".join(demo["profile"]["skills"][:3])
+                    col.markdown(
+                        f'<div style="padding:10px 14px;border:1px solid var(--color-line);border-radius:12px;background:var(--color-paper-sunken);margin-bottom:8px;">'
+                        f'<div style="font-weight:700;font-size:13px;color:var(--color-ink);display:flex;align-items:center;gap:6px;">'
+                        f'<span>{icon}</span><span>{demo["label"]}</span>'
+                        f'</div>'
+                        f'<div style="font-size:11px;color:var(--color-ink-soft);margin-top:4px;">'
+                        f'Kỹ năng: {skills_preview}...'
+                        f'</div>'
+                        f'</div>',
+                        unsafe_allow_html=True,
+                    )
+                    col.button(
+                        f"Dùng hồ sơ mẫu · {demo['label']}",
+                        key=f"use_demo_{demo['id']}",
+                        on_click=lambda demo_id=demo["id"]: st.session_state.update({"pending_demo_profile_id": demo_id}),
+                    )
+
+            with st.container(border=True, key="role_picker_panel"):
+                st.markdown("#### Vị trí công việc bạn quan tâm")
+                c_trig_info, c_trig_btn = st.columns([3, 1], vertical_alignment="center")
+                with c_trig_info:
+                    role_label = escape(format_role(current_role_obj)) if current_role_obj else "Chưa chọn vị trí công việc"
+                    selected_class = " is-selected" if current_role_obj else ""
+                    st.markdown(
+                        f'<div class="role-picker-status{selected_class}"><strong>{role_label}</strong></div>',
+                        unsafe_allow_html=True,
+                    )
+                with c_trig_btn:
+                    btn_txt = "Đổi vị trí ▾" if current_role_obj else "Chọn vị trí ▾"
+                    if st.button(btn_txt, key="btn_open_role_modal", use_container_width=True):
+                        open_role_taxonomy_dialog(positions, role_by_id, taxonomy)
+
             job_description = st.text_area("Mô tả công việc cần đối chiếu (không bắt buộc)", key="job_description_input")
-            submitted = st.form_submit_button("Tiếp tục rà soát hồ sơ")
+            submitted = st.button("Tiếp tục rà soát hồ sơ", type="primary", key="profile_continue")
         if submitted:
             if len(selected_activity_ids) > 4:
                 st.session_state["wizard_errors"] = ["Hãy chọn tối đa 4 hoạt động nghề nghiệp yêu thích."]
@@ -619,7 +1006,14 @@ def render_toolkit() -> None:
                 ", ".join(activity_label(value) for value in profile["interest_activity_ids"]),
             )
         st.write("**Kinh nghiệm:**", profile["experience"] or "Chưa có thông tin")
-        st.write("**Level đã khai báo:**", profile.get("levels", {}) or "Chưa khai báo; không suy từ CV")
+        levels_map = profile.get("levels", {})
+        if levels_map:
+            level_items = [f"**{display_skill(k)}**: Cấp độ {v}" for k, v in levels_map.items()]
+            levels_display = " · ".join(level_items)
+        else:
+            levels_display = "Chưa khai báo; không suy từ CV"
+        st.write("**Level đã khai báo:**", levels_display)
+
         st.subheader("Vị trí gợi ý từ hồ sơ")
         with st.expander("Cách đọc và hiểu đúng điểm số gợi ý"):
             st.markdown(
@@ -646,13 +1040,21 @@ def render_toolkit() -> None:
         if not suggestions:
             st.caption("Chưa có tín hiệu khớp catalog để xếp hạng vị trí.")
         for item in suggestions:
-            st.markdown(f"**{item['role_name']}** · điểm gợi ý {item['score']}/100")
-            st.caption("; ".join(item["reasons"]))
-            if st.button(f"Chọn {item['role_name']}", key=f"choose_role_{revision}_{item['role_id']}"):
-                st.session_state["career_role_id"] = item["role_id"]
-                st.session_state["pending_career_role"] = item["role_id"]
-                st.session_state.pop("interview_session", None)
-                st.rerun()
+            col_info, col_btn = st.columns([3, 1])
+            with col_info:
+                st.markdown(
+                    f'''<div style="padding:10px 14px;border:1px solid var(--color-line);border-radius:12px;background:var(--color-paper-raised);margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;">'''
+                    f'''<span style="font-weight:700;font-size:15px;color:var(--color-ink);">{item['role_name']}</span>'''
+                    f'''<span style="display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;background:var(--color-plume-50);color:var(--color-plume-700);border:1px solid var(--color-plume-200);">{item['score']}% Phù hợp</span>'''
+                    f'''</div>''',
+                    unsafe_allow_html=True,
+                )
+            with col_btn:
+                if st.button(f"Chọn {item['role_name']}", key=f"choose_role_{revision}_{item['role_id']}"):
+                    st.session_state["career_role_id"] = item["role_id"]
+                    st.session_state["pending_career_role"] = item["role_id"]
+                    st.session_state.pop("interview_session", None)
+                    st.rerun()
 
     position = role_by_id.get(st.session_state.get("career_role_id"))
     has_signal = bool(effective_skills or profile.get("levels"))
@@ -666,6 +1068,7 @@ def render_toolkit() -> None:
                 exported_profile = {**profile, "role_id": position["id"]}
                 st.download_button("Tải báo cáo Markdown", export_report(exported_profile, None, []), "bao-cao-ho-so.md", "text/markdown")
                 st.download_button("Tải báo cáo CSV", export_report(exported_profile, None, [], "csv"), "bao-cao-ho-so.csv", "text/csv")
+                st.download_button("Tải báo cáo JSON", export_report(exported_profile, None, [], "json"), "bao-cao-ho-so.json", "application/json")
         return
 
     role = position
@@ -783,6 +1186,8 @@ def render_toolkit() -> None:
                            "bao-cao-ho-so.md", "text/markdown")
         st.download_button("Tải báo cáo CSV", export_report(exported_profile, gap_result or presence, timed_result or weekly_roadmap or [], "csv"),
                            "bao-cao-ho-so.csv", "text/csv")
+        st.download_button("Tải báo cáo JSON", export_report(exported_profile, gap_result or presence, timed_result or weekly_roadmap or [], "json"),
+                           "bao-cao-ho-so.json", "application/json")
 
     with tabs[4]:
         st.caption("Phỏng vấn ưu tiên kỹ năng còn thiếu; hệ thống chỉ hiển thị hướng dẫn sau khi bạn gửi câu trả lời.")
@@ -1164,6 +1569,7 @@ def run_app() -> None:
     render_landing_page()
     render_toolkit()
     render_closing_sections()
+    inject_site_script()
 
 
 if __name__ == "__main__":

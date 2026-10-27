@@ -1,43 +1,37 @@
-# Kiến trúc
+# Kiến trúc AI Career Coach
 
 ```mermaid
 flowchart LR
-    UI[Streamlit UI] --> PARSE[PDF/DOCX parser]
-    PARSE --> EXT[Rule-based skill extractor]
-    FORM[Manual skills, interests, levels] --> PROF[Profile normalization and alias catalog]
-    EXT --> PROF
-    PROF --> PRES[Presence matcher]
-    PROF --> GAP[Explicit level gap]
-    ROLES[Data/roles.json] --> PRES
-    ROLES --> GAP
-    ROLES --> SUG[Explainable role ranking]
-    RES[Data/resources.json] --> WEEK[Weekly recommender]
-    RES --> TIME[Timed planner with evidence]
-    PRES --> WEEK
-    GAP --> TIME
-    PRES --> UI
-    GAP --> UI
-    SUG --> UI
-    WEEK --> UI
-    TIME --> UI
-    QUESTIONS[Interview question banks] --> INTERVIEW[Bounded focus selection]
-    INTERVIEW --> GUIDANCE[Answer guidance after submission]
-    GUIDANCE --> UI
-    RES --> PRACTICE[Experience-first soft-skill routes]
-    PRACTICE --> WEEK
-    PRACTICE --> TIME
-    UI --> EXPORT[Markdown / CSV export]
+    UI[Streamlit app.py] --> Parser[cv_parser.py]
+    UI --> Profile[profile.py + schemas.py]
+    Parser --> Extract[skill_extractor.py]
+    Extract --> Profile
+    Data[(data/)] --> Extract
+    Data --> Match[matcher.py]
+    Profile --> Match
+    Match --> Roadmap[recommender.py]
+    Data --> Roadmap
+    Match --> Interview[interview.py]
+    Data --> Interview
+    Roadmap --> Export[export.py]
+    Interview --> UI
+    Export --> UI
 ```
 
-## Thành phần
+## Thành phần và hợp đồng
 
-- **Parser:** `modules/cv_parser.py` đọc PDF/DOCX cục bộ, từ chối trên 10 MiB, giới hạn PDF ở 10 trang và trả metadata `page_truncated`/page counts. OCR chưa được cung cấp.
-- **Extractor/Profile:** `modules/skill_extractor.py` nhận diện cụm từ trong catalog hữu hạn; `modules/profile.py` giữ kỹ năng chưa nhận diện và level khai báo riêng.
-- **Matcher:** presence score dùng trọng số kỹ năng role; `compute_gap` dùng level 0–3 đã khai báo và đánh dấu thiếu level là `current=0` chỉ sau khi người dùng xác nhận ở UI.
-- **Gợi ý role:** `suggest_roles` tính điểm heuristic theo skill/interests, hoàn toàn local; không dự đoán xác suất tuyển dụng.
-- **Recommender:** weekly và timed dùng chung chính sách review; chỉ `reviewed`/`partial` được cân nhắc, partial phải hiện phạm vi, blocked/unsuitable/unreviewed bị loại. Lịch timed dùng thêm level range và duration có provenance; dữ liệu thiếu làm tổng tuần `null`.
-- **Interview:** số câu bị chặn ở mức thấp hơn giữa 10 và số câu có trong ngân hàng của role. Câu hỏi được ưu tiên theo gap; sau submit chỉ hiển thị gợi ý và nguồn review (nếu có). Không có điểm tự động; ví dụ chưa review được gắn cảnh báo và tình huống không được coi là có một đáp án đúng.
-- **Soft skills/traits:** roadmap thêm nhiệm vụ thực hành, phản hồi từ người quan sát và bằng chứng tự theo dõi; khóa học là tài liệu bổ trợ chứ không phải điều kiện hoàn thành.
-- **Export:** `modules/export.py` tạo Markdown hoặc CSV, escape dữ liệu người dùng có thể trở thành công thức bảng tính, không xuất toàn văn CV.
+- `cv_parser.py` đọc PDF/DOCX, giới hạn 10 MiB và 10 trang PDF, trả `error_code` tường minh cho tệp hỏng, scan hoặc sai định dạng.
+- `skill_extractor.py` chuẩn hóa Unicode, alias và level 0–3. CV dùng so khớp cụm từ có ranh giới; RapidFuzz hỗ trợ một số lỗi gõ gần đúng. Người dùng phải rà soát kết quả trích.
+- `profile.py` gộp CV và dữ liệu nhập tay, giữ kỹ năng ngoài catalog, kiểm tra điều kiện nộp. `schemas.py` định nghĩa bốn hợp đồng Pydantic dùng ở biên profile, gap và phản hồi phỏng vấn.
+- `matcher.py` tính presence theo trọng số role, gap theo level tự khai báo, đối chiếu JD và gợi ý role bằng 75% skill fit + 25% RIASEC. Skill fit dưới 15% làm điểm gợi ý bị giới hạn 5/100.
+- `recommender.py` lọc nguồn theo trạng thái review, xây roadmap giai đoạn và lịch giờ/tuần. Khi thiếu thời lượng hoặc bằng chứng, tổng tuần được để chưa xác định.
+- `interview.py` chọn câu theo role/gap, tối đa 10 câu và hiện gợi ý sau khi gửi. Ứng dụng không tự chấm câu trả lời.
+- `export.py` tạo Markdown/CSV/JSON, escape ô CSV có thể bị hiểu là công thức và không xuất toàn văn CV.
 
-Ứng dụng không thực hiện inference bằng mô hình AI trong bản này. Tên sản phẩm giữ “AI Career Coach”, còn mọi tính năng hiện có được mô tả theo thuật toán thực sự đang chạy.
+## Phần AI
+
+Bản hiện tại không tải mô hình AI, không gọi LLM/embedding API và không tự suy ra năng lực thực tế. RapidFuzz là thư viện so khớp chuỗi, RIASEC là vector sở thích có quy tắc, còn điểm role là heuristic. Các câu hỏi/rubric có thể được biên soạn với hỗ trợ AI nhưng metadata review trong dữ liệu quyết định cách hiển thị độ tin cậy; không xem đó là thẩm định chuyên gia.
+
+## Dữ liệu và riêng tư
+
+Các file runtime ở `data/`: 131 role, alias/catalog kỹ năng, 15 họ nghề RIASEC, học liệu, ba hồ sơ tổng hợp và 10 phần câu hỏi. CV nằm trong phiên xử lý Streamlit hiện tại; mã ứng dụng không ghi CV ra đĩa hay gửi API bên ngoài. Môi trường triển khai máy chủ cần chính sách lưu log và truy cập riêng.

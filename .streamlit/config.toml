@@ -1,10 +1,10 @@
 [theme]
 base = "light"
-primaryColor = "#1556A8"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F7FAFB"
-textColor = "#18334A"
-font = "sans serif"
+primaryColor = "#1B7A66"
+backgroundColor = "#FAF9F5"
+secondaryBackgroundColor = "#F3F2EB"
+textColor = "#131918"
+font = "Be Vietnam Pro:https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
 
 [server]
 maxUploadSize = 10

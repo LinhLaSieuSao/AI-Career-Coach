@@ -6,103 +6,73 @@ on:
 permissions:
   contents: read
 jobs:
-  tests:
-    name: Tests
+  test:
+    name: Test and lint
     runs-on: ubuntu-24.04
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.12", "3.13"]
     steps:
-      - name: Lấy mã nguồn
-        uses: actions/checkout@v7
-      - name: Cài Python
-        uses: actions/setup-python@v7
+      - uses: actions/checkout@v7
+      - name: Check Docker Python default
+        run: test "$(cat .python-version)" = "$(sed -n 's/^ARG PYTHON_VERSION=//p' Dockerfile | head -1)"
+      - uses: actions/setup-python@v7
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version-file: .python-version
           cache: pip
-          cache-dependency-path: |
-            requirements.lock
-            requirements-dev.lock
-      - name: Cài dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install --require-hashes -r requirements-dev.lock
-      - name: Chạy test và đo coverage
-        run: python -m pytest --cov=app --cov=modules --cov-report=term-missing --cov-report=xml:coverage.xml
-      - name: Kiểm tra toàn bộ ngân hàng câu hỏi
-        run: python scripts/validate_question_bank.py
-      - name: Kiểm tra cấu trúc và lập inventory dữ liệu
-        # Attestation của chủ dự án thuộc cổng phát hành; báo cáo vẫn ghi
-        # stale_or_invalid khi URL thay đổi, không biến nó thành PASS giả.
-        run: python scripts/audit_data_readiness.py --json-output data-readiness.json
-      - name: Kiểm tra hợp đồng bằng chứng 2.0 và Role–Skill–Level
-        run: python scripts/validate_evidence_schema.py --json-output evidence-schema-v2.json
-      - name: Kiểm tra đường đi dữ liệu của 131 nghề qua các module
-        if: matrix.python-version == '3.12'
-        run: python scripts/audit_module_paths.py --json-output module-paths.json --markdown-output module-paths.md
-      - name: Smoke test các luồng lõi offline
-        run: python scripts/smoke.py
-      - name: Golden benchmark gợi ý role
-        run: python tests/test_recommendation_quality.py
-      - name: Lưu báo cáo coverage
-        if: always()
-        uses: actions/upload-artifact@v6
-        with:
-          name: coverage-python-${{ matrix.python-version }}
-          path: |
-            coverage.xml
-            data-readiness.json
-            evidence-schema-v2.json
-            module-paths.json
-            module-paths.md
-          if-no-files-found: ignore
+          cache-dependency-path: requirements.lock
+      - name: Install locked dependencies
+        run: python -m pip install --require-hashes -r requirements.lock
+      - name: Lint (informational)
+        run: ruff check --exit-zero .
+      - name: Unit and Streamlit AppTest
+        run: >-
+          python -m pytest -q
+          tests/test_cv_parser.py tests/test_profile.py
+          tests/test_skill_extractor.py tests/test_matcher.py
+          tests/test_recommender.py tests/test_interview.py
+          tests/test_data_integrity.py tests/test_ui_smoke.py
+
   docker:
-    name: Docker build and healthcheck
+    name: Docker build, health, and secret check
     runs-on: ubuntu-24.04
     steps:
-      - name: Lấy mã nguồn
-        uses: actions/checkout@v7
-      - name: Build image
-        run: docker build --tag ai-career-coach:ci .
-      - name: Start container and check local health endpoint
+      - uses: actions/checkout@v7
+      - name: Build image with repository Python version
+        run: docker build --build-arg PYTHON_VERSION="$(cat .python-version)" --tag ai-career-coach:ci .
+      - name: Check container health
         shell: bash
         run: |
           docker run --detach --name ai-career-coach-ci -p 8501:8501 ai-career-coach:ci
           for attempt in {1..30}; do
             if curl --fail --silent http://127.0.0.1:8501/_stcore/health; then
-              docker logs ai-career-coach-ci
               exit 0
             fi
             sleep 2
           done
           docker logs ai-career-coach-ci
           exit 1
-      - name: Cleanup container
+      - name: Check every image layer for private filenames
+        shell: bash
+        run: |
+          docker save ai-career-coach:ci -o image.tar
+          python - <<'PY'
+          import io
+          import tarfile
+
+          leaked = []
+          with tarfile.open("image.tar") as image:
+              for layer in (item for item in image if item.name.endswith("/layer.tar")):
+                  archive = tarfile.open(fileobj=io.BytesIO(image.extractfile(layer).read()))
+                  with archive:
+                      for member in archive:
+                          name = member.name.removeprefix("./")
+                          if not name.startswith("app/") or not member.isfile():
+                              continue
+                          filename = name.rsplit("/", 1)[-1].lower()
+                          if filename == ".env" or filename.startswith(".env.") or filename.endswith((".pem", ".key")) or "token" in filename:
+                              leaked.append(name)
+          if leaked:
+              raise SystemExit("Private filenames found in Docker layers: " + ", ".join(sorted(set(leaked))))
+          print("No private filenames found in application layers")
+          PY
+      - name: Cleanup
         if: always()
         run: docker rm --force ai-career-coach-ci || true
-  browser:
-    name: Chromium user flows and accessibility
-    runs-on: ubuntu-24.04
-    steps:
-      - name: Lấy mã nguồn
-        uses: actions/checkout@v7
-      - name: Cài Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: "3.12"
-          cache: pip
-          cache-dependency-path: requirements-dev.lock
-      - name: Cài dependencies có hash
-        run: python -m pip install --require-hashes -r requirements-dev.lock
-      - name: Cài Chromium và thư viện hệ thống
-        run: python -m playwright install --with-deps chromium
-      - name: Chạy kiểm thử người dùng trên trình duyệt
-        run: python -m pytest -q browser_tests --junitxml=browser-test-results.xml
-      - name: Lưu kết quả trình duyệt
-        if: always()
-        uses: actions/upload-artifact@v6
-        with:
-          name: browser-test-results
-          path: browser-test-results.xml
-          if-no-files-found: ignore

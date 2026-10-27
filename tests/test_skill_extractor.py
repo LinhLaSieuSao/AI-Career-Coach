@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def _roles() -> list[dict]:
     """Đọc dữ liệu vai trò thực của dự án."""
-    return json.loads((ROOT / "Data/roles.json").read_text(encoding="utf-8"))
+    return json.loads((ROOT / "data/roles.json").read_text(encoding="utf-8"))
 
 
 def test_tc01_exact_match_case_insensitive() -> None:
@@ -130,20 +130,20 @@ def test_explicit_lack_of_experience_is_not_claimed_as_a_skill() -> None:
 
 def test_roles_skills_have_resource_keys_after_normalization() -> None:
     """Mọi kỹ năng vai trò đều có tài nguyên tương ứng sau chuẩn hóa."""
-    resources = json.loads((ROOT / "Data/resources.json").read_text(encoding="utf-8"))
+    resources = json.loads((ROOT / "data/resources.json").read_text(encoding="utf-8"))
     resource_keys = {normalize_skill(key) for key in resources}
     assert build_vocabulary(_roles()) <= resource_keys
 
 
 def test_alias_targets_are_in_recognition_vocabulary() -> None:
     """Mọi tên chuẩn của alias có trong catalog nhận diện dùng chung."""
-    aliases = load_aliases(ROOT / "Data/skill_aliases.json")
+    aliases = load_aliases(ROOT / "data/skill_aliases.json")
     assert set(aliases.values()) <= load_skill_vocabulary()
 
 
 def test_p02_exact_aliases_and_distinct_technologies():
     vocabulary = load_skill_vocabulary()
-    aliases = load_aliases(ROOT / "Data/skill_aliases.json")
+    aliases = load_aliases(ROOT / "data/skill_aliases.json")
     assert extract_skills("ML, Communication, Git/GitHub, JS, Node.js", vocabulary, aliases) == [
         "thuật toán học máy", "giao tiếp", "git", "javascript", "nodejs"
     ]
@@ -160,7 +160,7 @@ def test_p02_exact_aliases_and_distinct_technologies():
 
 
 def test_alias_catalog_has_no_chains_cycles_or_canonical_collisions():
-    aliases = load_aliases(ROOT / "Data/skill_aliases.json")
+    aliases = load_aliases(ROOT / "data/skill_aliases.json")
     vocabulary = load_skill_vocabulary()
     assert not (set(aliases) & set(aliases.values()))
     assert not (set(aliases) & vocabulary)

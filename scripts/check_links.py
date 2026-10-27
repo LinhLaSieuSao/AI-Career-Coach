@@ -101,12 +101,12 @@ def check_urls(urls, *, timeout: float = 10, workers: int = 4, transport: Callab
 
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--resources", type=Path, default=ROOT / "Data/resources.json")
+    parser.add_argument("--resources", type=Path, default=ROOT / "data/resources.json")
     parser.add_argument("--output", type=Path)
     parser.add_argument("--timeout", type=float, default=10)
     parser.add_argument("--workers", type=int, default=4)
     args = parser.parse_args(argv)
-    output = args.output or ROOT / "docs/reports" / f"links_{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}.json"
+    output = args.output or ROOT / "dist" / f"links_{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}.json"
     if output.resolve() == args.resources.resolve():
         parser.error("report output must differ from the resource catalog")
     if isinstance(args.workers, bool) or not 1 <= args.workers <= 8 or not math.isfinite(args.timeout) or args.timeout <= 0:

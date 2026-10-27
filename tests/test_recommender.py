@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_independent_recognition_skills_without_resources_are_kept_and_reported():
-    resources = json.loads((ROOT / "Data/resources.json").read_text(encoding="utf-8"))
+    resources = json.loads((ROOT / "data/resources.json").read_text(encoding="utf-8"))
     missing = ["pandas", "mysql", "english", "google tag manager", ".net core"]
     roadmap = build_roadmap(missing, resources)
     assert [skill for week in roadmap for skill in week["skills"]] == missing
@@ -27,7 +27,7 @@ def test_independent_recognition_skills_without_resources_are_kept_and_reported(
 
 
 def test_sales_and_soft_skill_gaps_get_experience_routes_without_course_dependency():
-    resources = json.loads((ROOT / "Data/resources.json").read_text(encoding="utf-8"))
+    resources = json.loads((ROOT / "data/resources.json").read_text(encoding="utf-8"))
     roadmap = build_roadmap(["bán hàng", "bán hàng b2b", "thuyết phục", "giao tiếp", "quản lý đội ngũ", "viết nội dung"], resources, weeks=1)
     routes = roadmap[0]["practice_routes"]
     by_skill = {route["skill"]: route for route in routes}
@@ -301,8 +301,8 @@ def test_malformed_requested_resource_data_is_rejected(resources) -> None:
 
 
 def test_every_repository_role_can_flow_from_matcher_to_roadmap() -> None:
-    roles = json.loads((ROOT / "Data/roles.json").read_text(encoding="utf-8"))
-    resources = json.loads((ROOT / "Data/resources.json").read_text(encoding="utf-8"))
+    roles = json.loads((ROOT / "data/roles.json").read_text(encoding="utf-8"))
+    resources = json.loads((ROOT / "data/resources.json").read_text(encoding="utf-8"))
 
     for role in roles:
         gap = match_role([], role)
@@ -330,7 +330,7 @@ def test_every_repository_role_can_flow_from_matcher_to_roadmap() -> None:
 
 
 def test_cv_jd_gap_can_build_roadmap_without_metadata() -> None:
-    resources = json.loads((ROOT / "Data/resources.json").read_text(encoding="utf-8"))
+    resources = json.loads((ROOT / "data/resources.json").read_text(encoding="utf-8"))
     gap = match_cv_to_jd("Python developer", "Python, SQL and Docker")
 
     roadmap = build_roadmap(gap["missing"], resources)
@@ -342,7 +342,7 @@ def test_cv_jd_gap_can_build_roadmap_without_metadata() -> None:
 def test_legacy_app_adapter_loads_relative_to_module_and_returns_flat_cards(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
-    data_dir = tmp_path / "Data"
+    data_dir = tmp_path / "data"
     data_dir.mkdir()
     resources = _catalog("sql", "python")
     resources["python"]["resources"][0]["url"] = resources["sql"]["resources"][0]["url"]

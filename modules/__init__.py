@@ -38,11 +38,11 @@ _EXPORTS = {
     "POST_SUBMISSION_GUIDANCE_NOTICE": ("interview", "POST_SUBMISSION_GUIDANCE_NOTICE"),
     "STATIC_SELF_REVIEW_TITLE": ("interview", "STATIC_SELF_REVIEW_TITLE"),
     "STATIC_SELF_REVIEW_NOTICE": ("interview", "STATIC_SELF_REVIEW_NOTICE"),
-    "interest_fit": ("interests", "interest_fit"),
-    "user_interest_vector": ("interests", "user_interest_vector"),
-    "load_interest_activities": ("interests", "load_interest_activities"),
-    "validate_submission_input": ("submission", "validate_submission_input"),
-    "PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE": ("submission", "PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE"),
+    "interest_fit": ("matcher", "interest_fit"),
+    "user_interest_vector": ("matcher", "user_interest_vector"),
+    "load_interest_activities": ("matcher", "load_interest_activities"),
+    "validate_submission_input": ("profile", "validate_submission_input"),
+    "PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE": ("profile", "PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE"),
 }
 
 __all__ = list(_EXPORTS)

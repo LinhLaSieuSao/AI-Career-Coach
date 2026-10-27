@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import io
+import json
 from collections.abc import Mapping
 from typing import Any
 
@@ -114,10 +115,12 @@ def _rows(profile: Mapping[str, Any], gap: Mapping[str, Any] | None, roadmap: An
 
 
 def export_report(profile, gap, roadmap, format="markdown") -> str:
-    """Return a Markdown or spreadsheet-safe CSV snapshot of the current result."""
+    """Return a Markdown, spreadsheet-safe CSV, or JSON snapshot."""
     if not isinstance(profile, Mapping):
         raise TypeError("profile phải là mapping.")
     rows = _rows(profile, gap, roadmap)
+    if format == "json":
+        return json.dumps({"schema_version": 1, "rows": rows}, ensure_ascii=False, indent=2, default=str)
     if format == "csv":
         output = io.StringIO(newline="")
         writer = csv.DictWriter(output, fieldnames=CSV_FIELDS, extrasaction="ignore", lineterminator="\r\n")
@@ -126,7 +129,7 @@ def export_report(profile, gap, roadmap, format="markdown") -> str:
             writer.writerow({key: _cell(row.get(key, "")) for key in CSV_FIELDS})
         return output.getvalue()
     if format != "markdown":
-        raise ValueError("format phải là 'markdown' hoặc 'csv'.")
+        raise ValueError("format phải là 'markdown', 'csv' hoặc 'json'.")
 
     def md(value: Any) -> str:
         return str(value if value not in (None, "") else "—").replace("|", "\\|").replace("\r", " ").replace("\n", "<br>")

@@ -13,12 +13,13 @@ from typing import Any, Iterable
 
 from .catalog import load_roles
 from .skill_extractor import normalize_skill
-from .levels import canonical_skill
+from .skill_extractor import canonical_skill
+from .schemas import InterviewFeedback
 
 logger = logging.getLogger(__name__)
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = PROJECT_ROOT / "Data"
+DATA_DIR = PROJECT_ROOT / "data"
 # Keep these aliases because existing tests and integrations patch the old
 # module-level paths when loading isolated question banks.
 _PROJECT_ROOT = PROJECT_ROOT
@@ -229,7 +230,7 @@ def get_questions(
     role_id = _resolve_role_id(role_id)
     if role_id not in roles:
         if not roles:
-            raise ValueError("Không có dữ liệu câu hỏi trong thư mục Data/interview_question/.")
+            raise ValueError("Không có dữ liệu câu hỏi trong thư mục data/interview_questions/.")
         raise ValueError(f"Không tìm thấy câu hỏi cho vị trí '{role_id}'.")
 
     questions = roles[role_id]
@@ -311,7 +312,7 @@ def get_question_feedback(question_id: str) -> dict[str, Any]:
 
     red_flags = question.get("red_flags", [])
     reviewed = _has_complete_internal_review(question)
-    return {
+    feedback = {
         "reference_answer": reference_answer,
         "has_reference_answer": has_reference_answer,
         "good_answer_points": good_answer_points,
@@ -324,6 +325,8 @@ def get_question_feedback(question_id: str) -> dict[str, Any]:
         "quality_reviewer": question.get("quality_reviewer") if reviewed else None,
         "quality_sources": list(question.get("quality_sources", [])) if reviewed else [],
     }
+    InterviewFeedback.model_validate(feedback)
+    return feedback
 
 
 def get_reference_answer(question_id: str) -> str:

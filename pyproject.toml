@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "ai-career-coach"
 version = "0.4.0"
 description = "Offline, rule-based career exploration and skills roadmap web app."
-requires-python = ">=3.12,<3.14"
+requires-python = ">=3.12,<3.13"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

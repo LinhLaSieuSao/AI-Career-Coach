@@ -12,7 +12,8 @@ from modules.catalog import DATA_DIR, load_roles
 from modules.matcher import match_role
 from modules.profile import build_profile_from_cv
 from modules.recommender import build_roadmap
-from modules.submission import PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE, SUBMISSION_REQUIRED_INPUT_MESSAGE
+from modules.profile import PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE, SUBMISSION_REQUIRED_INPUT_MESSAGE
+from modules.export import export_report
 from document_fixtures import docx_bytes, pdf_bytes
 
 
@@ -33,7 +34,7 @@ def _draft(app, skills="", role_id="data_analyst", jd=""):
     if app.session_state.get("profile_step", 1) != 2:
         _field(app, "Kỹ năng bạn muốn đưa vào hồ sơ").input(skills)
         _field(app, "Mô tả công việc cần đối chiếu (không bắt buộc)").input(jd)
-        app.selectbox[0].select(role_id)
+        app.session_state["career_role_picker"] = role_id
         next(button for button in app.button if button.label == "Tiếp tục rà soát hồ sơ").click().run()
         assert not app.exception
     return app
@@ -64,6 +65,38 @@ def _upload(app, text):
     return app
 
 
+def test_role_suggestions_require_selection_and_explain_heuristic():
+    app = _submit(_start(), "Java; Spring Boot", role_id=None)
+    assert app.session_state["career_role_id"] is None
+    choices = [button for button in app.button if button.key and button.key.startswith("choose_role_")]
+    assert choices
+    assert "Điểm heuristic" in " ".join(item.value for item in app.caption)
+    selected_id = choices[0].key.split("_", 3)[-1]
+    choices[0].click().run()
+    assert not app.exception
+    assert app.session_state["career_role_id"] == selected_id
+    assert app.session_state["career_role_picker"] == selected_id
+
+
+def test_profile_entry_keeps_accessible_widget_names():
+    app = _start()
+    labels = {item.label for item in app.text_area} | {item.label for item in app.selectbox} | {
+        item.label for item in app.button
+    }
+    assert "Kỹ năng bạn muốn đưa vào hồ sơ (*)" in labels
+    assert "Tiếp tục rà soát hồ sơ" in labels
+    assert "Chọn vị trí ▾" in labels
+    assert any("Vị trí công việc bạn quan tâm" in item.value for item in app.markdown)
+
+
+def test_json_export_uses_report_rows_without_source_cv():
+    report = export_report({"role_id": "data_analyst", "skills": ["sql"], "cv_text": "private cv"}, None, [], "json")
+    payload = json.loads(report)
+    assert payload["schema_version"] == 1
+    assert any(row["skill"] == "skills" and row["note"] == "sql" for row in payload["rows"])
+    assert "private cv" not in report
+
+
 def test_app_import_and_real_loader_from_another_cwd(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
     app_module = importlib.import_module("app")
@@ -81,8 +114,10 @@ def test_app_import_and_real_loader_from_another_cwd(tmp_path, monkeypatch):
 def test_streamlit_startup_loads_all_real_roles_without_exception(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
     app = _start()
-    assert len(app.selectbox[0].options) == len(load_roles()) == 131
-    assert app.selectbox[0].value is None
+    assert len(load_roles()) == 131
+    assert not app.selectbox
+    assert any("Chưa chọn vị trí công việc" in item.value for item in app.markdown)
+    assert any(button.label == "Chọn vị trí ▾" for button in app.button)
     assert not app.error
     assert len(app.get("file_uploader")) == 1
     assert any("document.documentElement.lang = 'vi'" in item.value for item in app.html)

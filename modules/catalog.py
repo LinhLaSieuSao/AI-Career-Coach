@@ -8,7 +8,7 @@ from typing import Any
 
 from .skill_extractor import build_vocabulary, normalize_skill
 
-DATA_DIR = Path(__file__).resolve().parents[1] / "Data"
+DATA_DIR = Path(__file__).resolve().parents[1] / "data"
 
 
 def load_roles(path: str | Path | None = None) -> list[dict[str, Any]]:

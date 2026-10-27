@@ -14,7 +14,7 @@ from modules import matcher
 @pytest.fixture
 def skill_data(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     """Provide a small isolated role catalog and alias map."""
-    data_dir = tmp_path / "Data"
+    data_dir = tmp_path / "data"
     data_dir.mkdir()
     roles = [
         {

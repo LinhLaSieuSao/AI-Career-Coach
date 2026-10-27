@@ -1,12 +1,73 @@
 # AI Career Coach
 
-AI Career Coach là ứng dụng Streamlit mã nguồn mở giúp tạo hồ sơ kỹ năng, đối chiếu với role trong catalog, xem khoảng cách kỹ năng, tìm tài liệu và luyện phỏng vấn. Các phép tính trong bản hiện tại dùng quy tắc tường minh; không gọi LLM, embedding hoặc dịch vụ trả phí.
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB)](.python-version)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B)](https://streamlit.io/)
+[![Docker](https://img.shields.io/badge/Docker-ready-2496ED)](Dockerfile)
+[![CI](https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/workflows/ci.yml/badge.svg)](https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/workflows/ci.yml)
+[![pytest](https://img.shields.io/badge/tests-pytest-0A9EDC)](tests/)
+[![MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-Ứng dụng phân biệt điểm presence theo kỹ năng nhận diện, gap theo level do người dùng tự khai báo và điểm heuristic gợi ý role. Không điểm nào là xác suất tuyển dụng. Luồng hồ sơ có hai bước để rà soát kỹ năng và Level trước khi xem kết quả. PDF scan chưa được OCR; CV bị giới hạn 10 MiB và PDF chỉ đọc 10 trang đầu. Phỏng vấn không tự chấm điểm hoặc phân tích câu trả lời: sau khi người dùng gửi, app hiển thị hướng dẫn tham khảo và checklist tĩnh để người dùng tự đối chiếu. Ngân hàng hiện có 766 câu: 0 template, 766 câu đang chờ duyệt lại sau khi bổ sung 14 câu và rubric cho bốn nghề demo. Metadata review trước được lưu trong lịch sử từng câu bị sửa; rubric mới do AI biên soạn chưa qua duyệt chuyên môn. Kỹ năng mềm có thể luyện qua tình huống thực tế/role-play và phản hồi, không bắt buộc phải có khóa học cho mọi kỹ năng.
+AI Career Coach là ứng dụng Streamlit chạy local để đối chiếu kỹ năng với yêu cầu nghề, lập lộ trình học và luyện phỏng vấn. Bản hiện tại dùng quy tắc và dữ liệu trong repo; tên sản phẩm không hàm ý có mô hình AI hay LLM đang chấm điểm.
 
-## Chạy local
+![Giao diện trang chủ AI Career Coach](docs/screenshots/landing.png)
 
-Cần Python 3.12. Tạo môi trường ảo và cài runtime:
+## Bài toán
+
+Tên kỹ năng trong CV và mô tả công việc (JD) thường khác nhau, khiến người học khó biết mình đã có gì và cần học gì. Ứng dụng hỗ trợ tự rà soát và định hướng học tập, không dự đoán khả năng trúng tuyển. CV được xử lý trong phiên Streamlit, không có chức năng lưu CV vào cơ sở dữ liệu hay gọi API bên thứ ba. Khi triển khai trên máy chủ, người vận hành cần đánh giá riêng quyền riêng tư của môi trường đó.
+
+## Kiến trúc
+
+```mermaid
+flowchart LR
+    CV[CV PDF/DOCX hoặc kỹ năng nhập tay] --> Parse[Parser và alias normalizer]
+    Parse --> Profile[Profile và schema]
+    Profile --> Match[Presence, level gap và RIASEC matcher]
+    Match --> Roadmap[Lộ trình và học liệu]
+    Match --> Interview[Luyện phỏng vấn]
+    Roadmap --> Export[Báo cáo Markdown/CSV/JSON]
+```
+
+[Mô tả kiến trúc và giới hạn dữ liệu](docs/architecture.md) · [Hợp đồng giao diện](docs/interface.md)
+
+## Cơ chế lõi
+
+- `skill_extractor.py` so khớp cụm từ và alias trong `data/skill_aliases.json`; RapidFuzz chỉ hỗ trợ lỗi chính tả gần đúng trong văn bản CV. Người dùng rà soát các kỹ năng trước khi xác nhận.
+- Presence score đo phần kỹ năng role đã nhận diện theo trọng số. Gap theo level dùng mức 0–3 do người dùng khai báo; app yêu cầu xác nhận trước khi coi level chưa khai báo là 0 cho lần tính.
+- Điểm gợi ý role kết hợp **75% skill fit + 25% RIASEC interest fit**. Khi skill fit dưới **15%**, điểm tổng bị chặn ở **5/100**. Đây là heuristic để khám phá role, không phải xác suất tuyển dụng.
+- JD được tách nhóm bắt buộc/ưu tiên khi tiêu đề rõ ràng; người dùng xác nhận lại kỹ năng được trích trước khi đối chiếu.
+
+## Giới hạn và độ tin cậy
+
+PDF scan không có OCR; CV tối đa 10 MiB và PDF chỉ đọc 10 trang đầu. Học liệu có trạng thái review, nguồn và phạm vi level riêng; URL mở được không chứng minh nội dung phù hợp. Câu hỏi và đáp án phỏng vấn là khung tham khảo tự đánh giá, **không chấm điểm tự động**. Dữ liệu nghề, học liệu và đáp án còn cần rà soát chuyên môn và quyền phân phối; xem [LICENSES.md](LICENSES.md).
+
+## Dữ liệu
+
+Catalog hiện có **131 vị trí**, chia thành **15 nhóm nghề**. Ngân hàng **766 câu hỏi** nằm trong **10 phân hệ** ở `data/interview_questions/`. `data/roles.json`, `skill_catalog.json`, `skill_aliases.json`, `resources.json`, `interests.json` và `role_families_riasec.json` là dữ liệu mà web đang dùng; ba hồ sơ minh họa tổng hợp ở `demo_profiles.json`.
+
+## Cấu trúc repo
+
+```text
+app.py                     Streamlit UI
+assets/                    style.css, site.js
+modules/                   schemas, catalog, parser, extractor, profile,
+                           matcher, recommender, interview, export
+data/                      role, skill, RIASEC, resource và question catalogs
+scripts/check_links.py     kiểm tra URL học liệu khi cần
+tests/                     unit tests và Streamlit AppTest
+docs/                      architecture, interface, demo, pof-checklist, screenshots
+.github/workflows/ci.yml   pytest, lint, Docker health và secret check
+requirements.lock          một tập phiên bản có hash cho local, CI và Docker
+```
+
+## Chạy ứng dụng
+
+Cần Docker hoặc Python **3.12**. Với Docker:
+
+```bash
+docker compose up --build
+```
+
+Mở `http://localhost:8501`. Với local trên Windows:
 
 ```powershell
 py -3.12 -m venv .venv
@@ -14,88 +75,20 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
-Trên macOS/Linux:
+Trên macOS/Linux thay hai lệnh đầu bằng `python3.12 -m venv .venv` và `.venv/bin/python -m pip install --require-hashes -r requirements.lock`, rồi chạy `.venv/bin/python -m streamlit run app.py`.
 
-```bash
-python3.12 -m venv .venv
-.venv/bin/python -m pip install --require-hashes -r requirements.lock
-.venv/bin/python -m streamlit run app.py
-```
+`requirements.txt` liệt kê thư viện web, `requirements-dev.txt` thêm pytest/ruff, `requirements-ai.txt` dành cho mở rộng sau này. Lock duy nhất chứa cả runtime và công cụ kiểm thử để ba môi trường dùng cùng phiên bản.
 
-Mở địa chỉ local do Streamlit in ra, thường là `http://localhost:8501`. Dữ liệu được nạp từ thư mục `Data/` cạnh mã nguồn; app không gửi CV tới API bên ngoài. Hồ sơ và nội dung CV ở trong phiên Streamlit hiện tại, không có tính năng lưu/khôi phục: tải lại trang có thể làm mất kết quả. Trên máy dùng chung, hãy đóng tab và dừng tiến trình sau khi sử dụng. Bản cloud cần đánh giá lại privacy trước khi bật upload.
+## Kiểm thử và CI
 
-## Chạy test
+Chạy `python -m pytest -q tests/`. CI chạy tám file test và Docker health check, đồng thời quét tên file nhạy cảm trong từng layer image. Bước Ruff hiện chỉ báo thông tin để nhóm xử lý dần các cảnh báo cũ.
 
-Cài bộ phát triển riêng (nó bao gồm runtime):
+## Nhóm, demo và giấy phép
 
-```powershell
-.\.venv\Scripts\python.exe -m pip install --require-hashes -r requirements-dev.lock
-.\.venv\Scripts\python.exe -m pytest --cov=app --cov=modules --cov-report=term-missing
-```
+| Phần | Phụ trách |
+| --- | --- |
+| Dữ liệu, matching, roadmap, phỏng vấn, link | [A] |
+| Schema, dependencies, CI/Docker, kiến trúc | [B] |
+| Streamlit UI, hồ sơ, export, demo | [C] |
 
-`tests/` dùng fixture PDF/DOCX tổng hợp. Bài kiểm tra không cần truy cập link tài liệu; script kiểm tra liên kết là công cụ dev riêng.
-
-Kiểm thử giao diện bằng Chromium, gồm luồng bàn phím, bố cục, liên kết và axe:
-
-```powershell
-.\.venv\Scripts\python.exe -m playwright install chromium
-.\.venv\Scripts\python.exe -m pytest -q browser_tests
-```
-
-CI cài Chromium và chạy bộ browser riêng; nếu Chromium không khởi động được, CI báo lỗi thay vì bỏ qua bài test.
-
-Chạy kiểm tra nhanh các hàm lõi không cần mở giao diện:
-
-```powershell
-.\.venv\Scripts\python.exe scripts\smoke.py
-.\.venv\Scripts\python.exe tests\test_recommendation_quality.py
-.\.venv\Scripts\python.exe scripts\validate_question_bank.py
-```
-
-`requirements.lock` là bộ phiên bản runtime được phân giải có hash cho Python 3.12. CI/test dùng `requirements-dev.lock` gồm cả runtime và công cụ kiểm thử. [Hướng dẫn cài sạch](docs/verification/clean-install.md) ghi các lệnh cài đặt tái lập.
-
-Schema bằng chứng 2.0 được mô tả trong [hợp đồng dữ liệu](docs/verification/schema-contract-v2.md). Chạy `python scripts/validate_evidence_schema.py` để kiểm tra cấu trúc Role–Skill–Level; cổng đầy đủ `--require-complete-evidence` hiện còn pending vì thiếu dẫn chứng nội dung, provenance và review độc lập. Xem [tiến độ căn chỉnh và các khoảng trống theo bốn nghề demo](docs/verification/constructive-alignment-progress-2026-10-26.md) trước khi diễn giải các tỷ lệ coverage như bằng chứng đã xác minh.
-
-Cổng biên tập riêng cho bốn nghề demo: `python scripts/audit_demo_role_quality.py --strict` hoặc `python -m pytest tests/test_demo_role_quality.py --runxfail`. Các lệnh nghiêm ngặt hiện trả lỗi đúng những thiếu hụt đã ghi; test thường hiển thị bốn `xfail`, không phải bốn role đã đạt. [Báo cáo Bước 1](docs/verification/demo-role-quality-gate-2026-10-26.md) liệt kê từng nhóm lỗi và cách so sánh trước/sau khi sửa.
-
-[Bàn giao sửa dữ liệu và logic trước giai đoạn giao diện](docs/verification/remediation-handoff-2026-10-26.md) là snapshot hiện hành sau Bước 1; báo cáo Bước 1 giữ vai trò baseline lịch sử.
-
-Kiểm kê cấu trúc và backlog theo từng record bằng `python scripts/audit_data_readiness.py --require-current-link-attestation --json-output data-readiness.json`. Cờ này so tập URL hiện tại với [lời kiểm tra thủ công đã ghi](Data/link_review_attestation.json); nó không mở lại URL hoặc duyệt nội dung. Chạy `python scripts/generate_priority_review.py` để tạo lại hàng đợi nghề/kỹ năng và `python scripts/audit_module_paths.py` để thử toàn bộ 131 nghề qua các module lõi. Gói nguồn **ứng viên local** được tạo bằng `python scripts/build_release.py` (ZIP, tar.gz, `SHA256SUMS` trong `dist/`); [ghi chú ứng viên 0.4.0](docs/release-notes/v0.4.0-candidate.md) nêu các cổng còn cần đóng trước khi công bố.
-
-## Docker
-
-```bash
-docker build -t ai-career-coach:local .
-docker run --rm -p 8501:8501 ai-career-coach:local
-```
-
-Health endpoint: `http://localhost:8501/_stcore/health`. Image dùng Python 3.12, chạy bằng user không phải root và cài `requirements.lock` runtime có kiểm tra hash.
-
-## Demo
-
-Màn hình “Dùng hồ sơ mẫu tổng hợp” có ba hồ sơ minh họa gắn với role thật trong catalog. Mỗi hồ sơ được đánh dấu synthetic; không mô tả người thật, kinh nghiệm thật hay kết quả tuyển dụng. Xem [docs/demo.md](docs/demo.md) để có kịch bản và lời dẫn.
-
-## Tài liệu và dữ liệu
-
-- [Hợp đồng API](docs/interface.md)
-- [Sơ đồ kiến trúc](docs/architecture.md)
-- [Chất lượng và giới hạn dữ liệu](docs/data_quality.md)
-- [Kiểm kê giấy phép và provenance](LICENSES.md)
-- [Checklist PoF local](docs/pof-checklist.md)
-- [Kiểm kê mức sẵn sàng dữ liệu](docs/verification/data-readiness-2026-10-26.md)
-- [Danh sách ưu tiên review theo 131 nghề và kỹ năng](docs/verification/priority-review-2026-10-26.md)
-- [Kiểm tra đường đi của 131 nghề qua các module](docs/verification/module-paths-2026-10-26.md)
-- [Rà lại Level học liệu và nguồn gốc quyết định](docs/reviews/resource-level-scope-2026-10-26.md)
-- [Kiểm tra tình trạng URL học liệu](docs/reports/links-live-2026-10-26.md)
-- [Đối chiếu rubric B3/PoF và điểm nghẽn](docs/verification/b3-pof-gap-matrix.md)
-- [Bàn giao sau sửa dữ liệu và logic](docs/verification/remediation-handoff-2026-10-26.md)
-
-## Đóng góp
-
-Xem [CONTRIBUTING.md](CONTRIBUTING.md). Hãy dùng fixture tổng hợp, giữ metadata nguồn và không đánh dấu resource/câu hỏi là reviewed nếu chưa có căn cứ.
-
-## License và cộng đồng
-
-Mã nguồn được phân phối theo [MIT License](LICENSE), giữ nguyên tên chủ bản quyền đang có trong tệp license. Trạng thái license của dữ liệu role, câu hỏi và tài liệu nguồn chưa được xác nhận đầy đủ; xem [LICENSES.md](LICENSES.md) trước khi phân phối lại bộ dữ liệu.
-
-Repository [GitHub công khai](https://github.com/LinhLaSieuSao/AI-Career-Coach) có [Issues](https://github.com/LinhLaSieuSao/AI-Career-Coach/issues) để báo lỗi và [Discussions](https://github.com/LinhLaSieuSao/AI-Career-Coach/discussions) để trao đổi. Bản `main` đã có [CI thành công](https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/runs/40157639170) ở commit `8827a81`; kết quả đó không kiểm chứng những thay đổi chưa công bố trong workspace. Kiểm tra ngày 25-10-2026 chưa thấy tag hoặc release công khai. [Snapshot bằng chứng](docs/verification/github-public-audit-2026-10-25.json) ghi rõ phạm vi kiểm tra.
+[Kịch bản demo](docs/demo.md) · [Checklist PoF](docs/pof-checklist.md) · [MIT License](LICENSE) · [Đóng góp](CONTRIBUTING.md) · [GitHub Discussions](https://github.com/LinhLaSieuSao/AI-Career-Coach/discussions). Video và slide có thể gắn tại đây khi nhóm phát hành.
