@@ -1,73 +1,118 @@
 # AI Career Coach
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB)](.python-version)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B)](https://streamlit.io/)
-[![Docker](https://img.shields.io/badge/Docker-ready-2496ED)](Dockerfile)
+[![Streamlit](https://img.shields.io/badge/Streamlit-web%20app-FF4B4B)](https://streamlit.io/)
 [![CI](https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/workflows/ci.yml/badge.svg)](https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/workflows/ci.yml)
-[![pytest](https://img.shields.io/badge/tests-pytest-0A9EDC)](tests/)
 [![MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-AI Career Coach là ứng dụng Streamlit chạy local để đối chiếu kỹ năng với yêu cầu nghề, lập lộ trình học và luyện phỏng vấn. Phần phỏng vấn có thể nhận nhận xét từ LLM do người dùng cấu hình; nếu không có key hoặc dịch vụ lỗi, ứng dụng chấm gần đúng theo từ khóa rubric. Các phần khác dùng quy tắc và dữ liệu trong repo.
+AI Career Coach là web Streamlit giúp người học đối chiếu kỹ năng với một vị trí nghề nghiệp, tìm khoảng cách cần học, xem học liệu và luyện phỏng vấn. Phần hồ sơ, gợi ý nghề và lộ trình dựa trên quy tắc cùng dữ liệu trong repo. Riêng câu trả lời phỏng vấn có thể được nhận xét bằng LLM khi người dùng tự cấu hình dịch vụ; không có cấu hình vẫn dùng được chế độ chấm rubric offline.
 
-![Giao diện trang chủ AI Career Coach](docs/screenshots/landing.png)
+## 1. Vấn đề
 
-## Bài toán
+Một kỹ năng có thể xuất hiện dưới nhiều tên trong CV, mô tả công việc (JD) và danh mục nghề. Người học vì thế khó biết mình đã có kỹ năng nào, còn thiếu gì so với vị trí quan tâm và nên học theo thứ tự nào. Một danh sách khóa học đơn thuần cũng không cho biết phải thực hành ra sao hoặc bằng chứng nào cho thấy mình đã tiến bộ.
 
-Tên kỹ năng trong CV và mô tả công việc (JD) thường khác nhau, khiến người học khó biết mình đã có gì và cần học gì. Ứng dụng hỗ trợ tự rà soát và định hướng học tập, không dự đoán khả năng trúng tuyển. CV được xử lý trong phiên Streamlit và không bao giờ gửi tới LLM. Khi cấu hình LLM cho phỏng vấn, chỉ nội dung câu hỏi, rubric, red flags và câu trả lời được gửi tới nhà cung cấp đã chọn. Khi triển khai trên máy chủ, người vận hành cần đánh giá riêng quyền riêng tư của môi trường đó.
+Ứng dụng hỗ trợ **tự rà soát và lập kế hoạch học**. Điểm số trong web là chỉ báo theo quy tắc, không phải xác suất được tuyển dụng hay chứng nhận năng lực.
 
-## Kiến trúc
+## 2. Giải pháp
+
+Từ CV PDF/DOCX hoặc kỹ năng nhập tay, web trích và chuẩn hóa tên kỹ năng, cho người dùng sửa kết quả rồi đối chiếu với yêu cầu vị trí hoặc JD. Kết quả gồm kỹ năng đã có, khoảng cách theo mức thành thạo, lộ trình học, tài liệu và câu hỏi phỏng vấn. Người dùng xác nhận kỹ năng trước khi đánh giá và khai báo level khi muốn xem khoảng cách theo mức thành thạo.
+
+Ba điểm thiết kế chính:
+
+- **Có thể chạy không cần API key:** matching, lộ trình và nhận xét phỏng vấn offline hoạt động bằng dữ liệu trong repo.
+- **Học đi cùng thực hành:** lớp `academic_curriculum.json` nối học liệu nền tảng, phạm vi học, các bước luyện tập và đầu ra để xin phản hồi cho 410 kỹ năng trong danh mục nghề.
+- **Nêu rõ căn cứ và giới hạn:** web phân biệt tài liệu đã review, tài liệu chỉ bao phủ một phần, thời lượng chưa biết và điểm rubric tham khảo.
+
+## 3. Luồng project
 
 ```mermaid
 flowchart LR
-    CV[CV PDF/DOCX hoặc kỹ năng nhập tay] --> Parse[Parser và alias normalizer]
-    Parse --> Profile[Profile và schema]
-    Profile --> Match[Presence, level gap và RIASEC matcher]
-    Match --> Roadmap[Lộ trình và học liệu]
-    Match --> Interview[Luyện phỏng vấn]
-    Roadmap --> Export[Báo cáo Markdown/CSV/JSON]
+    A[CV PDF/DOCX hoặc kỹ năng nhập tay] --> B[Trích xuất và chuẩn hóa alias]
+    B --> C[Người dùng rà soát kỹ năng và khai báo level]
+    C --> D[Chọn vị trí, sở thích hoặc nhập JD]
+    D --> E[So khớp kỹ năng và tính khoảng cách]
+    E --> F[Lộ trình, học liệu và bài thực hành]
+    E --> G[Câu hỏi phỏng vấn và nhận xét rubric]
+    F --> H[Báo cáo Markdown / CSV / JSON]
+    G --> H
 ```
 
-[Mô tả kiến trúc và giới hạn dữ liệu](docs/architecture.md) · [Hợp đồng giao diện](docs/interface.md)
+Web có hai bước nhập liệu trước khi hiện năm tab kết quả: **Tóm tắt → Khoảng cách → Lộ trình → Tài liệu → Phỏng vấn**. Người dùng có thể bắt đầu nhanh bằng một trong ba hồ sơ tổng hợp ở `data/demo_profiles.json`; các hồ sơ này không mô tả người thật.
 
-## Cơ chế lõi
+## 4. Kết quả demo và giao diện
 
-- `skill_extractor.py` so khớp cụm từ và alias trong `data/skill_aliases.json`; RapidFuzz chỉ hỗ trợ lỗi chính tả gần đúng trong văn bản CV. Người dùng rà soát các kỹ năng trước khi xác nhận.
-- Presence score đo phần kỹ năng role đã nhận diện theo trọng số. Gap theo level dùng mức 0–3 do người dùng khai báo; app yêu cầu xác nhận trước khi coi level chưa khai báo là 0 cho lần tính.
-- Điểm gợi ý role kết hợp **75% skill fit + 25% RIASEC interest fit**. Khi skill fit dưới **15%**, điểm tổng bị chặn ở **5/100**. Đây là heuristic để khám phá role, không phải xác suất tuyển dụng.
-- JD được tách nhóm bắt buộc/ưu tiên khi tiêu đề rõ ràng; người dùng xác nhận lại kỹ năng được trích trước khi đối chiếu.
+Kịch bản offline sẵn có trong [`scripts/demo_smoke.py`](scripts/demo_smoke.py) nhập một CV và JD tổng hợp cho vị trí **Data Analyst**, khai báo level, tạo câu hỏi phỏng vấn rồi gửi câu trả lời mẫu. Lần kiểm tra tích hợp đã cho kết quả:
 
-## Giới hạn và độ tin cậy
+| Bước | Kết quả quan sát được |
+| --- | --- |
+| Nhập hồ sơ | Nhận diện được SQL, Python, Excel và Power BI từ dữ liệu mẫu. |
+| Đối chiếu JD | Khớp **4/4 kỹ năng bắt buộc** trong JD mẫu. |
+| Lộ trình | Tab lộ trình hiển thị học liệu và bước học cho khoảng cách kỹ năng. |
+| Phỏng vấn | Tạo câu hỏi và trả nhận xét rubric offline; điểm phụ thuộc câu hỏi được chọn, không phải điểm tuyển dụng. |
+| Riêng tư trong demo | Kịch bản chặn mọi request ra ngoài và xác nhận không gửi CV hay câu trả lời lên mạng. |
 
-PDF scan không có OCR; CV tối đa 10 MiB và PDF chỉ đọc 10 trang đầu. Học liệu có trạng thái review, nguồn và phạm vi level riêng; URL mở được không chứng minh nội dung phù hợp. Điểm phỏng vấn đo mức đạt rubric, chỉ mang tính tham khảo; chấm offline theo từ khóa là ước lượng thô. Dữ liệu nghề, học liệu và đáp án còn cần rà soát chuyên môn và quyền phân phối; xem [LICENSES.md](LICENSES.md).
+Năm tab có nhiệm vụ khác nhau:
 
-## Dữ liệu
+| Tab | Người dùng xem hoặc làm gì? |
+| --- | --- |
+| **Tóm tắt** | Xem hồ sơ đã xác nhận, mức khớp kỹ năng và gợi ý vị trí. |
+| **Khoảng cách** | So sánh kỹ năng hiện có với yêu cầu vị trí, kể cả chênh lệch level 0–3. |
+| **Lộ trình** | Xem thứ tự học, tài liệu nền tảng, bài thực hành và thời lượng khi có căn cứ. |
+| **Tài liệu** | Mở nguồn học, xem phạm vi, trạng thái review và tài liệu thực hành bổ sung. |
+| **Phỏng vấn** | Tạo bộ câu hỏi, gửi câu trả lời, xem từng ý rubric đạt/chưa đạt và gợi ý cải thiện. |
 
-Catalog hiện có **131 vị trí**, chia thành **15 nhóm nghề**. Ngân hàng **766 câu hỏi** nằm trong **10 phân hệ** ở `data/interview_questions/`. `data/roles.json`, `skill_catalog.json`, `skill_aliases.json`, `resources.json`, `academic_curriculum.json`, `interests.json` và `role_families_riasec.json` là dữ liệu mà web đang dùng; lớp academic curriculum nối giáo trình/học liệu và kế hoạch thực hành theo từng kỹ năng mà không thay đổi lịch sử review tài liệu gốc. Ba hồ sơ minh họa tổng hợp ở `demo_profiles.json`.
+[Kịch bản trình diễn khoảng 7 phút](docs/demo.md) mô tả thứ tự thao tác trên giao diện hiện tại.
 
-## Cấu trúc repo
+## 5. Tính năng
+
+| Nhóm | Khả năng hiện có |
+| --- | --- |
+| **Đầu vào** | CV PDF/DOCX tối đa 10 MiB, kỹ năng nhập tay, kinh nghiệm, sở thích, JD và ba hồ sơ mẫu. PDF chỉ đọc tối đa 10 trang đầu. |
+| **Trích kỹ năng** | So khớp cụm từ và alias; RapidFuzz hỗ trợ lỗi chính tả gần đúng. Người dùng có thể thêm, bỏ và xác nhận kỹ năng. |
+| **Đối chiếu vị trí** | Presence score theo trọng số kỹ năng; khoảng cách theo level tự khai báo 0–3. |
+| **Gợi ý nghề** | Kết hợp 75% skill fit với 25% RIASEC interest fit; khi skill fit dưới 15%, điểm tổng bị chặn ở 5/100. |
+| **Đối chiếu JD** | Tách kỹ năng bắt buộc/ưu tiên khi JD có tiêu đề rõ và cho rà soát lại kỹ năng được trích. |
+| **Lộ trình và học liệu** | Danh mục 131 vị trí; giáo trình/học liệu nền tảng cho 410 kỹ năng, kèm bước học, bài thực hành và đầu ra. Không tự đặt số tuần khi nguồn không có thời lượng đáng tin. |
+| **Phỏng vấn** | Ngân hàng 766 câu hỏi trong 10 phân hệ; nhận xét theo rubric bằng LLM tùy chọn hoặc bằng so khớp từ khóa offline. |
+| **Xuất kết quả** | Báo cáo Markdown, CSV hoặc JSON; không xuất toàn văn CV. |
+
+## 6. Cách hoạt động
+
+`modules/cv_parser.py` đọc CV; `modules/skill_extractor.py` dùng `data/skill_aliases.json` để chuẩn hóa kỹ năng. `modules/profile.py` tạo hồ sơ đã xác nhận. `modules/matcher.py` tính presence, khoảng cách level và gợi ý vị trí; `modules/recommender.py` lập lộ trình từ dữ liệu tài liệu đã ghép với `modules/curriculum.py`. `modules/interview.py` chọn câu hỏi và nhận xét câu trả lời. `app.py` nối các bước này với giao diện Streamlit.
+
+Điểm presence phản ánh phần kỹ năng của vị trí đã nhận diện theo trọng số. Điểm theo level dùng mức 0–3 người dùng tự khai báo; app yêu cầu xác nhận trước khi coi level chưa khai báo là 0 cho lần tính. Cả hai đều là phép đối chiếu với catalog, không đo khả năng làm việc ngoài thực tế.
+
+Học liệu có trạng thái và phạm vi review riêng. Lớp giáo trình học thuật bổ sung kiến thức nền và bài tập mà không sửa lịch sử review của nguồn cũ. Đọc xong tài liệu không đồng nghĩa đã đạt level. Với tài liệu không công bố thời lượng, lộ trình trình bày thứ tự học thay vì bịa số tuần hoàn thành.
+
+Sau khi gửi câu trả lời phỏng vấn, mã ứng dụng tính điểm từ các tiêu chí rubric. Khi có LLM, dịch vụ trả nhận xét và bằng chứng để mã kiểm tra; khi thiếu key hoặc dịch vụ lỗi, web chuyển sang ước lượng offline theo từ khóa. LLM chỉ nhận **câu hỏi, rubric, red flags và tối đa 3.000 ký tự câu trả lời**; CV và hồ sơ không nằm trong request đó. Giao diện giới hạn 20 lượt gọi LLM mỗi phiên.
+
+### Cấu trúc repo
 
 ```text
-app.py                     Streamlit UI
-assets/                    style.css, site.js
-modules/                   schemas, catalog, parser, extractor, profile,
-                           matcher, recommender, interview, export
-data/                      role, skill, RIASEC, resource và question catalogs
-scripts/check_links.py     kiểm tra URL học liệu khi cần
-tests/                     unit tests và Streamlit AppTest
-docs/                      architecture, interface, demo, pof-checklist, screenshots
-.github/workflows/ci.yml   pytest, lint, Docker health và secret check
-requirements.lock          một tập phiên bản có hash cho local, CI và Docker
+app.py                       Giao diện Streamlit và luồng người dùng
+assets/style.css, site.js     Style và tương tác đang được web sử dụng
+modules/                     Parser, profile, matcher, curriculum, recommender,
+                             interview, export và các schema
+data/                        Danh mục nghề, kỹ năng, học liệu, curriculum, câu hỏi
+brand_assets/                Ảnh nhận diện của project
+components/ui/, lib/         Mã React/TypeScript tham khảo; web Streamlit hiện không build các file này
+scripts/                     Kiểm tra link, sinh curriculum, chạy demo offline
+tests/                       Unit test và Streamlit AppTest có sẵn
+docs/                        Kiến trúc, giao diện, demo và tài liệu kiểm chứng
+requirements.txt             Thư viện trực tiếp cho web
+requirements-dev.txt         Bổ sung pytest và Ruff cho phát triển
+requirements.lock            Phiên bản và hash dùng khi cài đặt, CI và Docker
 ```
 
-## Chạy ứng dụng
+## 7. Chạy demo
 
-Cần Docker hoặc Python **3.12**. Với Docker:
+**Cách nhanh với Docker:** cần Docker Desktop hoặc Docker Engine có Compose.
 
 ```bash
 docker compose up --build
 ```
 
-Mở `http://localhost:8501`. Với local trên Windows:
+**Chạy local:** cần Python **3.12**. Trên Windows PowerShell:
 
 ```powershell
 py -3.12 -m venv .venv
@@ -75,28 +120,39 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
-Trên macOS/Linux thay hai lệnh đầu bằng `python3.12 -m venv .venv` và `.venv/bin/python -m pip install --require-hashes -r requirements.lock`, rồi chạy `.venv/bin/python -m streamlit run app.py`.
+Trên macOS/Linux:
 
-## Bật nhận xét AI
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install --require-hashes -r requirements.lock
+.venv/bin/python -m streamlit run app.py
+```
 
-- Trong mục **Cấu hình nhận xét AI** của phần Luyện phỏng vấn, dán API key và chọn base URL/model. Key chỉ giữ trong phiên Streamlit.
-- Đặt `LLM_API_KEY`, `LLM_BASE_URL`, `LLM_MODEL` trong môi trường hoặc `st.secrets`. Ví dụ PowerShell: `$env:LLM_API_KEY="..."`; bash: `export LLM_API_KEY="..."`. Docker Compose chuyển tiếp ba biến này; xem `.env.example` để biết URL mẫu. Mặc định dùng Groq `https://api.groq.com/openai/v1` và model `llama-3.3-70b-versatile`.
-- Với Ollama local, dùng base URL `http://localhost:11434/v1` và model có sẵn trong Ollama; không cần key.
+Mở **http://localhost:8501**, chọn hồ sơ mẫu, rà soát kỹ năng và level rồi xem lần lượt năm tab. Muốn chạy kịch bản nhập liệu tự động **không cần API key**, dùng `python scripts/demo_smoke.py` trong môi trường đã cài dependencies. Chạy bộ test hiện có bằng `python -m pytest -q tests/`.
 
-Không có key vẫn dùng được phần phỏng vấn với chấm offline. Dịch vụ LLM lỗi cũng tự chuyển sang offline. Tối đa 20 lượt nhận xét qua LLM trong một phiên; câu trả lời được cắt còn 3.000 ký tự trước khi gửi.
+**Nhận xét LLM là tùy chọn.** Trong tab Phỏng vấn, mở **Cấu hình nhận xét AI** để nhập key, base URL và model; key nhập tại đây chỉ giữ trong phiên Streamlit. Cũng có thể đặt `LLM_API_KEY`, `LLM_BASE_URL`, `LLM_MODEL` qua biến môi trường hoặc Streamlit secrets; Docker Compose chuyển tiếp ba biến này. Xem [`.env.example`](.env.example) để biết các URL mẫu. Không có key, web chấm rubric offline. Nếu dùng dịch vụ chạy trên máy chủ cùng máy với Docker, cần chọn địa chỉ truy cập được **từ trong container** thay vì mặc định coi `localhost` là máy chủ.
 
-`requirements.txt` liệt kê thư viện web, `requirements-dev.txt` thêm pytest/ruff, `requirements-ai.txt` dành cho mở rộng sau này. Lock duy nhất chứa cả runtime và công cụ kiểm thử để ba môi trường dùng cùng phiên bản.
+`requirements.txt` là khai báo thư viện trực tiếp; `requirements-dev.txt` chỉ thêm công cụ phát triển. `requirements.lock` chốt cả môi trường runtime và test bằng phiên bản kèm hash; Docker và CI cài từ file này. Khi đổi dependency, cần tạo lại lock và chạy CI theo hướng dẫn trong [tài liệu đóng góp](CONTRIBUTING.md).
 
-## Kiểm thử và CI
+## 8. Giới hạn của đề tài
 
-Chạy `python -m pytest -q tests/`. CI chạy tám file test và Docker health check, đồng thời quét tên file nhạy cảm trong từng layer image. Bước Ruff hiện chỉ báo thông tin để nhóm xử lý dần các cảnh báo cũ.
+- CV dạng PDF scan chưa có OCR; tệp tối đa 10 MiB và PDF chỉ đọc 10 trang đầu. Kỹ năng trích xuất có thể sai hoặc bỏ sót, nên bước rà soát của người dùng là bắt buộc.
+- Catalog nghề, level và điểm gợi ý là mô hình tham khảo. Chúng không xác nhận trình độ, dự đoán trúng tuyển hoặc thay tư vấn nghề nghiệp cá nhân.
+- Học liệu nền tảng có thể bằng tiếng Anh, có điều kiện truy cập và không bao phủ công cụ cụ thể của mọi ngành. Link mở được không chứng minh nội dung phù hợp; luật, thuế, y tế và an toàn cần nguồn Việt Nam hiện hành cùng người có chuyên môn.
+- Ngân hàng 766 câu hỏi hiện ở trạng thái **chưa review nội dung chuyên môn**. Điểm rubric offline dựa trên từ khóa nên có thể đánh giá thiếu hoặc quá mức; nhận xét LLM cũng có thể sai. Người dùng cần tự kiểm tra đáp án và bằng chứng.
+- Nếu cấu hình LLM bên ngoài, nội dung câu trả lời phỏng vấn được gửi tới nhà cung cấp đã chọn. Trước khi dùng dữ liệu thật hoặc triển khai trên máy chủ, cần xem chính sách riêng tư của môi trường đó. Chế độ offline không gửi request LLM.
+- Kết quả hồ sơ chỉ nằm trong phiên Streamlit; app không lưu CV vào cơ sở dữ liệu và không tự khôi phục phiên sau khi mất trạng thái.
 
-## Nhóm, demo và giấy phép
+## 9. Tài liệu và liên kết
 
-| Phần | Phụ trách |
+| Tài liệu | Nội dung |
 | --- | --- |
-| Dữ liệu, matching, roadmap, phỏng vấn, link | [A] |
-| Schema, dependencies, CI/Docker, kiến trúc | [B] |
-| Streamlit UI, hồ sơ, export, demo | [C] |
+| [Kiến trúc](docs/architecture.md) | Thành phần, luồng dữ liệu và giới hạn. |
+| [Hợp đồng giao diện](docs/interface.md) | Đầu vào, đầu ra và hành vi các module. |
+| [Kịch bản demo](docs/demo.md) | Trình tự trình diễn và dữ liệu mẫu. |
+| [Checklist PoF](docs/pof-checklist.md) | Phạm vi xác minh của đề tài. |
+| [Nguồn và quyền sử dụng](LICENSES.md) | Ghi chú về tài liệu, dữ liệu và giấy phép liên quan. |
+| [Đóng góp](CONTRIBUTING.md) | Cách phát triển và kiểm tra thay đổi. |
+| [CI](https://github.com/LinhLaSieuSao/AI-Career-Coach/actions/workflows/ci.yml) | Trạng thái test, lint và Docker trên GitHub. |
 
-[Kịch bản demo](docs/demo.md) · [Checklist PoF](docs/pof-checklist.md) · [MIT License](LICENSE) · [Đóng góp](CONTRIBUTING.md) · [GitHub Discussions](https://github.com/LinhLaSieuSao/AI-Career-Coach/discussions). Video và slide có thể gắn tại đây khi nhóm phát hành.
+Mã nguồn phát hành theo [MIT License](LICENSE). Thảo luận và góp ý tại [GitHub Discussions](https://github.com/LinhLaSieuSao/AI-Career-Coach/discussions).

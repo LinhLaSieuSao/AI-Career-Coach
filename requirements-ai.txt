@@ -1,2 +1,0 @@
-# Optional AI extensions can be listed here when an implementation uses them.
-# The current application runs locally with deterministic matching and no LLM API.
