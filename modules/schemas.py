@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import Literal
+
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, field_validator
 
 
@@ -61,3 +63,20 @@ class InterviewFeedback(_Record):
     content_reviewed: bool
     quality: str
     quality_label: str
+
+
+class CriterionVerdict(_Record):
+    point: str
+    met: bool
+    evidence: str = ""
+
+
+class AnswerReview(_Record):
+    score: float = Field(ge=0, le=10)
+    criteria: list[CriterionVerdict]
+    red_flags_hit: list[str] = Field(default_factory=list)
+    feedback: str
+    improvement: str = ""
+    source: Literal["llm", "offline_rubric"]
+    model: str | None = None
+    fallback_reason: str | None = None

@@ -2,6 +2,19 @@
 
 Thay đổi quan trọng của dự án được ghi theo mốc. `pyproject.toml` khai báo 0.4.0 để chuẩn bị gói ứng viên local; chưa có tag/release công khai.
 
+## 27-10-2026 — nhận xét câu trả lời phỏng vấn
+
+- Thêm nhận xét theo rubric của từng câu hỏi: điểm do code tính, bằng chứng cho từng ý, red flags và gợi ý cải thiện.
+- Hỗ trợ endpoint LLM OpenAI-compatible khi cấu hình; tự chuyển sang chấm từ khóa offline khi thiếu key hoặc dịch vụ lỗi. Giới hạn hai request mỗi lượt và 20 lượt LLM mỗi phiên.
+- Chỉ gửi nội dung câu hỏi, rubric, red flags và câu trả lời tới nhà cung cấp đã chọn; CV và hồ sơ không được gửi.
+
+## 27-10-2026 — lộ trình và học liệu cho toàn bộ danh mục nghề
+
+- Bổ sung `data/academic_curriculum.json`: 410 kỹ năng của 131 vị trí được gắn giáo trình/học liệu học thuật, phạm vi nội dung, bốn bước học–luyện, đầu ra thực hành và phản hồi.
+- Thêm `modules/curriculum.py` để ghép lớp học liệu vào dữ liệu hiện có mà không sửa/xóa lịch sử review; lộ trình thường, lộ trình theo Level và thẻ gợi ý khóa học đều dùng chung lớp này.
+- Chọn tài liệu nền tảng theo ngành; nguồn công cụ cụ thể giữ vai trò thực hành bổ sung. Nêu rõ tài liệu tiếng Anh, quyền truy cập, phạm vi/jurisdiction; không suy ra Level đạt được hoặc bịa thời lượng.
+- Làm gọn phần học liệu trên giao diện và đổi nội dung hướng dẫn cũ để không còn báo thiếu tài liệu cho kỹ năng thuộc danh mục nghề.
+
 ## 26-10-2026 — hoàn thiện bản nháp dữ liệu demo và nhãn bằng chứng
 
 - Thay 3 template Sales và thêm 14 câu đúng Role×Skill; 39/39 cặp ở bốn nghề demo có câu với bối cảnh, rubric L1–L3 và đáp án tham khảo. 22 câu có review metadata cũ được hạ về `unreviewed` sau khi bổ sung rubric AI, giữ metadata cũ trong lịch sử; toàn ngân hàng 766 câu, 0 template, 766 chờ duyệt nội dung hiện hành.

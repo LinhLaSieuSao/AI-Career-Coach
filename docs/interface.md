@@ -18,10 +18,13 @@ Hồ sơ không bắt buộc chọn role ngay. CV không tự suy ra level. Khi 
 | `match_cv_to_jd` | CV text, JD text | kỹ năng khớp/thiếu |
 | `build_roadmap`, `build_timed_roadmap` | gap, học liệu, giờ/tuần | roadmap và phần chưa giải quyết |
 | `get_questions`, `get_question_feedback` | role, câu hỏi | câu hỏi và khung tự rà soát |
+| `review_answer` | ID câu hỏi, câu trả lời, tùy chọn key/base URL/model | `AnswerReview` dạng dictionary: điểm rubric, từng ý và bằng chứng, red flags, nhận xét, nguồn |
 | `export_report` | profile, gap, roadmap | Markdown, CSV hoặc JSON |
 
-`modules/schemas.py` có `UserProfile`, `RoleRequirement`, `GapAnalysisResult`, `InterviewFeedback`. Các model cho phép metadata bổ sung nhưng kiểm tra những trường cốt lõi; API hiện tại vẫn trả dictionary để tương thích UI.
+`modules/schemas.py` có `UserProfile`, `RoleRequirement`, `GapAnalysisResult`, `InterviewFeedback`, `CriterionVerdict` và `AnswerReview`. `AnswerReview` giới hạn điểm 0–10 và ghi `source` là `llm` hoặc `offline_rubric`; API trả dictionary để tương thích UI. Các model cho phép metadata bổ sung nhưng kiểm tra những trường cốt lõi.
+
+Mỗi kỹ năng trong 131 vị trí có một giáo trình/học liệu nền tảng và kế hoạch bốn bước: đọc nội dung liên quan, làm bài tập áp dụng, tự đối chiếu đầu ra, rồi xin phản hồi. Tài liệu nền không được xem là chứng nhận Level; nguồn không công bố thời lượng thì UI hiển thị lộ trình tự học không gán số tuần. Với lĩnh vực chịu quy định hoặc cần thực hành có giám sát, lộ trình nhắc người học đối chiếu nguồn Việt Nam hiện hành và xin hướng dẫn chuyên môn.
 
 ## Giới hạn giao diện
 
-Điểm presence, gap theo level và điểm gợi ý role là ba phép tính khác nhau. JD chỉ được tự phân nhóm khi có tiêu đề rõ; người dùng xác nhận lại. Tài liệu và câu hỏi có nhãn review/bằng chứng; URL còn hoạt động không chứng nhận nội dung hoặc quyền sử dụng. Không có điểm tự động cho câu trả lời phỏng vấn.
+Điểm presence, gap theo level và điểm gợi ý role là ba phép tính khác nhau. JD chỉ được tự phân nhóm khi có tiêu đề rõ; người dùng xác nhận lại. Tài liệu và câu hỏi có nhãn review/bằng chứng; URL còn hoạt động không chứng nhận nội dung hoặc quyền sử dụng. Điểm câu trả lời phỏng vấn là ước lượng mức đạt rubric, không phải đánh giá tuyển dụng.

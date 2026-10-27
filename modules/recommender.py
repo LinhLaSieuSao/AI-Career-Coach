@@ -15,6 +15,7 @@ from typing import Any
 from urllib.parse import urlsplit, urlunsplit
 
 from .skill_extractor import canonical_skill, normalize_skill
+from .curriculum import merge_academic_curriculum
 
 
 _DATA_DIR = Path(__file__).resolve().parent.parent / "data"
@@ -75,6 +76,10 @@ def _resource_tokens(resource: Mapping[str, Any]) -> list[str]:
     if isinstance(resource_id, str) and resource_id.strip():
         tokens.append("id:" + resource_id.strip())
     return tokens
+
+
+def _is_academic_foundation(resource: Mapping[str, Any]) -> bool:
+    return isinstance(resource, Mapping) and resource.get("learning_role") == "academic_foundation"
 
 
 def _resource_catalog(
@@ -147,7 +152,11 @@ def _resource_catalog(
         has_reviewed = any(resource_review_status(record) == "reviewed" for _, record, _ in candidates)
         selected = [
             candidate for candidate in candidates
-            if not (has_reviewed and resource_review_status(candidate[1]) == "partial")
+            if not (
+                has_reviewed
+                and resource_review_status(candidate[1]) == "partial"
+                and not _is_academic_foundation(candidate[1])
+            )
         ]
         for candidate in selected:
             _, resource, tokens = candidate
@@ -166,6 +175,15 @@ def _resource_catalog(
             group_keys[identity] = key
             catalog[key] = {**deepcopy(dict(resource)), "key": key, "skills": []}
         key = group_keys[identity]
+        if _is_academic_foundation(resource):
+            catalog[key].update({
+                field: deepcopy(resource[field])
+                for field in (
+                    "academic_source", "academic_label", "academic_source_kind", "academic_basis", "learning_role",
+                    "learning_scope", "learning_plan", "verified_companion_url",
+                    "verified_companion_title", "practice_url", "practice_title", "jurisdiction",
+                ) if field in resource
+            })
         if key not in refs[skill]:
             refs[skill].append(key)
             catalog[key]["skills"].append(skill)
@@ -271,6 +289,9 @@ def get_course_recommendations(missing_skills: Iterable[str]) -> list[dict[str, 
         return []
     with (_DATA_DIR / "resources.json").open(encoding="utf-8") as source:
         resources = json.load(source)
+    curriculum_path = _DATA_DIR / "academic_curriculum.json"
+    if curriculum_path.is_file():
+        resources = merge_academic_curriculum(resources)
     roadmap = build_roadmap(skills, resources, weeks=1)
     return [
         {
@@ -429,6 +450,8 @@ def summarize_resource_reviews(resources: Mapping) -> dict:
             continue
         for resource in group["resources"]:
             if isinstance(resource, Mapping):
+                if _is_academic_foundation(resource):
+                    continue
                 counts[resource_review_status(resource)] += 1
     return {
         "mapping_count": sum(counts.values()),
@@ -482,7 +505,7 @@ def is_recommendable_resource(
         return False
     if resource_review_status(resource) not in RECOMMENDABLE_REVIEW_STATUSES:
         return False
-    if skill is not None and not has_current_specialist_evidence(resource, skill):
+    if skill is not None and not _is_academic_foundation(resource) and not has_current_specialist_evidence(resource, skill):
         return False
     return not require_verified or resource.get("verified") is True
 
@@ -503,7 +526,7 @@ def resource_exclusion_reason(
         return "unsuitable_content"
     if status not in RECOMMENDABLE_REVIEW_STATUSES:
         return "unreviewed_content"
-    if skill is not None and not has_current_specialist_evidence(resource, skill):
+    if skill is not None and not _is_academic_foundation(resource) and not has_current_specialist_evidence(resource, skill):
         return "specialized_source_required"
     if require_verified and resource.get("verified") is not True:
         return "unverified_link"
@@ -517,7 +540,7 @@ def resource_level_gap(resource: Mapping, target_levels: Mapping[str, int]) -> l
     introductory use; it only prevents a Level 1 page looking sufficient for a
     Level 3 role requirement in the presence-based roadmap.
     """
-    if not isinstance(resource, Mapping) or not isinstance(target_levels, Mapping):
+    if not isinstance(resource, Mapping) or not isinstance(target_levels, Mapping) or _is_academic_foundation(resource):
         return []
     upper = resource.get("level_to")
     if type(upper) is not int or not 1 <= upper <= 3:
@@ -794,6 +817,21 @@ def get_practice_routes(skills, resources: Mapping) -> list[dict]:
     for skill in skills:
         normalized = normalize_skill(skill)
         category = categories.get(normalized)
+        group = next((
+            value for name, value in resources.items()
+            if isinstance(name, str) and normalize_skill(name) == normalized and isinstance(value, Mapping)
+        ), {})
+        learning_plan = group.get("learning_plan") if isinstance(group, Mapping) else None
+        if isinstance(learning_plan, Mapping) and isinstance(learning_plan.get("steps"), list):
+            routes.append({
+                "skill": skill,
+                "title": learning_plan.get("title", f"Học và luyện {skill}"),
+                "framing": "Đọc phần học liệu được chỉ định, làm bài tập mô phỏng và xin phản hồi trước khi tự đánh giá tiến bộ.",
+                "steps": list(learning_plan["steps"]),
+                "evidence": learning_plan.get("evidence", "Sản phẩm thực hành và phản hồi nhận được."),
+                "self_paced": learning_plan.get("self_paced", True),
+            })
+            continue
         if normalized in _SALES_SKILLS:
             route = _route(skill, "soft_skill")
         elif normalized in _COMMUNICATION_SKILLS | _TEAMWORK_SKILLS | _LEADERSHIP_SKILLS | _EVENT_SKILLS | {"viết nội dung"}:
@@ -995,8 +1033,11 @@ def plan(gap, resources, hours_per_week=8):
         while needed:
             level = min(needed)
             choices = [(k, r, d) for k, r, d in eligible if r["level_from"] <= level <= r["level_to"]]
+            academic_choices = [choice for choice in choices if _is_academic_foundation(choice[1])]
             reviewed_choices = [choice for choice in choices if resource_review_status(choice[1]) == "reviewed"]
-            if reviewed_choices:
+            if academic_choices:
+                choices = academic_choices
+            elif reviewed_choices:
                 choices = reviewed_choices
             if not choices:
                 excluded = excluded_without_url[skill]
@@ -1027,6 +1068,7 @@ def plan(gap, resources, hours_per_week=8):
                 break
             # Prefer reviewed, sourced duration, then broader coverage; stable data order.
             key, record, duration = min(choices, key=lambda choice: (
+                not _is_academic_foundation(choice[1]),
                 choice[1]["content_review_status"] != "reviewed",
                 {"published": 0, "estimated": 1, "unknown": 2}[choice[2][1]],
                 -len(needed & set(range(choice[1]["level_from"], choice[1]["level_to"]+1))),
@@ -1043,12 +1085,12 @@ def plan(gap, resources, hours_per_week=8):
                                  else "scope_pending" if "scope_granularity" in record
                                  else "legacy_metadata_unavailable"
                              )})
-            if "scope_granularity" in record and not has_granular_level_evidence(record):
+            if "scope_granularity" in record and not has_granular_level_evidence(record) and not _is_academic_foundation(record):
                 unresolved.append({
                     "skill": skill, "resource_key": key,
                     "reason": "scope_evidence_pending", "levels": covered,
                 })
-            if record["content_review_status"] == "partial":
+            if record["content_review_status"] == "partial" and not _is_academic_foundation(record):
                 unresolved.append({"skill": skill, "resource_key": key, "reason": "partial_content", "levels": covered})
             if key not in catalog:
                 catalog[key] = {**deepcopy(dict(record)), "key": key, "skills": [],
@@ -1081,7 +1123,8 @@ def plan(gap, resources, hours_per_week=8):
         if hours is None:
             issue = {"resource_key": key, "skills": list(record["skills"]), "reason": record["duration_issue"]}
             unknown.append(issue)
-            unresolved.append(dict(issue))
+            if not _is_academic_foundation(record):
+                unresolved.append(dict(issue))
             continue
         remaining = Decimal(str(hours))
         if record["duration_kind"] == "estimated":
@@ -1101,9 +1144,26 @@ def plan(gap, resources, hours_per_week=8):
             used += allocation
             phase["hours"] = float(used)
             remaining -= allocation
+    learning_steps = []
+    for number, item in enumerate(items, 1):
+        skill = item["skill"]
+        keys = refs.get(skill, [])
+        selected = [catalog[key] for key in keys if key in catalog]
+        resource = next((record for record in selected if _is_academic_foundation(record)), None)
+        route = next(iter(get_practice_routes([skill], resources)), None)
+        learning_steps.append({
+            "step": number,
+            "skill": skill,
+            "current_level": item["current"],
+            "target_level": item["required"],
+            "resource_keys": list(keys),
+            "resource": resource or (selected[0] if selected else None),
+            "plan": route,
+        })
     return {"role_id": gap.get("role_id"), "hours_per_week": hours_per_week,
             "phases": phases, "resources": catalog, "resource_keys": refs, "level_coverage": coverage,
-            "total_weeks": None if unresolved else len(phases), "known_weeks": len(phases),
+            "learning_steps": learning_steps,
+            "total_weeks": None if unresolved or unknown else len(phases), "known_weeks": len(phases),
             "total_known_hours": float(published), "total_estimated_hours": float(estimated),
             "total_planned_hours": float(published+estimated), "is_estimated": bool(estimated),
             "unresolved": unresolved, "unknown_duration": unknown,
@@ -1113,6 +1173,8 @@ def plan(gap, resources, hours_per_week=8):
 
 def resource_evidence_badge(record: Mapping) -> str:
     """Describe the weakest recorded axis without implying expert approval."""
+    if _is_academic_foundation(record):
+        return "Giáo trình nền tảng · cần bài thực hành và phản hồi để tiến tới yêu cầu nghề"
     status = resource_review_status(record)
     if status in {"blocked", "unsuitable"}:
         return "Không đề xuất · nguồn bị loại khỏi lộ trình"

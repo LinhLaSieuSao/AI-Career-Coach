@@ -1,9 +1,9 @@
 [theme]
 base = "light"
-primaryColor = "#0A7AFF"
-backgroundColor = "#F8FBFF"
-secondaryBackgroundColor = "#EEF5FF"
-textColor = "#10213F"
+primaryColor = "#1B7A66"
+backgroundColor = "#FAF9F5"
+secondaryBackgroundColor = "#F3F2EB"
+textColor = "#131918"
 font = "Be Vietnam Pro:https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
 
 [server]

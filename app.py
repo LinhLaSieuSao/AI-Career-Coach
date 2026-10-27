@@ -37,6 +37,7 @@ from modules.matcher import (
 )
 from modules.matcher import activity_label, load_interest_activities
 from modules.profile import build_profile, undo_profile_move
+from modules.curriculum import merge_academic_curriculum
 from modules.skill_extractor import load_aliases, normalize_skill, suggest_skill_candidates
 from modules.profile import PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE, prepare_submission
 from modules.export import export_report
@@ -100,8 +101,8 @@ FAQ_ITEMS = (
         "<p>Điểm gợi ý dựa chủ yếu vào <strong>mức khớp kỹ năng có trọng số</strong> (75%), cùng với sở thích (25%). Khi mức khớp kỹ năng dưới ngưỡng 15%, điểm gợi ý bị giới hạn tối đa 5/100. Điều này nhắc bạn cần xây thêm nền tảng kỹ năng, <strong>không kết luận bạn không hợp nghề</strong>.</p>",
     ),
     (
-        "Vì sao có kỹ năng chưa có tài liệu hoặc không có link khóa học?",
-        "<p>Web chỉ đề xuất tài liệu đáp ứng tiêu chí kiểm tra nguồn, nội dung và mức độ phù hợp. Khi chưa đủ căn cứ, web báo <strong>“Chưa có tài liệu được xác minh”</strong> thay vì gợi ý bừa. Với kỹ năng mềm, web ưu tiên bài tập thực hành, tình huống và gợi ý tự đánh giá; không mặc định rằng xem một khóa học là đủ để thành thạo.</p>",
+        "Mỗi kỹ năng có tài liệu và cách luyện không?",
+        "<p>Mỗi kỹ năng trong danh mục vị trí đều có giáo trình hoặc học liệu nền tảng, kèm bài tập áp dụng, cách tự kiểm tra và sản phẩm để xin phản hồi. Một số tài liệu dạy nguyên lý chung, nên bạn vẫn cần luyện công cụ hoặc quy trình riêng của ngành. Nguồn không công bố thời lượng thì web không tự đặt số tuần; học theo nhịp cá nhân. Với luật, thuế, y tế và an toàn, hãy đối chiếu quy định Việt Nam hiện hành và học thực hành cùng người đủ chuyên môn.</p>",
     ),
     (
         "Luyện phỏng vấn có chấm điểm câu trả lời của mình không?",
@@ -119,7 +120,8 @@ def load_positions() -> list[dict]:
 @st.cache_data(max_entries=1)
 def load_resources() -> dict:
     with (DATA_DIR / "resources.json").open(encoding="utf-8") as source:
-        return json.load(source)
+        resources = json.load(source)
+    return merge_academic_curriculum(resources)
 
 
 @st.cache_data(max_entries=1)
@@ -170,7 +172,7 @@ def logo_data_uri() -> str:
     fallback_svg = (
         '<svg xmlns="http://www.w3.org/2000/svg" width="96" height="72" '
         'viewBox="0 0 96 72"><rect width="96" height="72" rx="18" '
-        'fill="#0A7AFF"/><text x="48" y="48" text-anchor="middle" '
+        'fill="#1B7A66"/><text x="48" y="48" text-anchor="middle" '
         'font-family="Arial,sans-serif" font-size="34" font-weight="700" '
         'fill="#fff">AI</text></svg>'
     )
@@ -1101,11 +1103,17 @@ def render_toolkit() -> None:
                 st.dataframe(gap_result["items"], hide_index=True)
         else:
             st.metric("Mức độ đáp ứng kỹ năng vị trí", f"{presence['percent']}%")
-            st.progress(presence["percent"] / 100, text="Presence score · kỹ năng nhận diện theo trọng số role")
-            st.caption("Chỉ tính kỹ năng đã xác nhận, gồm mục trích từ CV/kinh nghiệm; không tính sở thích, thâm niên hay xác suất tuyển dụng.")
-            st.write("**Kỹ năng khớp vị trí:**", ", ".join(display_skill(s) for s in presence["matched"]) or "Chưa có")
-            st.write("**Kỹ năng còn thiếu:**", ", ".join(display_skill(s) for s in presence["missing"]) or "Không có")
-        st.caption("Điểm gợi ý role được tính riêng bằng heuristic.")
+            st.progress(presence["percent"] / 100, text="Mức khớp kỹ năng")
+            matched_col, missing_col = st.columns(2)
+            matched_col.markdown("**Đã có**")
+            matched_col.write(", ".join(display_skill(s) for s in presence["matched"]) or "Chưa có")
+            missing_col.markdown("**Nên học tiếp**")
+            missing_col.write(", ".join(display_skill(s) for s in presence["missing"]) or "Không còn kỹ năng thiếu")
+        with st.expander("Cách tính điểm"):
+            if mode == "Theo level tự khai báo":
+                st.caption("Điểm dựa trên level bạn tự khai báo so với level mục tiêu của vị trí. Level chưa khai báo được tính là 0 khi bạn xác nhận.")
+            else:
+                st.caption("Điểm tính theo các kỹ năng đã xác nhận trong hồ sơ và trọng số của vị trí. Đây là mức khớp kỹ năng, không phải xác suất tuyển dụng.")
 
     with tabs[2]:
         if selected_mode == "Theo level tự khai báo":
@@ -1122,32 +1130,45 @@ def render_toolkit() -> None:
             st.success("Hồ sơ của bạn đã có đủ các kỹ năng được liệt kê cho vị trí này.")
 
     with tabs[3]:
-        st.subheader("Tài liệu được tham chiếu")
+        st.subheader("Tài liệu nên học")
         _render_resource_quality_disclosure(load_resources())
         if timed_result is not None:
             for key, item in timed_result["resources"].items():
-                st.markdown(f"[{item.get('title', 'Tài liệu học tập')}]({item.get('url', '')})")
-                st.caption(f"{', '.join(item.get('skills', []))} · {item.get('duration_kind', 'unknown')} · {key}")
-                _render_resource_level_scope(item, target_levels, warn_gap=False)
-                evidence = item.get("duration_evidence", {})
-                if evidence.get("source"):
-                    st.caption(f"Nguồn thời lượng: {evidence['source']}")
-                if item.get("review_note"):
-                    st.caption(item["review_note"])
-                if item.get("duration_issue") == "conflicting_duration":
-                    st.warning("Các nguồn công bố thời lượng mâu thuẫn; thời lượng không được cộng vào lịch.")
-                _render_partial_practice_assignments(
-                    item.get("skills", []), item, role_context=format_role(role),
-                    resources=load_resources(),
-                )
-                for skill in item.get("skills", []):
-                    caution = skill_scope_caution(skill)
-                    if caution:
-                        st.warning(caution)
-                if item.get("access_note"):
-                    st.caption(item["access_note"])
+                with st.expander(f"{item.get('title', 'Tài liệu học tập')} · {', '.join(display_skill(s) for s in item.get('skills', []))}"):
+                    url = item.get("url")
+                    if url:
+                        st.markdown(f"[Mở tài liệu]({url})")
+                    if item.get("academic_source"):
+                        st.caption(item.get("academic_label", "Giáo trình nền tảng") + " · " + item.get("provider", "") + " · tiếng Anh")
+                        st.caption(item.get("learning_scope", ""))
+                        companion = item.get("verified_companion_url") or item.get("practice_url")
+                        if companion:
+                            st.markdown(f"[Thực hành thêm: {item.get('verified_companion_title') or item.get('practice_title') or 'Tài liệu bổ sung'}]({companion})")
+                        if item.get("access_note"):
+                            st.caption(item["access_note"])
+                        _render_resource_level_scope(item, target_levels, warn_gap=False)
+                        continue
+                    st.caption(item.get("duration_kind", "Chưa rõ thời lượng"))
+                    _render_resource_level_scope(item, target_levels, warn_gap=False)
+                    evidence = item.get("duration_evidence", {})
+                    if evidence.get("source"):
+                        st.caption(f"Nguồn thời lượng: {evidence['source']}")
+                    if item.get("review_note"):
+                        st.caption(item["review_note"])
+                    if item.get("duration_issue") == "conflicting_duration":
+                        st.caption("Thời lượng nguồn có khác biệt; chưa cộng vào lịch.")
+                    _render_partial_practice_assignments(
+                        item.get("skills", []), item, role_context=format_role(role),
+                        resources=load_resources(),
+                    )
+                    for skill in item.get("skills", []):
+                        caution = skill_scope_caution(skill)
+                        if caution:
+                            st.caption(caution)
+                    if item.get("access_note"):
+                        st.caption(item["access_note"])
             if timed_result["unknown_duration"] or timed_result["unresolved"]:
-                st.warning("Có tài liệu/gap thiếu duration hoặc review; tổng tuần chưa xác định.")
+                st.caption("Một số thời lượng hoặc kỹ năng còn thiếu dữ liệu; xem chi tiết trong Lộ trình.")
         elif weekly_roadmap is not None:
             catalog = {r["key"]: r for week in weekly_roadmap for r in week["resources"]}
             seen = set()
@@ -1159,24 +1180,37 @@ def render_toolkit() -> None:
                         seen.add(key)
                         item = catalog[key]
                         first_phase = next(w["week"] for w in weekly_roadmap if any(r["key"] == key for r in w["resources"]))
-                        st.markdown(f"[{item.get('title', 'Tài liệu học tập')}]({item.get('url', '')}) · {', '.join(item.get('skills', []))}")
-                        st.caption(f"Giới thiệu lần đầu ở giai đoạn {first_phase}; đây không phải lịch theo tuần.")
-                        _render_resource_level_scope(item, target_levels)
-                        status = item.get("content_review_status", "unreviewed")
-                        st.caption("Trạng thái nội dung: " + resource_review_label(status))
-                        review_note = item.get("review_note")
-                        if status == "partial" and isinstance(review_note, str) and review_note.strip():
-                            st.warning("Phạm vi review một phần: " + review_note)
-                            _render_partial_practice_assignments(
-                                item.get("skills", []), item, role_context=format_role(role),
-                                resources=load_resources(),
-                            )
-                        for skill in item.get("skills", []):
-                            caution = skill_scope_caution(skill)
-                            if caution:
-                                st.warning(caution)
-                        if item.get("access_note"):
-                            st.caption(item["access_note"])
+                        with st.expander(f"{item.get('title', 'Tài liệu học tập')} · {', '.join(display_skill(s) for s in item.get('skills', []))}"):
+                            url = item.get("url")
+                            if url:
+                                st.markdown(f"[Mở tài liệu]({url})")
+                            st.caption(f"Thứ tự học: giai đoạn {first_phase}")
+                            if item.get("academic_source"):
+                                st.caption(item.get("academic_label", "Giáo trình nền tảng") + " · " + item.get("provider", "") + " · tiếng Anh")
+                                st.caption(item.get("learning_scope", ""))
+                                companion = item.get("verified_companion_url") or item.get("practice_url")
+                                if companion:
+                                    st.markdown(f"[Thực hành thêm: {item.get('verified_companion_title') or item.get('practice_title') or 'Tài liệu bổ sung'}]({companion})")
+                                if item.get("access_note"):
+                                    st.caption(item["access_note"])
+                                _render_resource_level_scope(item, target_levels)
+                                continue
+                            _render_resource_level_scope(item, target_levels)
+                            status = item.get("content_review_status", "unreviewed")
+                            st.caption("Trạng thái nội dung: " + resource_review_label(status))
+                            review_note = item.get("review_note")
+                            if status == "partial" and isinstance(review_note, str) and review_note.strip():
+                                st.caption("Phạm vi: " + review_note)
+                                _render_partial_practice_assignments(
+                                    item.get("skills", []), item, role_context=format_role(role),
+                                    resources=load_resources(),
+                                )
+                            for skill in item.get("skills", []):
+                                caution = skill_scope_caution(skill)
+                                if caution:
+                                    st.caption(caution)
+                            if item.get("access_note"):
+                                st.caption(item["access_note"])
             if any(w["skills_without_resources"] for w in weekly_roadmap):
                 st.warning("Một số kỹ năng chưa có tài liệu đủ điều kiện đề xuất; xem lý do trong tab Lộ trình.")
         else:
@@ -1196,61 +1230,86 @@ def render_toolkit() -> None:
 
 
 def render_timed_roadmap(roadmap: dict, *, role_context: str | None = None, target_levels: dict[str, int] | None = None) -> None:
-    st.subheader("Lộ trình theo giờ")
-    st.caption("Hoàn thành tài liệu không chứng nhận đạt level.")
-    st.metric("Tổng giờ công bố đã chọn", f"{roadmap['total_known_hours']:.2f}")
-    st.metric("Giờ ước lượng biên tập", f"{roadmap['total_estimated_hours']:.2f}")
-    st.metric("Số tuần toàn lộ trình", "Chưa xác định" if roadmap["total_weeks"] is None else str(roadmap["total_weeks"]))
-    st.caption(f"Phần đã phân bổ: {roadmap['known_weeks']} tuần; ngân sách {roadmap['hours_per_week']} giờ/tuần.")
-    _render_roadmap_diagram([
-        {
-            "week": phase["week"],
-            "label": f"{phase['hours']:.2f} giờ · {len(phase['segments'])} phần",
-            "warning": any(roadmap["resources"][segment["resource_key"]]["duration_kind"] == "estimated" for segment in phase["segments"]),
-        }
-        for phase in roadmap["phases"]
-    ], alt="Sơ đồ các tuần học theo số giờ và phần tài liệu đã xếp lịch.")
-    _render_practice_routes(roadmap.get("practice_routes", []))
+    st.subheader("Lộ trình học")
+    if roadmap["total_known_hours"] or roadmap["total_estimated_hours"]:
+        st.caption(f"Ưu tiên theo khoảng cách kỹ năng · ngân sách {roadmap['hours_per_week']:g} giờ/tuần")
+        metric_columns = st.columns(3)
+        metric_columns[0].metric("Giờ theo nguồn", f"{roadmap['total_known_hours']:.1f}")
+        metric_columns[1].metric("Giờ ước tính", f"{roadmap['total_estimated_hours']:.1f}")
+        metric_columns[2].metric("Thời gian", "Chưa rõ" if roadmap["total_weeks"] is None else f"{roadmap['total_weeks']} tuần")
+        _render_roadmap_diagram([
+            {
+                "week": phase["week"],
+                "label": f"{phase['hours']:.2f} giờ · {len(phase['segments'])} phần",
+                "warning": any(roadmap["resources"][segment["resource_key"]]["duration_kind"] == "estimated" for segment in phase["segments"]),
+            }
+            for phase in roadmap["phases"]
+        ], alt="Sơ đồ các tuần học theo thời lượng được nguồn công bố hoặc có căn cứ ước tính.")
+    else:
+        st.caption("Các giáo trình không công bố thời lượng. Học theo thứ tự dưới đây, tự điều chỉnh nhịp và xin phản hồi sau mỗi bài tập.")
     if roadmap["is_estimated"]:
-        st.warning("Lịch có giờ ước lượng biên tập; số tuần là dự kiến theo căn cứ.")
+        st.caption("Một phần thời lượng là ước tính.")
+    for step in roadmap.get("learning_steps", []):
+        skill = step["skill"]
+        level_label = f" · Level {step['current_level']} → {step['target_level']}" if step.get("target_level") else ""
+        with st.expander(f"Bước {step['step']} · {display_skill(skill)}{level_label}"):
+            resource = step.get("resource")
+            if resource:
+                st.markdown(f"[{resource.get('title', 'Giáo trình học thuật')}]({resource.get('url', '')})")
+                st.caption(resource.get("academic_label", "Giáo trình nền tảng") + " · " + resource.get("provider", "Nguồn học thuật") + " · tài liệu tiếng Anh")
+                if resource.get("learning_scope"):
+                    st.caption(resource["learning_scope"])
+                companion = resource.get("verified_companion_url") or resource.get("practice_url")
+                if companion:
+                    label = resource.get("verified_companion_title") or resource.get("practice_title") or "Nguồn thực hành bổ sung"
+                    st.markdown(f"[Thực hành thêm: {label}]({companion})")
+                if resource.get("access_note"):
+                    st.caption(resource["access_note"])
+            plan = step.get("plan") or {}
+            for number, instruction in enumerate(plan.get("steps", []), 1):
+                st.markdown(f"{number}. {instruction}")
+            if plan.get("evidence"):
+                st.caption("Đầu ra: " + plan["evidence"])
     for phase in roadmap["phases"]:
         with st.expander(f"Tuần học {phase['week']} · {phase['hours']:.2f} giờ"):
             for segment in phase["segments"]:
                 item = roadmap["resources"][segment["resource_key"]]
                 st.markdown(f"[{item['title']}]({item['url']}) · phần {segment['part']} · {segment['hours']:.2f} giờ")
-                st.caption(f"{segment['duration_kind']} · {', '.join(item['skills'])}")
-                _render_resource_level_scope(item, target_levels, warn_gap=False)
-                status = item.get("content_review_status", "unreviewed")
-                st.caption("Trạng thái nội dung: " + resource_review_label(status))
-                evidence = item.get("duration_evidence", {})
-                if segment["duration_kind"] == "estimated":
-                    st.caption(f"Cơ sở ước lượng: {evidence.get('basis') or item.get('estimated_duration_basis') or item.get('duration_basis') or 'chưa có thông tin'}")
-                elif evidence.get("source"):
-                    st.caption(f"Nguồn thời lượng: {evidence['source']}")
-                if item.get("review_note"):
-                    st.caption(item["review_note"])
-                if item.get("access_note"):
-                    st.caption(item["access_note"])
-                if item.get("duration_issue") == "conflicting_duration":
-                    st.warning("Các nguồn công bố thời lượng mâu thuẫn; thời lượng không được cộng vào lịch.")
-                _render_partial_practice_assignments(
-                    item.get("skills", []), item, role_context=role_context, resources=load_resources()
-                )
+                st.caption(f"Học {', '.join(display_skill(skill) for skill in item['skills'])} · {segment['hours']:.1f} giờ")
+                with st.expander("Chi tiết tài liệu"):
+                    _render_resource_level_scope(item, target_levels, warn_gap=False)
+                    st.caption("Trạng thái nội dung: " + resource_review_label(item.get("content_review_status", "unreviewed")))
+                    evidence = item.get("duration_evidence", {})
+                    if segment["duration_kind"] == "estimated":
+                        st.caption(f"Cơ sở thời lượng: {evidence.get('basis') or item.get('estimated_duration_basis') or item.get('duration_basis') or 'chưa có thông tin'}")
+                    elif evidence.get("source"):
+                        st.caption(f"Nguồn thời lượng: {evidence['source']}")
+                    for note in (item.get("review_note"), item.get("access_note")):
+                        if note:
+                            st.caption(note)
+                    if item.get("duration_issue") == "conflicting_duration":
+                        st.caption("Thời lượng nguồn có khác biệt; chưa cộng vào lịch.")
+                    _render_partial_practice_assignments(
+                        item.get("skills", []), item, role_context=role_context, resources=load_resources()
+                    )
     for item in roadmap["unresolved"]:
         skill = item.get("skill") or ", ".join(item.get("skills", []))
-        st.warning(f"{display_skill(skill)}: {RESOURCE_REASON_LABELS.get(item['reason'], 'Chưa đủ dữ liệu để xếp lịch.')}")
-        caution = skill_scope_caution(skill)
-        if caution:
-            st.warning(caution)
-        if item.get("resource_statuses"):
-            st.caption("Trạng thái tài liệu hiện có: " + ", ".join(item["resource_statuses"]))
-    for item in roadmap["unknown_duration"]:
-        record = roadmap["resources"][item["resource_key"]]
-        st.markdown(f"[{record['title']}]({record['url']}) · thời lượng chưa xác định")
+        with st.expander(f"Chưa có tài liệu phù hợp cho {display_skill(skill)}"):
+            st.caption(RESOURCE_REASON_LABELS.get(item["reason"], "Chưa tìm được tài liệu phù hợp."))
+            caution = skill_scope_caution(skill)
+            if caution:
+                st.caption(caution)
+            if item.get("resource_statuses"):
+                st.caption("Tình trạng nguồn: " + ", ".join(item["resource_statuses"]))
+    if roadmap["unknown_duration"] and not roadmap.get("learning_steps"):
+        st.caption("Một số tài liệu không công bố thời lượng; tự học theo tiến độ cá nhân.")
 
 
 def _render_resource_level_scope(resource: dict, target_levels: dict[str, int] | None, *, warn_gap: bool = True) -> None:
     """Distinguish the page's teaching range from the role's target level."""
+    if resource.get("learning_role") == "academic_foundation":
+        st.caption(resource.get("academic_label", "Học liệu nền tảng") + ". Đọc xong chưa đồng nghĩa đã đạt Level; hãy hoàn thành bài thực hành và xin phản hồi.")
+        return
     st.caption("Mức bằng chứng: " + resource_evidence_badge(resource))
     lower, upper = resource.get("level_from"), resource.get("level_to")
     if type(lower) is not int or type(upper) is not int or not 1 <= lower <= upper <= 3:
@@ -1285,8 +1344,8 @@ def render_roadmap(roadmap: list[dict], *, role_context: str | None = None, targ
         resource["key"]: (resource, week["week"])
         for week in roadmap for resource in week["resources"]
     }
-    st.subheader("Lộ trình theo giai đoạn")
-    st.caption("Các giai đoạn thể hiện thứ tự ưu tiên theo trọng số vị trí, không cam kết thời gian hoàn thành. Chỉ đề xuất mapping đã review nội dung; partial luôn kèm ghi chú phạm vi. Lộ trình này chưa lập lịch theo giờ hoặc level.")
+    st.subheader("Lộ trình học")
+    st.caption("Học theo thứ tự ưu tiên. Mở từng giai đoạn để xem tài liệu và bài thực hành.")
     _render_roadmap_diagram([
         {
             "week": week["week"],
@@ -1304,21 +1363,33 @@ def render_roadmap(roadmap: list[dict], *, role_context: str | None = None, targ
                 title = resource.get("title", "Tài liệu học tập")
                 url = resource.get("url")
                 st.markdown(f"[{title}]({url})" if url else title)
+                if resource.get("academic_source"):
+                    st.caption(resource.get("academic_label", "Giáo trình nền tảng") + " · " + resource.get("provider", "") + " · tiếng Anh")
+                    st.caption(resource.get("learning_scope", ""))
+                    companion = resource.get("verified_companion_url") or resource.get("practice_url")
+                    if companion:
+                        label = resource.get("verified_companion_title") or resource.get("practice_title") or "Nguồn thực hành bổ sung"
+                        st.markdown(f"[Thực hành thêm: {label}]({companion})")
+                    if resource.get("access_note"):
+                        st.caption(resource["access_note"])
+                    continue
                 details = [resource.get(key) for key in ("provider", "type", "language", "cost")]
                 st.caption(" · ".join(str(item) for item in details if item))
-                _render_resource_level_scope(resource, target_levels)
-                status = resource.get("content_review_status", "unreviewed")
-                st.caption("Trạng thái nội dung: " + resource_review_label(status))
-                if status == "partial" and resource.get("review_note"):
-                    st.warning("Phạm vi review một phần: " + resource["review_note"])
-                    _render_partial_practice_assignments(
-                        resource.get("skills", []), resource,
-                        role_context=role_context, resources=load_resources(),
-                    )
-                for skill in resource.get("skills", []):
-                    caution = skill_scope_caution(skill)
-                    if caution:
-                        st.warning(caution)
+                st.caption("Kỹ năng: " + ", ".join(display_skill(skill) for skill in resource.get("skills", [])))
+                with st.expander("Chi tiết tài liệu"):
+                    _render_resource_level_scope(resource, target_levels)
+                    status = resource.get("content_review_status", "unreviewed")
+                    st.caption("Trạng thái nội dung: " + resource_review_label(status))
+                    if status == "partial" and resource.get("review_note"):
+                        st.caption("Phạm vi: " + resource["review_note"])
+                        _render_partial_practice_assignments(
+                            resource.get("skills", []), resource,
+                            role_context=role_context, resources=load_resources(),
+                        )
+                    for skill in resource.get("skills", []):
+                        caution = skill_scope_caution(skill)
+                        if caution:
+                            st.caption(caution)
             for skill, keys in week["resource_keys"].items():
                 for key in keys:
                     resource, introduced_week = catalog[key]
@@ -1330,17 +1401,18 @@ def render_roadmap(roadmap: list[dict], *, role_context: str | None = None, targ
             if week["skills_without_resources"]:
                 for issue in week.get("unresolved", []):
                     label = RESOURCE_REASON_LABELS.get(issue["reason"], "Chưa đủ dữ liệu để đề xuất tài liệu.")
-                    st.info(f"{display_skill(issue['skill'])}: {label}")
-                    caution = skill_scope_caution(issue["skill"])
-                    if caution:
-                        st.warning(caution)
-                    reasons = [
-                        RESOURCE_REASON_LABELS.get(reason, reason)
-                        for reason in (issue.get("exclusion_reasons") or [])
-                        if isinstance(reason, str) and reason
-                    ]
-                    if reasons:
-                        st.caption("Các lý do loại tài liệu: " + " ".join(reasons))
+                    with st.expander(f"Chưa có tài liệu phù hợp cho {display_skill(issue['skill'])}"):
+                        st.caption(label)
+                        caution = skill_scope_caution(issue["skill"])
+                        if caution:
+                            st.caption(caution)
+                        reasons = [
+                            RESOURCE_REASON_LABELS.get(reason, reason)
+                            for reason in (issue.get("exclusion_reasons") or [])
+                            if isinstance(reason, str) and reason
+                        ]
+                        if reasons:
+                            st.caption("Chi tiết: " + " ".join(reasons))
 
 
 def _render_roadmap_diagram(steps: list[dict], *, alt: str, step_label: str = "Tuần") -> None:
@@ -1359,10 +1431,6 @@ def _render_roadmap_diagram(steps: list[dict], *, alt: str, step_label: str = "T
                 st.caption(f"ƯU TIÊN {item['week']}")
                 st.markdown(f"**{step_label} {item['week']}**")
                 st.markdown(str(item["label"]).replace("\n", "  \n"))
-                if item.get("warning"):
-                    st.caption("Có phần cần xem lại phạm vi hoặc dữ liệu")
-                else:
-                    st.caption("Có học liệu đã qua review")
             column_index += 1
             if index < len(row) - 1:
                 with columns[column_index]:
@@ -1373,8 +1441,8 @@ def _render_roadmap_diagram(steps: list[dict], *, alt: str, step_label: str = "T
 def _render_practice_routes(routes: list[dict]) -> None:
     if not routes:
         return
-    st.markdown("**Luyện kỹ năng qua công việc và phản hồi**")
-    st.caption("Với kỹ năng mềm, thực hành có quan sát và phản hồi là một lộ trình chính; không cần hoàn thành khóa học để được xem là tiến bộ. Bài tập do dự án biên soạn, chưa phải chứng nhận năng lực hay review chuyên gia.")
+    st.markdown("**Bài thực hành**")
+    st.caption("Dùng các bài tập này để luyện kỹ năng qua tình huống thực tế.")
     for route in routes:
         with st.expander(f"{display_skill(route['skill'])} · {route['title']}"):
             st.caption(route["framing"])
@@ -1395,16 +1463,16 @@ def _render_practice_routes(routes: list[dict]) -> None:
 
 def _render_resource_quality_disclosure(resources: dict) -> dict:
     summary = summarize_resource_reviews(resources)
-    st.caption(
-        f"Kiểm kê mapping kỹ năng–học liệu riêng: {summary['mapping_count']} mapping; "
-        f"{summary['reviewed']} reviewed, {summary['partial']} partial, "
-        f"{summary['unsuitable']} unsuitable, {summary['blocked']} blocked, "
-        f"{summary['unreviewed']} unreviewed."
+    mapped_skills = sum(
+        1 for group in resources.values()
+        if isinstance(group, dict) and isinstance(group.get("academic_source"), dict)
     )
-    st.warning(
-        "Đây là rà soát nội bộ về nội dung và phạm vi mapping, không phải review độc lập "
-        "bởi chuyên gia nghề nghiệp hoặc pháp lý. Số liệu này không bao gồm ngân hàng câu hỏi phỏng vấn."
-    )
+    with st.expander("Về học liệu"):
+        st.caption(
+            f"Có giáo trình/học liệu nền tảng cho {mapped_skills} kỹ năng trong danh mục nghề, kèm bài tập và đầu ra để xin phản hồi. "
+            "Tài liệu tiếng Anh; thời lượng không công bố thì học theo tiến độ cá nhân."
+        )
+        st.caption("Tài liệu giúp học kiến thức nền, không chứng nhận đạt trình độ. Luật, thuế, y tế và an toàn cần nguồn Việt Nam hiện hành hoặc người hướng dẫn đủ chuyên môn.")
     return summary
 
 
@@ -1433,10 +1501,35 @@ def _render_partial_practice_assignments(
 
 
 def render_interview_practice(position: dict, focus_skills=None, assessment="presence") -> None:
-    """Ask first; show answer guidance after submission without automatic scoring."""
+    """Ask first, then review the answer against the question rubric."""
+    import os
+    from urllib.parse import urlparse
+
+    from modules import review_answer
+
     role_id = position["id"]
     st.subheader("Luyện phỏng vấn")
-    st.caption("Hệ thống không chấm điểm câu trả lời. Sau khi gửi, bạn sẽ thấy khung tham khảo và checklist tự rà soát; tình huống thực tế không có một đáp án chung.")
+    st.caption("Sau khi gửi, bạn sẽ thấy điểm tham khảo theo rubric, khung trả lời và checklist tự rà soát; tình huống thực tế không có một đáp án chung.")
+    try:
+        llm_secrets = {name: st.secrets.get(name, "") for name in ("LLM_API_KEY", "LLM_BASE_URL", "LLM_MODEL")}
+    except Exception:  # noqa: BLE001 - Streamlit raises when secrets.toml is absent.
+        llm_secrets = {}
+    default_url = llm_secrets.get("LLM_BASE_URL") or os.getenv("LLM_BASE_URL") or "https://api.groq.com/openai/v1"
+    default_model = llm_secrets.get("LLM_MODEL") or os.getenv("LLM_MODEL") or "llama-3.3-70b-versatile"
+    with st.expander("Cấu hình nhận xét AI"):
+        entered_key = st.text_input("API key LLM", type="password", key="llm_cfg_api_key")
+        entered_url = st.text_input("Base URL LLM", value=default_url, key="llm_cfg_base_url")
+        entered_model = st.text_input("Model LLM", value=default_model, key="llm_cfg_model")
+        st.caption("Key chỉ lưu trong phiên, không ghi ra đĩa.")
+        active_key = entered_key or llm_secrets.get("LLM_API_KEY") or os.getenv("LLM_API_KEY", "")
+        active_url = entered_url.strip() or default_url
+        active_model = entered_model.strip() or default_model
+        try:
+            local_url = urlparse(active_url).hostname in {"localhost", "127.0.0.1", "::1"}
+        except ValueError:
+            local_url = False
+        llm_enabled = bool(active_key) or local_url
+        st.caption(f"Đang dùng LLM {active_model}" if llm_enabled else "Đang chấm offline theo rubric")
     bank_summary = question_bank_quality_summary()
     st.warning(
         f"Ngân hàng phỏng vấn riêng: {bank_summary['total']} câu trên {bank_summary['role_count']} vị trí — "
@@ -1518,11 +1611,46 @@ def render_interview_practice(position: dict, focus_skills=None, assessment="pre
                         st.session_state.pop(f"self_review_{session['batch_id']}_{question_id}_{review_key}", None)
                     answered.add(question_id)
                     session["answered_ids"] = list(answered)
+                    calls = st.session_state.get("llm_review_calls", 0)
+                    limit_reached = llm_enabled and calls >= 20
+                    if llm_enabled and not limit_reached:
+                        st.session_state["llm_review_calls"] = calls + 1
+                    with st.spinner("Đang nhận xét…"):
+                        if limit_reached:
+                            review = review_answer(question_id, answer, api_key="", base_url="https://api.groq.com/openai/v1")
+                            session.setdefault("llm_limit_reached_ids", []).append(question_id)
+                        else:
+                            review = review_answer(question_id, answer, api_key=active_key, base_url=active_url, model=active_model)
+                    session.setdefault("reviews", {})[question_id] = review
                     st.session_state["interview_session"] = session
                 else:
                     st.warning("Hãy nhập câu trả lời trước khi xem ý tham khảo.")
             if question_id in answered:
                 st.caption(POST_SUBMISSION_GUIDANCE_NOTICE)
+                review = session.get("reviews", {}).get(question_id)
+                if review:
+                    st.markdown(f"**Nhận xét AI · Điểm rubric: {review['score']:.1f}/10**")
+                    if question_id in session.get("llm_limit_reached_ids", []):
+                        st.info("Đã đạt giới hạn 20 lần gọi LLM trong phiên; câu này được chấm offline.")
+                    for item in review["criteria"]:
+                        st.markdown(f"{'✓' if item['met'] else '✗'} {item['point']}")
+                        if item["evidence"]:
+                            st.caption(f"Bằng chứng: “{item['evidence']}”")
+                    if review["red_flags_hit"]:
+                        st.warning("Điểm cần lưu ý: " + "; ".join(review["red_flags_hit"]))
+                    st.write(review["feedback"])
+                    if review["improvement"]:
+                        st.write("Gợi ý cải thiện: " + review["improvement"])
+                    if review["source"] == "llm":
+                        st.caption(f"Nhận xét bởi {review['model']}")
+                    else:
+                        reasons = {"no_key": "chưa cấu hình key", "timeout": "dịch vụ phản hồi quá chậm",
+                                   "auth": "xác thực thất bại", "rate_limit": "dịch vụ giới hạn lượt gọi",
+                                   "bad_json": "phản hồi không đúng JSON", "mismatch": "phản hồi không khớp rubric",
+                                   "http_error": "dịch vụ không khả dụng"}
+                        st.caption("Chấm theo từ khóa rubric — không dùng LLM" +
+                                   (f" ({reasons.get(review['fallback_reason'], 'không thể dùng LLM')})" if review.get("fallback_reason") else ""))
+                    st.caption("Điểm đo mức đạt rubric, chỉ mang tính tham khảo, không phải đánh giá tuyển dụng.")
                 with st.expander("Tự rà soát ý nghĩa và chất lượng câu trả lời"):
                     st.caption("Checklist tự rà soát, không tính điểm và không thay cho đánh giá của người phỏng vấn.")
                     for review_key, label in INTERVIEW_SELF_REVIEW:

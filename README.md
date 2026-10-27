@@ -7,13 +7,13 @@
 [![pytest](https://img.shields.io/badge/tests-pytest-0A9EDC)](tests/)
 [![MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-AI Career Coach là ứng dụng Streamlit chạy local để đối chiếu kỹ năng với yêu cầu nghề, lập lộ trình học và luyện phỏng vấn. Bản hiện tại dùng quy tắc và dữ liệu trong repo; tên sản phẩm không hàm ý có mô hình AI hay LLM đang chấm điểm.
+AI Career Coach là ứng dụng Streamlit chạy local để đối chiếu kỹ năng với yêu cầu nghề, lập lộ trình học và luyện phỏng vấn. Phần phỏng vấn có thể nhận nhận xét từ LLM do người dùng cấu hình; nếu không có key hoặc dịch vụ lỗi, ứng dụng chấm gần đúng theo từ khóa rubric. Các phần khác dùng quy tắc và dữ liệu trong repo.
 
 ![Giao diện trang chủ AI Career Coach](docs/screenshots/landing.png)
 
 ## Bài toán
 
-Tên kỹ năng trong CV và mô tả công việc (JD) thường khác nhau, khiến người học khó biết mình đã có gì và cần học gì. Ứng dụng hỗ trợ tự rà soát và định hướng học tập, không dự đoán khả năng trúng tuyển. CV được xử lý trong phiên Streamlit, không có chức năng lưu CV vào cơ sở dữ liệu hay gọi API bên thứ ba. Khi triển khai trên máy chủ, người vận hành cần đánh giá riêng quyền riêng tư của môi trường đó.
+Tên kỹ năng trong CV và mô tả công việc (JD) thường khác nhau, khiến người học khó biết mình đã có gì và cần học gì. Ứng dụng hỗ trợ tự rà soát và định hướng học tập, không dự đoán khả năng trúng tuyển. CV được xử lý trong phiên Streamlit và không bao giờ gửi tới LLM. Khi cấu hình LLM cho phỏng vấn, chỉ nội dung câu hỏi, rubric, red flags và câu trả lời được gửi tới nhà cung cấp đã chọn. Khi triển khai trên máy chủ, người vận hành cần đánh giá riêng quyền riêng tư của môi trường đó.
 
 ## Kiến trúc
 
@@ -38,11 +38,11 @@ flowchart LR
 
 ## Giới hạn và độ tin cậy
 
-PDF scan không có OCR; CV tối đa 10 MiB và PDF chỉ đọc 10 trang đầu. Học liệu có trạng thái review, nguồn và phạm vi level riêng; URL mở được không chứng minh nội dung phù hợp. Câu hỏi và đáp án phỏng vấn là khung tham khảo tự đánh giá, **không chấm điểm tự động**. Dữ liệu nghề, học liệu và đáp án còn cần rà soát chuyên môn và quyền phân phối; xem [LICENSES.md](LICENSES.md).
+PDF scan không có OCR; CV tối đa 10 MiB và PDF chỉ đọc 10 trang đầu. Học liệu có trạng thái review, nguồn và phạm vi level riêng; URL mở được không chứng minh nội dung phù hợp. Điểm phỏng vấn đo mức đạt rubric, chỉ mang tính tham khảo; chấm offline theo từ khóa là ước lượng thô. Dữ liệu nghề, học liệu và đáp án còn cần rà soát chuyên môn và quyền phân phối; xem [LICENSES.md](LICENSES.md).
 
 ## Dữ liệu
 
-Catalog hiện có **131 vị trí**, chia thành **15 nhóm nghề**. Ngân hàng **766 câu hỏi** nằm trong **10 phân hệ** ở `data/interview_questions/`. `data/roles.json`, `skill_catalog.json`, `skill_aliases.json`, `resources.json`, `interests.json` và `role_families_riasec.json` là dữ liệu mà web đang dùng; ba hồ sơ minh họa tổng hợp ở `demo_profiles.json`.
+Catalog hiện có **131 vị trí**, chia thành **15 nhóm nghề**. Ngân hàng **766 câu hỏi** nằm trong **10 phân hệ** ở `data/interview_questions/`. `data/roles.json`, `skill_catalog.json`, `skill_aliases.json`, `resources.json`, `academic_curriculum.json`, `interests.json` và `role_families_riasec.json` là dữ liệu mà web đang dùng; lớp academic curriculum nối giáo trình/học liệu và kế hoạch thực hành theo từng kỹ năng mà không thay đổi lịch sử review tài liệu gốc. Ba hồ sơ minh họa tổng hợp ở `demo_profiles.json`.
 
 ## Cấu trúc repo
 
@@ -61,19 +61,13 @@ requirements.lock          một tập phiên bản có hash cho local, CI và D
 
 ## Chạy ứng dụng
 
-Cần Docker hoặc Python **3.12**. Sau khi chạy, mở `http://localhost:8501`.
-
-### Cách 1: Docker (máy đã cài Docker Desktop)
+Cần Docker hoặc Python **3.12**. Với Docker:
 
 ```bash
 docker compose up --build
 ```
 
-Docker tự nạp Python 3.12 và cài đặt theo `requirements.lock` (có kiểm tra hash), không cần cài gì thêm trên máy.
-
-### Cách 2: Chạy local
-
-Windows (PowerShell):
+Mở `http://localhost:8501`. Với local trên Windows:
 
 ```powershell
 py -3.12 -m venv .venv
@@ -81,28 +75,17 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
-macOS/Linux:
+Trên macOS/Linux thay hai lệnh đầu bằng `python3.12 -m venv .venv` và `.venv/bin/python -m pip install --require-hashes -r requirements.lock`, rồi chạy `.venv/bin/python -m streamlit run app.py`.
 
-```bash
-python3.12 -m venv .venv
-.venv/bin/python -m pip install --require-hashes -r requirements.lock
-.venv/bin/python -m streamlit run app.py
-```
+## Bật nhận xét AI
 
-> [!NOTE]
-> Cần đúng Python 3.12 vì `requirements.lock` được tạo cho phiên bản này. Nên cài trong `.venv` như trên để không ảnh hưởng Python hệ thống.
+- Trong mục **Cấu hình nhận xét AI** của phần Luyện phỏng vấn, dán API key và chọn base URL/model. Key chỉ giữ trong phiên Streamlit.
+- Đặt `LLM_API_KEY`, `LLM_BASE_URL`, `LLM_MODEL` trong môi trường hoặc `st.secrets`. Ví dụ PowerShell: `$env:LLM_API_KEY="..."`; bash: `export LLM_API_KEY="..."`. Docker Compose chuyển tiếp ba biến này; xem `.env.example` để biết URL mẫu. Mặc định dùng Groq `https://api.groq.com/openai/v1` và model `llama-3.3-70b-versatile`.
+- Với Ollama local, dùng base URL `http://localhost:11434/v1` và model có sẵn trong Ollama; không cần key.
 
-### Quản lý dependencies và hash lock
+Không có key vẫn dùng được phần phỏng vấn với chấm offline. Dịch vụ LLM lỗi cũng tự chuyển sang offline. Tối đa 20 lượt nhận xét qua LLM trong một phiên; câu trả lời được cắt còn 3.000 ký tự trước khi gửi.
 
-`requirements.txt` khai báo các thư viện trực tiếp (`streamlit`, `pydantic`, `rapidfuzz`, `pdfplumber`, `python-docx`, `requests`, `pytest`, `ruff`). `requirements.lock` chốt toàn bộ phiên bản cùng hash để local, CI và Docker cài đặt giống hệt nhau trên Python 3.12. Khi thay đổi `requirements.txt`, tạo lại lock bằng:
-
-```bash
-uv pip compile requirements.txt --universal --python-version 3.12 --generate-hashes --output-file requirements.lock
-```
-
-CI sẽ kiểm tra hai file luôn đồng bộ.
-
-Sau khi mở được ứng dụng, làm theo [kịch bản demo](docs/demo.md): chọn một hồ sơ mẫu, rà soát kỹ năng, khai báo level rồi xem lần lượt năm tab kết quả.
+`requirements.txt` liệt kê thư viện web, `requirements-dev.txt` thêm pytest/ruff, `requirements-ai.txt` dành cho mở rộng sau này. Lock duy nhất chứa cả runtime và công cụ kiểm thử để ba môi trường dùng cùng phiên bản.
 
 ## Kiểm thử và CI
 

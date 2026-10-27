@@ -32,6 +32,7 @@ _EXPORTS = {
     "get_questions": ("interview", "get_questions"),
     "get_reference_answer": ("interview", "get_reference_answer"),
     "get_question_feedback": ("interview", "get_question_feedback"),
+    "review_answer": ("interview", "review_answer"),
     "question_bank_quality_summary": ("interview", "question_bank_quality_summary"),
     "count_reviewed_questions": ("interview", "count_reviewed_questions"),
     "question_quality_label": ("interview", "question_quality_label"),

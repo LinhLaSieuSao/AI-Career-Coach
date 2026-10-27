@@ -12,6 +12,7 @@ from modules.catalog import DATA_DIR, load_roles
 from modules.matcher import match_role
 from modules.profile import build_profile_from_cv
 from modules.recommender import build_roadmap
+from modules.curriculum import merge_academic_curriculum
 from modules.profile import PROFILE_REVIEW_REQUIRED_SKILL_MESSAGE, SUBMISSION_REQUIRED_INPUT_MESSAGE
 from modules.export import export_report
 from document_fixtures import docx_bytes, pdf_bytes
@@ -165,7 +166,7 @@ def test_manual_profile_ui_uses_matcher_weights_and_roadmap_metadata(monkeypatch
     assert any(exp.label == "Cách đọc và hiểu đúng điểm số gợi ý" for exp in app.expander)
     assert "Role-IDF" in text and "75% skill fit" in text and "5/100" in text
     assert any("chưa thuộc catalog" in item.value for item in app.warning)
-    assert "**Kỹ năng khớp vị trí:** python" in text
+    assert "**Đã có**" in text and "python" in text
     for skill in expected["missing"]:
         assert skill in text
     resources = json.loads((DATA_DIR / "resources.json").read_text(encoding="utf-8"))
@@ -174,9 +175,9 @@ def test_manual_profile_ui_uses_matcher_weights_and_roadmap_metadata(monkeypatch
     assert [label for label in expander_labels if label.startswith("Giai đoạn ")] == [
         f"Giai đoạn {week['week']} · {', '.join(week['skills'])}" for week in expected_roadmap
     ]
-    assert any(item.value == "Lộ trình theo giai đoạn" for item in app.subheader)
-    assert any("không cam kết thời gian hoàn thành" in item.value for item in app.caption)
-    assert any("Luyện qua nhiệm vụ và phản hồi" in label for label in expander_labels)
+    assert any(item.value == "Lộ trình học" for item in app.subheader)
+    assert any("Học theo thứ tự ưu tiên" in item.value for item in app.caption)
+    assert any("Học và luyện " in label for label in expander_labels)
     # Unknown claims stay available by default and can be excluded explicitly.
     assert app.checkbox[0].value is True
     app.checkbox[0].uncheck().run()
@@ -317,24 +318,25 @@ def test_roadmap_ui_resolves_previous_week_document_and_only_flags_actual_gaps()
     ).run()
     assert not app.exception
     assert "sql: [Shared tutorial](https://example.org/shared) (đã giới thiệu ở giai đoạn 1)" in _markdown(app)
-    assert [item.value for item in app.info] == ["unknown: Chưa có tài liệu được xác minh cho kỹ năng này."]
+    assert not app.info
 
 
-def test_roadmap_ui_does_not_link_unreviewed_material_and_explains_the_gap():
+def test_roadmap_ui_uses_academic_foundation_without_linking_unreviewed_material():
     resources = {"sql": {"resources": [{
         "id": "sql_unreviewed", "title": "Unreviewed SQL resource",
         "url": "https://example.org/unreviewed-sql", "verified": True,
         "content_review_status": "unreviewed",
     }]}}
-    roadmap = build_roadmap(["sql"], resources)
-    assert roadmap[0]["resources"] == []
-    assert roadmap[0]["skills_without_resources"] == ["sql"]
+    roadmap = build_roadmap(["sql"], merge_academic_curriculum(resources))
+    assert len(roadmap[0]["resources"]) == 1
+    assert roadmap[0]["resources"][0]["academic_source"] is True
+    assert roadmap[0]["skills_without_resources"] == []
     app = AppTest.from_string(
         f"from app import render_roadmap\nrender_roadmap({roadmap!r})", default_timeout=20
     ).run()
 
     assert not app.exception
-    assert any("Chưa có tài liệu được review nội dung" in item.value for item in app.info)
+    assert any("Giáo trình nền tảng" in item.value for item in app.caption)
     assert "https://example.org/unreviewed-sql" not in _markdown(app)
 
 
@@ -362,6 +364,62 @@ def test_interview_ui_can_create_questions_for_selected_real_role():
     questions = app.session_state["interview_session"]["questions"]
     assert len(questions) == 3
     assert all(question["role_id"] == "data_analyst" for question in questions)
+
+
+def test_interview_submission_shows_offline_review_without_network(monkeypatch):
+    import requests
+
+    def no_network(*args, **kwargs):
+        raise AssertionError("Unexpected LLM request")
+
+    monkeypatch.setattr(requests, "post", no_network)
+    app = _submit(_start(), "Python")
+    app.button(key="start_interview_data_analyst").click().run()
+    _field(app, "Câu trả lời của bạn").input(
+        "Tôi phân tích yêu cầu, thiết kế truy vấn và kiểm chứng kết quả với dữ liệu mẫu."
+    )
+    next(button for button in app.button if button.label == "Gửi câu trả lời").click().run()
+    assert not app.exception
+    assert "Nhận xét AI · Điểm rubric" in _markdown(app)
+    assert "không dùng LLM" in " ".join(item.value for item in app.caption)
+    review = next(iter(app.session_state["interview_session"]["reviews"].values()))
+    assert review["source"] == "offline_rubric"
+    app.run()
+    assert not app.exception
+
+
+def test_interview_review_is_not_called_again_on_rerun(monkeypatch):
+    import requests
+
+    calls = []
+
+    class Response:
+        status_code = 200
+
+        def json(self):
+            return {"choices": [{"message": {"content": json.dumps({
+                "criteria": [], "red_flags_hit": [], "feedback": "", "improvement": "",
+            })}}]}
+
+    def post(*args, **kwargs):
+        calls.append(1)
+        return Response()
+
+    monkeypatch.setattr(requests, "post", post)
+    app = _submit(_start(), "Python")
+    next(item for item in app.text_input if item.key == "llm_cfg_api_key").input("sample-key")
+    app.button(key="start_interview_data_analyst").click().run()
+    _field(app, "Câu trả lời của bạn").input(
+        "Tôi phân tích yêu cầu, thiết kế truy vấn và kiểm chứng kết quả với dữ liệu mẫu."
+    )
+    next(button for button in app.button if button.label == "Gửi câu trả lời").click().run()
+    assert not app.exception
+    assert len(calls) == 2  # Invalid criteria count triggers one retry.
+    app.run()
+    assert len(calls) == 2
+    next(item for item in app.checkbox if item.key and item.key.startswith("self_review_")).check().run()
+    assert not app.exception
+    assert len(calls) == 2
 
 
 @pytest.mark.parametrize("count_kind", ["minimum", "available_maximum"])

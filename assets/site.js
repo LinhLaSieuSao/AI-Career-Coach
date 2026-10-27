@@ -75,164 +75,6 @@
   };
 })();
 
-// Soft blue/white gradient waves within the existing landing sections.
-(() => {
-  if (window.__careerWavesCleanup) window.__careerWavesCleanup();
-
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const surfaces = new Map();
-  let frame = 0;
-  let lastFrame = 0;
-
-  const draw = (state, time) => {
-    const { context: ctx, width: w, height: h, dark } = state;
-    if (!w || !h) return;
-    ctx.clearRect(0, 0, w, h);
-
-    const base = ctx.createLinearGradient(0, 0, w, h);
-    if (dark) {
-      base.addColorStop(0, '#071a3c');
-      base.addColorStop(0.55, '#0b326f');
-      base.addColorStop(1, '#071a3c');
-    } else {
-      base.addColorStop(0, '#f9fdff');
-      base.addColorStop(0.52, '#e8f5ff');
-      base.addColorStop(1, '#ffffff');
-    }
-    ctx.fillStyle = base;
-    ctx.fillRect(0, 0, w, h);
-
-    const layers = dark
-      ? [
-          { y: 0.34, amp: 0.085, color: '#0a7aff', alpha: 0.26, speed: 0.26 },
-          { y: 0.57, amp: 0.11, color: '#59b9ff', alpha: 0.2, speed: -0.19 },
-          { y: 0.81, amp: 0.07, color: '#d6ecff', alpha: 0.12, speed: 0.13 },
-        ]
-      : [
-          { y: 0.25, amp: 0.08, color: '#59b9ff', alpha: 0.27, speed: 0.2 },
-          { y: 0.48, amp: 0.1, color: '#0a7aff', alpha: 0.18, speed: -0.16 },
-          { y: 0.72, amp: 0.075, color: '#59b9ff', alpha: 0.2, speed: 0.12 },
-          { y: 0.91, amp: 0.055, color: '#ffffff', alpha: 0.72, speed: -0.1 },
-        ];
-
-    layers.forEach((layer, index) => {
-      const phase = time * layer.speed + index * 1.7;
-      const waveY = (x) => h * (layer.y
-        + layer.amp * Math.sin((x / w) * Math.PI * 2.1 + phase)
-        + layer.amp * 0.34 * Math.sin((x / w) * Math.PI * 4.2 - phase * 0.7));
-      ctx.beginPath();
-      ctx.moveTo(0, waveY(0));
-      for (let x = 8; x < w + 8; x += 8) ctx.lineTo(Math.min(x, w), waveY(Math.min(x, w)));
-      ctx.lineTo(w, h);
-      ctx.lineTo(0, h);
-      ctx.closePath();
-      const fill = ctx.createLinearGradient(0, h * (layer.y - layer.amp), 0, h);
-      fill.addColorStop(0, layer.color + '00');
-      fill.addColorStop(0.22, layer.color + Math.round(layer.alpha * 255).toString(16).padStart(2, '0'));
-      fill.addColorStop(1, layer.color + Math.round(layer.alpha * 0.36 * 255).toString(16).padStart(2, '0'));
-      ctx.fillStyle = fill;
-      ctx.fill();
-    });
-  };
-
-  const resize = (state) => {
-    const { width, height } = state.surface.getBoundingClientRect();
-    if (width < 1 || height < 1) return;
-    const scale = Math.min(window.devicePixelRatio || 1, 2);
-    state.width = width;
-    state.height = height;
-    state.canvas.width = Math.round(width * scale);
-    state.canvas.height = Math.round(height * scale);
-    state.context.setTransform(scale, 0, 0, scale, 0, 0);
-    draw(state, 0);
-  };
-
-  const tick = (timestamp) => {
-    frame = 0;
-    if (timestamp - lastFrame < 33) {
-      start();
-      return;
-    }
-    lastFrame = timestamp;
-    let visible = false;
-    for (const state of surfaces.values()) {
-      if (!state.visible || !state.surface.isConnected) continue;
-      visible = true;
-      draw(state, timestamp / 1000);
-    }
-    if (visible) start();
-  };
-
-  const start = () => {
-    if (!frame && !reducedMotion.matches && !document.hidden &&
-        [...surfaces.values()].some((state) => state.visible)) {
-      frame = requestAnimationFrame(tick);
-    }
-  };
-  const stop = () => {
-    if (frame) cancelAnimationFrame(frame);
-    frame = 0;
-  };
-  const onMotionChange = () => {
-    if (reducedMotion.matches) {
-      stop();
-      for (const state of surfaces.values()) draw(state, 0);
-    } else start();
-  };
-  const onVisibilityChange = () => document.hidden ? stop() : start();
-
-  const visibilityObserver = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      const state = surfaces.get(entry.target);
-      if (state) state.visible = entry.isIntersecting;
-    }
-    start();
-  }, { rootMargin: '100px' });
-  const sizeObserver = new ResizeObserver((entries) => {
-    for (const entry of entries) {
-      const state = surfaces.get(entry.target);
-      if (state) resize(state);
-    }
-  });
-  const attach = (surface) => {
-    if (surfaces.has(surface)) return;
-    const canvas = document.createElement('canvas');
-    canvas.className = 'wave-canvas';
-    canvas.setAttribute('aria-hidden', 'true');
-    surface.prepend(canvas);
-    const context = canvas.getContext('2d');
-    if (!context) {
-      canvas.remove();
-      return;
-    }
-    const state = { surface, canvas, context, width: 0, height: 0, dark: surface.classList.contains('site-footer'), visible: false };
-    surfaces.set(surface, state);
-    resize(state);
-    visibilityObserver.observe(surface);
-    sizeObserver.observe(surface);
-  };
-  const attachAvailable = () => {
-    document.querySelectorAll('.beams-surface, .site-footer').forEach(attach);
-    if (surfaces.size >= 3) mountObserver.disconnect();
-  };
-  const mountObserver = new MutationObserver(attachAvailable);
-  mountObserver.observe(document.body, { childList: true, subtree: true });
-  reducedMotion.addEventListener('change', onMotionChange);
-  document.addEventListener('visibilitychange', onVisibilityChange);
-  attachAvailable();
-
-  window.__careerWavesCleanup = () => {
-    stop();
-    reducedMotion.removeEventListener('change', onMotionChange);
-    document.removeEventListener('visibilitychange', onVisibilityChange);
-    mountObserver.disconnect();
-    visibilityObserver.disconnect();
-    sizeObserver.disconnect();
-    for (const state of surfaces.values()) state.canvas.remove();
-    surfaces.clear();
-  };
-})();
-
 
 // Client-side FAQ search and accordion; no profile data leaves the page.
 (() => {
@@ -392,5 +234,167 @@
     if (controller) controller.abort();
     controller = null;
     boundRoot = null;
+  };
+})();
+
+
+// Decorative green beams for the three dark landing-page surfaces.
+(() => {
+  if (window.__careerBeamsCleanup) window.__careerBeamsCleanup();
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const surfaces = new Map();
+  let frame = 0;
+
+  const newBeam = (width, height) => ({
+    x: Math.random() * width * 1.3 - width * 0.15,
+    y: Math.random() * height * 1.5 - height * 0.5,
+    width: 28 + Math.random() * 62,
+    length: height * (0.9 + Math.random() * 0.6),
+    angle: -36 + Math.random() * 12,
+    speed: 0.25 + Math.random() * 0.55,
+    opacity: 0.13 + Math.random() * 0.12,
+    pulse: Math.random() * Math.PI * 2,
+  });
+
+  const draw = (state) => {
+    const { context, width, height } = state;
+    if (!width || !height) return;
+    context.clearRect(0, 0, width, height);
+    context.save();
+    context.filter = 'blur(19px)';
+
+    for (const beam of state.beams) {
+      const alpha = beam.opacity * (0.82 + Math.sin(beam.pulse) * 0.18);
+      const gradient = context.createLinearGradient(0, 0, 0, beam.length);
+      gradient.addColorStop(0, 'hsla(153, 75%, 70%, 0)');
+      gradient.addColorStop(0.22, `hsla(153, 75%, 70%, ${alpha * 0.55})`);
+      gradient.addColorStop(0.5, `hsla(153, 75%, 70%, ${alpha})`);
+      gradient.addColorStop(0.78, `hsla(153, 75%, 70%, ${alpha * 0.55})`);
+      gradient.addColorStop(1, 'hsla(153, 75%, 70%, 0)');
+      context.save();
+      context.translate(beam.x, beam.y);
+      context.rotate((beam.angle * Math.PI) / 180);
+      context.fillStyle = gradient;
+      context.fillRect(-beam.width / 2, 0, beam.width, beam.length);
+      context.restore();
+    }
+
+    context.restore();
+  };
+
+  const resize = (state) => {
+    const { width, height } = state.surface.getBoundingClientRect();
+    if (width < 1 || height < 1) return;
+    const scale = Math.min(window.devicePixelRatio || 1, 2);
+    state.width = width;
+    state.height = height;
+    state.canvas.width = Math.round(width * scale);
+    state.canvas.height = Math.round(height * scale);
+    state.context.setTransform(scale, 0, 0, scale, 0, 0);
+    state.beams = Array.from(
+      { length: Math.max(9, Math.min(20, Math.round(width / 75))) },
+      () => newBeam(width, height),
+    );
+    draw(state);
+  };
+
+  const tick = () => {
+    frame = 0;
+    let hasVisibleSurface = false;
+    for (const state of surfaces.values()) {
+      if (!state.visible || !state.surface.isConnected) continue;
+      hasVisibleSurface = true;
+      for (const beam of state.beams) {
+        beam.y -= beam.speed;
+        beam.pulse += 0.018;
+        if (beam.y + beam.length < -80) {
+          Object.assign(beam, newBeam(state.width, state.height));
+          beam.y = state.height + 40;
+        }
+      }
+      draw(state);
+    }
+    if (hasVisibleSurface && !reducedMotion.matches && !document.hidden) {
+      frame = requestAnimationFrame(tick);
+    }
+  };
+
+  const start = () => {
+    if (!frame && !reducedMotion.matches && !document.hidden) frame = requestAnimationFrame(tick);
+  };
+
+  const onMotionChange = () => {
+    if (reducedMotion.matches) {
+      if (frame) cancelAnimationFrame(frame);
+      frame = 0;
+      for (const state of surfaces.values()) draw(state);
+    } else {
+      start();
+    }
+  };
+
+  const onVisibilityChange = () => {
+    if (document.hidden && frame) {
+      cancelAnimationFrame(frame);
+      frame = 0;
+    } else if (!document.hidden) {
+      start();
+    }
+  };
+
+  reducedMotion.addEventListener('change', onMotionChange);
+  document.addEventListener('visibilitychange', onVisibilityChange);
+
+  const visibilityObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      const state = surfaces.get(entry.target);
+      if (state) state.visible = entry.isIntersecting;
+    }
+    if ([...surfaces.values()].some((state) => state.visible)) start();
+  }, { rootMargin: '100px' });
+
+  const sizeObserver = new ResizeObserver((entries) => {
+    for (const entry of entries) {
+      const state = surfaces.get(entry.target);
+      if (state) resize(state);
+    }
+  });
+
+  const attach = (surface) => {
+    if (surfaces.has(surface)) return;
+    const canvas = document.createElement('canvas');
+    canvas.className = 'beams-canvas';
+    canvas.setAttribute('aria-hidden', 'true');
+    surface.prepend(canvas);
+    const context = canvas.getContext('2d');
+    if (!context) {
+      canvas.remove();
+      return;
+    }
+    const state = { surface, canvas, context, width: 0, height: 0, beams: [], visible: false };
+    surfaces.set(surface, state);
+    resize(state);
+    visibilityObserver.observe(surface);
+    sizeObserver.observe(surface);
+  };
+
+  const attachAvailable = () => {
+    document.querySelectorAll('.beams-surface').forEach(attach);
+    if (surfaces.size >= 3) mountObserver.disconnect();
+  };
+  const mountObserver = new MutationObserver(attachAvailable);
+  mountObserver.observe(document.body, { childList: true, subtree: true });
+  attachAvailable();
+
+  window.__careerBeamsCleanup = () => {
+    if (frame) cancelAnimationFrame(frame);
+    reducedMotion.removeEventListener('change', onMotionChange);
+    document.removeEventListener('visibilitychange', onVisibilityChange);
+    mountObserver.disconnect();
+    visibilityObserver.disconnect();
+    sizeObserver.disconnect();
+    for (const state of surfaces.values()) state.canvas.remove();
+    surfaces.clear();
   };
 })();
