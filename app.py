@@ -172,7 +172,7 @@ def logo_data_uri() -> str:
     fallback_svg = (
         '<svg xmlns="http://www.w3.org/2000/svg" width="96" height="72" '
         'viewBox="0 0 96 72"><rect width="96" height="72" rx="18" '
-        'fill="#1B7A66"/><text x="48" y="48" text-anchor="middle" '
+        'fill="#0A7AFF"/><text x="48" y="48" text-anchor="middle" '
         'font-family="Arial,sans-serif" font-size="34" font-weight="700" '
         'fill="#fff">AI</text></svg>'
     )
@@ -287,7 +287,6 @@ def render_landing_page() -> None:
               </div>
               <div class="how-panels">
                 <article class="how-panel" data-step-panel="1">
-                  <span class="how-panel-number">01</span>
                   <h3 tabindex="-1">Tạo hoặc nạp hồ sơ</h3>
                   <p class="how-lead">Bắt đầu tại mục Hồ sơ nghề nghiệp ngay dưới phần hướng dẫn.</p>
                   <ol class="how-detail-list">
@@ -298,7 +297,6 @@ def render_landing_page() -> None:
                   <p class="how-outcome"><strong>Sau bước này</strong> Bạn sẽ thấy những kỹ năng cần kiểm tra trước khi tạo kết quả.</p>
                 </article>
                 <article class="how-panel" data-step-panel="2" hidden>
-                  <span class="how-panel-number">02</span>
                   <h3 tabindex="-1">Rà soát và chọn vị trí</h3>
                   <p class="how-lead">Hãy chắc rằng hồ sơ phản ánh đúng kỹ năng bạn có.</p>
                   <ol class="how-detail-list">
@@ -309,7 +307,6 @@ def render_landing_page() -> None:
                   <p class="how-outcome"><strong>Sau bước này</strong> Hồ sơ đã xác nhận sẽ được dùng để đối chiếu với vị trí bạn chọn.</p>
                 </article>
                 <article class="how-panel" data-step-panel="3" hidden>
-                  <span class="how-panel-number">03</span>
                   <h3 tabindex="-1">Đọc kết quả và lập kế hoạch</h3>
                   <p class="how-lead">Dùng các tab kết quả để chọn việc cần làm tiếp theo.</p>
                   <ol class="how-detail-list">
@@ -460,6 +457,7 @@ def render_closing_sections() -> None:
 
 @st.dialog("Chọn Nhóm nghề, Nghề hoặc Chuyên môn", width="large")
 def open_role_taxonomy_dialog(positions: list[dict], role_by_id: dict[str, dict], taxonomy: dict[str, list[dict]]) -> None:
+    st.markdown('<span class="role-dlg-marker"></span>', unsafe_allow_html=True)
     search_kw = st.text_input(
         "Nhập từ khóa tìm kiếm",
         placeholder="🔍 Nhập từ khóa tìm kiếm chuyên môn (VD: data, sales, kế toán, java, marketing, tester...)",
@@ -493,23 +491,6 @@ def open_role_taxonomy_dialog(positions: list[dict], role_by_id: dict[str, dict]
     else:
         col_left, col_right = st.columns([1.1, 2.2])
         family_names = list(taxonomy.keys())
-        family_icons = {
-            "Phát triển phần mềm": "💻",
-            "Kiểm thử và đảm bảo chất lượng": "🧪",
-            "Phân tích dữ liệu": "📊",
-            "Dữ liệu, AI và nền tảng dữ liệu": "🤖",
-            "Hạ tầng, cloud và an ninh mạng": "☁️",
-            "Sản phẩm, dự án và phân tích nghiệp vụ": "📋",
-            "Thiết kế và nghiên cứu trải nghiệm": "🎨",
-            "Marketing, nội dung và truyền thông": "📢",
-            "Kinh doanh và chăm sóc khách hàng": "🤝",
-            "Tài chính và kế toán": "💰",
-            "Nhân sự, pháp lý và tuân thủ": "⚖️",
-            "Logistics và chuỗi cung ứng": "🚚",
-            "Kỹ thuật và sản xuất": "⚙️",
-            "Xây dựng, kiến trúc và an toàn": "🏗️",
-            "Y tế, giáo dục và dịch vụ": "🏥",
-        }
 
         default_idx = 0
         if current_role_id:
@@ -519,19 +500,18 @@ def open_role_taxonomy_dialog(positions: list[dict], role_by_id: dict[str, dict]
                     break
 
         with col_left:
-            st.markdown("**NHÓM NGHỀ**")
+            st.markdown("<div class='dlg-group-title'>NHÓM NGHỀ</div>", unsafe_allow_html=True)
             selected_family = st.radio(
                 "Nhóm nghề",
                 options=family_names,
                 index=default_idx,
-                format_func=lambda name: f"{family_icons.get(name, '📁')} {name}",
                 key="dlg_selected_family_radio",
                 label_visibility="collapsed",
             )
 
         with col_right:
             roles_in_group = taxonomy.get(selected_family, [])
-            st.markdown(f"**VỊ TRÍ CHUYÊN MÔN · {selected_family}** ({len(roles_in_group)} vị trí)")
+            st.markdown(f"<div class='dlg-roles-title'>VỊ TRÍ CHUYÊN MÔN · {selected_family} ({len(roles_in_group)} vị trí)</div>", unsafe_allow_html=True)
             st.caption("Bấm chọn đúng 1 vị trí chuyên môn (bấm để áp dụng ngay):")
 
             col_p1, col_p2 = st.columns(2)
@@ -549,13 +529,16 @@ def open_role_taxonomy_dialog(positions: list[dict], role_by_id: dict[str, dict]
                     st.session_state["career_role_picker"] = r["id"]
                     st.rerun()
 
-    c_foot_l, c_foot_r = st.columns([3, 1])
+    c_foot_l, c_foot_r = st.columns([1.2, 2.8])
     with c_foot_l:
-        if current_role_id and current_role_id in role_by_id:
-            st.markdown(f"Đã chọn: <b style='color:var(--color-plume-600);'>{format_role(role_by_id[current_role_id])}</b>", unsafe_allow_html=True)
-    with c_foot_r:
-        if st.button("Đóng hộp thoại", key="dlg_close_btn", use_container_width=True):
+        if st.button("Đóng duy nhất", key="dlg_close_btn", use_container_width=True):
             st.rerun()
+    with c_foot_r:
+        if current_role_id and current_role_id in role_by_id:
+            st.markdown(
+                f"<div style='text-align:right;padding-top:8px;font-size:16px;'>Đã chọn: <b style='color:var(--color-plume-600);font-size:17px;'>{format_role(role_by_id[current_role_id])}</b></div>",
+                unsafe_allow_html=True,
+            )
 
 
 def render_toolkit() -> None:
@@ -631,16 +614,14 @@ def render_toolkit() -> None:
             with st.container(border=True, key="demo_profiles_panel"):
                 st.subheader("Dùng hồ sơ mẫu tổng hợp")
                 cols = st.columns(3)
-                demo_icons = {"backend-java": "☕", "data-analyst": "📊", "sales-executive": "🤝"}
                 for col, demo in zip(cols, load_demo_profiles()):
-                    icon = demo_icons.get(demo["id"], "✦")
                     skills_preview = ", ".join(demo["profile"]["skills"][:3])
                     col.markdown(
-                        f'<div style="padding:10px 14px;border:1px solid var(--color-line);border-radius:12px;background:var(--color-paper-sunken);margin-bottom:8px;">'
-                        f'<div style="font-weight:700;font-size:13px;color:var(--color-ink);display:flex;align-items:center;gap:6px;">'
-                        f'<span>{icon}</span><span>{demo["label"]}</span>'
+                        f'<div style="padding:12px 16px;border:1.5px solid var(--color-line);border-radius:12px;background:var(--color-paper-sunken);margin-bottom:8px;">'
+                        f'<div style="font-weight:700;font-size:15px;color:var(--color-ink);">'
+                        f'<span>{demo["label"]}</span>'
                         f'</div>'
-                        f'<div style="font-size:11px;color:var(--color-ink-soft);margin-top:4px;">'
+                        f'<div style="font-size:13px;color:var(--color-ink-soft);margin-top:6px;line-height:1.4;">'
                         f'Kỹ năng: {skills_preview}...'
                         f'</div>'
                         f'</div>',
