@@ -170,7 +170,7 @@ def logo_data_uri() -> str:
     fallback_svg = (
         '<svg xmlns="http://www.w3.org/2000/svg" width="96" height="72" '
         'viewBox="0 0 96 72"><rect width="96" height="72" rx="18" '
-        'fill="#1B7A66"/><text x="48" y="48" text-anchor="middle" '
+        'fill="#0A7AFF"/><text x="48" y="48" text-anchor="middle" '
         'font-family="Arial,sans-serif" font-size="34" font-weight="700" '
         'fill="#fff">AI</text></svg>'
     )

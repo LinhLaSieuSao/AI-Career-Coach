@@ -61,13 +61,19 @@ requirements.lock          một tập phiên bản có hash cho local, CI và D
 
 ## Chạy ứng dụng
 
-Cần Docker hoặc Python **3.12**. Với Docker:
+Cần Docker hoặc Python **3.12**. Sau khi chạy, mở `http://localhost:8501`.
+
+### Cách 1: Docker (máy đã cài Docker Desktop)
 
 ```bash
 docker compose up --build
 ```
 
-Mở `http://localhost:8501`. Với local trên Windows:
+Docker tự nạp Python 3.12 và cài đặt theo `requirements.lock` (có kiểm tra hash), không cần cài gì thêm trên máy.
+
+### Cách 2: Chạy local
+
+Windows (PowerShell):
 
 ```powershell
 py -3.12 -m venv .venv
@@ -75,9 +81,28 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
-Trên macOS/Linux thay hai lệnh đầu bằng `python3.12 -m venv .venv` và `.venv/bin/python -m pip install --require-hashes -r requirements.lock`, rồi chạy `.venv/bin/python -m streamlit run app.py`.
+macOS/Linux:
 
-`requirements.txt` khai báo các thư viện trực tiếp, gồm cả pytest và Ruff. `requirements.lock` chốt toàn bộ phiên bản cùng hash để local, CI và Docker cài đặt giống nhau. Khi thay đổi `requirements.txt`, tạo lại lock bằng `uv pip compile requirements.txt --universal --python-version 3.12 --generate-hashes --output-file requirements.lock`; CI sẽ kiểm tra hai file luôn đồng bộ.
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install --require-hashes -r requirements.lock
+.venv/bin/python -m streamlit run app.py
+```
+
+> [!NOTE]
+> Cần đúng Python 3.12 vì `requirements.lock` được tạo cho phiên bản này. Nên cài trong `.venv` như trên để không ảnh hưởng Python hệ thống.
+
+### Quản lý dependencies và hash lock
+
+`requirements.txt` khai báo các thư viện trực tiếp (`streamlit`, `pydantic`, `rapidfuzz`, `pdfplumber`, `python-docx`, `requests`, `pytest`, `ruff`). `requirements.lock` chốt toàn bộ phiên bản cùng hash để local, CI và Docker cài đặt giống hệt nhau trên Python 3.12. Khi thay đổi `requirements.txt`, tạo lại lock bằng:
+
+```bash
+uv pip compile requirements.txt --universal --python-version 3.12 --generate-hashes --output-file requirements.lock
+```
+
+CI sẽ kiểm tra hai file luôn đồng bộ.
+
+Sau khi mở được ứng dụng, làm theo [kịch bản demo](docs/demo.md): chọn một hồ sơ mẫu, rà soát kỹ năng, khai báo level rồi xem lần lượt năm tab kết quả.
 
 ## Kiểm thử và CI
 
